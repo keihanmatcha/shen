@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ARTICLE｜桜華水</title>
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="images/Nagao-icon.png" sizes="512x512">
+<link rel="apple-touch-icon" href="images/Nagao-icon.png">
+
+<meta property="og:site_name" content="桜華水｜長尾景非公式ファンサイト">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ABOUT">
+<meta property="og:description" content="VΔLZのインタビュー記事や公式レポートのまとめ">
+
+<style>
+/* ===== 共通スタイル ===== */
+:root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;}
+
+header{position:sticky;top:0;background:linear-gradient(90deg, #C24DAED9, #625DA1D9);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border); z-index: 10;}
+.wrap{max-width:800px;margin-inline:auto;padding:20px 16px;}
+
+/* ナビゲーション */
+.nav-header { display: flex; justify-content: space-between; align-items: center; height: 50px; }
+.brand { font-weight: 800; color: #fff; text-decoration: none; font-size: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.nav-links { display: flex; gap: 12px; }
+.nav-links a { position: relative; font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; padding: 6px 16px; z-index: 1; transition: transform 0.2s; }
+
+.nav-links a::before {
+content: ""; position: absolute; inset: 0; z-index: -1; transform: skewX(-20deg); border-radius: 4px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: opacity 0.2s, transform 0.2s;
+}
+.nav-links a[href*="archives"]::before { background: #B43246; }
+.nav-links a[href*="songs"]::before { background: #4DD7E3; }
+.nav-links a:hover { transform: translateY(-2px); }
+
+/* コンテンツ */
+h1 { font-size: 24px; margin: 40px 0 20px; color: var(--accent); text-align: center; }
+p { margin-bottom: 16px; font-size: 15px; }
+
+/* ボックススタイル */
+.recommend-box {
+background: #fff;
+border: 2px solid #e5dfff;
+border-radius: 12px;
+padding: 24px;
+margin-bottom: 30px;
+box-shadow: 0 4px 12px rgba(98, 93, 161, 0.05);
+}
+.recommend-title { font-weight: 700; color: var(--accent); margin-bottom: 16px; display: block; font-size: 18px; border-bottom: 1px solid #e5dfff; padding-bottom: 8px; }
+
+.link-list { list-style: none; padding: 0; margin: 0; }
+.link-list li { margin-bottom: 12px; padding-left: 1.5em; position: relative; }
+.link-list li::before { content: "▶"; position: absolute; left: 0; color: var(--accent); font-size: 12px; top: 2px; }
+.link-list a { color: var(--fg); text-decoration: none; border-bottom: 1px solid var(--border); transition: all 0.2s; }
+.link-list a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* =========================================
+   ここから：リール（横スクロール）用スタイル
+   ========================================= */
+.genre-section { margin-bottom: 40px; }
+.genre-header { 
+    display: flex; align-items: center; gap: 10px; margin-bottom: 12px; 
+}
+.genre-title-text {
+    font-size: 18px; font-weight: 700; color: var(--accent);
+}
+.genre-badge {
+    font-size: 11px; background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 20px; font-weight: bold;
+}
+
+/* 横スクロールエリア */
+.reel-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 4px 4px 24px 4px; /* 下のpaddingはスクロールバーとの余白 */
+    scroll-snap-type: x mandatory; /* スクロールがピタッと止まる */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* スクロールバーの装飾 */
+.reel-scroll::-webkit-scrollbar { height: 8px; }
+.reel-scroll::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+.reel-scroll::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 4px; }
+.reel-scroll::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* 各カード（動画・ツイートの枠） */
+.reel-item {
+    flex: 0 0 85%; /* スマホでは画面の85%幅（次が見切れるように） */
+    max-width: 340px; /* PCでの最大幅 */
+    scroll-snap-align: center; /* 画面中央で止める場合はcenter, 左端ならstart */
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 600px) {
+    .reel-item { 
+        flex: 0 0 45%; /* タブレット以上は2つ並ぶくらいの幅 */
+        scroll-snap-align: start; 
+    }
+}
+
+/* iframeのレスポンシブ対応 */
+.reel-item iframe {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+    border: none;
+    display: block;
+}
+
+/* ツイート埋め込みの調整 */
+.tweet-wrapper {
+    width: 100%;
+    overflow-y: auto; /* 長いツイートは縦スクロール */
+    max-height: 350px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+}
+.tweet-wrapper blockquote { margin: 0; }
+
+/* フッター */
+footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; font-size: 12px; color: var(--muted); }
+#loading-wrapper {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #ffffff; /* 背景色（白） */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s ease; /* フェードアウトの時間 */
+}
+
+/* 読み込み完了後に消すクラス */
+#loading-wrapper.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+</style>
+</head>
+<body>
+<div id="loading-wrapper">
+  <div id="loader-img-box">
+    <img src="images/loading-loop.gif" id="loading-character" alt="Loading..." width="150">
+  </div>
+</div>
+
+<header>
+<div class="wrap nav-header">
+<a href="index.html" class="brand">桜華水</a>
+<nav class="nav-links">
+<a href="archives/index.html">動画を探す</a>
+<a href="songs/index.html">曲を探す</a>
+</nav>
+</div>
+</header>
+
+<main class="wrap">
+<h1>桜華水について</h1>
+
+<section>
+<p>このページでは、VΔLZや長尾景に関するインタビュー記事や音楽・演出に関する動画をまとめています。</p>
+</section>
+
+<section>
+<div class="recommend-box">
+<span class="recommend-title">VΔLZ関連記事</span>
+<ul class="link-list">
+<li><a href="https://magazine.anycolor.co.jp/articles/194661893" target="_blank">【Blu-ray発売記念】VΔLZライブツアー2024『三華の樂』レポート</a></li>
+<li><a href="https://magazine.anycolor.co.jp/articles/257827071" target="_blank">VΔLZデビュー5周年記念インタビュー前編：互いを見つめ合う足跡</a></li>
+<li><a href="https://magazine.anycolor.co.jp/articles/1551467056" target="_blank">VΔLZデビュー5周年記念インタビュー後編：始まりの1曲の進化</a></li>
+<li><a href="https://realsound.jp/2024/06/post-1683536.html" target="_blank">RealSound 1万字インタビュー：『三華の樂』制作を語り尽くす</a></li>
+<li><a href="https://realsound.jp/2023/06/post-1355451.html" target="_blank">甲斐田晴・長尾景・弦月藤士郎によるVΔLZ、初単独ライブは発見が満載のステージに</a></li>
+<li><a href="https://realsound.jp/2024/09/post-1790345.html" target="_blank">VΔLZ、3人が作り出す唯一無二の空間 初ライブツアー</a></li>
+</ul>
+</div>
+</section>
+
+<section class="genre-section">
+<div class="genre-header">
+<span class="genre-title-text">VΔLZ関連動画</span>
+<span class="genre-badge">公式・密着</span>
+</div>
+<div class="reel-scroll">
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/T9sp6Zl0qgM?si=R8sGWTnkVyZsiNeC" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/Ha9hCLvx4HQ?si=-55YwRAFMChRcbmI&amp;start=1235" title="YouTube video player" allowfullscreen></iframe>
+</div>
+</div>
+</section>
+
+<section class="genre-section">
+<div class="genre-header">
+<span class="genre-title-text">SitR名古屋</span>
+<span class="genre-badge">Pick Up</span>
+</div>
+<div class="reel-scroll">
+<div class="reel-item">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uMN9Xt5NdWg?si=Hr3ovNPqzGjc3Kud&amp;start=1815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I5BmqG_KBd8?si=Pca1COKZzrHruVN6&amp;start=519" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/hz1jsW_1xKg?si=xTdaYbbB9tH-5iKP&amp;start=4214" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/r3Cv4C421OM?si=Y-fSJ9fg-Fj9H96B&amp;start=6884" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/V8lXn6QUK-Y?si=p0iZf__Ra9bwhBM4&amp;start=4917" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/poODz37n86U?si=KJ9_7-7dBPuSPpXD&amp;start=2837" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/gBUkUgEUxLo?si=bRY6xQ__vryRO93Q&amp;start=5438" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/GGRz4TBX3_4?si=JN0ixLGdkRApSrSk&amp;start=4694" title="YouTube video player" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<iframe src="https://www.youtube.com/embed/Q0fmO-daOiM?si=48U18VzSp7RX5Fl9&amp;start=1320" title="YouTube video player" allowfullscreen></iframe>
+</div>
+
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">配信ありがとうございましたー！<br>アーカイブあるのでごゆるりどうぞ！<br>名古屋メンバー最高！ 
+<a href="https://t.co/lIBo0KUyis">https://t.co/lIBo0KUyis</a></p>&mdash; ゲッツ (@MASA2Get2) 
+<a href="https://twitter.com/MASA2Get2/status/1937847067319349351?ref_src=twsrc%5Etfw">June 25, 2025</a></blockquote>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">にじさんじにはミュージカルばりにステージできる方もいる！！！奥深い！！ <br>長尾さんのステージが面白い！<a href="https://t.co/qA700rBeb2">https://t.co/qA700rBeb2</a> 
+<a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>より <a href="https://t.co/LM1X6wp8xu">pic.twitter.com/LM1X6wp8xu</a></p>&mdash; ゲッツ (@MASA2Get2) 
+<a href="https://twitter.com/MASA2Get2/status/1728723014219714706?ref_src=twsrc%5Etfw">November 26, 2023</a></blockquote>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">今月で踊ってみた15周年になりました。<br>記念動画は<br><br>「懺悔参り」踊ってみた！<br><br>にじツアー名古屋で長尾さんがあまりに楽しそうに戦っていたので、<br>構成だけおかりして、<br>僕も好きに楽しくやってみました、天才のアイデア！<br>これからも楽しく自分のペースで踊っていきます！<a href="https://t.co/NOSXco2p2d">https://t.co/NOSXco2p2d</a> <a href="https://t.co/m0QIG5Z2mm">pic.twitter.com/m0QIG5Z2mm</a></p>&mdash; ゲッツ (@MASA2Get2) 
+<a href="https://twitter.com/MASA2Get2/status/1960643515266032101?ref_src=twsrc%5Etfw">August 27, 2025</a></blockquote>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<iframe width="312" height="176" src="https://ext.nicovideo.jp/thumb/sm45340874" scrolling="no" style="border:solid 1px #ccc;" frameborder="0"><a href="https://www.nicovideo.jp/watch/sm45340874">[ゲッツ]　 懺悔参り　踊ってみた　 [15周年記念]</a></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<section class="genre-section">
+<div class="genre-header">
+<span class="genre-title-text">Dance Beyond the Limit【#にじさんじダンス部】</span>
+<span class="genre-badge">Movie</span>
+</div>
+<div class="reel-scroll">
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">【にじさんじダンス部 3Dライブ本日開催✨】<br><br>本日12/20(土)20:00より「Dance Beyond the Limit」をお届けします✨<br><br>感想はぜひ「<a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a>」でポストしてください！ <br><br>▼ライブ会場はこちら(全編無料配信)<a href="https://t.co/PzCSy4DBs2">https://t.co/PzCSy4DBs2</a> <a href="https://t.co/6zUvq3hxtI">pic.twitter.com/6zUvq3hxtI</a></p>&mdash; にじさんじ公式🌈🕒 (@nijisanji_app) <a href="https://twitter.com/nijisanji_app/status/2002320606386438330?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+</script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RVuazzwizdc?si=zfUUoLWaAIL-roVp&amp;start=123" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">20時〜<br>ダンス部ライブこちら！！！<br>すげーから楽しみしてて！<a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a> <a href="https://t.co/d5vCJgGdv8">https://t.co/d5vCJgGdv8</a> <a href="https://t.co/Wsw5cy86j2">pic.twitter.com/Wsw5cy86j2</a></p>&mdash; 長尾 景 ☯️にじさんじ☯️ (@kei_nagao2434) <a href="https://twitter.com/kei_nagao2434/status/2002324792112996563?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ライブありがとーーー！！<br>マジで過去一難しくて、過去一躍った…！！！<br>ダンス流石に上手くなったな<br>また次あるよね！！！<br><br> <a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a> <a href="https://t.co/KcEHidyIc8">pic.twitter.com/KcEHidyIc8</a></p>&mdash; 長尾 景 ☯️にじさんじ☯️ (@kei_nagao2434) <a href="https://twitter.com/kei_nagao2434/status/2002353157188563131?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">『Dance Beyond the Limit』ありがとうございましたー‼️‼️‼️<br>みなさんに魅せたかったもの、届いているといいな👊そして、一緒にダンスをしてくれる仲間たちに感謝だぁぁぁ<br>また踊り狂いましょう💃✨<a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a> <a href="https://t.co/PkXomH5siP">pic.twitter.com/PkXomH5siP</a></p>&mdash; 東堂コハク🍯 (@kohaku_todo) <a href="https://twitter.com/kohaku_todo/status/2002355590199193672?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bPdnhRMJsq0?si=CP8NR4WoCReO3XI8&amp;start=4626" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">乙堂でした！！！<br>ダンスライブが楽しすぎたねって話を永遠とさせてもらった配信でした✌️<br>いつもコハのダンスを好きと言ってくれてありがとう🫶<br>これからも沢山踊って成長していくぜ💪</p>&mdash; 東堂コハク🍯 (@kohaku_todo) <a href="https://twitter.com/kohaku_todo/status/2003108545022353723?ref_src=twsrc%5Etfw">December 22, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ずっと今日が本番ってまじか？と思っていますが、本番らしいです！！！！！<br>めちゃくちゃ最高なライブにするから、見ててー！！！！！！！🫶🏻 <a href="https://t.co/mOqWbX1aeD">https://t.co/mOqWbX1aeD</a> <a href="https://t.co/bOvAvxTIFc">pic.twitter.com/bOvAvxTIFc</a></p>&mdash; 山神カルタ🎴 (@Karuta_Yamagami) <a href="https://twitter.com/Karuta_Yamagami/status/2002328890921144802?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">振り返り配信ありがとうございましたー！！！！！<br>ダンス部メンバーは光しかいません🎵<br>もっと踊りたいよーっっっっっ！！！！！！！🫶🏻<a href="https://twitter.com/hashtag/%E5%B1%B1%E7%A5%9E%E3%82%AB%E3%82%BF%E3%83%AB?src=hash&amp;ref_src=twsrc%5Etfw">#山神カタル</a></p>&mdash; 山神カルタ🎴 (@Karuta_Yamagami) <a href="https://twitter.com/Karuta_Yamagami/status/2003420569614885205?ref_src=twsrc%5Etfw">December 23, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/q5jDoRoTxVs?si=tjiG6NYt2sn4MhsV&amp;start=5818" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">同時視聴一緒に見守ってくれて感謝だ～❤️‍🔥<br>ほんmoneyダンス部さんって素敵で～～😭<br>んで、次踊り狂うのいつですか？？？😁❤️‍🔥 <a href="https://t.co/YYfxywoOcm">https://t.co/YYfxywoOcm</a></p>&mdash; レイン・パターソン❤️‍🔥 (@Lain_Paterson) <a href="https://twitter.com/Lain_Paterson/status/2002762871143551330?ref_src=twsrc%5Etfw">December 21, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a> 初ライブどうだったーーー！？😍❤️‍🔥<br><br>パタちの全力かっこいいから可愛いからセクシーまで堪能してくれたかー⁉️❤️‍🔥❤️‍🔥<br>寒い冬も超絶激アツな気分になれるダンス部最高ーーー❤️‍🔥❤️‍🔥❤️‍🔥<br><br>踊りまくり人生幸ーーー✌️❤️‍🔥 <a href="https://t.co/fExpiqiGAf">pic.twitter.com/fExpiqiGAf</a></p>&mdash; レイン・パターソン❤️‍🔥 (@Lain_Paterson) <a href="https://twitter.com/Lain_Paterson/status/2002353442376069432?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P2X1QbE6M1E?si=WEoSq6yOhOqCkfGv&amp;start=4408" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ライブありがとうございました！<br>過去一ダンス密度（振り付け）が高い期間だったかも！<br>メンバーのみんなもスタッフさんも総動員で作り上げたライブ、楽しんでくれたか！！<br>にじさんじダンス部はまだまだ成長していきます！<br>これからもぜひよろしくお願いします！<br><br> <a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a></p>&mdash; セラフ・ダズルガーデン🦉🎻 (@SerAph_DazZ) <a href="https://twitter.com/SerAph_DazZ/status/2002349452007538975?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a> 初ライブ見てくれてありがとうっっ💖<br>うちらの最高のパフォーマンスどうだった？！？！✨<br>まだまだここからもっともっと進化し続けるダンス部を見守っててねええ🫶✨<br><br>もう踊りてええええええ！！！！！！ <a href="https://t.co/YG8dKQAVhL">pic.twitter.com/YG8dKQAVhL</a></p>&mdash; 倉持めると🧸🌙 にじさんじ (@k_meruto) <a href="https://twitter.com/k_meruto/status/2002360637788135881?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">振付、振付指導で入らせていただきました！<br><br>今日この日を迎えるまでほぼ毎日(ガチ)レッスンを重ねました。<br><br>LIVEに大会、日々配信をしながら信じられないスケジュールの中、彼らはやりきりました…！努力の塊。心からの拍手を👏👏👏<br>ダンス部最高！！本当にありがとう！！<a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a> <a href="https://t.co/hUmzmOmQyI">https://t.co/hUmzmOmQyI</a></p>&mdash; Ayaka Nishi 西綾夏 (@06nayk) <a href="https://twitter.com/06nayk/status/2002368586300731818?ref_src=twsrc%5Etfw">December 20, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">皆さん身体にダンスが染みて密度高くて素晴らしい。<br>長尾さんとセラフさんのデカイ動きで繊細な所もあるのがグッとくるし<br>レインさん、山神さんのパワフルでラインどり綺麗なのも良いし、<br>倉持さん、東堂さんの可愛くてキレのある感じも素敵。構成強めのパフォーマンス見事ある！　<a href="https://twitter.com/hashtag/%E3%81%AB%E3%81%98%E3%81%95%E3%82%93%E3%81%98%E3%83%80%E3%83%B3%E3%82%B9%E9%83%A8?src=hash&amp;ref_src=twsrc%5Etfw">#にじさんじダンス部</a> <a href="https://t.co/Ylgq1GQFv4">https://t.co/Ylgq1GQFv4</a></p>&mdash; ゲッツ (@MASA2Get2) <a href="https://twitter.com/MASA2Get2/status/2002584779141886200?ref_src=twsrc%5Etfw">December 21, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</section>
+
+<section class="genre-section">
+<div class="genre-header">
+<span class="genre-title-text">KZHCUP</span>
+<span class="genre-badge">Movie</span>
+</div>
+<div class="reel-scroll">
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">配信ありがとーーーーー！！！ <br>ということでパシフィコ決まりましたーーー！！！！ <br>これから毎日JP生活がんばろ！！！ <a href="https://twitter.com/hashtag/KZHCUP_RUMBLE?src=hash&amp;ref_src=twsrc%5Etfw">#KZHCUP_RUMBLE</a> <a href="https://twitter.com/hashtag/3TCHWIN?src=hash&amp;ref_src=twsrc%5Etfw">#3TCHWIN</a></p>&mdash; 長尾 景 ☯️にじさんじ☯️ (@kei_nagao2434) <a href="https://twitter.com/kei_nagao2434/status/2002724271492403240?ref_src=twsrc%5Etfw">December 21, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_hSFqbQB_4E?si=Bq8kCUxcVP_23I1o&amp;start=152" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">さんたっち本戦出場おめですー<br>メキメキと上手くなってて<br>ニヤニヤしながら試合見させてもらいました☺️ <a href="https://t.co/7oqk9B4AzN">https://t.co/7oqk9B4AzN</a></p>&mdash; A.M.G SS熊本/こばやん kobayan (@kobayan_new) <a href="https://twitter.com/kobayan_new/status/2002778560260636764?ref_src=twsrc%5Etfw">December 21, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">横浜でJP連戦が決まった長尾景にファンレターを送りたい</p>&mdash; 舞元啓介👨‍🌾にじさんじ (@maimoto_k) <a href="https://twitter.com/maimoto_k/status/2002710715606663548?ref_src=twsrc%5Etfw">December 21, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">˗ˏˋ 💥 <a href="https://twitter.com/hashtag/KZHCUP_RUMBLE?src=hash&amp;ref_src=twsrc%5Etfw">#KZHCUP_RUMBLE</a> 💥ˊˎ˗<br>　　決勝戦進出チーム決定！<br>￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣<br>予選を勝ち抜き<br>2026年1月23日(金)、パシフィコ横浜で<br>行われる決勝戦のステージに立つチームはこちら👇<br><br>①BOしたら坊主 <a href="https://twitter.com/hashtag/BOZWIN?src=hash&amp;ref_src=twsrc%5Etfw">#BOZWIN</a><br>②サンダーファイアーパンダータツヤー <a href="https://twitter.com/hashtag/SFPTWIN?src=hash&amp;ref_src=twsrc%5Etfw">#SFPTWIN</a><br>③さんたっち <a href="https://twitter.com/hashtag/3TCHWIN?src=hash&amp;ref_src=twsrc%5Etfw">#3TCHWIN</a>… <a href="https://t.co/do1MoVnIW4">pic.twitter.com/do1MoVnIW4</a></p>&mdash; にじさんじ公式🌈🕒 (@nijisanji_app) <a href="https://twitter.com/nijisanji_app/status/2002718411240231070?ref_src=twsrc%5Etfw">December 21, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+</div>
+</section>
+   
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<section>
+<div class="recommend-box">
+<span class="recommend-title">長尾景関連記事</span>
+<ul class="link-list">
+<li><a href="https://realsound.jp/tech/2023/09/post-1433874.html" target="_blank">にじさんじ・長尾景に感じる“親近感”の正体とは</a></li>
+<li><a href="https://www.youtube.com/live/Ha9hCLvx4HQ" target="_blank">【VALZ音楽談義】みんな何を思って音楽やってんの？</a></li>
+</ul>
+</div>
+</section>
+<script>
+   window.addEventListener('load', function() {
+  const loaderWrapper = document.getElementById('loading-wrapper');
+  const characterImg = document.getElementById('loading-character');
+  
+  // 1. 読み込み完了！ -> 画像を「納刀アクション」に切り替える
+  // ※GIFアニメの再生をここからスタートさせるテクニックです
+  characterImg.src = "images/finish-action.gif"; 
+
+  // 2. 納刀アクションの長さ分だけ待ってから、画面を開く
+  // 例：納刀GIFが「1.5秒」の場合、ここを 1500 にする
+  setTimeout(function() {
+    loaderWrapper.classList.add('loaded');
+  }, 2500); 
+});
+
+// 【保険】もし読み込みが遅すぎても5秒で強制的に開く
+setTimeout(function() {
+    const loader = document.getElementById('loading-wrapper');
+    if (loader && !loader.classList.contains('loaded')) {
+       loader.classList.add('loaded');
+    }
+}, 5000);
+</script>
+
+</main>
+
+<footer>
+<div class="wrap">
+<p>&copy; 2025 Oukasui - Unofficial Fan Site for Kei Nagao.</p>
+</div>
+</footer>
+
+</body>
+</html>

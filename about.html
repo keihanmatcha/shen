@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ABOUT｜桜華水</title>
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/Nagao-icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="images/Nagao-icon.png">
+
+  <meta property="og:site_name" content="桜華水｜長尾景非公式ファンサイト">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="ABOUT">
+  <meta property="og:description" content="当サイトの使い方、推奨ファンサイトのご紹介、免責事項など。">
+
+  <style>
+    /* ===== 共通スタイル ===== */
+    :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
+    html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;}
+    
+    header{position:sticky;top:0;background:linear-gradient(90deg, #C24DAED9, #625DA1D9);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border); z-index: 10;}
+    .wrap{max-width:800px;margin-inline:auto;padding:20px 16px;}
+    
+    /* ナビゲーション */
+    .nav-header { display: flex; justify-content: space-between; align-items: center; height: 50px; }
+    
+    .brand { 
+        font-weight: 800; 
+        color: #fff; /* グラデ背景の上なので白文字に変更 */
+        text-decoration: none; 
+        font-size: 20px; 
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* リンクのベーススタイル */
+    .nav-links { display: flex; gap: 12px; }
+    
+    .nav-links a { 
+        position: relative;
+        font-size: 13px; 
+        font-weight: 700;
+        color: #fff; 
+        text-decoration: none; 
+        padding: 6px 16px;
+        margin-left: 0;
+        z-index: 1;
+        transition: transform 0.2s;
+    }
+    
+    /* 変形する枠を作るための共通設定 */
+    .nav-links a::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        transform: skewX(-20deg); /* 平行四辺形（▲のニュアンス） */
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        transition: opacity 0.2s, transform 0.2s;
+    }
+
+    /* 動画を探す：#B43246 (赤系) */
+    .nav-links a[href*="archives"]::before {
+        background: #B43246;
+    }
+
+    /* 曲を探す：#4DD7E3 (青緑系) */
+    .nav-links a[href*="songs"]::before {
+        background: #4DD7E3;
+    }
+    
+    /* ホバー時の動き */
+    .nav-links a:hover {
+        transform: translateY(-2px);
+    }
+    .nav-links a:hover::before {
+        opacity: 0.9;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* コンテンツ */
+    h1 { font-size: 24px; margin: 40px 0 20px; color: var(--accent); text-align: center; }
+    h2 { font-size: 18px; margin: 40px 0 16px; border-left: 4px solid var(--accent); padding-left: 12px; color: #333; }
+    h3 { font-size: 16px; margin: 24px 0 12px; font-weight: 700; color: #4c46a6; }
+    
+    p { margin-bottom: 16px; font-size: 15px; text-align: justify; }
+
+    /* カードスタイル */
+    .card { background: #fdfdff; border: 1px solid var(--border); border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+    
+    /* リスト */
+    ul { padding-left: 20px; margin-bottom: 16px; }
+    li { margin-bottom: 8px; font-size: 15px; }
+
+    /* リンク */
+    a.text-link { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+    a.text-link:hover { text-decoration: none; }
+
+    /* 推奨サイト用ボックス */
+    .recommend-box {
+        background: #fff;
+        border: 2px solid #e5dfff;
+        border-radius: 12px;
+        padding: 24px;
+        text-align: center;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 12px rgba(98, 93, 161, 0.05);
+    }
+    .recommend-title { font-weight: 700; color: var(--accent); margin-bottom: 12px; display: block; font-size: 16px; }
+    .btn-external {
+        display: inline-block;
+        margin-top: 12px;
+        background: var(--accent);
+        color: #fff;
+        padding: 10px 24px;
+        border-radius: 99px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: opacity 0.2s;
+    }
+    .btn-external:hover { opacity: 0.9; }
+
+    /* フッター */
+    footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border); margin-top: 60px; font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wrap nav-header">
+      <a href="index.html" class="brand">桜華水</a>
+      <nav class="nav-links">
+        <a href="archives/index.html">動画を探す</a>
+        <a href="songs/index.html">曲を探す</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>桜華水について</h1>
+
+    <section>
+      <div class="recommend-box">
+        <span class="recommend-title">おすすめ長尾景非公式ファンサイト</span>
+        <p style="text-align: left;">
+            当サイトでは、配信の予定やお知らせについては対応しておりません。<br>
+            <a href="https://x.com/Hitagingo"target="_blank">螢都様</a>が制作された</strong><a href="https://konmabushi.com" target="_blank">景応援中</a></strong>をぜひご覧ください。配信スケジュールやディスコグラフィ、お知らせについて非常に分かりやすくまとめられており、配信や活動を追いかけるうえで大変有用でデザイン性の高い素晴らしいサイトとなっています。
+        </p>
+        <a href="https://konmabushi.com/" target="_blank" rel="noopener" class="btn-external">konmabushi.com を見る ↗</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>サイトの使い方</h2>
+
+      <div class="card">
+        <h3>🎵 曲を探す（ホーム）</h3>
+        <p>
+          ホームまたは「曲を探す」ページの検索窓に<strong>動画タイトル、曲名、アーティスト名</strong>のいずれかを入力すると該当する曲が出てきます。長尾さんが歌った、踊った、弾いた曲のいずれかが出てくる仕様となっています。
+        </p>
+        <ul>
+            <li>YouTubeで投稿された現在公開中の曲のみ表示しています。</li>
+            <li>動画タイトルまたは曲の欄の余白をタップすると動画が再生されます。</li>
+            <li>動画の下に出てくるセットリストのいずれかをタップすると該当箇所へ飛びます。</li>
+          　<li>曲欄の曲名またはアーティスト名ををタップするとその曲・アーティストの該当動画が表示されます。</li>
+            <li>曲欄の★をタップするとお気に入り登録することができます。</li>
+        </ul>
+        
+        <p><strong>【タグ活用のすすめ】</strong><br>
+        タグ <code>#カバー(ソロ)</code>、<code>#カバー(ユニット)</code>、<code>#オリジナル(ユニット)</code>、<code>#オリジナル(ソロ)</code> を是非有効活用ください。<br>
+        ソロ・ユニットはその曲を歌ったのが長尾1人か複数人かで分類しております。複数選択するといずれかに該当する楽曲が表示されます。</p>
+        
+        <p style="font-size:13px; color:var(--muted);">
+            ※にじさんじ、VΔLZ原作の曲はオリジナルとみなし、分類しております。<br>
+            ※基本的にカバー曲は作詞者と作曲者を併記しておりますが、オリジナル曲のアーティストは長尾景またはVΔLZ表記などにさせていただいております。ご容赦ください。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>📹 動画を探す（アーカイブ検索）</h3>
+        <p>
+          「動画を探す」ページの検索窓に<strong>動画タイトル、人名、カテゴリー名、番組名</strong>のいずれかを入力すると該当する動画が出てきます。
+        </p>
+        <ul>
+            <li>YouTubeで投稿された現在公開中の動画のみを表示しています。</li>
+            <li>サムネイルをタップすると動画が再生されます。</li>
+            <li>複数選択をしたい場合、「フィルターで絞り込む」機能をご活用ください。</li>
+            <li>動画の下に出てくるセットリストのいずれかをタップすると該当箇所へ飛びます。</li>
+        </ul>
+        <p style="font-size:13px; color:var(--muted);">
+            ※動画が表示されない場合、投稿者の方が埋め込みを許可していないことが考えられます。お手数ですが、「YouTubeで開く」を押してご視聴ください。<br>
+            ※長尾やVΔLZ以外のチャンネルで大人数が参加する大会の場合、コラボしたライバーとしてMCや主催、長尾と同じチームの方々に限定しております。ご容赦ください。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>情報の正確性・修正について</h2>
+      <p>
+        曲及び他チャンネルで投稿された長尾さん出演の動画は手作業での入力のため、カバーしきれていない曲や動画、入力ミスがある場合がございます。どうか温かい目で見守りください。
+      </p>
+      <p>
+        もしよろしければ、作成者に<a href="https://marshmallow-qa.com/k410khg97fy66u2?t=dpAzgx&utm_medium=url_text&utm_source=promotion"target="_blank">マシュマロ</a>にて知らせていただけると大変助かります。
+      </p>
+      <p style="text-align: center; margin-top: 20px;">
+          <a href="https://x.com/RAOW0607" target="_blank" rel="noopener" class="text-link">@RAOW0607 (作成者Twitter)</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Special Thanks</h2>
+      <p>
+        最後になりますが、このファンサイトを作成するにあたり、以下のサイトを大変参考にさせていただきました。この様な素晴らしい作品を作ってくださりありがとうございました。
+      </p>
+      <ul style="list-style:none; padding:0; text-align:center; font-weight:bold; color:var(--accent);">
+        <li><a href="https://detawane.com/"target="_blank">三枝全力支援 様</a></li>
+        <li><a href="https://midoriutatteta.web.fc2.com/"target="_blank">緑仙歌ってた 様</a></li>
+        <li><a href="https://rikiichi-archive.com/index"target="_blank">JOE RIKIICHI ARCHIVE 様</a></li>
+        <li><a href="https://fvblog-2434.web.app/songs/index.html"target="_blank">加賀美ハヤトの歌リスト 様</a></li>
+        <li><a href="https://epic-spinners.vuestic.dev/"target="_blank">Epic Spinners　様</a></li>
+      </ul>
+      <p>
+        また、いつもコメント欄などにセットリストを書いてくださったり、YouTubeでセットリストを作成してくださるリスナーの方々にお世話になっております。ありがとうございます。
+      </p>
+      <p style="margin-top:40px; text-align:center;">
+        このサイトを通じて、少しでも長尾景さんの活動や皆様の応援の手助けができることを願っております。
+      </p>
+    </section>
+
+    <div style="text-align:center; margin-top:60px;">
+      <a href="index.html" class="text-link" style="font-weight:bold; font-size:18px;">トップページに戻る</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>&copy; 2025 Oukasui - Unofficial Fan Site for Kei Nagao.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="description" content="このサイト「桜華水」は、にじさんじ所属の長尾景さんの楽曲や出演動画を整理した非公式ファンサイトです。">
+  <meta name="keywords" content="長尾景, Vtuber, にじさんじ, 曲検索, 歌, ファンサイト">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桜華水｜長尾景非公式ファンサイト</title>
+  <meta name="theme-color" content="#625DA1" />
+
+  <link rel="canonical" href="https://oukasui.com/" />
+
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/Nagao-icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="images/Nagao-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="桜華水｜長尾景非公式ファンサイト">
+  <meta property="og:title" content="桜華水｜長尾景非公式ファンサイト">
+  <meta property="og:description" content="長尾景の曲・動画検索サイト。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
+  <meta property="og:url" content="https://oukasui.com/">
+  <meta property="og:image" content="https://oukasui.com/images/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="桜華水｜長尾景非公式ファンサイト">
+  <meta name="twitter:description" content="長尾景の曲・動画検索サイト。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
+  <meta name="twitter:url" content="https://oukasui.com/">
+  <meta name="twitter:image" content="https://oukasui.com/images/ogp.png">
+
+  <link rel="manifest" href="./manifest.json">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"桜華水｜長尾景非公式ファンサイト",
+    "url":"https://oukasui.com/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://oukasui.com/song/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --fg:#222; --muted:#6b7280; --accent:#625DA1;
+      --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff;
+      --ring: rgba(98,93,161,.25);
+    }
+    *{ box-sizing:border-box }
+
+    html, body {
+      margin: 0;
+      color: var(--fg);
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+      line-height: 1.65;
+    }
+    
+    body{
+      background-image: url("images/washipattern.PNG");
+      background-image: image-set(
+        url("images/washipattern.webp") type("image/webp") 1x,
+        url("images/washipattern@2x.webp") type("image/webp") 2x
+      );
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    /* モバイルのカクつき回避 */
+    @media (max-width: 980px){
+      body{ background-attachment: scroll; }
+    }
+
+    a,button{ transition:.15s ease }
+    :focus-visible{ outline:2px solid var(--ring); outline-offset:2px; border-radius:8px }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:10;
+      background:linear-gradient(90deg, #C24DAED9, #625DA1D9);
+      backdrop-filter:saturate(1.2) blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .wrap{ max-width:960px; margin-inline:auto; padding:14px 16px }
+    .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    .brand { 
+        display: flex; align-items: center; gap: 10px;
+        font-weight: 800; 
+        color: #fff; 
+        text-decoration: none; 
+        font-size: 20px; 
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .logo-icon {
+        width: 32px; 
+        height: 32px; 
+        border-radius: 8px;
+        object-fit: cover;
+        background: #C24DAED9; 
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    } 
+    .brand span{ font-weight:800; letter-spacing:.2px }
+    nav a{ text-decoration:none; color:#4b5563; padding:8px 12px; border-radius:999px }
+    nav a:hover{ background:#f3f4ff; color:#312e81 }
+
+    /* Hero */
+    .hero{ padding:48px 0 30px }
+    .title{ font-size:28px; margin:0 0 10px }
+    .lead{ color:var(--muted); margin:0 0 22px }
+    .search{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      background:#fff; border:1px solid var(--border); border-radius:12px; padding:10px;
+      box-shadow:0 0 0 3px rgba(98,93,161,.06);
+    }
+    .search input{ flex:1; min-width:220px; border:0; outline:0; font-size:16px; padding:10px 12px }
+    .btn{
+      appearance:none; border:0; cursor:pointer;
+      padding:10px 16px; border-radius:10px; font-weight:700;
+      background:var(--accent); color:#fff;
+    }
+    .btn:hover{ filter:brightness(.97) }
+    .btn.secondary{
+      background:#f2efff; color:#4c46a6; border:1px solid #e5dfff; font-weight:600;
+    }
+
+    /* セクション */
+    .p-section{ margin:40px 0 }
+    .p-section .bar{
+      padding:10px 16px;
+      color:#fff; font-weight:800; position:relative;
+      background: linear-gradient(90deg, #6B5FB5, #A58AD3);
+      margin-bottom: 10px;
+    }
+    .p-section .bar::after{
+      content:""; position:absolute; left:0; right:0; bottom:0; height:3px;
+      background: linear-gradient(90deg,#d4af37,#f9e076,#d4af37); border-radius:2px;
+    }
+    .p-section .bar h2{ margin:0; font-size:20px; letter-spacing:.05em; scroll-margin-top: 72px; }
+    .p-section .body{ max-width:760px }
+    .p-section p{ margin:14px 0; line-height:1.9; font-size:15.5px; color:#222 }
+
+    /* リンク群 */
+    .links {
+      display:flex; gap:12px; flex-wrap:wrap;
+      margin: 10px 0;
+    }
+    .links a {
+      text-decoration:none;
+      padding:6px 12px;
+      border-radius:6px;
+      background:#f3f4f6;
+      color:#1f2937;
+      font-weight:600;
+    }
+    .links a:hover { background:#e0e7ff; color:#312e81; }
+
+    /* 埋め込み */
+    .embed { margin: 14px 0; }
+    
+    /* Layout */
+    .layout{
+      display:grid;
+      grid-template-columns: 260px 1fr;
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    /* Sidebar */
+    .sidebar{
+      position: sticky; top: 72px; align-self: start;
+      height: max-content; padding: 16px;
+      border: 1px solid var(--border); border-radius: 12px;
+      background: rgba(255,255,255,.9); backdrop-filter: blur(6px);
+      box-shadow: 0 6px 16px rgba(0,0,0,.04);
+    }
+    .sb-title{ font-weight:800; letter-spacing:.08em; color:#2b246b; margin-bottom:10px }
+    .sb-nav{ display:flex; flex-direction:column; gap:8px }
+    .sb-item{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none; padding:10px 12px; border-radius:10px;
+      border:1px solid var(--border); background:#fff; color:#1f2937; font-weight:700;
+    }
+    .sb-item:hover{ border-color:var(--accent); color:var(--accent); background:#f7f7ff }
+    .sb-item.primary{ background:#f2efff; border-color:#e5dfff; color:#4c46a6 }
+    .sb-ic{ width:18px; height:18px; fill: currentColor }
+    .sb-note{ margin-top:12px; color:#6b7280; font-size:12.5px; line-height:1.6 }
+
+    /* Main Content */
+    .content{ min-width:0 }
+    .hero{ padding:24px 0 10px }
+
+    /* Mobile Sidebar */
+    .sb-toggle{
+      display:none; appearance:none; border:0; background:#fff; font-size:22px;
+      padding:6px 10px; border-radius:10px; border:1px solid var(--border);
+    }
+    @media (max-width: 980px){
+      .layout{ grid-template-columns: 1fr; gap:12px; padding-inline: 12px }
+      .sb-toggle{ display:inline-block }
+      .sidebar{
+        position: fixed; top: 60px; left: 12px; right: 12px;
+        transform: translateY(-20px) scale(.98);
+        opacity: 0; pointer-events: none; transition: .18s ease; z-index: 50;
+        background:#fff;
+      }
+      .sidebar.open{ transform:none; opacity:1; pointer-events:auto }
+    }
+    
+    /* Background Overlay */
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background: rgba(255,255,255,.80);
+      backdrop-filter: blur(2px);
+      z-index:-1;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 24px;
+      padding: 16px;
+      font-size: 13px;
+      color: #4b5563;
+      border-top: 1px solid var(--border);
+      background: rgba(255,255,255,.85);
+    }
+    .sb-item:focus-visible{
+      outline: 3px solid rgba(98,93,161,.35);
+      outline-offset: 3px;
+      border-radius: 10px;
+    }
+
+    /* Reel (Horizontal Scroll) */
+    .reel-group { margin-bottom: 32px; }
+    .reel-cat-title {
+      font-size: 18px; font-weight: 700; color: #2b246b;
+      margin: 0 0 12px 4px; padding-left: 10px;
+      border-left: 4px solid var(--accent);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .reel-cat-en { font-size: 13px; color: var(--muted); font-weight: normal; letter-spacing: 0.05em; }
+
+    .reel-scroll {
+      display: flex; gap: 16px; overflow-x: auto;
+      padding: 4px 4px 20px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch; 
+      /* align-items: flex-start; */
+    }
+    .reel-scroll::-webkit-scrollbar { height: 6px; }
+    .reel-scroll::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+    .reel-scroll::-webkit-scrollbar-track { background: transparent; }
+
+    .reel-item {
+      flex: 0 0 240px; text-decoration: none;
+      background: #fff; border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+      display: flex; flex-direction: column;
+    }
+    .reel-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(98,93,161, 0.15);
+      border-color: var(--accent);
+    }
+
+    .reel-thumb-wrap { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; }
+    .reel-thumb { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: opacity 0.2s; }
+    .reel-item:hover .reel-thumb { opacity: 1; }
+    
+    .reel-play {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 32px; height: 32px; background: rgba(0,0,0,0.6); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; pointer-events: none;
+    }
+
+    .reel-info { padding: 10px 12px; flex: 1; display: flex; flex-direction: column; }
+    .reel-v-title {
+      font-size: 14px; font-weight: 700; line-height: 1.5; color: var(--fg);
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      margin-bottom: 6px;
+    }
+    .reel-item:hover .reel-v-title { color: var(--accent); }
+    .reel-meta { margin-top: auto; font-size: 11px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+    
+    @media (max-width: 600px) {
+      .reel-item { flex: 0 0 200px; }
+      .reel-v-title { font-size: 13px; }
+    }
+
+    /* Embed iframe settings */
+    .embed iframe{ display:block; width:100%; max-width:100%; border:0; border-radius:12px; }
+    .embed iframe[src*="youtube.com"],
+    .embed iframe[src*="youtube-nocookie.com"],
+    .embed iframe[src*="vimeo.com"]{ aspect-ratio:16/9; height:auto; }
+    .embed iframe[src*="open.spotify.com"]{ aspect-ratio:auto; height:352px; }
+
+    /* 新しいローディングアニメーション (intersecting-circles-spinner) */
+    .intersecting-circles-spinner, .intersecting-circles-spinner * {
+      box-sizing: border-box;
+    }
+    .intersecting-circles-spinner {
+      height: 70px; width: 70px;
+      position: relative;
+      display: flex; flex-direction: row; justify-content: center; align-items: center;
+    }
+    .intersecting-circles-spinner .spinnerBlock {
+      animation: intersecting-circles-spinners-animation 1200ms linear infinite;
+      transform-origin: center; display: block; height: 35px; width: 35px;
+    }
+    .intersecting-circles-spinner .circle {
+      display: block; border: 2px solid #625DA1; border-radius: 50%;
+      height: 100%; width: 100%; position: absolute; left: 0; top: 0;
+    }
+    .intersecting-circles-spinner .circle:nth-child(1) { left: 0; top: 0; }
+    .intersecting-circles-spinner .circle:nth-child(2) { left: calc(35px * -0.36); top: calc(35px * 0.2); }
+    .intersecting-circles-spinner .circle:nth-child(3) { left: calc(35px * -0.36); top: calc(35px * -0.2); }
+    .intersecting-circles-spinner .circle:nth-child(4) { left: 0; top: calc(35px * -0.36); }
+    .intersecting-circles-spinner .circle:nth-child(5) { left: calc(35px * 0.36); top: calc(35px * -0.2); }
+    .intersecting-circles-spinner .circle:nth-child(6) { left: calc(35px * 0.36); top: calc(35px * 0.2); }
+    .intersecting-circles-spinner .circle:nth-child(7) { left: 0; top: calc(35px * 0.36); }
+
+    @keyframes intersecting-circles-spinners-animation {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* ローディング画面の枠 */
+    #loading-wrapper {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background-color: #ffffff;
+      z-index: 9999;
+      display: flex; justify-content: center; align-items: center;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+    #loading-wrapper.loaded {
+      opacity: 0; visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="loading-wrapper">
+    <div class="intersecting-circles-spinner">
+      <div class="spinnerBlock">
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+        <span class="circle"></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="wrap row">
+      <a class="brand" href="songs/omikuji.html" aria-label="おみくじを引く">
+        <img src="../images/Nagao-icon.png" alt="桜華水" class="logo-icon">
+        <span>桜華水｜長尾景非公式ファンサイト</span>
+      </a>
+      <button class="sb-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="メニューを開閉">☰</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" aria-label="サイドバー">
+      <div class="sb-title">LINKS</div>
+      <nav class="sb-nav">
+        <a class="sb-item" href="https://x.com/kei_nagao2434" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M18 2h3l-6.5 7.4L22 22h-7.5l-4.7-6.6L4 22H1l7-8.1L2 2h7.5l4.3 6.1L18 2Z"/></svg>
+          <span>Twitter (X)</span>
+        </a>
+        <a class="sb-item" href="https://www.youtube.com/@NagaoKei" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2 31 31 0 0 0 1.8 12a31 31 0 0 0 .6 4.8 3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.1c.4-1.6.6-3.2.6-4.8s-.2-3.2-.6-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
+          <span>YouTube</span>
+        </a>
+        <a class="sb-item primary" href="songs/index.html">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-1 5h2v4l3 3-1.4 1.4L11 13.4V8Z"/></svg>
+          <span>曲を探す</span>
+        </a>
+        <a class="sb-item primary" href="archives/index.html">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2ZM11 15.5v-7l6 3.5-6 3.5Z"/></svg>
+          <span>動画を探す</span>
+        </a>
+        <a class="sb-item primary" href="article.html">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2ZM11 15.5v-7l6 3.5-6 3.5Z"/></svg>
+          <span>緯武経文</span>
+        </a>
+        <a class="sb-item" href="../about.html">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          <span>桜華水について</span>
+        </a>
+      </nav>
+      <div class="sb-note">
+        非公式ファンサイトです。<br>ANYCOLOR様および各関係会社様とは無関係です。
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="title">曲を検索</h1>
+        <p class="lead">曲名・アーティスト・動画タイトル・タグから素早く探せます。</p>
+
+        <form class="search" action="songs/index.html" method="GET" role="search" aria-label="サイト内検索">
+          <input id="kw" name="q" type="search" placeholder="例：天体観測 / BUMP OF CHICKEN / 歌枠 / カバー(ユニット)" autocomplete="off" />
+          <button class="btn" type="submit">検索</button>
+          <a class="btn secondary" href="songs/index.html">曲一覧を見る</a>
+        </form>
+      </section>
+      <section id="sec-intro" class="p-section" aria-labelledby="h-intro">
+        <div class="bar"><h2 id="h-intro">ABOUT</h2></div>
+        <div class="body">
+          <p>このサイトは、<strong>にじさんじ所属Vtuber長尾景さん</strong>の<strong>楽曲や出演動画を整理した非公式ファンサイト</strong>です。</p>
+          <p>にじさんじproject及びANY COLOR株式会社様、その他関係各社様とは一切関係ございません。</p>
+          <p>公式様へのお問い合わせはご遠慮ください。</p>
+        </div>
+      </section>
+
+      <section id="sec-profile" class="p-section" aria-labelledby="h-profile">
+        <div class="bar"><h2 id="h-profile">PROFILE</h2></div>
+        <div class="body">
+          <p>皇都で祓魔業を営む青年。報酬さえ払えばどんな仕事も請け負うともっぱらの評判。<br>剣術だけでなく、武術や呪いにも長けている。（にじさんじ公式紹介文より引用）</p>
+          <p>桜魔皇国という異世界出身の祓魔師。活動経歴やエピソードは <a href="https://wikiwiki.jp/nijisanji/%E9%95%B7%E5%B0%BE%E6%99%AF" target="_blank">非公式wiki</a> を参照。多種多様なバーチャルライバー(VTuber)が所属するVTuber/バーチャルライバープロジェクト「にじさんじ」に所属し、配信活動などを行っている。</p>
+          <p>さらに、剣術や武術、呪術に長けるだけでなく、軽妙なトークやユーモアを交えた配信スタイルで視聴者を惹きつける。時に甘え上手で弟気質な一面を見せながらも、冷静に物事を考える論理的な面をあわせ持ち、舞台や音楽活動では豊かな表現力を発揮している。</p>
+          <div class="links">
+            <a href="https://www.nijisanji.jp/talents/l/kei-nagao" target="_blank">公式プロフィール</a>
+            <a href="https://www.youtube.com/@NagaoKei" target="_blank">YouTube</a>
+            <a href="https://x.com/kei_nagao2434" target="_blank">Twitter (X)</a>
+          </div>
+          <div class="embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/7LYGF4Np8YQ?rel=0&modestbranding=1"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="sec-country" class="p-section" aria-labelledby="h-country">
+        <div class="bar"><h2 id="h-country">COUNTRY</h2></div>
+        <div class="body">
+          <p>桜魔皇国とは、神と人と魔が住まう国。魔は人の負の感情から生まれ、姿や生態は様々。<br>人が神の力を借り、害を為す魔を祓う。前線で戦う戦闘職こそが祓魔師である。</p>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">桜魔皇国<span class="reel-cat-en">Ouma</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/TxUBxgpaOnM" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/TxUBxgpaOnM/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">長尾景・弦月藤士郎・甲斐田晴の3名が、4月4日より活動開始！</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/jsgQdJGWzVc" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/jsgQdJGWzVc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第1話「この三人じゃないと」| 「桜魔大戦譚　～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/Ca4KfqGrYMQ" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/Ca4KfqGrYMQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第2話「困った時はお互い様」| 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/HARONJOmdZw" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/HARONJOmdZw/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第3話「やるべきことがあるはずだろう？」| 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/W8NhTgmHkrM" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/W8NhTgmHkrM/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第4話「これだけは、理解してほしい」| 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/e78H1E1ei20" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/e78H1E1ei20/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第5話「あの子の力を借りる時」| 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/q39D4RddJmI" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/q39D4RddJmI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第6話「名実ともに一番弟子」 | 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/Ro8568-Q9bY" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/Ro8568-Q9bY/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第7話「なんとしてでも帰してやるよ」| 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/yOcUcd5vbDY" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/yOcUcd5vbDY/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第8話「悔しいって思わねえ方が嘘だろ」| 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/rHEczizo5FI" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/rHEczizo5FI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第9話「輝桜の星を知っているか？」| 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/WnTK412iZ10" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/WnTK412iZ10/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第10話「そろそろ立ち上がれよ」| 「桜魔大戦譚 ～相対するモノたちへ～」</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sec-music" class="p-section" aria-labelledby="h-music">
+        <div class="bar"><h2 id="h-music">MUSIC</h2></div>
+        <div class="body">
+          <p>桜魔皇国出身の弦月藤士郎、甲斐田晴と共にユニット <strong>VΔLZ（ヴァルツ）</strong> として活動。ワンマンライブとして、2023年には『一唱入魂』、2024年には『三華の樂』を開催。<br>ユニット内最年長だが弟気質で、同期に甘えつつ常識人ポジションを担う。ソロでもオリジナル曲を4曲リリース。</p>
+          <p>歌枠や歌ってみた、オリジナル曲では、執着や葛藤をテーマにした繊細な楽曲から人気JPOPまで幅広く歌い上げ、キャラクター性と音楽的表現が見事に融合している。踊ってみたや3D配信では映像演出を駆使し、舞台で輝くパフォーマンスを実現。</p>
+          <div class="links">
+            <a href="https://valz-official.com/" target="_blank">VΔLZ公式サイト</a>
+            <a href="https://www.youtube.com/@VALZ_ch" target="_blank">YouTube</a>
+            <a href="https://x.com/VALZ_info" target="_blank">Twitter (X)</a>
+          </div>
+          <div class="embed">
+            <iframe
+              src="https://open.spotify.com/embed/artist/2ROrEfCjaHzmY0d7Fq5v0t?utm_source=generator"
+              title="Spotify player" loading="lazy"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>
+          </div>
+          <div class="embed">
+            <iframe
+              src="https://open.spotify.com/embed/artist/5NsoCPfSPuShXpS1xuLmPf?utm_source=generator"
+              title="Spotify player" loading="lazy"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+            </iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="sec-other" class="p-section" aria-labelledby="h-other">
+        <div class="bar"><h2 id="h-other">OTHER</h2></div>
+        <div class="body" style="max-width: 100%;">
+          <p>「#景成長中」のタグの通り、歌・ダンス・英語などに挑戦。<br>ファン（けびじ）と近い距離感で配信を作り上げるスタイルが魅力。<br>舞台映えする演出力や初心者でも入りやすい企画も特徴。</p>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">長尾企画・バラエティ <span class="reel-cat-en">Variety & Projects</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/Gg_IiJql80Y" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/Gg_IiJql80Y/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">美男美獣美少年による仁義なきプロポーズ大戦【#ケイナガオの楽屋裏】【たった今考えたプロポーズの言葉を君に捧ぐよ。】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/R-5M_6Fa_Xo" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/R-5M_6Fa_Xo/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第二回 #にじさんじイヤホンガンガンゲーム【#ケイナガオの遊び場】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/FJ7SWmJLxFg" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/FJ7SWmJLxFg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【前編】#放課後ゲーム部お楽しみ会バトル【#にじさんじ放課後ゲーム部】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/iPx_qIuisjo" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/iPx_qIuisjo/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#格付けマリカ】高みを目指せ！！！</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/TobLBwM9K5I" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/TobLBwM9K5I/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【ストリートファイター６】第二回 #ミリしらスト6チャレンジ 長尾視点</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">殺陣・ダンス<span class="reel-cat-en">Sword Fighting& Dance</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/oLlfeB778eI" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/oLlfeB778eI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#Klime3D】ボスを倒せたら告知あり！？3Dで殺陣やってみた</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/64EmWanCeeE" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/64EmWanCeeE/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【歌って踊ってみた】鬼ノ宴 </div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/AdlPDfFOfaw" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/AdlPDfFOfaw/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【歌って踊ってみた】potatoになっていく</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/YcefJ7RQGSc" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/YcefJ7RQGSc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【オリジナル振付】Virtual to Live 踊ってみた</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/guBM1ckejJk" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/guBM1ckejJk/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">ダンス＆殺陣ショート解説してみた【長尾景/にじさんじ/にじ3D】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="reel-group">
+            <h3 class="reel-cat-title">料理<span class="reel-cat-en">Cooking</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/bClBcKYRXn8" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/bClBcKYRXn8/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【料理】Nagao's Kitchen 親子丼編</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/anRiPxhKl4E" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/anRiPxhKl4E/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【料理】Nagao's Kitchen 昆布ハンバーグ編</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/3gfWc0RKPoM" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/3gfWc0RKPoM/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【料理】Nagao's Kitchen オムライス編</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/pm0HKT3CZJA" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/pm0HKT3CZJA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【料理】Nagao's Kitchen スイートポテト編</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/wjHdZ1ugzqE" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/wjHdZ1ugzqE/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ飯調査隊】第1回 お酒に合うおつまみを探せ‼ ゲスト : でびでび・でびる🍚</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/qsP_F0YBxNg" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/qsP_F0YBxNg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ飯調査隊】第2回 ジューーーーーーーース王！！！ ゲスト : 弦月藤士郎🍚</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/iTKUw6Tw5Hc" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/iTKUw6Tw5Hc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ飯調査隊】第3回 エルフに刺さるスイーツを探せ!! ゲスト : える🍚</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/PBJ_8-YHPMc" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/PBJ_8-YHPMc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ飯調査隊】第4回 見たことない変わった食べ物を探せ‼ ゲスト : ましろ🍚</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">Talking in English<span class="reel-cat-en">Talking in English</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/I5gHSN20t7c" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/I5gHSN20t7c/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【雑談】Speaking English Practice w/Elira</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/soGIaoi-los" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/soGIaoi-los/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【雑談】Speaking English Practice w/Uki</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/IKigqYPc40o" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/IKigqYPc40o/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【新番組】長尾とペトラのたいして変わらん Nagao&Petra's We are NIJISANJI #1【New Program】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/4kmf_R15JUo" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/4kmf_R15JUo/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#NIJI_HOUSE】【マイクラ】World Guest Houseつくるよ～～～～！！！</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/T-GuyFVlcYk" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/T-GuyFVlcYk/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#NIJIMelodyTime】We are NIjisanji!!!!!!!!!!!!</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">初心者講座<span class="reel-cat-en">Semminer for Beginner</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/WR5In4SR09s" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/WR5In4SR09s/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ甲2023】推しを応援したい人の為の野球ド初心者講座</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/P8mFFQtpHrA" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/P8mFFQtpHrA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【サッカー初心者講座】にじさんJ１古参も新規も楽しみたいよなぁ！？？？</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/LTrxxEpy62E" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/LTrxxEpy62E/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじさんじ麻雀杯2025 】麻雀杯をより楽しむ為のハイパー初心者解説</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/hofqlYq5fgw" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/hofqlYq5fgw/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【にじ甲2025を楽しもう】栄冠ナイン初心者向け解説講座</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/0rRfYHBJD4U" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/0rRfYHBJD4U/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【野球初心者講座】これを見れば君もにじさんじ甲子園が楽しめる！！</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/67Nzu1pAfnM" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/67Nzu1pAfnM/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【スト6】インパクトって何？パナシって何？KZHCUPを楽しむ為のスト6基礎講座</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© <span id="y"></span> 桜華水 (Unofficial). このWebサイトは、にじさんじ所属バーチャルライバー 長尾景を応援する非公式曲検索ファンサイトです。当サイトはリンクフリーです。</p>
+    <p>京阪抹茶が個人で制作・管理しており、ANYCOLOR株式会社様 及び にじさんじプロジェクト、各種関係会社様とは一切関係ございません。</p>
+    <p>サイトに関するご意見・お問い合わせは <a href="https://x.com/RAOW0607" target="_blank"> 京阪抹茶の X（旧Twitter）</a> にてご連絡ください。</p>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      })
+    }
+    // 年号
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // モバイル：サイドバー開閉
+    const btn = document.querySelector('.sb-toggle');
+    const sb  = document.getElementById('sidebar');
+    if (btn && sb) {
+      btn.addEventListener('click', () => {
+        const open = sb.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    }
+    
+    // 【修正箇所】scriptの中にあったHTMLタグを削除しました
+    
+    // ページ（画像など含む）の読み込みが完了したら実行
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loading-wrapper');
+      
+      // 少しだけ余韻を持たせてから消す（0.5秒後）
+      setTimeout(function() {
+        loader.classList.add('loaded');
+      }, 500); 
+    });
+    
+    // 【保険】もし読み込みが長すぎても5秒後には強制的に消す
+    setTimeout(function() {
+      const loader = document.getElementById('loading-wrapper');
+      if (loader && !loader.classList.contains('loaded')) {
+        loader.classList.add('loaded');
+      }
+    }, 5000);
+  </script>
+</body>
+</html>
+

@@ -35,14 +35,53 @@ MANUAL_VIDEO_IDS = [
 ]
 EXTRA_PLAYLISTS = [
     {
-        "id": "PLxxxxxxxxxxxxxxxxxxxx",      # ここに再生リストIDを入れる
+        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
         "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["限定公開", "歌動画"]   # 自動で付けたいタグ
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
     },
     {
-        "id": "PLxxxxxxxxxxxxxxxxxxxx",      # ここに再生リストIDを入れる
+        "id": "PL2tNRe-9n6lZ-M4iepguywhKTMpuVz1bQ",      # ここに再生リストIDを入れる
         "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["限定公開", "歌動画"]   # 自動で付けたいタグ
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lawsf6v4Gn9R0h8EHrI5fzQ",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZjxxLrZScGaaeKNWU7hSFm",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZrxVfOPXeDMgF2CTVoBzTS",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lb85F7ZJjGsHV_XeAY0nhFK",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZUcoSgvqkqaeU6T5t_hv-W",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZUcoSgvqkqaeU6T5t_hv-W",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lYCvsOsBGsu_886CGRKkrul",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lb6v2JjGQVjKVzU3-wcVAIz",      # ここに再生リストIDを入れる
+        "fixed_tags": ["企画"]   # 自動で付けたいタグ
     },
 ]
 # 管理対象のチャンネル名リスト
@@ -684,4 +723,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

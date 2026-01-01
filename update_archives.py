@@ -83,6 +83,14 @@ EXTRA_PLAYLISTS = [
         "id": "PL2tNRe-9n6lb6v2JjGQVjKVzU3-wcVAIz",      # ここに再生リストIDを入れる
         "fixed_tags": ["企画"]   # 自動で付けたいタグ
     },
+    {
+        "id": "PL2tNRe-9n6lYPvqVv2dLhQfO4MpimYjWW",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌配信"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6layYbKKj92KCO6KVjKivLsi",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画"]   # 自動で付けたいタグ
+    }
 ]
 # 管理対象のチャンネル名リスト
 MANAGED_CHANNEL_NAMES = [ch["name"] for ch in CHANNELS]
@@ -723,5 +731,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

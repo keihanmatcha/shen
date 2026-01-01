@@ -1,4 +1,4 @@
-const CACHE_NAME = 'oukasui-cache-v1';
+const CACHE_NAME = 'shen-cache-v1';
 const urlsToCache = [
   '/',
   '/index.html',

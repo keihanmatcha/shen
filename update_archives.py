@@ -659,6 +659,9 @@ def main():
             fixed_tags = ch.get('fixed_tags', [])
             videos = fetch_videos_from_playlist(youtube, playlist_id, ch['name'], fixed_tags)
             fetched_videos.extend(videos)
+    if MANUAL_VIDEO_IDS:
+        manual_videos = fetch_manual_videos(youtube, MANUAL_VIDEO_IDS)
+        fetched_videos.extend(manual_videos)
 
     if fetched_videos:
         update_github_json(fetched_videos)
@@ -667,22 +670,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

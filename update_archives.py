@@ -32,11 +32,19 @@ CHANNELS = [
     }
 ]
 MANUAL_VIDEO_IDS = [
-    "動画ID_1",
-    "動画ID_2",
-    "動画ID_3"
 ]
-
+EXTRA_PLAYLISTS = [
+    {
+        "id": "PLxxxxxxxxxxxxxxxxxxxx",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開", "歌動画"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLxxxxxxxxxxxxxxxxxxxx",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["限定公開", "歌動画"]   # 自動で付けたいタグ
+    },
+]
 # 管理対象のチャンネル名リスト
 MANAGED_CHANNEL_NAMES = [ch["name"] for ch in CHANNELS]
 
@@ -659,6 +667,12 @@ def main():
             fixed_tags = ch.get('fixed_tags', [])
             videos = fetch_videos_from_playlist(youtube, playlist_id, ch['name'], fixed_tags)
             fetched_videos.extend(videos)
+    if 'EXTRA_PLAYLISTS' in globals(): # エラー防止のためのチェック
+        for pl in EXTRA_PLAYLISTS:
+            print(f"🔍 追加リスト取得: {pl['name']} (ID: {pl['id']})")
+            # 既存の関数をそのまま再利用できます
+            videos = fetch_videos_from_playlist(youtube, pl['id'], pl['name'], pl.get('fixed_tags', []))
+            fetched_videos.extend(videos)
     if MANUAL_VIDEO_IDS:
         manual_videos = fetch_manual_videos(youtube, MANUAL_VIDEO_IDS)
         fetched_videos.extend(manual_videos)
@@ -670,3 +684,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

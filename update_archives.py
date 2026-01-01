@@ -31,6 +31,11 @@ CHANNELS = [
         "fixed_tags": ["叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ", "七次元生徒会"]
     }
 ]
+MANUAL_VIDEO_IDS = [
+    "動画ID_1",
+    "動画ID_2",
+    "動画ID_3"
+]
 
 # 管理対象のチャンネル名リスト
 MANAGED_CHANNEL_NAMES = [ch["name"] for ch in CHANNELS]
@@ -676,6 +681,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

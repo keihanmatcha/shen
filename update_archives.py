@@ -70,11 +70,6 @@ EXTRA_PLAYLISTS = [
         "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
     },
     {
-        "id": "PL2tNRe-9n6lZUcoSgvqkqaeU6T5t_hv-W",      # ここに再生リストIDを入れる
-        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
-    },
-    {
         "id": "PL2tNRe-9n6lYCvsOsBGsu_886CGRKkrul",      # ここに再生リストIDを入れる
         "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
         "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
@@ -86,6 +81,11 @@ EXTRA_PLAYLISTS = [
     {
         "id": "PL2tNRe-9n6lYPvqVv2dLhQfO4MpimYjWW",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌配信"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lasIWq0_M2hu9-4Qb3ExXxc",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["みどりとおはなしするだけ","雑談"]   # 自動で付けたいタグ
     },
     {
         "id": "PL2tNRe-9n6layYbKKj92KCO6KVjKivLsi",      # ここに再生リストIDを入れる
@@ -731,6 +731,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

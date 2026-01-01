@@ -1,0 +1,40 @@
+name: Update Ryushen Archive Data
+
+on:
+  # 毎日 日本時間 9:00 (UTC 0:00) に自動実行
+  schedule:
+    - cron: '0 0 * * *'
+  # 手動実行を可能にする
+  workflow_dispatch:
+
+jobs:
+  update_json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+        with:
+          # API経由で更新するため通常は不要ですが、プライベートリポジトリ等の場合に備えて設定
+          token: ${{ secrets.SHEN_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        # 必要なライブラリをインストール
+        run: pip install google-api-python-client requests
+
+      - name: Run Archive Update Script
+        # ここでPythonスクリプトを実行し、API経由で直接更新コミットを行います
+        run: python update_archives.py
+        env:
+          # Secretsを環境変数としてスクリプトに渡す
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.SHEN_TOKEN }}
+          
+          # スクリプト内のデフォルト値を上書きしたい場合は設定（そのままで良ければ削除可）
+          GITHUB_REPO_OWNER: keihanmatcha
+          GITHUB_REPO_NAME: shen

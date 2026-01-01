@@ -11,7 +11,7 @@ import sys
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_REPO_OWNER = "keihanmatcha"
-GITHUB_REPO_NAME = "oukasui"
+GITHUB_REPO_NAME = "shen"
 JSON_FILE_PATH = "archives/archive_videos.json"
 MAX_PAGES_TO_FETCH = 100
 
@@ -676,6 +676,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

@@ -1,8 +1,8 @@
 {
-  "name": "桜華水　長尾景非公式ファンサイト",
-  "short_name": "桜華水",
-  "description": "長尾景さんの非公式ファンサイトです。",
-  "theme_color": "#625DA1",
+  "name": "しぇんしぇん　緑仙非公式ファンサイト",
+  "short_name": "しぇんしぇん",
+  "description": "緑仙さんの非公式ファンサイトです。",
+  "theme_color": "#C24DAED9",
   "background_color": "#000000",
   "display": "standalone",
   "scope": "/",

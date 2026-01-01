@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>長尾景 楽曲神籤｜桜華水</title>
+  <link rel="icon" href="../images/favicon.ico" sizes="any">
+  <style>
+    /* ===== 基本スタイル ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
+    
+    html, body {
+        margin: 0; padding: 0;
+        background: var(--bg); color: var(--fg);
+        font-family: system-ui, -apple-system, sans-serif;
+        width: 100%; overflow-x: hidden;
+    }
+
+    /* ヘッダー */
+    header {
+        position: sticky; top: 0;
+        background: linear-gradient(90deg, #C24DAED9, #625DA1D9);
+        backdrop-filter: saturate(1.2) blur(6px);
+        -webkit-backdrop-filter: saturate(1.2) blur(6px); /* Safari用に追加 */
+        border-bottom: 1px solid var(--border);
+        z-index: 100;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    header .wrap {
+        max-width: 1200px; margin-inline: auto; padding: 12px 16px;
+        display: flex; justify-content: space-between; align-items: center;
+    }
+    .brand { font-weight: 800; color: #fff; text-decoration: none; font-size: 20px; display: flex; align-items: center; gap: 10px; }
+    .nav-links { display: flex; gap: 10px; }
+    .nav-links a { 
+        font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; padding: 6px 14px;
+        position: relative; z-index: 1;
+    }
+    .nav-links a::before {
+        content: ""; position: absolute; inset: 0; z-index: -1;
+        transform: skewX(-20deg); border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: 0.2s;
+    }
+    .nav-links a.link-video::before { background: #B43246; }
+    .nav-links a.link-song::before { background: #4DD7E3; }
+
+    /* ▼▼▼ 背景画像の設定 ▼▼▼ */
+    body{
+      background-image: url("images/washipattern.PNG");
+      background-image: image-set(
+        url("../images/washipattern.webp") type("image/webp") 1x,
+        url("../images/washipattern@2x.webp") type("image/webp") 2x
+      );
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      position: relative; /* 重なり順の基準にする */
+    }
+
+    /* ▼▼▼ オーバーレイ（ぼかし＋白）の修正版 ▼▼▼ */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      /* 白の濃さ：ぼかしを見えやすくするため0.8→0.7に少し下げて調整（お好みで0.8に戻してください） */
+      background: rgba(255, 255, 255, 0.7); 
+      /* Safari対応の記述を追加 */
+      -webkit-backdrop-filter: blur(5px);
+      backdrop-filter: blur(5px);
+      /* 重要：-1だと画像の裏に行くことがあるので 0 にして画像の上に乗せる */
+      z-index: 0; 
+      pointer-events: none; /* クリックを邪魔しないようにする */
+    }
+
+    /* おみくじメインエリア */
+    .omikuji-container {
+        position: relative; /* 重要：オーバーレイより上に表示させる */
+        z-index: 1;         /* 重要：オーバーレイ(0)より上の階層にする */
+        
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+        min-height: 80vh;
+        display: flex; flex-direction: column; align-items: center;
+    }
+    
+    .omikuji-title {
+        font-size: 24px; margin-bottom: 30px; color: var(--accent);
+        font-weight: 800;
+    }
+
+    /* ガラガラボタン */
+    .draw-btn {
+        appearance: none; border: 0; cursor: pointer;
+        background:linear-gradient(90deg, #C24DAED9, #625DA1D9);
+        color: #fff; font-size: 18px; font-weight: 800;
+        padding: 20px 40px; border-radius: 50px;
+        box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+        transition: transform 0.1s, box-shadow 0.1s;
+        display: flex; flex-direction: column; align-items: center; gap: 5px;
+    }
+    .draw-btn:active { transform: scale(0.95); box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4); }
+    .draw-btn span { font-size: 12px; opacity: 0.9; font-weight: normal; }
+
+    /* 結果表示カード */
+    .result-card {
+        margin-top: 40px; width: 100%;
+        background: #fff; border: 1px solid var(--border);
+        border-radius: 16px; overflow: hidden;
+        box-shadow: 0 10px 40px rgba(98, 93, 161, 0.15);
+        opacity: 0; transform: translateY(20px);
+        transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        display: none; /* 初期非表示 */
+    }
+    .result-card.show { display: block; opacity: 1; transform: translateY(0); }
+
+    .result-header {
+        background: var(--panel); padding: 15px;
+        border-bottom: 1px solid var(--border);
+        font-size: 12px; color: var(--muted); letter-spacing: 0.1em;
+    }
+    .result-body { padding: 20px; }
+    .song-name { font-size: 20px; font-weight: 800; color: #333; margin-bottom: 8px; line-height: 1.4; }
+    .artist-name { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+    
+    .video-frame {
+        width: 100%; aspect-ratio: 16/9; background: #000;
+        border-radius: 8px; overflow: hidden; margin-bottom: 15px;
+    }
+    .video-frame iframe { width: 100%; height: 100%; border: 0; }
+
+    .video-meta {
+        font-size: 12px; color: #666; text-align: left;
+        background: #f9fafb; padding: 10px; border-radius: 8px;
+    }
+
+    .share-area { margin-top: 20px; }
+    .tweet-btn {
+        display: inline-block; text-decoration: none;
+        background: #1DA1F2; color: #fff; padding: 10px 20px;
+        border-radius: 99px; font-weight: 700; font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="../index.html" class="brand"><span>桜華水</span></a>
+    <nav class="nav-links">
+      <a href="../archives/index.html" class="link-video">動画を探す</a>
+      <a href="./index.html" class="link-song">曲を探す</a>
+    </nav>
+  </div>
+</header>
+
+<main class="omikuji-container">
+  <h1 class="omikuji-title">楽曲神籤</h1>
+  <p style="margin-bottom: 30px; font-size: 14px; line-height: 1.8;">
+    長尾景が歌った数多の曲の中から、<br>
+    今日のあなたにぴったりの一曲を提案します。
+  </p>
+
+  <button id="drawBtn" class="draw-btn">
+    神籤を引く
+    <span>Click to Play</span>
+  </button>
+
+  <div id="resultCard" class="result-card">
+    <div class="result-header">TODAY'S SONG</div>
+    <div class="result-body">
+      <div id="resSong" class="song-name"></div>
+      <div id="resArtist" class="artist-name"></div>
+      
+      <div class="video-frame">
+        <iframe id="ytFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="video-meta">
+        収録動画：<span id="resVideoTitle"></span><br>
+        日付：<span id="resDate"></span>
+      </div>
+
+      <div class="share-area">
+        <a id="tweetBtn" href="#" target="_blank" class="tweet-btn">𝕏 で結果をポストする</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+  let allSongs = [];
+
+  // データ読み込み
+  fetch('videos.json')
+    .then(r => r.json())
+    .then(data => {
+      // データを「曲単位」にフラット化する
+      data.forEach(v => {
+        if(!v.songs) return;
+        v.songs.forEach(s => {
+          allSongs.push({
+            song: s.title || s.song,
+            artist: s.artist || s.singer || '不明',
+            start: s.start || s.time || 0,
+            videoTitle: v.title,
+            videoId: v.youtubeId,
+            date: v.date
+          });
+        });
+      });
+      console.log(`Loaded ${allSongs.length} songs.`);
+    })
+    .catch(e => console.error(e));
+
+  // おみくじボタン処理
+  const btn = document.getElementById('drawBtn');
+  const card = document.getElementById('resultCard');
+  const frame = document.getElementById('ytFrame');
+
+  btn.addEventListener('click', () => {
+    if(allSongs.length === 0) return alert("データを読み込み中です...");
+
+    // ランダムに1曲選ぶ
+    const pick = allSongs[Math.floor(Math.random() * allSongs.length)];
+
+    // 秒数変換処理
+    let startSec = 0;
+    if(typeof pick.start === 'number') {
+        startSec = pick.start;
+    } else {
+        const p = String(pick.start).split(':').map(Number);
+        if(p.length===3) startSec = p[0]*3600 + p[1]*60 + p[2];
+        else if(p.length===2) startSec = p[0]*60 + p[1];
+    }
+
+    // 表示更新
+    document.getElementById('resSong').textContent = pick.song;
+    document.getElementById('resArtist').textContent = pick.artist;
+    document.getElementById('resVideoTitle').textContent = pick.videoTitle;
+    document.getElementById('resDate').textContent = pick.date;
+
+    // YouTube埋め込み更新 (自動再生ON)
+    frame.src = `https://www.youtube.com/embed/${pick.videoId}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+
+    // ツイートボタン更新
+    const text = `今日の長尾景おすすめ曲は「${pick.song} / ${pick.artist}」です！ #桜華水神籤`;
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`;
+    document.getElementById('tweetBtn').href = url;
+
+    // カード表示アニメーション
+    card.style.display = 'none'; // リセット
+    setTimeout(() => {
+        card.style.display = 'block';
+        requestAnimationFrame(() => card.classList.add('show'));
+    }, 10);
+    
+    // スクロール
+    setTimeout(() => {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
+  });
+</script>
+
+</body>
+</html>

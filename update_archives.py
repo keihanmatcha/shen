@@ -654,7 +654,7 @@ def update_github_json(new_videos):
 
 # --- 6. メイン処理 ---
 def main():
-    print("--- 長尾景＆VΔLZ アーカイブ全件更新スクリプト開始 ---")
+    print("--- 緑仙＆七次元生徒会&RainDrops アーカイブ全件更新スクリプト開始 ---")
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
         print("❌ エラー: 環境変数 (YOUTUBE_API_KEY, GITHUB_TOKEN) が設定されていません")
         return
@@ -676,6 +676,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

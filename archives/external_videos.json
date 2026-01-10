@@ -52,11 +52,11 @@
     "youtubeId": "RcBPlRPu_cY",
     "title": "【#Vtuberロック革命2021】繋ぐ【戌亥とこ/にじさんじ】",
     "channel": "戌亥とこ",
-    "date": "2023-04-10",
+    "date": "2021-09-26",
     "keywords": ["戌亥とこ","不破湊","樋口楓","加賀美ハヤト","Vtuberロック革命"],
     "category": ["歌配信", "3D","ライブ・イベント"],
     "songs": [
-      { "title": "地獄屋八丁荒らし", "artist": "戌亥とこ", "start":1120 }
+      { "title": "地獄屋八丁荒らしwith戌亥", "artist": "戌亥とこ", "start":1120 }
     ]
   },
   {
@@ -67,7 +67,7 @@
     "keywords": ["不破湊","戌亥とこ","樋口楓","加賀美ハヤト","Vtuberロック革命"],
     "category": ["歌配信", "3D","ライブ・イベント"],
     "songs": [
-      { "title": "クチビル・ディテクティヴ", "artist": "Base Ball Bear", "start":847 }
+      { "title": "クチビル・ディテクティヴwith不破", "artist": "Base Ball Bear", "start":847 }
     ]
   },
   {

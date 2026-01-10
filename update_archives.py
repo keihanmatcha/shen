@@ -773,6 +773,20 @@ def update_github_json(new_videos):
     else:
         print(f"❌ コミット失敗: {put_res.status_code}")
         print(put_res.text)
+# --- 追加：プレイリストの所有者名を取得する関数 ---
+def get_playlist_channel_name(youtube, playlist_id):
+    try:
+        response = youtube.playlists().list(
+            part='snippet',
+            id=playlist_id
+        ).execute()
+        items = response.get('items', [])
+        if items:
+            # プレイリストの所有者のチャンネル名を取得
+            return items[0]['snippet']['channelTitle']
+    except Exception as e:
+        print(f"⚠️ プレイリスト情報の取得に失敗: {e}")
+    return "Unknown Channel"
 
 # --- 6. メイン処理 ---
 def main():
@@ -792,9 +806,14 @@ def main():
             fetched_videos.extend(videos)
     if 'EXTRA_PLAYLISTS' in globals(): # エラー防止のためのチェック
         for pl in EXTRA_PLAYLISTS:
-            print(f"🔍 追加リスト取得: {pl['name']} (ID: {pl['id']})")
-            # 既存の関数をそのまま再利用できます
-            videos = fetch_videos_from_playlist(youtube, pl['id'], pl['name'], pl.get('fixed_tags', []))
+            # "name" があればそれを使用、なければAPIで自動取得
+            channel_name = pl.get('name')
+            if not channel_name:
+                print(f"🌐 プレイリスト {pl['id']} のチャンネル名を自動取得中...")
+                channel_name = get_playlist_channel_name(youtube, pl['id'])
+            
+            print(f"🔍 追加リスト取得: {channel_name} (ID: {pl['id']})")
+            videos = fetch_videos_from_playlist(youtube, pl['id'], channel_name, pl.get('fixed_tags', []))
             fetched_videos.extend(videos)
     if MANUAL_VIDEO_IDS:
         manual_videos = fetch_manual_videos(youtube, MANUAL_VIDEO_IDS)
@@ -807,8 +826,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-

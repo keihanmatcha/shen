@@ -668,7 +668,99 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
             if not next_page_token: break
         except: break
     return videos
+def update_github_json(new_videos):
+    headers = {
+        "Authorization": f"token {GITHUB_TOKEN}",
+        "Accept": "application/vnd.github.v3+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+    }
+    contents_url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
 
+
+    response = requests.get(contents_url, headers=headers)
+    existing_videos = []
+    existing_sha = None
+
+    if response.status_code == 200:
+        content_info = response.json()
+        existing_content = content_info['content']
+        existing_sha = content_info['sha']
+        try:
+            decoded_content = base64.b64decode(existing_content).decode('utf-8-sig')
+            existing_videos = json.loads(decoded_content)
+        except Exception:
+            print("⚠️ 予期せぬエラーによりファイルを初期化します。")
+            existing_videos = []
+    else:
+        print(f"ℹ️ ファイルが見つかりません。新規作成します。")
+        existing_videos = []
+
+    preserved_videos = [v for v in existing_videos if v.get('channel') not in MANAGED_CHANNEL_NAMES]
+    managed_map = {v['youtubeId']: v for v in existing_videos if v.get('channel') in MANAGED_CHANNEL_NAMES}
+    
+    updated_count = 0
+    added_count = 0
+
+    for new_video in new_videos:
+        vid_id = new_video['youtubeId']
+        
+        if vid_id in managed_map:
+            existing_record = managed_map[vid_id]
+            is_changed = False
+            
+            if 'songs' not in existing_record: existing_record['songs'] = []
+            
+            # カテゴリの比較（リスト同士の比較）
+            old_cat = existing_record.get('category')
+            # 古いデータが文字列だった場合の互換処理（比較用）
+            if isinstance(old_cat, str):
+                old_cat = [old_cat] if old_cat != "未分類" else []
+                # 既存データ側もリスト形式に更新しておく
+                existing_record['category'] = new_video['category']
+                is_changed = True
+            elif isinstance(old_cat, list):
+                if sorted(old_cat) != sorted(new_video['category']):
+                    existing_record['category'] = new_video['category']
+                    is_changed = True
+            else:
+                 # categoryキーが無い場合など
+                existing_record['category'] = new_video['category']
+                is_changed = True
+
+            current_kws = set(existing_record.get('keywords', []))
+            new_kws = set(new_video['keywords'])
+            
+            if current_kws != new_kws:
+                existing_record['keywords'] = list(new_kws)
+                is_changed = True
+            
+            if is_changed: updated_count += 1
+            managed_map[vid_id] = existing_record
+        else:
+            managed_map[vid_id] = new_video
+            added_count += 1
+
+    final_videos_list = preserved_videos + list(managed_map.values())
+    final_videos_list.sort(key=lambda x: x.get('date', '1900-01-01'), reverse=True)
+
+    print(f"📦 コミット準備: 新規{added_count}件, 更新{updated_count}件, 総数{len(final_videos_list)}件")
+    
+    new_content_bytes = json.dumps(final_videos_list, indent=2, ensure_ascii=False).encode('utf-8')
+    new_content_base64 = base64.b64encode(new_content_bytes).decode('utf-8')
+
+    commit_data = {
+        "message": f"ARCHIVE_BOT: Repair & Update (Add {added_count}, Update {updated_count})",
+        "content": new_content_base64,
+        "sha": existing_sha
+    }
+
+    put_res = requests.put(contents_url, headers=headers, json=commit_data)
+    if put_res.status_code in [200, 201]:
+        print(f"🚀 GitHubコミット完了！")
+    else:
+        print(f"❌ コミット失敗: {put_res.status_code}")
+        print(put_res.text)
+    
 # --- 6. メイン & GitHub 更新 (update_github_json は既存のものをそのまま使用) ---
 
 def main():
@@ -695,3 +787,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

@@ -1,3 +1,4 @@
+import html
 import os
 import json
 import base64
@@ -524,8 +525,51 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
 
     # リストに変換してソート
     return sorted(list(detected_categories)), sorted(list(detected_keywords))
+def parse_setlist_from_text(text):
+    """テキストからタイムスタンプと曲名を抽出する共通ロジック"""
+    if not text: return []
+    
+    # HTML実体参照をデコード (&amp; -> & など)
+    text = html.unescape(text)
+    
+    # タイムスタンプを探す
+    timestamps = re.findall(r'(\d{1,2}:\d{2}(?::\d{2})?)', text)
+    if len(timestamps) < 4:  # 4曲未満はセトリと見なさない
+        return []
 
+    songs = []
+    # YouTubeの改行は <br> または \n
+    lines = text.replace('<br>', '\n').split('\n')
+    
+    for line in lines:
+        match = re.search(r'(\d{1,2}:\d{2}(?::\d{2})?)\s*(.*)', line)
+        if match:
+            ts_str = match.group(1)
+            raw_title = re.sub(r'<[^>]+>', '', match.group(2)).strip()
+            
+            # 曲名のクリーニング（♪, M1., 【】, 曲名： などを除去）
+            clean_title = re.sub(r'^[♪M\d\.\s\-－(（]+', '', raw_title) # 行頭の記号・数字
+            clean_title = re.sub(r'[)）\s\-－/／]+$', '', clean_title) # 行末のゴミ
+            clean_title = clean_title.replace('曲名：', '').replace('♪', '').strip()
+
+            if not clean_title or any(x in clean_title for x in ["開始", "セトリ", "本編", "待機"]):
+                continue
+
+            # アーティストの分割
+            if ' / ' in clean_title: t, a = clean_title.split(' / ', 1)
+            elif '／' in clean_title: t, a = clean_title.split('／', 1)
+            elif ' - ' in clean_title: t, a = clean_title.split(' - ', 1)
+            else: t, a = clean_title, ""
+
+            songs.append({
+                "title": t.strip(),
+                "artist": a.strip(),
+                "start": timestamp_to_seconds(ts_str)
+            })
+    return songs
+    
 # --- 4. YouTube API ---
+
 def extract_setlist_from_comments(youtube, video_id):
     """コメント欄からセトリ（タイムスタンプ付き）を抽出して JSON 形式で返す"""
     try:
@@ -589,65 +633,62 @@ def get_uploads_playlist_id(youtube, channel_id):
         return None
 
 def fetch_manual_videos(youtube, video_ids, overrides, fixed_tags=[]):
-    if not video_ids:
-        return []
-        
+    if not video_ids: return []
     print(f"🔍 手動リストの動画情報を取得中 ({len(video_ids)}件)...")
     videos = []
     
-    # 一度に取得できるのは50件までなので分割処理
     for i in range(0, len(video_ids), 50):
         chunk = video_ids[i:i+50]
         try:
-            # 動画の詳細情報を取得（限定公開でもID指定なら取れる）
             vid_response = youtube.videos().list(
-                part='snippet,contentDetails',
-                id=','.join(chunk)
+                part='snippet,contentDetails', id=','.join(chunk)
             ).execute()
 
             for item in vid_response.get('items', []):
-                snippet = item['snippet']
                 video_id = item['id']
+                snippet = item['snippet']
                 
-                # 日付処理
-                try:
-                    dt = datetime.strptime(snippet['publishedAt'][:10], '%Y-%m-%d')
-                    published_date = dt.strftime('%Y-%m-%d')
-                except ValueError:
-                    published_date = "2000-01-01"
+                # 1. 手動確定データ(final)のチェック
+                if video_id in overrides:
+                    print(f"  💎 手動確定(final)を適用: {video_id}")
+                    f = overrides[video_id]
+                    videos.append({
+                        "youtubeId": video_id,
+                        "title": f.get('title', snippet['title']),
+                        "channel": snippet.get('channelTitle'),
+                        "date": f.get('date', snippet['publishedAt'][:10]),
+                        "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+                        "category": f.get('category', ["未分類"]),
+                        "keywords": f.get('keywords', []),
+                        "songs": f.get('songs', [])
+                    })
+                    continue
 
-                # ショート判定
+                # 2. 通常の自動判定
                 duration_str = item['contentDetails']['duration']
                 seconds = get_duration_seconds(duration_str)
                 is_short = (0 < seconds <= 60)
-
-                # チャンネル名の取得（snippetから取れる）
                 channel_name = snippet.get('channelTitle', 'Unknown')
 
-                # タグ分析
                 categories, keywords = analyze_video_tags(
-                    snippet['title'], 
-                    snippet.get('description', ''), 
-                    fixed_tags, 
-                    channel_name=channel_name, 
-                    is_short=is_short
+                    snippet['title'], snippet.get('description', ''), fixed_tags, 
+                    channel_name=channel_name, is_short=is_short
                 )
 
-                videos.append({
-                    "youtubeId": video_id,
-                    "title": snippet['title'],
-                    "channel": channel_name,
-                    "date": published_date,
-                    "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
-                    "category": categories, 
-                    "keywords": keywords,
-                    "songs": []
-                })
+                # 3. 歌配信なら概要欄 -> コメントの順でセトリ取得
+                songs_list = []
+                if "歌配信" in categories:
+                    songs_list = parse_setlist_from_text(snippet.get('description', ''))
+                    if not songs_list:
+                        songs_list = extract_setlist_from_comments(youtube, video_id)
 
+                videos.append({
+                    "youtubeId": video_id, "title": snippet['title'], "channel": channel_name,
+                    "date": snippet['publishedAt'][:10], "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+                    "category": categories, "keywords": keywords, "songs": songs_list
+                })
         except Exception as e:
             print(f"⚠️ Manual Fetch Error: {e}")
-
-    print(f"✅ 手動リスト: {len(videos)} 件取得成功")
     return videos
 def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, overrides):
     videos = []
@@ -677,18 +718,27 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
                 sec = get_duration_seconds(durations.get(video_id, "PT0S"))
                 cat, kw = analyze_video_tags(snippet['title'], snippet.get('description', ''), fixed_tags, channel_name=channel_name, is_short=(0 < sec <= 60))
                 
-                songs = []
+                songs_list = []
                 if "歌配信" in cat:
-                    print(f"  🎵 セトリ取得中: {video_id}")
-                    songs = extract_setlist_from_comments(youtube, video_id)
+                    # 1. まず概要欄 (snippet['description']) から抽出を試みる
+                    print(f"  📖 概要欄からセトリを確認中: {video_id}")
+                    songs_list = parse_setlist_from_text(snippet.get('description', ''))
+                    
+                    # 2. 概要欄になければコメント欄を取りに行く
+                    if not songs_list:
+                        print(f"  💬 概要欄にないのでコメント欄をスキャン中: {video_id}")
+                        songs_list = extract_setlist_from_comments(youtube, video_id)
                 
-                videos.append({"youtubeId": video_id, "title": snippet['title'], "channel": channel_name, "date": snippet['publishedAt'][:10], "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg", "category": cat, "keywords": kw, "songs": songs})
-                
-            next_page_token = res.get('nextPageToken')
-            page_count += 1
-            if not next_page_token: break
-        except: break
-    return videos
+                videos.append({
+                    "youtubeId": video_id,
+                    "title": snippet['title'],
+                    "channel": channel_name,
+                    "date": snippet['publishedAt'][:10],
+                    "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+                    "category": cat, 
+                    "keywords": kw, 
+                    "songs": songs_list
+                })
     
 def fetch_final_overrides():
     """GitHubから手動修正JSONを取得し、IDをキーにした辞書を返す"""
@@ -859,6 +909,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

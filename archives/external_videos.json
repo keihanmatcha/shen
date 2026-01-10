@@ -12,9 +12,7 @@
       { "title": "二人セゾン", "artist": "欅坂46", "start": 967 },
       { "title": "黒い羊", "artist": "欅坂46", "start": 1292 },
       { "title": "角を曲がる", "artist": "欅坂46", "start": 1600 },
-      
       { "title": "無謀な夢は覚めることがない", "artist": "欅坂46", "start": 1804 },
-      
       { "title": "パレオはエメラルド", "artist": "欅坂46", "start": 2120 },
       { "title": "ポニーテールとシュシュ", "artist": "欅坂46", "start": 2423 },
       { "title": "Everyday、カチューシャ", "artist": "欅坂46", "start": 2704 },
@@ -35,7 +33,7 @@
       { "title": "遠距離ポスター", "artist": "欅坂46", "start": 7210 },
       { "title": "イチリンソウ", "artist": "欅坂46", "start": 7426 },
       { "title": "桜の栞", "artist": "欅坂46", "start": 7665 },
-      { "title": "ヘビーローテーション", "artist": "欅坂46", "start": 7922 }
+      { "title": "ヘビーローテーション", "artist": "欅坂46", "start": 7922 },
       { "title": "大声ダイヤモンド", "artist": "欅坂46", "start": 8215 }
     ]
   }

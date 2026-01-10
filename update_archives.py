@@ -14,6 +14,7 @@ GITHUB_REPO_OWNER = "keihanmatcha"
 GITHUB_REPO_NAME = "shen"
 JSON_FILE_PATH = "archives/archive_videos.json"
 MAX_PAGES_TO_FETCH = 100
+FINAL_JSON_PATH = "songs/final_videos.json"
 
 CHANNELS = [
     {
@@ -679,7 +680,28 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
             
     print(f"✅ {channel_name}: 合計 {len(videos)} 件取得成功")
     return videos
+def fetch_final_overrides():
+    """GitHubから手動修正JSONを取得し、IDをキーにした辞書を返す"""
+    if not GITHUB_TOKEN: return {}
+    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+    url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{FINAL_JSON_PATH}"
+    try:
+        res = requests.get(url, headers=headers)
+        if res.status_code == 200:
+            content_info = res.json()
+            decoded = base64.b64decode(content_info['content']).decode('utf-8-sig')
+            data = json.loads(decoded)
+            return {v['youtubeId']: v for v in data} # IDをキーに変換
+    except Exception as e:
+        print(f"⚠️ {FINAL_JSON_PATH} の読み込みスキップ: {e}")
+    return {}
 
+def timestamp_to_seconds(ts_str):
+    """00:00 形式を秒数に変換"""
+    parts = ts_str.split(':')
+    if len(parts) == 2: return int(parts[0]) * 60 + int(parts[1])
+    if len(parts) == 3: return int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
+    return 0
 
 # --- 5. GitHub更新処理 (リスト対応版) ---
 def update_github_json(new_videos):
@@ -826,3 +848,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

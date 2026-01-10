@@ -47,5 +47,16 @@
     "songs": [
       { "title": "明日は日曜日", "artist": "RainDrops", "start":1807 }
     ]
+  },
+  {
+    "youtubeId": "zfIEsdD82BY",
+    "title": "【#Vtuberロック革命2021】繋ぐ【戌亥とこ/にじさんじ】",
+    "channel": "三枝明那",
+    "date": "2023-04-10",
+    "category": ["戌亥とこ","3D","ライブ・イベント","不破湊","樋口楓","加賀美ハヤト","歌配信"],
+    "keywords": ["戌亥とこ", "Vtuberロック革命"],
+    "songs": [
+      { "title": "地獄屋八丁荒らし", "artist": "戌亥とこ", "start":1120 }
+    ]
   }
 ]

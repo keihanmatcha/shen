@@ -694,51 +694,91 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
     videos = []
     next_page_token = None
     page_count = 0
+    print(f"🔍 {channel_name} の動画を取得開始...")
+    
     while page_count < MAX_PAGES_TO_FETCH:
         try:
-            res = youtube.playlistItems().list(part='snippet,contentDetails', playlistId=playlist_id, maxResults=50, pageToken=next_page_token).execute()
-            items = res.get('items', [])
+            request = youtube.playlistItems().list(
+                part='snippet,contentDetails', playlistId=playlist_id,
+                maxResults=50, pageToken=next_page_token
+            )
+            response = request.execute()
+            items = response.get('items', [])
             if not items: break
             
-            v_ids = [it['contentDetails']['videoId'] for it in items]
-            v_res = youtube.videos().list(part='contentDetails', id=','.join(v_ids)).execute()
-            durations = {v['id']: v['contentDetails']['duration'] for v in v_res.get('items', [])}
+            video_ids = [item['contentDetails']['videoId'] for item in items]
+            vid_response = youtube.videos().list(
+                part='contentDetails', id=','.join(video_ids)
+            ).execute()
+            
+            durations = {v['id']: v['contentDetails']['duration'] for v in vid_response.get('items', [])}
 
             for item in items:
                 video_id = item['contentDetails']['videoId']
                 snippet = item['snippet']
-                
-                # 🌟 Overrides チェック
+
+                # 1. 優先：手動確定データ(overrides)があるかチェック
                 if video_id in overrides:
+                    print(f"  💎 手動確定データを適用: {video_id}")
                     f = overrides[video_id]
-                    videos.append({"youtubeId": video_id, "title": f.get('title', snippet['title']), "channel": channel_name, "date": f.get('date', snippet['publishedAt'][:10]), "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg", "category": f.get('category', ["未分類"]), "keywords": f.get('keywords', []), "songs": f.get('songs', [])})
+                    videos.append({
+                        "youtubeId": video_id,
+                        "title": f.get('title', snippet['title']),
+                        "channel": channel_name,
+                        "date": f.get('date', snippet.get('publishedAt', '2000-01-01')[:10]),
+                        "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+                        "category": f.get('category', f.get('tags', ["未分類"])),
+                        "keywords": f.get('keywords', f.get('tags', [])),
+                        "songs": f.get('songs', [])
+                    })
                     continue
 
-                # 通常処理
-                sec = get_duration_seconds(durations.get(video_id, "PT0S"))
-                cat, kw = analyze_video_tags(snippet['title'], snippet.get('description', ''), fixed_tags, channel_name=channel_name, is_short=(0 < sec <= 60))
+                # 2. 通常の自動判定処理
+                try:
+                    # 日付のパース（try-exceptで囲んでエラー落ちを防ぐ）
+                    published_date = snippet['publishedAt'][:10]
+                except (KeyError, TypeError):
+                    published_date = "2000-01-01"
+
+                duration_str = durations.get(video_id, "PT0S")
+                seconds = get_duration_seconds(duration_str)
+                is_short = (0 < seconds <= 60)
                 
+                categories, keywords = analyze_video_tags(
+                    snippet['title'], snippet.get('description', ''), fixed_tags, 
+                    channel_name=channel_name, is_short=is_short
+                )
+
+                # 3. 歌配信の場合、セトリを取得
                 songs_list = []
-                if "歌配信" in cat:
-                    # 1. まず概要欄 (snippet['description']) から抽出を試みる
-                    print(f"  📖 概要欄からセトリを確認中: {video_id}")
+                if "歌配信" in categories:
+                    # まず概要欄をチェック
                     songs_list = parse_setlist_from_text(snippet.get('description', ''))
-                    
-                    # 2. 概要欄になければコメント欄を取りに行く
+                    # 概要欄になければコメントをチェック
                     if not songs_list:
-                        print(f"  💬 概要欄にないのでコメント欄をスキャン中: {video_id}")
+                        print(f"  🎵 歌枠検出。コメントからセトリ取得中... ({video_id})")
                         songs_list = extract_setlist_from_comments(youtube, video_id)
                 
                 videos.append({
                     "youtubeId": video_id,
                     "title": snippet['title'],
                     "channel": channel_name,
-                    "date": snippet['publishedAt'][:10],
+                    "date": published_date,
                     "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
-                    "category": cat, 
-                    "keywords": kw, 
+                    "category": categories, 
+                    "keywords": keywords,
                     "songs": songs_list
                 })
+                
+            next_page_token = response.get('nextPageToken')
+            page_count += 1
+            if not next_page_token: break
+        except Exception as e:
+            print(f"⚠️ {channel_name} 取得中にエラー: {e}")
+            break
+            
+    print(f"✅ {channel_name}: 合計 {len(videos)} 件取得成功")
+    return videos
     
 def fetch_final_overrides():
     """GitHubから手動修正JSONを取得し、IDをキーにした辞書を返す"""
@@ -909,6 +949,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

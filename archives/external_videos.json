@@ -1,7 +1,13 @@
 [
   {
-  "youtubeId": "maVNSr9i26Q",
-  "category": ["歌配信"],
-  "songs": [] 
-}
+    "youtubeId": "maVNSr9i26Q",
+    "title": "【坂道48アイドル編】こじハラってアイドルがいるらしい",
+    "channel": "緑仙 / Ryushen",
+    "date": "2020-05-16",
+    "category": ["歌配信"],
+    "keywords": ["こじらせハラスメント", "相羽ういは", "弦月藤士郎"],
+    "songs": [
+      { "title": "サイレントマジョリティー", "artist": "欅坂46", "start": 65 }
+    ]
+  }
 ]

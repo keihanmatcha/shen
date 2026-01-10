@@ -541,37 +541,52 @@ def timestamp_to_seconds(ts_str):
     return 0
 
 def parse_setlist_from_text(text):
-    """概要欄・コメント欄共通：タイムスタンプと曲名を抽出・クリーニング"""
+    """
+    概要欄・コメント欄共通：
+    1行に1曲、または複数曲あっても、スラッシュにスペースがなくても、
+    末尾に「~」や「(Setlist)」があっても対応する最強版
+    """
     if not text: return []
     text = html.unescape(text)
-    all_ts = re.findall(r'(\d{1,2}:\d{2}(?::\d{2})?)', text)
-    if len(all_ts) < 5: return []
+
+    # タイムスタンプ(ts)と、次のタイムスタンプが来るまでのテキスト(raw)をペアで抽出
+    pattern = r'(\d{1,2}:\d{2}(?::\d{2})?)(.*?)(?=\d{1,2}:\d{2}(?::\d{2})?|$)'
+    matches = re.findall(pattern, text, re.DOTALL)
+    
+    if len(matches) < 4: return []
 
     songs = []
-    lines = text.replace('<br>', '\n').split('\n')
-    for line in lines:
-        ts_match = re.search(r'(\d{1,2}:\d{2}(?::\d{2})?)', line)
-        if ts_match:
-            ts_str = ts_match.group(1)
-            raw_text = line.split(ts_str)[-1].strip()
-            raw_text = re.sub(r'<[^>]+>', '', raw_text)
-            # 行頭の記号を徹底除去
-            clean_title = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜]+', '', raw_text).strip()
-            # 行末のURLやゴミを除去
-            clean_title = re.sub(r'\s*[\(（]?http.*$', '', clean_title).strip()
+    for ts_str, raw_text in matches:
+        # 1. HTMLタグ除去とクリーニング
+        clean_text = re.sub(r'<[^>]+>', '', raw_text).strip()
+        
+        # 2. 曲名の前後にある不要な記号（♪、・、数字、カッコ、~ など）を徹底除去
+        clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜]+', '', clean_text).strip()
+        # 末尾の「~」や「～」を削除
+        clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
+        # 行末のURLや「(covered by...)」等のカッコ内を掃除
+        clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip()
 
-            # 除外ワード (MC、トーク、挨拶などを除外)
-            if not clean_title or any(x in clean_title for x in ["開始", "セトリ", "本編", "待機", "休憩", "挨拶", "告知", "おわり", "MC", "トーク", "紹介"]):
-                continue
+        # 3. 除外ワード判定（曲ではない行を飛ばす）
+        if not clean_text or any(x in clean_title_for_check := clean_text.upper() for x in ["開始", "セトリ", "SETLIST", "本編", "待機", "挨拶", "MC", "トーク"]):
+            continue
 
-            # アーティスト分割
-            t, a = clean_title, ""
-            for sep in [' / ', '／', ' - ', ' － ', '：', ' : ']:
-                if sep in clean_title:
-                    parts = clean_title.split(sep, 1)
-                    t, a = parts[0].strip(), parts[1].strip()
-                    break
-            songs.append({"title": t, "artist": a, "start": timestamp_to_seconds(ts_str)})
+        # 4. アーティスト名の分割（スペースなしの '/' にも対応）
+        t, a = clean_text, ""
+        # 判定順序が重要：長い区切り文字から先に判定する
+        separators = [' / ', '／', ' - ', ' － ', '：', ' : ', '/']
+        for sep in separators:
+            if sep in clean_text:
+                parts = clean_text.split(sep, 1)
+                t, a = parts[0].strip(), parts[1].strip()
+                break
+        
+        songs.append({
+            "title": t,
+            "artist": a,
+            "start": timestamp_to_seconds(ts_str)
+        })
+            
     return songs
     
 # --- 4. YouTube API 関連 ---
@@ -787,4 +802,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

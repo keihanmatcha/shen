@@ -661,32 +661,70 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
     next_page_token = None
     page_count = 0
     print(f"🔍 {channel_name} の動画を取得開始...")
+    
     while page_count < MAX_PAGES_TO_FETCH:
         try:
-            res = youtube.playlistItems().list(part='snippet,contentDetails', playlistId=playlist_id, maxResults=50, pageToken=next_page_token).execute()
+            res = youtube.playlistItems().list(
+                part='snippet,contentDetails', playlistId=playlist_id,
+                maxResults=50, pageToken=next_page_token
+            ).execute()
             items = res.get('items', [])
             if not items: break
+            
             v_ids = [it['contentDetails']['videoId'] for it in items]
             v_res = youtube.videos().list(part='contentDetails', id=','.join(v_ids)).execute()
             durations = {v['id']: v['contentDetails']['duration'] for v in v_res.get('items', [])}
 
             for item in items:
                 v_id, snip = item['contentDetails']['videoId'], item['snippet']
-                if v_id in overrides:
-                    f = overrides[v_id]
-                    videos.append({"youtubeId": v_id, "title": f.get('title', snip['title']), "channel": channel_name, "date": f.get('date', snip.get('publishedAt', '2000-01-01')[:10]), "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg", "category": f.get('category', f.get('tags', ["未分類"])), "keywords": f.get('keywords', f.get('tags', [])), "songs": f.get('songs', [])})
-                    continue
+                
+                # --- 1. 手動修正(overrides)データの確認 ---
+                f = overrides.get(v_id, {})
+                is_manual = v_id in overrides
 
-                cat, kw = analyze_video_tags(snip['title'], snip.get('description', ''), fixed_tags, channel_name=channel_name, is_short=(0 < get_duration_seconds(durations.get(v_id, "PT0S")) <= 60))
-                songs = []
-                if "歌配信" in cat:
-                    songs = parse_setlist_from_text(snip.get('description', '')) or extract_setlist_from_comments(youtube, v_id)
-                videos.append({"youtubeId": v_id, "title": snip['title'], "channel": channel_name, "date": snip.get('publishedAt', '2000-01-01')[:10], "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg", "category": cat, "keywords": kw, "songs": songs})
+                if is_manual:
+                    # 人間が書いたデータをベースにする
+                    cat = f.get('category', f.get('tags', ["未分類"]))
+                    kw = f.get('keywords', f.get('tags', []))
+                    songs_list = f.get('songs', [])  # ここに中身があればそれが採用される
+                else:
+                    # 手動指定がない場合はボットが自動判定
+                    sec = get_duration_seconds(durations.get(v_id, "PT0S"))
+                    cat, kw = analyze_video_tags(
+                        snip['title'], snip.get('description', ''), 
+                        fixed_tags, channel_name=channel_name, is_short=(0 < sec <= 60)
+                    )
+                    songs_list = []
+
+                # --- 2. セットリスト取得の実行判定 (ハイブリッド処理) ---
+                # 条件：「歌配信」タグがある、かつ「セトリがまだ空」の場合のみボットが探す
+                if "歌配信" in cat and not songs_list:
+                    print(f"  🎵 歌配信タグを確認。ボットがセトリを自動取得します: {v_id}")
+                    # まず概要欄から抽出
+                    songs_list = parse_setlist_from_text(snip.get('description', ''))
+                    # 概要欄になければコメント欄から抽出
+                    if not songs_list:
+                        songs_list = extract_setlist_from_comments(youtube, v_id)
+
+                # --- 3. データの組み立て ---
+                videos.append({
+                    "youtubeId": v_id,
+                    "title": f.get('title', snip['title']), # 手動タイトルがあれば優先
+                    "channel": channel_name,
+                    "date": f.get('date', snip.get('publishedAt', '2000-01-01')[:10]),
+                    "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
+                    "category": cat,
+                    "keywords": kw,
+                    "songs": songs_list # 手動があれば手動、空なら自動取得の結果が入る
+                })
             
             next_page_token = res.get('nextPageToken')
             page_count += 1
             if not next_page_token: break
-        except: break
+        except Exception as e:
+            print(f"⚠️ {channel_name} 取得中にエラー: {e}")
+            break
+            
     return videos
 def update_github_json(new_videos):
     headers = {
@@ -807,6 +845,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

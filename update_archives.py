@@ -15,7 +15,7 @@ GITHUB_REPO_OWNER = "keihanmatcha"
 GITHUB_REPO_NAME = "shen"
 JSON_FILE_PATH = "archives/archive_videos.json"
 MAX_PAGES_TO_FETCH = 100
-FINAL_JSON_PATH = "songs/final_videos.json"
+FINAL_JSON_PATH = "archives/external_videos.json"
 
 CHANNELS = [
     {
@@ -543,8 +543,7 @@ def timestamp_to_seconds(ts_str):
 def parse_setlist_from_text(text):
     """
     概要欄・コメント欄共通：
-    1行に1曲、または複数曲あっても、スラッシュにスペースがなくても、
-    末尾に「~」や「(Setlist)」があっても対応する最強版
+    1行に複数曲あっても、スラッシュにスペースがなくても対応する安定版
     """
     if not text: return []
     text = html.unescape(text)
@@ -556,6 +555,9 @@ def parse_setlist_from_text(text):
     if len(matches) < 4: return []
 
     songs = []
+    # 除外したい単語リスト
+    exclude_keywords = ["開始", "セトリ", "SETLIST", "本編", "待機", "挨拶", "MC", "トーク"]
+
     for ts_str, raw_text in matches:
         # 1. HTMLタグ除去とクリーニング
         clean_text = re.sub(r'<[^>]+>', '', raw_text).strip()
@@ -564,16 +566,19 @@ def parse_setlist_from_text(text):
         clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜]+', '', clean_text).strip()
         # 末尾の「~」や「～」を削除
         clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
-        # 行末のURLや「(covered by...)」等のカッコ内を掃除
+        # 行末のURLやカッコ内を掃除
         clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip()
 
-        # 3. 除外ワード判定（曲ではない行を飛ばす）
-        if not clean_text or any(x in clean_title_for_check := clean_text.upper() for x in ["開始", "セトリ", "SETLIST", "本編", "待機", "挨拶", "MC", "トーク"]):
+        # 3. 除外ワード判定（大文字に変換してからチェック）
+        if not clean_text:
+            continue
+            
+        clean_text_upper = clean_text.upper()
+        if any(x in clean_text_upper for x in exclude_keywords):
             continue
 
-        # 4. アーティスト名の分割（スペースなしの '/' にも対応）
+        # 4. アーティスト名の分割
         t, a = clean_text, ""
-        # 判定順序が重要：長い区切り文字から先に判定する
         separators = [' / ', '／', ' - ', ' － ', '：', ' : ', '/']
         for sep in separators:
             if sep in clean_text:
@@ -802,5 +807,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

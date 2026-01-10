@@ -45,7 +45,7 @@
     "category": ["歌配信","3D","ライブ・イベント","記念配信"],
     "keywords": ["三枝明那", "RainDrops"],
     "songs": [
-      { "title": "明日は日曜日", "artist": "RainDrops", "start":1807 }
+      { "title": "明日は日曜日with三枝", "artist": "RainDrops", "start":1807 }
     ]
   },
   {
@@ -58,5 +58,40 @@
     "songs": [
       { "title": "地獄屋八丁荒らし", "artist": "戌亥とこ", "start":1120 }
     ]
-  }
+  },
+  {
+    "youtubeId": "h067fcs_VxM",
+    "title": "【#Vtuberロック革命2021】俺らの夏フェス【不破湊/にじさんじ】",
+    "channel": "不破湊",
+    "date": "2023-04-10",
+    "keywords": ["不破湊","戌亥とこ","樋口楓","加賀美ハヤト","Vtuberロック革命"],
+    "category": ["歌配信", "3D","ライブ・イベント"],
+    "songs": [
+      { "title": "クチビル・ディテクティヴ", "artist": "Base Ball Bear", "start":847 }
+    ]
+  },
+  {
+    "youtubeId": "t-gw-44jAUw",
+    "title": "【#Vtuberロック革命2021】まだ夏、終わらせたくないです 【にじさんじ | 緑仙】",
+    "channel": "緑仙",
+    "date": "2021-09-26",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信",
+      "不破湊",
+      "戌亥とこ",
+      "樋口楓",
+      "加賀美ハヤト",
+      "Vtuberロック革命"
+    ],
+    "songs": [
+      { "title": "Soldier Girls", "artist": "FERN PLANET", "start":68 },
+      { "title": "凛々爛々with戌亥", "artist": "赤い公園", "start":309 },
+      { "title": "イツライwith加賀美", "artist": "緑仙", "start":819 },
+      { "title": "夜王子と月の姫", "artist": "GOING STEADY", "start":1023 },
+      { "title": "深夜高速with all", "artist": "フラワーカンパニーズ", "start":1679 }
+    ]
+  },
 ]

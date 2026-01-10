@@ -36,5 +36,16 @@
       { "title": "ヘビーローテーション", "artist": "欅坂46", "start": 7922 },
       { "title": "大声ダイヤモンド", "artist": "欅坂46", "start": 8215 }
     ]
+  },
+  {
+    "youtubeId": "zfIEsdD82BY",
+    "title": "【#三枝明那3DLIVE】 夢の足跡 / Akina Saegusa 4th anniversary LIVE trackdown",
+    "channel": "三枝明那",
+    "date": "2023-04-10",
+    "category": ["歌配信","3D","ライブ・イベント","記念配信"],
+    "keywords": ["三枝明那", "RainDrops"],
+    "songs": [
+      { "title": "明日は日曜日", "artist": "RainDrops", "start":1807 }
+    ]
   }
 ]

@@ -604,7 +604,7 @@ def fetch_manual_videos(youtube, video_ids, fixed_tags=[]):
 
     print(f"✅ 手動リスト: {len(videos)} 件取得成功")
     return videos
-def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
+def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, overrides):
     videos = []
     next_page_token = None
     page_count = 0
@@ -633,8 +633,24 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags):
                 durations[v['id']] = v['contentDetails']['duration']
 
             for item in items:
-                snippet = item['snippet']
-                if not snippet.get('publishedAt'): continue
+                video_id = item['contentDetails']['videoId']
+        snippet = item['snippet']
+
+        # 🌟 修正ポイント: 手動確定データ(final)がある場合はそちらを採用
+        if video_id in overrides:
+            print(f"  💎 手動確定データを適用: {video_id}")
+            f = overrides[video_id]
+            videos.append({
+                "youtubeId": video_id,
+                "title": f.get('title', snippet['title']),
+                "channel": channel_name,
+                "date": f.get('date', snippet.get('publishedAt', '2000-01-01')[:10]),
+                "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
+                "category": f.get('category', f.get('tags', ["未分類"])),
+                "keywords": f.get('keywords', f.get('tags', [])),
+                "songs": f.get('songs', [])
+            })
+            continue # 自動判定をスキップして次の動画へ
                 
                 try:
                     dt = datetime.strptime(snippet['publishedAt'][:10], '%Y-%m-%d')
@@ -816,7 +832,7 @@ def main():
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
         print("❌ エラー: 環境変数 (YOUTUBE_API_KEY, GITHUB_TOKEN) が設定されていません")
         return
-
+    overrides = fetch_final_overrides()
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
     fetched_videos = []
     
@@ -824,7 +840,7 @@ def main():
         playlist_id = get_uploads_playlist_id(youtube, ch['id'])
         if playlist_id:
             fixed_tags = ch.get('fixed_tags', [])
-            videos = fetch_videos_from_playlist(youtube, playlist_id, ch['name'], fixed_tags)
+            videos = fetch_videos_from_playlist(youtube, playlist_id, ch['name'], ch.get('fixed_tags', []), overrides)
             fetched_videos.extend(videos)
     if 'EXTRA_PLAYLISTS' in globals(): # エラー防止のためのチェック
         for pl in EXTRA_PLAYLISTS:
@@ -835,7 +851,7 @@ def main():
                 channel_name = get_playlist_channel_name(youtube, pl['id'])
             
             print(f"🔍 追加リスト取得: {channel_name} (ID: {pl['id']})")
-            videos = fetch_videos_from_playlist(youtube, pl['id'], channel_name, pl.get('fixed_tags', []))
+            videos = fetch_videos_from_playlist(youtube, pl['id'], channel_name, pl.get('fixed_tags', []), overrides)
             fetched_videos.extend(videos)
     if MANUAL_VIDEO_IDS:
         manual_videos = fetch_manual_videos(youtube, MANUAL_VIDEO_IDS)
@@ -848,4 +864,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

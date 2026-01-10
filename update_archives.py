@@ -526,6 +526,51 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
     return sorted(list(detected_categories)), sorted(list(detected_keywords))
 
 # --- 4. YouTube API ---
+def extract_setlist_from_comments(youtube, video_id):
+    """コメント欄からセトリ（タイムスタンプ付き）を抽出して JSON 形式で返す"""
+    try:
+        response = youtube.commentThreads().list(
+            part='snippet',
+            videoId=video_id,
+            maxResults=10,
+            order='relevance'  # 評価の高いコメントを優先
+        ).execute()
+
+        for item in response.get('items', []):
+            comment_text = item['snippet']['topLevelComment']['snippet']['textDisplay']
+            # タイムスタンプが含まれているか確認
+            timestamps = re.findall(r'(\d{1,2}:\d{2}(?::\d{2})?)', comment_text)
+            
+            if len(timestamps) >= 5:
+                songs = []
+                # YouTubeコメントの改行タグを通常の改行に変換して分割
+                lines = comment_text.replace('<br>', '\n').split('\n')
+                for line in lines:
+                    match = re.search(r'(\d{1,2}:\d{2}(?::\d{2})?)\s*(.*)', line)
+                    if match:
+                        ts_str = match.group(1)
+                        raw_text = re.sub(r'<[^>]+>', '', match.group(2)).strip() # タグ除去
+                        raw_text = raw_text.lstrip('-_ー 　/／').strip()
+                        
+                        if not raw_text or any(x in raw_text for x in ["開始", "セトリ", "本編"]):
+                            continue
+
+                        # 曲名とアーティストを分割
+                        if ' / ' in raw_text: t, a = raw_text.split(' / ', 1)
+                        elif '／' in raw_text: t, a = raw_text.split('／', 1)
+                        elif ' - ' in raw_text: t, a = raw_text.split(' - ', 1)
+                        else: t, a = raw_text, ""
+
+                        songs.append({
+                            "title": t.strip(),
+                            "artist": a.strip(),
+                            "start": timestamp_to_seconds(ts_str)
+                        })
+                if songs: return songs
+    except Exception as e:
+        print(f"  ⚠️ セトリ自動取得失敗 ({video_id}): {e}")
+    return []
+    
 def get_duration_seconds(duration_str):
     match = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', duration_str)
     if not match:
@@ -543,7 +588,7 @@ def get_uploads_playlist_id(youtube, channel_id):
         print(f"❌ Error getting playlist ID: {e}")
         return None
 
-def fetch_manual_videos(youtube, video_ids, fixed_tags=[]):
+def fetch_manual_videos(youtube, video_ids, overrides, fixed_tags=[]):
     if not video_ids:
         return []
         
@@ -608,94 +653,43 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
     videos = []
     next_page_token = None
     page_count = 0
-    
-    print(f"🔍 {channel_name} の動画を取得開始...")
-    
     while page_count < MAX_PAGES_TO_FETCH:
         try:
-            request = youtube.playlistItems().list(
-                part='snippet,contentDetails', playlistId=playlist_id,
-                maxResults=50, pageToken=next_page_token
-            )
-            response = request.execute()
-            items = response.get('items', [])
+            res = youtube.playlistItems().list(part='snippet,contentDetails', playlistId=playlist_id, maxResults=50, pageToken=next_page_token).execute()
+            items = res.get('items', [])
             if not items: break
             
-            video_ids = [item['contentDetails']['videoId'] for item in items]
-            
-            vid_response = youtube.videos().list(
-                part='contentDetails',
-                id=','.join(video_ids)
-            ).execute()
-            
-            durations = {}
-            for v in vid_response.get('items', []):
-                durations[v['id']] = v['contentDetails']['duration']
+            v_ids = [it['contentDetails']['videoId'] for it in items]
+            v_res = youtube.videos().list(part='contentDetails', id=','.join(v_ids)).execute()
+            durations = {v['id']: v['contentDetails']['duration'] for v in v_res.get('items', [])}
 
             for item in items:
                 video_id = item['contentDetails']['videoId']
-        snippet = item['snippet']
+                snippet = item['snippet']
+                
+                # 🌟 Overrides チェック
+                if video_id in overrides:
+                    f = overrides[video_id]
+                    videos.append({"youtubeId": video_id, "title": f.get('title', snippet['title']), "channel": channel_name, "date": f.get('date', snippet['publishedAt'][:10]), "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg", "category": f.get('category', ["未分類"]), "keywords": f.get('keywords', []), "songs": f.get('songs', [])})
+                    continue
 
-        # 🌟 修正ポイント: 手動確定データ(final)がある場合はそちらを採用
-        if video_id in overrides:
-            print(f"  💎 手動確定データを適用: {video_id}")
-            f = overrides[video_id]
-            videos.append({
-                "youtubeId": video_id,
-                "title": f.get('title', snippet['title']),
-                "channel": channel_name,
-                "date": f.get('date', snippet.get('publishedAt', '2000-01-01')[:10]),
-                "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
-                "category": f.get('category', f.get('tags', ["未分類"])),
-                "keywords": f.get('keywords', f.get('tags', [])),
-                "songs": f.get('songs', [])
-            })
-            continue # 自動判定をスキップして次の動画へ
+                # 通常処理
+                sec = get_duration_seconds(durations.get(video_id, "PT0S"))
+                cat, kw = analyze_video_tags(snippet['title'], snippet.get('description', ''), fixed_tags, channel_name=channel_name, is_short=(0 < sec <= 60))
                 
-                try:
-                    dt = datetime.strptime(snippet['publishedAt'][:10], '%Y-%m-%d')
-                    published_date = dt.strftime('%Y-%m-%d')
-                except ValueError:
-                    published_date = "2000-01-01"
-
-                video_id = item['contentDetails']['videoId']
+                songs = []
+                if "歌配信" in cat:
+                    print(f"  🎵 セトリ取得中: {video_id}")
+                    songs = extract_setlist_from_comments(youtube, video_id)
                 
-                duration_str = durations.get(video_id, "PT0S")
-                seconds = get_duration_seconds(duration_str)
-                is_short = (0 < seconds <= 60)
+                videos.append({"youtubeId": video_id, "title": snippet['title'], "channel": channel_name, "date": snippet['publishedAt'][:10], "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg", "category": cat, "keywords": kw, "songs": songs})
                 
-                # categories (list) を取得
-                categories, keywords = analyze_video_tags(
-                    snippet['title'], 
-                    snippet.get('description', ''), 
-                    fixed_tags, 
-                    channel_name=channel_name, 
-                    is_short=is_short
-                )
-                
-                videos.append({
-                    "youtubeId": video_id,
-                    "title": snippet['title'],
-                    "channel": channel_name,
-                    "date": published_date,
-                    "thumbnail": f"https://i.ytimg.com/vi/{video_id}/mqdefault.jpg",
-                    "category": categories, 
-                    "keywords": keywords,
-                    "songs": []
-                })
-                
-            next_page_token = response.get('nextPageToken')
+            next_page_token = res.get('nextPageToken')
             page_count += 1
-            print(f"  - Page {page_count}: {len(videos)} videos fetched so far.")
-            
             if not next_page_token: break
-            
-        except Exception as e:
-            print(f"⚠️ Fetch Error on page {page_count}: {e}")
-            break
-            
-    print(f"✅ {channel_name}: 合計 {len(videos)} 件取得成功")
+        except: break
     return videos
+    
 def fetch_final_overrides():
     """GitHubから手動修正JSONを取得し、IDをキーにした辞書を返す"""
     if not GITHUB_TOKEN: return {}
@@ -727,6 +721,7 @@ def update_github_json(new_videos):
         "X-GitHub-Api-Version": "2022-11-28",
     }
     contents_url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
+
 
     response = requests.get(contents_url, headers=headers)
     existing_videos = []
@@ -832,8 +827,8 @@ def main():
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
         print("❌ エラー: 環境変数 (YOUTUBE_API_KEY, GITHUB_TOKEN) が設定されていません")
         return
-    overrides = fetch_final_overrides()
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+    overrides = fetch_final_overrides()
     fetched_videos = []
     
     for ch in CHANNELS:
@@ -854,7 +849,7 @@ def main():
             videos = fetch_videos_from_playlist(youtube, pl['id'], channel_name, pl.get('fixed_tags', []), overrides)
             fetched_videos.extend(videos)
     if MANUAL_VIDEO_IDS:
-        manual_videos = fetch_manual_videos(youtube, MANUAL_VIDEO_IDS)
+        manual_videos = fetch_manual_videos(youtube, MANUAL_VIDEO_IDS,overrides)
         fetched_videos.extend(manual_videos)
 
     if fetched_videos:
@@ -864,5 +859,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

@@ -143,7 +143,7 @@
     .brand span{ text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 
     /* Hero */
-    .hero{ padding:48px 0 30px; text-align: center; }
+    .hero { padding: 32px 0 20px; text-align: center; } /* 上下の余白を減らす */
     .title{ 
       font-size:32px; margin:0 0 12px; 
       color: var(--accent);
@@ -186,7 +186,7 @@
     .btn.secondary:hover { background: rgba(0, 105, 92, 0.05); }
 
     /* セクション見出し: 雲や雷文をイメージした装飾 */
-    .p-section{ margin:50px 0 }
+    .p-section{ margin:32px 0 }
     .p-section .bar{
       text-align: center;
       margin-bottom: 24px;
@@ -212,8 +212,7 @@
     /* 見出しの下に英語装飾などを入れたい場合はここ */
 
     .p-section .body{ max-width:800px; margin: 0 auto; }
-    .p-section p{ margin:16px 0; line-height:2.0; font-size:16px; color: #455a64; text-align: justify; }
-
+    .p-section p{ margin:10px 0; line-height:1.65; font-size:16px; color: #455a64; text-align: justify; }
     /* リンク群 (タグなど) */
     .links {
       display:flex; gap:10px; flex-wrap:wrap;
@@ -287,6 +286,70 @@
     
     .sb-ic{ width:18px; height:18px; fill: currentColor }
     .sb-note{ margin-top:20px; color: var(--muted); font-size:12px; text-align: center; }
+
+    /* プロフィール用：説明文と動画を横並びにする */
+    .profile-layout {
+      display: grid;
+　　  grid-template-columns: 1fr 300px; /* 左:文章(可変) / 右:動画(固定) */
+ 　　 gap: 24px;
+ 　　 align-items: start;
+　　}
+    /* ユニットごとのカードデザイン */
+    .unit-item {
+      background: #fff;
+      border: 1px solid var(--border); /* または border: 1px solid #cfd8dc; */
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .unit-item:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 12px rgba(0, 105, 92, 0.1);
+      transform: translateY(-2px);
+    }
+
+/* ユニット名 */
+.unit-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  border-bottom: 1px dashed var(--gold);
+  padding-bottom: 8px;
+  margin: 0;
+}
+
+/* 説明文 */
+.unit-desc {
+  font-size: 14px;
+  color: var(--fg);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1; /* 内容量が違ってもボタン位置を揃えるため */
+}
+
+/* 埋め込み調整 */
+.unit-item .embed {
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* 埋め込み動画・音楽用：グリッド配置 */
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 幅に合わせて自動折り返し */
+  gap: 16px;
+  margin: 16px 0;
+}
+
+/* モバイル対応：画面が狭いときは縦並びに戻す */
+@media (max-width: 768px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .grid-gallery { grid-template-columns: 1fr; }
+}
 
     /* Main Content */
     .content{ min-width:0 }
@@ -517,55 +580,44 @@
 
       <section id="sec-profile" class="p-section" aria-labelledby="h-profile">
         <div class="bar"><h2 id="h-profile">PROFILE</h2></div>
-        <div class="body">
+        <div class="body profile-layout"> <div>
           <p>本名は仙河緑/せんがみどり。こう見えて日本人。<br>歌うことが好きで活動を通して友達を作ろうと考えている性別不詳。（にじさんじ公式紹介文より引用）</p>
-          <p>活動経歴やエピソードは <a href="https://wikiwiki.jp/nijisanji/%E7%B7%91%E4%BB%99" target="_blank">非公式wiki</a> を参照。多種多様なバーチャルライバー(VTuber)が所属するVTuber/バーチャルライバープロジェクト「にじさんじ」に所属し、配信活動などを行っている。</p>
-         
-          <div class="links">
-            <a href="https://ryushen.pages.dev/" target="_blank">公式サイト</a>
+          <p>活動経歴やエピソードは <a href="https://wikiwiki.jp/nijisanji/%E7%B7%91%E4%BB%99" target="_blank" style="color:var(--accent);font-weight:bold;">非公式wiki</a> を参照。多種多様なバーチャルライバー(VTuber)が所属するVTuber/バーチャルライバープロジェクト「にじさんじ」に所属し、配信活動などを行っている。</p>
+          <div class="links" style="justify-content: flex-start;"> <a href="https://ryushen.pages.dev/" target="_blank">公式サイト</a>
             <a href="https://www.youtube.com/@Ryushen" target="_blank">YouTube</a>
             <a href="https://x.com/midori_2434" target="_blank">Twitter (X)</a>
           </div>
-
-          <div class="embed">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/_76EQqWJABM?si=SeJtmlCBH7w1r445"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-          </div>
         </div>
+        <div class="embed" style="margin:0;">
+          <iframe
+        src="https://www.youtube-nocookie.com/embed/_76EQqWJABM?si=SeJtmlCBH7w1r445"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+       </div>
       </section>
-
+          
       <section id="sec-music" class="p-section" aria-labelledby="h-music">
-        <div class="bar"><h2 id="h-live">MUSIC</div>
+        <div class="bar"><h2 id="h-live">MUSIC</h2></div>
         <div class="body">
-          <p>UNIVERSAL MUSIC所属。今までにアルバムを4本リリースしている。</p>
-          <p>妬みや嫉みといったネガティブでよくないものと捉えられがちな感情を肯定してくれるような音楽をつくる。</p>
-          <p>2023年メジャーデビュー＆1stソロLIVE開催<br>2024年2ndLIVEツアー開催&CDJ2425出演<br>2025年CDJ2526出演</p>
-          <div class="embed">
-           <iframe width="560" height="315" 
-             src="https://www.youtube-nocookie.com/embed/videoseries?si=zGe6_6iFhYHsGPmo&amp;list=OLAK5uy_mR46w9gg9UKnxf0CZ-T7y7IBOirZP0CWs" 
-             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-             picture-in-picture; web-share" 
-             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-          </div>
-          <div class="embed">
-           <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=1qFJFJvwHc-191r0&amp;list=OLAK5uy_lWfTV7Z7sI-yUBpuKOr1k80rLn4ziUNmM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-             clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-             allowfullscreen>
-           </iframe>
-          </div>
-          <div class="embed">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=8k3rDAMJe_robDkX&amp;list=OLAK5uy_lK3vYQuMzo3A6i4TXjim4gU6Mk-bNml3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-              gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-          </div>
+          <p>UNIVERSAL MUSIC所属。今までにアルバムを4本リリースしている。妬みや嫉みといったネガティブな感情を肯定してくれるような音楽をつくる。</p>
           <div class="links">
-            <a href="https://www.universal-music.co.jp/ryushen/" target="_blank">緑仙</a>
+            <a href="https://www.universal-music.co.jp/ryushen/" target="_blank">緑仙 (UM)</a>
             <a href="https://www.youtube.com/@Ryushen" target="_blank">YouTube</a>
+          </div>
+          <div class="grid-gallery">
+            <div class="embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=zGe6_6iFhYHsGPmo&list=OLAK5uy_mR46w9gg9UKnxf0CZ-T7y7IBOirZP0CWs" 
+                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=1qFJFJvwHc-191r0&list=OLAK5uy_lWfTV7Z7sI-yUBpuKOr1k80rLn4ziUNmM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=8k3rDAMJe_robDkX&list=OLAK5uy_lK3vYQuMzo3A6i4TXjim4gU6Mk-bNml3k" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
           </div>
           <div class="reel-group">
             <h3 class="reel-cat-title">出演LIVE<span class="reel-cat-en">LIVE</span></h3>
@@ -662,56 +714,80 @@
               </a>
             </div>
           </div>
-        </div>
+          </div>
       </section>
-
       <section id="sec-unit" class="p-section" aria-labelledby="h-unit">
-        <div class="bar"><h2 id="h-music">UNIT</h2></div>
+        <div class="bar"><h2 id="h-unit">UNIT</h2></div>
         <div class="body">
-          <p>同じプロジェクトに所属する仲間と共にユニット <strong>RainDrops</strong> として活動していた。RainDrops以外にもユニットを主体となって組み、オリジナル曲をリリースしている。</p>
-          <div class="links">
-            <a href="https://www.universal-music.co.jp/raindrops/" target="_blank">RainDrops</a>
-            <a href="https://www.youtube.com/@raindrops200123" target="_blank">RainDrops YouTube</a>
-          </div>
-          <div class="embed">
-           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/artist/63mQUyT3UKIYrnbUP0ybNf?utm_source=generator" 
-            width="100%" height="352" frameBorder="0" allowfullscreen="" 
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-           </iframe>
-          </div>
-          <div class="links">
-            <a href="https://www.youtube.com/live/B5NrsznSMls" target="_blank">BIRTHDAY LIVE</a>
-          </div>
-          <div class="embed">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" 
-              src="https://open.spotify.com/embed/artist/57PWScX28Tgwn8U3PAFog4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
-              clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </div>
-          <div class="links">
-            <a href="https://www.youtube.com/watch?v=QxnI-0kzW2U&list=PLUDVjoVRQVQeIRJnXirhmDm2pVppfb9MC&index=1" target="_blank">こじハラプレイリスト</a>
-          </div>
-          <div class="embed">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" 
-              src="https://open.spotify.com/embed/artist/3TQQYcA99MmDc3XbbE2MVy?utm_source=generator" width="100%" 
-              height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
-              clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
-          </div>
-          <div class="links">
-            <a href="twitter.com/seitokai_07" target="_blank">七次元生徒会　X</a>
-            <a href="https://www.youtube.com/@seitokai_07" target="_blank">七次元生徒会 YouTube</a>
-          </div>
-          <div class="embed">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" 
-              src="https://open.spotify.com/embed/artist/2qQFYwjQa8IroaDEpmlfzl?utm_source=generator" 
-              width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
-              clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-            </iframe>
+          <p>ソロ活動だけでなく、様々なユニット活動も精力的に行っています。</p>
+          <div class="grid-gallery">
+            <div class="unit-item">
+              <h3 class="unit-title">RainDrops</h3>
+              <p class="unit-desc">
+                にじさんじ所属ライバー6名による音楽ユニット。2020年にUNIVERSAL MUSICよりメジャーデビュー。
+              </p>
+            <div class="links">
+              <a href="https://www.universal-music.co.jp/raindrops/" target="_blank">公式サイト</a>
+              <a href="https://www.youtube.com/@raindrops200123" target="_blank">YouTube</a>
+            </div>
+              <div class="embed">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/63mQUyT3UKIYrnbUP0ybNf?utm_source=generator" 
+                  width="100%" height="352" frameBorder="0" allowfullscreen="" 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+              </div>
+            </div>
+            <div class="unit-item">
+              <h3 class="unit-title">cresc.</h3>
+              <p class="unit-desc">
+                シスター・クレア、ドーラとの3人組ユニット。圧倒的な歌唱力と美しいハーモニーで多くのファンを魅了する姉弟のような関係性。
+              </p>
+              <div class="links">
+                <a href="https://www.youtube.com/live/B5NrsznSMls" target="_blank">BIRTHDAY LIVE</a>
+              </div>
+              <div class="embed">
+                <iframe style="border-radius:12px" 
+                  src="https://open.spotify.com/embed/artist/57PWScX28Tgwn8U3PAFog4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+              </div>
+            </div>
+            <div class="unit-item">
+              <h3 class="unit-title">こじらせハラスメント</h3>
+              <p class="unit-desc">
+                弦月藤士郎、相羽ういはとのユニット。通称「こじハラ」。キレのあるダンスと全力のパフォーマンス、コミカルな掛け合いが特徴。
+              </p>
+              <div class="links">
+                <a href="https://www.youtube.com/watch?v=QxnI-0kzW2U&list=PLUDVjoVRQVQeIRJnXirhmDm2pVppfb9MC&index=1" target="_blank">プレイリスト</a>
+              </div>
+              <div class="embed">
+                <iframe style="border-radius:12px" 
+                  src="https://open.spotify.com/embed/artist/3TQQYcA99MmDc3XbbE2MVy?utm_source=generator" width="100%" 
+                  height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+              </div>
+            </div>
+            <div class="unit-item">
+              <h3 class="unit-title">七次元生徒会</h3>
+              <p class="unit-desc">
+                叶、樋口楓、三枝明那、レオス・ヴィンセント、周央サンゴと共に活動する生徒会ユニット。活動は動画投稿やSNSなど多岐にわたる。
+              </p>
+              <div class="links">
+                <a href="twitter.com/seitokai_07" target="_blank">公式X</a>
+                <a href="https://www.youtube.com/@seitokai_07" target="_blank">YouTube</a>
+              </div>
+              <div class="embed">
+                <iframe style="border-radius:12px" 
+                  src="https://open.spotify.com/embed/artist/2qQFYwjQa8IroaDEpmlfzl?utm_source=generator" 
+                  width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                  </iframe>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-
       <section id="sec-other" class="p-section" aria-labelledby="h-other">
         <div class="bar"><h2 id="h-other">PROJECT</h2></div>
         <div class="body" style="max-width: 100%;">
@@ -1140,6 +1216,7 @@
   </script>
 </body>
 </html>
+
 
 
 

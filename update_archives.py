@@ -198,6 +198,23 @@ EXTRA_PLAYLISTS = [
     {
         "id": "PL2tNRe-9n6lbkKpeS1eH2F1GvPLIWgl82",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌動画","オリジナル曲"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL5su7mgHJJj9GcxKEp2Wqx9T0B_yGdfLh",      # ここに再生リストIDを入れる
+        "fixed_tags": ["SEEDs1期生","企画","#SEEDs24","SEEDs"]   # 自動で付けたいタグ
+    },
+    
+    {
+        "id": "OLAK5uy_mlSNfpk3-Eg-8vFXobzB1gmaf5iV_TQlk",      # ここに再生リストIDを入れる
+        "fixed_tags": ["こじらせハラスメント","弦月藤士郎", "相羽ういは","歌動画","リリース","オリジナル曲","こじらせハラスメント-さよならハラスメント"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLUDVjoVRQVQeIRJnXirhmDm2pVppfb9MC",      # ここに再生リストIDを入れる
+        "fixed_tags": ["こじらせハラスメント","弦月藤士郎", "相羽ういは","歌動画","リリース","オリジナル曲","こじらせハラスメント-さよならハラスメント"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL5su7mgHJJj9GcxKEp2Wqx9T0B_yGdfLh",      # ここに再生リストIDを入れる
+        "fixed_tags": ["SEEDs1期生","企画","#SEEDs24","SEEDs"]   # 自動で付けたいタグ
     }
 ]
 # 管理対象のチャンネル名リスト
@@ -423,6 +440,8 @@ TAG_CONVERSION_MAP = {
     "ギター": "楽器配信・動画",
     "弾いて": "楽器配信・動画",
     "弾ける": "楽器配信・動画",
+    "SEEDs1期":"SEEDs1期生",
+    "たねいち":"SEEDs1期生",
     "ポケカ": "Pokémon Trading Card Game Pocket",
     "パワプロ": "パワフルプロ野球",
     "にじさんじマリカ杯": "マリカにじさんじ杯",
@@ -988,6 +1007,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

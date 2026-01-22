@@ -106,8 +106,90 @@ EXTRA_PLAYLISTS = [
         "fixed_tags": ["ゲーム実況"]   # 自動で付けたいタグ
     },
     {
+        "id": "PL2tNRe-9n6lZY_PMgLEnzjPVTWUyTsdtV",      # ここに再生リストIDを入れる
+        "fixed_tags": ["ゲーム実況","麻雀"]   # 自動で付けたいタグ
+    },
+    {
         "id": "PL2tNRe-9n6laDXKZxMI8qAU1f96p2mbyr",      # ここに再生リストIDを入れる
         "fixed_tags": ["ゲーム実況","マインクラフト"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLJJYjHjj3LYOUSivmmPc42q9p7776Pig3",      # ここに再生リストIDを入れる
+        "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLJJYjHjj3LYPcuTYj4pDerAE4FIXgLbyP",      # ここに再生リストIDを入れる
+        "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "list=OLAK5uy_lDmp3Ak0wRHOL5BuQQIjV8WLza-Pqttlw",      # ここに再生リストIDを入れる
+        "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-リフレインズ"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_nGXxvlcQf-fJVf7v3tSJJSH77qyAES5Fk",      # ここに再生リストIDを入れる
+        "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-バイオグラフィ"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_lw1gyDY1_uE4ZRcHT2_OpgcLPYk_puEZA",      # ここに再生リストIDを入れる
+        "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-シナスタジア"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_mhpwJagwfrzhK3PWdewk_I9mDPBR3Lzow",      # ここに再生リストIDを入れる
+        "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-オントロジー"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_kFOGn0GpCIeOZQNm_OAbUm0MLlF76ZXEI",      # ここに再生リストIDを入れる
+        "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-アコースティックライブ『開花宣言』2021.03.31"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_l1MQdlsI7yQpwJYjd0sVTnlm5FJalsUek",      # ここに再生リストIDを入れる
+        "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-バイオグラフィ"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL3m9klpxyzPfuO9z1BVf8GTeX0bT2WXal",      # ここに再生リストIDを入れる
+        "fixed_tags": ["生徒会、使わせていただきます！","企画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL3m9klpxyzPdKWYNPXC3EhR8IazmzbxBk",      # ここに再生リストIDを入れる
+        "fixed_tags": ["#24時限生徒会","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL3m9klpxyzPcH4CfG55TLu5KNCOuBOklv",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ"]   # 自動で付けたいタグ
+    },
+    
+    {
+        "id": "OLAK5uy_lo_PN7esxBBGMFXA8otiQB434doFbnt4Q",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ","オリジナル曲","リリース"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_n8lP-ooZpd9CC6elPM0GHPqdpfW4yRSF0",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ","オリジナル曲","リリース"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_lEq4Cb1mjxdZynIOSZbFX2wRto-qf5wTE",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ","オリジナル曲","リリース"]   # 自動で付けたいタグ
+    },
+
+    {
+        "id": "OLAK5uy_mR46w9gg9UKnxf0CZ-T7y7IBOirZP0CWs",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","オリジナル曲","緑仙-It'sLie"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_lWfTV7Z7sI-yUBpuKOr1k80rLn4ziUNmM",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","オリジナル曲","緑仙-パラグラム"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_n77u21cEJlnPW5_ysaE8IQfnyDhYpI9HQ",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","オリジナル曲","緑仙-ゴチソウサマノススメ"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_kBFEKoBsjc4uluEefCQldv84Qkfka9Nno",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","オリジナル曲","緑仙-イタダキマスノススメ"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "OLAK5uy_lK3vYQuMzo3A6i4TXjim4gU6Mk-bNml3k",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","オリジナル曲","緑仙-最初の晩餐"]   # 自動で付けたいタグ
     },
     {
         "id": "PL2tNRe-9n6layYbKKj92KCO6KVjKivLsi",      # ここに再生リストIDを入れる
@@ -702,7 +784,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
                     songs_list = f.get('songs', [])  # ここに中身があればそれが採用される
                 else:
                     # 手動指定がない場合はボットが自動判定
-                    sec = get_duration_seconds(durations.get(v_id, "PT0S"))
+                    sec = get_duration_seconds(durations.get('duration', "PT0S"))
                     cat, kw = analyze_video_tags(
                         snip['title'], snip.get('description', ''), 
                         fixed_tags, channel_name=channel_name, is_short=(0 < sec <= 60)
@@ -724,7 +806,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
                     "youtubeId": v_id,
                     "title": f.get('title', snip['title']), # 手動タイトルがあれば優先
                     "channel": channel_name,
-                    "date": f.get('date', snip.get('publishedAt', '2000-01-01')[:10]),
+                    "date": "date": f.get('date', true_published_at[:10]),
                     "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
                     "category": cat,
                     "keywords": kw,
@@ -858,6 +940,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

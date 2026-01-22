@@ -1,36 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>動画アーカイブ｜緑仙非公式ファンサイト</title>
-  <link rel="icon" href="../images/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="../images/Nagao-icon.png" sizes="512x512">
-  <link rel="apple-touch-icon" href="../images/Nagao-icon.png">
-  <link rel="canonical" href="https://keihanmatcha.github.io/shen/archives/">
+  <meta name="description" content="このサイト「しぇんしぇん」は、緑仙さんの楽曲や出演動画を整理した非公式ファンサイトです。">
+  <meta name="keywords" content="緑仙, Vtuber, にじさんじ, 曲検索, 歌, ファンサイト">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>しぇんしぇん｜緑仙非公式ファンサイト</title>
+  <meta name="theme-color" content="#2b93a3" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://keihanmatcha.github.io/shen/">
 
-  <meta property="og:site_name" content="しぇんしぇん｜緑仙非公式ファンサイト　動画アーカイブ">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="images/Nagao-icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="images/Nagao-icon.png">
+
   <meta property="og:type" content="website">
-  <meta property="og:title" content="しぇんしぇん｜緑仙非公式ファンサイト　動画アーカイブ">
-  <meta property="og:description" content="緑仙の動画アーカイブ（配信・コラボなど）を検索・一覧表示できます。">
-  <meta property="og:url" content="https://keihanmatcha.github.io/shen/archives/">
+  <meta property="og:site_name" content="しぇんしぇん｜緑仙非公式ファンサイト">
+  <meta property="og:title" content="しぇんしぇん｜緑仙非公式ファンサイト">
+  <meta property="og:description" content="緑仙の曲・動画検索サイト。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
+  <meta property="og:url" content="https://keihanmatcha.github.io/shen/">
   <meta property="og:image" content="https://keihanmatcha.github.io/shen/images/ogp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="しぇんしぇん｜緑仙非公式ファンサイト　動画アーカイブ">
-  <meta name="twitter:description" content="緑仙の動画アーカイブ（配信・コラボなど）を検索・一覧表示できます。">
+  <meta name="twitter:title" content="しぇんしぇん｜緑仙非公式ファンサイト">
+  <meta name="twitter:description" content="緑仙の曲・動画検索サイト。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
+  <meta name="twitter:url" content="https://keihanmatcha.github.io/shen/">
   <meta name="twitter:image" content="https://keihanmatcha.github.io/shen/images/ogp.png">
 
-<style>
-    /* ===== 基本スタイル (中華風テーマ適用) ===== */
-    *, *::before, *::after { box-sizing: border-box; }
+  <link rel="manifest" href="./manifest.json">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"しぇんしぇん｜緑仙非公式ファンサイト",
+    "url":"https://keihanmatcha.github.io/shen/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://keihanmatcha.github.io/shen/song/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
 
+  <style>
     :root{
       /* 中華風カラーパレット */
       --fg: #37474f;          /* 墨色 */
@@ -41,364 +56,443 @@
       --red: #c62828;         /* 朱色：ポイント */
       --bg: #fdfbf7;          /* 生成り色：紙のような背景 */
       --panel: #ffffff;
-      --border: #cfd8dc;      /* 薄いグレー */
+      --border: #cfd8dc;
+      --ring: rgba(0, 105, 92, 0.3);
       --font-base: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
     }
-    
+    *{ box-sizing:border-box }
+
     html, body {
-        margin: 0;
-        padding: 0;
-        background-color: var(--bg);
-        color: var(--fg);
-        font-family: var(--font-base);
-        width: 100%;
-        line-height: 1.6;
+      margin: 0;
+      color: var(--fg);
+      font-family: var(--font-base);
+      line-height: 1.75;
+      background-color: var(--bg);
     }
-
-    /* 背景パターン（絹織物風） */
+    
+    /* 背景にうっすら中華・和風パターンを追加 (CSSのみで描画) */
     body {
-        background-image: 
-          repeating-linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0px, rgba(212, 175, 55, 0.08) 1px, transparent 1px, transparent 10px),
-          repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.05) 0px, rgba(212, 175, 55, 0.05) 1px, transparent 1px, transparent 4px);
-        background-size: 20px 20px, 10px 10px;
-        background-attachment: fixed;
-    }
-    /* 背景重ね（文字を見やすく） */
-    body::after {
-        content: ""; position: fixed; inset: 0; z-index: -1;
-        background: rgba(253, 251, 247, 0.90); 
-        backdrop-filter: blur(1px);
-        pointer-events: none;
-    }
+    background-image: 
+      /* 織り目1: 右下がりの細かい線（メインの光沢） */
+      repeating-linear-gradient(
+        135deg, 
+        rgba(212, 175, 55, 0.08) 0px, 
+        rgba(212, 175, 55, 0.08) 1px, 
+        transparent 1px, 
+        transparent 10px
+      ),
+      /* 織り目2: 左下がりのさらに細かい線（繊維の質感） */
+      repeating-linear-gradient(
+        45deg, 
+        rgba(212, 175, 55, 0.05) 0px, 
+        rgba(212, 175, 55, 0.05) 1px, 
+        transparent 1px, 
+        transparent 4px
+      );
     
-    /* ===== ヘッダー ===== */
-    header {
-        position: sticky;
-        top: 0;
-        /* 翡翠色のグラデーション */
-        background: linear-gradient(to right, #004d40F2, #00695cF2);
-        backdrop-filter: saturate(1.2) blur(6px);
-        border-bottom: 2px solid var(--gold); /* 金のライン */
-        z-index: 900;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-    header .wrap {
-        max-width: 1200px; margin-inline: auto; padding: 12px 16px;
-        display: flex; flex-direction: column; gap: 12px;
+    /* 模様のサイズと位置を指定して反復させる */
+    background-size: 80px 80px, 160px 160px, 160px 160px, 16px 16px, 8px 8px;
+    background-position: 0 0, 0 0, 80px 80px, 0 0, 0 0;
+    
+    /* 背景を固定してスクロール時に高級感を出す */
+    background-attachment: fixed;
+  }
+
+  /* 【変更】模様が文字の邪魔をしないように、上から薄くベース色を重ねる */
+  body::after {
+    content: ""; position: fixed; inset: 0; z-index: -1;
+    /* 透過度を少し上げて、背景の模様をより透けて見せる */
+    background: rgba(253, 251, 247, 0.88); 
+    /* わずかにぼかしを入れて奥行きを出す */
+    backdrop-filter: blur(1px);
+  }
+
+    /* モバイルのカクつき回避 */
+    @media (max-width: 980px){
+      body{ background-attachment: scroll; }
     }
 
-    /* 上段：ナビゲーション */
-    .nav-header { 
-        display: flex; justify-content: space-between; align-items: center; 
-        width: 100%; height: 32px;
+    a,button{ transition:.2s ease }
+    :focus-visible{ outline:2px solid var(--gold); outline-offset:2px; border-radius:4px }
+
+    /* Header: 翡翠色のグラデーションと金のライン */
+    header{
+      position:sticky; top:0; z-index:10;
+      background: linear-gradient(to right, #004d40, #00695c);
+      border-bottom: 2px solid var(--gold); /* 金の境界線 */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+    .wrap{ max-width:1000px; margin-inline:auto; padding:12px 16px }
+    .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+    
     .brand { 
-        font-weight: 700; color: #fff; text-decoration: none; font-size: 20px; 
-        letter-spacing: 0.05em; text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        display: flex; align-items: center; gap: 12px;
+        font-weight: 700; 
+        color: #fff; 
+        text-decoration: none; 
+        font-size: 20px; 
+        letter-spacing: 0.05em;
     }
-    .nav-links { display: flex; gap: 10px; }
-    .nav-links a { 
-        position: relative; font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; 
-        padding: 6px 14px; margin-left: 0; z-index: 1; transition: transform 0.2s;
-        background: rgba(255,255,255,0.15); border-radius: 4px; border: 1px solid rgba(255,255,255,0.3);
-    }
-    .nav-links a:hover { transform: translateY(-2px); background: rgba(255,255,255,0.25); border-color: var(--gold); }
-
-    /* 曲を探すボタンの強調 */
-    .nav-links a.link-song { background: var(--accent-light); color: #fff; border-color: transparent; }
-
-    /* 下段：検索ツールバー */
-    .toolbar {
-        display: flex; gap: 10px; align-items: center; flex-wrap: wrap; 
-        justify-content: space-between; width: 100%;
-    }
-    .searchbar { display: flex; gap: 8px; align-items: center; flex: 1; }
-    .searchbar input {
-        flex: 1; padding: 8px 12px; font-size: 16px; font-family: var(--font-base);
-        /* 中華窓風の二重線ボーダー */
-        background: #fff; border: 3px double var(--accent); border-radius: 4px; 
-        color: var(--fg); min-width: 0;
-        box-shadow: 0 2px 6px rgba(0, 105, 92, 0.1);
-    }
-    .searchbar input::placeholder { color: #90a4ae; font-size: 14px; }
-    .searchbar input:focus { outline: none; border-color: var(--gold); }
-
-    .header-btn { 
-        appearance: none; border: 0; cursor: pointer; 
-        padding: 8px 16px; border-radius: 4px; 
-        font-weight: 600; font-size: 13px; font-family: var(--font-base);
-        background: #fff; color: var(--accent); 
-        border: 1px solid var(--accent);
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: .2s ease; white-space: nowrap;
-    }
-    .header-btn:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
-    .header-btn.reset { color: var(--red); border-color: var(--red); }
-    .header-btn.reset:hover { background: var(--red); color: #fff; }
-
-    /* ===== サイドフィルターパネル ===== */
-    .filter-panel-wrapper {
-        position: fixed; top: 0; right: -340px;
-        width: 320px; max-width: 85vw; height: 100vh;
-        background: var(--bg); /* 背景色 */
-        border-left: 2px solid var(--gold); /* 金色の境界線 */
-        z-index: 1000;
-        box-shadow: -4px 0 20px rgba(0,0,0,0.2);
-        transition: right 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        display: flex; flex-direction: column;
-    }
-    .filter-panel-wrapper.open { right: 0; }
-
-    .filter-overlay {
-        position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999;
-        opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
-        backdrop-filter: blur(2px);
-    }
-    .filter-overlay.open { opacity: 1; pointer-events: auto; }
-
-    .filter-header {
-        display: flex; justify-content: space-between; align-items: center;
-        padding: 16px; background: rgba(0, 105, 92, 0.05); border-bottom: 1px dashed var(--gold);
-    }
-    .filter-title { font-weight: 700; color: var(--accent); font-size: 18px; margin: 0; letter-spacing: 0.1em; }
-    .filter-close { background: none; border: none; font-size: 24px; color: var(--muted); cursor: pointer; padding: 0 8px; }
-
-    .filter-content { flex: 1; overflow-y: auto; padding: 20px; }
-    .filter-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
-    .filter-group dt { 
-        font-weight: 700; font-size: 15px; color: var(--fg); 
-        border-left: 4px solid var(--accent); padding-left: 10px; 
-        margin-bottom: 8px;
-    }
-    .filter-group .archive__sort__select__label {
-        display: grid; list-style: none; padding-left: 0; margin: 0;
-        grid-template-columns: repeat(2, 1fr); gap: 8px;
-    }
-    .archive__sort__select__label li { margin: 0; }
-    .archive__sort__select__label li label { 
-        display: block; cursor: pointer; font-size: 13px; padding: 6px 8px; 
-        color: var(--fg); border: 1px solid var(--border); border-radius: 4px;
-        background: #fff; transition: .15s;
-    }
-    .archive__sort__select__label li label:hover { border-color: var(--accent-light); color: var(--accent); }
-    /* チェック時のスタイル */
-    .archive__sort__select__label li input[type="checkbox"] { margin-right: 6px; accent-color: var(--accent); }
     
-    .archive__sort__select { font-family: var(--font-base); }
+    .logo-icon {
+        width: 36px; height: 36px; 
+        border-radius: 6px; /* 角を少し残す */
+        border: 1px solid var(--gold); /* 金枠 */
+        object-fit: cover;
+        background: #fff; 
+    } 
+    .brand span{ text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
 
-    .filter-actions { margin-top: 10px; display: flex; gap: 12px; flex-direction: column; padding-bottom: 20px; }
-    .btn { 
-        appearance: none; border: 0; cursor: pointer; padding: 12px; border-radius: 4px; 
-        font-weight: 700; font-family: var(--font-base);
-        background: var(--accent); color: #fff; transition: .2s ease; width: 100%; 
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    /* Hero */
+    .hero { padding: 32px 0 20px; text-align: center; } /* 上下の余白を減らす */
+    .title{ 
+      font-size:32px; margin:0 0 12px; 
+      color: var(--accent);
+      border-bottom: 1px solid var(--gold);
+      display: inline-block;
+      padding-bottom: 8px;
     }
-    .btn:hover { background: #004d40; transform: translateY(-1px); }
-    .btn.secondary { background: transparent; color: var(--accent); border: 1px solid var(--accent); box-shadow: none; }
+    .lead{ color:var(--muted); margin:0 0 28px; font-weight: 500; }
+    
+    /* 検索ボックス: 中華窓のような枠 */
+    .search{
+      display:flex; gap:8px; align-items:center; flex-wrap:wrap;
+      background:#fff; 
+      border: 3px double var(--accent); /* 二重線 */
+      border-radius: 4px; /* 角ばらせる */
+      padding: 8px;
+      box-shadow: 0 4px 15px rgba(0, 105, 92, 0.1);
+      max-width: 600px; margin: 0 auto;
+    }
+    .search input{ 
+      flex:1; min-width:200px; border:0; outline:0; 
+      font-size:16px; padding:10px 12px; font-family: var(--font-base); 
+      color: var(--fg);
+    }
+    .btn{
+      appearance:none; border:0; cursor:pointer;
+      padding:10px 24px; border-radius:2px; font-weight:600; font-family: var(--font-base);
+      background: var(--red); /* 朱色ボタン */
+      color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .btn:hover{ background: #b71c1c; transform: translateY(-1px); }
+    
+    .btn.secondary{
+      background: transparent; 
+      color: var(--accent); 
+      border: 1px solid var(--accent);
+      box-shadow: none;
+    }
     .btn.secondary:hover { background: rgba(0, 105, 92, 0.05); }
 
-    /* レイアウト (PC) */
-    .grid{display:grid;gap:24px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
-    .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
+    /* セクション見出し: 雲や雷文をイメージした装飾 */
+    .p-section{ margin:32px 0 }
+    .p-section .bar{
+      text-align: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .p-section .bar h2{ 
+      margin:0; font-size:24px; 
+      color: var(--accent);
+      display: inline-block;
+      padding: 0 20px;
+      background: var(--bg); /* 線の上に文字を乗せるため背景色と同じにする */
+      position: relative; z-index: 1;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+    /* 見出しの両脇に線を引く */
+    .p-section .bar::before {
+      content: ""; position: absolute; top: 50%; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      z-index: 0;
+    }
+    /* 見出しの下に英語装飾などを入れたい場合はここ */
+
+    .p-section .body{ max-width:800px; margin: 0 auto; }
+    .p-section p{ margin:10px 0; line-height:1.65; font-size:16px; color: #455a64; text-align: justify; }
+    /* リンク群 (タグなど) */
+    .links {
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin: 16px 0; justify-content: center;
+    }
+    .links a {
+      text-decoration:none;
+      padding:6px 14px;
+      border: 1px solid var(--accent-light);
+      border-radius: 2px; /* 角ばらせる */
+      background: #fff;
+      color: var(--accent);
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .links a:hover { 
+      background: var(--accent); color: #fff; border-color: var(--accent); 
+    }
+
+    /* 埋め込み */
+    .embed { margin: 20px 0; border: 4px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 4px; }
     
-    @media (min-width: 901px) {
-     .player-col {
-       position: sticky;
-       top: 110px;
-       align-self: start;
-       height: auto;
-       max-height: calc(100vh - 130px);
-       display: flex;
-       flex-direction: column;
-       z-index: 5;
-     }
-     .player-panel {
-       position: static;
-       display: flex;
-       flex-direction: column;
-       flex: 1;
-       min-height: 0;
-       overflow: hidden;
-       box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* 影を追加 */
-     }
-     .player-head, .player-body, .player-panel > div:nth-child(2) { flex-shrink: 0; }
-     .player-foot {
-        flex: 1; display: flex; flex-direction: column; min-height: 0; overflow: hidden;
-        background: #fff;
-     }
-     .meta-line, .warn { flex-shrink: 0; }
-     .setlist {
-       flex: 1; overflow-y: auto; max-height: none; margin-top: 8px;
-       border: 1px solid var(--border); border-radius: 4px;
-       background: #fafafa;
-     }
-     .list-col {
-        height: calc(100vh - 130px);
-        position: sticky; top: 110px;
-        overflow-y: auto; padding-right: 4px; box-sizing: border-box; 
+    /* Layout */
+    .layout{
+      display:grid;
+      grid-template-columns: 260px 1fr;
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    
+    /* Sidebar: 巻物・短冊風 */
+    .sidebar{
+      position: sticky; top: 80px; align-self: start;
+      height: max-content; padding: 20px;
+      border: 1px solid var(--gold); /* 金枠 */
+      background: #fff;
+      box-shadow: 0 4px 0 rgba(212, 175, 55, 0.2); /* 下に厚みを出す */
+      border-radius: 2px;
+    }
+    .sb-title{ 
+      font-weight:800; letter-spacing:.1em; 
+      color: var(--accent); 
+      border-bottom: 2px dotted var(--gold);
+      padding-bottom: 8px; margin-bottom: 16px;
+      text-align: center;
+    }
+    .sb-nav{ display:flex; flex-direction:column; gap:10px }
+    .sb-item{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none; padding:12px 16px; 
+      border: 1px solid transparent;
+      background: #fcfcfc; color: var(--fg); font-weight: 600;
+      transition: .3s;
+      border-left: 3px solid #cfd8dc; /* 左にアクセント線 */
+    }
+    .sb-item:hover{ 
+      background: #e0f2f1; 
+      border-left-color: var(--accent);
+      color: var(--accent);
+      padding-left: 20px; /* ホバーで少し動く */
+    }
+    .sb-item.primary{ 
+      background: #fff; 
+      border: 1px solid var(--accent);
+      border-left: 4px solid var(--accent);
+      color: var(--accent);
+    }
+    .sb-item.primary:hover { background: var(--accent); color: #fff; }
+    
+    .sb-ic{ width:18px; height:18px; fill: currentColor }
+    .sb-note{ margin-top:20px; color: var(--muted); font-size:12px; text-align: center; }
+
+    /* プロフィール用：説明文と動画を横並びにする */
+    .profile-layout {
+      display: grid;
+　　  grid-template-columns: 1fr 300px; /* 左:文章(可変) / 右:動画(固定) */
+ 　　 gap: 24px;
+ 　　 align-items: start;
+　　}
+    /* ユニットごとのカードデザイン */
+    .unit-item {
+      background: #fff;
+      border: 1px solid var(--border); /* または border: 1px solid #cfd8dc; */
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .unit-item:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 12px rgba(0, 105, 92, 0.1);
+      transform: translateY(-2px);
+    }
+
+/* ユニット名 */
+.unit-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent);
+  border-bottom: 1px dashed var(--gold);
+  padding-bottom: 8px;
+  margin: 0;
+}
+
+/* 説明文 */
+.unit-desc {
+  font-size: 14px;
+  color: var(--fg);
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1; /* 内容量が違ってもボタン位置を揃えるため */
+}
+
+/* 埋め込み調整 */
+.unit-item .embed {
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* 埋め込み動画・音楽用：グリッド配置 */
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 幅に合わせて自動折り返し */
+  gap: 16px;
+  margin: 16px 0;
+}
+/* --- 動画再生用モーダル（ポップアップ） --- */
+.video-modal {
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(0,0,0,0.85);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.video-modal.active { opacity: 1; pointer-events: auto; }
+
+.video-modal-content {
+  position: relative; width: 90%; max-width: 800px; aspect-ratio: 16/9;
+  background: #000; border-radius: 12px; overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.video-modal-close {
+  position: absolute; top: -40px; right: 0;
+  color: #fff; font-size: 30px; cursor: pointer;
+  background: transparent; border: none;
+}
+
+/* モバイル対応：画面が狭いときは縦並びに戻す */
+@media (max-width: 768px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .grid-gallery { grid-template-columns: 1fr; }
+}
+
+    /* Main Content */
+    .content{ min-width:0 }
+
+    /* Mobile Sidebar */
+    .sb-toggle{
+      display:none; appearance:none; border:0; background:transparent; font-size:24px;
+      padding:4px 8px; color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: 4px;
+    }
+    @media (max-width: 980px){
+      .layout{ grid-template-columns: 1fr; gap:24px; padding-inline: 16px }
+      .sb-toggle{ display:inline-block }
+      .sidebar{
+        position: fixed; top: 0; left: 0; bottom: 0; width: 280px;
+        margin: 0; border-radius: 0; border: none; border-right: 2px solid var(--gold);
+        transform: translateX(-100%);
+        transition: .3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 50;
+        box-shadow: 10px 0 30px rgba(0,0,0,0.3);
+        overflow-y: auto;
       }
+      .sidebar.open{ transform:translateX(0); }
+      
+      /* オーバーレイ */
+      .sidebar-overlay {
+        position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40;
+        opacity: 0; pointer-events: none; transition: .3s;
+      }
+      .sidebar.open + .sidebar-overlay { opacity: 1; pointer-events: auto; }
     }
-    .player-col{grid-area:player;}
-    .nothing{color:var(--muted);text-align:center;padding:30px;border:2px dashed var(--border);border-radius:8px; grid-column: 1 / -1; margin-top: 16px;}
 
-    /* リスト (PC: カード型) */
-    .list{ display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; padding: 1px; }
-
-    /* 動画カード */
-    .video-card { 
-        cursor: pointer; 
-        border: 1px solid var(--border); 
-        border-radius: 4px; /* 角を少しだけ丸める（中華風） */
-        overflow: hidden; 
-        background: #fff; 
-        transition: box-shadow .2s ease, transform .2s ease, border-color .2s;
-        position: relative;
+    /* Footer */
+    footer{
+      margin-top: 60px;
+      padding: 40px 16px;
+      font-size: 13px;
+      color: #eceff1;
+      text-align: center;
+      background: #263238; /* 濃いグレー */
+      border-top: 4px solid var(--gold);
     }
-    /* カードの四隅に装飾線（疑似要素） */
-    .video-card::after {
+    footer a { color: #80cbc4; }
+
+    /* Reel (Horizontal Scroll) */
+    .reel-group { margin-bottom: 40px; }
+    .reel-cat-title {
+      font-size: 20px; font-weight: 700; color: var(--accent);
+      margin: 0 0 16px 0; padding-left: 12px;
+      border-left: 4px double var(--red); /* 朱色の二重線 */
+      display: flex; align-items: center; gap: 10px;
+    }
+    .reel-cat-en { 
+        font-size: 14px; color: var(--gold); font-family: sans-serif; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+
+    .reel-scroll {
+      display: flex; gap: 16px; overflow-x: auto;
+      padding: 4px 4px 24px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch; 
+    }
+    .reel-scroll::-webkit-scrollbar { height: 6px; }
+    .reel-scroll::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+    .reel-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
+
+    .reel-item {
+      flex: 0 0 260px; text-decoration: none;
+      background: #fff; 
+      border: 1px solid var(--border);
+      border-radius: 2px; /* 角を立てる */
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex; flex-direction: column;
+      position: relative;
+    }
+    /* カードの四隅に装飾線（疑似要素で簡易表現） */
+    .reel-item::after {
         content: ""; position: absolute; inset: 4px; 
-        border: 1px solid transparent; 
-        pointer-events: none; transition: border-color .2s;
+        border: 1px solid rgba(212, 175, 55, 0.3); /* 薄い金の枠 */
+        pointer-events: none;
     }
-    .video-card:hover { 
-        box-shadow: 0 8px 20px rgba(0, 77, 64, 0.15); 
-        transform: translateY(-2px); 
-        border-color: var(--gold);
-    }
-    .video-card:hover::after { border-color: rgba(212, 175, 55, 0.3); }
 
-    .video-card .thumbnail { aspect-ratio: 16/9; display: block; width: 100%; object-fit: cover; }
-    .video-card .meta { padding: 14px; }
-    .video-card .title { 
-        font-weight: 700; line-height: 1.5; 
-        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; 
-        margin-bottom: 8px; color: var(--fg); font-size: 15px; 
+    .reel-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 77, 64, 0.15);
+      border-color: var(--gold);
     }
-    .video-card .info { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
-    .video-card .channel { z-index: 2; position: relative; }
-    .video-card .channel:hover { color: var(--accent); text-decoration: underline; }
-    .video-card .date { font-variant-numeric: tabular-nums; margin-left: auto; color: #90a4ae; }
+    .reel-item:hover::after { border-color: var(--gold); }
+
+    .reel-thumb-wrap { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; }
+    .reel-thumb { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: opacity 0.2s; }
+    .reel-item:hover .reel-thumb { opacity: 1; }
     
-    .video-card .tags-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); }
+    .reel-play {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 40px; height: 40px; background: rgba(198, 40, 40, 0.85); /* 朱色 */
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; pointer-events: none; border: 2px solid #fff;
+    }
+
+    .reel-info { padding: 14px 14px; flex: 1; display: flex; flex-direction: column; z-index: 1; }
+    .reel-v-title {
+      font-size: 15px; font-weight: 700; line-height: 1.6; color: var(--fg);
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      margin-bottom: 8px; font-feature-settings: "palt";
+    }
+    .reel-item:hover .reel-v-title { color: var(--accent); }
+    .reel-meta { margin-top: auto; font-size: 11px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
     
-    .category-badge { 
-        font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 2px; 
-        background: var(--accent); color: #fff; z-index: 2; position: relative; 
-    }
-    .keyword-badge { 
-        font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 2px; 
-        background: #fff; color: var(--fg); border: 1px solid var(--border); z-index: 2; position: relative; 
-    }
-    
-    /* プレイヤーパネル */
-    .player-panel {
-        position:sticky; top:84px; 
-        border: 2px solid var(--gold); /* 金枠 */
-        border-radius: 6px; 
-        overflow:hidden; background: #fff;
-    }
-    .player-head {
-        display:flex; justify-content:space-between; align-items:center; padding:10px 14px; 
-        background: linear-gradient(to right, #fcfcfc, #f0f4f4); /* 薄いグラデーション */
-        border-bottom: 1px solid var(--border);
-    }
-    .player-title { font-size:15px; color:var(--accent); font-weight: 700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .player-sub { font-size:12px; color:var(--muted); margin-top: 4px; }
-    .player-body { position:relative; aspect-ratio:16/9; width:100%; background:#000; }
-    .player-body iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
-    .player-foot { padding:14px; border-top:1px solid var(--border); background:#fff; }
-    .meta-line { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:8px; color: var(--accent); font-size: 14px; }
-    .warn { margin-top:8px; padding:10px 12px; color:#c62828; background:#ffebee; border:1px solid #ffcdd2; border-radius:4px; font-size: 12px; }
-
-    /* セットリスト */
-    .setlist { 
-        overflow: auto; 
-        border: 1px solid var(--border); 
-        border-radius: 4px; 
-        margin-top: 8px; 
-        display: block; 
-        padding-bottom: 20px;
-    }
-    .set-item { 
-        display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; 
-        border-top: 1px solid var(--border); background: #fff; cursor: pointer; transition: .2s;
-    }
-    .set-item:first-child { border-top: none; }
-    .set-item:hover { background: rgba(0, 105, 92, 0.05); }
-    .set-item.active { 
-        background: rgba(0, 105, 92, 0.1); 
-        border-left: 4px solid var(--accent);
-    }
-    
-    .set-title { display: flex; flex-direction: column; }
-    .set-song { font-weight: 700; font-size: 14px; color: var(--fg); }
-    .set-artist { font-size: 12px; color: var(--muted); }
-    .set-time { font-variant-numeric: tabular-nums; color: var(--accent); white-space: nowrap; font-size: 13px; font-weight: 600; }
-
-    /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
-    @media (max-width: 900px) {
-        .grid{ display: block; } 
-        main.wrap { padding-left: 0 !important; padding-right: 0 !important; }
-        header .wrap { padding: 10px 12px; gap: 8px; }
-        
-        .brand { font-size: 18px; }
-        .nav-links a { padding: 4px 10px; font-size: 11px; }
-        .searchbar input { font-size: 14px; padding: 8px 10px; border-width: 2px; }
-        .header-btn { padding: 6px 12px; font-size: 12px; }
-
-        .list { padding-left: 8px; padding-right: 8px; }
-        .list-col, .list { width: 100% !important; margin: 0 !important; }
-        .player-col { display: none; } 
+    @media (max-width: 600px) {
+      .reel-item { flex: 0 0 220px; }
+      .reel-v-title { font-size: 14px; }
     }
 
-    @media (max-width: 560px) {
-        .list { grid-template-columns: 1fr 1fr; gap: 8px; }
-        .video-card .title { -webkit-line-clamp: 2; height: 3em; margin-bottom: 4px; font-size: 12px; }
-        .video-card .tags-row, .category-badge, .keyword-badge { display: none !important; }
-        .video-card .info { justify-content: flex-start; font-size: 10px; flex-direction: column; gap: 2px; }
-        .video-card .date { margin-left: 0; }
-        .video-card .meta { padding: 8px; }
-    }
+    /* Embed iframe settings */
+    .embed iframe{ display:block; width:100%; max-width:100%; border:0; }
+    .embed iframe[src*="youtube.com"],
+    .embed iframe[src*="youtube-nocookie.com"],
+    .embed iframe[src*="vimeo.com"]{ aspect-ratio:16/9; height:auto; }
+    .embed iframe[src*="open.spotify.com"]{ aspect-ratio:auto; height:352px; }
 
-    /* ★★★ モーダル再生画面 (モバイル用) ★★★ */
-    body.player-active { overflow: hidden; }
-    .player-active .list-col, .player-active header { display: none !important; }
-    .player-active .wrap { padding: 0 !important; }
-    
-    .player-active .player-col { 
-        display: block !important;
-        position: fixed; inset: 0; z-index: 9999; 
-        width: 100%; height: 100%; 
-        background: rgba(0, 0, 0, 0.9); 
-        overflow-y: auto; -webkit-overflow-scrolling: touch; 
-        padding: 10px;
-    }
-    
-    .player-active .player-panel { 
-        position: relative; width: 100%; max-width: 600px; margin: 20px auto; 
-        height: auto !important; max-height: none !important; 
-        background: #fff; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
-        display: block; 
-    }
-    .player-active .player-foot { overflow: visible !important; height: auto !important; flex: none; }
-    .player-active .setlist { max-height: none !important; overflow: visible !important; border: 1px solid var(--border); }
-
-    /* ページトップボタン */
-    #page-top-btn {
-      position: fixed; bottom: 20px; right: 20px; z-index: 100;
-      transition: opacity 0.3s, transform 0.3s; cursor: pointer;
-      width: 70px; height: auto;
-    }
-    #page-top-btn.hide-btn { opacity: 0; pointer-events: none; transform: translateY(20px); }
-    #page-top-btn.show-btn { opacity: 1; pointer-events: auto; transform: translateY(0); }
-    #page-top-btn:hover { animation: bounce 0.6s infinite; }
-    #page-top-btn img { width: 100%; height: auto; display: block; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2)); }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    /* ローディングアニメーション */
+    /* Loading Animation (色を翡翠色に変更) */
     .flower-spinner, .flower-spinner * { box-sizing: border-box; }
     .flower-spinner { height: 70px; width: 70px; display: flex; flex-direction: row; align-items: center; justify-content: center; }
     .flower-spinner .dots-container { height: calc(70px / 7); width: calc(70px / 7); }
@@ -415,9 +509,9 @@
       25%, 75% { box-shadow: var(--accent) 14px 0px 0px, var(--accent) -14px 0px 0px, var(--accent) 0px 14px 0px, var(--accent) 0px -14px 0px, var(--accent) 10px -10px 0px, var(--accent) 10px 10px 0px, var(--accent) -10px -10px 0px, var(--accent) -10px 10px 0px; }
       100% { box-shadow: var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px; }
     }
-    #loading-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg); z-index: 10000; display: flex; justify-content: center; align-items: center; transition: opacity 0.5s, visibility 0.5s; }
+    #loading-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg); z-index: 9999; display: flex; justify-content: center; align-items: center; transition: opacity 0.5s, visibility 0.5s; }
     #loading-wrapper.loaded { opacity: 0; visibility: hidden; }
-</style>
+  </style>
 </head>
 <body>
   
@@ -430,921 +524,775 @@
       </div>
      </div>
    </div>
-
-  <div id="video-modal" class="video-modal" style="display:none;">
+　<div id="video-modal" class="video-modal">
       <div class="video-modal-content">
         <button id="modal-close" class="video-modal-close">×</button>
         <iframe id="modal-iframe" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
   </div>
-
-  <header>
-    <div class="wrap">
-      <div class="nav-header">
-        <a href="../index.html" class="brand">しぇんしぇん</a>
-        <nav class="nav-links">
-          <a href="../songs/index.html" class="link-song">曲を探す</a>
-        </nav>
-      </div>
-      <div class="toolbar">
-        <div class="searchbar">
-          <input id="q" type="search" placeholder="動画タイトル・チャンネル名・キーワード" autocomplete="off" />
-          <button id="resetSearch" class="header-btn reset" type="button">リセット</button>
-        </div>
-        <button id="toggleFilter" class="header-btn" type="button">▼ 絞り込み</button>
-      </div>
+  <header class="site-header">
+    <div class="wrap row">
+      <a class="brand" href="songs/omikuji.html" aria-label="おみくじを引く">
+        <img src="../images/Nagao-icon.png" alt="しぇんしぇん" class="logo-icon">
+        <span>しぇんしぇん｜緑仙非公式ファンサイト</span>
+      </a>
+      <button class="sb-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="メニューを開閉">☰</button>
     </div>
   </header>
 
-  <div id="filterOverlay" class="filter-overlay"></div>
-
-  <div id="filterPanel" class="filter-panel-wrapper">
-    <div class="filter-header">
-        <h2 class="filter-title">絞り込み検索</h2>
-        <button id="closeFilterBtn" class="filter-close">✕</button>
-    </div>
-    <div class="filter-content">
-    <dl class="filter-group">
-      <dt>ARCHIVE DATE (年月)</dt>
-      <dd style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-        <select id="filterYear" class="archive__sort__select" style="padding:8px; border:1px solid var(--border); border-radius:4px; width:100%; background:#fff; color:var(--fg);">
-          <option value="">年を選択</option>
-          <option value="2025">2025</option>
-          <option value="2024">2024</option>
-          <option value="2023">2023</option>
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-        </select>
-        <select id="filterMonth" class="archive__sort__select" style="padding:8px; border:1px solid var(--border); border-radius:4px; width:100%; background:#fff; color:var(--fg);">
-          <option value="">月を選択</option>
-          <option value="01">1月</option>
-          <option value="02">2月</option>
-          <option value="03">3月</option>
-          <option value="04">4月</option>
-          <option value="05">5月</option>
-          <option value="06">6月</option>
-          <option value="07">7月</option>
-          <option value="08">8月</option>
-          <option value="09">9月</option>
-          <option value="10">10月</option>
-          <option value="11">11月</option>
-          <option value="12">12月</option>
-        </select>
-      </dd>
-    </dl>
-    <dl class="filter-group">
-        <dt>CATEGORY (配信種別)</dt>
-        <dd>
-            <ul class="archive__sort__select__label">
-                <li><label><input type="checkbox" name="get_cats[]" value="ゲーム実況"><span>ゲーム実況</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="雑談"><span>雑談</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="歌配信"><span>歌配信</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="歌動画"><span>歌動画</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="踊り動画"><span>踊り動画</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="踊り配信"><span>踊り配信</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="記念配信"><span>記念配信</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="殺陣"><span>殺陣</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="お披露目配信"><span>お披露目配信</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="楽器配信・動画"><span>楽器配信・動画</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="3D"><span>3D</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="企画"><span>企画</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="大会"><span>大会</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="ライブイベント"><span>ライブイベント</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="プロモーション"><span>プロモーション</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="公式企画・番組"><span>公式企画・番組</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="動画系"><span>動画系</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="公式切り抜き"><span>公式切り抜き</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="手描き動画"><span>手描き動画</span></label></li>
-                <li><label><input type="checkbox" name="get_cats[]" value="ぷちさんじ"><span>ぷちさんじ</span></label></li>
-            </ul>
-        </dd>
-      </dl>
-      <dl class="filter-group">
-        <dt>KEYWORDS (コラボ相手/詳細タグ)</dt>
-        <dd>
-            <ul class="archive__sort__select__label">
-                        <li><label><input type="checkbox" name="get_companion[]" value="愛園愛美"><span>愛園愛美</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="相羽ういは"><span>相羽ういは</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="赤城ウェン"><span>赤城ウェン</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="赤羽葉子"><span>赤羽葉子</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="アクシア・クローネ"><span>アクシア・クローネ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="朝日南アカネ"><span>朝日南アカネ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="飛鳥ひな"><span>飛鳥ひな</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="遠北千南"><span>遠北千南</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="安土桃"><span>安土桃</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="天ヶ瀬むゆ"><span>天ヶ瀬むゆ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="天宮こころ"><span>天宮こころ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="雨森小夜"><span>雨森小夜</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="アルス・アルマル"><span>アルス・アルマル</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="アンジュ・カトリーナ"><span>アンジュ・カトリーナ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="家長むぎ"><span>家長むぎ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="五十嵐梨花"><span>五十嵐梨花</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="石神のぞみ"><span>石神のぞみ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="出雲霞"><span>出雲霞</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="五木左京"><span>五木左京</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="伊波ライ"><span>伊波ライ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="戌亥とこ"><span>戌亥とこ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="イブラヒム"><span>イブラヒム</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="宇佐美リト"><span>宇佐美リト</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="宇志海いちご"><span>宇志海いちご</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="卯月コウ"><span>卯月コウ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="海妹四葉"><span>海妹四葉</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="エクス・アルビオ"><span>エクス・アルビオ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="えま★おうがすと"><span>えま★おうがすと</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="エリー・コニファー"><span>エリー・コニファー</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="える"><span>える</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="御伽原江良"><span>御伽原江良</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="小野町春香"><span>小野町春香</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="オリバー・エバンス"><span>オリバー・エバンス</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="魁星"><span>魁星</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="甲斐田晴"><span>甲斐田晴</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="加賀美ハヤト"><span>加賀美ハヤト</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="叶"><span>叶</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="鏑木ろこ"><span>鏑木ろこ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="神田笑一"><span>神田笑一</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="綺沙良"><span>綺沙良</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="北小路ヒスイ"><span>北小路ヒスイ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="北見遊征"><span>北見遊征</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="雲母たまこ"><span>雲母たまこ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ギルザレンⅢ世"><span>ギルザレンⅢ世</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="グウェル・オス・ガール"><span>グウェル・オス・ガール</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="葛葉"><span>葛葉</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="倉持めると"><span>倉持めると</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="黒井しば"><span>黒井しば</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="来栖夏芽"><span>来栖夏芽</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="郡道美玲"><span>郡道美玲</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="弦月藤士郎"><span>弦月藤士郎</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="剣持刀也"><span>剣持刀也</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="小清水透"><span>小清水透</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="小柳ロウ"><span>小柳ロウ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="佐伯イッテツ"><span>佐伯イッテツ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="三枝明那"><span>三枝明那</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="早乙女ベリー"><span>早乙女ベリー</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="榊ネス"><span>榊ネス</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="酒寄颯馬"><span>酒寄颯馬</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="桜凛月"><span>桜凛月</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="笹木咲"><span>笹木咲</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="椎名唯華"><span>椎名唯華</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="シェリン・バーガンディ"><span>シェリン・バーガンディ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="栞葉るり"><span>栞葉るり</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="司賀りこ"><span>司賀りこ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="四季凪アキラ"><span>四季凪アキラ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="獅子堂あかり"><span>獅子堂あかり</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="静凛"><span>静凛</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="シスター・クレア"><span>シスター・クレア</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="渋谷ハジメ"><span>渋谷ハジメ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ジョー・力一"><span>ジョー・力一</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="白雪巴"><span>白雪巴</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="周央サンゴ"><span>周央サンゴ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="健屋花那"><span>健屋花那</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="鈴鹿詩子"><span>鈴鹿詩子</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="鈴木勝"><span>鈴木勝</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="鈴原るる"><span>鈴原るる</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="鈴谷アキ"><span>鈴谷アキ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="瀬戸美夜子"><span>瀬戸美夜子</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="セラフ・ダズルガーデン"><span>セラフ・ダズルガーデン</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ソフィア・ヴァレンタイン"><span>ソフィア・ヴァレンタイン</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="空星きらめ"><span>空星きらめ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="鷹宮リオン"><span>鷹宮リオン</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="立伝都々"><span>立伝都々</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="珠乃井ナナ"><span>珠乃井ナナ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="月ノ美兎"><span>月ノ美兎</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="でびでび・でびる"><span>でびでび・でびる</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="東堂コハク"><span>東堂コハク</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ドーラ"><span>ドーラ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="轟京子"><span>轟京子</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="名伽尾アズマ"><span>名伽尾アズマ</span></label></li>
-              　　　　　 <li><label><input type="checkbox" name="get_companion[]" value="長尾景"><span>長尾景</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="渚トラウト"><span>渚トラウト</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="七瀬すず菜"><span>七瀬すず菜</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="奈羅花"><span>奈羅花</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="成瀬鳴"><span>成瀬鳴</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="西園チグサ"><span>西園チグサ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ニュイ・ソシエール"><span>ニュイ・ソシエール</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="葉加瀬冬雪"><span>葉加瀬冬雪</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="花畑チャイカ"><span>花畑チャイカ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="早瀬走"><span>早瀬走</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="葉山舞鈴"><span>葉山舞鈴</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="春崎エアル"><span>春崎エアル</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="樋口楓"><span>樋口楓</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="一橋綾人"><span>一橋綾人</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="緋八マナ"><span>緋八マナ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="壱百満天原サロメ"><span>壱百満天原サロメ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="風楽奏斗"><span>風楽奏斗</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="伏見ガク"><span>伏見ガク</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="フミ"><span>フミ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="文野環"><span>文野環</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="フレン・E・ルスタリオ"><span>フレン・E・ルスタリオ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="不破湊"><span>不破湊</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ベルモンド・バンデラス"><span>ベルモンド・バンデラス</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="星川サラ"><span>星川サラ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="星導ショウ"><span>星導ショウ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="先斗寧"><span>先斗寧</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="本間ひまわり"><span>本間ひまわり</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="舞元啓介"><span>舞元啓介</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="魔界ノりりむ"><span>魔界ノりりむ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ましろ爻"><span>ましろ爻</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="町田ちま"><span>町田ちま</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="魔使マオ"><span>魔使マオ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="黛灰"><span>黛灰</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ミラン・ケストレル"><span>ミラン・ケストレル</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="叢雲カゲツ"><span>叢雲カゲツ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="メリッサ・キンレンカ"><span>メリッサ・キンレンカ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="森中花咲"><span>森中花咲</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="矢車りね"><span>矢車りね</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="社築"><span>社築</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="山神カルタ"><span>山神カルタ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="勇気ちひろ"><span>勇気ちひろ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="夕陽リリ"><span>夕陽リリ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="雪城眞尋"><span>雪城眞尋</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="夢月ロア"><span>夢月ロア</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="夢追翔"><span>夢追翔</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="夜見れな"><span>夜見れな</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ラトナ・プティ"><span>ラトナ・プティ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="リゼ・ヘルエスタ"><span>リゼ・ヘルエスタ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="竜胆尊"><span>竜胆尊</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ルイス・キャミー"><span>ルイス・キャミー</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ルンルン"><span>ルンルン</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="レイン・パターソン"><span>レイン・パターソン</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="レヴィ・エリファ"><span>レヴィ・エリファ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="レオス・ヴィンセント"><span>レオス・ヴィンセント</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ローレン・イロアス"><span>ローレン・イロアス</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="渡会雲雀"><span>渡会雲雀</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="童田明治"><span>童田明治</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Amicia Michella"><span>Amicia Michella</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Xia-Ekavira"><span>Xia-Ekavira</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Zea-Cornelia"><span>Zea-Cornelia</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Taka Radjiman"><span>Taka Radjiman</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Derem Kado"><span>Derem Kado</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Nara Haramaung"><span>Nara Haramaung</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Hana Macchia"><span>Hana Macchia</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Mika Melatika"><span>Mika Melatika</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Miyu Ottavia"><span>Miyu Ottavia</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Layla Astroemeria"><span>Layla Astroemeria</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Riksa Dhirendra"><span>Riksa Dhirendra</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Reza Avanluna"><span>Reza Avanluna</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="아키라 레이（明楽 レイ）"><span>아키라 레이（明楽 レイ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="이로하（イ・ロハ）"><span>이로하（イ・ロハ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="오지유（オ・ジユ）"><span>오지유（オ・ジユ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="가온（ガオン）"><span>가온（ガオン）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="신유야（シン・ユヤ）"><span>신유야（シン・ユヤ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="세피나（セフィナ）"><span>세피나（セフィナ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="소나기（ソ・ナギ）"><span>소나기（ソ・ナギ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="나세라（ナ・セラ）"><span>나세라（ナ・セラ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="하윤（ハ・ユン）"><span>하윤（ハ・ユン）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="반하다（バン・ハダ）"><span>반하다（バン・ハダ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="민수하（ミン・スゥーハ）"><span>민수하（ミン・スゥーハ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="양나리（ヤン・ナリ）"><span>양나리（ヤン・ナリ）</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Ike Eveland"><span>Ike Eveland</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Aia Amare"><span>Aia Amare</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Claude Clawmark"><span>Claude Clawmark</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Yugo Asuma"><span>Yugo Asuma</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Vezalius Bandage"><span>Vezalius Bandage</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Uki Violeta"><span>Uki Violeta</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Enna Alouette"><span>Enna Alouette</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Elira Pendora"><span>Elira Pendora</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Endou Reimu"><span>Endou Reimu</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Fulgur Ovid"><span>Fulgur Ovid</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Kyoran Meloco"><span>Kyoran Meloco</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Kaelix Debonair"><span>Kaelix Debonair</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Sonny Brisko"><span>Sonny Brisko</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Selen Tatsuki"><span>Selen Tatsuki</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Torahime Kotoka"><span>Torahime Kotoka</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Petra Gurin"><span>Petra Gurin</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Pomu Rainpuff"><span>Pomu Rainpuff</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Maria Marionette"><span>Maria Marrionette</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Millie Parfait"><span>Millie Parfait</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Shu Yamino"><span>Shu Yamino</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Luca Kaneshiro"><span>Luca Kaneshiro</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Ren Zotto"><span>Ren Zotto</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="星弥"><span>星弥</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Noor"><span>Noor</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="外部"><span>外部</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="字ぴろぱる"><span>字ぴろぱる</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="歌衣メイカ"><span>歌衣メイカ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="渋谷ハル"><span>渋谷ハル</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="熊谷タクマ"><span>熊谷タクマ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="かなえ先生"><span>かなえ先生</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="こばやん"><span>こばやん</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="天開司"><span>天開司</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="水槽"><span>水槽</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="HIMEHINA"><span>HIMEHINA</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="YuNi"><span>YuNi</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ときのそら"><span>ときのそら</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="空澄セラ"><span>空澄セラ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="我部りえる"><span>我部りえる</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="寺島惇太"><span>寺島惇太</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="百花繚乱"><span>百花繚乱</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ぽんぽこ"><span>ぽんぽこ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ピーナッツくん"><span>ピーナッツくん</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ばあちゃる"><span>ばあちゃる</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="英リサ"><span>英リサ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="兎麹まり"><span>兎麹まり</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="一ノ瀬うるは"><span>一ノ瀬うるは</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="神威きゅぴ"><span>神威きゅぴ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="橘ひなの"><span>橘ひなの</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="八雲ぺに"><span>八雲ぺに</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="ゴモリー"><span>ゴモリー</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="多井隆晴"><span>多井隆晴</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="松本吉弘"><span>松本吉弘</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="幸祜"><span>幸祜</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="コーサカ"><span>コーサカ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="アンジョー"><span>アンジョー</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="MonsterZ MATE"><span>MonsterZ MATE</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="猫又おかゆ"><span>猫又おかゆ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="Yaca"><span>Yaca</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="アザミ"><span>アザミ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="DJ WILDPARTY"><span>DJ WILDPARTY</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="りうら"><span>りうら</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="律可"><span>律可</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="超学生"><span>超学生</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="響木アオ"><span>響木アオ</span></label></li>
-                        <li><label><input type="checkbox" name="get_companion[]" value="龍惺ろたん"><span>龍惺ろたん</span></label></li>
-                        </ul>
-        </dd>       
-        <dd>
-            <ul class="archive__sort__select__label">
-                        <li><label><input type="checkbox" name="get_collabo[]" value="cresc."><span>cresc.</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="SEEDs1期生"><span>SEEDs1期生</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="解散GIG"><span>解散GIG</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="le jouet"><span>le jouet</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="ERRors"><span>ERRors</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="RainDrops"><span>RainDrops</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="こじらせハラスメント"><span>こじらせハラスメント</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="七次元生徒会"><span>七次元生徒会</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="アニソンカラオケ同好会"><span>アニソンカラオケ同好会</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="西弦緑渡"><span>西弦緑渡</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="にじロック"><span>にじロック</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="Vtuberロック革命"><span>Vtuberロック革命</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="SitR名古屋"><span>SitR名古屋</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="にじ飯調査隊"><span>にじ飯調査隊</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="チームヘラクレス"><span>チームヘラクレス</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="いのるぱんだ"><span>いのるぱんだ</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="ウィシェン"><span>ウィシェン</span></label></li>
-              　　　　　 <li><label><input type="checkbox" name="get_collabo[]" value="Alri"><span>Alri</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="エビ仙"><span>エビ仙</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="しかばねぱんだ"><span>しかばねぱんだ</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="ねないこ"><span>ねないこ</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="よるみどり"><span>よるみどり</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="保健室組"><span>保健室組</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="保健室同盟"><span>保健室同盟</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="2年4組"><span>2年4組</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="私立だいさんじ学園"><span>私立だいさんじ学園</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="だいさんじ甲子園"><span>だいさんじ甲子園</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="にじさんじ乙女ゲーム製作委員会"><span>にじさんじ乙女ゲーム製作委員会</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじカゲプロ"><span>にじさんじカゲプロ</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="にじさんじレジスタンス"><span>にじさんじレジスタンス</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="にじさんじ恋愛相談室"><span>にじさんじ恋愛相談室</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="いちから中央銀行"><span>いちから中央銀行</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="レッドガーネット"><span>レッドガーネット</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="猟友会"><span>猟友会</span></label></li>
-                        <li><label><input type="checkbox" name="get_collabo[]" value="ワールドアトラス"><span>ワールドアトラス</span></label></li>
-                        </ul>
-        </dd>
-        <dd>
-            <ul class="archive__sort__select__label">
-                        <li><label><input type="checkbox" name="get_series[]" value="アイドルマスター SideM"><span>アイドルマスター SideM</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="あつまれどうぶつの森"><span>あつまれどうぶつの森</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="一致するまで終われまテン!!"><span>一致するまで終われまテン!!</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ウマ娘　プリティダービー"><span>ウマ娘　プリティダービー</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="おえかきの森"><span>おえかきの森</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="Gartic Phones"><span>Gartic Phones</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="maimai"><span>maimai</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="VALORANT"><span>VALORANT</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ito(イト)"><span>ito(イト)</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="スイカゲーム"><span>スイカゲーム</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ストリートファイター6"><span>ストリートファイター6</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="スーパーモンキーボール バナナランブル"><span>スーパーモンキーボール バナナランブル</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="Splatoon"><span>Splatoon</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="Splatoon2"><span>Splatoon2</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="Splatoon3"><span>Splatoon3</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="世界のアソビ大全51"><span>世界のアソビ大全51</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ゼルダの伝説 ブレス オブ ザ ワイルド"><span>ゼルダの伝説 ブレス オブ ザ ワイルド</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="太鼓の達人"><span>太鼓の達人</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="大乱闘スマッシュブラザーズSPECIAL"><span>大乱闘スマッシュブラザーズSPECIAL</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="テトリス99"><span>テトリス99</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ダンガンロンパ"><span>ダンガンロンパ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="刀剣乱舞"><span>刀剣乱舞</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="Detroit Become Human"><span>Detroit Become Human</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ツイステッドワンダーランド"><span>ツイステッドワンダーランド</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ドキドキ文芸部"><span>ドキドキ文芸部</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ネコトモ"><span>ネコトモ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="バイオハザード ヴィレッジ"><span>バイオハザード ヴィレッジ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="パワフルプロ野球"><span>パワフルプロ野球</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="プロジェクトセカイ カラフルステージ！ feat. 初音ミク"><span>プロジェクトセカイ カラフルステージ！ feat. 初音ミク</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ロックマンエグゼ feat. 初音ミク"><span>ロックマンエグゼ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ポーカーチェイス"><span>ポーカーチェイス</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ポケットモンスター"><span>ポケットモンスター</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ポケットモンスター-金・銀"><span>ポケットモンスター-金・銀</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ポケットモンスター-ユナイト"><span>ポケットモンスター-ユナイト</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="Pokémon Trading Card Game Pocket"><span>Pokémon Trading Card Game Pocket</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ポケットモンスター-シャイニングパール"><span>ポケットモンスター-シャイニングパール</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ポケットモンスター-スカーレットバイオレット"><span>ポケットモンスター-スカーレットバイオレット</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="ポケットモンスター-ソード・シールド"><span>ポケットモンスター-ソード・シールド</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="マインクラフト"><span>マインクラフト</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="マリオシリーズ"><span>マリオシリーズ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="スーパーマリオブラザーズ"><span>スーパーマリオブラザーズ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="スーパーマリオメーカー2"><span>スーパーマリオメーカー2</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="マリオカート8DX"><span>マリオカート8DX</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="マリオカートワールド"><span>マリオカートワールド</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="マリオパーティ"><span>マリオパーティ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="その他マリオシリーズ"><span>その他マリオシリーズ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="みんなで空気読み。"><span>みんなで空気読み。</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="メイド イン ワリオ"><span>メイド イン ワリオ</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="桃太郎電鉄"><span>桃太郎電鉄</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="カービィのエアライダー"><span>カービィのエアライダー</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="リズム天国"><span>リズム天国</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="任天堂"><span>任天堂</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="青鬼"><span>青鬼</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="遊戯王"><span>遊戯王</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="その他ホラーゲーム"><span>その他ホラーゲーム</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="カードゲーム"><span>カードゲーム</span></label></li>
-                        <li><label><input type="checkbox" name="get_series[]" value="その他ゲーム"><span>その他ゲーム</span></label></li>
-                        </ul>
-        </dd>
-        <dd>
-            <ul class="archive__sort__select__label">
-                        <li><label><input type="checkbox" name="get_program[]" value="SYMPHONIA Day1"><span>SYMPHONIA Day1</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="ギター"><span>ギター</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじロック"><span>にじロック</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="緑仙1st Ryushen"><span>緑仙1st Ryushen</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="緑仙2nd 緑一色"><span>緑仙2nd 緑一色</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="SitR名古屋"><span>SitR名古屋</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="CDJ2425"><span>CDJ2425</span></label></li>
-              　　　　　 <li><label><input type="checkbox" name="get_program[]" value="CDJ2526"><span>CDJ2526</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="VTuberのあそびば"><span>VTuberのあそびば</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="くろのわーるがなんかやる"><span>くろのわーるがなんかやる</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="NIJIROCK NEXTBEAT"><span>NIJIROCK NEXTBEAT</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="みどりとお話するだけ"><span>みどりとお話するだけ</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="だいさんじ甲子園"><span>だいさんじ甲子園</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじ甲子園"><span>にじさんじ甲子園</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじワイテ人狼RPG"><span>にじワイテ人狼RPG</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="格付けマリカ"><span>格付けマリカ</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじイカ祭り"><span>にじさんじイカ祭り</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじスマブラ杯"><span>にじさんじスマブラ杯</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじマリカ杯"><span>にじさんじマリカ杯</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="ミリしらスト６チャレンジ"><span>ミリしらスト６チャレンジ</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじ Anniversary Festival 2021 前夜祭"><span>にじさんじ Anniversary Festival 2021 前夜祭</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="緑仙の音楽ダイアログ"><span>緑仙の音楽ダイアログ</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="NIJIMelodyTime"><span>NIJIMelodyTime</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="神域甲子園"><span>神域甲子園</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="LIGHT UP TONES"><span>LIGHT UP TONES</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじ飯調査隊"><span>にじ飯調査隊</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="視聴者参加型"><span>視聴者参加型</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじフェス"><span>にじフェス</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじのTOYBOX！"><span>にじさんじのTOYBOX！</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじのハッピーアワー!!"><span>にじさんじのハッピーアワー!!</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじのB級バラエティ(仮)"><span>にじさんじのB級バラエティ(仮)</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじMIX UP!!"><span>にじさんじMIX UP!!</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじユニット歌謡祭2022"><span>にじさんじユニット歌謡祭2022</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじさんじ歌謡祭2024"><span>にじさんじ歌謡祭2024</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="にじクイ"><span>にじクイ</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="木10！ろふまお塾"><span>木10！ろふまお塾</span></label></li>
-                        <li><label><input type="checkbox" name="get_program[]" value="ヤシロ&ササキのレバガチャダイパン"><span>ヤシロ&ササキのレバガチャダイパン</span></label></li>
-                        </ul>
-        </dd>
-    　</dl>
-      <div class="filter-actions">
-        <button id="applyFilterBtn" class="btn" type="button">この条件で絞り込む</button>
-        <button id="clearFilterBtn" class="btn secondary" type="button">全て解除</button>
+  <div class="layout">
+    <aside id="sidebar" class="sidebar" aria-label="サイドバー">
+      <div class="sb-title">LINKS</div>
+      <nav class="sb-nav">
+        <a class="sb-item" href="https://x.com/midori_2434" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M18 2h3l-6.5 7.4L22 22h-7.5l-4.7-6.6L4 22H1l7-8.1L2 2h7.5l4.3 6.1L18 2Z"/></svg>
+          <span>Twitter (X)</span>
+        </a>
+        <a class="sb-item" href="https://www.youtube.com/@Ryushen" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2 31 31 0 0 0 1.8 12a31 31 0 0 0 .6 4.8 3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.1c.4-1.6.6-3.2.6-4.8s-.2-3.2-.6-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
+          <span>YouTube</span>
+        </a>
+        <a class="sb-item" href="https://lit.link/en/ryushen2434" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2 31 31 0 0 0 1.8 12a31 31 0 0 0 .6 4.8 3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.1c.4-1.6.6-3.2.6-4.8s-.2-3.2-.6-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
+          <span>緑仙のいろいろリンク</span>
+        </a>
+        <a class="sb-item" href="https://music.apple.com/jp/artist/%E7%B7%91%E4%BB%99/1453314533" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-1 5h2v4l3 3-1.4 1.4L11 13.4V8Z"/></svg>
+          <span>Apple Music</span>
+        </a>
+        <a class="sb-item primary" href="songs/index.html">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-1 5h2v4l3 3-1.4 1.4L11 13.4V8Z"/></svg>
+          <span>曲を探す</span>
+        </a>
+        <a class="sb-item primary" href="archives/index.html">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2ZM11 15.5v-7l6 3.5-6 3.5Z"/></svg>
+          <span>動画を探す</span>
+        </a>
+        <a class="sb-item primary" href="article.html">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2ZM11 15.5v-7l6 3.5-6 3.5Z"/></svg>
+          <span>特集</span>
+        </a>
+        <a class="sb-item" href="about.html">
+          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          <span>しぇんしぇんについて</span>
+        </a>
+      </nav>
+      <div class="sb-note">
+        非公式ファンサイトです。<br>ANYCOLOR様および各関係会社様とは無関係です。
       </div>
-    </div>
-  </div>
+    </aside>
 
-  <main class="wrap" style="padding-left: 0 !important; padding-right: 0 !important;">
-    <div id="grid" class="grid player-left">
-      <aside class="player-col">
-        <div class="player-panel" id="playerPanel" style="display:none">
-          <div class="player-head">
-            <button id="closePlayer" class="btn secondary" style="font-weight:700; opacity: 1; padding: 6px 12px; border-radius: 4px; margin-right: auto;">閉じる</button>
-            <div style="flex:1; text-align:right;">
-              <a id="openYT" href="#" target="_blank" rel="noopener" style="font-size:12px;color:var(--accent);text-decoration:none">YouTubeで開く ↗</a>
-            </div>
-          </div>
-          <div style="padding:10px 14px; border-bottom:1px solid var(--border);">
-              <div class="player-title" id="playerTitle">（動画タイトル）</div>
-              <div class="player-sub" id="playerMeta">YYYY.MM.DD / チャンネル名</div>
-          </div>
-          <div class="player-body"><iframe id="ytFrame" src="about:blank" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
-          <div class="player-foot">
-            <div class="meta-line"><strong>セットリスト</strong></div>
-            <div class="setlist" id="setlist"></div>
-            <div id="embedWarn" class="warn" style="display:none">この動画はページ内再生が許可されていない可能性があります。<a id="warnLink" href="#" target="_blank" rel="noopener">YouTubeで開く</a> をお試しください。</div>
+    <main class="content">
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title" class="title">曲を検索</h1>
+        <p class="lead">曲名・アーティスト・動画タイトル・タグから素早く探せます。</p>
+
+        <form class="search" action="songs/index.html" method="GET" role="search" aria-label="サイト内検索">
+          <input id="kw" name="q" type="search" placeholder="例：しあわせクッキー /緑仙 / 歌枠 / オリジナル（ソロ）" autocomplete="off" />
+          <button class="btn" type="submit">検索</button>
+          <a class="btn secondary" href="songs/index.html">曲一覧を見る</a>
+        </form>
+      </section>
+      <section id="sec-intro" class="p-section" aria-labelledby="h-intro">
+        <div class="bar"><h2 id="h-intro">ABOUT</h2></div>
+        <div class="body">
+          <p>このサイトは、<strong>にじさんじ所属Vtuber緑仙さん</strong>の<strong>楽曲や出演動画を整理した非公式ファンサイト</strong>です。</p>
+          <p>にじさんじproject及びANY COLOR株式会社様、その他関係各社様とは一切関係ございません。</p>
+          <p>公式様へのお問い合わせはご遠慮ください。</p>
+        </div>
+      </section>
+
+      <section id="sec-profile" class="p-section" aria-labelledby="h-profile">
+        <div class="bar"><h2 id="h-profile">PROFILE</h2></div>
+        <div class="body profile-layout"> <div>
+          <p>本名は仙河緑/せんがみどり。こう見えて日本人。<br>歌うことが好きで活動を通して友達を作ろうと考えている性別不詳。（にじさんじ公式紹介文より引用）</p>
+          <p>活動経歴やエピソードは <a href="https://wikiwiki.jp/nijisanji/%E7%B7%91%E4%BB%99" target="_blank" style="color:var(--accent);font-weight:bold;">非公式wiki</a> を参照。多種多様なバーチャルライバー(VTuber)が所属するVTuber/バーチャルライバープロジェクト「にじさんじ」に所属し、配信活動などを行っている。</p>
+          <div class="links" style="justify-content: flex-start;"> <a href="https://ryushen.pages.dev/" target="_blank">公式サイト</a>
+            <a href="https://www.youtube.com/@Ryushen" target="_blank">YouTube</a>
+            <a href="https://x.com/midori_2434" target="_blank">Twitter (X)</a>
           </div>
         </div>
-      </aside>
-      <section class="list-col">
-        <div id="list" class="list"></div>
-        <div id="empty" class="nothing" style="display:none">該当する結果がありません。</div>
+        <div class="embed" style="margin:0;">
+          <iframe
+        src="https://www.youtube-nocookie.com/embed/_76EQqWJABM?si=SeJtmlCBH7w1r445"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+          </iframe>
+        </div>
+       </div>
       </section>
-    </div>
-  </main>
-
-  <a href="#" id="page-top-btn" class="hide-btn">
-  <img src="../images/mini-nagao-up.png" alt="上へ戻る">
-  </a>
-
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script>
-    const $list = document.getElementById('list');
-    const $empty = document.getElementById('empty');
-    const $q = document.getElementById('q');
-    const $resetSearch = document.getElementById('resetSearch');
-    const $toggleFilter = document.getElementById('toggleFilter');
-    const $filterPanel = document.getElementById('filterPanel');
-    const $applyFilterBtn = document.getElementById('applyFilterBtn');
-    const $clearFilterBtn = document.getElementById('clearFilterBtn');
-    const $panel = document.getElementById('playerPanel');
-    const $yt = document.getElementById('ytFrame');
-    const $title = document.getElementById('playerTitle');
-    const $meta = document.getElementById('playerMeta');
-    const $open = document.getElementById('openYT');
-    const $warn = document.getElementById('embedWarn');
-    const $warnLink = document.getElementById('warnLink');
-    const $setlist = document.getElementById('setlist');
-    const $closePlayer = document.getElementById('closePlayer');
-    const $filterOverlay = document.getElementById('filterOverlay');
-    const $closeFilterBtn = document.getElementById('closeFilterBtn');
-    const $filterYear = document.getElementById('filterYear');
-    const $filterMonth = document.getElementById('filterMonth');
-    
-    const pad = n => String(n).padStart(2,'0');
-    const ymdToDots = ymd => { const [y,m,d] = (ymd||'').split('-'); return y?`${y}.${pad(m)}.${pad(d)}`:''; };
-    function toSeconds(v){
-      if(v==null) return 0;
-      if (typeof v === 'number') return Math.max(0, v|0);
-      if (/^\d+$/.test(v)) return Math.max(0, parseInt(v,10));
-      const p = String(v).split(':').map(Number);
-      if (p.length===3) return p[0]*3600 + p[1]*60 + p[2];
-      if (p.length===2) return p[0]*60 + p[1];
-      return 0;
-    }
-    const hms = sec => { sec=toSeconds(sec); const h=Math.floor(sec/3600), m=Math.floor(sec%3600/60), s=Math.floor(sec%60); return `${pad(h)}:${pad(m)}:${pad(s)}`; };
-
-    let player=null, apiReady=false;
-    window.onYouTubeIframeAPIReady = ()=>{ apiReady = true; };
-
-    function loadVideo(id, start=0){
-      $warn.style.display='none';
-      const startSec = toSeconds(start);
-
-      if(apiReady && player && typeof player.loadVideoById === 'function'){
-         try { player.loadVideoById({videoId: id, startSeconds: startSec}); } catch(e) {}
-         return;
-      }
-      if(apiReady && !player){
-         const target = document.getElementById('ytFrame');
-         if(!target) return; 
-         player = new YT.Player('ytFrame', {
-            height: '100%', width: '100%', videoId: id,
-            playerVars: { start: startSec, autoplay: 1, rel: 0, modestbranding: 1, playsinline: 1 },
-            events: { onError: () => { $warn.style.display='block'; } }
-         });
-         return;
-      }
-      const url = `https://www.youtube-nocookie.com/embed/${id}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
-      if($yt) $yt.src = url;
-    }
-
-    let ALL_VIDEOS=[];
-
-    function buildVideos(videos){
-      const videoMap = new Map();
-      for (const v of videos) {
-        if (!v.youtubeId) continue;
-        const category = v.category || '未分類';
-        const keywords = Array.isArray(v.keywords) ? v.keywords.filter(Boolean) : [];
-        const video = {
-            youtubeId: v.youtubeId,
-            title: v.title || '',
-            channel: v.channel || '不明',
-            date: v.date || '',
-            thumbnail: v.thumbnail || `https://i.ytimg.com/vi/${v.youtubeId}/mqdefault.jpg`,
-            category: category,
-            keywords: keywords,
-            songs: Array.isArray(v.songs) ? v.songs : [],
-            searchText: `${v.title||''} ${v.channel||''} ${category} ${keywords.join(' ')}`.toLowerCase()
-        };
-        videoMap.set(v.youtubeId, video);
-      }
-      ALL_VIDEOS = Array.from(videoMap.values()).sort((a,b)=> b.date.localeCompare(a.date));
-    }
-    // 動画リストから存在する「年」を抽出してセレクトボックスにセットする
-    function initYearOptions() {
-        const years = new Set();
-      ALL_VIDEOS.forEach(v => {
-        if (!v.date) return;
-        const y = v.date.split('-')[0];
-        if (y) years.add(y);
-      });
-      // 降順（新しい年順）にソート
-      const sortedYears = Array.from(years).sort().reverse();
-    
-      // 一旦リセット
-      $filterYear.innerHTML = '<option value="">年を選択</option>';
-      sortedYears.forEach(y => {
-        const op = document.createElement('option');
-        op.value = y;
-        op.textContent = y + '年';
-        $filterYear.appendChild(op);
-      });
-    }
-
-    function getSelectedFilters() {
-        const selectedCategories = Array.from(document.querySelectorAll('input[name="get_cats[]"]:checked')).map(input => input.value);
-        const keywordInputs = document.querySelectorAll('input[name="get_companion[]"]:checked, input[name="get_series[]"]:checked, input[name="get_collabo[]"]:checked, input[name="get_program[]"]:checked');
-        const selectedKeywords = Array.from(keywordInputs).map(input => input.value);
-        return { selectedCategories, selectedKeywords };
-    }
-    function clearAllCheckboxes() { document.querySelectorAll('#filterPanel input[type="checkbox"]').forEach(input => { input.checked = false; }); }
-    
-    function applyFilter() {
-        const q = ($q.value || '').trim().toLowerCase();
-        const { selectedCategories, selectedKeywords } = getSelectedFilters();
-        
-        const targetYear = $filterYear.value;
-        const targetMonth = $filterMonth.value;
-        const filteredVideos = ALL_VIDEOS.filter(v => {
-            const categoryOk = selectedCategories.length === 0 || selectedCategories.some(catValue => v.category === catValue);
-            const keywordOk = selectedKeywords.length === 0 || selectedKeywords.every(k => (v.keywords || []).includes(k));
-            const textOk = !q || v.searchText.includes(q);
-
-            let dateOk = true;
-            if (targetYear || targetMonth) {
-                // date形式が YYYY-MM-DD である前提
-                const [y, m] = (v.date || '').split('-');
-                if (targetYear && y !== targetYear) dateOk = false;
-                if (targetMonth && m !== targetMonth) dateOk = false;
-            }
-            return categoryOk && keywordOk && textOk && dateOk; // dateOkを追加
-        });
-        renderRows(filteredVideos);
-    }
-    function fillSearch(text){ if(!text) return; $q.value=text; clearAllCheckboxes(); applyFilter(); }
-    
-    $q.addEventListener('input', applyFilter);
-    
-    // スライド式フィルター制御
-    function toggleFilterPanel(show) {
-        if (show) {
-            $filterPanel.classList.add('open');
-            $filterOverlay.classList.add('open');
-        } else {
-            $filterPanel.classList.remove('open');
-            $filterOverlay.classList.remove('open');
-        }
-    }
-    $toggleFilter.addEventListener('click', () => toggleFilterPanel(true));
-    $closeFilterBtn.addEventListener('click', () => toggleFilterPanel(false));
-    $filterOverlay.addEventListener('click', () => toggleFilterPanel(false));
-    $applyFilterBtn.addEventListener('click', () => { applyFilter(); toggleFilterPanel(false); });
-    $clearFilterBtn.addEventListener('click', () => { 
-      clearAllCheckboxes();
-      $filterYear.value = '';
-      $filterMonth.value = '';
-      applyFilter();
-    });
-    
-    if ($resetSearch) {
-        $resetSearch.addEventListener('click', () => {
-          $q.value = '';
-          clearAllCheckboxes();
-          $filterYear.value = '';
-          $filterMonth.value = '';
-          applyFilter();
-            if (player && typeof player.stopVideo === 'function') { player.stopVideo(); }
-            $yt.src = 'about:blank';
-            $panel.style.display = 'none';
-            document.body.classList.remove('player-active'); 
-        });
-    }
-    if ($closePlayer) {
-        $closePlayer.addEventListener('click', () => {
-            document.body.classList.remove('player-active');
-            if (player && typeof player.stopVideo === 'function') { player.stopVideo(); }
-            $yt.src = 'about:blank';
-            $panel.style.display = 'none';
-        });
-    }
-
-    function renderRows(videos){
-      $list.innerHTML='';
-      if(!videos.length){ $empty.style.display='block'; return; }
-      $empty.style.display='none';
-
-      // 100件制限を撤廃して全件表示
-      const displayVideos = videos;
-
-      for(const v of displayVideos){
-        const card = document.createElement('div');
-        card.className = 'video-card';
-        const categoryBadge = `<span class="category-badge">${v.category}</span>`;
-        const keywordsHtml = v.keywords.slice(0, 3).map(t => `<span class="keyword-badge">${t}</span>`).join('');
-        
-        card.innerHTML = `
-          <img class="thumbnail" src="${v.thumbnail}" alt="${v.title}のサムネイル" loading="lazy">
-          <div class="meta">
-            <div class="title">${v.title}</div>
-            <div class="info">
-              <span class="channel">${v.channel}</span>
-              <span class="date">${ymdToDots(v.date)}</span>
-            </div>
-            <div class="tags-row">${categoryBadge}${keywordsHtml}</div>
+          
+      <section id="sec-music" class="p-section" aria-labelledby="h-music">
+        <div class="bar"><h2 id="h-live">MUSIC</h2></div>
+        <div class="body">
+          <p>UNIVERSAL MUSIC所属。今までにアルバムを4本リリースしている。妬みや嫉みといったネガティブな感情を肯定してくれるような音楽をつくる。</p>
+          <div class="links">
+            <a href="https://www.universal-music.co.jp/ryushen/" target="_blank">緑仙 (UM)</a>
+            <a href="https://www.youtube.com/@Ryushen" target="_blank">YouTube</a>
           </div>
-        `;
-
-        card.addEventListener('click', e => {
-            if (e.target.classList.contains('category-badge') || e.target.classList.contains('keyword-badge')) {
-                fillSearch(e.target.textContent); return;
-            }
-            if (e.target.classList.contains('channel')) {
-                fillSearch(e.target.textContent); return;
-            }
-            
-            $title.textContent = v.title;
-            $meta.textContent = `${ymdToDots(v.date)} / ${v.channel}`;
-            $open.href = `https://www.youtube.com/watch?v=${v.youtubeId}`;
-            $warnLink.href = $open.href;
-            renderSetlist(v, v.youtubeId, 0);
-            loadVideo(v.youtubeId, 0);
-            
-            $panel.style.display = 'block';
-
-            const mq = window.matchMedia('(max-width: 900px)').matches;
-            if (mq) { document.body.classList.add('player-active'); }
-            
-            if(!mq) $panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        });
-        $list.appendChild(card);
-      }
-    }
-
-    function renderSetlist(video, id, activeStart){
-        $setlist.innerHTML='';
-        if (!video.songs || video.songs.length === 0) {
-            $setlist.innerHTML = '<div style="padding: 10px 14px; color: var(--muted); font-size: 14px;">この動画にはセットリストが登録されていません。</div>';
-            return;
-        }
-        const formatArtist = (artist) => Array.isArray(artist) ? artist.join(' / ') : (artist || '');
-
-        for(const s of (video.songs||[])){
-            const sec = toSeconds(s.start);
-            const item=document.createElement('div');
-            item.className='set-item'+(sec===activeStart?' active':'');
-            const artistName = formatArtist(s.artist);
-            
-            item.innerHTML=`
-                <div class="set-title">
-                    <div class="set-song">${s.title}</div>
-                    <div class="set-artist">${artistName}</div> 
+          <div class="grid-gallery">
+            <div class="embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=zGe6_6iFhYHsGPmo&list=OLAK5uy_mR46w9gg9UKnxf0CZ-T7y7IBOirZP0CWs" 
+                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=1qFJFJvwHc-191r0&list=OLAK5uy_lWfTV7Z7sI-yUBpuKOr1k80rLn4ziUNmM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="embed">
+              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=8k3rDAMJe_robDkX&list=OLAK5uy_lK3vYQuMzo3A6i4TXjim4gU6Mk-bNml3k" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">出演LIVE<span class="reel-cat-en">LIVE</span></h3>
+            <div class="reel-scroll">
+              <a href="https://www.youtube-nocookie.com/embed/rp_2Vw5tcTI" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/rp_2Vw5tcTI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
                 </div>
-                <div class="set-time">${hms(sec)}〜</div>
-            `;
-            item.addEventListener('click', ()=>{
-                loadVideo(id, sec);
-                $title.textContent = `${video.title}（${hms(sec)}〜）`;
-                $open.href = `https://www.youtube.com/watch?v=${id}&t=${sec}s`;
-                [...$setlist.children].forEach(el=>el.classList.remove('active'));
-                item.classList.add('active');
-            });
-            $setlist.appendChild(item);
-        }
-    }
+                <div class="reel-info">
+                  <div class="reel-v-title">緑仙 2nd LIVE TOUR映像『Blowin' Wind is blowin』2024年ベガルタ仙台応援ソング　#緑仙　#ベガルタ仙台 　#緑一色</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://www.youtube-nocookie.com/embed/LrC82HUXy0s" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/LrC82HUXy0s/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">緑仙 – ジョークス（#緑仙_1stLIVE Special Edit Ver.）</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://www.youtube-nocookie.com/embed/6Grjw9n2biQ" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/6Grjw9n2biQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">緑仙 Special Live YouTube Music Weekend</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://www.youtube-nocookie.com/embed/t-gw-44jAUw" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/t-gw-44jAUw/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#Vtuberロック革命2021】まだ夏、終わらせたくないです 【にじさんじ | 緑仙】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://www.youtube-nocookie.com/embed/uMN9Xt5NdWg?si=l7FxUwHY0TDXh46a&amp;start=2161" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/uMN9Xt5NdWg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【ライブ本編】にじさんじ WORLD TOUR 2025 Singin’ in the Rainbow！名古屋公演 / 無料パート #SitR名古屋</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://www.youtube-nocookie.com/embed/e_Ht29q2oQw" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/e_Ht29q2oQw/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">かわE (cover) – 緑仙、花畑チャイカ、町田ちま、ジョー・力一 [Live Video] from #リアルタイムARライブ</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://www.youtube-nocookie.com/embed/TEaxy1ybjo8?si=RbBOKk5PRxmeWV4p&amp;start=3430" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/TEaxy1ybjo8/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【ライブ本編】七次元生徒会！ ~前夜祭ステージ、使わせていただきます！~ / 無料パート #にじフェス2025_前夜祭</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://www.youtube-nocookie.com/embed/nexGfQKkdNY?si=Q4I4--zbGxfJb7JR&amp;start=477" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/nexGfQKkdNY/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#二十四時限生徒会】Cultural Festival～夜の音楽室にご招待～【音楽ライブ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://www.youtube-nocookie.com/embed/7ZWTpLKtHDQ" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/7ZWTpLKtHDQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">Juvenile Diver (Acoustic Live)</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          </div>
+      </section>
+      <section id="sec-unit" class="p-section" aria-labelledby="h-unit">
+        <div class="bar"><h2 id="h-unit">UNIT</h2></div>
+        <div class="body">
+          <p>ソロ活動だけでなく、様々なユニット活動も精力的に行っておりその中でユニットオリジナル曲を35曲以上リリースしている。</p>
+          <div class="grid-gallery">
+            <div class="unit-item">
+              <h3 class="unit-title">RainDrops</h3>
+              <p class="unit-desc">
+                にじさんじ所属ライバー6名（える・鈴木勝・緑仙・ジョー・力一・童田明治・三枝明那）による音楽ユニット。2020年春UNIVERSAL MUSICよりメジャーデビュー。
+              </p>
+            <div class="links">
+              <a href="https://www.universal-music.co.jp/raindrops/" target="_blank">公式サイト</a>
+              <a href="https://www.youtube.com/@raindrops200123" target="_blank">YouTube</a>
+            </div>
+              <div class="embed">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/63mQUyT3UKIYrnbUP0ybNf?utm_source=generator" 
+                  width="100%" height="352" frameBorder="0" allowfullscreen="" 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+              </div>
+            </div>
+            <div class="unit-item">
+              <h3 class="unit-title">cresc.</h3>
+              <p class="unit-desc">
+                同期二人(シスター・クレア、ドーラ)との3人組ユニット。
+              </p>
+              <a href="https://www.youtube-nocookie.com/embed/6Grjw9n2biQ?start=2293" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/6Grjw9n2biQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">緑仙 Special Live YouTube Music Weekend</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <div class="embed">
+                <iframe style="border-radius:12px" 
+                  src="https://open.spotify.com/embed/artist/57PWScX28Tgwn8U3PAFog4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+              </div>
+            </div>
+            <div class="unit-item">
+              <h3 class="unit-title">こじらせハラスメント</h3>
+              <p class="unit-desc">
+                <a href="https://www.youtube-nocookie.com/xAT-fQ0v4sw" target="_blank" style="color:var(--accent);font-weight:bold;">雑談配信</a>における緑仙の何気ない一言から生まれた弦月藤士郎、相羽ういはとのアイドルユニット。通称「こじハラ」。新体制後は緑仙・弦月の2人がゲストを迎えて楽曲を制作するクリエイターユニットとして活動。
+              </p>
+              <div class="links">
+                <a href="https://www.youtube.com/watch?v=QxnI-0kzW2U&list=PLUDVjoVRQVQeIRJnXirhmDm2pVppfb9MC&index=1" target="_blank">プレイリスト</a>
+              </div>
+              <div class="embed">
+                <iframe style="border-radius:12px" 
+                  src="https://open.spotify.com/embed/artist/3TQQYcA99MmDc3XbbE2MVy?utm_source=generator" width="100%" 
+                  height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                </iframe>
+              </div>
+            </div>
+            <div class="unit-item">
+              <h3 class="unit-title">七次元生徒会</h3>
+              <p class="unit-desc">
+                にじさんじ所属ライバー（叶、樋口楓、三枝明那、レオス・ヴィンセント、周央サンゴ）と共に「七次元高校の生徒会役員」として活動する生徒会ユニット。活動は企画・歌動画投稿やSNSでの写真・漫画投稿など多岐にわたり、現在毎週水曜19時にコンテンツが投稿されている。
+              </p>
+              <div class="links">
+                <a href="twitter.com/seitokai_07" target="_blank">公式X</a>
+                <a href="https://www.youtube.com/@seitokai_07" target="_blank">YouTube</a>
+              </div>
+              <div class="embed">
+                <iframe style="border-radius:12px" 
+                  src="https://open.spotify.com/embed/artist/2qQFYwjQa8IroaDEpmlfzl?utm_source=generator" 
+                  width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
+                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                  </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sec-other" class="p-section" aria-labelledby="h-other">
+        <div class="bar"><h2 id="h-other">PROJECT</h2></div>
+        <div class="body" style="max-width: 100%;">
+          <p>にじさんじの企画屋といえば緑仙といわれるほど、多くの仲間を巻き込んで数多くの企画を立案・実行してきた。<br>初心者でも入りやすい企画も特徴。</p>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">音楽系<span class="reel-cat-en">Music</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/EOoNeaIQmnA" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/EOoNeaIQmnA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">邦ロックリレー配信 ver.加賀美ハヤト</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/60CIG_4Lqdg" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/60CIG_4Lqdg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">#こじハラ 弾き語りボカロ歌配信を弦月くんと</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/HAiwvmm9djs" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/HAiwvmm9djs/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#緑仙ラップ】第１回　緑仙ラップ選手権【にじさんじ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/o0Mt2sGGaeI" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/o0Mt2sGGaeI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">サマータイムレコード / にじさんじカゲプロ Cover</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/_m2QABH50EI" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/_m2QABH50EI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">歌詞図解クイズ【樋口楓/メリッサ・キンレンカ/緑仙/早瀬走/相羽ういは/三枝明那/でびでび・でびる】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/ZJMo8VzWD0U" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/ZJMo8VzWD0U/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【新番組】ドライブデートの最強プレイリスト決定【 #MIXTAPE2434 】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/so_3w-FOxQc" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/so_3w-FOxQc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【＃テニミュカラオケ大会】ミュージカルテニスの王子様縛りカラオケ【にじさんじ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/KDmMY9hCfJ4?si=cTNBnInqFbmvzU4Y&amp;start=1330" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/KDmMY9hCfJ4/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">こんにちは、初めまして…ですかね？</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">漫画・アニメ<span class="reel-cat-en">Comic&Anime</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/bEDY36KN4DE" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/bEDY36KN4DE/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">マニアックなアニメプレゼン大会</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/gKcUbsUFp6I" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/gKcUbsUFp6I/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">みどりさんといっしょ</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/D5WfKcb7jt4" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/D5WfKcb7jt4/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#10巻以内漫画語り】本棚に揃えやすい傑作達はこれだ！プレゼン大会【にじさんじ/社築】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/NGWGHnIPQn8" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/NGWGHnIPQn8/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【嘘アニメ・漫画コンテスト】視聴者からもらった珠玉の嘘作品を見よ！【にじさんじ/葉加瀬冬雪・緑仙】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/FD8p-aJa0lo" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/FD8p-aJa0lo/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第一回にじさんじ乙女ゲーム制作委員会く</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/_bYu4n-s44s" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/_bYu4n-s44s/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">にじさんじライバーがテニスの王子様の学校に通うならどこ？</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/MNFnFo0wjVs" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/MNFnFo0wjVs/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">#ジャンプ黄金期ディベート大会</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="reel-group">
+            <h3 class="reel-cat-title">料理<span class="reel-cat-en">Cooking</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/h_lVNe7tQaA" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/h_lVNe7tQaA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">にじさんじ料理対決～緑仙＆夢追チーム</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/bnSGY2KM-HA" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/bnSGY2KM-HA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【 #SEEDs24 】はじめてのおつかい ～皆でカレーの材料を集めよう～【鈴木勝/にじさんじ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/VGS4NRWczJk" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/VGS4NRWczJk/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">#SEEDs24h 料理配信〜夜ご飯作る〜</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/wjHdZ1ugzqE" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/wjHdZ1ugzqE/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ飯調査隊】第1回 お酒に合うおつまみを探せ‼ ゲスト : でびでび・でびる🍚</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/qsP_F0YBxNg" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/qsP_F0YBxNg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ飯調査隊】第2回 ジューーーーーーーース王！！！ ゲスト : 弦月藤士郎🍚</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/iTKUw6Tw5Hc" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/iTKUw6Tw5Hc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ飯調査隊】第3回 エルフに刺さるスイーツを探せ!! ゲスト : える🍚</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/PBJ_8-YHPMc" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/PBJ_8-YHPMc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【#にじ飯調査隊】第4回 見たことない変わった食べ物を探せ‼ ゲスト : ましろ🍚</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">にじさんじ<span class="reel-cat-en">Nijisanji</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/vObC6O4ZkxQ" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/vObC6O4ZkxQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">第一回にじメンプロデュース</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/YBr2thBzoEY" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/YBr2thBzoEY/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">にじさんじライバーを敵キャラ化してみた</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/3QZpEOSN9u0" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/3QZpEOSN9u0/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">にじさんじライバー妄想トーナメント戦</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/jP09gbIhWjM" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/jP09gbIhWjM/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【ゆるゆるバラエティ】緑仙、黛、健屋の放課後サボタージュ １限目 #放サボ【にじさんじ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/ZG8RaGu2ZMg" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/ZG8RaGu2ZMg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">#にじさんじ妹ボイス選手権 ｜ 第一回にじさんじ妹ボイスプロデュース企画</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/x9dEBGdD9mY" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/x9dEBGdD9mY/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">存在しないアニメの声優オーディション開催</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="reel-group">
+            <h3 class="reel-cat-title">緑仙の音楽ダイアログ<span class="reel-cat-en">Ryushen's Music Dialog</span></h3>
+            <div class="reel-scroll">
+              <a href="https://youtu.be/i9IoP-Bm8DI" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/i9IoP-Bm8DI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【音楽対談】甲斐田晴のソロとユニットでの音楽活動の違いは？ / 歌の収録あるある話 / これからのVtuber音楽について本音で話す！【#緑仙の音楽ダイアログ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/FbDvK8I0_No" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/FbDvK8I0_No/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【音楽対談】星川サラは失恋したときに何の曲を聴くの？ / 合唱コンクールでの苦い思い出 / ソロライブを終えて今の気持ち【#緑仙の音楽ダイアログ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/6UXf9yOOSUE" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/6UXf9yOOSUE/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【音楽対談】完璧主義者のましろと音楽対談！ / 独特な世界観はどこからきてるの？ / 同窓会での黒歴史とは【#緑仙の音楽ダイアログ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/UoGbdS5PCuc" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/UoGbdS5PCuc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【音楽対談】鏑木ろこってロック好きだよね / 僕達オタクのメンドクサイ話 / 好きだからこそ自分の音楽の向き合い方って？【#緑仙の音楽ダイアログ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/mMbUbTlHIlo" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/mMbUbTlHIlo/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【音楽対談】2時だとか結成秘話 / 苦手だったダンス練習 / 渡会雲雀の今後の目標【#緑仙の音楽ダイアログ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+              <a href="https://youtu.be/DAeF4cgwpow" target="_blank" class="reel-item">
+                <div class="reel-thumb-wrap">
+                  <img src="https://img.youtube.com/vi/DAeF4cgwpow/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
+                  <span class="reel-play">▶</span>
+                </div>
+                <div class="reel-info">
+                  <div class="reel-v-title">【音楽対談】SYMPHONIAの裏話 / 配信の自分と歌の自分 / 理想のライブ演出【#緑仙の音楽ダイアログ】</div>
+                  <div class="reel-meta"><span>YouTube</span></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+  </div>
 
-    Promise.all([
-        fetch('archive_videos.json').then(r => r.ok ? r.json() : []),
-        fetch('external_videos.json').then(r => r.ok ? r.json() : [])
-    ])
-    .then(([autoVideos, manualVideos]) => {
-        const combinedVideos = [...autoVideos, ...manualVideos];
-        buildVideos(combinedVideos);
-        initYearOptions();
-        applyFilter();
-    })
-    .catch(err => {
-        console.error(err);
-        $empty.style.display = 'block';
-        $empty.textContent = 'データの読み込みに失敗しました。';
-    });
+  <footer>
+    <p>© <span id="y"></span>しぇんしぇん (Unofficial). このWebサイトは、にじさんじ所属バーチャルライバー 緑仙を応援する非公式曲検索ファンサイトです。</p>
+    <p>京阪抹茶が個人で制作・管理しており、ANYCOLOR株式会社様 及び にじさんじプロジェクト、各種関係会社様とは一切関係ございません。</p>
+    <p>サイトに関するご意見・お問い合わせは <a href="https://x.com/RAOW0607" target="_blank"> 京阪抹茶の X（旧Twitter）</a> にてご連絡ください。</p>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./service-worker.js')
+          .then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      })
+    }
+    // 年号
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // モバイル：サイドバー開閉
+    const btn = document.querySelector('.sb-toggle');
+    const sb  = document.getElementById('sidebar');
+    if (btn && sb) {
+      btn.addEventListener('click', () => {
+        const open = sb.classList.toggle('open');
+        btn.setAttribute('aria-expanded', String(open));
+      });
+    }
     
-    // PC用フローティングプレーヤー
-    (function(){
-      const mq = window.matchMedia('(max-width: 900px)');
-      const headerH = document.querySelector('header')?.offsetHeight || 70;
-      const $playerCol = document.querySelector('.player-col');
-      function setFloat(enable){
-          const canFloat = enable && $panel.style.display !== 'none' && !document.body.classList.contains('player-active');
-          document.body.classList.toggle('has-float', canFloat);
-          $panel.classList.toggle('is-float', canFloat);
-      }
-      let io = null;
-      function attachObserver(){
-          if(io){ io.disconnect(); io = null; }
-          if(!mq.matches){ setFloat(false); return; }
-          io = new IntersectionObserver((entries)=>{
-              for(const e of entries){
-                  const visible = e.isIntersecting && e.intersectionRatio > 0.6;
-                  setFloat(!visible);
-              }
-          }, { root: null, rootMargin: `-${headerH + 8}px 0px 0px 0px`, threshold: [0, 0.6, 1] });
-          if($playerCol) io.observe($playerCol);
-      }
-      mq.addEventListener('change', attachObserver);
-      window.addEventListener('load', attachObserver);
-      window.updateFloatOnPlay = function(){ setTimeout(attachObserver, 100); };
-      
-      const head = $panel.querySelector('.player-head');
-      if(!head) return;
-      let dragging = false, startX=0, startY=0, startLeft=0, startTop=0;
-      function px(n){ return `${Math.round(n)}px`; }
-      function onDown(e){
-          if(!$panel.classList.contains('is-float')) return;
-          dragging = true;
-          const rect = $panel.getBoundingClientRect();
-          startLeft = rect.left; startTop = rect.top;
-          const p = (e.touches?.[0] || e);
-          startX = p.clientX; startY = p.clientY;
-          $panel.style.right = 'auto'; $panel.style.bottom = 'auto';
-          $panel.style.left = px(startLeft); $panel.style.top = px(startTop);
-          document.addEventListener('mousemove', onMove); document.addEventListener('touchmove', onMove, {passive:false});
-          document.addEventListener('mouseup', onUp); document.addEventListener('touchend', onUp);
-      }
-      function onMove(e){
-          if(!dragging) return;
-          const p = (e.touches?.[0] || e);
-          const dx = p.clientX - startX, dy = p.clientY - startY;
-          $panel.style.left = px(startLeft + dx); $panel.style.top = px(startTop + dy);
-          e.preventDefault?.();
-      }
-      function onUp(){
-          dragging = false;
-          document.removeEventListener('mousemove', onMove); document.removeEventListener('touchmove', onMove);
-          document.removeEventListener('mouseup', onUp); document.removeEventListener('touchend', onUp);
-      }
-      head.addEventListener('mousedown', onDown);
-      head.addEventListener('touchstart', onDown, {passive:true});
-    })();
-    // スクロールしたらボタンを表示/非表示にする設定
-    const topBtn = document.getElementById('page-top-btn');
-    const listCol = document.querySelector('.list-col'); // PC用のスクロール領域
-
-    // 共通の表示切り替え関数
-    function toggleButton(scrollAmount) {
-        if (scrollAmount > 300) {
-            topBtn.classList.remove('hide-btn');
-            topBtn.classList.add('show-btn');
-        } else {
-            topBtn.classList.remove('show-btn');
-            topBtn.classList.add('hide-btn');
-        }
-    }
-
-    // スマホ用（画面全体のスクロールを監視）
-    window.addEventListener('scroll', function() {
-        toggleButton(window.scrollY);
-    });
-
-    // PC用（リストエリアのスクロールを監視）
-    if (listCol) {
-        listCol.addEventListener('scroll', function() {
-            toggleButton(listCol.scrollTop);
-        });
-    }
-
-    // ボタンを押したら滑らかに上に戻る
-    topBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // スマホ用：画面全体をトップへ
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-
-        // PC用：リストエリアをトップへ
-        if (listCol) {
-            listCol.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    });
     
-    // ページロード時のアニメーション
+    // ページ（画像など含む）の読み込みが完了したら実行
     window.addEventListener('load', function() {
       const loader = document.getElementById('loading-wrapper');
+      
+      // 少しだけ余韻を持たせてから消す（0.5秒後）
       setTimeout(function() {
         loader.classList.add('loaded');
       }, 500); 
     });
-    // 保険
+    
+    // 【保険】もし読み込みが長すぎても5秒後には強制的に消す
     setTimeout(function() {
       const loader = document.getElementById('loading-wrapper');
       if (loader && !loader.classList.contains('loaded')) {
         loader.classList.add('loaded');
       }
     }, 5000);
+    const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('modal-iframe');
+  const closeBtn = document.getElementById('modal-close');
+
+  // "reel-item" クラスを持つリンク、かつ YouTubeのリンクを含むものを対象にする
+  const videoLinks = document.querySelectorAll('.reel-item');
+    
+  videoLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // リンク先への移動をキャンセル
+      
+      const url = this.getAttribute('href');
+      let videoId = "";
+      let params = "";
+
+      // URLから動画IDと開始時間を抽出するロジック
+      if (url.includes('embed/')) {
+        const parts = url.split('embed/');
+        const query = parts[1].split('?');
+        videoId = query[0];
+        params = query[1] ? "?" + query[1] : "";
+      } else if (url.includes('v=')) {
+        videoId = url.split('v=')[1].split('&')[0];
+      } else if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1].split('?')[0];
+      }
+
+      if (videoId) {
+        // 自動再生(autoplay=1)をつけてiframeにセット
+        const connectChar = params ? "&" : "?";
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}${params}${connectChar}autoplay=1`;
+        modal.classList.add('active');
+      }
+    });
+  });
+
+  // 閉じる処理
+  function closeModal() {
+    modal.classList.remove('active');
+    setTimeout(() => { iframe.src = ""; }, 300); // 動画を停止
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  
+  // 背景クリックでも閉じる
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
   </script>
 </body>
 </html>

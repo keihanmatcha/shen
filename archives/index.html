@@ -335,6 +335,7 @@
     .player-foot { padding:14px; border-top:1px solid var(--border); background:#fff; }
     .meta-line { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:8px; color: var(--accent); font-size: 14px; }
     .warn { margin-top:8px; padding:10px 12px; color:#c62828; background:#ffebee; border:1px solid #ffcdd2; border-radius:4px; font-size: 12px; }
+  　
 
     /* セットリスト */
     .setlist { 
@@ -360,6 +361,18 @@
     .set-song { font-weight: 700; font-size: 14px; color: var(--fg); }
     .set-artist { font-size: 12px; color: var(--muted); }
     .set-time { font-variant-numeric: tabular-nums; color: var(--accent); white-space: nowrap; font-size: 13px; font-weight: 600; }
+　　/* セットリストのスクロールバーをカスタマイズして常時表示させる */
+  　.setlist::-webkit-scrollbar {
+     width: 10px; /* 少し太くして押しやすく */
+   }
+  　.setlist::-webkit-scrollbar-thumb {
+     background: var(--accent); /* 翡翠色 (#00695c) を適用 */
+     border-radius: 5px;
+   }
+  　.setlist::-webkit-scrollbar-track {
+     background: rgba(0, 105, 92, 0.1); /* 薄い翡翠色の背景 */
+     border-radius: 5px;
+   }
 
     /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
     @media (max-width: 900px) {

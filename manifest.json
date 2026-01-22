@@ -6,8 +6,8 @@
   "background_color": "#000000",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/index.html",
-  "id": "/index.html",
+  "start_url": "./index.html",
+  "id": "/shen/",
   "icons": [
     {
       "src": "/images/Nagao-icon-192.png",

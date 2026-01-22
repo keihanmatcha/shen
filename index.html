@@ -1249,8 +1249,8 @@
   const closeBtn = document.getElementById('modal-close');
 
   // "reel-item" クラスを持つリンク、かつ YouTubeのリンクを含むものを対象にする
-  const videoLinks = document.querySelectorAll('.reel-item[href*="youtube"]');
-
+  const videoLinks = document.querySelectorAll('.reel-item');
+    
   videoLinks.forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault(); // リンク先への移動をキャンセル
@@ -1295,6 +1295,7 @@
   </script>
 </body>
 </html>
+
 
 
 

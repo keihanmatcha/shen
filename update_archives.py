@@ -341,7 +341,12 @@ TAG_CONVERSION_MAP = {
     "SONG": "歌動画",
     "とうらぶ": "刀剣乱舞",
     "にじGTA": "にじさんじGTA",
-    "楽曲": "歌動画",
+    "オリジナル楽曲": "オリジナル曲",
+    "Cover": "カバー曲",
+    "カバー": "カバー曲",
+    "カバー": "歌動画",
+    "楽曲公開": "歌動画",
+    "リリックビデオ": "歌動画",
     "こじハラ": "こじらせハラスメント",
     "にじスプラDREAM DEATHMATCH": "にじスプラDREAMDEATHMATCH",
     "V最協": "VTuber最協決定戦",
@@ -367,6 +372,8 @@ TAG_CONVERSION_MAP = {
     "歌って": "歌動画",
     "歌ってみた": "歌動画",
     "COVER": "歌動画",
+    "Music Video":"歌動画",
+    "MV":"歌動画",
     "談義": "対談",
     "XFDムービー":"プロモーション",
     "特典":"プロモーション",
@@ -379,6 +386,7 @@ TAG_CONVERSION_MAP = {
     "ダンス動画": "踊り動画",
     "ダンス配信": "踊り配信",
     "ベース練習": "楽器配信・動画",
+    "ギター": "楽器配信・動画",
     "弾いて": "楽器配信・動画",
     "弾ける": "楽器配信・動画",
     "ポケカ": "Pokémon Trading Card Game Pocket",
@@ -806,7 +814,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
                     "youtubeId": v_id,
                     "title": f.get('title', snip['title']), # 手動タイトルがあれば優先
                     "channel": channel_name,
-                    "date": "date": f.get('date', true_published_at[:10]),
+                    "date": f.get('date', true_published_at[:10]),
                     "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
                     "category": cat,
                     "keywords": kw,
@@ -940,6 +948,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

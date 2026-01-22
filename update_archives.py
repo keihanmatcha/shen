@@ -90,8 +90,32 @@ EXTRA_PLAYLISTS = [
         "fixed_tags": ["みどりとおはなしするだけ","雑談"]   # 自動で付けたいタグ
     },
     {
+        "id": "PL2tNRe-9n6lZgAkmjPYzLFzhre1EUQspQ",      # ここに再生リストIDを入れる
+        "fixed_tags": ["お悩み相談&質問コーナー"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZgMABzB_DEwf4t7V2E0nV8",      # ここに再生リストIDを入れる
+        "fixed_tags": ["ライブイベント"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lYvwDkdus_57eW1vSsbOLAW",      # ここに再生リストIDを入れる
+        "fixed_tags": ["ゲーム実況","緑仙の独りアソビ"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZIafvEeZQEVbXLvyaZnDhM",      # ここに再生リストIDを入れる
+        "fixed_tags": ["ゲーム実況"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6laDXKZxMI8qAU1f96p2mbyr",      # ここに再生リストIDを入れる
+        "fixed_tags": ["ゲーム実況","マインクラフト"]   # 自動で付けたいタグ
+    },
+    {
         "id": "PL2tNRe-9n6layYbKKj92KCO6KVjKivLsi",      # ここに再生リストIDを入れる
-        "fixed_tags": ["歌動画"]   # 自動で付けたいタグ
+        "fixed_tags": ["歌動画","カバー曲"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lbkKpeS1eH2F1GvPLIWgl82",      # ここに再生リストIDを入れる
+        "fixed_tags": ["歌動画","オリジナル曲"]   # 自動で付けたいタグ
     }
 ]
 # 管理対象のチャンネル名リスト
@@ -827,6 +851,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

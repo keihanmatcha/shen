@@ -819,6 +819,10 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
                 f = overrides.get(v_id, {})
                 is_manual = v_id in overrides
 
+                # 詳細データから情報を取得（取得漏れ対策でgetを使う）
+                video_detail = video_details_map.get(v_id, {})
+                true_published_at = video_detail.get('publishedAt', snip.get('publishedAt')) # 詳細が取れなければリスト追加日で妥協
+
                 if is_manual:
                     # 人間が書いたデータをベースにする
                     cat = f.get('category', f.get('tags', ["未分類"]))
@@ -982,6 +986,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

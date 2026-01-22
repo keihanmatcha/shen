@@ -72,13 +72,24 @@
     /* 背景にうっすら中華・和風パターンを追加 (CSSのみで描画) */
     body {
     background-image: 
-      /* 模様1: 抽象的な宝相華（唐草）模様の円形グラデーション（薄い金色） */
-      radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 0% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 35%),
-      radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.08) 0%, transparent 35%),
-      /* 模様2: 絹のような光沢感を出す細かい斜め線（菱綾） */
-      repeating-linear-gradient(135deg, rgba(212, 175, 55, 0.06) 0px, rgba(212, 175, 55, 0.06) 1px, transparent 1px, transparent 8px),
-      repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.04) 0px, rgba(212, 175, 55, 0.04) 1px, transparent 1px, transparent 4px);
+      body {
+    background-image: 
+      /* 織り目1: 右下がりの細かい線（メインの光沢） */
+      repeating-linear-gradient(
+        135deg, 
+        rgba(212, 175, 55, 0.08) 0px, 
+        rgba(212, 175, 55, 0.08) 1px, 
+        transparent 1px, 
+        transparent 10px
+      ),
+      /* 織り目2: 左下がりのさらに細かい線（繊維の質感） */
+      repeating-linear-gradient(
+        45deg, 
+        rgba(212, 175, 55, 0.05) 0px, 
+        rgba(212, 175, 55, 0.05) 1px, 
+        transparent 1px, 
+        transparent 4px
+      );
     
     /* 模様のサイズと位置を指定して反復させる */
     background-size: 80px 80px, 160px 160px, 160px 160px, 16px 16px, 8px 8px;
@@ -1131,6 +1142,7 @@
   </script>
 </body>
 </html>
+
 
 
 

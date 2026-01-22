@@ -63,7 +63,7 @@
     "youtubeId": "h067fcs_VxM",
     "title": "【#Vtuberロック革命2021】俺らの夏フェス【不破湊/にじさんじ】",
     "channel": "不破湊",
-    "date": "2023-04-10",
+    "date": "2021-09-26",
     "keywords": ["不破湊","戌亥とこ","樋口楓","加賀美ハヤト","Vtuberロック革命"],
     "category": ["歌配信", "3D","ライブ・イベント"],
     "songs": [
@@ -92,6 +92,31 @@
       { "title": "イツライwith加賀美", "artist": "緑仙", "start":819 },
       { "title": "夜王子と月の姫", "artist": "GOING STEADY", "start":1023 },
       { "title": "深夜高速with all", "artist": "フラワーカンパニーズ", "start":1679 }
+    ]
+  },
+  {
+    "youtubeId": "EQD91A-7Gvs",
+    "title": "【 #le_jouet 】エレピ弾き語り生演奏オフコラボオンラインライブその２【にじさんじ/加賀美ハヤト/緑仙/夢追翔】",
+    "channel": "加賀美ハヤト",
+    "date": "2020-01-28",
+    "category": [
+      "歌配信","ライブ・イベント","企画"
+    ],
+    "keywords": [
+      "歌配信",
+      "加賀美ハヤト",
+      "夢追翔",
+      "le_jouet",
+      "ライブ・イベント",
+      "企画"
+    ],
+    "songs": [
+      { "title": "雪の華　夢追", "artist": "中島美嘉", "start":220 },
+      { "title": "からくりピエロ　緑仙", "artist": "40mP", "start":655 },
+      { "title": "丸の内サデスティック　加賀美", "artist": "椎名林檎", "start":984 },
+      { "title": " 革命デュアリズムwith加賀美", "artist": "T.M.Revolution×水樹奈々", "start":1915 },
+      { "title": " 白日with夢追", "artist": "King Gnu", "start":1730 },
+      { "title": "サリシノハラwith all", "artist": "みきとP", "start":2117 }
     ]
   }
 ]

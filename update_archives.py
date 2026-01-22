@@ -823,6 +823,8 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
                 video_detail = video_details_map.get(v_id, {})
                 true_published_at = video_detail.get('publishedAt', snip.get('publishedAt')) # 詳細が取れなければリスト追加日で妥協
 
+                uploader_name = video_detail.get('channelTitle', channel_name)
+
                 if is_manual:
                     # 人間が書いたデータをベースにする
                     cat = f.get('category', f.get('tags', ["未分類"]))
@@ -833,7 +835,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
                     sec = get_duration_seconds(durations.get('duration', "PT0S"))
                     cat, kw = analyze_video_tags(
                         snip['title'], snip.get('description', ''), 
-                        fixed_tags, channel_name=channel_name, is_short=(0 < sec <= 60)
+                        fixed_tags, channel_name=uploader_name, is_short=(0 < sec <= 60)
                     )
                     songs_list = []
 
@@ -851,7 +853,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
                 videos.append({
                     "youtubeId": v_id,
                     "title": f.get('title', snip['title']), # 手動タイトルがあれば優先
-                    "channel": channel_name,
+                    "channel": uploader_name,
                     "date": f.get('date', true_published_at[:10]),
                     "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
                     "category": cat,
@@ -986,6 +988,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

@@ -1107,7 +1107,7 @@
             renderSetlist(v, v.youtubeId, 0);
             loadVideo(v.youtubeId, 0);
             
-            $panel.style.display = 'block';
+            $panel.style.display = '';
 
             const mq = window.matchMedia('(max-width: 900px)').matches;
             if (mq) { document.body.classList.add('player-active'); }

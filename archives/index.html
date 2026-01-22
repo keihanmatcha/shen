@@ -200,37 +200,64 @@
     .grid{display:grid;gap:24px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
     
+    /* ▼▼▼ PC用レイアウト (901px以上) の修正版 ▼▼▼ */
     @media (min-width: 901px) {
+     /* 1. 外枠：画面の高さに合わせてサイズを固定する */
      .player-col {
        position: sticky;
        top: 110px;
        align-self: start;
-       height: auto;
-       max-height: calc(100vh - 130px);
+       
+       /* ★重要変更：max-heightではなく「height」で高さを確定させる */
+       height: calc(100vh - 140px); 
+       
        display: flex;
        flex-direction: column;
        z-index: 5;
      }
+
+     /* 2. パネル本体：外枠の高さ(100%)を強制的に使い切る */
      .player-panel {
        position: static;
        display: flex;
        flex-direction: column;
-       flex: 1;
+       height: 100%; /* ★ここが重要 */
        min-height: 0;
        overflow: hidden;
-       box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* 影を追加 */
+       box-shadow: 0 4px 15px rgba(0,0,0,0.08);
      }
-     .player-head, .player-body, .player-panel > div:nth-child(2) { flex-shrink: 0; }
+
+     /* ヘッダーや動画部分は固定サイズ（縮ませない） */
+     .player-head, .player-body, .player-panel > div:nth-child(2) { 
+       flex-shrink: 0; 
+     }
+
+     /* 3. フッターエリア：残りのスペースを全て埋める */
      .player-foot {
-        flex: 1; display: flex; flex-direction: column; min-height: 0; overflow: hidden;
+        flex: 1; 
+        display: flex; 
+        flex-direction: column; 
+        min-height: 0; /* ★Flexboxの入れ子スクロールに必須 */
+        overflow: hidden;
         background: #fff;
+        padding-bottom: 0; /* 下部の余白調整 */
      }
+
      .meta-line, .warn { flex-shrink: 0; }
+
+     /* 4. セットリスト：このエリア「だけ」をスクロールさせる */
      .setlist {
-       flex: 1; overflow-y: auto; max-height: none; margin-top: 8px;
-       border: 1px solid var(--border); border-radius: 4px;
+       flex: 1; /* フッター内の余りスペースを占有 */
+       overflow-y: auto; /* ★あふれたらスクロール */
+       max-height: none; 
+       margin-top: 8px;
+       margin-bottom: 14px; /* 下に少し余白 */
+       border: 1px solid var(--border); 
+       border-radius: 4px;
        background: #fafafa;
      }
+
+     /* 右側のリスト列 */
      .list-col {
         height: calc(100vh - 130px);
         position: sticky; top: 110px;

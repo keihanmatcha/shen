@@ -678,8 +678,15 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
             if not items: break
             
             v_ids = [it['contentDetails']['videoId'] for it in items]
-            v_res = youtube.videos().list(part='contentDetails', id=','.join(v_ids)).execute()
-            durations = {v['id']: v['contentDetails']['duration'] for v in v_res.get('items', [])}
+            v_res = youtube.videos().list(part='contentDetails,snippet', id=','.join(v_ids)).execute()
+            durations = {v['id']:v['contentDetails']['duration'] for v in v_res.get('items', [])}
+            video_details_map = {
+                v['id']: {
+                    'duration': v['contentDetails']['duration'],
+                    'publishedAt': v['snippet']['publishedAt'] # 本来の投稿日
+                } 
+                for v in v_res.get('items', [])
+            }
 
             for item in items:
                 v_id, snip = item['contentDetails']['videoId'], item['snippet']
@@ -851,6 +858,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

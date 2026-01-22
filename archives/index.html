@@ -53,6 +53,7 @@
         font-family: var(--font-base);
         width: 100%;
         line-height: 1.6;
+      　overflow-y: scroll;
     }
 
     /* 背景パターン（絹織物風） */
@@ -362,6 +363,16 @@
     .set-artist { font-size: 12px; color: var(--muted); }
     .set-time { font-variant-numeric: tabular-nums; color: var(--accent); white-space: nowrap; font-size: 13px; font-weight: 600; }
 　　/* セットリストのスクロールバーをカスタマイズして常時表示させる */
+   ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: var(--accent);
+        border-radius: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: rgba(0, 105, 92, 0.05);
+    }
   　.setlist::-webkit-scrollbar {
      width: 10px; /* 少し太くして押しやすく */
    }
@@ -655,7 +666,7 @@
                         <li><label><input type="checkbox" name="get_companion[]" value="ドーラ"><span>ドーラ</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="轟京子"><span>轟京子</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="名伽尾アズマ"><span>名伽尾アズマ</span></label></li>
-              　　　　　 <li><label><input type="checkbox" name="get_companion[]" value="長尾景"><span>長尾景</span></label></li>
+                        <li><label><input type="checkbox" name="get_companion[]" value="長尾景"><span>長尾景</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="渚トラウト"><span>渚トラウト</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="七瀬すず菜"><span>七瀬すず菜</span></label></li>
                         <li><label><input type="checkbox" name="get_companion[]" value="奈羅花"><span>奈羅花</span></label></li>

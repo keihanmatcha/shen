@@ -21,42 +21,43 @@
   <meta property="og:image" content="https://keihanmatcha.github.io/shen/images/ogp.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="しぇんしぇん｜緑仙非公式ファンサイト　動画アーカイブ">
   <meta name="twitter:description" content="緑仙の動画アーカイブ（配信・コラボなど）を検索・一覧表示できます。">
   <meta name="twitter:image" content="https://keihanmatcha.github.io/shen/images/ogp.png">
 
 <style>
-    /* ===== 基本スタイル (中華風テーマ適用) ===== */
+    /* ===== 基本スタイル ===== */
     *, *::before, *::after { box-sizing: border-box; }
 
     :root{
-      /* 中華風カラーパレット */
-      --fg: #37474f;          /* 墨色 */
-      --muted: #78909c;       /* 鈍い青緑 */
-      --accent: #00695c;      /* 翡翠（ヒスイ）色：メインカラー */
+      --fg: #37474f;
+      --muted: #78909c;
+      --accent: #00695c;
       --accent-light: #4db6ac;
-      --gold: #d4af37;        /* 金色：装飾用 */
-      --red: #c62828;         /* 朱色：ポイント */
-      --bg: #fdfbf7;          /* 生成り色：紙のような背景 */
+      --gold: #d4af37;
+      --red: #c62828;
+      --bg: #fdfbf7;
       --panel: #ffffff;
-      --border: #cfd8dc;      /* 薄いグレー */
+      --border: #cfd8dc;
       --font-base: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
     }
     
-    html, body {
+    html {
+        overflow-y: scroll; /* 全角スペース削除済み */
+        height: 100%;
+    }
+
+    body {
         margin: 0;
         padding: 0;
         background-color: var(--bg);
         color: var(--fg);
         font-family: var(--font-base);
-        width: 100%;
         line-height: 1.6;
-      　overflow-y: scroll;
+        min-height: 100%;
     }
 
-    /* 背景パターン（絹織物風） */
     body {
         background-image: 
           repeating-linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0px, rgba(212, 175, 55, 0.08) 1px, transparent 1px, transparent 10px),
@@ -64,22 +65,24 @@
         background-size: 20px 20px, 10px 10px;
         background-attachment: fixed;
     }
-    /* 背景重ね（文字を見やすく） */
     body::after {
         content: ""; position: fixed; inset: 0; z-index: -1;
         background: rgba(253, 251, 247, 0.90); 
         backdrop-filter: blur(1px);
         pointer-events: none;
     }
+
+    /* スクロールバー設定 (全角スペース削除済み) */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 5px; }
+    ::-webkit-scrollbar-track { background: rgba(0, 105, 92, 0.05); }
     
-    /* ===== ヘッダー ===== */
+    /* ヘッダー */
     header {
-        position: sticky;
-        top: 0;
-        /* 翡翠色のグラデーション */
+        position: sticky; top: 0;
         background: linear-gradient(to right, #004d40F2, #00695cF2);
         backdrop-filter: saturate(1.2) blur(6px);
-        border-bottom: 2px solid var(--gold); /* 金のライン */
+        border-bottom: 2px solid var(--gold);
         z-index: 900;
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
@@ -88,15 +91,8 @@
         display: flex; flex-direction: column; gap: 12px;
     }
 
-    /* 上段：ナビゲーション */
-    .nav-header { 
-        display: flex; justify-content: space-between; align-items: center; 
-        width: 100%; height: 32px;
-    }
-    .brand { 
-        font-weight: 700; color: #fff; text-decoration: none; font-size: 20px; 
-        letter-spacing: 0.05em; text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    }
+    .nav-header { display: flex; justify-content: space-between; align-items: center; width: 100%; height: 32px; }
+    .brand { font-weight: 700; color: #fff; text-decoration: none; font-size: 20px; letter-spacing: 0.05em; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
     .nav-links { display: flex; gap: 10px; }
     .nav-links a { 
         position: relative; font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; 
@@ -104,19 +100,12 @@
         background: rgba(255,255,255,0.15); border-radius: 4px; border: 1px solid rgba(255,255,255,0.3);
     }
     .nav-links a:hover { transform: translateY(-2px); background: rgba(255,255,255,0.25); border-color: var(--gold); }
-
-    /* 曲を探すボタンの強調 */
     .nav-links a.link-song { background: var(--accent-light); color: #fff; border-color: transparent; }
 
-    /* 下段：検索ツールバー */
-    .toolbar {
-        display: flex; gap: 10px; align-items: center; flex-wrap: wrap; 
-        justify-content: space-between; width: 100%;
-    }
+    .toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: space-between; width: 100%; }
     .searchbar { display: flex; gap: 8px; align-items: center; flex: 1; }
     .searchbar input {
         flex: 1; padding: 8px 12px; font-size: 16px; font-family: var(--font-base);
-        /* 中華窓風の二重線ボーダー */
         background: #fff; border: 3px double var(--accent); border-radius: 4px; 
         color: var(--fg); min-width: 0;
         box-shadow: 0 2px 6px rgba(0, 105, 92, 0.1);
@@ -125,50 +114,42 @@
     .searchbar input:focus { outline: none; border-color: var(--gold); }
 
     .header-btn { 
-        appearance: none; border: 0; cursor: pointer; 
-        padding: 8px 16px; border-radius: 4px; 
+        appearance: none; border: 0; cursor: pointer; padding: 8px 16px; border-radius: 4px; 
         font-weight: 600; font-size: 13px; font-family: var(--font-base);
-        background: #fff; color: var(--accent); 
-        border: 1px solid var(--accent);
+        background: #fff; color: var(--accent); border: 1px solid var(--accent);
         box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: .2s ease; white-space: nowrap;
     }
     .header-btn:hover { background: var(--accent); color: #fff; transform: translateY(-1px); }
     .header-btn.reset { color: var(--red); border-color: var(--red); }
     .header-btn.reset:hover { background: var(--red); color: #fff; }
 
-    /* ===== サイドフィルターパネル ===== */
+    /* サイドフィルターパネル */
     .filter-panel-wrapper {
         position: fixed; top: 0; right: -340px;
         width: 320px; max-width: 85vw; height: 100vh;
-        background: var(--bg); /* 背景色 */
-        border-left: 2px solid var(--gold); /* 金色の境界線 */
-        z-index: 1000;
-        box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+        background: var(--bg); border-left: 2px solid var(--gold);
+        z-index: 1000; box-shadow: -4px 0 20px rgba(0,0,0,0.2);
         transition: right 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         display: flex; flex-direction: column;
     }
     .filter-panel-wrapper.open { right: 0; }
-
     .filter-overlay {
         position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999;
         opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
         backdrop-filter: blur(2px);
     }
     .filter-overlay.open { opacity: 1; pointer-events: auto; }
-
     .filter-header {
         display: flex; justify-content: space-between; align-items: center;
         padding: 16px; background: rgba(0, 105, 92, 0.05); border-bottom: 1px dashed var(--gold);
     }
     .filter-title { font-weight: 700; color: var(--accent); font-size: 18px; margin: 0; letter-spacing: 0.1em; }
     .filter-close { background: none; border: none; font-size: 24px; color: var(--muted); cursor: pointer; padding: 0 8px; }
-
     .filter-content { flex: 1; overflow-y: auto; padding: 20px; }
     .filter-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
     .filter-group dt { 
         font-weight: 700; font-size: 15px; color: var(--fg); 
-        border-left: 4px solid var(--accent); padding-left: 10px; 
-        margin-bottom: 8px;
+        border-left: 4px solid var(--accent); padding-left: 10px; margin-bottom: 8px;
     }
     .filter-group .archive__sort__select__label {
         display: grid; list-style: none; padding-left: 0; margin: 0;
@@ -181,11 +162,8 @@
         background: #fff; transition: .15s;
     }
     .archive__sort__select__label li label:hover { border-color: var(--accent-light); color: var(--accent); }
-    /* チェック時のスタイル */
     .archive__sort__select__label li input[type="checkbox"] { margin-right: 6px; accent-color: var(--accent); }
-    
     .archive__sort__select { font-family: var(--font-base); }
-
     .filter-actions { margin-top: 10px; display: flex; gap: 12px; flex-direction: column; padding-bottom: 20px; }
     .btn { 
         appearance: none; border: 0; cursor: pointer; padding: 12px; border-radius: 4px; 
@@ -200,135 +178,89 @@
     /* レイアウト (PC) */
     .grid{display:grid;gap:24px;align-items:start;grid-template-columns:1.2fr .8fr;grid-template-areas:"list player"}
     .grid.player-left{grid-template-columns:.8fr 1.2fr;grid-template-areas:"player list"}
-    
-    /* ▼▼▼ PC用レイアウト (901px以上) の修正版 ▼▼▼ */
+
+    /* ▼▼▼ PC用レイアウト (901px以上) ▼▼▼ */
     @media (min-width: 901px) {
-     /* 1. 外枠：画面の高さに合わせてサイズを固定する */
      .player-col {
        position: sticky;
        top: 110px;
        align-self: start;
-       
-       /* ★重要変更：max-heightではなく「height」で高さを確定させる */
-       height: calc(100vh - 140px); 
-       
+       height: calc(100vh - 140px); /* 構文エラーを修正済み */
        display: flex;
        flex-direction: column;
        z-index: 5;
      }
 
-     /* 2. パネル本体：外枠の高さ(100%)を強制的に使い切る */
      .player-panel {
        position: static;
        display: flex;
        flex-direction: column;
-       height: 100%; /* ★ここが重要 */
+       height: 100%; 
        min-height: 0;
        overflow: hidden;
        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
      }
+     .player-head, .player-body, .player-panel > div:nth-child(2) { flex-shrink: 0; }
 
-     /* ヘッダーや動画部分は固定サイズ（縮ませない） */
-     .player-head, .player-body, .player-panel > div:nth-child(2) { 
-       flex-shrink: 0; 
-     }
-
-     /* 3. フッターエリア：残りのスペースを全て埋める */
      .player-foot {
         flex: 1; 
         display: flex; 
         flex-direction: column; 
-        min-height: 0; /* ★Flexboxの入れ子スクロールに必須 */
+        min-height: 0;
         overflow: hidden;
         background: #fff;
-        padding-bottom: 0; /* 下部の余白調整 */
+        padding-bottom: 0;
      }
 
      .meta-line, .warn { flex-shrink: 0; }
 
-     /* 4. セットリスト：このエリア「だけ」をスクロールさせる */
      .setlist {
-       flex: 1; /* フッター内の余りスペースを占有 */
-       overflow-y: auto; /* ★あふれたらスクロール */
+       flex: 1; 
+       overflow-y: auto; 
        max-height: none; 
        margin-top: 8px;
-       margin-bottom: 14px; /* 下に少し余白 */
+       margin-bottom: 14px;
        border: 1px solid var(--border); 
        border-radius: 4px;
        background: #fafafa;
      }
 
-     /* 右側のリスト列 */
      .list-col {
-        height: calc(100vh - 130px);
-        position: sticky; top: 110px;
-        overflow-y: auto; padding-right: 4px; box-sizing: border-box; 
+        height: auto;
+        position: static;
+        overflow: visible;
+        padding-right: 0;
+        box-sizing: border-box; 
       }
     }
     .player-col{grid-area:player;}
     .nothing{color:var(--muted);text-align:center;padding:30px;border:2px dashed var(--border);border-radius:8px; grid-column: 1 / -1; margin-top: 16px;}
 
-    /* リスト (PC: カード型) */
+    /* リスト */
     .list{ display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; padding: 1px; }
 
-    /* 動画カード */
     .video-card { 
-        cursor: pointer; 
-        border: 1px solid var(--border); 
-        border-radius: 4px; /* 角を少しだけ丸める（中華風） */
-        overflow: hidden; 
-        background: #fff; 
-        transition: box-shadow .2s ease, transform .2s ease, border-color .2s;
+        cursor: pointer; border: 1px solid var(--border); border-radius: 4px; 
+        overflow: hidden; background: #fff; transition: box-shadow .2s ease, transform .2s ease, border-color .2s;
         position: relative;
     }
-    /* カードの四隅に装飾線（疑似要素） */
-    .video-card::after {
-        content: ""; position: absolute; inset: 4px; 
-        border: 1px solid transparent; 
-        pointer-events: none; transition: border-color .2s;
-    }
-    .video-card:hover { 
-        box-shadow: 0 8px 20px rgba(0, 77, 64, 0.15); 
-        transform: translateY(-2px); 
-        border-color: var(--gold);
-    }
+    .video-card::after { content: ""; position: absolute; inset: 4px; border: 1px solid transparent; pointer-events: none; transition: border-color .2s; }
+    .video-card:hover { box-shadow: 0 8px 20px rgba(0, 77, 64, 0.15); transform: translateY(-2px); border-color: var(--gold); }
     .video-card:hover::after { border-color: rgba(212, 175, 55, 0.3); }
-
     .video-card .thumbnail { aspect-ratio: 16/9; display: block; width: 100%; object-fit: cover; }
     .video-card .meta { padding: 14px; }
-    .video-card .title { 
-        font-weight: 700; line-height: 1.5; 
-        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; 
-        margin-bottom: 8px; color: var(--fg); font-size: 15px; 
-    }
+    .video-card .title { font-weight: 700; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 8px; color: var(--fg); font-size: 15px; }
     .video-card .info { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
     .video-card .channel { z-index: 2; position: relative; }
     .video-card .channel:hover { color: var(--accent); text-decoration: underline; }
     .video-card .date { font-variant-numeric: tabular-nums; margin-left: auto; color: #90a4ae; }
-    
     .video-card .tags-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); }
-    
-    .category-badge { 
-        font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 2px; 
-        background: var(--accent); color: #fff; z-index: 2; position: relative; 
-    }
-    .keyword-badge { 
-        font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 2px; 
-        background: #fff; color: var(--fg); border: 1px solid var(--border); z-index: 2; position: relative; 
-    }
-    
+    .category-badge { font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 2px; background: var(--accent); color: #fff; z-index: 2; position: relative; }
+    .keyword-badge { font-size: 11px; line-height: 1; padding: 4px 8px; border-radius: 2px; background: #fff; color: var(--fg); border: 1px solid var(--border); z-index: 2; position: relative; }
+
     /* プレイヤーパネル */
-    .player-panel {
-        position:sticky; top:84px; 
-        border: 2px solid var(--gold); /* 金枠 */
-        border-radius: 6px; 
-        overflow:hidden; background: #fff;
-    }
-    .player-head {
-        display:flex; justify-content:space-between; align-items:center; padding:10px 14px; 
-        background: linear-gradient(to right, #fcfcfc, #f0f4f4); /* 薄いグラデーション */
-        border-bottom: 1px solid var(--border);
-    }
+    .player-panel { position:sticky; top:84px; border: 2px solid var(--gold); border-radius: 6px; overflow:hidden; background: #fff; }
+    .player-head { display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background: linear-gradient(to right, #fcfcfc, #f0f4f4); border-bottom: 1px solid var(--border); }
     .player-title { font-size:15px; color:var(--accent); font-weight: 700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
     .player-sub { font-size:12px; color:var(--muted); margin-top: 4px; }
     .player-body { position:relative; aspect-ratio:16/9; width:100%; background:#000; }
@@ -336,71 +268,36 @@
     .player-foot { padding:14px; border-top:1px solid var(--border); background:#fff; }
     .meta-line { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:8px; color: var(--accent); font-size: 14px; }
     .warn { margin-top:8px; padding:10px 12px; color:#c62828; background:#ffebee; border:1px solid #ffcdd2; border-radius:4px; font-size: 12px; }
-  　
 
-    /* セットリスト */
-    .setlist { 
-        overflow: auto; 
-        border: 1px solid var(--border); 
-        border-radius: 4px; 
-        margin-top: 8px; 
-        display: block; 
-        padding-bottom: 20px;
-    }
-    .set-item { 
-        display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; 
-        border-top: 1px solid var(--border); background: #fff; cursor: pointer; transition: .2s;
-    }
+    /* セットリスト (全角スペース削除済み) */
+    .setlist { overflow: auto; border: 1px solid var(--border); border-radius: 4px; margin-top: 8px; display: block; padding-bottom: 20px; }
+    .set-item { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-top: 1px solid var(--border); background: #fff; cursor: pointer; transition: .2s; }
     .set-item:first-child { border-top: none; }
     .set-item:hover { background: rgba(0, 105, 92, 0.05); }
-    .set-item.active { 
-        background: rgba(0, 105, 92, 0.1); 
-        border-left: 4px solid var(--accent);
-    }
-    
+    .set-item.active { background: rgba(0, 105, 92, 0.1); border-left: 4px solid var(--accent); }
     .set-title { display: flex; flex-direction: column; }
     .set-song { font-weight: 700; font-size: 14px; color: var(--fg); }
     .set-artist { font-size: 12px; color: var(--muted); }
     .set-time { font-variant-numeric: tabular-nums; color: var(--accent); white-space: nowrap; font-size: 13px; font-weight: 600; }
-　　/* セットリストのスクロールバーをカスタマイズして常時表示させる */
-   ::-webkit-scrollbar {
-        width: 10px;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: var(--accent);
-        border-radius: 5px;
-    }
-    ::-webkit-scrollbar-track {
-        background: rgba(0, 105, 92, 0.05);
-    }
-  　.setlist::-webkit-scrollbar {
-     width: 10px; /* 少し太くして押しやすく */
-   }
-  　.setlist::-webkit-scrollbar-thumb {
-     background: var(--accent); /* 翡翠色 (#00695c) を適用 */
-     border-radius: 5px;
-   }
-  　.setlist::-webkit-scrollbar-track {
-     background: rgba(0, 105, 92, 0.1); /* 薄い翡翠色の背景 */
-     border-radius: 5px;
-   }
 
-    /* ★★★ モバイル・スマホ対応 (900px以下) ★★★ */
+    /* セットリストスクロールバー (全角スペース削除済み) */
+    .setlist::-webkit-scrollbar { width: 10px; }
+    .setlist::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 5px; }
+    .setlist::-webkit-scrollbar-track { background: rgba(0, 105, 92, 0.1); border-radius: 5px; }
+
+    /* モバイル */
     @media (max-width: 900px) {
         .grid{ display: block; } 
         main.wrap { padding-left: 0 !important; padding-right: 0 !important; }
         header .wrap { padding: 10px 12px; gap: 8px; }
-        
         .brand { font-size: 18px; }
         .nav-links a { padding: 4px 10px; font-size: 11px; }
         .searchbar input { font-size: 14px; padding: 8px 10px; border-width: 2px; }
         .header-btn { padding: 6px 12px; font-size: 12px; }
-
         .list { padding-left: 8px; padding-right: 8px; }
         .list-col, .list { width: 100% !important; margin: 0 !important; }
         .player-col { display: none; } 
     }
-
     @media (max-width: 560px) {
         .list { grid-template-columns: 1fr 1fr; gap: 8px; }
         .video-card .title { -webkit-line-clamp: 2; height: 3em; margin-bottom: 4px; font-size: 12px; }
@@ -410,20 +307,15 @@
         .video-card .meta { padding: 8px; }
     }
 
-    /* ★★★ モーダル再生画面 (モバイル用) ★★★ */
+    /* モーダル */
     body.player-active { overflow: hidden; }
     .player-active .list-col, .player-active header { display: none !important; }
     .player-active .wrap { padding: 0 !important; }
-    
     .player-active .player-col { 
-        display: block !important;
-        position: fixed; inset: 0; z-index: 9999; 
-        width: 100%; height: 100%; 
-        background: rgba(0, 0, 0, 0.9); 
-        overflow-y: auto; -webkit-overflow-scrolling: touch; 
-        padding: 10px;
+        display: block !important; position: fixed; inset: 0; z-index: 9999; 
+        width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); 
+        overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 10px;
     }
-    
     .player-active .player-panel { 
         position: relative; width: 100%; max-width: 600px; margin: 20px auto; 
         height: auto !important; max-height: none !important; 
@@ -436,20 +328,15 @@
     /* ページトップボタン */
     #page-top-btn {
       position: fixed; bottom: 20px; right: 20px; z-index: 100;
-      transition: opacity 0.3s, transform 0.3s; cursor: pointer;
-      width: 70px; height: auto;
+      transition: opacity 0.3s, transform 0.3s; cursor: pointer; width: 70px; height: auto;
     }
     #page-top-btn.hide-btn { opacity: 0; pointer-events: none; transform: translateY(20px); }
     #page-top-btn.show-btn { opacity: 1; pointer-events: auto; transform: translateY(0); }
     #page-top-btn:hover { animation: bounce 0.6s infinite; }
     #page-top-btn img { width: 100%; height: auto; display: block; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2)); }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    /* ローディングアニメーション */
+    /* ローディング */
     .flower-spinner, .flower-spinner * { box-sizing: border-box; }
     .flower-spinner { height: 70px; width: 70px; display: flex; flex-direction: row; align-items: center; justify-content: center; }
     .flower-spinner .dots-container { height: calc(70px / 7); width: calc(70px / 7); }

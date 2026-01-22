@@ -1227,7 +1227,6 @@
       });
     }
     
-    // 【修正箇所】scriptの中にあったHTMLタグを削除しました
     
     // ページ（画像など含む）の読み込みが完了したら実行
     window.addEventListener('load', function() {
@@ -1246,9 +1245,58 @@
         loader.classList.add('loaded');
       }
     }, 5000);
+    const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('modal-iframe');
+  const closeBtn = document.getElementById('modal-close');
+
+  // "reel-item" クラスを持つリンク、かつ YouTubeのリンクを含むものを対象にする
+  const videoLinks = document.querySelectorAll('.reel-item[href*="youtube"]');
+
+  videoLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault(); // リンク先への移動をキャンセル
+      
+      const url = this.getAttribute('href');
+      let videoId = "";
+      let params = "";
+
+      // URLから動画IDと開始時間を抽出するロジック
+      if (url.includes('embed/')) {
+        const parts = url.split('embed/');
+        const query = parts[1].split('?');
+        videoId = query[0];
+        params = query[1] ? "?" + query[1] : "";
+      } else if (url.includes('v=')) {
+        videoId = url.split('v=')[1].split('&')[0];
+      } else if (url.includes('youtu.be/')) {
+        videoId = url.split('youtu.be/')[1].split('?')[0];
+      }
+
+      if (videoId) {
+        // 自動再生(autoplay=1)をつけてiframeにセット
+        const connectChar = params ? "&" : "?";
+        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}${params}${connectChar}autoplay=1`;
+        modal.classList.add('active');
+      }
+    });
+  });
+
+  // 閉じる処理
+  function closeModal() {
+    modal.classList.remove('active');
+    setTimeout(() => { iframe.src = ""; }, 300); // 動画を停止
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  
+  // 背景クリックでも閉じる
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
   </script>
 </body>
 </html>
+
 
 
 

@@ -541,6 +541,54 @@
     }
     #loading-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg); z-index: 9999; display: flex; justify-content: center; align-items: center; transition: opacity 0.5s, visibility 0.5s; }
     #loading-wrapper.loaded { opacity: 0; visibility: hidden; }
+    /* --- RADIOセクション用デザイン --- */
+    /* 重要なリンクのボタングループ */
+    .radio-top-links {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;
+    }
+    
+    /* アーカイブリストの枠（スクロールエリア） */
+    .radio-archive-box {
+      background: #fff;
+      border: 2px solid var(--accent); /* 枠線 */
+      border-radius: 4px;
+      height: 300px;        /* ★ここで高さを固定 */
+      overflow-y: auto;     /* ★中身が溢れたらスクロール */
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 24px;
+    }
+    
+    /* リストのデザイン */
+    .radio-list {
+      list-style: none; margin: 0; padding: 0;
+    }
+    .radio-list li {
+      border-bottom: 1px solid #eceff1;
+    }
+    .radio-list li:last-child { border-bottom: none; }
+    
+    .radio-list a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: var(--fg);
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .radio-list a:hover {
+      background-color: #e0f2f1; /* ホバー時に薄い翡翠色 */
+      color: var(--accent);
+      padding-left: 20px; /* 少し右に動くアニメーション */
+    }
+    
+    /* ゲスト名などを太字にするなどの調整 */
+    .radio-date { font-size: 11px; color: var(--muted); margin-right: 8px; }
+    
+    /* スクロールバーのカスタマイズ（翡翠色に） */
+    .radio-archive-box::-webkit-scrollbar { width: 8px; }
+    .radio-archive-box::-webkit-scrollbar-track { background: #f1f1f1; }
+    .radio-archive-box::-webkit-scrollbar-thumb { background: var(--accent-light); border-radius: 4px; }
+    .radio-archive-box::-webkit-scrollbar-thumb:hover { background: var(--accent); }
   </style>
 </head>
 <body>
@@ -1224,145 +1272,144 @@
           
         </div>
       </section>
-      <section id="sec-radio" class="p-radio" aria-labelledby="h-radio">
+      <section id="sec-radio" class="p-section" aria-labelledby="h-radio">
         <div class="bar"><h2 id="h-radio">RADIO</h2></div>
-        <div class="body radio-layout"> <div>
+        <div class="body radio-layout">
           <p>深夜2時ー4時に放送のラジオ番組「Audee Connect」の火曜日パーソナリティを務めていた。<br>歌謡曲からロックまで幅広く曲を嗜む緑仙がテーマに合わせて選曲。普段聞かないような音楽を面白トークと共に味わえる音楽ラジオ番組。</p>
           <p>ゲストや愉快なスタッフのみなさんとのやりとりが深夜だということを忘れさせて笑いに誘う。配信とは違う明るい緑仙が堪能できる時間。<br><a href="https://audee.jp/program/show/100000456" target="_blank" style="color:var(--accent);font-weight:bold;">Audee Connectホームページ</a> からアーカイブを視聴可能。</p>
-          <div class="links" style="justify-content: flex-start;"> 
-            <a href="https://audee.jp/news/show/97260" target="_blank">【初めての方へ】 緑仙のAuDee CONNECTとは！？</a>
-            <a href="https://x.com/Tues_AC" target="_blank">Twitter (X)</a>
-            <p>ゲスト登場回</p>
-            <a href="https://audee.jp/voice/show/50887" target="_blank">ぼっちぼろまるさん</a><p>ゲスト登場回</p>
-            <a href="https://audee.jp/voice/show/51215" target="_blank">天月さん</a>
-            <a href="https://audee.jp/voice/show/53702" target="_blank">ASP の ユメカ・ナウカナ？さん・チッチチチーチーチーさん</a>
-            <a href="https://audee.jp/voice/show/53187" target="_blank">超学生さん</a>
-            <a href="https://audee.jp/voice/show/54210" target="_blank">SASUKEさん</a>
-            <a href="https://audee.jp/voice/show/52859" target="_blank">FLOWのKEIGOさん・TAKEさん</a>
-            <a href="https://audee.jp/voice/show/54410" target="_blank">ユアネスのボーカル黒川侑司さん</a>
-            <a href="https://audee.jp/voice/show/55742" target="_blank">halcaさん</a>
-            <a href="https://audee.jp/voice/show/56792" target="_blank">カノエラナさん</a>
-            <a href="https://audee.jp/voice/show/56241" target="_blank">梅田サイファーのKOPERUさんとteppeiさん/ 選曲：声優の蒼井翔太さん</a>
-            <a href="https://audee.jp/voice/show/56568" target="_blank">選曲：声優で歌手の鈴木みのりさん</a>
-            <a href="https://audee.jp/voice/show/57602" target="_blank">ゴールデンボンバーの鬼龍院翔さん 選曲：TENDOUJIのボーカル モリタナオヒコさん</a>
-            <a href="https://audee.jp/voice/show/58340" target="_blank">THE SUPER FRUITの星野晴海さん・阿部隼大さん</a>
-            <a href="https://audee.jp/voice/show/57833" target="_blank">声優でアーティストの斉藤朱夏さん！</a>
-            <a href="https://audee.jp/voice/show/59040" target="_blank">世が世なら!!!の内藤五胤さん、添田陵輔さん 選曲：SIX LOUNGE</a>
-            <a href="https://audee.jp/voice/show/59397" target="_blank">アートディレクター 中谷日出さん</a>
-            <a href="https://audee.jp/voice/show/60191" target="_blank">ぼっちぼろまるさん 　選曲：声優で歌手の内田雄馬さん</a>
-            <a href="https://audee.jp/voice/show/59832" target="_blank">6人組実況グループ White TailsのNakamuさん</a>
-            <a href="https://audee.jp/voice/show/60982" target="_blank">BEYOOOOONDSの里吉うたのさん</a>
-            <a href="https://audee.jp/voice/show/61736" target="_blank">歌手の高橋洋子さん</a>
-            <a href="https://audee.jp/voice/show/62482" target="_blank">BRADIOのボーカル真行寺貴秋さん</a>
-            <a href="https://audee.jp/voice/show/63597" target="_blank">選曲：声優の進藤あまねさん</a>
-            <a href="https://audee.jp/voice/show/64733" target="_blank">「UniteUp!」から　戸谷菊之介さん、助川真蔵さん、masaさん 選曲：音楽ユニットのangela</a>
-            <a href="https://audee.jp/voice/show/63966" target="_blank">プロ雀士でＭリーガーの松本吉弘さん / 選曲：声優で歌手の水樹奈々さん</a>
-            <a href="https://audee.jp/voice/show/65107" target="_blank">アイドル BiSのトギーさん・クレナイ・ワールズエンドさん</a>
-            <a href="https://audee.jp/voice/show/65511" target="_blank">Merm4idから瀬戸リカ役の平嶋夏海さん 選曲：ドレスコーズの志磨遼平さん</a>
-            <a href="https://audee.jp/voice/show/65914" target="_blank">音楽プロデューサーでシンガーソングライターのsyudouさん 選曲：アーティストの七海ひろきさん</a>
-            <a href="https://audee.jp/voice/show/67005" target="_blank">Helsinki Lambda Clubのボーカル・ギター 橋本薫さん 特別企画：「緑仙サマーボイス公開収録」</a>
-            <a href="https://audee.jp/voice/show/66270" target="_blank">Lenny code fictionの ボーカル 片桐航さん、ギターのソラさん</a>
-            <a href="https://audee.jp/voice/show/67364" target="_blank">MIMiNARIのshamさん 選曲：中国上海出身の歌手・コスプレイヤー Liyuuさん</a>
-            <a href="https://audee.jp/voice/show/68585" target="_blank">韻シストからベースのShyoudogさん 選曲：クリエイターズユニット Who-ya ExtendedからWho-yaさん</a>
-            <a href="https://audee.jp/voice/show/66673" target="_blank">ASPのナ前ナ以さんとチッチチチーチーチーさん 選曲：シンガーソングライターの崎山蒼志さん</a>
-            <a href="https://audee.jp/voice/show/68953" target="_blank">新曲「ヒロイン」の作詞をしてくださったGENICの小池竜暉さん</a>
-            <a href="https://audee.jp/voice/show/70141" target="_blank">バーチャルクリエイターの夏絵ココさん / 選曲：UNISON SQUARE GARDENの田淵智也さん</a>
-            <a href="https://audee.jp/voice/show/71352" target="_blank">選曲：シンガーソングライターのReolさん</a>
-            <a href="https://audee.jp/voice/show/69359" target="_blank">1stミニアルバム『パラグラム』に収録されている「ジガトラ」でコラボした「cadode」のKoshiさん</a>
-            <a href="https://audee.jp/voice/show/70555" target="_blank">選曲：アイナ・ジ・エンドさん</a>
-            <a href="https://audee.jp/voice/show/71716" target="_blank">音楽ユニット SUIREN / 選曲：フォークシンガーの南こうせつさん</a>
-            <a href="https://audee.jp/voice/show/69782" target="_blank">ポルカドットスティングレイのボーカル ギター 雫さん / コメント：クリスハートさん</a>
-            <a href="https://audee.jp/voice/show/70946" target="_blank">蓮見翔さん / 選曲：岩崎宏美さん</a>
-            <a href="https://audee.jp/voice/show/72535" target="_blank">シンガーソングライターのAnonymouzさん / 選曲：声優で歌手の岡崎美保さん</a>
-            <a href="https://audee.jp/voice/show/72535" target="_blank">シンガーソングライターのカノエラナさん</a>
-            <a href="https://audee.jp/voice/show/73728" target="_blank">選曲：ClariSのクララさんとカレンさん</a>
-            <a href="https://audee.jp/voice/show/74119" target="_blank">選曲：ADのかわいちゃん</a>
-            <a href="https://audee.jp/voice/show/75270" target="_blank">声優の千葉翔也さん / 選曲： THE 2 のボーカル 古舘佑太郎さん</a>
-            <a href="https://audee.jp/voice/show/73325" target="_blank">MagiaStone -まぎすと-から らんまくんさん・はやさかさん / 選曲：YONA YONA WEEKENDERSのボーカル・ギターの磯野くんさん</a>
-            <a href="https://audee.jp/voice/show/76105" target="_blank">Mリーガー 中田花奈さん / 選曲：日食なつこさん</a>
-            <a href="https://audee.jp/voice/show/77259" target="_blank">選曲 / アーティスト・May’nさん</a>
-            <a href="https://audee.jp/voice/show/78613" target="_blank">フィロソフィーのダンスの奥津マリさん・木葭ののさん / 選曲：ユアネスの黒川さん</a>
-            <a href="https://audee.jp/voice/show/76527" target="_blank">ヒトリエ / 選曲：FOMAREのアマダシンスケさん</a>
-            <a href="https://audee.jp/voice/show/77753" target="_blank">ポルカドットスティングレイの雫さん</a>
-            <a href="https://audee.jp/voice/show/78995" target="_blank">SUPERNOVAのユナクさん / 選曲：声優の水瀬いのりさん</a>
-            <a href="https://audee.jp/voice/show/76811" target="_blank">D4DJ のユニット燐舞曲から青柳椿役の 加藤里保菜さん / 選曲：森崎ウィンさん</a>
-            <a href="https://audee.jp/voice/show/78041" target="_blank">お笑い芸人のサツマカワRPGさん</a>
-            <a href="https://audee.jp/voice/show/79336" target="_blank">漫画家の石塚真一先生</a>
-            <a href="https://audee.jp/voice/show/79767" target="_blank">お笑い芸人のサツマカワRPGさん</a>
-            <a href="https://audee.jp/voice/show/81022" target="_blank">歌い手の超学生さん / 選曲：声優の直田姫奈さん</a>
-            <a href="https://audee.jp/voice/show/82268" target="_blank">ゲスト：俳優の和田雅成さん</a>
-            <a href="https://audee.jp/voice/show/80207" target="_blank">豆柴の大群都内某所 a.k.a. MONSTERIDOLのナオ・オブ・ナオさん・モモチ・ンゲールさん</a>
-            <a href="https://audee.jp/voice/show/81477" target="_blank">選曲：声優の富田美憂さん</a>
-            <a href="https://audee.jp/voice/show/82580" target="_blank">選曲：東京スカパラダイスオーケストラの茂木欣一さん</a>
-            <a href="https://audee.jp/voice/show/80577" target="_blank">お笑い芸人 トンツカタンのお抹茶さん / 選曲：LiSAさん</a>
-            <a href="https://audee.jp/voice/show/81940" target="_blank">カネヨリマサルからちとせみなさん</a>
-            <a href="https://audee.jp/voice/show/83073" target="_blank">シンガーのツルシマアンナさん</a>
-            <a href="https://audee.jp/voice/show/83391" target="_blank">選曲：長田悠幸先生と町田一八先生</a>
-            <a href="https://audee.jp/voice/show/84781" target="_blank">バンドマスター 奈良悠樹さん・ヒトリエでドラムのゆーまおさん</a>
-            <a href="https://audee.jp/voice/show/86031" target="_blank">クジラ夜の街 ギターボーカルの宮崎一晴さん</a>
-            <a href="https://audee.jp/voice/show/83929" target="_blank">超ときめき♡宣伝部の辻野かなみさん・杏ジュリアさん</a>
-            <a href="https://audee.jp/voice/show/86396" target="_blank">シンガーソングライターの湯木慧さん</a>
-            <a href="https://audee.jp/voice/show/84323" target="_blank">選曲：梅田サイファーのKOPERUさん</a>
-            <a href="https://audee.jp/voice/show/85577" target="_blank">水槽さん</a>
-            <a href="https://audee.jp/voice/show/86851" target="_blank">歌手の山本譲二さん</a>
-            <a href="https://audee.jp/voice/show/87262" target="_blank">4ピースバンド muqueのギター Kenichiさん、ベース Lenonさん</a>
-            <a href="https://audee.jp/voice/show/89708" target="_blank">選曲：声優の小倉唯さん</a>
-            <a href="https://audee.jp/voice/show/87648" target="_blank">家の裏でマンボウが死んでるP タカハシヨウさん</a>
-            <a href="https://audee.jp/voice/show/90072" target="_blank">7人組アイドルグループ ukkaの 葵るりさん・結城りなさん</a>
-            <a href="https://audee.jp/voice/show/88071" target="_blank">シンガーソングライターのちゃんゆ胃さん</a>
-            <a href="https://audee.jp/voice/show/89259" target="_blank">シンガーソングライターのsetaさん</a>
-            <a href="https://audee.jp/voice/show/90977" target="_blank">日食なつこさん</a>
-            <a href="https://audee.jp/voice/show/92318" target="_blank">選曲：さとうもかさん</a>
-            <a href="https://audee.jp/voice/show/93550" target="_blank">シンガーソングライターのカノエラナさん</a>
-            <a href="https://audee.jp/voice/show/91407" target="_blank">シンガーソングライター女優の安藤裕子さん</a>
-            <a href="https://audee.jp/voice/show/92742" target="_blank">選曲：声優アーティストMachicoさん</a>
-            <a href="https://audee.jp/voice/show/93907" target="_blank">選曲：声優・俳優の前島亜美さん</a>
-            <a href="https://audee.jp/voice/show/91877" target="_blank">選曲：LiSAさん</a>
-            <a href="https://audee.jp/voice/show/93125" target="_blank">ビレッジマンズストアのボーカル 水野ギイさん</a>
-            <a href="https://audee.jp/voice/show/94414" target="_blank">選曲：シンガーソングライターでラッパーのクボタカイさん</a>
-            <a href="https://audee.jp/voice/show/94782" target="_blank">シンガーでトラックメイカーの水槽さん</a>
-            <a href="https://audee.jp/voice/show/97337" target="_blank">4人組バンド トンボコープ 雪村りんさん・林龍之介さん</a>
-            <a href="https://audee.jp/voice/show/95297" target="_blank">アーティストの岡田奈々さん</a>
-            <a href="https://audee.jp/voice/show/97693" target="_blank">シンガーソングライター 関取花さん</a>
-            <a href="https://audee.jp/voice/show/95677" target="_blank">選曲：声優 林原めぐみさん</a>
-            <a href="https://audee.jp/voice/show/98300" target="_blank">シンガーソングライターのFuruiRihoさん</a>
-            <a href="https://audee.jp/voice/show/98746" target="_blank">可憐なアイボリーから寺本理絵さんと一ノ瀬直緒さん</a>
-            <a href="https://audee.jp/voice/show/99959" target="_blank">Laura day romance</a>
-            <a href="https://audee.jp/voice/show/101122" target="_blank">選曲：FIVE NEW OLDのボーカル HIROSHIさん</a>
-            <a href="https://audee.jp/voice/show/99069" target="_blank">「UniteUP!」から山口諒太郎さん、助川真蔵さん </a>
-            <a href="https://audee.jp/voice/show/100409" target="_blank">選曲：Galileo Galilei </a>
-            <a href="https://audee.jp/voice/show/101568" target="_blank">YOURNESSの黒川侑司さん</a>
-            <a href="https://audee.jp/voice/show/100851" target="_blank">選曲：DA PUMP ISSAさん</a>
-            <a href="https://audee.jp/voice/show/102594" target="_blank">水槽さん</a>
-            <a href="https://audee.jp/voice/show/105125" target="_blank">halcaさん</a>
-            <a href="https://audee.jp/voice/show/104221" target="_blank">ASP の モグ・ライアンさん・チッチチチーチーチーさん</a>
-            <a href="https://audee.jp/voice/show/103372" target="_blank">あらたよからひとみさん</a>
-            <a href="https://audee.jp/voice/show/104715" target="_blank">シンガーソングライターのseizaさん</a>
-            <a href="https://audee.jp/voice/show/105953" target="_blank">シンガーソングライターの音羽-otoha-さん</a>
-            <a href="https://audee.jp/voice/show/106400" target="_blank">セブンス・ベガのシブヤカンナさん・ハイブリッドマイマイさん</a>
-            <a href="https://audee.jp/voice/show/107655" target="_blank">声優の杉山里穂さん</a>
-            <a href="https://audee.jp/voice/show/108883" target="_blank">カラノアから雄大さん</a>
-            <a href="https://audee.jp/voice/show/109191" target="_blank">弌誠さん</a>
-            <a href="https://audee.jp/voice/show/72535" target="_blank">声優・俳優の前島亜美さん</a>
-            <a href="https://audee.jp/voice/show/107244" target="_blank">Lenny code fictionから片桐航さん・ソラさん</a>
-            <a href="https://audee.jp/voice/show/109501" target="_blank">Peel the Appleから浅原凛さん・山崎玲奈さん</a>
-            <a href="https://audee.jp/voice/show/111689" target="_blank">水槽さん</a>
-            <a href="https://audee.jp/voice/show/109885" target="_blank">TOOBOEさん</a>
-            <a href="https://audee.jp/voice/show/110945" target="_blank">シンガーソングライターのカノエラナさん</a>
-            <a href="https://audee.jp/voice/show/112055" target="_blank">お笑い芸人のサツマカワRPGさん</a>
-            <a href="https://audee.jp/voice/show/110283" target="_blank">ダウ90000から道上珠妃さん・上原祐太さん</a>
-            <a href="https://audee.jp/voice/show/111360" target="_blank">halcaさん</a>
+          
+          <div class="radio-top-links">
+            <a href="https://audee.jp/news/show/97260" target="_blank" class="btn">【初めての方へ】 緑仙のAuDee CONNECTとは！？</a>
+            <a href="https://x.com/Tues_AC" target="_blank" class="btn secondary">公式 Twitter (X)</a>
           </div>
-          <div class="embed" style="margin:0;">
-          <iframe
-        src="https://www.youtube-nocookie.com/embed/ZjcLDpB16iI?si=SeJtmlCBH7w1r445"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>
+
+          <div class="embed" style="margin: 0 0 24px 0;">
+            <iframe src="https://www.youtube-nocookie.com/embed/ZjcLDpB16iI?si=SeJtmlCBH7w1r445" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <h3 style="font-size:18px; color:var(--accent); border-left:4px solid var(--gold); padding-left:10px; margin-bottom:12px;">ゲスト登場回アーカイブ</h3>
+          <div class="radio-archive-box">
+            <ul class="radio-list">
+              <li><a href="https://audee.jp/voice/show/50887" target="_blank">ぼっちぼろまるさん</a></li>
+              <li><a href="https://audee.jp/voice/show/51215" target="_blank">天月さん</a></li>
+              <li><a href="https://audee.jp/voice/show/53702" target="_blank">ASP の ユメカ・ナウカナ？さん・チッチチチーチーチーさん</a></li>
+              <li><a href="https://audee.jp/voice/show/53187" target="_blank">超学生さん</a></li>
+              <li><a href="https://audee.jp/voice/show/54210" target="_blank">SASUKEさん</a></li>
+              <li><a href="https://audee.jp/voice/show/52859" target="_blank">FLOWのKEIGOさん・TAKEさん</a></li>
+              <li><a href="https://audee.jp/voice/show/54410" target="_blank">ユアネスのボーカル黒川侑司さん</a></li>
+              <li><a href="https://audee.jp/voice/show/55742" target="_blank">halcaさん</a></li>
+              <li><a href="https://audee.jp/voice/show/56792" target="_blank">カノエラナさん</a></li>
+              <li><a href="https://audee.jp/voice/show/56241" target="_blank">梅田サイファーのKOPERUさんとteppeiさん/ 選曲：声優の蒼井翔太さん</a></li>
+              <li><a href="https://audee.jp/voice/show/56568" target="_blank">選曲：声優で歌手の鈴木みのりさん</a></li>
+              <li><a href="https://audee.jp/voice/show/57602" target="_blank">ゴールデンボンバーの鬼龍院翔さん 選曲：TENDOUJIのボーカル モリタナオヒコさん</a></li>
+              <li><a href="https://audee.jp/voice/show/58340" target="_blank">THE SUPER FRUITの星野晴海さん・阿部隼大さん</a></li>
+              <li><a href="https://audee.jp/voice/show/57833" target="_blank">声優でアーティストの斉藤朱夏さん！</a></li>
+              <li><a href="https://audee.jp/voice/show/59040" target="_blank">世が世なら!!!の内藤五胤さん、添田陵輔さん 選曲：SIX LOUNGE</a></li>
+              <li><a href="https://audee.jp/voice/show/59397" target="_blank">アートディレクター 中谷日出さん</a></li>
+              <li><a href="https://audee.jp/voice/show/60191" target="_blank">ぼっちぼろまるさん 　選曲：声優で歌手の内田雄馬さん</a></li>
+              <li><a href="https://audee.jp/voice/show/59832" target="_blank">6人組実況グループ White TailsのNakamuさん</a></li>
+              <li><a href="https://audee.jp/voice/show/60982" target="_blank">BEYOOOOONDSの里吉うたのさん</a></li>
+              <li><a href="https://audee.jp/voice/show/61736" target="_blank">歌手の高橋洋子さん</a></li>
+              <li><a href="https://audee.jp/voice/show/62482" target="_blank">BRADIOのボーカル真行寺貴秋さん</a></li>
+              <li><a href="https://audee.jp/voice/show/63597" target="_blank">選曲：声優の進藤あまねさん</a></li>
+              <li><a href="https://audee.jp/voice/show/64733" target="_blank">「UniteUp!」から　戸谷菊之介さん、助川真蔵さん、masaさん 選曲：音楽ユニットのangela</a></li>
+              <li><a href="https://audee.jp/voice/show/63966" target="_blank">プロ雀士でＭリーガーの松本吉弘さん / 選曲：声優で歌手の水樹奈々さん</a></li>
+              <li><a href="https://audee.jp/voice/show/65107" target="_blank">アイドル BiSのトギーさん・クレナイ・ワールズエンドさん</a></li>
+              <li><a href="https://audee.jp/voice/show/65511" target="_blank">Merm4idから瀬戸リカ役の平嶋夏海さん 選曲：ドレスコーズの志磨遼平さん</a></li>
+              <li><a href="https://audee.jp/voice/show/65914" target="_blank">音楽プロデューサーでシンガーソングライターのsyudouさん 選曲：アーティストの七海ひろきさん</a></li>
+              <li><a href="https://audee.jp/voice/show/67005" target="_blank">Helsinki Lambda Clubのボーカル・ギター 橋本薫さん 特別企画：「緑仙サマーボイス公開収録」</a></li>
+              <li><a href="https://audee.jp/voice/show/66270" target="_blank">Lenny code fictionの ボーカル 片桐航さん、ギターのソラさん</a></li>
+              <li><a href="https://audee.jp/voice/show/67364" target="_blank">MIMiNARIのshamさん 選曲：中国上海出身の歌手・コスプレイヤー Liyuuさん</a></li>
+              <li><a href="https://audee.jp/voice/show/68585" target="_blank">韻シストからベースのShyoudogさん 選曲：クリエイターズユニット Who-ya ExtendedからWho-yaさん</a></li>
+              <li><a href="https://audee.jp/voice/show/66673" target="_blank">ASPのナ前ナ以さんとチッチチチーチーチーさん 選曲：シンガーソングライターの崎山蒼志さん</a></li>
+              <li><a href="https://audee.jp/voice/show/68953" target="_blank">新曲「ヒロイン」の作詞をしてくださったGENICの小池竜暉さん</a></li>
+              <li><a href="https://audee.jp/voice/show/70141" target="_blank">バーチャルクリエイターの夏絵ココさん / 選曲：UNISON SQUARE GARDENの田淵智也さん</a></li>
+              <li><a href="https://audee.jp/voice/show/71352" target="_blank">選曲：シンガーソングライターのReolさん</a></li>
+              <li><a href="https://audee.jp/voice/show/69359" target="_blank">1stミニアルバム『パラグラム』に収録されている「ジガトラ」でコラボした「cadode」のKoshiさん</a></li>
+              <li><a href="https://audee.jp/voice/show/70555" target="_blank">選曲：アイナ・ジ・エンドさん</a></li>
+              <li><a href="https://audee.jp/voice/show/71716" target="_blank">音楽ユニット SUIREN / 選曲：フォークシンガーの南こうせつさん</a></li>
+              <li><a href="https://audee.jp/voice/show/69782" target="_blank">ポルカドットスティングレイのボーカル ギター 雫さん / コメント：クリスハートさん</a></li>
+              <li><a href="https://audee.jp/voice/show/70946" target="_blank">蓮見翔さん / 選曲：岩崎宏美さん</a></li>
+              <li><a href="https://audee.jp/voice/show/72535" target="_blank">シンガーソングライターのAnonymouzさん / 選曲：声優で歌手の岡崎美保さん</a></li>
+              <li><a href="https://audee.jp/voice/show/73728" target="_blank">選曲：ClariSのクララさんとカレンさん</a></li>
+              <li><a href="https://audee.jp/voice/show/74119" target="_blank">選曲：ADのかわいちゃん</a></li>
+              <li><a href="https://audee.jp/voice/show/75270" target="_blank">声優の千葉翔也さん / 選曲： THE 2 のボーカル 古舘佑太郎さん</a></li>
+              <li><a href="https://audee.jp/voice/show/73325" target="_blank">MagiaStone -まぎすと-から らんまくんさん・はやさかさん / 選曲：YONA YONA WEEKENDERSのボーカル・ギターの磯野くんさん</a></li>
+              <li><a href="https://audee.jp/voice/show/76105" target="_blank">Mリーガー 中田花奈さん / 選曲：日食なつこさん</a></li>
+              <li><a href="https://audee.jp/voice/show/77259" target="_blank">選曲 / アーティスト・May’nさん</a></li>
+              <li><a href="https://audee.jp/voice/show/78613" target="_blank">フィロソフィーのダンスの奥津マリさん・木葭ののさん / 選曲：ユアネスの黒川さん</a></li>
+              <li><a href="https://audee.jp/voice/show/76527" target="_blank">ヒトリエ / 選曲：FOMAREのアマダシンスケさん</a></li>
+              <li><a href="https://audee.jp/voice/show/77753" target="_blank">ポルカドットスティングレイの雫さん</a></li>
+              <li><a href="https://audee.jp/voice/show/78995" target="_blank">SUPERNOVAのユナクさん / 選曲：声優の水瀬いのりさん</a></li>
+              <li><a href="https://audee.jp/voice/show/76811" target="_blank">D4DJ のユニット燐舞曲から青柳椿役の 加藤里保菜さん / 選曲：森崎ウィンさん</a></li>
+              <li><a href="https://audee.jp/voice/show/78041" target="_blank">お笑い芸人のサツマカワRPGさん</a></li>
+              <li><a href="https://audee.jp/voice/show/79336" target="_blank">漫画家の石塚真一先生</a></li>
+              <li><a href="https://audee.jp/voice/show/81022" target="_blank">歌い手の超学生さん / 選曲：声優の直田姫奈さん</a></li>
+              <li><a href="https://audee.jp/voice/show/82268" target="_blank">ゲスト：俳優の和田雅成さん</a></li>
+              <li><a href="https://audee.jp/voice/show/80207" target="_blank">豆柴の大群都内某所 a.k.a. MONSTERIDOLのナオ・オブ・ナオさん・モモチ・ンゲールさん</a></li>
+              <li><a href="https://audee.jp/voice/show/81477" target="_blank">選曲：声優の富田美憂さん</a></li>
+              <li><a href="https://audee.jp/voice/show/82580" target="_blank">選曲：東京スカパラダイスオーケストラの茂木欣一さん</a></li>
+              <li><a href="https://audee.jp/voice/show/80577" target="_blank">お笑い芸人 トンツカタンのお抹茶さん / 選曲：LiSAさん</a></li>
+              <li><a href="https://audee.jp/voice/show/81940" target="_blank">カネヨリマサルからちとせみなさん</a></li>
+              <li><a href="https://audee.jp/voice/show/83073" target="_blank">シンガーのツルシマアンナさん</a></li>
+              <li><a href="https://audee.jp/voice/show/83391" target="_blank">選曲：長田悠幸先生と町田一八先生</a></li>
+              <li><a href="https://audee.jp/voice/show/84781" target="_blank">バンドマスター 奈良悠樹さん・ヒトリエでドラムのゆーまおさん</a></li>
+              <li><a href="https://audee.jp/voice/show/86031" target="_blank">クジラ夜の街 ギターボーカルの宮崎一晴さん</a></li>
+              <li><a href="https://audee.jp/voice/show/83929" target="_blank">超ときめき♡宣伝部の辻野かなみさん・杏ジュリアさん</a></li>
+              <li><a href="https://audee.jp/voice/show/86396" target="_blank">シンガーソングライターの湯木慧さん</a></li>
+              <li><a href="https://audee.jp/voice/show/84323" target="_blank">選曲：梅田サイファーのKOPERUさん</a></li>
+              <li><a href="https://audee.jp/voice/show/85577" target="_blank">水槽さん</a></li>
+              <li><a href="https://audee.jp/voice/show/86851" target="_blank">歌手の山本譲二さん</a></li>
+              <li><a href="https://audee.jp/voice/show/87262" target="_blank">4ピースバンド muqueのギター Kenichiさん、ベース Lenonさん</a></li>
+              <li><a href="https://audee.jp/voice/show/89708" target="_blank">選曲：声優の小倉唯さん</a></li>
+              <li><a href="https://audee.jp/voice/show/87648" target="_blank">家の裏でマンボウが死んでるP タカハシヨウさん</a></li>
+              <li><a href="https://audee.jp/voice/show/90072" target="_blank">7人組アイドルグループ ukkaの 葵るりさん・結城りなさん</a></li>
+              <li><a href="https://audee.jp/voice/show/88071" target="_blank">シンガーソングライターのちゃんゆ胃さん</a></li>
+              <li><a href="https://audee.jp/voice/show/89259" target="_blank">シンガーソングライターのsetaさん</a></li>
+              <li><a href="https://audee.jp/voice/show/90977" target="_blank">日食なつこさん</a></li>
+              <li><a href="https://audee.jp/voice/show/92318" target="_blank">選曲：さとうもかさん</a></li>
+              <li><a href="https://audee.jp/voice/show/93550" target="_blank">シンガーソングライターのカノエラナさん</a></li>
+              <li><a href="https://audee.jp/voice/show/91407" target="_blank">シンガーソングライター女優の安藤裕子さん</a></li>
+              <li><a href="https://audee.jp/voice/show/92742" target="_blank">選曲：声優アーティストMachicoさん</a></li>
+              <li><a href="https://audee.jp/voice/show/93907" target="_blank">選曲：声優・俳優の前島亜美さん</a></li>
+              <li><a href="https://audee.jp/voice/show/91877" target="_blank">選曲：LiSAさん</a></li>
+              <li><a href="https://audee.jp/voice/show/93125" target="_blank">ビレッジマンズストアのボーカル 水野ギイさん</a></li>
+              <li><a href="https://audee.jp/voice/show/94414" target="_blank">選曲：シンガーソングライターでラッパーのクボタカイさん</a></li>
+              <li><a href="https://audee.jp/voice/show/94782" target="_blank">シンガーでトラックメイカーの水槽さん</a></li>
+              <li><a href="https://audee.jp/voice/show/97337" target="_blank">4人組バンド トンボコープ 雪村りんさん・林龍之介さん</a></li>
+              <li><a href="https://audee.jp/voice/show/95297" target="_blank">アーティストの岡田奈々さん</a></li>
+              <li><a href="https://audee.jp/voice/show/97693" target="_blank">シンガーソングライター 関取花さん</a></li>
+              <li><a href="https://audee.jp/voice/show/95677" target="_blank">選曲：声優 林原めぐみさん</a></li>
+              <li><a href="https://audee.jp/voice/show/98300" target="_blank">シンガーソングライターのFuruiRihoさん</a></li>
+              <li><a href="https://audee.jp/voice/show/98746" target="_blank">可憐なアイボリーから寺本理絵さんと一ノ瀬直緒さん</a></li>
+              <li><a href="https://audee.jp/voice/show/99959" target="_blank">Laura day romance</a></li>
+              <li><a href="https://audee.jp/voice/show/101122" target="_blank">選曲：FIVE NEW OLDのボーカル HIROSHIさん</a></li>
+              <li><a href="https://audee.jp/voice/show/99069" target="_blank">「UniteUP!」から山口諒太郎さん、助川真蔵さん </a></li>
+              <li><a href="https://audee.jp/voice/show/100409" target="_blank">選曲：Galileo Galilei </a></li>
+              <li><a href="https://audee.jp/voice/show/101568" target="_blank">YOURNESSの黒川侑司さん</a></li>
+              <li><a href="https://audee.jp/voice/show/100851" target="_blank">選曲：DA PUMP ISSAさん</a></li>
+              <li><a href="https://audee.jp/voice/show/102594" target="_blank">水槽さん</a></li>
+              <li><a href="https://audee.jp/voice/show/105125" target="_blank">halcaさん</a></li>
+              <li><a href="https://audee.jp/voice/show/104221" target="_blank">ASP の モグ・ライアンさん・チッチチチーチーチーさん</a></li>
+              <li><a href="https://audee.jp/voice/show/103372" target="_blank">あらたよからひとみさん</a></li>
+              <li><a href="https://audee.jp/voice/show/104715" target="_blank">シンガーソングライターのseizaさん</a></li>
+              <li><a href="https://audee.jp/voice/show/105953" target="_blank">シンガーソングライターの音羽-otoha-さん</a></li>
+              <li><a href="https://audee.jp/voice/show/106400" target="_blank">セブンス・ベガのシブヤカンナさん・ハイブリッドマイマイさん</a></li>
+              <li><a href="https://audee.jp/voice/show/107655" target="_blank">声優の杉山里穂さん</a></li>
+              <li><a href="https://audee.jp/voice/show/108883" target="_blank">カラノアから雄大さん</a></li>
+              <li><a href="https://audee.jp/voice/show/109191" target="_blank">弌誠さん</a></li>
+              <li><a href="https://audee.jp/voice/show/107244" target="_blank">Lenny code fictionから片桐航さん・ソラさん</a></li>
+              <li><a href="https://audee.jp/voice/show/109501" target="_blank">Peel the Appleから浅原凛さん・山崎玲奈さん</a></li>
+              <li><a href="https://audee.jp/voice/show/111689" target="_blank">水槽さん</a></li>
+              <li><a href="https://audee.jp/voice/show/109885" target="_blank">TOOBOEさん</a></li>
+              <li><a href="https://audee.jp/voice/show/110945" target="_blank">シンガーソングライターのカノエラナさん</a></li>
+              <li><a href="https://audee.jp/voice/show/112055" target="_blank">お笑い芸人のサツマカワRPGさん</a></li>
+              <li><a href="https://audee.jp/voice/show/110283" target="_blank">ダウ90000から道上珠妃さん・上原祐太さん</a></li>
+              <li><a href="https://audee.jp/voice/show/111360" target="_blank">halcaさん</a></li>
+            </ul>
           </div>
         </div>
-      </section>  
+      </section>
     </main>
   </div>
 
@@ -1465,6 +1512,7 @@
   </script>
 </body>
 </html>
+
 
 
 

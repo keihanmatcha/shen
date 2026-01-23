@@ -36,6 +36,74 @@ CHANNELS = [
 MANUAL_VIDEO_IDS = [
 ]
 EXTRA_PLAYLISTS = [
+    # 手動追加用
+    {
+        "id": "PLBp6ycTto5GqDp-0RniUkfHG1rLQobf2N",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLBp6ycTto5GpkDrrQbA2-odoeK4eR05WA",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["歌動画"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLBp6ycTto5GqM1eX6hCv0w3wMOMAEowT7",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["企画"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLBp6ycTto5GrgYKpoKFjR9i5V0Z4RCDZq",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["プロモーション"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLBp6ycTto5GrO1_g6oZYiLYJtfWaffjhr",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["歌配信"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PLBp6ycTto5GoqrXTuXOFOvDibqScSxHBP",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["公式切り抜き"]   # 自動で付けたいタグ
+    },
+     # 緑仙　限定公開　公式プレイリスト
+    {
+        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
+    },
+    {
+        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
+        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
+        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
+    },
+    # 緑仙　限定公開
     {
         "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
         "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
@@ -76,51 +144,63 @@ EXTRA_PLAYLISTS = [
         "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
         "fixed_tags": ["限定公開","雑談"]   # 自動で付けたいタグ
     },
+    # 緑仙　企画　公式プレイリスト
     {
         "id": "PL2tNRe-9n6lb6v2JjGQVjKVzU3-wcVAIz",      # ここに再生リストIDを入れる
         "fixed_tags": ["企画"]   # 自動で付けたいタグ
     },
+    # 緑仙　歌配信　公式プレイリスト
     {
         "id": "PL2tNRe-9n6lYPvqVv2dLhQfO4MpimYjWW",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌配信"]   # 自動で付けたいタグ
     },
+    # 緑仙　みどりとおはなしするだけ　公式プレイリスト
     {
         "id": "PL2tNRe-9n6lasIWq0_M2hu9-4Qb3ExXxc",      # ここに再生リストIDを入れる
         "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
         "fixed_tags": ["みどりとおはなしするだけ","雑談"]   # 自動で付けたいタグ
     },
+     # 緑仙　お悩み相談&質問コーナー　公式プレイリスト
     {
         "id": "PL2tNRe-9n6lZgAkmjPYzLFzhre1EUQspQ",      # ここに再生リストIDを入れる
         "fixed_tags": ["お悩み相談&質問コーナー"]   # 自動で付けたいタグ
     },
+    # 緑仙　ライブイベント　公式プレイリスト
     {
         "id": "PL2tNRe-9n6lZgMABzB_DEwf4t7V2E0nV8",      # ここに再生リストIDを入れる
         "fixed_tags": ["ライブイベント"]   # 自動で付けたいタグ
     },
+    # 緑仙　緑仙の独りアソビ　公式プレイリスト
     {
         "id": "PL2tNRe-9n6lYvwDkdus_57eW1vSsbOLAW",      # ここに再生リストIDを入れる
         "fixed_tags": ["ゲーム実況","緑仙の独りアソビ"]   # 自動で付けたいタグ
     },
+    # 緑仙　ゲーム実況　公式プレイリスト
     {
         "id": "PL2tNRe-9n6lZIafvEeZQEVbXLvyaZnDhM",      # ここに再生リストIDを入れる
         "fixed_tags": ["ゲーム実況"]   # 自動で付けたいタグ
     },
+    # 緑仙　麻雀　公式プレイリスト
     {
         "id": "PL2tNRe-9n6lZY_PMgLEnzjPVTWUyTsdtV",      # ここに再生リストIDを入れる
         "fixed_tags": ["ゲーム実況","麻雀"]   # 自動で付けたいタグ
     },
+    # 緑仙　マインクラフト　公式プレイリスト
     {
         "id": "PL2tNRe-9n6laDXKZxMI8qAU1f96p2mbyr",      # ここに再生リストIDを入れる
         "fixed_tags": ["ゲーム実況","マインクラフト"]   # 自動で付けたいタグ
     },
+    # Rain Drops　公式プレイリスト
     {
         "id": "PLJJYjHjj3LYOUSivmmPc42q9p7776Pig3",      # ここに再生リストIDを入れる
         "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治"]   # 自動で付けたいタグ
     },
+    # Rain Drops　オリジナル曲　公式プレイリスト
     {
         "id": "PLJJYjHjj3LYPcuTYj4pDerAE4FIXgLbyP",      # ここに再生リストIDを入れる
         "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲"]   # 自動で付けたいタグ
     },
+    # Rain Drops　リリース　公式プレイリスト
     {
         "id": "list=OLAK5uy_lDmp3Ak0wRHOL5BuQQIjV8WLza-Pqttlw",      # ここに再生リストIDを入れる
         "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-リフレインズ"]   # 自動で付けたいタグ
@@ -145,6 +225,7 @@ EXTRA_PLAYLISTS = [
         "id": "OLAK5uy_l1MQdlsI7yQpwJYjd0sVTnlm5FJalsUek",      # ここに再生リストIDを入れる
         "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-バイオグラフィ"]   # 自動で付けたいタグ
     },
+    # 七次元生徒会　生徒会、使わせていただきます！　公式プレイリスト
     {
         "id": "PL3m9klpxyzPfuO9z1BVf8GTeX0bT2WXal",      # ここに再生リストIDを入れる
         "fixed_tags": ["生徒会、使わせていただきます！","企画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ"]   # 自動で付けたいタグ
@@ -157,7 +238,7 @@ EXTRA_PLAYLISTS = [
         "id": "PL3m9klpxyzPcH4CfG55TLu5KNCOuBOklv",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌動画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ"]   # 自動で付けたいタグ
     },
-    
+    # 七次元生徒会　リリース　公式プレイリスト
     {
         "id": "OLAK5uy_lo_PN7esxBBGMFXA8otiQB434doFbnt4Q",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌動画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ","オリジナル曲","リリース"]   # 自動で付けたいタグ
@@ -170,7 +251,7 @@ EXTRA_PLAYLISTS = [
         "id": "OLAK5uy_lEq4Cb1mjxdZynIOSZbFX2wRto-qf5wTE",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌動画","七次元生徒会","叶", "樋口楓","三枝明那","レオス・ヴィンセント","周央サンゴ","オリジナル曲","リリース"]   # 自動で付けたいタグ
     },
-
+    # 緑仙　リリース　公式プレイリスト
     {
         "id": "OLAK5uy_mR46w9gg9UKnxf0CZ-T7y7IBOirZP0CWs",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌動画","オリジナル曲","緑仙-It'sLie"]   # 自動で付けたいタグ
@@ -191,6 +272,7 @@ EXTRA_PLAYLISTS = [
         "id": "OLAK5uy_lK3vYQuMzo3A6i4TXjim4gU6Mk-bNml3k",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌動画","オリジナル曲","緑仙-最初の晩餐"]   # 自動で付けたいタグ
     },
+    # 緑仙　歌動画　公式プレイリスト
     {
         "id": "PL2tNRe-9n6layYbKKj92KCO6KVjKivLsi",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌動画","カバー曲"]   # 自動で付けたいタグ
@@ -199,11 +281,12 @@ EXTRA_PLAYLISTS = [
         "id": "PL2tNRe-9n6lbkKpeS1eH2F1GvPLIWgl82",      # ここに再生リストIDを入れる
         "fixed_tags": ["歌動画","オリジナル曲"]   # 自動で付けたいタグ
     },
+    # SEEDs24　公式プレイリスト
     {
         "id": "PL5su7mgHJJj9GcxKEp2Wqx9T0B_yGdfLh",      # ここに再生リストIDを入れる
         "fixed_tags": ["SEEDs1期生","企画","#SEEDs24","SEEDs"]   # 自動で付けたいタグ
     },
-    
+    # こじらせハラスメント　公式プレイリスト
     {
         "id": "OLAK5uy_mlSNfpk3-Eg-8vFXobzB1gmaf5iV_TQlk",      # ここに再生リストIDを入れる
         "fixed_tags": ["こじらせハラスメント","弦月藤士郎", "相羽ういは","歌動画","リリース","オリジナル曲","こじらせハラスメント-さよならハラスメント"]   # 自動で付けたいタグ
@@ -211,10 +294,6 @@ EXTRA_PLAYLISTS = [
     {
         "id": "PLUDVjoVRQVQeIRJnXirhmDm2pVppfb9MC",      # ここに再生リストIDを入れる
         "fixed_tags": ["こじらせハラスメント","弦月藤士郎", "相羽ういは","歌動画","リリース","オリジナル曲","こじらせハラスメント-さよならハラスメント"]   # 自動で付けたいタグ
-    },
-    {
-        "id": "PL5su7mgHJJj9GcxKEp2Wqx9T0B_yGdfLh",      # ここに再生リストIDを入れる
-        "fixed_tags": ["SEEDs1期生","企画","#SEEDs24","SEEDs"]   # 自動で付けたいタグ
     }
 ]
 # 管理対象のチャンネル名リスト
@@ -1008,6 +1087,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

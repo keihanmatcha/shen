@@ -400,6 +400,36 @@
       }
       .sidebar.open + .sidebar-overlay { opacity: 1; pointer-events: auto; }
     }
+    @media (max-width: 768px) {
+    /* 既存のグリッド設定（縦並び）を上書きして横並びにする */
+    #sec-unit .grid-gallery {
+      display: flex;                 /* Flexboxに変更 */
+      grid-template-columns: unset;  /* グリッド解除 */
+      overflow-x: auto;              /* 横スクロールを許可 */
+      scroll-snap-type: x mandatory; /* スクロール時に要素をスナップ（吸着）させる */
+      gap: 16px;                     /* カード間の隙間 */
+      padding-bottom: 24px;          /* 下部にスクロールバー用の余白 */
+      
+      /* 慣性スクロールを有効化（iOS用） */
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* 各ユニットカードの設定 */
+    #sec-unit .unit-item {
+      flex: 0 0 85%;             /* 画面幅の85%を使って表示（次のカードをチラ見せする） */
+      width: 85%;                /* 幅指定 */
+      scroll-snap-align: center; /* 画面の中央で止まるようにする */
+    }
+
+    /* 最初のカードと最後のカードが中央に来るように余白調整 */
+    #sec-unit .grid-gallery::before,
+    #sec-unit .grid-gallery::after {
+      content: "";
+      display: block;
+      flex: 0 0 7.5%; /* (100% - 85%) ÷ 2 の余白を両端に作る */
+    }
+  }
+
 
     /* Footer */
     footer{
@@ -1296,5 +1326,6 @@
   </script>
 </body>
 </html>
+
 
 

@@ -118,5 +118,141 @@
       { "title": " 白日with夢追", "artist": "King Gnu", "start":1730 },
       { "title": "サリシノハラwith all", "artist": "みきとP", "start":2117 }
     ]
-  }
+  },
+  {
+    "youtubeId": "RfZDkvUiD9o",
+    "title": "【Mスタ】すたぽら×いれいす合同主催、生歌パフォーマンス番組開催🎤🔥超豪華ゲストで披露する激アツパフォーマンスをお見逃しなく✨✨✨【 #MスタSPECIAL2025 】",
+    "channel": "緑仙",
+    "date": "2025-12-26",
+    "thumbnail": "https://i.ytimg.com/vi/RfZDkvUiD9o/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "いれいす"
+    ],
+    "songs": [
+      {
+        "title": "好きすぎて滅！(くに×初兎×アステル・レダ)",
+        "artist": "M!LK",
+        "start": 3412
+      },
+      {
+        "title": "ラヴィ(如月ゆう×ないこ×鴉紋ゆうく)",
+        "artist": "すりぃ",
+        "start": 3671
+      },
+      {
+        "title": "ロストワンの号哭(Coe.×悠佑×えるの×りする)",
+        "artist": "Neru",
+        "start": 3908
+      },
+      {
+        "title": "ROSE(Relu×りうら×緑仙)",
+        "artist": "HANA",
+        "start": 4174
+      },
+      {
+        "title": "IRIS OUT(こったろ×If×しゃるろ×リンドウネイロ)",
+        "artist": "米津玄師",
+        "start": 4398
+      },
+      {
+        "title": "StarLight(全員歌唱)",
+        "artist": "すたぽら",
+        "start": 4739
+      }
+    ]
+  },
+  {
+    "youtubeId": "n4Mbi9YvVCs",
+    "title": "喋るフリー素材",
+    "channel": "緑仙",
+    "date": "2018-06-16",
+    "thumbnail": "https://i.ytimg.com/vi/n4Mbi9YvVCs/mqdefault.jpg",
+    "category": [
+      "歌配信",
+      "雑談"
+    ],
+    "keywords": [
+      "限定公開"
+    ],
+    "songs": [
+      {
+        "title": "仙台に捧ぐ",
+        "artist": "ベガルタ仙台応援歌",
+        "start": 4730
+      },
+      {
+        "title": "仙台に捧ぐ",
+        "artist": "ベガルタ仙台応援歌",
+        "start": 4767
+      },
+      {
+        "title": "仙台に捧ぐ",
+        "artist": "ベガルタ仙台応援歌",
+        "start": 7346
+      },
+      {
+        "title": "仙台に捧ぐ",
+        "artist": "ベガルタ仙台応援歌",
+        "start": 10484
+      },
+      {
+        "title": "MAX VOLUME IN.FIGHT II",
+        "artist": "鹿島アントラーズ応援歌",
+        "start": 4821
+      },
+      {
+        "title": "ロール3",
+        "artist": "鹿島アントラーズ応援歌",
+        "start": 11983
+      },
+      {
+        "title": "今日もどこかでデビルマン",
+        "artist": "十田敬三",
+        "start": 11290
+      },
+      {
+        "title": "四季ノ唄",
+        "artist": "MINMI",
+        "start": 7549
+      },
+      {
+        "title": "アニメじゃない【『機動戦士ガンダムZZ』】",
+        "artist": "新井正人",
+        "start": 7611
+      },
+      {
+        "title": "復活のイデオン【伝説巨神イデオン】",
+        "artist": "たいらいさお",
+        "start": 7684
+      },
+      {
+        "title": "dis-【無限のリヴァイアス】",
+        "artist": "有坂美香",
+        "start": 9135
+      },
+      {
+        "title": "子守唄？",
+        "artist": "わらべ歌",
+        "start": 10196
+      },
+      {
+        "title": "テルーの唄【ゲド戦記】",
+        "artist": "手嶌葵",
+        "start": 10367
+      },
+      {
+        "title": "Rain",
+        "artist": "秦基博",
+        "start": 10879
+      },
+      {
+        "title": "ドラマツルギー",
+        "artist": "Eve",
+        "start": 11049
+      }
+    ]
+  },
 ]

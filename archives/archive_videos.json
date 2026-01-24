@@ -1,5 +1,24 @@
 [
   {
+    "youtubeId": "8ptJS_Bs7Kc",
+    "title": "ぐちゃぐちゃ明那",
+    "channel": "七次元生徒会",
+    "date": "2026-01-24",
+    "thumbnail": "https://i.ytimg.com/vi/8ptJS_Bs7Kc/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "レオス・ヴィンセント",
+      "七次元生徒会",
+      "三枝明那",
+      "叶",
+      "周央サンゴ",
+      "樋口楓"
+    ],
+    "songs": []
+  },
+  {
     "youtubeId": "Ap3F1qMcQQQ",
     "title": "レオス、男の全力ツイスター",
     "channel": "七次元生徒会",
@@ -7846,109 +7865,74 @@
     ],
     "songs": [
       {
-        "title": "プロローグ\r├",
+        "title": "OP",
         "artist": "",
-        "start": 144
+        "start": 148
       },
       {
-        "title": "はろーぼー飯店へようこそ！\r├",
+        "title": "withØ",
         "artist": "",
-        "start": 220
+        "start": 266
       },
       {
-        "title": "with∅\r├",
+        "title": "ないない (Nai Nai)",
         "artist": "",
-        "start": 264
+        "start": 475
       },
       {
-        "title": "ないない\r├",
+        "title": "モエチャッカファイア（Moechakka fire)",
         "artist": "",
-        "start": 471
+        "start": 999
       },
       {
-        "title": "歳ロボット！\r├",
+        "title": "G4L",
         "artist": "",
-        "start": 725
+        "start": 1160
       },
       {
-        "title": "モエチァッカファイア with Elizabeth\r├",
+        "title": "踊(Odo)",
         "artist": "",
-        "start": 996
+        "start": 1346
       },
       {
-        "title": "G4L with ラプラス＆Calliope\r├",
+        "title": "お披露目 (Showcase)",
         "artist": "",
-        "start": 1157
+        "start": 1519
       },
       {
-        "title": "踊\r├",
+        "title": "シャンティ（Shanti）",
         "artist": "",
-        "start": 1343
+        "start": 1562
       },
       {
-        "title": "新衣装登場\r├",
+        "title": "じっくりお披露目 (Showcase more)",
         "artist": "",
-        "start": 1510
+        "start": 1733
       },
       {
-        "title": "シャンティ\r├",
+        "title": "脚 (Legs)",
         "artist": "",
-        "start": 1559
+        "start": 1822
       },
       {
-        "title": "新衣装披露目\r├",
+        "title": "いーあるふぁんくらぶ (Yi Er Fan Club)",
         "artist": "",
-        "start": 1728
+        "start": 2040
       },
       {
-        "title": "いーあるふぁんくらぶ with 緑仙\r├",
+        "title": "チャイナアドバイス (China Advice)",
         "artist": "",
-        "start": 2049
+        "start": 2545
       },
       {
-        "title": "りゅう\r├",
+        "title": "許嫁っきゅん (Iinazukekkyun)",
         "artist": "",
-        "start": 2140
+        "start": 2990
       },
       {
-        "title": "緑仙と話\r├",
+        "title": "DAN DAN心惹かれてく (DAN DAN KOKORO HIKARETEKU)歴代一を誇るロボ子さんのかっこよさマシマシで・・・もう最高！！９歳おめでとうー！",
         "artist": "",
-        "start": 2290
-      },
-      {
-        "title": "チャイナアドバイス with 春茶\r├",
-        "artist": "",
-        "start": 2544
-      },
-      {
-        "title": "春茶と話\r├",
-        "artist": "",
-        "start": 2728
-      },
-      {
-        "title": "許嫁っきゅん\r├",
-        "artist": "",
-        "start": 2988
-      },
-      {
-        "title": "誕生日グッズ\r├",
-        "artist": "",
-        "start": 3168
-      },
-      {
-        "title": "アンコールライブ\r├",
-        "artist": "",
-        "start": 3597
-      },
-      {
-        "title": "DAN DAN 心魅かれてく\r└",
-        "artist": "",
-        "start": 3710
-      },
-      {
-        "title": "エピローグ\r\rおつろぼ！誕生日おめでとう！\r最高のライブでした！！歌声も大好きだし、神演出で登場した新衣装もかっこかわいすぎる！\rこんな何度も見返しちゃいます！\r\rこれからもよろしくお願いします！",
-        "artist": "",
-        "start": 3928
+        "start": 3713
       }
     ]
   },
@@ -9370,7 +9354,8 @@
     "date": "2025-04-05",
     "thumbnail": "https://i.ytimg.com/vi/nexGfQKkdNY/mqdefault.jpg",
     "category": [
-      "ライブイベント"
+      "ライブイベント",
+      "歌配信"
     ],
     "keywords": [
       "#24時限生徒会",
@@ -9382,7 +9367,48 @@
       "周央サンゴ",
       "樋口楓"
     ],
-    "songs": []
+    "songs": [
+      {
+        "title": "．だいしきゅーだいしゅき(叶&樋口)",
+        "artist": "femme fatale",
+        "start": 60
+      },
+      {
+        "title": "．地球最後の告白を(三枝&緑)",
+        "artist": "kemu",
+        "start": 260
+      },
+      {
+        "title": "．愛のしるし(レオス&周央 with タンバリン叶&エアギター樋口)",
+        "artist": "PUFFY",
+        "start": 480
+      },
+      {
+        "title": "．即物的アンサンブル(全員)",
+        "artist": "",
+        "start": 762
+      },
+      {
+        "title": "．Ti Amo(三枝&レオス)",
+        "artist": "EXILE",
+        "start": 950
+      },
+      {
+        "title": "．ポケットにファンタジー(樋口&周央)",
+        "artist": "さち&じゅり",
+        "start": 1160
+      },
+      {
+        "title": "．メランコリーキッチン(叶&緑)",
+        "artist": "米津玄師",
+        "start": 1516
+      },
+      {
+        "title": "．刹那の正体(全員)",
+        "artist": "",
+        "start": 1772
+      }
+    ]
   },
   {
     "youtubeId": "oWRPTTMo2_w",
@@ -14366,99 +14392,24 @@
     ],
     "songs": [
       {
-        "title": "My sweet heart",
+        "title": "✧︎ バラライカ",
         "artist": "",
-        "start": 148
+        "start": 395
       },
       {
-        "title": "Balalaika",
+        "title": "‎✧︎ 黒の協奏曲",
         "artist": "",
-        "start": 396
+        "start": 631
       },
       {
-        "title": "Kuro no kyosokyoku ~ concerto",
+        "title": "✧︎ Moon Revenge",
         "artist": "",
-        "start": 629
+        "start": 1140
       },
       {
-        "title": "Catch You Catch Me",
-        "artist": "",
-        "start": 906
-      },
-      {
-        "title": "Moon Revenge",
-        "artist": "",
-        "start": 1139
-      },
-      {
-        "title": "Love Letter From Nanika",
-        "artist": "",
-        "start": 1511
-      },
-      {
-        "title": "Sesame",
-        "artist": "",
-        "start": 1792
-      },
-      {
-        "title": "Hana ni natte",
-        "artist": "",
-        "start": 2027
-      },
-      {
-        "title": "Falco",
-        "artist": "",
-        "start": 2251
-      },
-      {
-        "title": "namida no mukou",
-        "artist": "",
-        "start": 2544
-      },
-      {
-        "title": "blue bird",
-        "artist": "",
-        "start": 2781
-      },
-      {
-        "title": "Saraba hekiki omokage",
-        "artist": "",
-        "start": 3015
-      },
-      {
-        "title": "Shizuku",
-        "artist": "",
-        "start": 3288
-      },
-      {
-        "title": "Kanade",
-        "artist": "",
-        "start": 3585
-      },
-      {
-        "title": "ETERNAL BLAZE",
-        "artist": "",
-        "start": 3902
-      },
-      {
-        "title": "Trust Me",
-        "artist": "",
-        "start": 4286
-      },
-      {
-        "title": "Unravel",
+        "title": "✧︎ unravel",
         "artist": "",
         "start": 4582
-      },
-      {
-        "title": "Fuantei na kamisama",
-        "artist": "",
-        "start": 4841
-      },
-      {
-        "title": "namae no nai kaibutsu",
-        "artist": "",
-        "start": 5092
       }
     ]
   },
@@ -15568,33 +15519,33 @@
         "start": 65
       },
       {
-        "title": "ノスタルジックレインフォール ￤CHICO with HoneyWorks",
-        "artist": "",
+        "title": "ノスタルジックレインフォール",
+        "artist": "CHICO with HoneyWorks",
         "start": 377
       },
       {
-        "title": "トキトキメキメキ 🍀🍯￤乃木坂46",
-        "artist": "",
+        "title": "トキトキメキメキ 🍀🍯",
+        "artist": "乃木坂46",
         "start": 693
       },
       {
-        "title": "雨 🍀🐼￤MEZZO\"",
-        "artist": "",
+        "title": "雨 🍀🐼",
+        "artist": "MEZZO\"",
         "start": 1075
       },
       {
-        "title": "Catch the Moment 🍀🌞￤LiSA",
-        "artist": "",
+        "title": "Catch the Moment 🍀🌞",
+        "artist": "LiSA",
         "start": 3014
       },
       {
-        "title": "にじいろ ￤絢香",
-        "artist": "",
+        "title": "にじいろ",
+        "artist": "絢香",
         "start": 3312
       },
       {
-        "title": "気まぐれ屋のウェザーリポート ￤海妹四葉海妹誕生日おめでとう〜！素敵なライブありがとう〜海妹の歌大好きだ！",
-        "artist": "",
+        "title": "気まぐれ屋のウェザーリポート",
+        "artist": "海妹四葉海妹誕生日おめでとう〜！素敵なライブありがとう〜海妹の歌大好きだ！",
         "start": 3666
       }
     ]
@@ -16063,6 +16014,20 @@
       "叶",
       "周央サンゴ",
       "樋口楓"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "1YUfjLhBnGY",
+    "title": "サロメお嬢様を戦わせる執事の緑仙【漫画】",
+    "channel": "緑仙",
+    "date": "2024-06-06",
+    "thumbnail": "https://i.ytimg.com/vi/1YUfjLhBnGY/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "壱百満天原サロメ"
     ],
     "songs": []
   },
@@ -26460,6 +26425,21 @@
     "songs": []
   },
   {
+    "youtubeId": "Uqh36jNiDcU",
+    "title": "【1分でわかる】歌うことが好きで配信を通して友達を作ろうと考えている緑仙！にじさんじが盛り上がる面白い企画をたくさん生み出してきた企画屋な一面も！【にじさんじ公式切り抜きチャンネル】",
+    "channel": "緑仙",
+    "date": "2023-06-24",
+    "thumbnail": "https://i.ytimg.com/vi/Uqh36jNiDcU/mqdefault.jpg",
+    "category": [
+      "企画",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "公式切り抜き"
+    ],
+    "songs": []
+  },
+  {
     "youtubeId": "6YQVXWI3zj4",
     "title": "夕方ゲリラ麻雀【にじさんじ | 緑仙】",
     "channel": "緑仙 / Ryushen",
@@ -28501,7 +28481,7 @@
       "歌配信"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "三枝明那",
@@ -31789,39 +31769,39 @@
     ],
     "songs": [
       {
-        "title": "演技力向上第1回提出漏れ",
+        "title": "天ヶ瀬むゆ",
         "artist": "",
-        "start": 4807
+        "start": 3305
       },
       {
-        "title": "海妹四葉？登場、体調が…",
+        "title": "レヴィ・エリファ、ドーラ",
         "artist": "",
-        "start": 29961
+        "start": 8020
       },
       {
-        "title": "悲壮感漂うチャット、提出リスト",
+        "title": "静凛",
         "artist": "",
-        "start": 30075
+        "start": 14400
       },
       {
-        "title": "はぴが歌う予定だったギラギラ、見てるー？",
+        "title": "健屋花那",
         "artist": "",
-        "start": 31128
+        "start": 19912
       },
       {
-        "title": "海妹とセラフの予定だった平行線",
+        "title": "北小路ヒスイ、弦月藤士郎",
         "artist": "",
-        "start": 32054
+        "start": 22525
       },
       {
-        "title": "歌終わりはぴのことを考えてしまう、「ありがとうございます」、絶対に呼ばなきゃ",
+        "title": "エリー・コニファー、小野町春香",
         "artist": "",
-        "start": 32367
+        "start": 26858
       },
       {
-        "title": "次ははぴも…みてるー？緑仙さん楽しい配信と海妹への気遣いありがとうございます！次の機会で元気に明るく歌ってくれる海妹を楽しみにしています！",
+        "title": "海妹四葉(の代打天ヶ瀬)、　　　　セラフ・ダズルガーデン",
         "artist": "",
-        "start": 33697
+        "start": 29905
       }
     ]
   },
@@ -33953,6 +33933,22 @@
     "songs": []
   },
   {
+    "youtubeId": "XuRsw4g14nQ",
+    "title": "【漫画】文通ですれ違う緑仙とシスター・クレア【マンガ動画】【アニメ】にじさんじ☆ぷちさんじ VTuber",
+    "channel": "緑仙",
+    "date": "2022-09-28",
+    "thumbnail": "https://i.ytimg.com/vi/XuRsw4g14nQ/mqdefault.jpg",
+    "category": [
+      "ぷちさんじ",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "いのるぱんだ",
+      "シスター・クレア"
+    ],
+    "songs": []
+  },
+  {
     "youtubeId": "Yan3NnSmIWw",
     "title": "バグ / 緑仙 Cover",
     "channel": "緑仙",
@@ -34126,6 +34122,26 @@
     ],
     "keywords": [
       "限定公開"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "F4VJTsxzCv4",
+    "title": "【漫画】呼ばれ方のエピソードを語る戌亥とこ【マンガ動画】【アニメ】にじさんじ☆ぷちさんじ VTuber",
+    "channel": "緑仙",
+    "date": "2022-09-19",
+    "thumbnail": "https://i.ytimg.com/vi/F4VJTsxzCv4/mqdefault.jpg",
+    "category": [
+      "ぷちさんじ",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "Alri",
+      "アンジュ・カトリーナ",
+      "リゼ・ヘルエスタ",
+      "不破湊",
+      "健屋花那",
+      "戌亥とこ"
     ],
     "songs": []
   },
@@ -35050,7 +35066,7 @@
       "雑談"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "三枝明那",
@@ -37744,7 +37760,7 @@
   {
     "youtubeId": "T21SNukMqls",
     "title": "#RainDrops 新年会！いつの間にやら2周年！？",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-04-27",
     "thumbnail": "https://i.ytimg.com/vi/T21SNukMqls/mqdefault.jpg",
     "category": [
@@ -37752,7 +37768,27 @@
       "記念配信"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
+      "える",
+      "ジョー・力一",
+      "三枝明那",
+      "童田明治",
+      "鈴木勝"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "zXMqp_Ea6DM",
+    "title": "【漫画】喧嘩勃発⁉ Rain Dropsの餃子争奪戦？事情【マンガ動画】【アニメ】にじさんじ☆ぷちさんじ VTuber",
+    "channel": "緑仙",
+    "date": "2022-04-27",
+    "thumbnail": "https://i.ytimg.com/vi/zXMqp_Ea6DM/mqdefault.jpg",
+    "category": [
+      "ぷちさんじ",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "三枝明那",
@@ -37801,7 +37837,7 @@
       "雑談"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "三枝明那",
@@ -37886,7 +37922,7 @@
   {
     "youtubeId": "N6UBNPM41lo",
     "title": "ライブ振り返り企画『レイドロクリップ』　緑仙編",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-04-13",
     "thumbnail": "https://i.ytimg.com/vi/N6UBNPM41lo/mqdefault.jpg",
     "category": [
@@ -37894,7 +37930,7 @@
       "企画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "ライブ・イベント",
@@ -38003,7 +38039,7 @@
   {
     "youtubeId": "kpNFNUIr3Dg",
     "title": "Rain Drops 4/15,16 セカンドワンマンライブ『SQUALL』直前配信SP",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-04-06",
     "thumbnail": "https://i.ytimg.com/vi/kpNFNUIr3Dg/mqdefault.jpg",
     "category": [
@@ -38011,7 +38047,7 @@
       "企画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "ライブ・イベント",
@@ -38024,7 +38060,7 @@
   {
     "youtubeId": "3zTgUmpGL4k",
     "title": "ライブ振り返り企画『レイドロクリップ』　三枝明那編",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-04-06",
     "thumbnail": "https://i.ytimg.com/vi/3zTgUmpGL4k/mqdefault.jpg",
     "category": [
@@ -38032,7 +38068,7 @@
       "企画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "ライブ・イベント",
@@ -38119,7 +38155,7 @@
   {
     "youtubeId": "-D4enRHLPiw",
     "title": "ライブ振り返り企画『レイドロクリップ』童田明治編",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-03-30",
     "thumbnail": "https://i.ytimg.com/vi/-D4enRHLPiw/mqdefault.jpg",
     "category": [
@@ -38127,7 +38163,7 @@
       "企画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "ライブ・イベント",
@@ -38253,7 +38289,7 @@
   {
     "youtubeId": "qNRhJJYiCe8",
     "title": "ライブ振り返り企画『レイドロクリップ』鈴木勝編",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-03-23",
     "thumbnail": "https://i.ytimg.com/vi/qNRhJJYiCe8/mqdefault.jpg",
     "category": [
@@ -38261,7 +38297,7 @@
       "企画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "ライブ・イベント",
@@ -38310,7 +38346,7 @@
   {
     "youtubeId": "WfFsw9uTtYs",
     "title": "ライブ振り返り企画『レイドロクリップ』える編",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-03-16",
     "thumbnail": "https://i.ytimg.com/vi/WfFsw9uTtYs/mqdefault.jpg",
     "category": [
@@ -38318,7 +38354,7 @@
       "企画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "ライブ・イベント",
@@ -38537,7 +38573,7 @@
   {
     "youtubeId": "gX2x0DXaR48",
     "title": "ライブ振り返り企画『レイドロクリップ』ジョー・力一編",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-03-09",
     "thumbnail": "https://i.ytimg.com/vi/gX2x0DXaR48/mqdefault.jpg",
     "category": [
@@ -38545,7 +38581,7 @@
       "企画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "ライブ・イベント",
@@ -38938,6 +38974,12 @@
       "雑談"
     ],
     "keywords": [
+      "Rain Drops",
+      "える",
+      "ジョー・力一",
+      "三枝明那",
+      "童田明治",
+      "鈴木勝",
       "限定公開"
     ],
     "songs": [
@@ -39010,14 +39052,14 @@
   {
     "youtubeId": "2JAxMU04AAE",
     "title": "トンデモワンダーズ / sasakure.‌UK (covered by Rain Drops)",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-01-30",
     "thumbnail": "https://i.ytimg.com/vi/2JAxMU04AAE/mqdefault.jpg",
     "category": [
       "歌動画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "カバー曲",
       "ジョー・力一",
@@ -39126,14 +39168,14 @@
   {
     "youtubeId": "WjxuSAkf1Ws",
     "title": "Rain Drops のライブ配信",
-    "channel": "RainDrops",
+    "channel": "Rain Drops",
     "date": "2022-01-25",
     "thumbnail": "https://i.ytimg.com/vi/WjxuSAkf1Ws/mqdefault.jpg",
     "category": [
       "ライブイベント"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "ライブ・イベント",
@@ -41651,7 +41693,9 @@
     "date": "2021-09-26",
     "thumbnail": "https://i.ytimg.com/vi/t-gw-44jAUw/mqdefault.jpg",
     "category": [
-      "歌配信"
+      "企画",
+      "歌配信",
+      "雑談"
     ],
     "keywords": [
       "Vtuberロック革命",
@@ -41659,33 +41703,33 @@
       "加賀美ハヤト",
       "戌亥とこ",
       "樋口楓",
-      "歌配信"
+      "限定公開"
     ],
     "songs": [
       {
-        "title": "Soldier Girls",
-        "artist": "FERN PLANET",
-        "start": 68
+        "title": "不破湊",
+        "artist": "",
+        "start": 1200
       },
       {
-        "title": "凛々爛々with戌亥",
-        "artist": "赤い公園",
-        "start": 309
+        "title": "戌亥とこ",
+        "artist": "",
+        "start": 1230
       },
       {
-        "title": "イツライwith加賀美",
-        "artist": "緑仙",
-        "start": 819
+        "title": "加賀美ハヤト",
+        "artist": "",
+        "start": 1260
       },
       {
-        "title": "夜王子と月の姫",
-        "artist": "GOING STEADY",
-        "start": 1023
+        "title": "樋口楓",
+        "artist": "",
+        "start": 1290
       },
       {
-        "title": "深夜高速with all",
-        "artist": "フラワーカンパニーズ",
-        "start": 1679
+        "title": "緑仙\nhttps://youtu.be/t-gw-44jAUw\n\n\n\n#緑仙 #歌ってみた​ #にじさんじ​ #歌のタイトル #生配信\niTunes Store：https://music.apple.com/jp/artist/%E7%B7%91%E4%BB%99/1453314533\n💭　-",
+        "artist": "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n\n\n🐼メンバーシップ登録\nhttps://www.youtube.com/channel/UCt5-0i4AVHXaWJrL8Wql3mw/join\n\n　僕に興味がある方は是非限定配信に遊びに来てください。　\n\n\n💭　- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n　\n\n🐼歌チャンネル\nhttps://www.youtube.com/channel/UCt5-0i4AVHXaWJrL8Wql3mw?view_as=subscriber\n\n🐼ゲームチャンネル\nhttps://www.youtube.com/channel/UCTi_rzf5QIkXjhJjkbcAdTg?view_as=subscriber\n\n\n\n🐼ファンクラブ\nhttps://fanclub.nijisanji.jp/fanclubs/ryushen\n\n　自撮りや漫画レビュー掲載中!!\n\n\n🐼appleMusic\nhttps://music.apple.com/jp/artist/%E7%B7%91%E4%BB%99/1453314533\n\n　オリジナル楽曲配信中!!\n\n\n🐼Twitter\nhttps://twitter.com/midori_2434\n\n\n💭　- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - \n\n\nhttps://nijisanji..co.jp/contact\n✉offer@.co.jp\n\n\n💭　- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -",
+        "start": 1320
       }
     ]
   },
@@ -42034,7 +42078,13 @@
       "踊り動画"
     ],
     "keywords": [
-      "踊り動画"
+      "Rain Drops",
+      "える",
+      "ジョー・力一",
+      "三枝明那",
+      "童田明治",
+      "踊り動画",
+      "鈴木勝"
     ],
     "songs": []
   },
@@ -42055,157 +42105,162 @@
   },
   {
     "youtubeId": "maVNSr9i26Q",
-    "title": "【坂道48アイドル編】こじハラってアイドルがいるらしい",
+    "title": "【坂道48アイドル編】こじハラってアイドルがいるらしい【にじさんじ | 緑仙 | 相羽ういは | 弦月藤士郎 】",
     "channel": "緑仙",
     "date": "2021-09-15",
     "thumbnail": "https://i.ytimg.com/vi/maVNSr9i26Q/mqdefault.jpg",
     "category": [
+      "歌動画",
       "歌配信"
     ],
     "keywords": [
       "こじらせハラスメント",
+      "こじらせハラスメント-さよならハラスメント",
+      "ウィシェン",
+      "オリジナル曲",
+      "リリース",
       "弦月藤士郎",
       "相羽ういは"
     ],
     "songs": [
       {
         "title": "サイレントマジョリティー",
-        "artist": "欅坂46",
+        "artist": "",
         "start": 65
       },
       {
         "title": "ガラスを割れ！",
-        "artist": "欅坂46",
+        "artist": "",
         "start": 726
       },
       {
         "title": "黒い羊",
-        "artist": "欅坂46",
+        "artist": "",
         "start": 967
       },
       {
         "title": "二人セゾン",
-        "artist": "欅坂46",
+        "artist": "",
         "start": 1292
       },
       {
         "title": "角を曲がる",
-        "artist": "平手友梨奈",
+        "artist": "",
         "start": 1600
       },
       {
         "title": "無謀な夢は覚めることがない",
-        "artist": "STU48",
+        "artist": "",
         "start": 1804
       },
       {
         "title": "パレオはエメラルド",
-        "artist": "SKE48",
+        "artist": "",
         "start": 2120
       },
       {
         "title": "ポニーテールとシュシュ",
-        "artist": "AKB48",
+        "artist": "",
         "start": 2423
       },
       {
         "title": "Everyday、カチューシャ",
-        "artist": "AKB48",
+        "artist": "",
         "start": 2704
       },
       {
         "title": "彼女になれますか？",
-        "artist": "AKB48",
+        "artist": "",
         "start": 3029
       },
       {
         "title": "誰のことを一番愛してる？",
-        "artist": "坂道AKB",
+        "artist": "",
         "start": 3290
       },
       {
         "title": "こんなに好きになっちゃっていいの？",
-        "artist": "日向坂46",
+        "artist": "",
         "start": 3573
       },
       {
         "title": "ドレミソラシド",
-        "artist": "日向坂46",
+        "artist": "",
         "start": 3905
       },
       {
         "title": "プライオリティー",
-        "artist": "NMB48",
+        "artist": "",
         "start": 4213
       },
       {
         "title": "インフルエンサー",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 4493
       },
       {
         "title": "シンクロニシティ",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 4776
       },
       {
         "title": "Sing Out！",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 5050
       },
       {
         "title": "世界で一番孤独なLover",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 5391
       },
       {
         "title": "いつかできるから今日できる",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 5791
       },
       {
         "title": "気づいたら片想い",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 6087
       },
       {
         "title": "逃げ水",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 6354
       },
       {
         "title": "I see…",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 6676
       },
       {
         "title": "帰り道は遠回りしたくなる",
-        "artist": "乃木坂46",
+        "artist": "",
         "start": 6929
       },
       {
         "title": "遠距離ポスター",
-        "artist": "AKB48",
+        "artist": "",
         "start": 7210
       },
       {
         "title": "イチリンソウ",
-        "artist": "山本彩",
+        "artist": "",
         "start": 7426
       },
       {
         "title": "桜の栞",
-        "artist": "AKB48",
+        "artist": "",
         "start": 7665
       },
       {
         "title": "ヘビーローテーション",
-        "artist": "AKB48",
+        "artist": "",
         "start": 7922
       },
       {
         "title": "大声ダイヤモンド",
-        "artist": "AKB48",
+        "artist": "",
         "start": 8215
       }
     ]
@@ -42489,7 +42544,13 @@
       "踊り動画"
     ],
     "keywords": [
-      "踊り動画"
+      "Rain Drops",
+      "える",
+      "ジョー・力一",
+      "三枝明那",
+      "童田明治",
+      "踊り動画",
+      "鈴木勝"
     ],
     "songs": []
   },
@@ -42785,7 +42846,8 @@
     "date": "2021-08-04",
     "thumbnail": "https://i.ytimg.com/vi/f2Zoz01WVq8/mqdefault.jpg",
     "category": [
-      "企画"
+      "企画",
+      "少林寺拳法"
     ],
     "keywords": [],
     "songs": []
@@ -43527,7 +43589,9 @@
     "category": [
       "企画"
     ],
-    "keywords": [],
+    "keywords": [
+      "えるの"
+    ],
     "songs": []
   },
   {
@@ -44598,6 +44662,19 @@
       "カバー曲",
       "歌動画"
     ],
+    "songs": []
+  },
+  {
+    "youtubeId": "N1K90A2gESU",
+    "title": "【漫画】〇〇は安くない？！ドSな対応をする先輩におねだりをしてみた・・・後輩のおねだりは成功？？【マンガ動画】【アニメ】にじさんじ☆ぷちさんじ VTuber",
+    "channel": "緑仙",
+    "date": "2021-05-10",
+    "thumbnail": "https://i.ytimg.com/vi/N1K90A2gESU/mqdefault.jpg",
+    "category": [
+      "ぷちさんじ",
+      "公式切り抜き"
+    ],
+    "keywords": [],
     "songs": []
   },
   {
@@ -46943,6 +47020,12 @@
       "雑談"
     ],
     "keywords": [
+      "Rain Drops",
+      "える",
+      "ジョー・力一",
+      "三枝明那",
+      "童田明治",
+      "鈴木勝",
       "限定公開"
     ],
     "songs": []
@@ -47629,6 +47712,20 @@
     "songs": []
   },
   {
+    "youtubeId": "dGbxaRvSHBM",
+    "title": "【漫画】まさか…あの人がデザイン？！初出しの衣装をお披露目！【マンガ動画】【アニメ】にじさんじ☆ぷちさんじ VTuber",
+    "channel": "緑仙",
+    "date": "2020-12-02",
+    "thumbnail": "https://i.ytimg.com/vi/dGbxaRvSHBM/mqdefault.jpg",
+    "category": [
+      "お披露目配信",
+      "ぷちさんじ",
+      "公式切り抜き"
+    ],
+    "keywords": [],
+    "songs": []
+  },
+  {
     "youtubeId": "E_nHMA_2vVY",
     "title": "【MV】カルミアのキス / 緑仙",
     "channel": "緑仙",
@@ -48060,6 +48157,7 @@
     "date": "2020-11-09",
     "thumbnail": "https://i.ytimg.com/vi/lmvACSTsPUs/mqdefault.jpg",
     "category": [
+      "少林寺拳法",
       "雑談"
     ],
     "keywords": [
@@ -48074,7 +48172,7 @@
     "date": "2020-11-09",
     "thumbnail": "https://i.ytimg.com/vi/HwTH9q90iz8/mqdefault.jpg",
     "category": [
-      "未分類"
+      "少林寺拳法"
     ],
     "keywords": [],
     "songs": []
@@ -48375,7 +48473,6 @@
     ],
     "keywords": [
       "Rain Drops",
-      "RainDrops",
       "える",
       "ジョー・力一",
       "三枝明那",
@@ -48410,7 +48507,8 @@
       "企画"
     ],
     "keywords": [
-      "ライブ・イベント"
+      "ライブ・イベント",
+      "癒月ちょこ"
     ],
     "songs": []
   },
@@ -48448,7 +48546,7 @@
       "雑談"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "三枝明那",
@@ -48473,104 +48571,19 @@
     ],
     "songs": [
       {
-        "title": "フラジール",
-        "artist": "ぬゆり",
-        "start": 304
+        "title": "Cメロわからない音頭",
+        "artist": "",
+        "start": 744
       },
       {
-        "title": "スキスキ絶頂症",
-        "artist": "電ポルP",
-        "start": 610
+        "title": "ぺぺぺ",
+        "artist": "",
+        "start": 3243
       },
       {
-        "title": "キャットアイメイク",
-        "artist": "奏音69",
-        "start": 863
-      },
-      {
-        "title": "ジャンキーナイトタウンオーケストラ",
-        "artist": "すりぃ",
-        "start": 1228
-      },
-      {
-        "title": "幽霊東京",
-        "artist": "Ayase",
-        "start": 1471
-      },
-      {
-        "title": "少女レイ",
-        "artist": "みきとP",
-        "start": 1634
-      },
-      {
-        "title": "猫猫的宇宙論",
-        "artist": "ナユタン星人",
-        "start": 1928
-      },
-      {
-        "title": "Happy Halloween",
-        "artist": "Junky",
-        "start": 2160
-      },
-      {
-        "title": "trick and treat",
-        "artist": "OSTER project",
-        "start": 2498
-      },
-      {
-        "title": "イカサマ⇔カジノ",
-        "artist": "ひとしずくP・やま△",
-        "start": 2912
-      },
-      {
-        "title": "ピュアストーン",
-        "artist": "結城梨沙",
-        "start": 3366
-      },
-      {
-        "title": "雨とペトラ",
-        "artist": "バルーン",
-        "start": 3537
-      },
-      {
-        "title": "ヴィラン",
-        "artist": "てにをは",
-        "start": 3893
-      },
-      {
-        "title": "スロウダウナー",
-        "artist": "ろくろ",
-        "start": 4200
-      },
-      {
-        "title": "天才ロック",
-        "artist": "カラスヤサボウ",
-        "start": 4817
-      },
-      {
-        "title": "ブリキノダンス",
-        "artist": "日向電工",
-        "start": 5100
-      },
-      {
-        "title": "エンヴィキャットウォーク",
-        "artist": "トーマ",
-        "start": 5217
-      },
-      {
-        "title": "呼吸",
-        "artist": "ちーむ炙りトロ丼",
-        "start": 5546
-      },
-      {
-        "title": "フィクサー",
-        "artist": "ぬゆり",
-        "start": 5730
-      },
-      {
-        "title": "Just Be Friends",
-        "artist": "Dixie Flatline",
-        "start": 6065
+        "title": "うー！",
+        "artist": "",
+        "start": 6000
       }
     ]
   },
@@ -48946,7 +48959,8 @@
     "date": "2020-09-22",
     "thumbnail": "https://i.ytimg.com/vi/TqKXPdcJUOk/mqdefault.jpg",
     "category": [
-      "企画"
+      "企画",
+      "少林寺拳法"
     ],
     "keywords": [
       "よるみどり",
@@ -49948,6 +49962,19 @@
     ]
   },
   {
+    "youtubeId": "OR8selsubN0",
+    "title": "【漫画】にじさんじバーチャルお悩み相談室！悩める高校生の数年後はどうなる...！？【マンガ動画】【アニメ】にじさんじ☆ぷちさんじ VTuber",
+    "channel": "緑仙",
+    "date": "2020-08-01",
+    "thumbnail": "https://i.ytimg.com/vi/OR8selsubN0/mqdefault.jpg",
+    "category": [
+      "ぷちさんじ",
+      "公式切り抜き"
+    ],
+    "keywords": [],
+    "songs": []
+  },
+  {
     "youtubeId": "ietRlwMCgQQ",
     "title": "可愛い声で歌おうと思えば出来る～～🐼【にじさんじ | 緑仙】",
     "channel": "緑仙",
@@ -50916,7 +50943,8 @@
       "雑談"
     ],
     "keywords": [
-      "ライブ・イベント"
+      "ライブ・イベント",
+      "癒月ちょこ"
     ],
     "songs": []
   },
@@ -51025,6 +51053,20 @@
     "thumbnail": "https://i.ytimg.com/vi/UC1vhozjMv4/mqdefault.jpg",
     "category": [
       "ゲーム実況"
+    ],
+    "keywords": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "MAleoGARFj4",
+    "title": "【漫画】全力妄想企画！女性向けオリジナルゲームシナリオを作ろう！【マンガ動画】にじさんじ☆ぷちさんじ VTuber",
+    "channel": "緑仙",
+    "date": "2020-06-19",
+    "thumbnail": "https://i.ytimg.com/vi/MAleoGARFj4/mqdefault.jpg",
+    "category": [
+      "ぷちさんじ",
+      "企画",
+      "公式切り抜き"
     ],
     "keywords": [],
     "songs": []
@@ -51470,7 +51512,7 @@
       "企画"
     ],
     "keywords": [
-      "RainDrops",
+      "Rain Drops",
       "える",
       "ジョー・力一",
       "三枝明那",
@@ -51516,6 +51558,21 @@
     "keywords": [
       "健屋花那",
       "歌動画"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "YjS4XhKULuI",
+    "title": "【漫画】もしもVTuber仲間が敵として登場してきたら、の妄想が楽しすぎた【マンガ動画】にじさんじ☆ぷちさんじ VTuber",
+    "channel": "緑仙",
+    "date": "2020-05-08",
+    "thumbnail": "https://i.ytimg.com/vi/YjS4XhKULuI/mqdefault.jpg",
+    "category": [
+      "ぷちさんじ",
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "鷹宮リオン"
     ],
     "songs": []
   },
@@ -53413,74 +53470,14 @@
     ],
     "songs": [
       {
-        "title": "風になる【猫の恩返し】(",
+        "title": "声",
         "artist": "",
-        "start": 382
+        "start": 43
       },
       {
-        "title": "I LOVE(歌えなかった)",
+        "title": "画面",
         "artist": "",
-        "start": 727
-      },
-      {
-        "title": "I LOVE…(恋つづED)【髭男】",
-        "artist": "",
-        "start": 949
-      },
-      {
-        "title": "たばこ【コレサワ】",
-        "artist": "",
-        "start": 1163
-      },
-      {
-        "title": "ポニーテールとシュシュ【AKB48】",
-        "artist": "",
-        "start": 1616
-      },
-      {
-        "title": "抱いて HOLD ON ME！【モーニング娘｡】",
-        "artist": "",
-        "start": 1741
-      },
-      {
-        "title": "気まぐれプリンセス【モーニング娘】",
-        "artist": "",
-        "start": 1906
-      },
-      {
-        "title": "悲しみがとまらない【杏里】",
-        "artist": "",
-        "start": 2353
-      },
-      {
-        "title": "染まるよ【チャットモンチー】",
-        "artist": "",
-        "start": 2676
-      },
-      {
-        "title": "愛のかたまり【KinKi Kids】",
-        "artist": "",
-        "start": 3093
-      },
-      {
-        "title": "気まぐれロマンティック【いきものがかり】",
-        "artist": "",
-        "start": 3628
-      },
-      {
-        "title": "Lemon【米津玄師】",
-        "artist": "",
-        "start": 3869
-      },
-      {
-        "title": "夜に駆ける【YOASOBI】",
-        "artist": "",
-        "start": 4127
-      },
-      {
-        "title": "若者のすべて【フジファブリック】",
-        "artist": "",
-        "start": 4388
+        "start": 75
       }
     ]
   },
@@ -53869,9 +53866,11 @@
     "date": "2020-02-04",
     "thumbnail": "https://i.ytimg.com/vi/VkQatxjQJpo/mqdefault.jpg",
     "category": [
+      "ゲーム実況",
       "雑談"
     ],
     "keywords": [
+      "MTGアリーナ",
       "限定公開"
     ],
     "songs": []
@@ -54094,7 +54093,6 @@
     ],
     "keywords": [
       "Rain Drops",
-      "RainDrops",
       "える",
       "ジョー・力一",
       "三枝明那",
@@ -58786,7 +58784,9 @@
     "category": [
       "ゲーム実況"
     ],
-    "keywords": [],
+    "keywords": [
+      "MTGアリーナ"
+    ],
     "songs": []
   },
   {
@@ -58967,9 +58967,11 @@
     "date": "2019-07-25",
     "thumbnail": "https://i.ytimg.com/vi/8tNk3CpgYMg/mqdefault.jpg",
     "category": [
+      "ゲーム実況",
       "雑談"
     ],
     "keywords": [
+      "MTGアリーナ",
       "限定公開"
     ],
     "songs": []
@@ -59448,7 +59450,9 @@
     "category": [
       "ゲーム実況"
     ],
-    "keywords": [],
+    "keywords": [
+      "MTGアリーナ"
+    ],
     "songs": []
   },
   {
@@ -59489,7 +59493,9 @@
     "category": [
       "ゲーム実況"
     ],
-    "keywords": [],
+    "keywords": [
+      "MTGアリーナ"
+    ],
     "songs": []
   },
   {
@@ -59501,7 +59507,9 @@
     "category": [
       "ゲーム実況"
     ],
-    "keywords": [],
+    "keywords": [
+      "MTGアリーナ"
+    ],
     "songs": []
   },
   {
@@ -59621,7 +59629,9 @@
     "category": [
       "ゲーム実況"
     ],
-    "keywords": [],
+    "keywords": [
+      "MTGアリーナ"
+    ],
     "songs": []
   },
   {
@@ -59810,7 +59820,9 @@
     "category": [
       "ゲーム実況"
     ],
-    "keywords": [],
+    "keywords": [
+      "MTGアリーナ"
+    ],
     "songs": []
   },
   {
@@ -60770,7 +60782,9 @@
     "category": [
       "ゲーム実況"
     ],
-    "keywords": [],
+    "keywords": [
+      "MTGアリーナ"
+    ],
     "songs": []
   },
   {
@@ -62397,6 +62411,7 @@
       "歌配信"
     ],
     "keywords": [
+      "久遠千歳",
       "樋口楓",
       "町田ちま",
       "童田明治"
@@ -65412,6 +65427,7 @@
       "雑談"
     ],
     "keywords": [
+      "えるの",
       "限定公開"
     ],
     "songs": []
@@ -66642,289 +66658,254 @@
     ],
     "songs": [
       {
-        "title": "砂の惑星",
-        "artist": "",
-        "start": 838
+        "title": "ベベル",
+        "artist": "shr",
+        "start": 5164
       },
       {
-        "title": "ドラマツルギー",
-        "artist": "",
-        "start": 999
+        "title": "u",
+        "artist": "shr",
+        "start": 4654
       },
       {
-        "title": "シャルル",
-        "artist": "",
-        "start": 1109
+        "title": "花見る人",
+        "artist": "shr",
+        "start": 5330
       },
       {
-        "title": "夜咄ディセイブ",
-        "artist": "",
-        "start": 1582
+        "title": "レコード・レド",
+        "artist": "shr",
+        "start": 5466
       },
       {
-        "title": "夕景イエスタデイ",
-        "artist": "",
-        "start": 1705
+        "title": "合い鳴き",
+        "artist": "shr",
+        "start": 5536
       },
       {
-        "title": "想像フォレスト",
-        "artist": "",
-        "start": 1790
+        "title": "故にユーエンミー",
+        "artist": "ただのCo",
+        "start": 5604
       },
       {
-        "title": "如月アテンション",
-        "artist": "",
-        "start": 1967
-      },
-      {
-        "title": "純情スカート",
-        "artist": "",
-        "start": 2384
-      },
-      {
-        "title": "ドレミファロンド",
-        "artist": "",
-        "start": 2844
-      },
-      {
-        "title": "シリョクケンサ",
-        "artist": "",
-        "start": 2924
-      },
-      {
-        "title": "ウミユリ海底譚",
-        "artist": "",
-        "start": 3280
-      },
-      {
-        "title": "からくりピエロ",
-        "artist": "",
-        "start": 3498
-      },
-      {
-        "title": "バレリーコ",
-        "artist": "",
-        "start": 3600
-      },
-      {
-        "title": "世田谷ナイトサファリ",
-        "artist": "",
-        "start": 4097
-      },
-      {
-        "title": "夕立のりぼん",
-        "artist": "",
-        "start": 4391
-      },
-      {
-        "title": "小夜子",
-        "artist": "",
-        "start": 4479
-      },
-      {
-        "title": "いーあるふぁんくらぶ",
-        "artist": "",
-        "start": 4557
-      },
-      {
-        "title": "いかないで",
-        "artist": "",
-        "start": 4980
+        "title": "アルカリ成人",
+        "artist": "ただのCo",
+        "start": 5679
       },
       {
         "title": "曖昧劣情Lover",
-        "artist": "",
+        "artist": "電ポルP",
         "start": 5787
       },
       {
         "title": "独りんぼエンヴィー",
-        "artist": "",
+        "artist": "電ポルP",
         "start": 5868
       },
       {
+        "title": "サイノウサンプラー",
+        "artist": "電ポルP",
+        "start": 5929
+      },
+      {
+        "title": "イドラのサーカス",
+        "artist": "Neru",
+        "start": 6009
+      },
+      {
+        "title": "命のユースティティア",
+        "artist": "Neru",
+        "start": 6104
+      },
+      {
+        "title": "いろは唄",
+        "artist": "銀サク",
+        "start": 6214
+      },
+      {
+        "title": "バビロン",
+        "artist": "トーマ",
+        "start": 6297
+      },
+      {
         "title": "骸骨楽団とリリア",
-        "artist": "",
+        "artist": "トーマ",
         "start": 6343
       },
       {
         "title": "ヤンキーボーイ・ヤンキーガール",
-        "artist": "",
+        "artist": "トーマ",
         "start": 6410
       },
       {
+        "title": "エンヴィキャットウォーク",
+        "artist": "トーマ（",
+        "start": 6487
+      },
+      {
+        "title": "マダラカルト",
+        "artist": "トーマ）",
+        "start": 6583
+      },
+      {
+        "title": "ワンルーム・オール・ザット・ジャズ",
+        "artist": "DATEKEN",
+        "start": 6669
+      },
+      {
+        "title": "クイーンオブハート",
+        "artist": "奏音69",
+        "start": 6724
+      },
+      {
+        "title": "トカレフと少女",
+        "artist": "もちーべP",
+        "start": 6806
+      },
+      {
+        "title": "レゾンデートル頂戴",
+        "artist": "YM",
+        "start": 6899
+      },
+      {
         "title": "十面相",
-        "artist": "",
+        "artist": "YM",
         "start": 6990
       },
       {
+        "title": "ハンコウセイメイ",
+        "artist": "YM",
+        "start": 7110
+      },
+      {
+        "title": "式日とマンホール",
+        "artist": "ぽりふぉ",
+        "start": 7168
+      },
+      {
+        "title": "From Y to Y",
+        "artist": "ジミーサムP",
+        "start": 7211
+      },
+      {
+        "title": "Little Traveler",
+        "artist": "ジミーサムP",
+        "start": 7348
+      },
+      {
         "title": "Fire◎Flower",
-        "artist": "",
+        "artist": "halyosy",
         "start": 7451
       },
       {
         "title": "太陽系デスコ",
-        "artist": "",
+        "artist": "ナユタン星人",
         "start": 7578
       },
       {
         "title": "ダンスロボットダンス",
-        "artist": "",
+        "artist": "ナユタン星人",
         "start": 7670
       },
       {
         "title": "エイリアンエイリアン",
-        "artist": "",
+        "artist": "ナユタン星人",
         "start": 7762
       },
       {
+        "title": "鏡音レンの暴走",
+        "artist": "暴走P",
+        "start": 7852
+      },
+      {
         "title": "calc.",
-        "artist": "",
+        "artist": "ジミーサムP",
         "start": 7960
       },
       {
+        "title": "廃都アトリエスタにて",
+        "artist": "暴走P",
+        "start": 8030
+      },
+      {
         "title": "WAVE",
-        "artist": "",
+        "artist": "niki",
         "start": 8142
       },
       {
+        "title": "ELECT",
+        "artist": "niki",
+        "start": 8217
+      },
+      {
+        "title": "ゆるふわ樹海ガール",
+        "artist": "石風呂",
+        "start": 8310
+      },
+      {
+        "title": "きらいな人",
+        "artist": "石風呂",
+        "start": 8384
+      },
+      {
+        "title": "午前3時のヘッドフォン",
+        "artist": "石風呂",
+        "start": 8483
+      },
+      {
+        "title": "ロック屋さんのぐだぐた毎日",
+        "artist": "石風呂",
+        "start": 8570
+      },
+      {
         "title": "脳内革命ガール",
-        "artist": "",
+        "artist": "MARETU",
         "start": 8652
       },
       {
+        "title": "Black jack",
+        "artist": "ゆちゃP",
+        "start": 8744
+      },
+      {
+        "title": "ポーカーフェイス",
+        "artist": "ゆちゃP",
+        "start": 8821
+      },
+      {
+        "title": "繰り返し一粒",
+        "artist": "猫虫",
+        "start": 8897
+      },
+      {
         "title": "ブリキノダンス",
-        "artist": "",
+        "artist": "日向電工",
         "start": 8998
       },
       {
-        "title": "インタビュア",
-        "artist": "",
-        "start": 10578
+        "title": "スパークガールシンドローム",
+        "artist": "日向電工",
+        "start": 9082
       },
       {
-        "title": "夜もすがら君想ふ",
-        "artist": "",
-        "start": 10657
+        "title": "トウキョウト・ロック・シティ",
+        "artist": "えこ。",
+        "start": 9146
       },
       {
-        "title": "ハロハワユ",
-        "artist": "",
-        "start": 11738
+        "title": "glow",
+        "artist": "keeno",
+        "start": 9275
       },
       {
-        "title": "福寿草",
-        "artist": "",
-        "start": 13386
+        "title": "腐れ外道とチョコレゐト",
+        "artist": "ピノキオピー",
+        "start": 9385
       },
       {
-        "title": "メランコリック",
-        "artist": "",
-        "start": 14297
-      },
-      {
-        "title": "トゥインクル",
-        "artist": "",
-        "start": 14405
-      },
-      {
-        "title": "Happy Halloween",
-        "artist": "",
-        "start": 14503
-      },
-      {
-        "title": "え？あぁ、そう。",
-        "artist": "",
-        "start": 14735
-      },
-      {
-        "title": "ロミオとシンデレラ4:",
-        "artist": "",
-        "start": 14910
-      },
-      {
-        "title": "天ノ弱",
-        "artist": "",
-        "start": 255
-      },
-      {
-        "title": "マトリョシカ",
-        "artist": "",
-        "start": 15545
-      },
-      {
-        "title": "パンダヒーロー",
-        "artist": "",
-        "start": 15602
-      },
-      {
-        "title": "ドーナツホール",
-        "artist": "",
-        "start": 15683
-      },
-      {
-        "title": "セツナトリップ",
-        "artist": "",
-        "start": 16070
-      },
-      {
-        "title": "放課後ストライド",
-        "artist": "",
-        "start": 16173
-      },
-      {
-        "title": "脳漿炸裂ガール",
-        "artist": "",
-        "start": 16292
-      },
-      {
-        "title": "聖槍爆裂ボーイ",
-        "artist": "",
-        "start": 16358
-      },
-      {
-        "title": "人生リセットボタン",
-        "artist": "",
-        "start": 16415
-      },
-      {
-        "title": "イカサマライフゲイム",
-        "artist": "",
-        "start": 16470
-      },
-      {
-        "title": "インビジブル",
-        "artist": "",
-        "start": 16525
-      },
-      {
-        "title": "地球最後の告白を",
-        "artist": "",
-        "start": 16638
-      },
-      {
-        "title": "六兆年と一夜物語",
-        "artist": "",
-        "start": 16748
-      },
-      {
-        "title": "デリへル呼んだら君が来た",
-        "artist": "",
-        "start": 16806
-      },
-      {
-        "title": "Mr.music",
-        "artist": "",
-        "start": 17372
-      },
-      {
-        "title": "Blessing",
-        "artist": "",
-        "start": 17555
-      },
-      {
-        "title": "Connecting",
-        "artist": "",
-        "start": 17640
+        "title": "最後のリボルバー",
+        "artist": "悪ノP",
+        "start": 9458
       }
     ]
   },

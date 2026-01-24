@@ -707,36 +707,17 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
     programs_set = set(KEYWORD_GROUPS["PROGRAMS"])
 
     for kw in detected_keywords:
+        # A. キーワード自体が「カテゴリ名」である場合
         if kw in CATEGORY_LIST:
             detected_categories.add(kw)
+        # B. キーワードが「ゲーム名」である場合 -> "ゲーム実況" カテゴリを追加
         if kw in games_set:
             detected_categories.add("ゲーム実況")
+        # C. キーワードが「番組名」である場合 -> "公式企画・番組" カテゴリを追加
         if kw in programs_set:
             detected_categories.add("公式企画・番組")
             detected_categories.add("企画")
             
-
-    # 8. カテゴリの自動修正 (キーワードからカテゴリを逆算)
-    # リストが空ならキーワードから探す
-    if not detected_categories:
-        for kw in detected_keywords:
-            if kw in CATEGORY_LIST:
-                detected_categories.add(kw)
-                break
-　　
-    # 9. ゲーム実況判定
-    has_game_keyword = False
-    games_set = set(KEYWORD_GROUPS["GAMES"])
-    if not detected_keywords.isdisjoint(games_set):
-        has_game_keyword = True
-    
-    if has_game_keyword:
-        if not detected_categories:
-            detected_categories.add("ゲーム実況")
-        else:
-            if "ゲーム実況" not in detected_categories:
-                detected_categories.add("ゲーム実況")
-                
     # 10. 公式切り抜き
     if is_short and ("緑仙" in channel_name or "緑仙" in title):
         exclude_categories = {"ゲーム実況","雑談","記念配信","お披露目配信","3D","企画","大会","踊り動画","ライブイベント","プロモーション","公式企画・番組","歌動画","動画系","公式切り抜き","ぷちさんじ","手描き動画","楽器配信・動画", "歌配信", "踊り配信"}
@@ -1111,6 +1092,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

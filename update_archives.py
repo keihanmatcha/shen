@@ -278,6 +278,15 @@ FORCE_CATEGORY_MAP = {
     "歌ってみた": "歌動画",
     "楽曲": "歌動画",
     "3D": "3D",
+    "3d": "3D",
+    "万人": "記念配信",
+    "爆誕": "記念配信",
+    "生誕祭": "記念配信",
+    "周年": "記念配信",
+    "誕生日": "記念配信",
+    "誕生祭": "記念配信",
+    "新衣装": "お披露目配信",
+    "新衣装": "お披露目配信",
     "XFDムービー":"プロモーション",
     "特典":"プロモーション",
     "Cover": "歌動画",
@@ -288,6 +297,7 @@ FORCE_CATEGORY_MAP = {
     "感想配信": "記念配信",
     "告知": "プロモーション",
     "ティーザー": "プロモーション",
+    "PR": "プロモーション",
     "ダンス動画": "踊り動画",
     "ダンス配信": "踊り配信",
     "ギター": "楽器配信・動画",
@@ -295,9 +305,15 @@ FORCE_CATEGORY_MAP = {
     "弾ける": "楽器配信・動画",
     "カラオケ": "歌配信",
     "歌枠": "歌配信",
+    "Music Video": "歌動画",
+    "MV": "歌動画",
     "歌ってみた": "歌動画",
     "COVER": "歌動画",
-    "LIVE": "ライブイベント",
+    "公演": "ライブイベント",
+    "3DLIVE": "ライブイベント",
+    "ツアー": "ライブイベント",
+    "フェス": "ライブイベント",
+    "イベント": "ライブイベント",
     "ライブ": "ライブイベント",
     "殺陣": "殺陣",
     "お披露目": "お披露目配信"
@@ -678,10 +694,27 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
         if set(members).issubset(detected_keywords):
             detected_keywords.add(unit_name)
 
-    # 7. 固定タグ
+    # 8. 固定タグ（プレイリスト指定）の処理 ★重要★
+    # カテゴリリストにある言葉なら「カテゴリ」へ、そうでなければ「キーワード」へ振り分ける
     if fixed_tags:
         for tag in fixed_tags:
-            detected_keywords.add(tag)
+            if tag in CATEGORY_LIST:
+                detected_categories.add(tag)
+            else:
+                detected_keywords.add(tag)
+    # 9. キーワードからカテゴリを推論
+    games_set = set(KEYWORD_GROUPS["GAMES"])
+    programs_set = set(KEYWORD_GROUPS["PROGRAMS"])
+
+    for kw in detected_keywords:
+        if kw in CATEGORY_LIST:
+            detected_categories.add(kw)
+        if kw in games_set:
+            detected_categories.add("ゲーム実況")
+        if kw in programs_set:
+            detected_categories.add("公式企画・番組")
+            detected_categories.add("企画")
+            
 
     # 8. カテゴリの自動修正 (キーワードからカテゴリを逆算)
     # リストが空ならキーワードから探す
@@ -690,7 +723,7 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
             if kw in CATEGORY_LIST:
                 detected_categories.add(kw)
                 break
-
+　　
     # 9. ゲーム実況判定
     has_game_keyword = False
     games_set = set(KEYWORD_GROUPS["GAMES"])
@@ -703,23 +736,53 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
         else:
             if "ゲーム実況" not in detected_categories:
                 detected_categories.add("ゲーム実況")
-            
-    # 【変更点】10. 公式切り抜き判定
-    # 条件: ショート動画 かつ タイトルまたはチャンネル名に「緑仙」が含まれる
+                
+    # 10. 公式切り抜き
     if is_short and ("緑仙" in channel_name or "緑仙" in title):
-        # 除外したいカテゴリ（これらが含まれていたら「公式切り抜き」は足さない）
-        exclude_categories = {"踊り動画", "歌動画", "楽器配信・動画", "歌配信", "踊り配信"}
-        
-        # 積集合をとって、除外カテゴリが1つも含まれていない場合のみ追加
+        exclude_categories = {"ゲーム実況","雑談","記念配信","お披露目配信","3D","企画","大会","踊り動画","ライブイベント","プロモーション","公式企画・番組","歌動画","動画系","公式切り抜き","ぷちさんじ","手描き動画","楽器配信・動画", "歌配信", "踊り配信"}
         if not detected_categories.intersection(exclude_categories):
             detected_categories.add("公式切り抜き")
 
-    # 最終的に空なら「未分類」を入れる
     if not detected_categories:
         detected_categories.add("未分類")
 
-    # リストに変換してソート
     return sorted(list(detected_categories)), sorted(list(detected_keywords))
+
+# ★★★ 新規追加: 動画情報の統合関数 ★★★
+def consolidate_videos(videos_list):
+    merged_map = {}
+
+    for video in videos_list:
+        v_id = video['youtubeId']
+        
+        if v_id not in merged_map:
+            # 初回登録
+            merged_map[v_id] = video
+        else:
+            # 既に存在する場合（＝別のプレイリスト等でも取得されていた場合） -> 統合する
+            existing = merged_map[v_id]
+            
+            # 1. カテゴリの統合（セットにして重複を消しつつ結合）
+            # "未分類" は邪魔なので、他のカテゴリがあるなら削除する
+            new_cats = set(existing['category']) | set(video['category'])
+            if len(new_cats) > 1 and "未分類" in new_cats:
+                new_cats.discard("未分類")
+            existing['category'] = sorted(list(new_cats))
+
+            # 2. キーワードの統合
+            new_kws = set(existing['keywords']) | set(video['keywords'])
+            existing['keywords'] = sorted(list(new_kws))
+
+            # 3. 曲リスト（セトリ）の統合
+            # 既存が空で、今回のが空じゃないなら採用する
+            if not existing['songs'] and video['songs']:
+                existing['songs'] = video['songs']
+            
+            # 情報を更新
+            merged_map[v_id] = existing
+
+    return list(merged_map.values())
+        
 # --- 3. ユーティリティ & 解析ロジック ---
 def get_duration_seconds(duration_str):
     match = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', duration_str)
@@ -736,10 +799,7 @@ def timestamp_to_seconds(ts_str):
     return 0
 
 def parse_setlist_from_text(text):
-    """
-    概要欄・コメント欄共通：
-    1行に複数曲あっても、スラッシュにスペースがなくても対応する安定版
-    """
+    
     if not text: return []
     text = html.unescape(text)
 
@@ -941,8 +1001,7 @@ def update_github_json(new_videos):
         "X-GitHub-Api-Version": "2022-11-28",
     }
     contents_url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
-
-
+    
     response = requests.get(contents_url, headers=headers)
     existing_videos = []
     existing_sha = None
@@ -971,36 +1030,29 @@ def update_github_json(new_videos):
         vid_id = new_video['youtubeId']
         
         if vid_id in managed_map:
+            # 既存データがある場合は、既存データの内容を更新する
             existing_record = managed_map[vid_id]
             is_changed = False
             
-            if 'songs' not in existing_record: existing_record['songs'] = []
+            # カテゴリの更新チェック
+            if sorted(existing_record.get('category', [])) != sorted(new_video['category']):
+                existing_record['category'] = new_video['category']
+                is_changed = True
             
-            # カテゴリの比較（リスト同士の比較）
-            old_cat = existing_record.get('category')
-            # 古いデータが文字列だった場合の互換処理（比較用）
-            if isinstance(old_cat, str):
-                old_cat = [old_cat] if old_cat != "未分類" else []
-                # 既存データ側もリスト形式に更新しておく
-                existing_record['category'] = new_video['category']
-                is_changed = True
-            elif isinstance(old_cat, list):
-                if sorted(old_cat) != sorted(new_video['category']):
-                    existing_record['category'] = new_video['category']
-                    is_changed = True
-            else:
-                 # categoryキーが無い場合など
-                existing_record['category'] = new_video['category']
-                is_changed = True
-
+            # キーワードの更新チェック
             current_kws = set(existing_record.get('keywords', []))
             new_kws = set(new_video['keywords'])
-            
             if current_kws != new_kws:
                 existing_record['keywords'] = list(new_kws)
                 is_changed = True
             
-            if is_changed: updated_count += 1
+            # セトリの更新チェック（既存が空で、新しい方にあれば更新）
+            if not existing_record.get('songs') and new_video['songs']:
+                existing_record['songs'] = new_video['songs']
+                is_changed = True
+
+            if is_changed:
+                updated_count += 1
             managed_map[vid_id] = existing_record
         else:
             managed_map[vid_id] = new_video
@@ -1034,25 +1086,32 @@ def main():
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN: return
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
     overrides = fetch_final_overrides()
-    fetched_videos = []
+    # 全ての取得結果を一時リストに入れる
+    raw_fetched_videos = []
     
     for ch in CHANNELS:
         pid = get_uploads_playlist_id(youtube, ch['id'])
-        if pid: fetched_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', []), overrides))
+        if pid:
+            raw_fetched_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', []), overrides))
 
     if 'EXTRA_PLAYLISTS' in globals():
         for pl in EXTRA_PLAYLISTS:
             name = pl.get('name') or get_playlist_channel_name(youtube, pl['id'])
-            fetched_videos.extend(fetch_videos_from_playlist(youtube, pl['id'], name, pl.get('fixed_tags', []), overrides))
+            raw_fetched_videos.extend(fetch_videos_from_playlist(youtube, pl['id'], name, pl.get('fixed_tags', []), overrides))
 
     if MANUAL_VIDEO_IDS:
-        fetched_videos.extend(fetch_manual_videos(youtube, MANUAL_VIDEO_IDS, overrides))
+        raw_fetched_videos.extend(fetch_manual_videos(youtube, MANUAL_VIDEO_IDS, overrides))
 
-    if fetched_videos:
-        update_github_json(fetched_videos)
+    # ★ Consolidate duplicates here (Merge tags from different playlists) ★
+    if raw_fetched_videos:
+        consolidated_videos = consolidate_videos(raw_fetched_videos)
+        update_github_json(consolidated_videos)
+    else:
+        print("No videos fetched.")
 
 if __name__ == "__main__":
     main()
+
 
 
 

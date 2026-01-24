@@ -167,7 +167,7 @@ EXTRA_PLAYLISTS = [
     },
     # Rain Drops　リリース　公式プレイリスト
     {
-        "id": "list=OLAK5uy_lDmp3Ak0wRHOL5BuQQIjV8WLza-Pqttlw",      # ここに再生リストIDを入れる
+        "id": "OLAK5uy_lDmp3Ak0wRHOL5BuQQIjV8WLza-Pqttlw",      # ここに再生リストIDを入れる
         "fixed_tags": ["Rain Drops","える", "ジョー・力一","鈴木勝","三枝明那","童田明治","歌動画","オリジナル曲","リリース","Rain Drops-リフレインズ"]   # 自動で付けたいタグ
     },
     {
@@ -1053,6 +1053,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

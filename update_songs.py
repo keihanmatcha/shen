@@ -14,7 +14,6 @@ TEMP_FILE = 'songs/videos.json'         # 更新・新着データ（蓄積）
 TARGET_TAGS = ["歌動画", "歌配信", "楽器配信・動画", "踊り動画", "踊り配信"]
 
 def load_json(filepath):
-    """JSONファイルを読み込む。なければ空リストを返す。"""
     if not os.path.exists(filepath):
         return []
     try:
@@ -25,7 +24,6 @@ def load_json(filepath):
         return []
 
 def save_json(filepath, data):
-    """JSONファイルに保存する。"""
     os.makedirs(os.path.dirname(filepath), exist_ok=True)
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
@@ -48,15 +46,16 @@ def load_and_merge_data():
     return list(merged_map.values())
 
 def is_target_video(video):
-    """タグ判定ロジック"""
-    tags = video.get('tags', [])
+    # tagsとcategoryの両方を取得して結合
+    tags = video.get('tags', []) + video.get('category', [])
+    # 共通部分があればTrue
     return bool(set(tags) & set(TARGET_TAGS))
 
 def main():
     # 1. 最新データの準備（マージ済み）
     all_videos = load_and_merge_data()
     if not all_videos:
-        print("エラー: 動画データがありません。")
+        print("エラー: 動画データが読み込めませんでした。archivesフォルダを確認してください。")
         return
 
     # 歌動画のみにフィルタリング
@@ -70,9 +69,7 @@ def main():
     old_final_map = {v['youtubeId']: v for v in old_final_list}
 
     # 3. videos.json (更新通知用) を読み込み
-    # 既存のリストを維持しつつ、今回変更があったものを上書き/追加する
     videos_json_list = load_json(TEMP_FILE)
-    # IDをキーにしてマップ化（重複防止・更新用）
     videos_json_map = {v['youtubeId']: v for v in videos_json_list}
 
     # 4. 差分チェック & 更新反映
@@ -81,21 +78,20 @@ def main():
     for vid, current_video in current_map.items():
         old_video = old_final_map.get(vid)
         
-        # 判定ロジック:
-        # (A) 新規追加: old_videoが存在しない
-        # (B) 内容変更: old_videoと中身が一致しない
+        # 判定ロジック: 新規追加 または 内容変更
+        # (辞書の比較は順序に依存しないため、中身が同じなら一致とみなされます)
         if (old_video is None) or (current_video != old_video):
             # videos.json用のマップに最新情報をセット（Upsert）
             videos_json_map[vid] = current_video
             updated_count += 1
             
             status = "新規" if old_video is None else "変更"
-            print(f"[{status}] {current_video.get('title', 'No Title')}")
+            # ログが多すぎる場合はコメントアウトしてください
+            # print(f"[{status}] {current_video.get('title', 'No Title')}")
 
     # 5. 保存処理
 
     # A. videos.json (更新・新着のみの蓄積リスト)
-    # マップからリストに戻し、日付順にソート
     new_videos_list = list(videos_json_map.values())
     new_videos_list.sort(key=lambda x: x.get('date', ''), reverse=True)
     
@@ -103,7 +99,6 @@ def main():
     print(f"Update: {TEMP_FILE} を更新しました (計 {len(new_videos_list)} 件, 今回の更新: {updated_count} 件)")
     
     # B. final_videos.json (全データマスター)
-    # 今回の最新状態で完全に上書き
     current_list_sorted = list(current_map.values())
     current_list_sorted.sort(key=lambda x: x.get('date', ''), reverse=True)
     

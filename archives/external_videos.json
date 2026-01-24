@@ -1581,84 +1581,89 @@
       },
       {
         "title": "仮面ライダーAGITO",
-        "artist": "",
+        "artist": "石原慎一",
         "start": 14709
       },
       {
         "title": "仮面ライダークウガ!",
-        "artist": "石原慎一",
+        "artist": "田中昌之",
         "start": 14785
       },
       {
         "title": "NEXT LEVEL",
-        "artist": "",
+        "artist": "YU-KI",
         "start": 14855
       },
       {
         "title": "特警ウインスペクター",
-        "artist": "田中昌之",
+        "artist": "宮内タカユキ",
         "start": 14987
       },
       {
         "title": "重甲ビーファイター",
-        "artist": "YU-KI",
+        "artist": "石原慎一",
         "start": 15087
       },
       {
         "title": "奏",
-        "artist": "",
+        "artist": "スキマスイッチ",
         "start": 15126
       },
       {
         "title": "救急戦隊ゴーゴーファイブ",
-        "artist": "",
+        "artist": "石原慎一",
         "start": 15172
       },
       {
         "title": "牙狼 SAVIOR IN THE DARK",
-        "artist": "",
+        "artist": "JAM Project",
         "start": 15192
       },
       {
         "title": "一輪の花",
-        "artist": "",
+        "artist": "HIGH and MIGHTY COLOR",
         "start": 15243
       },
       {
         "title": "SUSHI食べたい",
-        "artist": "",
+        "artist": "ORANGE RANGE",
         "start": 15321
       },
       {
+      "title": "ジンギスカン",
+      "artist": "Genghis Khan",
+      "start": 15342
+      },
+      {
         "title": "イケナイコトカイ",
-        "artist": "",
+        "artist": "岡村靖幸",
         "start": 15356
       },
       {
         "title": "ステップアップLOVE",
-        "artist": "",
+        "artist": "DAOKO×岡村靖幸",
         "start": 15381
       },
       {
         "title": "ぼくはくま",
-        "artist": "",
+        "artist": "宇多田ヒカル",
         "start": 15401
       },
       {
         "title": "Hello,world!",
-        "artist": "",
+        "artist": "BUMP OF CHICKEN",
         "start": 15442
       },
       {
         "title": "空想メソロギヰ",
-        "artist": "",
+        "artist": "妖精帝國",
         "start": 15517
       },
       {
-        "title": "の純情な感情",
-        "artist": "",
+        "title": "1/3の純情な感情",
+        "artist": "SIAM SHADE",
         "start": 15570
       }
     ]
-  },
+  }
 ]

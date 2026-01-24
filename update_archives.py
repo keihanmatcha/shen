@@ -802,7 +802,7 @@ def parse_setlist_from_text(text):
         clean_text = re.sub(r'<[^>]+>', '', raw_text).strip()
         
         # 2. 曲名の前後にある不要な記号（♪、・、数字、カッコ、~ など）を徹底除去
-        clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜]+', '', clean_text).strip()
+        clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜￤]+', '', clean_text).strip()
         # 末尾の「~」や「～」を削除
         clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
         # 行末のURLやカッコ内を掃除
@@ -818,7 +818,7 @@ def parse_setlist_from_text(text):
 
         # 4. アーティスト名の分割
         t, a = clean_text, ""
-        separators = [' / ', '／', ' - ', ' － ', '：', ' : ', '/']
+        separators = [' / ', '／', ' - ', ' － ', '：', ' : ', '/','￤']
         for sep in separators:
             if sep in clean_text:
                 parts = clean_text.split(sep, 1)
@@ -1095,5 +1095,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

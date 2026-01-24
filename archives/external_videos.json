@@ -39252,57 +39252,58 @@
       "カバー曲","オリジナル曲",
       "歌動画"
     ],
-    {
+    "songs": [
+      {
       "title": "ファンサ",
       "artist": "mona【HoneyWorks】",
       "start": 0
-    },
-    {
+      },
+      {
       "title": "パンダヒーロー",
       "artist": "ハチ【米津玄師】",
       "start": 13
-    },
-    {
+      },
+      {
       "title": "マトリョシカ",
       "artist": "ハチ【米津玄師】",
       "start": 48
-    },
-    {
+      },
+      {
       "title": "ヘドニストの幸福な食卓",
       "artist": "TaKU.K",
       "start": 81
-    },
-    {
+      },
+      {
       "title": "傘",
       "artist": "King Gnu",
       "start": 99
-    },
-    {
+      },
+      {
       "title": "帝国少女",
       "artist": "R Sound Design",
       "start": 128
-    },
-    {
+      },
+      {
       "title": "エバ",
       "artist": "柊キライ",
       "start": 161
-    },
-    {
+      },
+      {
       "title": "ジャンキーナイトタウンオーケストラ",
       "artist": "すりぃ",
       "start": 188
-    },
-    {
+      },
+      {
       "title": "エヴァーグリーン",
       "artist": "緑仙",
       "start": 217
-    },
-    {
+      },
+      {
       "title": "イツライ",
       "artist": "緑仙",
       "start": 268
-    }
-  ]
+      }
+    ]
   },
   {
     "youtubeId": "OO6Nu2au5QQ",

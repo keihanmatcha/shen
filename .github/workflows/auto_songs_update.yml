@@ -1,0 +1,61 @@
+name: Auto Update Songs Data
+
+# トリガー設定：いつ実行するか
+on:
+  # 1. archivesフォルダ内のファイルが変更（push）されたとき
+  push:
+    branches:
+      - main
+    paths:
+      - 'archives/**'      # データ元が変わった時だけ動く
+      - 'update_songs.py'  # スクリプト自体を直した時も動く
+
+  # 2. 毎日 日本時間の朝9時 (UTC 0:00) に念のため定期実行
+  schedule:
+    - cron: '0 0 * * *'
+
+  # 3. 手動で「Run workflow」ボタンを押したとき
+  workflow_dispatch:
+
+# 権限設定：リポジトリに変更を書き込むために必要
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. リポジトリの最新データを取得
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Python環境のセットアップ
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # 3. Pythonスクリプトの実行
+      # （標準ライブラリしか使っていないので pip install は不要です）
+      - name: Run update script
+        run: python update_songs.py
+
+      # 4. 変更があった場合のみコミットしてプッシュ
+      - name: Commit and push changes
+        run: |
+          # Gitのユーザー設定（Botとして振る舞う設定）
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 生成されたファイルをステージング
+          git add songs/final_videos.json songs/videos.json
+          
+          # 差分があるかチェック
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Update song data [skip ci]"
+            git push
+            echo "Changes pushed successfully."
+          fi

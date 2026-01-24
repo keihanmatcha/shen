@@ -68,41 +68,6 @@ EXTRA_PLAYLISTS = [
         "fixed_tags": ["公式切り抜き"]   # 自動で付けたいタグ
     },
      # 緑仙　限定公開　公式プレイリスト
-    {
-        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
-        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
-    },
-    {
-        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
-        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
-    },
-    {
-        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
-        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
-    },
-    {
-        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
-        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
-    },
-    {
-        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
-        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
-    },
-    {
-        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
-        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
-    },
-    {
-        "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
-        "name": "緑仙",                      # サイト上の「チャンネル名」として表示したい名前
-        "fixed_tags": ["雑談"]   # 自動で付けたいタグ
-    },
     # 緑仙　限定公開
     {
         "id": "PL2tNRe-9n6lZ995VG1GUkYf72CpKktd66",      # ここに再生リストIDを入れる
@@ -1088,6 +1053,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 

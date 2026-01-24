@@ -96,7 +96,7 @@
   },
   {
     "youtubeId": "EQD91A-7Gvs",
-    "title": "【 #le_jouet 】エレピ弾き語り生演奏オフコラボオンラインライブその２【にじさんじ/加賀美ハヤト/緑仙/夢追翔】",
+    "title": "【 #le_jouet 】エレピ弾き語り生演奏オフコラボオンラインライブその２【にじさんじ/加賀美ハヤト/緑仙/夢追翔/le jouet】",
     "channel": "加賀美ハヤト",
     "date": "2020-01-28",
     "category": [
@@ -111,12 +111,10 @@
       "企画"
     ],
     "songs": [
-      { "title": "雪の華　夢追", "artist": "中島美嘉", "start":220 },
       { "title": "からくりピエロ　緑仙", "artist": "40mP", "start":655 },
-      { "title": "丸の内サデスティック　加賀美", "artist": "椎名林檎", "start":984 },
       { "title": " 革命デュアリズムwith加賀美", "artist": "T.M.Revolution×水樹奈々", "start":1915 },
       { "title": " 白日with夢追", "artist": "King Gnu", "start":1730 },
-      { "title": "サリシノハラwith all", "artist": "みきとP", "start":2117 }
+      { "title": "サリシノハラwith 夢追・加賀美", "artist": "みきとP", "start":2117 }
     ]
   },
   {
@@ -2974,7 +2972,7 @@
       },
       {
         "title": "Playtime Magic",
-        "artist": "加賀美ハヤト, 夢追翔, 緑仙",
+        "artist": "le jouet(緑仙, 夢追翔, 加賀美ハヤト)",
         "start": 2745
       },
       {
@@ -25908,7 +25906,7 @@
       },
       {
         "title": "Playtime Magic",
-        "artist": "加賀美ハヤト, 夢追翔, 緑仙",
+        "artist": "le jouet(緑仙, 夢追翔, 加賀美ハヤト)",
         "start": 1596
       },
       {
@@ -40177,7 +40175,7 @@
     "songs": [
       {
         "title": "Playtime Magic",
-        "artist": "加賀美ハヤト, 夢追翔, 緑仙",
+        "artist": "le jouet(緑仙, 夢追翔, 加賀美ハヤト)",
         "start": 0
       }
     ]
@@ -40605,7 +40603,7 @@
   },
   {
     "youtubeId": "ERp3QIg9KhA",
-    "title": "3/18発売「SMASH The PAINT!!」収録曲【『Playtime Magic』加賀美ハヤト／夢追翔／緑仙】公式ワンコーラスPV",
+    "title": "3/18発売「SMASH The PAINT!!」収録曲【『Playtime Magic』加賀美ハヤト／夢追翔／緑仙/le jouet】公式ワンコーラスPV",
     "channel": "緑仙",
     "date": "2020-02-22",
     "category": [
@@ -40620,7 +40618,7 @@
     "songs": [
       {
         "title": "Playtime Magic",
-        "artist": "加賀美ハヤト, 夢追翔, 緑仙",
+        "artist": "le jouet(緑仙, 夢追翔, 加賀美ハヤト)",
         "start": 0
       }
     ]
@@ -40865,7 +40863,7 @@
   },
   {
     "youtubeId": "EkCg_dq_sk4",
-    "title": "Sweet Devil / 八王子P (covered by 緑仙 with 加賀美ハヤト、夢追翔)",
+    "title": "Sweet Devil / 八王子P (covered by 緑仙 with 加賀美ハヤト、夢追翔)【le jouet】",
     "channel": "緑仙",
     "date": "2020-02-01",
     "category": [
@@ -40932,38 +40930,7 @@
       }
     ]
   },
-  {
-    "youtubeId": "EQD91A-7Gvs",
-    "title": "【 #le_jouet 】エレピ弾き語り生演奏オフコラボオンラインライブその２【にじさんじ/加賀美ハヤト/緑仙/夢追翔】",
-    "channel": "緑仙 / Ryushen",
-    "date": "2020-01-28",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [],
-    "songs": [
-      {
-        "title": "丸の内サディスティック",
-        "artist": "椎名林檎",
-        "start": 984
-      },
-      {
-        "title": "革命デュアリズム",
-        "artist": "水樹奈々×T.M.Revolution",
-        "start": 1412
-      },
-      {
-        "title": "白日",
-        "artist": "King Gnu",
-        "start": 1730
-      },
-      {
-        "title": "サリシノハラ",
-        "artist": "みきとP",
-        "start": 2117
-      }
-    ]
-  },
+  
   {
     "youtubeId": "ZMi9z3Du9Tw",
     "title": "ギブス / 椎名林檎 (covered by 緑仙)",
@@ -42116,7 +42083,7 @@
   },
   {
     "youtubeId": "FBItnhsI9do",
-    "title": "【 #le_jouet 】バイノーラル弾き語り生演奏オフコラボオンラインライブ【にじさんじ/加賀美ハヤト/緑仙/夢追翔】",
+    "title": "【 #le_jouet 】バイノーラル弾き語り生演奏オフコラボオンラインライブ【にじさんじ/加賀美ハヤト/緑仙/夢追翔/le jouet】",
     "channel": "緑仙 / Ryushen",
     "date": "2019-12-18",
     "category": [

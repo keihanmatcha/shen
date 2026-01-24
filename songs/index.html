@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>曲リスト｜緑仙非公式ファンサイト</title>
   <link rel="icon" href="../images/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="../images/Nagao-icon.png" sizes="512x512">
-  <link rel="apple-touch-icon" href="../images/Nagao-icon.png">
+  <link rel="icon" type="image/png" href="../images/Midori-icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="../images/Midori-icon.png">
   <link rel="canonical" href="https://oukasui.com/song/">
 
   <meta property="og:site_name" content="しぇんしぇん｜緑仙非公式ファンサイト　曲検索">
@@ -263,7 +263,6 @@
     
     // 変数
     let filterByFavorites = false;
-    // カテゴリ専用変数は削除（タグに統合するため）
 
     const $panel = document.getElementById('playerPanel');
     const $yt = document.getElementById('ytFrame');
@@ -323,14 +322,24 @@
         const songs = (v.songs || v.setlist || []).map(s=>({
           title: s.title || s.song || '',
           artist: s.artist || s.singer || '（不明）',
-          start: toSeconds(s.start ?? s.time ?? s.begin ?? 0)
+          start: toSeconds(s.start ?? s.time ?? s.begin ?? 0),
+          // 個別の曲タグがあれば取得
+          tags: s.tags || []
         }));
+        
+        // 動画自体のタグ
         const tags = Array.isArray(v.tags) ? v.tags.filter(Boolean) : [];
         if(!map.has(id)){
           map.set(id, { title: v.title||'', date: v.date||'', channel: v.channel||'', youtubeId: id||'', songs: [], tags: [] });
         }
         const bucket = map.get(id);
-        for(const s of songs){ const key = `${s.title}__${s.artist}__${s.start}`; if(!bucket.songs.some(t => `${t.title}__${t.artist}__${t.start}`===key)) bucket.songs.push(s); }
+        
+        // 曲を統合
+        for(const s of songs){ 
+            const key = `${s.title}__${s.artist}__${s.start}`; 
+            if(!bucket.songs.some(t => `${t.title}__${t.artist}__${t.start}`===key)) bucket.songs.push(s); 
+        }
+        // タグを統合
         bucket.tags = Array.from(new Set([...(bucket.tags||[]), ...tags]));
       }
       for(const v of map.values()){ v.songs.sort((a,b)=> a.start - b.start); }
@@ -339,53 +348,52 @@
 
     let ALL_ROWS=[]; let VIDEO_MAP=new Map(); let ALL_TAGS=[]; const SELECTED_TAGS=new Set();
     
-    // === buildRows関数（自動判定をタグに統合） ===
+    // === buildRows関数（修正版） ===
     function buildRows(videos){
       const merged = normalizeVideos(videos);
       VIDEO_MAP = new Map(merged.map(v => [v.youtubeId, v]));
       ALL_ROWS = [];
       
       for(const v of merged){
-        // 判定用文字列
-        const checkStr = ((v.tags||[]).join(' ') + ' ' + v.title).toLowerCase();
-        
-        // 判定ロジック
-        let isDance = /踊|ダンス|dance|choreography|振付|motion/.test(checkStr);
-        let isPlay  = /弾|楽器|ベース|ギター|ドラム|ピアノ|演奏|叩|session|inst/.test(checkStr);
-        let isSong = /歌|song|cover|mv|original|vocal|カラオケ|アカペラ|chorus/.test(checkStr);
-
-        // 「弾き語り」は歌と弾くの両方
-        if (/弾き語り/.test(checkStr)) {
-            isPlay = true; isSong = true;
-        }
-
-        // 救済措置
-        if (!isDance && !isPlay && !isSong) {
-            isSong = true;
-        }
-
-        // ★修正点：判定結果を「タグ」として配列に追加（Setで重複排除）
+        // 1. JSONに書かれているタグ（カバー(ソロ)など）をまず取得
         const tagsSet = new Set(v.tags || []);
-        if(isSong) tagsSet.add('歌');
-        if(isDance) tagsSet.add('踊');
-        if(isPlay) tagsSet.add('弾');
+
+        // 判定用文字列（タグの中身 ＋ 動画タイトル）
+        const checkStr = (Array.from(tagsSet).join(' ') + ' ' + v.title).toLowerCase();
         
+        // 2. 親ジャンル（歌・踊・弾）を自動付与するロジック
+        if (/オリジナル|カバー|歌|song|vocal|mv|chorus/.test(checkStr)) {
+            tagsSet.add('歌');
+        }
+        if (/踊|ダンス|dance|choreography|振付|motion/.test(checkStr)) {
+            tagsSet.add('踊');
+        }
+        if (/弾|楽器|演奏|ベース|ギター|ドラム|ピアノ|session|inst/.test(checkStr)) {
+            tagsSet.add('弾');
+        }
+
         // 更新したタグリストを保存
         const finalTags = Array.from(tagsSet);
-        v.tags = finalTags; // ビデオデータ自体も更新
+        v.tags = finalTags; 
 
         for(const s of v.songs){
+           // 曲ごとのタグがあれば、それも検索対象に含める
+           const songTags = s.tags || [];
+           const allTags = Array.from(new Set([...finalTags, ...songTags]));
+
            ALL_ROWS.push({ 
              song:s.title, artist:s.artist, date:v.date, videoTitle:v.title, 
              youtubeId:v.youtubeId, start:s.start, 
-             tags: finalTags, 
-             tagsText: finalTags.join(' ')
+             tags: allTags, 
+             tagsText: allTags.join(' ')
            });
         }
       }
+      
       ALL_ROWS.sort((a,b)=>{ if(a.date!==b.date) return a.date<b.date?1:-1; const s=a.song.localeCompare(b.song,'ja'); if(s) return s; return a.artist.localeCompare(b.artist,'ja'); });
-      // すべてのタグを収集（自動追加された「歌」「踊」「弾」もここに含まれる）
-      ALL_TAGS = Array.from(new Set(merged.flatMap(v => v.tags||[]))).sort((a,b)=>a.localeCompare(b,'ja'));
+      
+      // 全タグを収集（フィルタボタン用）
+      ALL_TAGS = Array.from(new Set(ALL_ROWS.flatMap(r => r.tags))).sort((a,b)=>a.localeCompare(b,'ja'));
       renderFilterTags();
     }
 
@@ -470,16 +478,18 @@
         div.querySelector('.link.artist').addEventListener('click', (e)=> { e.stopPropagation(); fillSearch(r.artist); });
         
         const rowTagBox = div.querySelector('.tags-row');
-        // 表示用にタグを取得（自動判定タグも含む）
+        // 表示用にタグを取得
         const tags = r.tags || [];
         if (tags.length > 0) {
-          const t = tags[0];
-          const b = document.createElement('button');
-          b.className = 'tag-badge';
-          b.type = 'button';
-          b.textContent = t;
-          b.addEventListener('click', (e) => { e.stopPropagation(); fillSearch(t); });
-          rowTagBox.appendChild(b);
+          // 最初の2〜3個だけ表示する、または全て表示する（ここでは全て）
+          for(const t of tags){
+             const b = document.createElement('button');
+             b.className = 'tag-badge';
+             b.type = 'button';
+             b.textContent = t;
+             b.addEventListener('click', (e) => { e.stopPropagation(); fillSearch(t); });
+             rowTagBox.appendChild(b);
+          }
         }
         
         const playHandler = (e) => {
@@ -535,16 +545,13 @@
       }
     }
 
-    // === フィルタリング処理（修正：タグフィルタのみに単純化） ===
     function applyFilter() {
       let filteredRows = ALL_ROWS;
 
-      // 1. お気に入りフィルタ
       if (filterByFavorites) {
           const favorites = getFavorites();
           filteredRows = filteredRows.filter(r => favorites.includes(`${r.youtubeId}-${r.start}`));
       } 
-      // 2. キーワード＆タグフィルタ
       else {
           const q = ($q.value || '').trim().toLowerCase();
           const selected = [...SELECTED_TAGS];
@@ -565,10 +572,11 @@
       renderRows(filteredRows);
     }
 
-    fetch('videos.json')
+    // ★★★ここを変更しました： videos.json -> final_videos.json ★★★
+    fetch('final_videos.json')
       .then(r=>r.json())
       .then(videos=>{ buildRows(videos); applyFilter(); })
-      .catch(err=>{ console.error(err); $empty.style.display='block'; $empty.textContent='videos.json の読み込みに失敗しました。'; });
+      .catch(err=>{ console.error(err); $empty.style.display='block'; $empty.textContent='データの読み込みに失敗しました。'; });
 
     $q.addEventListener('input', applyFilter);
     $filterFavorites.addEventListener('click', () => {
@@ -605,4 +613,3 @@
   </script>
 </body>
 </html>
-

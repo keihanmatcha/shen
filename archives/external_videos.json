@@ -43072,9 +43072,9 @@
   },
   {
     "youtubeId": "f-trEwlda1k",
-    "title": "アウターサイエンス / じん",
+    "title": "あらすじ的なすごいやつ (DJ WILDPARTY megamix)",
     "channel": "緑仙",
-    "date": "愛を伝えたいだとか - あいみょん",
+    "date": "2019-10-28",
     "category": [
       "歌配信"
     ],
@@ -43084,12 +43084,58 @@
       "歌動画"
     ],
     "songs": [
-      {
-        "title": "白日",
-        "artist": "King Gnu",
-        "start": 0
-      }
-    ]
+      "songs": [
+    {
+      "title": "ロキ",
+      "artist": "みきとP",
+      "start": 0
+    },
+    {
+      "title": "バレリーコ",
+      "artist": "みきとP",
+      "start": 25
+    },
+    {
+      "title": "少女レイ",
+      "artist": "みきとP",
+      "start": 54
+    },
+    {
+      "title": "猛独が襲う",
+      "artist": "",
+      "start": 81
+    },
+    {
+      "title": "アウトサイダー",
+      "artist": "Eve",
+      "start": 105
+    },
+    {
+      "title": "言って",
+      "artist": "ヨルシカ",
+      "start": 130
+    },
+    {
+      "title": "イドラのサーカス",
+      "artist": "Neru",
+      "start": 154
+    },
+    {
+      "title": "アウターサイエンス",
+      "artist": "じん",
+      "start": 183
+    },
+    {
+      "title": "愛を伝えたいだとか",
+      "artist": "あいみょん",
+      "start": 211
+    },
+    {
+      "title": "白日",
+      "artist": "King Gnu",
+      "start": 242
+    }
+  ]
   },
   {
     "youtubeId": "UnADsNNInUo",
@@ -48988,7 +49034,7 @@
     "channel": "緑仙",
     "date": "2019-04-21",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "カバー曲",

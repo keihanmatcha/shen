@@ -2,7 +2,7 @@ import json
 import os
 
 # --- 設定 ---
-VIDEO_FILE = 'archives/videos.json'
+VIDEO_FILE = 'archives/archive_videos.json'
 EXTERNAL_FILE = 'archives/external_videos.json'
 
 FINAL_FILE = 'songs/final_videos.json'

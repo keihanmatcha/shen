@@ -354,7 +354,7 @@ KEYWORD_GROUPS = {
         "Maria Marionette", "Millie Parfait", "Shu Yamino", "Luca Kaneshiro", "Ren Zotto", "星弥", "Noor",
         # 外部・声優・その他
         "歌衣メイカ", "渋谷ハル", "熊谷タクマ", "かなえ先生", "天開司","水槽","HIMEHINA","YuNi","ときのそら","音ノ乃のの",
-        "空澄セラ","我部りえる","富士葵","松永依織","水無瀬","兎田ぺこら","緋月ゆい","花宮梨歌","花宮梨歌","Sena Kiryuin",
+        "空澄セラ","我部りえる","富士葵","松永依織","水無瀬","兎田ぺこら","緋月ゆい","花宮梨歌","花宮梨歌","Sena Kiryuin","佐藤ホームズ",
         "百花繚乱", "ぽんぽこ", "ピーナッツくん", "ばあちゃる", "英リサ","幸祜","コーサカ","MonsterZ MATE","Yaca","DJ WILDPARTY","りうら","律可","星街すいせい","宝鐘マリン","えるの",
         "兎麹まり", "一ノ瀬うるは", "神威きゅぴ", "橘ひなの", "八雲ぺに", "ゴモリー", "多井隆晴", "松本吉弘", "前野智昭", "土田玲央","ロボ子","悠佑","いれいす","癒月ちょこ","いくぜ!",
         "平川大輔","アンジョー","猫又おかゆ","アザミ","超学生","響木アオ","超学生","天音かなた", "龍惺ろたん"
@@ -600,8 +600,8 @@ HANDLE_TO_NAME_MAP = {
     "@ZealGinjoka": "Zeal Ginjoka", "@RenZotto": "Ren Zotto", "@RyomaBarrenwort": "Ryoma Barrenwort", "@Hoshimi-virtualreal1845": "星弥",
     "@noornijisanjiin7271": "Noor", "@PIROPARU": "字ぴろぱる", "@shibuyaHAL": "渋谷ハル", "@UTAIMEIKA": "歌衣メイカ",
     "@KanaeVCriminologist": "かなえ先生", "@Peanutskun": "ピーナッツくん", "@pokopea": "ぽんぽこ", "@_Ubiba": "ばあちゃる",
-    "@lisahanabusa": "英リサ", "@TOMARI_MARI": "兎麹まり", "@uruhaichinose": "一ノ瀬うるは", "@KaminariQpi": "神威きゅぴ",
-    "@hinanotachiba7": "橘ひなの", "@八雲ぺに": "八雲ぺに", "@takachan0317": "多井隆晴", "@zunmaruch": "村上淳",
+    "@lisahanabusa": "英リサ", "@TOMARI_MARI": "兎麹まり", "@uruhaichinose": "一ノ瀬うるは", "@KaminariQpi": "神威きゅぴ","@monsterzmate":"MZM",
+    "@hinanotachiba7": "橘ひなの", "@八雲ぺに": "八雲ぺに", "@takachan0317": "多井隆晴", "@zunmaruch": "村上淳","@satouholmes": "佐藤ホームズ",
     "@SuzukiTaro_CH": "鈴木たろう", "@sibukawa": "渋川難波", "@Matsumotogumi": "松本吉弘", "@RyuseiRotan": "龍惺ろたん",
     "@tenkaitsukasa": "天開司", "@sakinomoco": "咲乃もこ", "@Izumi_Yunohara": "柚原いづみ", "@OmaruPolka": "尾丸ポルカ",
     "@TakaneLui": "鷹嶺ルイ", "@MoriCalliope": "森カリオペ", "@Inaba_Haneru": "因幡はねる"
@@ -1024,7 +1024,7 @@ def update_github_json(new_videos):
         try:
             decoded_content = base64.b64decode(existing_content).decode('utf-8-sig', errors='replace')
             existing_videos = json.loads(decoded_content)
-        except Exception:
+        except Exception as e: # ここに "as e" を追加
             print(f"⚠️ JSONデコード失敗: {e}")
             existing_videos = []
     else:
@@ -1144,6 +1144,7 @@ def main():
         
 if __name__ == "__main__":
     main()
+
 
 
 

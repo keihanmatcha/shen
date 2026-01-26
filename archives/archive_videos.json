@@ -28048,551 +28048,6 @@
     ],
     "songs": [
       {
-        "title": "ラプラスにのって",
-        "artist": "愛河 里花子、 飯塚 雅弓、 ラプラス、 カスミ　（でろーんさん　ラプラス：えるさん）",
-        "start": 11551
-      },
-      {
-        "title": "V",
-        "artist": "遊助　（でろーんさん・えるさん）",
-        "start": 11827
-      },
-      {
-        "title": "アイデンティティ",
-        "artist": "Kanaria　（緑仙さん・えるさん）",
-        "start": 12112
-      },
-      {
-        "title": "MONSTER DANCE",
-        "artist": "KEYTALK　（緑仙さん・えるさん・でろーんさん）",
-        "start": 12303
-      },
-      {
-        "title": "明日夢みて",
-        "artist": "ささきいさお・堀江美都子　（緑仙さん・社さん）",
-        "start": 18074
-      },
-      {
-        "title": "夜王子と月の姫",
-        "artist": "GOING STEADY　（緑仙さん・加賀美さん）",
-        "start": 18342
-      },
-      {
-        "title": "卒業",
-        "artist": "ガガガSP　（社さん・加賀美さん）",
-        "start": 18775
-      },
-      {
-        "title": "エトワール",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23085
-      },
-      {
-        "title": "殺屋中毒",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23362
-      },
-      {
-        "title": "mischief",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23644
-      },
-      {
-        "title": "星天ギャラクシィクロス",
-        "artist": "マリア・カデンツァヴナ・イヴ　（緑仙さん・ドーラ様）",
-        "start": 24004
-      },
-      {
-        "title": "DEPARTURES",
-        "artist": "青酢＋キャップと瓶　（緑仙さん・クレアさん）",
-        "start": 24330
-      },
-      {
-        "title": "ひとりごつ",
-        "artist": "ハチワレ：田中誠人　（ドーラ様・クレアさん）＜緑仙さん＞（ ソロ ）",
-        "start": 24655
-      },
-      {
-        "title": "エンダー",
-        "artist": "緑仙",
-        "start": 214
-      },
-      {
-        "title": "ステイルメイト",
-        "artist": "緑仙",
-        "start": 444
-      },
-      {
-        "title": "ミュウ",
-        "artist": "Rain Drops",
-        "start": 638
-      },
-      {
-        "title": "ジュブナイルダイバー",
-        "artist": "Rain Drops",
-        "start": 843
-      },
-      {
-        "title": "シグナル",
-        "artist": "Rain Drops",
-        "start": 1093
-      },
-      {
-        "title": "セルフィーDimension",
-        "artist": "Rain Drops",
-        "start": 1406
-      },
-      {
-        "title": "ミスティック",
-        "artist": "マインワルド／Rain Drops",
-        "start": 1625
-      },
-      {
-        "title": "君よ 気高くあれ",
-        "artist": "シユイ",
-        "start": 1867
-      },
-      {
-        "title": "名前のない怪物",
-        "artist": "EGOIST",
-        "start": 2093
-      },
-      {
-        "title": "孤独の宗教",
-        "artist": "Syudou",
-        "start": 2424
-      },
-      {
-        "title": "コールボーイ",
-        "artist": "Syudou",
-        "start": 2627
-      },
-      {
-        "title": "神っぽいな",
-        "artist": "ピノキオピー",
-        "start": 2850
-      },
-      {
-        "title": "失楽ペトリ",
-        "artist": "ナナホシ管弦楽団",
-        "start": 3069
-      },
-      {
-        "title": "バグ",
-        "artist": "かいりきベア",
-        "start": 3278
-      },
-      {
-        "title": "フォニイ",
-        "artist": "ツミキ",
-        "start": 3469
-      },
-      {
-        "title": "エンヴィキャットウォーク",
-        "artist": "トーマ",
-        "start": 3672
-      },
-      {
-        "title": "ロウワー",
-        "artist": "ぬゆり",
-        "start": 3916
-      },
-      {
-        "title": "地獄タクシー",
-        "artist": "吉澤嘉代子",
-        "start": 6787
-      },
-      {
-        "title": "怪物",
-        "artist": "YOASOBI",
-        "start": 7071
-      },
-      {
-        "title": "遠距離ポスター",
-        "artist": "AKB48",
-        "start": 7289
-      },
-      {
-        "title": "オトナブルー",
-        "artist": "新しい学校のリーダーズ",
-        "start": 7503
-      },
-      {
-        "title": "妄想日記",
-        "artist": "シド",
-        "start": 8858
-      },
-      {
-        "title": "ヴァンパイア",
-        "artist": "Janne Da Arc",
-        "start": 9100
-      },
-      {
-        "title": "SPELL MAGIC",
-        "artist": "Acid Black Cherry",
-        "start": 9371
-      },
-      {
-        "title": "黒猫 ~Adult Black Cat~",
-        "artist": "Acid Black Cherry",
-        "start": 9645
-      },
-      {
-        "title": "モノノケ・イン・ザ・フィクション",
-        "artist": "嘘とカメレオン",
-        "start": 12630
-      },
-      {
-        "title": "mahoroba",
-        "artist": "04 Limited Sazabys",
-        "start": 12863
-      },
-      {
-        "title": "swim",
-        "artist": "04 Limited Sazabys",
-        "start": 13040
-      },
-      {
-        "title": "ハートに火をつけて",
-        "artist": "9mm Parabellum Bullet",
-        "start": 13260
-      },
-      {
-        "title": "幻の命",
-        "artist": "SEKAI NO OWARI",
-        "start": 13512
-      },
-      {
-        "title": "世界平和",
-        "artist": "SEKAI NO OWARI",
-        "start": 13831
-      },
-      {
-        "title": "革命前夜",
-        "artist": "Tempalay",
-        "start": 14142
-      },
-      {
-        "title": "逆夢",
-        "artist": "King Gnu",
-        "start": 14430
-      },
-      {
-        "title": "Vinyl",
-        "artist": "King Gnu",
-        "start": 14754
-      },
-      {
-        "title": "残響散歌",
-        "artist": "Aimer",
-        "start": 15064
-      },
-      {
-        "title": "琥珀色の街、上海蟹の朝",
-        "artist": "くるり",
-        "start": 15264
-      },
-      {
-        "title": "丸ノ内サディスティック",
-        "artist": "椎名林檎",
-        "start": 19236
-      },
-      {
-        "title": "歌舞伎町の女王",
-        "artist": "椎名林檎",
-        "start": 19484
-      },
-      {
-        "title": "遭難",
-        "artist": "東京事変",
-        "start": 19730
-      },
-      {
-        "title": "群青日和",
-        "artist": "東京事変",
-        "start": 19945
-      },
-      {
-        "title": "This game",
-        "artist": "鈴木このみ",
-        "start": 21963
-      },
-      {
-        "title": "ETERNAL BLAZE",
-        "artist": "水樹奈々",
-        "start": 25044
-      },
-      {
-        "title": "輪舞-revolution",
-        "artist": "奥井雅美",
-        "start": 25369
-      },
-      {
-        "title": "カナリヤ鳴く空",
-        "artist": "東京スカパラダイスオーケストラ",
-        "start": 25657
-      },
-      {
-        "title": "絶対的な関係",
-        "artist": "赤い公園",
-        "start": 25909
-      },
-      {
-        "title": "Suitability",
-        "artist": "Brian the Sun",
-        "start": 26025
-      },
-      {
-        "title": "化身",
-        "artist": "ポルカドットスティングレイ",
-        "start": 26286
-      },
-      {
-        "title": "Butterflies",
-        "artist": "Rain Drops",
-        "start": 26503
-      },
-      {
-        "title": "TAKE OFF",
-        "artist": "Rain Drops",
-        "start": 26732
-      },
-      {
-        "title": "ラブヘイト",
-        "artist": "Rain Drops",
-        "start": 26929
-      },
-      {
-        "title": "雨言葉",
-        "artist": "Rain Drops",
-        "start": 27187
-      },
-      {
-        "title": "オントロジー",
-        "artist": "Rain Drops",
-        "start": 27533
-      },
-      {
-        "title": "藍ヨリ青ク",
-        "artist": "緑仙 （ デュエット ）",
-        "start": 28007
-      },
-      {
-        "title": "アイデンティティ",
-        "artist": "Kanaria　（緑仙さん・えるさん）",
-        "start": 12112
-      },
-      {
-        "title": "MONSTER DANCE",
-        "artist": "KEYTALK　（緑仙さん・えるさん・でろーんさん）",
-        "start": 12303
-      },
-      {
-        "title": "明日夢みて",
-        "artist": "ささきいさお・堀江美都子　（緑仙さん・社さん）",
-        "start": 18074
-      },
-      {
-        "title": "夜王子と月の姫",
-        "artist": "GOING STEADY　（緑仙さん・加賀美さん）",
-        "start": 18342
-      },
-      {
-        "title": "エトワール",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23085
-      },
-      {
-        "title": "殺屋中毒",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23362
-      },
-      {
-        "title": "mischief",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23644
-      },
-      {
-        "title": "星天ギャラクシィクロス",
-        "artist": "マリア・カデンツァヴナ・イヴ　（緑仙さん・ドーラ様）",
-        "start": 24004
-      },
-      {
-        "title": "DEPARTURES",
-        "artist": "青酢＋キャップと瓶　（緑仙さん・クレアさん）＜チグサさん＞（ ソロ ）",
-        "start": 24330
-      },
-      {
-        "title": "行きます！ カラオケ一曲目",
-        "artist": "ほぼ日P",
-        "start": 4341
-      },
-      {
-        "title": "太陽系デスコ",
-        "artist": "ナユタン星人",
-        "start": 5119
-      },
-      {
-        "title": "酔いどれ知らず",
-        "artist": "Kanaria＜弦月さん＞（ ソロ ）",
-        "start": 5928
-      },
-      {
-        "title": "ジッタードール",
-        "artist": "niki",
-        "start": 4535
-      },
-      {
-        "title": "てらてら",
-        "artist": "和田たけあき",
-        "start": 5377
-      },
-      {
-        "title": "ドリームレス・ドリームス",
-        "artist": "はるまきごはん＜渡会さん＞（ ソロ ）",
-        "start": 6153
-      },
-      {
-        "title": "曖昧劣情Lover",
-        "artist": "電ポルP",
-        "start": 4787
-      },
-      {
-        "title": "世界の真ん中を歩く",
-        "artist": "夏代孝明",
-        "start": 5590
-      },
-      {
-        "title": "カミサマネジマキ",
-        "artist": "kemu ＜海妹さん＞（ ソロ ）",
-        "start": 6399
-      },
-      {
-        "title": "Rolling star",
-        "artist": "YUI",
-        "start": 7904
-      },
-      {
-        "title": "風が吹く街",
-        "artist": "ラックライフ",
-        "start": 8164
-      },
-      {
-        "title": "RESTART POiNTER",
-        "artist": "IDOLiSH7＜えるさん＞（ ソロ ）",
-        "start": 8503
-      },
-      {
-        "title": "ぼよよん行進曲",
-        "artist": "中西圭三",
-        "start": 10014
-      },
-      {
-        "title": "DANZEN!ふたりはプリキュア Ver.Max Heart",
-        "artist": "五條真由美　（合いの手：でろーんさん）",
-        "start": 10376
-      },
-      {
-        "title": "ルージュの伝言",
-        "artist": "松任谷由実",
-        "start": 10864
-      },
-      {
-        "title": "バラライカ",
-        "artist": "月島きらり starring 久住小春（ デュエット ）",
-        "start": 11320
-      },
-      {
-        "title": "ラプラスにのって",
-        "artist": "愛河 里花子、 飯塚 雅弓、 ラプラス、 カスミ　（でろーんさん　ラプラス：えるさん）",
-        "start": 11551
-      },
-      {
-        "title": "V",
-        "artist": "遊助　（でろーんさん・えるさん）",
-        "start": 11827
-      },
-      {
-        "title": "アイデンティティ",
-        "artist": "Kanaria　（緑仙さん・えるさん）",
-        "start": 12112
-      },
-      {
-        "title": "MONSTER DANCE",
-        "artist": "KEYTALK　（緑仙さん・えるさん・でろーんさん）＜でろーんさん＞（ ソロ ）",
-        "start": 12303
-      },
-      {
-        "title": "OK!",
-        "artist": "松本梨香",
-        "start": 10159
-      },
-      {
-        "title": "Together",
-        "artist": "あきよしふみえ",
-        "start": 10614
-      },
-      {
-        "title": "ピカピカまっさいチュウ",
-        "artist": "オーキド博士とピカチュウとポケモンキッズ（ デュエット ）",
-        "start": 11055
-      },
-      {
-        "title": "DANZEN!ふたりはプリキュア Ver.Max Heart",
-        "artist": "五條真由美　（えるさん　合いの手：でろーんさん）",
-        "start": 10377
-      },
-      {
-        "title": "ラプラスにのって",
-        "artist": "愛河 里花子、 飯塚 雅弓、 ラプラス、 カスミ　（でろーんさん　ラプラス：えるさん）",
-        "start": 11550
-      },
-      {
-        "title": "V",
-        "artist": "遊助　（でろーんさん・えるさん）",
-        "start": 11826
-      },
-      {
-        "title": "アイデンティティ",
-        "artist": "Kanaria　（緑仙さん・えるさん）",
-        "start": 12105
-      },
-      {
-        "title": "MONSTER DANCE",
-        "artist": "KEYTALK　（緑仙さん・えるさん・でろーんさん）＜社さん＞（ ソロ ）",
-        "start": 12304
-      },
-      {
-        "title": "アストロガンガー",
-        "artist": "水木一郎",
-        "start": 15835
-      },
-      {
-        "title": "ゲッターロボ號",
-        "artist": "水木一郎",
-        "start": 16446
-      },
-      {
-        "title": "ロンリー仮面ライダー",
-        "artist": "子門真人",
-        "start": 17045
-      },
-      {
-        "title": "テレキャスタービーボーイ",
-        "artist": "すりぃ（ デュエット ）",
-        "start": 17454
-      },
-      {
-        "title": "明日夢みて",
-        "artist": "ささきいさお・堀江美都子　（緑仙さん・社さん）",
-        "start": 18074
-      },
-      {
-        "title": "卒業",
-        "artist": "ガガガSP　（社さん・加賀美さん）＜加賀美さん＞（ ソロ ）",
-        "start": 18775
-      },
-      {
         "title": "メシア",
         "artist": "CIVILIAN",
         "start": 16049
@@ -28604,108 +28059,13 @@
       },
       {
         "title": "劇場支配人のテーマ",
-        "artist": "THE PINBALLS",
+        "artist": "THEPINBALLS",
         "start": 17241
       },
       {
         "title": "光なき夜をゆけ",
-        "artist": "HUMMING BIRD（ デュエット ）",
+        "artist": "HUMMING BIRD",
         "start": 17720
-      },
-      {
-        "title": "夜王子と月の姫",
-        "artist": "GOING STEADY　（緑仙さん・加賀美さん）",
-        "start": 18342
-      },
-      {
-        "title": "卒業",
-        "artist": "ガガガSP　（社さん・加賀美さん）＜ドーラ様＞（ ソロ ）",
-        "start": 18775
-      },
-      {
-        "title": "ミチヲユケ",
-        "artist": "緑黄色社会",
-        "start": 20485
-      },
-      {
-        "title": "恋の呪縛",
-        "artist": "Berryz工房",
-        "start": 21045
-      },
-      {
-        "title": "LOVEさりげなく",
-        "artist": "太田貴子",
-        "start": 22257
-      },
-      {
-        "title": "愛して愛して愛して",
-        "artist": "きくお（ デュエット ）",
-        "start": 22754
-      },
-      {
-        "title": "エトワール",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23085
-      },
-      {
-        "title": "殺屋中毒",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23362
-      },
-      {
-        "title": "mischief",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23644
-      },
-      {
-        "title": "星天ギャラクシィクロス",
-        "artist": "マリア・カデンツァヴナ・イヴ　（緑仙さん・ドーラ様）",
-        "start": 24004
-      },
-      {
-        "title": "ひとりごつ",
-        "artist": "ハチワレ：田中誠人　（ドーラ様・クレアさん）＜クレアさん＞（ ソロ ）",
-        "start": 24655
-      },
-      {
-        "title": "すきっ！",
-        "artist": "超ときめき♡宣伝部",
-        "start": 20721
-      },
-      {
-        "title": "スキちゃん",
-        "artist": "スマイレージ",
-        "start": 21323
-      },
-      {
-        "title": "黒毛和牛上塩タン焼680円",
-        "artist": "大塚 愛（ デュエット ）",
-        "start": 22503
-      },
-      {
-        "title": "エトワール",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23085
-      },
-      {
-        "title": "殺屋中毒",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23362
-      },
-      {
-        "title": "mischief",
-        "artist": "cresc.　（緑仙さん・ドーラ様・クレアさん）",
-        "start": 23644
-      },
-      {
-        "title": "DEPARTURES",
-        "artist": "青酢＋キャップと瓶　（緑仙さん・クレアさん）",
-        "start": 24330
-      },
-      {
-        "title": "ひとりごつ",
-        "artist": "ハチワレ：田中誠人　（ドーラ様・クレアさん）",
-        "start": 24655
       }
     ]
   },
@@ -52569,74 +51929,14 @@
     ],
     "songs": [
       {
-        "title": "風になる【猫の恩返し】(",
+        "title": "声",
         "artist": "",
-        "start": 382
+        "start": 43
       },
       {
-        "title": "I LOVE(歌えなかった)",
+        "title": "画面",
         "artist": "",
-        "start": 727
-      },
-      {
-        "title": "I LOVE…(恋つづED)【髭男】",
-        "artist": "",
-        "start": 949
-      },
-      {
-        "title": "たばこ【コレサワ】",
-        "artist": "",
-        "start": 1163
-      },
-      {
-        "title": "ポニーテールとシュシュ【AKB48】",
-        "artist": "",
-        "start": 1616
-      },
-      {
-        "title": "抱いて HOLD ON ME！【モーニング娘｡】",
-        "artist": "",
-        "start": 1741
-      },
-      {
-        "title": "気まぐれプリンセス【モーニング娘】",
-        "artist": "",
-        "start": 1906
-      },
-      {
-        "title": "悲しみがとまらない【杏里】",
-        "artist": "",
-        "start": 2353
-      },
-      {
-        "title": "染まるよ【チャットモンチー】",
-        "artist": "",
-        "start": 2676
-      },
-      {
-        "title": "愛のかたまり【KinKi Kids】",
-        "artist": "",
-        "start": 3093
-      },
-      {
-        "title": "気まぐれロマンティック【いきものがかり】",
-        "artist": "",
-        "start": 3628
-      },
-      {
-        "title": "Lemon【米津玄師】",
-        "artist": "",
-        "start": 3869
-      },
-      {
-        "title": "夜に駆ける【YOASOBI】",
-        "artist": "",
-        "start": 4127
-      },
-      {
-        "title": "若者のすべて【フジファブリック】",
-        "artist": "",
-        "start": 4388
+        "start": 75
       }
     ]
   },
@@ -65745,254 +65045,289 @@
     ],
     "songs": [
       {
-        "title": "ベベル",
-        "artist": "shr",
-        "start": 5164
+        "title": "砂の惑星",
+        "artist": "",
+        "start": 838
       },
       {
-        "title": "u",
-        "artist": "shr",
-        "start": 4654
+        "title": "ドラマツルギー",
+        "artist": "",
+        "start": 999
       },
       {
-        "title": "花見る人",
-        "artist": "shr",
-        "start": 5330
+        "title": "シャルル",
+        "artist": "",
+        "start": 1109
       },
       {
-        "title": "レコード・レド",
-        "artist": "shr",
-        "start": 5466
+        "title": "夜咄ディセイブ",
+        "artist": "",
+        "start": 1582
       },
       {
-        "title": "合い鳴き",
-        "artist": "shr",
-        "start": 5536
+        "title": "夕景イエスタデイ",
+        "artist": "",
+        "start": 1705
       },
       {
-        "title": "故にユーエンミー",
-        "artist": "ただのCo",
-        "start": 5604
+        "title": "想像フォレスト",
+        "artist": "",
+        "start": 1790
       },
       {
-        "title": "アルカリ成人",
-        "artist": "ただのCo",
-        "start": 5679
+        "title": "如月アテンション",
+        "artist": "",
+        "start": 1967
+      },
+      {
+        "title": "純情スカート",
+        "artist": "",
+        "start": 2384
+      },
+      {
+        "title": "ドレミファロンド",
+        "artist": "",
+        "start": 2844
+      },
+      {
+        "title": "シリョクケンサ",
+        "artist": "",
+        "start": 2924
+      },
+      {
+        "title": "ウミユリ海底譚",
+        "artist": "",
+        "start": 3280
+      },
+      {
+        "title": "からくりピエロ",
+        "artist": "",
+        "start": 3498
+      },
+      {
+        "title": "バレリーコ",
+        "artist": "",
+        "start": 3600
+      },
+      {
+        "title": "世田谷ナイトサファリ",
+        "artist": "",
+        "start": 4097
+      },
+      {
+        "title": "夕立のりぼん",
+        "artist": "",
+        "start": 4391
+      },
+      {
+        "title": "小夜子",
+        "artist": "",
+        "start": 4479
+      },
+      {
+        "title": "いーあるふぁんくらぶ",
+        "artist": "",
+        "start": 4557
+      },
+      {
+        "title": "いかないで",
+        "artist": "",
+        "start": 4980
       },
       {
         "title": "曖昧劣情Lover",
-        "artist": "電ポルP",
+        "artist": "",
         "start": 5787
       },
       {
         "title": "独りんぼエンヴィー",
-        "artist": "電ポルP",
+        "artist": "",
         "start": 5868
       },
       {
-        "title": "サイノウサンプラー",
-        "artist": "電ポルP",
-        "start": 5929
-      },
-      {
-        "title": "イドラのサーカス",
-        "artist": "Neru",
-        "start": 6009
-      },
-      {
-        "title": "命のユースティティア",
-        "artist": "Neru",
-        "start": 6104
-      },
-      {
-        "title": "いろは唄",
-        "artist": "銀サク",
-        "start": 6214
-      },
-      {
-        "title": "バビロン",
-        "artist": "トーマ",
-        "start": 6297
-      },
-      {
         "title": "骸骨楽団とリリア",
-        "artist": "トーマ",
+        "artist": "",
         "start": 6343
       },
       {
         "title": "ヤンキーボーイ・ヤンキーガール",
-        "artist": "トーマ",
+        "artist": "",
         "start": 6410
       },
       {
-        "title": "エンヴィキャットウォーク",
-        "artist": "トーマ（",
-        "start": 6487
-      },
-      {
-        "title": "マダラカルト",
-        "artist": "トーマ）",
-        "start": 6583
-      },
-      {
-        "title": "ワンルーム・オール・ザット・ジャズ",
-        "artist": "DATEKEN",
-        "start": 6669
-      },
-      {
-        "title": "クイーンオブハート",
-        "artist": "奏音69",
-        "start": 6724
-      },
-      {
-        "title": "トカレフと少女",
-        "artist": "もちーべP",
-        "start": 6806
-      },
-      {
-        "title": "レゾンデートル頂戴",
-        "artist": "YM",
-        "start": 6899
-      },
-      {
         "title": "十面相",
-        "artist": "YM",
+        "artist": "",
         "start": 6990
       },
       {
-        "title": "ハンコウセイメイ",
-        "artist": "YM",
-        "start": 7110
-      },
-      {
-        "title": "式日とマンホール",
-        "artist": "ぽりふぉ",
-        "start": 7168
-      },
-      {
-        "title": "From Y to Y",
-        "artist": "ジミーサムP",
-        "start": 7211
-      },
-      {
-        "title": "Little Traveler",
-        "artist": "ジミーサムP",
-        "start": 7348
-      },
-      {
         "title": "Fire◎Flower",
-        "artist": "halyosy",
+        "artist": "",
         "start": 7451
       },
       {
         "title": "太陽系デスコ",
-        "artist": "ナユタン星人",
+        "artist": "",
         "start": 7578
       },
       {
         "title": "ダンスロボットダンス",
-        "artist": "ナユタン星人",
+        "artist": "",
         "start": 7670
       },
       {
         "title": "エイリアンエイリアン",
-        "artist": "ナユタン星人",
+        "artist": "",
         "start": 7762
       },
       {
-        "title": "鏡音レンの暴走",
-        "artist": "暴走P",
-        "start": 7852
-      },
-      {
         "title": "calc.",
-        "artist": "ジミーサムP",
+        "artist": "",
         "start": 7960
       },
       {
-        "title": "廃都アトリエスタにて",
-        "artist": "暴走P",
-        "start": 8030
-      },
-      {
         "title": "WAVE",
-        "artist": "niki",
+        "artist": "",
         "start": 8142
       },
       {
-        "title": "ELECT",
-        "artist": "niki",
-        "start": 8217
-      },
-      {
-        "title": "ゆるふわ樹海ガール",
-        "artist": "石風呂",
-        "start": 8310
-      },
-      {
-        "title": "きらいな人",
-        "artist": "石風呂",
-        "start": 8384
-      },
-      {
-        "title": "午前3時のヘッドフォン",
-        "artist": "石風呂",
-        "start": 8483
-      },
-      {
-        "title": "ロック屋さんのぐだぐた毎日",
-        "artist": "石風呂",
-        "start": 8570
-      },
-      {
         "title": "脳内革命ガール",
-        "artist": "MARETU",
+        "artist": "",
         "start": 8652
       },
       {
-        "title": "Black jack",
-        "artist": "ゆちゃP",
-        "start": 8744
-      },
-      {
-        "title": "ポーカーフェイス",
-        "artist": "ゆちゃP",
-        "start": 8821
-      },
-      {
-        "title": "繰り返し一粒",
-        "artist": "猫虫",
-        "start": 8897
-      },
-      {
         "title": "ブリキノダンス",
-        "artist": "日向電工",
+        "artist": "",
         "start": 8998
       },
       {
-        "title": "スパークガールシンドローム",
-        "artist": "日向電工",
-        "start": 9082
+        "title": "インタビュア",
+        "artist": "",
+        "start": 10578
       },
       {
-        "title": "トウキョウト・ロック・シティ",
-        "artist": "えこ。",
-        "start": 9146
+        "title": "夜もすがら君想ふ",
+        "artist": "",
+        "start": 10657
       },
       {
-        "title": "glow",
-        "artist": "keeno",
-        "start": 9275
+        "title": "ハロハワユ",
+        "artist": "",
+        "start": 11738
       },
       {
-        "title": "腐れ外道とチョコレゐト",
-        "artist": "ピノキオピー",
-        "start": 9385
+        "title": "福寿草",
+        "artist": "",
+        "start": 13386
       },
       {
-        "title": "最後のリボルバー",
-        "artist": "悪ノP",
-        "start": 9458
+        "title": "メランコリック",
+        "artist": "",
+        "start": 14297
+      },
+      {
+        "title": "トゥインクル",
+        "artist": "",
+        "start": 14405
+      },
+      {
+        "title": "Happy Halloween",
+        "artist": "",
+        "start": 14503
+      },
+      {
+        "title": "え？あぁ、そう。",
+        "artist": "",
+        "start": 14735
+      },
+      {
+        "title": "ロミオとシンデレラ4:",
+        "artist": "",
+        "start": 14910
+      },
+      {
+        "title": "天ノ弱",
+        "artist": "",
+        "start": 255
+      },
+      {
+        "title": "マトリョシカ",
+        "artist": "",
+        "start": 15545
+      },
+      {
+        "title": "パンダヒーロー",
+        "artist": "",
+        "start": 15602
+      },
+      {
+        "title": "ドーナツホール",
+        "artist": "",
+        "start": 15683
+      },
+      {
+        "title": "セツナトリップ",
+        "artist": "",
+        "start": 16070
+      },
+      {
+        "title": "放課後ストライド",
+        "artist": "",
+        "start": 16173
+      },
+      {
+        "title": "脳漿炸裂ガール",
+        "artist": "",
+        "start": 16292
+      },
+      {
+        "title": "聖槍爆裂ボーイ",
+        "artist": "",
+        "start": 16358
+      },
+      {
+        "title": "人生リセットボタン",
+        "artist": "",
+        "start": 16415
+      },
+      {
+        "title": "イカサマライフゲイム",
+        "artist": "",
+        "start": 16470
+      },
+      {
+        "title": "インビジブル",
+        "artist": "",
+        "start": 16525
+      },
+      {
+        "title": "地球最後の告白を",
+        "artist": "",
+        "start": 16638
+      },
+      {
+        "title": "六兆年と一夜物語",
+        "artist": "",
+        "start": 16748
+      },
+      {
+        "title": "デリへル呼んだら君が来た",
+        "artist": "",
+        "start": 16806
+      },
+      {
+        "title": "Mr.music",
+        "artist": "",
+        "start": 17372
+      },
+      {
+        "title": "Blessing",
+        "artist": "",
+        "start": 17555
+      },
+      {
+        "title": "Connecting",
+        "artist": "",
+        "start": 17640
       }
     ]
   },

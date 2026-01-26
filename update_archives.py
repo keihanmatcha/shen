@@ -900,12 +900,14 @@ def fetch_manual_videos(youtube, video_ids, overrides, fixed_tags=[]):
                 videos.append({"youtubeId": v_id, "title": snip['title'], "channel": snip.get('channelTitle'), "date": snip['publishedAt'][:10], "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg", "category": cat, "keywords": kw, "songs": songs})
         except: pass
     return videos
-
-def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, overrides):
+def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, overrides, existing_videos):
     videos = []
     next_page_token = None
     page_count = 0
-    print(f"🔍 {channel_name} の動画を取得開始...")
+    # 既存の動画データをIDで引けるように辞書化
+    existing_map = {v['youtubeId']: v for v in existing_videos}
+    
+    print(f"🚀 [START] プレイリスト処理中: {channel_name} (ID: {playlist_id})")
     
     while page_count < MAX_PAGES_TO_FETCH:
         try:
@@ -916,74 +918,93 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
             items = res.get('items', [])
             if not items: break
             
-            v_ids = [it['contentDetails']['videoId'] for it in items]
-            v_res = youtube.videos().list(part='contentDetails,snippet', id=','.join(v_ids)).execute()
-            durations = {v['id']:v['contentDetails']['duration'] for v in v_res.get('items', [])}
+            # ページ内の動画IDリスト
+            all_v_ids = [it['contentDetails']['videoId'] for it in items]
+            
+            # 詳細が必要なのは「JSONに未存在」または「チャンネル名がプレイリスト名になっている」もの
+            # ※過去に間違ってプレイリスト名で保存されたデータを修正するため、既存動画も詳細を取得対象に含めます
+            v_res = youtube.videos().list(part='contentDetails,snippet', id=','.join(all_v_ids)).execute()
             video_details_map = {
                 v['id']: {
                     'duration': v['contentDetails']['duration'],
-                    'publishedAt': v['snippet']['publishedAt'] # 本来の投稿日
+                    'publishedAt': v['snippet']['publishedAt'],
+                    'channelTitle': v['snippet']['channelTitle'], # これが「動画の投稿者」
+                    'snippet': v['snippet']
                 } 
                 for v in v_res.get('items', [])
             }
 
             for item in items:
-                v_id, snip = item['contentDetails']['videoId'], item['snippet']
-                
-                # --- 1. 手動修正(overrides)データの確認 ---
+                v_id = item['contentDetails']['videoId']
+                snip = item['snippet']
+                video_detail = video_details_map.get(v_id)
+                if not video_detail: continue
+
+                # 本来の投稿者名を取得
+                uploader_name = video_detail['channelTitle']
+
+                if v_id in existing_map:
+                    # --- 既存動画の場合：タグを統合し、チャンネル名を「本来の投稿者」に更新 ---
+                    existing_v = existing_map[v_id].copy()
+                    existing_v['channel'] = uploader_name # ここで投稿者名に上書き
+                    
+                    if fixed_tags:
+                        current_cats = set(existing_v.get('category', []))
+                        current_kws = set(existing_v.get('keywords', []))
+                        for tag in fixed_tags:
+                            if tag in CATEGORY_LIST:
+                                current_cats.add(tag)
+                            else:
+                                current_kws.add(tag)
+                        existing_v['category'] = sorted(list(current_cats))
+                        existing_v['keywords'] = sorted(list(current_kws))
+                    
+                    videos.append(existing_v)
+                    continue
+
+                # --- 新規動画の場合 ---
                 f = overrides.get(v_id, {})
                 is_manual = v_id in overrides
-
-                # 詳細データから情報を取得（取得漏れ対策でgetを使う）
-                video_detail = video_details_map.get(v_id, {})
-                true_published_at = video_detail.get('publishedAt', snip.get('publishedAt')) # 詳細が取れなければリスト追加日で妥協
-
-                uploader_name = video_detail.get('channelTitle', channel_name)
+                true_published_at = video_detail['publishedAt']
 
                 if is_manual:
-                    # 人間が書いたデータをベースにする
-                    cat = f.get('category', f.get('tags', ["未分類"]))
-                    kw = f.get('keywords', f.get('tags', []))
-                    songs_list = f.get('songs', [])  # ここに中身があればそれが採用される
+                    cat = f.get('category', ["未分類"])
+                    kw = f.get('keywords', [])
+                    songs_list = f.get('songs', [])
                 else:
-                    # 手動指定がない場合はボットが自動判定
-                    sec = get_duration_seconds(durations.get('duration', "PT0S"))
+                    sec = get_duration_seconds(video_detail['duration'])
                     cat, kw = analyze_video_tags(
                         snip['title'], snip.get('description', ''), 
                         fixed_tags, channel_name=uploader_name, is_short=(0 < sec <= 60)
                     )
                     songs_list = []
 
-                # --- 2. セットリスト取得の実行判定 (ハイブリッド処理) ---
-                # 条件：「歌配信」タグがある、かつ「セトリがまだ空」の場合のみボットが探す
                 if "歌配信" in cat and not songs_list:
-                    print(f"  🎵 歌配信タグを確認。ボットがセトリを自動取得します: {v_id}")
-                    # まず概要欄から抽出
                     songs_list = parse_setlist_from_text(snip.get('description', ''))
-                    # 概要欄になければコメント欄から抽出
                     if not songs_list:
                         songs_list = extract_setlist_from_comments(youtube, v_id)
 
-                # --- 3. データの組み立て ---
                 videos.append({
                     "youtubeId": v_id,
-                    "title": f.get('title', snip['title']), # 手動タイトルがあれば優先
-                    "channel": uploader_name,
+                    "title": f.get('title', snip['title']),
+                    "channel": uploader_name, # 投稿者名をセット
                     "date": f.get('date', true_published_at[:10]),
                     "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
                     "category": cat,
                     "keywords": kw,
-                    "songs": songs_list # 手動があれば手動、空なら自動取得の結果が入る
+                    "songs": songs_list
                 })
             
             next_page_token = res.get('nextPageToken')
             page_count += 1
             if not next_page_token: break
+            
         except Exception as e:
             print(f"⚠️ {channel_name} 取得中にエラー: {e}")
             break
             
     return videos
+
 def update_github_json(new_videos):
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
@@ -1001,10 +1022,10 @@ def update_github_json(new_videos):
         existing_content = content_info['content']
         existing_sha = content_info['sha']
         try:
-            decoded_content = base64.b64decode(existing_content).decode('utf-8-sig')
+            decoded_content = base64.b64decode(existing_content).decode('utf-8-sig', errors='replace')
             existing_videos = json.loads(decoded_content)
         except Exception:
-            print("⚠️ 予期せぬエラーによりファイルを初期化します。")
+            print(f"⚠️ JSONデコード失敗: {e}")
             existing_videos = []
     else:
         print(f"ℹ️ ファイルが見つかりません。新規作成します。")
@@ -1075,32 +1096,55 @@ def main():
     print("--- アーカイブ全件更新開始 ---")
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN: return
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
+    
+    # --- 1. まず既存のJSONデータをGitHubから読み込む ---
+    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+    contents_url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
+    existing_videos = []
+    try:
+        res = requests.get(contents_url, headers=headers)
+        if res.status_code == 200:
+            # 特殊文字対策を含めたデコード
+            content = base64.b64decode(res.json()['content']).decode('utf-8-sig', errors='replace')
+            existing_videos = json.loads(content)
+            print(f"📖 既存データを読み込みました: {len(existing_videos)}件")
+    except Exception as e:
+        print(f"⚠️ 既存データの読み込みに失敗しました（新規作成として続行）: {e}")
+
     overrides = fetch_final_overrides()
-    # 全ての取得結果を一時リストに入れる
     raw_fetched_videos = []
     
+    # --- 2. チャンネル動画の取得（既存データがあればタグを統合） ---
     for ch in CHANNELS:
         pid = get_uploads_playlist_id(youtube, ch['id'])
         if pid:
-            raw_fetched_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', []), overrides))
+            raw_fetched_videos.extend(
+                fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', []), overrides, existing_videos)
+            )
 
+    # --- 3. 追加プレイリストの取得（ここでも existing_videos を渡す！） ---
     if 'EXTRA_PLAYLISTS' in globals():
         for pl in EXTRA_PLAYLISTS:
             name = pl.get('name') or get_playlist_channel_name(youtube, pl['id'])
-            raw_fetched_videos.extend(fetch_videos_from_playlist(youtube, pl['id'], name, pl.get('fixed_tags', []), overrides))
+            # 【重要】ここにも existing_videos を追加！
+            raw_fetched_videos.extend(
+                fetch_videos_from_playlist(youtube, pl['id'], name, pl.get('fixed_tags', []), overrides, existing_videos)
+            )
 
     if MANUAL_VIDEO_IDS:
         raw_fetched_videos.extend(fetch_manual_videos(youtube, MANUAL_VIDEO_IDS, overrides))
 
-    # ★ Consolidate duplicates here (Merge tags from different playlists) ★
+    # --- 4. 全結果を統合して保存 ---
     if raw_fetched_videos:
+        # 重複（同じ動画が複数のプレイリストにあった場合）を最終統合
         consolidated_videos = consolidate_videos(raw_fetched_videos)
         update_github_json(consolidated_videos)
     else:
-        print("No videos fetched.")
-
+        print("☕ 新着動画、および更新が必要な動画はありませんでした。")
+        
 if __name__ == "__main__":
     main()
+
 
 
 

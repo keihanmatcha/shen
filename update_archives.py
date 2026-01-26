@@ -1005,7 +1005,6 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, o
             break
             
     return videos
-
 def update_github_json(new_videos):
     headers = {
         "Authorization": f"token {GITHUB_TOKEN}",
@@ -1014,137 +1013,74 @@ def update_github_json(new_videos):
     }
     contents_url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
     
-    response = requests.get(contents_url, headers=headers)
-    existing_videos = []
+    # ファイルのSHAを取得するために一度GET
     existing_sha = None
+    res_get = requests.get(contents_url, headers=headers)
+    if res_get.status_code == 200:
+        existing_sha = res_get.json().get('sha')
 
-    if response.status_code == 200:
-        content_info = response.json()
-        existing_content = content_info['content']
-        existing_sha = content_info['sha']
-        try:
-            decoded_content = base64.b64decode(existing_content).decode('utf-8-sig', errors='replace')
-            existing_videos = json.loads(decoded_content)
-        except Exception as e: # ここに "as e" を追加
-            print(f"⚠️ JSONデコード失敗: {e}")
-            existing_videos = []
-    else:
-        print(f"ℹ️ ファイルが見つかりません。新規作成します。")
-        existing_videos = []
-
-    preserved_videos = [v for v in existing_videos if v.get('channel') not in MANAGED_CHANNEL_NAMES]
-    managed_map = {v['youtubeId']: v for v in existing_videos if v.get('channel') in MANAGED_CHANNEL_NAMES}
-    
-    updated_count = 0
-    added_count = 0
-
-    for new_video in new_videos:
-        vid_id = new_video['youtubeId']
-        
-        if vid_id in managed_map:
-            # 既存データがある場合は、既存データの内容を更新する
-            existing_record = managed_map[vid_id]
-            is_changed = False
-            
-            # カテゴリの更新チェック
-            if sorted(existing_record.get('category', [])) != sorted(new_video['category']):
-                existing_record['category'] = new_video['category']
-                is_changed = True
-            
-            # キーワードの更新チェック
-            current_kws = set(existing_record.get('keywords', []))
-            new_kws = set(new_video['keywords'])
-            if current_kws != new_kws:
-                existing_record['keywords'] = list(new_kws)
-                is_changed = True
-            
-            # セトリの更新チェック（既存が空で、新しい方にあれば更新）
-            if not existing_record.get('songs') and new_video['songs']:
-                existing_record['songs'] = new_video['songs']
-                is_changed = True
-
-            if is_changed:
-                updated_count += 1
-            managed_map[vid_id] = existing_record
-        else:
-            managed_map[vid_id] = new_video
-            added_count += 1
-
-    final_videos_list = preserved_videos + list(managed_map.values())
-    final_videos_list.sort(key=lambda x: x.get('date', '1900-01-01'), reverse=True)
-
-    print(f"📦 コミット準備: 新規{added_count}件, 更新{updated_count}件, 総数{len(final_videos_list)}件")
-    
-    new_content_bytes = json.dumps(final_videos_list, indent=2, ensure_ascii=False).encode('utf-8')
+    new_content_bytes = json.dumps(new_videos, indent=2, ensure_ascii=False).encode('utf-8')
     new_content_base64 = base64.b64encode(new_content_bytes).decode('utf-8')
 
     commit_data = {
-        "message": f"ARCHIVE_BOT: Repair & Update (Add {added_count}, Update {updated_count})",
+        "message": f"ARCHIVE_BOT: Update videos ({len(new_videos)} items)",
         "content": new_content_base64,
         "sha": existing_sha
     }
 
     put_res = requests.put(contents_url, headers=headers, json=commit_data)
     if put_res.status_code in [200, 201]:
-        print(f"🚀 GitHubコミット完了！")
+        print(f"🚀 GitHubコミット完了！ (総数: {len(new_videos)}件)")
     else:
-        print(f"❌ コミット失敗: {put_res.status_code}")
-        print(put_res.text)
-    
-# --- 6. メイン & GitHub 更新 (update_github_json は既存のものをそのまま使用) ---
+        print(f"❌ コミット失敗: {put_res.status_code} - {put_res.text}")
 
 def main():
     print("--- アーカイブ全件更新開始 ---")
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN: return
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
     
-    # --- 1. まず既存のJSONデータをGitHubから読み込む ---
-    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
-    contents_url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"
+    # --- 1. 既存データを確実に読み込む (安定版) ---
     existing_videos = []
+    # rawURLを使って確実にJSONの中身を取りに行く
+    raw_url = f"https://raw.githubusercontent.com/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/main/{JSON_FILE_PATH}"
     try:
-        res = requests.get(contents_url, headers=headers)
+        res = requests.get(raw_url)
         if res.status_code == 200:
-            # 特殊文字対策を含めたデコード
-            content = base64.b64decode(res.json()['content']).decode('utf-8-sig', errors='replace')
-            existing_videos = json.loads(content)
-            print(f"📖 既存データを読み込みました: {len(existing_videos)}件")
+            # BOMや特殊文字を徹底排除して読み込み
+            text = res.content.decode('utf-8-sig', errors='replace')
+            if text.strip():
+                existing_videos = json.loads(text)
+                print(f"📖 既存データを読み込みました: {len(existing_videos)}件")
     except Exception as e:
-        print(f"⚠️ 既存データの読み込みに失敗しました（新規作成として続行）: {e}")
+        print(f"⚠️ 既存データの読み込みに失敗: {e}")
 
     overrides = fetch_final_overrides()
     raw_fetched_videos = []
     
-    # --- 2. チャンネル動画の取得（既存データがあればタグを統合） ---
+    # チャンネル・プレイリストの取得
+    # fetch_videos_from_playlist は「前回の回答」の統合ロジック版を使ってください
     for ch in CHANNELS:
         pid = get_uploads_playlist_id(youtube, ch['id'])
         if pid:
-            raw_fetched_videos.extend(
-                fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', []), overrides, existing_videos)
-            )
+            raw_fetched_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', []), overrides, existing_videos))
 
-    # --- 3. 追加プレイリストの取得（ここでも existing_videos を渡す！） ---
     if 'EXTRA_PLAYLISTS' in globals():
         for pl in EXTRA_PLAYLISTS:
             name = pl.get('name') or get_playlist_channel_name(youtube, pl['id'])
-            # 【重要】ここにも existing_videos を追加！
-            raw_fetched_videos.extend(
-                fetch_videos_from_playlist(youtube, pl['id'], name, pl.get('fixed_tags', []), overrides, existing_videos)
-            )
+            raw_fetched_videos.extend(fetch_videos_from_playlist(youtube, pl['id'], name, pl.get('fixed_tags', []), overrides, existing_videos))
 
     if MANUAL_VIDEO_IDS:
         raw_fetched_videos.extend(fetch_manual_videos(youtube, MANUAL_VIDEO_IDS, overrides))
 
-    # --- 4. 全結果を統合して保存 ---
     if raw_fetched_videos:
-        # 重複（同じ動画が複数のプレイリストにあった場合）を最終統合
         consolidated_videos = consolidate_videos(raw_fetched_videos)
         update_github_json(consolidated_videos)
     else:
-        print("☕ 新着動画、および更新が必要な動画はありませんでした。")
+        print("☕ 更新が必要な動画はありませんでした。")
         
 if __name__ == "__main__":
     main()
+
 
 
 

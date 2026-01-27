@@ -1004,7 +1004,7 @@
         const targetYear = $filterYear.value;
         const targetMonth = $filterMonth.value;
         const filteredVideos = ALL_VIDEOS.filter(v => {
-            const categoryOk = selectedCategories.length === 0 || selectedCategories.some(catValue => v.category === catValue);
+            const categoryOk = selectedCategories.length === 0 || selectedCategories.some(catValue => (v.category || []).includes(catValue));
             const keywordOk = selectedKeywords.length === 0 || selectedKeywords.every(k => (v.keywords || []).includes(k));
             const textOk = !q || v.searchText.includes(q);
 

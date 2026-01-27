@@ -27893,7 +27893,7 @@
     "channel": "RainDrops",
     "date": "2022-04-13",
     "category": [
-      "動画系","プロモーション","ライブイベント","企画"
+      "動画系","プロモーション","ライブイベント","企画","歌配信"
     ],
     "keywords": [
       "RainDrops",
@@ -28044,7 +28044,7 @@
     "channel": "RainDrops",
     "date": "2022-03-30",
     "category": [
-      "歌配信"
+      "動画系","プロモーション","ライブイベント","企画","歌配信"
     ],
     "keywords": [
       "RainDrops",
@@ -28163,11 +28163,11 @@
   },
   {
     "youtubeId": "qNRhJJYiCe8",
-    "title": "ライブ振り返り企画『レイドロクリップ』鈴木勝編",
+    "title": "ライブ振り返り企画『レイドロクリップ』鈴木勝編","歌配信"
     "channel": "RainDrops",
     "date": "2022-03-23",
     "category": [
-      "歌配信"
+      "動画系","プロモーション","ライブイベント","企画"
     ],
     "keywords": [
       "RainDrops",
@@ -28239,7 +28239,7 @@
     "channel": "RainDrops",
     "date": "2022-03-16",
     "category": [
-      "歌配信"
+      "動画系","プロモーション","ライブイベント","企画","歌配信"
     ],
     "keywords": [
       "RainDrops",
@@ -28458,7 +28458,7 @@
     "channel": "RainDrops",
     "date": "2022-03-09",
     "category": [
-      "歌配信"
+      "動画系","プロモーション","ライブイベント","企画","歌配信"
     ],
     "keywords": [
       "RainDrops",
@@ -28485,7 +28485,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-03-09",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "DJ WILDPARTY",
@@ -28509,9 +28509,9 @@
     "channel": "緑仙 / Ryushen",
     "date": "2020-03-06",
     "category": [
-      "歌配信"
+      "歌配信","記念配信","ライブイベント","3D","お披露目配信"
     ],
-    "keywords": [],
+    "keywords": ["歌配信","記念配信","ライブイベント","3D","早瀬走"],
     "songs": [
       {
         "title": "SKILL",
@@ -28526,9 +28526,9 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-03-03",
     "category": [
-      "歌配信"
+      "歌配信","記念配信","ライブイベント","3D"
     ],
-    "keywords": [],
+    "keywords": ["歌配信","記念配信","ライブイベント","3D","周防パトラ","龍ヶ崎リン","風見くく","因幡はねる","みどねる"],
     "songs": [
       {
         "title": "キュン",
@@ -28633,7 +28633,7 @@
     "channel": "緑仙",
     "date": "2022-02-15",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Alri",
@@ -28776,9 +28776,9 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-02-02",
     "category": [
-      "歌配信"
+      "歌動画","ライブイベント"
     ],
-    "keywords": [],
+    "keywords": ["歌動画","ライブイベント","LIGHT UP TONES","樋口楓"],
     "songs": [
       {
         "title": "IKIJIBIKI",
@@ -28793,9 +28793,9 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-02-02",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
-    "keywords": [],
+    "keywords": ["歌動画","ライブイベント","LIGHT UP TONES"],
     "songs": [
       {
         "title": "カナリヤ鳴く空",
@@ -28810,9 +28810,9 @@
     "channel": "樋口楓",
     "date": "2022-02-02",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
-    "keywords": [],
+    "keywords": ["歌動画","ライブイベント","LIGHT UP TONES","樋口楓"],
     "songs": [
       {
         "title": "Wonder NeverLand",
@@ -29050,7 +29050,7 @@
     "channel": "緑仙",
     "date": "2022-01-22",
     "category": [
-      "歌配信"
+      "歌動画","踊り動画"
     ],
     "keywords": [
       "カバー曲",
@@ -29070,9 +29070,9 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-01-19",
     "category": [
-      "歌配信"
+      "歌配信","踊り配信"
     ],
-    "keywords": [],
+    "keywords": ["歌配信","踊り配信","える","夕陽リリ","ERRors","にじさんじ歌謡祭"],
     "songs": [
       {
         "title": "HE★VENS GATE-Beginning of the Legend-",
@@ -29087,7 +29087,7 @@
     "channel": "Rain Drops",
     "date": "2022-01-19",
     "category": [
-      "歌配信"
+      "歌配信","歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -29153,7 +29153,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-01-19",
     "category": [
-      "歌配信"
+      "歌配信","歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -29170,7 +29170,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-01-18",
     "category": [
-      "歌配信"
+      "歌配信","歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -29187,7 +29187,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-01-15",
     "category": [
-      "歌配信"
+      "歌配信","歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -29204,7 +29204,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-01-10",
     "category": [
-      "歌配信"
+      "歌配信","歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -29221,7 +29221,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2022-01-06",
     "category": [
-      "歌配信"
+      "歌配信","歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -29521,7 +29521,7 @@
     "category": [
       "歌配信"
     ],
-    "keywords": [],
+    "keywords": ["歌配信","にじさんじ歌謡祭","ERRors","える","夕陽リリ"],
     "songs": [
       {
         "title": "HE★VENS GATE-Beginning of the Legend-",
@@ -29543,7 +29543,7 @@
     "category": [
       "歌配信"
     ],
-    "keywords": [],
+    "keywords": ["歌配信","にじさんじ歌謡祭","cresc.","ドーラ","シスター・クレア"],
     "songs": [
       {
         "title": "人生はSTEP!",
@@ -29558,7 +29558,7 @@
     "channel": "Rain Drops",
     "date": "2021-12-29",
     "category": [
-      "歌配信"
+      "歌配信","歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -29609,7 +29609,7 @@
     "channel": "緑仙",
     "date": "2021-12-24",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "こじらせハラスメント",
@@ -29656,10 +29656,11 @@
     "channel": "緑仙",
     "date": "2021-12-21",
     "category": [
-      "歌配信"
+      "歌動画","歌配信"
     ],
     "keywords": [
       "カバー曲",
+    　"歌配信"
       "ジョー・力一",
       "ライブ・イベント",
       "歌動画",
@@ -29681,7 +29682,7 @@
     "channel": "緑仙",
     "date": "2021-12-17",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "cresc.",
@@ -30074,7 +30075,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-12-09",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "カバー曲",
@@ -30159,7 +30160,7 @@
     "channel": "緑仙",
     "date": "2021-12-02",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "カバー曲",
@@ -30179,7 +30180,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-11-23",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "cresc.",
@@ -30203,7 +30204,7 @@
     "channel": "緑仙",
     "date": "2021-11-19",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "カバー曲",
@@ -30223,9 +30224,9 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-11-18",
     "category": [
-      "歌配信"
+      "歌動画","プロモーション"
     ],
-    "keywords": [],
+    "keywords": ["カバー曲"],
     "songs": [
       {
         "title": "空も飛べるはず",
@@ -30306,7 +30307,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-11-13",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "ねないこ",
@@ -30328,7 +30329,7 @@
     "channel": "緑仙",
     "date": "2021-11-11",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "カバー曲",
@@ -30348,10 +30349,11 @@
     "channel": "緑仙",
     "date": "2021-11-05",
     "category": [
-      "歌配信"
+      "歌配信","記念配信"
     ],
     "keywords": [
       "歌配信",
+    　"記念配信",
       "限定公開",
       "記念配信",
       "雑談"
@@ -30615,7 +30617,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-11-02",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "le jouet",
@@ -30638,7 +30640,7 @@
     "channel": "緑仙",
     "date": "2021-10-29",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "カバー曲",
@@ -30658,7 +30660,7 @@
     "channel": "緑仙",
     "date": "2021-10-27",
     "category": [
-      "歌配信"
+      "歌配信","記念配信"
     ],
     "keywords": [
       "プロモーション",
@@ -30762,7 +30764,7 @@
     "channel": "緑仙",
     "date": "2021-10-25",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Vtuberロック革命",
@@ -31209,7 +31211,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-10-11",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -31226,7 +31228,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-10-11",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -31243,7 +31245,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-10-09",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "こじらせハラスメント",
@@ -31269,7 +31271,7 @@
     "channel": "緑仙",
     "date": "2021-10-07",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "カバー曲",
@@ -31361,9 +31363,9 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-10-03",
     "category": [
-      "歌配信"
+      "歌配信","記念配信","ライブイベント"
     ],
-    "keywords": [],
+    "keywords": ["歌配信","記念配信","ライブイベント","シスター・クレア","ドーラ","cresc."],
     "songs": [
       {
         "title": "adrenaline!!!",
@@ -31378,90 +31380,12 @@
     ]
   },
   {
-    "youtubeId": "t-gw-44jAUw",
-    "title": "【#Vtuberロック革命2021】まだ夏、終わらせたくないです 【にじさんじ | 緑仙】",
-    "channel": "緑仙",
-    "date": "2021-09-26",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [
-      "Vtuberロック革命",
-      "不破湊",
-      "加賀美ハヤト",
-      "戌亥とこ",
-      "樋口楓",
-      "歌配信"
-    ],
-    "songs": [
-      {
-        "title": "ソルジャーガールズ",
-        "artist": "Rick Rack",
-        "start": 69
-      },
-      {
-        "title": "凛々爛々",
-        "artist": "赤い公園",
-        "start": 309
-      },
-      {
-        "title": "イツライ",
-        "artist": "緑仙",
-        "start": 818
-      },
-      {
-        "title": "夜王子と月の姫",
-        "artist": "GOING STEADY",
-        "start": 1023
-      },
-      {
-        "title": "深夜高速",
-        "artist": "フラワーカンパニーズ",
-        "start": 1678
-      }
-    ]
-  },
-  {
-    "youtubeId": "RcBPlRPu_cY",
-    "title": "【#Vtuberロック革命2021】繋ぐ【戌亥とこ/にじさんじ】",
-    "channel": "緑仙 / Ryushen",
-    "date": "2021-09-26",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [],
-    "songs": [
-      {
-        "title": "地獄屋八丁荒らし",
-        "artist": "戌亥とこ",
-        "start": 1124
-      }
-    ]
-  },
-  {
-    "youtubeId": "h067fcs_VxM",
-    "title": "【#Vtuberロック革命2021】俺らの夏フェス【不破湊/にじさんじ】",
-    "channel": "緑仙 / Ryushen",
-    "date": "2021-09-26",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [],
-    "songs": [
-      {
-        "title": "クチビル・ディテクティヴ",
-        "artist": "Base Ball Bear",
-        "start": 848
-      }
-    ]
-  },
-  {
     "youtubeId": "Mx3NMiIk8to",
     "title": "Rain Drops「バイオグラフィ」",
     "channel": "緑仙 / Ryushen",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -31478,7 +31402,7 @@
     "channel": "YouTube",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -31506,7 +31430,7 @@
     "channel": "YouTube",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -31534,7 +31458,7 @@
     "channel": "YouTube",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -31562,7 +31486,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -31590,7 +31514,7 @@
     "channel": "YouTube",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -31618,7 +31542,7 @@
     "channel": "YouTube",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -31646,7 +31570,7 @@
     "channel": "緑仙 / Ryushen",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [],
     "songs": [
@@ -31663,7 +31587,7 @@
     "channel": "YouTube",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -31691,7 +31615,7 @@
     "channel": "YouTube",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",
@@ -31719,7 +31643,7 @@
     "channel": "YouTube",
     "date": "2021-09-22",
     "category": [
-      "歌配信"
+      "歌動画"
     ],
     "keywords": [
       "Rain Drops",

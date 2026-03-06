@@ -1,4 +1,115 @@
 [{
+    "youtubeId": "M9sPdUnQTtY",
+    "title": "【 初！先輩コラボ 】緑仙先輩がいっしょに歌ってくださるって！！🎤supported by DAM【緑仙 / 水面まどか / にじさんじ】",
+    "channel": "水面まどか / Minamo Madoka 【にじさんじ】",
+    "date": "2026-02-27",
+    "thumbnail": "https://i.ytimg.com/vi/M9sPdUnQTtY/mqdefault.jpg",
+    "category": [
+      "企画",
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信","水面まどか"
+    ],
+    "songs": [
+        {
+      "title": "ブルーバード",
+      "artist": "いきものがかり",
+      "start": 428
+    },
+    {
+      "title": "sweets parade",
+      "artist": "髏々宮カルタ（花澤香菜）",
+      "start": 723
+    },
+    {
+      "title": "藍ヨリ青ク",
+      "artist": "緑仙",
+      "start": 1359
+    },
+    {
+      "title": "心拍数#0822",
+      "artist": "蝶々P",
+      "start": 1673
+    },
+    {
+      "title": "chocolate box",
+      "artist": "Dezzy",
+      "start": 2052
+    },
+    {
+      "title": "ハミングがきこえる",
+      "artist": "カヒミ・カリィ",
+      "start": 2440
+    },
+    {
+      "title": "修羅",
+      "artist": "ヨルシカ",
+      "start": 3218
+    },
+    {
+      "title": "打上花火",
+      "artist": "DAOKO×米津玄師",
+      "start": 3626
+    },
+    {
+      "title": "メロンソーダ",
+      "artist": "夢みるアドレセンス",
+      "start": 4026
+    },
+    {
+      "title": "コンテンポラリのダンス",
+      "artist": "篠澤広(川村玲奈)",
+      "start": 4444
+    },
+    {
+      "title": "swim",
+      "artist": "04 Limited Sazabys",
+      "start": 5290
+    },
+    {
+      "title": "ノマド",
+      "artist": "バルーン",
+      "start": 5662
+    },
+    {
+      "title": "マリーゴールド",
+      "artist": "あいみょん",
+      "start": 6036
+    },
+    {
+      "title": "初恋サイダー",
+      "artist": "Buono!",
+      "start": 6472
+    },
+    {
+      "title": "水流のロック",
+      "artist": "日食なつこ",
+      "start": 7112
+    }
+    ]
+  },
+    {
+    "youtubeId": "w20kHGfdHPI",
+    "title": "足は上がる",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-03-01",
+    "thumbnail": "https://i.ytimg.com/vi/w20kHGfdHPI/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "踊り動画"
+    ],
+    "tags": ["踊","カバー"],
+    "keywords": ["踊り動画"],
+    "songs": [
+        {
+      "title": "盛れミ・アモーレ",
+      "artist": "Juice=Juice",
+      "start": 0
+    }
+    ]
+  },
+    {
     "youtubeId": "7uz2gtyzSiQ",
     "title": "#バケネコダンス #緑仙 #にじさんじ #なんでもいいから流行れ",
     "channel": "緑仙 / Ryushen",

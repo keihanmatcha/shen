@@ -1,4 +1,23 @@
 [{
+    "youtubeId": "GU9xMKekFGk",
+    "title": "おはよん",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-03-17",
+    "thumbnail": "https://i.ytimg.com/vi/GU9xMKekFGk/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": ["踊り動画"],
+    "tags": ["踊","カバー"],
+    "songs": [
+        {
+      "title": "トンツカタンタン",
+      "artist": "クレイジーウォウウォ!!",
+      "start": 0
+    }
+    ]
+  },
+    {
     "youtubeId": "VGfpOscl4is",
     "title": "おはよ朝、まじで動画投稿難しい",
     "channel": "緑仙 / Ryushen",
@@ -8,6 +27,7 @@
       "公式切り抜き","踊り動画"
     ],
     "keywords": ["踊り動画"],
+    "tags": ["踊","カバー"],
     "songs": [
         {
       "title": "はちゃめちゃわちゃライフ！",

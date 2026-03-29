@@ -1,4 +1,26 @@
 [{
+    "youtubeId": "JUf2_y3KOKI",
+    "title": "ワンマンライブ「緑一色」映像一部公開！ #イツライ",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-03-13",
+    "thumbnail": "https://i.ytimg.com/vi/JUf2_y3KOKI/mqdefault.jpg",
+    "category": [
+      "ライブイベント"
+    ],
+    "keywords": [
+      "ライブ・イベント"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [
+        {
+      "title": "イツライ",
+      "artist": "緑仙",
+      "start": 0
+        }
+    ]
+  },
+ 
+    {
     "youtubeId": "lz9eqnFQP-I",
     "title": "｢猫の手を貸すよ｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
     "channel": "緑仙 / Ryushen",

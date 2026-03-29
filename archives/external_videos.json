@@ -71,7 +71,183 @@
     "keywords": [
       "麻雀"
     ],
-    "songs": []
+    "songs": [
+        {
+      "title": "開始！",
+      "artist": "緑仙・松本プロ",
+      "start": 117
+    },
+    {
+      "title": "解説松本プロ",
+      "artist": "松本プロ",
+      "start": 200
+    },
+    {
+      "title": "ルール説明",
+      "artist": "緑仙・松本プロ",
+      "start": 323
+    },
+    {
+      "title": "寝坊ルール",
+      "artist": "緑仙・松本プロ",
+      "start": 412
+    },
+    {
+      "title": "トーナメント表・優勝商品",
+      "artist": "緑仙・松本プロ",
+      "start": 469
+    },
+    {
+      "title": "予選組み合わせ・代打シェリンさん",
+      "artist": "緑仙・松本プロ",
+      "start": 622
+    },
+    {
+      "title": "三麻と四麻の違い",
+      "artist": "",
+      "start": 1033
+    },
+    {
+      "title": "予選A卓",
+      "artist": "",
+      "start": 1094
+    },
+    {
+      "title": "予選B卓選手紹介",
+      "artist": "",
+      "start": 2295
+    },
+    {
+      "title": "予選C卓選手紹介",
+      "artist": "",
+      "start": 4275
+    },
+    {
+      "title": "予選D卓選手紹介",
+      "artist": "",
+      "start": 5556
+    },
+    {
+      "title": "対局スタート",
+      "artist": "",
+      "start": 5618
+    },
+    {
+      "title": "予選E卓選手紹介",
+      "artist": "",
+      "start": 7178
+    },
+    {
+      "title": "予選F卓選手紹介",
+      "artist": "",
+      "start": 8633
+    },
+    {
+      "title": "予選H卓選手紹介",
+      "artist": "",
+      "start": 12678
+    },
+    {
+      "title": "予選I卓選手紹介",
+      "artist": "",
+      "start": 13445
+    },
+    {
+      "title": "予選J卓選手紹介",
+      "artist": "",
+      "start": 14344
+    },
+    {
+      "title": "予選K卓選手紹介",
+      "artist": "",
+      "start": 15605
+    },
+    {
+      "title": "予選L卓選手紹介",
+      "artist": "",
+      "start": 16840
+    },
+    {
+      "title": "予選M卓選手紹介",
+      "artist": "",
+      "start": 18055
+    },
+    {
+      "title": "CHILU…松②",
+      "artist": "",
+      "start": 19606
+    },
+    {
+      "title": "再開予選結果確認&最高打点賞",
+      "artist": "緑仙・松本プロ",
+      "start": 20455
+    },
+    {
+      "title": "1卓選手紹介",
+      "artist": "",
+      "start": 20544
+    },
+    {
+      "title": "2卓選手紹介",
+      "artist": "",
+      "start": 22061
+    },
+    {
+      "title": "3卓選手紹介",
+      "artist": "",
+      "start": 22997
+    },
+    {
+      "title": "4卓選手紹介",
+      "artist": "",
+      "start": 23878
+    },
+    {
+      "title": "5卓選手紹介",
+      "artist": "",
+      "start": 25035
+    },
+    {
+      "title": "6卓選手紹介",
+      "artist": "",
+      "start": 26167
+    },
+    {
+      "title": "A卓選手紹介",
+      "artist": "",
+      "start": 29235
+    },
+    {
+      "title": "B卓選手紹介",
+      "artist": "",
+      "start": 31067
+    },
+    {
+      "title": "C卓選手紹介",
+      "artist": "",
+      "start": 31922
+    },
+    {
+      "title": "決勝",
+      "artist": "",
+      "start": 33200
+    },
+    {
+      "title": "メンバー紹介",
+      "artist": "決勝メンバー",
+      "start": 33246
+    },
+    {
+      "title": "インタビュー",
+      "artist": "優勝者",
+      "start": 35546
+    },
+    {
+      "title": "大会終えて二人の感想",
+      "artist": "緑仙・松本プロ",
+      "start": 35680
+    }
+    ]
   },
   {
     "youtubeId": "BQ40ZoWcA8g",

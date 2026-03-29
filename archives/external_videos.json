@@ -1,4 +1,48 @@
 [{
+    "youtubeId": "kdt77GIxwnY",
+    "title": "【オリジナルMV】「好きだから。／ユイカ」【神楽めあ/緑仙】",
+    "channel": "神楽めあ / KaguraMea",
+    "date": "2026-03-26",
+    "thumbnail": "https://i.ytimg.com/vi/kdt77GIxwnY/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲","神楽めあ",
+      "歌動画"
+    ],
+    "tags": ["踊","カバー"],
+    "songs": [
+        {
+      "title": "好きだから。",
+      "artist": "ユイカ",
+      "start": 0
+        }
+    ]
+  },
+　{
+    "youtubeId": "B1mE-liok6w",
+    "title": "【FULL】アノニマスファンフアレ/ツミキ 【Covered by 緑仙 × 七海うらら】",
+    "channel": "七海うらら*歌channel",
+    "date": "2026-03-27",
+    "thumbnail": "https://i.ytimg.com/vi/B1mE-liok6w/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲","七海うらら",
+      "歌動画"
+    ],
+    "tags": ["歌","カバー"],
+    "songs": [
+        {
+      "title": "アノニマスファンフアレ",
+      "artist": "ツミキ",
+      "start": 0
+        }
+    ]
+  },
+    {
     "youtubeId": "JUf2_y3KOKI",
     "title": "ワンマンライブ「緑一色」映像一部公開！ #イツライ",
     "channel": "緑仙 / Ryushen",

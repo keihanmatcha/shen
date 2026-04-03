@@ -1,19 +1,5 @@
 [
   {
-    "youtubeId": "JFr3k8B3Zmk",
-    "title": "歌枠 ｜お待たせしました‼激アツ‼スパロボ縛りカラオケ配信🎤",
-    "channel": "緑仙 / Ryushen",
-    "date": "2026-04-01",
-    "thumbnail": "https://i.ytimg.com/vi/JFr3k8B3Zmk/mqdefault.jpg",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [
-      "歌配信"
-    ],
-    "songs": []
-  },
-  {
     "youtubeId": "yD1bzE1WPcE",
     "title": "新衣装お披露目 ｜ 七次元生徒会の書記、仙河緑です。",
     "channel": "緑仙 / Ryushen",
@@ -30,6 +16,33 @@
       "叶",
       "周央サンゴ",
       "樋口楓"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "fyAgbPtioCU",
+    "title": "｢Reject it now!｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-02",
+    "thumbnail": "https://i.ytimg.com/vi/fyAgbPtioCU/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "JFr3k8B3Zmk",
+    "title": "歌枠 ｜お待たせしました‼激アツ‼スパロボ縛りカラオケ配信🎤",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-01",
+    "thumbnail": "https://i.ytimg.com/vi/JFr3k8B3Zmk/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
     ],
     "songs": []
   },
@@ -25416,7 +25429,8 @@
     "date": "2021-11-04",
     "thumbnail": "https://i.ytimg.com/vi/dQ1O4mYEbBQ/mqdefault.jpg",
     "category": [
-      "公式切り抜き"
+      "公式切り抜き",
+      "歌動画"
     ],
     "keywords": [],
     "songs": []

@@ -1,2145 +1,265 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="google-site-verification" content="Rjf114bI_Qo6Qm75mh3jmD1U0pkZ6s46jKRuLDgcPdk" />
-  <meta name="description" content="このサイト「シェンシェン」は、緑仙さんの楽曲や出演動画を整理した非公式ファンサイトです。">
-  <meta name="keywords" content="緑仙, Vtuber, にじさんじ, 曲検索, 歌, ファンサイト">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>シェンシェン｜緑仙非公式ファンサイト</title>
-  <meta name="theme-color" content="#2b93a3" />
-
-  <link rel="canonical" href="https://keihanmatcha.github.io/shen/">
-
-  <link rel="icon" href="images/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="images/Midori-icon.png" sizes="512x512">
-  <link rel="apple-touch-icon" href="images/Midori-icon.png">
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="シェンシェン｜緑仙非公式ファンサイト">
-  <meta property="og:title" content="シェンシェン｜緑仙非公式ファンサイト">
-  <meta property="og:description" content="緑仙の曲・動画検索サイト。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
-  <meta property="og:url" content="https://keihanmatcha.github.io/shen/">
-  <meta property="og:image" content="https://keihanmatcha.github.io/shen/images/ogp.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="シェンシェン｜緑仙非公式ファンサイト">
-  <meta name="twitter:description" content="緑仙の曲・動画検索サイト。曲名・アーティスト・動画タイトル・タグから素早く探せます。">
-  <meta name="twitter:url" content="https://keihanmatcha.github.io/shen/">
-  <meta name="twitter:image" content="https://keihanmatcha.github.io/shen/images/ogp.png">
-
-  <link rel="manifest" href="./manifest.json">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"シェンシェン｜緑仙非公式ファンサイト",
-    "url":"https://keihanmatcha.github.io/shen/",
-    "potentialAction":{
-      "@type":"SearchAction",
-      "target":"https://keihanmatcha.github.io/shen/song/?q={search_term_string}",
-      "query-input":"required name=search_term_string"
-    }
-  }
-  </script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>緑仙 企画神籤｜シェンシェン</title>
+  <link rel="icon" href="../images/favicon.ico" sizes="any">
   <style>
-    :root{
-      /* 中華風カラーパレット */
+    /* ===== メインサイト共通変数・基本スタイル ===== */
+    :root {
       --fg: #37474f;          /* 墨色 */
       --muted: #78909c;       /* 鈍い青緑 */
-      --accent: #00695c;      /* 翡翠（ヒスイ）色：メインカラー */
+      --accent: #00695c;      /* 翡翠（ヒスイ）色 */
       --accent-light: #4db6ac;
-      --gold: #d4af37;        /* 金色：装飾用 */
-      --red: #c62828;         /* 朱色：ポイント */
-      --bg: #fdfbf7;          /* 生成り色：紙のような背景 */
+      --gold: #d4af37;        /* 金色 */
+      --red: #c62828;         /* 朱色 */
+      --bg: #fdfbf7;          /* 生成り色 */
       --panel: #ffffff;
       --border: #cfd8dc;
-      --ring: rgba(0, 105, 92, 0.3);
       --font-base: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
     }
-    *{ box-sizing:border-box }
 
+    *, *::before, *::after { box-sizing: border-box; }
+    
     html, body {
-      margin: 0;
-      color: var(--fg);
+      margin: 0; padding: 0;
+      background-color: var(--bg); color: var(--fg);
       font-family: var(--font-base);
-      line-height: 1.75;
-      background-color: var(--bg);
+      width: 100%; overflow-x: hidden;
     }
-    
-    /* 背景にうっすら中華・和風パターンを追加 (CSSのみで描画) */
+
+    /* 背景パターン（メインサイト継承） */
     body {
-    background-image: 
-      /* 織り目1: 右下がりの細かい線（メインの光沢） */
-      repeating-linear-gradient(
-        135deg, 
-        rgba(212, 175, 55, 0.08) 0px, 
-        rgba(212, 175, 55, 0.08) 1px, 
-        transparent 1px, 
-        transparent 10px
-      ),
-      /* 織り目2: 左下がりのさらに細かい線（繊維の質感） */
-      repeating-linear-gradient(
-        45deg, 
-        rgba(212, 175, 55, 0.05) 0px, 
-        rgba(212, 175, 55, 0.05) 1px, 
-        transparent 1px, 
-        transparent 4px
-      );
-    
-    /* 模様のサイズと位置を指定して反復させる */
-    background-size: 80px 80px, 160px 160px, 160px 160px, 16px 16px, 8px 8px;
-    background-position: 0 0, 0 0, 80px 80px, 0 0, 0 0;
-    
-    /* 背景を固定してスクロール時に高級感を出す */
-    background-attachment: fixed;
-  }
-
-  /* 【変更】模様が文字の邪魔をしないように、上から薄くベース色を重ねる */
-  body::after {
-    content: ""; position: fixed; inset: 0; z-index: -1;
-    /* 透過度を少し上げて、背景の模様をより透けて見せる */
-    background: rgba(253, 251, 247, 0.88); 
-    /* わずかにぼかしを入れて奥行きを出す */
-    backdrop-filter: blur(1px);
-  }
-
-    /* モバイルのカクつき回避 */
-    @media (max-width: 980px){
-      body{ background-attachment: scroll; }
+      background-image: 
+        repeating-linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0px, rgba(212, 175, 55, 0.08) 1px, transparent 1px, transparent 10px),
+        repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.05) 0px, rgba(212, 175, 55, 0.05) 1px, transparent 1px, transparent 4px);
+      background-size: 80px 80px, 160px 160px;
+      background-attachment: fixed;
+      position: relative;
     }
 
-    a,button{ transition:.2s ease }
-    :focus-visible{ outline:2px solid var(--gold); outline-offset:2px; border-radius:4px }
+    /* 薄いベース色を重ねるオーバーレイ */
+    body::after {
+      content: ""; position: fixed; inset: 0; z-index: -1;
+      background: rgba(253, 251, 247, 0.9); 
+      backdrop-filter: blur(1px);
+    }
 
-    /* Header: 翡翠色のグラデーションと金のライン */
-    header{
-      position:sticky; top:0; z-index:10;
+    /* ヘッダー（メインサイト継承） */
+    header {
+      position: sticky; top: 0; z-index: 100;
       background: linear-gradient(to right, #004d40, #00695c);
-      border-bottom: 2px solid var(--gold); /* 金の境界線 */
+      border-bottom: 2px solid var(--gold);
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .wrap{ max-width:1000px; margin-inline:auto; padding:12px 16px }
-    .row{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
-    
-    .brand { 
-        display: flex; align-items: center; gap: 12px;
-        font-weight: 700; 
-        color: #fff; 
-        text-decoration: none; 
-        font-size: 20px; 
-        letter-spacing: 0.05em;
+    header .wrap {
+      max-width: 1000px; margin-inline: auto; padding: 12px 16px;
+      display: flex; justify-content: space-between; align-items: center;
     }
-    
-    .logo-icon {
-        width: 36px; height: 36px; 
-        border-radius: 6px; /* 角を少し残す */
-        border: 1px solid var(--gold); /* 金枠 */
-        object-fit: cover;
-        background: #fff; 
-    } 
-    .brand span{ text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+    .brand { font-weight: 700; color: #fff; text-decoration: none; font-size: 20px; display: flex; align-items: center; gap: 10px; }
+    .nav-links { display: flex; gap: 10px; }
+    .nav-links a { 
+      font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.4); border-radius: 2px;
+    }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); border-color: var(--gold); }
 
-    /* Hero */
-    .hero { padding: 32px 0 20px; text-align: center; } /* 上下の余白を減らす */
-    .title{ 
-      font-size:32px; margin:0 0 12px; 
-      color: var(--accent);
-      border-bottom: 1px solid var(--gold);
-      display: inline-block;
-      padding-bottom: 8px;
-    }
-    .lead{ color:var(--muted); margin:0 0 28px; font-weight: 500; }
-    
-    /* 検索ボックス: 中華窓のような枠 */
-    .search{
-      display:flex; gap:8px; align-items:center; flex-wrap:wrap;
-      background:#fff; 
-      border: 3px double var(--accent); /* 二重線 */
-      border-radius: 4px; /* 角ばらせる */
-      padding: 8px;
-      box-shadow: 0 4px 15px rgba(0, 105, 92, 0.1);
-      max-width: 600px; margin: 0 auto;
-    }
-    .search input{ 
-      flex:1; min-width:200px; border:0; outline:0; 
-      font-size:16px; padding:10px 12px; font-family: var(--font-base); 
-      color: var(--fg);
-    }
-    .btn{
-      appearance:none; border:0; cursor:pointer;
-      padding:10px 24px; border-radius:2px; font-weight:600; font-family: var(--font-base);
-      background: var(--red); /* 朱色ボタン */
-      color: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .btn:hover{ background: #b71c1c; transform: translateY(-1px); }
-    
-    .btn.secondary{
-      background: transparent; 
-      color: var(--accent); 
-      border: 1px solid var(--accent);
-      box-shadow: none;
-    }
-    .btn.secondary:hover { background: rgba(0, 105, 92, 0.05); }
-
-    /* セクション見出し: 雲や雷文をイメージした装飾 */
-    .p-section{ margin:32px 0 }
-    .p-section .bar{
-      text-align: center;
-      margin-bottom: 24px;
-      position: relative;
-    }
-    .p-section .bar h2{ 
-      margin:0; font-size:24px; 
-      color: var(--accent);
-      display: inline-block;
-      padding: 0 20px;
-      background: var(--bg); /* 線の上に文字を乗せるため背景色と同じにする */
+    /* おみくじメインエリア */
+    .omikuji-container {
       position: relative; z-index: 1;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-    }
-    /* 見出しの両脇に線を引く */
-    .p-section .bar::before {
-      content: ""; position: absolute; top: 50%; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      z-index: 0;
-    }
-    /* 見出しの下に英語装飾などを入れたい場合はここ */
-
-    .p-section .body{ max-width:800px; margin: 0 auto; }
-    .p-section p{ margin:10px 0; line-height:1.65; font-size:16px; color: #455a64; text-align: justify; }
-    /* リンク群 (タグなど) */
-    .links {
-      display:flex; gap:10px; flex-wrap:wrap;
-      margin: 16px 0; justify-content: center;
-    }
-    .links a {
-      text-decoration:none;
-      padding:6px 14px;
-      border: 1px solid var(--accent-light);
-      border-radius: 2px; /* 角ばらせる */
-      background: #fff;
-      color: var(--accent);
-      font-size: 14px;
-      font-weight: 600;
-    }
-    .links a:hover { 
-      background: var(--accent); color: #fff; border-color: var(--accent); 
-    }
-
-    /* 埋め込み */
-    .embed { margin: 20px 0; border: 4px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 4px; }
-    
-    /* Layout */
-    .layout{
-      display:grid;
-      grid-template-columns: 260px 1fr;
-      gap: 32px;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px;
+      max-width: 600px; margin: 40px auto; padding: 20px;
+      text-align: center; min-height: 80vh;
+      display: flex; flex-direction: column; align-items: center;
     }
     
-    /* Sidebar: 巻物・短冊風 */
-    .sidebar{
-      position: sticky; top: 80px; align-self: start;
-      height: max-content; padding: 20px;
-      border: 1px solid var(--gold); /* 金枠 */
-      background: #fff;
-      box-shadow: 0 4px 0 rgba(212, 175, 55, 0.2); /* 下に厚みを出す */
-      border-radius: 2px;
+    .omikuji-title {
+      font-size: 32px; margin: 0 0 12px; color: var(--accent);
+      border-bottom: 1px solid var(--gold); display: inline-block; padding-bottom: 8px;
     }
-    .sb-title{ 
-      font-weight:800; letter-spacing:.1em; 
-      color: var(--accent); 
-      border-bottom: 2px dotted var(--gold);
-      padding-bottom: 8px; margin-bottom: 16px;
-      text-align: center;
+
+    /* 朱色のガラガラボタン */
+    .draw-btn {
+      appearance: none; border: 0; cursor: pointer;
+      background: var(--red); color: #fff;
+      font-size: 18px; font-weight: 700; font-family: var(--font-base);
+      padding: 20px 50px; border-radius: 4px;
+      box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+      transition: .2s ease;
+      display: flex; flex-direction: column; align-items: center; gap: 5px;
+      border: 1px solid var(--gold);
     }
-    .sb-nav{ display:flex; flex-direction:column; gap:10px }
-    .sb-item{
-      display:flex; align-items:center; gap:12px;
-      text-decoration:none; padding:12px 16px; 
-      border: 1px solid transparent;
-      background: #fcfcfc; color: var(--fg); font-weight: 600;
-      transition: .3s;
-      border-left: 3px solid #cfd8dc; /* 左にアクセント線 */
+    .draw-btn:hover { background: #b71c1c; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(198, 40, 40, 0.4); }
+    .draw-btn:active { transform: scale(0.95); }
+    .draw-btn span { font-size: 12px; opacity: 0.8; font-weight: normal; }
+
+    /* 結果表示カード（翡翠色と金の装飾） */
+    .result-card {
+      margin-top: 40px; width: 100%;
+      background: #fff; border: 1px solid var(--gold);
+      border-radius: 4px; overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 105, 92, 0.15);
+      opacity: 0; transform: translateY(20px);
+      transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      display: none; position: relative;
     }
-    .sb-item:hover{ 
-      background: #e0f2f1; 
-      border-left-color: var(--accent);
-      color: var(--accent);
-      padding-left: 20px; /* ホバーで少し動く */
-    }
-    .sb-item.primary{ 
-      background: #fff; 
-      border: 1px solid var(--accent);
-      border-left: 4px solid var(--accent);
-      color: var(--accent);
-    }
-    .sb-item.primary:hover { background: var(--accent); color: #fff; }
+    .result-card.show { display: block; opacity: 1; transform: translateY(0); }
     
-    .sb-ic{ width:18px; height:18px; fill: currentColor }
-    .sb-note{ margin-top:20px; color: var(--muted); font-size:12px; text-align: center; }
-
-    /* プロフィール用：説明文と動画を横並びにする */
-    .profile-layout {
-      display: grid;
-　　  grid-template-columns: 1fr 300px; /* 左:文章(可変) / 右:動画(固定) */
- 　　 gap: 24px;
- 　　 align-items: start;
-　　}
-    /* ユニットごとのカードデザイン */
-    .unit-item {
-      background: #fff;
-      border: 1px solid var(--border); /* または border: 1px solid #cfd8dc; */
-      border-radius: 8px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .unit-item:hover {
-      border-color: var(--gold);
-      box-shadow: 0 4px 12px rgba(0, 105, 92, 0.1);
-      transform: translateY(-2px);
+    /* カードの四隅に装飾 */
+    .result-card::after {
+      content: ""; position: absolute; inset: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      pointer-events: none;
     }
 
-/* ユニット名 */
-.unit-title {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--accent);
-  border-bottom: 1px dashed var(--gold);
-  padding-bottom: 8px;
-  margin: 0;
-}
-
-/* 説明文 */
-.unit-desc {
-  font-size: 14px;
-  color: var(--fg);
-  line-height: 1.6;
-  margin: 0;
-  flex-grow: 1; /* 内容量が違ってもボタン位置を揃えるため */
-}
-
-/* 埋め込み調整 */
-.unit-item .embed {
-  margin: 0;
-  border: none;
-  box-shadow: none;
-}
-
-/* 埋め込み動画・音楽用：グリッド配置 */
-.grid-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 幅に合わせて自動折り返し */
-  gap: 16px;
-  margin: 16px 0;
-}
-/* --- 動画再生用モーダル（ポップアップ） --- */
-.video-modal {
-  position: fixed; inset: 0; z-index: 10000;
-  background: rgba(0,0,0,0.85);
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; pointer-events: none; transition: opacity 0.3s;
-}
-.video-modal.active { opacity: 1; pointer-events: auto; }
-
-.video-modal-content {
-  position: relative; width: 90%; max-width: 800px; aspect-ratio: 16/9;
-  background: #000; border-radius: 12px; overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.video-modal-close {
-  position: absolute; top: -40px; right: 0;
-  color: #fff; font-size: 30px; cursor: pointer;
-  background: transparent; border: none;
-}
-
-/* モバイル対応：画面が狭いときは縦並びに戻す */
-@media (max-width: 768px) {
-  .profile-layout { grid-template-columns: 1fr; }
-  .grid-gallery { grid-template-columns: 1fr; }
-}
-
-    /* Main Content */
-    .content{ min-width:0 }
-
-    /* Mobile Sidebar */
-    .sb-toggle{
-      display:none; appearance:none; border:0; background:transparent; font-size:24px;
-      padding:4px 8px; color: #fff; border: 1px solid rgba(255,255,255,0.3); border-radius: 4px;
+    .result-header {
+      background: var(--accent); color: #fff; padding: 12px;
+      font-size: 12px; letter-spacing: 0.2em; font-weight: 700;
     }
-    @media (max-width: 980px){
-      .layout{ grid-template-columns: 1fr; gap:24px; padding-inline: 16px }
-      .sb-toggle{ display:inline-block }
-      .sidebar{
-        position: fixed; top: 0; left: 0; bottom: 0; width: 280px;
-        margin: 0; border-radius: 0; border: none; border-right: 2px solid var(--gold);
-        transform: translateX(-100%);
-        transition: .3s cubic-bezier(0.4, 0, 0.2, 1); z-index: 50;
-        box-shadow: 10px 0 30px rgba(0,0,0,0.3);
-        overflow-y: auto;
-      }
-      .sidebar.open{ transform:translateX(0); }
-      
-      /* オーバーレイ */
-      .sidebar-overlay {
-        position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40;
-        opacity: 0; pointer-events: none; transition: .3s;
-      }
-      .sidebar.open + .sidebar-overlay { opacity: 1; pointer-events: auto; }
-    }
-    @media (max-width: 768px) {
-    /* 既存のグリッド設定（縦並び）を上書きして横並びにする */
-    #sec-unit .grid-gallery {
-      display: flex;                 /* Flexboxに変更 */
-      grid-template-columns: unset;  /* グリッド解除 */
-      overflow-x: auto;              /* 横スクロールを許可 */
-      scroll-snap-type: x mandatory; /* スクロール時に要素をスナップ（吸着）させる */
-      gap: 16px;                     /* カード間の隙間 */
-      padding-bottom: 24px;          /* 下部にスクロールバー用の余白 */
-      
-      /* 慣性スクロールを有効化（iOS用） */
-      -webkit-overflow-scrolling: touch;
-    }
-
-    /* 各ユニットカードの設定 */
-    #sec-unit .unit-item {
-      flex: 0 0 85%;             /* 画面幅の85%を使って表示（次のカードをチラ見せする） */
-      width: 85%;                /* 幅指定 */
-      scroll-snap-align: center; /* 画面の中央で止まるようにする */
-    }
-
-    /* 最初のカードと最後のカードが中央に来るように余白調整 */
-    #sec-unit .grid-gallery::before,
-    #sec-unit .grid-gallery::after {
-      content: "";
-      display: block;
-      flex: 0 0 7.5%; /* (100% - 85%) ÷ 2 の余白を両端に作る */
-    }
-  }
-
-
-    /* Footer */
-    footer{
-      margin-top: 60px;
-      padding: 40px 16px;
-      font-size: 13px;
-      color: #eceff1;
-      text-align: center;
-      background: #263238; /* 濃いグレー */
-      border-top: 4px solid var(--gold);
-    }
-    footer a { color: #80cbc4; }
-
-    /* Reel (Horizontal Scroll) */
-    .reel-group { margin-bottom: 40px; }
-    .reel-cat-title {
-      font-size: 20px; font-weight: 700; color: var(--accent);
-      margin: 0 0 16px 0; padding-left: 12px;
-      border-left: 4px double var(--red); /* 朱色の二重線 */
-      display: flex; align-items: center; gap: 10px;
-    }
-    .reel-cat-en { 
-        font-size: 14px; color: var(--gold); font-family: sans-serif; letter-spacing: 0.1em; text-transform: uppercase;
-    }
-
-    .reel-scroll {
-      display: flex; gap: 16px; overflow-x: auto;
-      padding: 4px 4px 24px;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch; 
-    }
-    .reel-scroll::-webkit-scrollbar { height: 6px; }
-    .reel-scroll::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
-    .reel-scroll::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
-
-    .reel-item {
-      flex: 0 0 260px; text-decoration: none;
-      background: #fff; 
-      border: 1px solid var(--border);
-      border-radius: 2px; /* 角を立てる */
-      overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: flex; flex-direction: column;
-      position: relative;
-    }
-    /* カードの四隅に装飾線（疑似要素で簡易表現） */
-    .reel-item::after {
-        content: ""; position: absolute; inset: 4px; 
-        border: 1px solid rgba(212, 175, 55, 0.3); /* 薄い金の枠 */
-        pointer-events: none;
-    }
-
-    .reel-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0, 77, 64, 0.15);
-      border-color: var(--gold);
-    }
-    .reel-item:hover::after { border-color: var(--gold); }
-
-    .reel-thumb-wrap { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; }
-    .reel-thumb { width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: opacity 0.2s; }
-    .reel-item:hover .reel-thumb { opacity: 1; }
+    .result-body { padding: 24px; position: relative; z-index: 1; }
+    .res-title { font-size: 20px; font-weight: 800; color: var(--fg); margin-bottom: 8px; line-height: 1.5; }
+    .res-category { font-size: 14px; color: var(--accent); margin-bottom: 20px; font-weight: 700; }
     
-    .reel-play {
-      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-      width: 40px; height: 40px; background: rgba(198, 40, 40, 0.85); /* 朱色 */
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      color: #fff; pointer-events: none; border: 2px solid #fff;
+    .video-frame {
+      width: 100%; aspect-ratio: 16/9; background: #000;
+      border: 2px solid var(--gold); border-radius: 2px; overflow: hidden; margin-bottom: 20px;
+    }
+    .video-frame iframe { width: 100%; height: 100%; border: 0; }
+
+    .video-meta {
+      font-size: 13px; color: var(--muted); text-align: center;
+      padding: 12px; border-top: 1px dotted var(--gold);
     }
 
-    .reel-info { padding: 14px 14px; flex: 1; display: flex; flex-direction: column; z-index: 1; }
-    .reel-v-title {
-      font-size: 15px; font-weight: 700; line-height: 1.6; color: var(--fg);
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-      margin-bottom: 8px; font-feature-settings: "palt";
+    .share-area { margin-top: 24px; }
+    .tweet-btn {
+      display: inline-block; text-decoration: none;
+      background: #1DA1F2; color: #fff; padding: 12px 24px;
+      border-radius: 4px; font-weight: 700; font-size: 14px;
+      box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
     }
-    .reel-item:hover .reel-v-title { color: var(--accent); }
-    .reel-meta { margin-top: auto; font-size: 11px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
-    
+
     @media (max-width: 600px) {
-      .reel-item { flex: 0 0 220px; }
-      .reel-v-title { font-size: 14px; }
+      .omikuji-title { font-size: 26px; }
+      .draw-btn { width: 100%; padding: 16px; }
     }
-
-    /* Embed iframe settings */
-    .embed iframe{ display:block; width:100%; max-width:100%; border:0; }
-    .embed iframe[src*="youtube.com"],
-    .embed iframe[src*="youtube-nocookie.com"],
-    .embed iframe[src*="vimeo.com"]{ aspect-ratio:16/9; height:auto; }
-    .embed iframe[src*="open.spotify.com"]{ aspect-ratio:auto; height:352px; }
-
-    /* Loading Animation (色を翡翠色に変更) */
-    .flower-spinner, .flower-spinner * { box-sizing: border-box; }
-    .flower-spinner { height: 70px; width: 70px; display: flex; flex-direction: row; align-items: center; justify-content: center; }
-    .flower-spinner .dots-container { height: calc(70px / 7); width: calc(70px / 7); }
-    .flower-spinner .smaller-dot { background: var(--accent); height: 100%; width: 100%; border-radius: 50%; animation: flower-spinner-smaller-dot-animation 2.5s 0s infinite both; }
-    .flower-spinner .bigger-dot { background: var(--accent); height: 100%; width: 100%; padding: 10%; border-radius: 50%; animation: flower-spinner-bigger-dot-animation 2.5s 0s infinite both; }
-    @keyframes flower-spinner-bigger-dot-animation {
-      0% { box-shadow: var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px; }
-      50% { transform: rotate(180deg); }
-      25%, 75% { box-shadow: var(--accent) 26px 0px 0px, var(--accent) -26px 0px 0px, var(--accent) 0px 26px 0px, var(--accent) 0px -26px 0px, var(--accent) 19px -19px 0px, var(--accent) 19px 19px 0px, var(--accent) -19px -19px 0px, var(--accent) -19px 19px 0px; }
-      100% { transform: rotate(360deg); box-shadow: var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px; }
-    }
-    @keyframes flower-spinner-smaller-dot-animation {
-      0% { box-shadow: var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px; }
-      25%, 75% { box-shadow: var(--accent) 14px 0px 0px, var(--accent) -14px 0px 0px, var(--accent) 0px 14px 0px, var(--accent) 0px -14px 0px, var(--accent) 10px -10px 0px, var(--accent) 10px 10px 0px, var(--accent) -10px -10px 0px, var(--accent) -10px 10px 0px; }
-      100% { box-shadow: var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px, var(--accent) 0px 0px 0px; }
-    }
-    #loading-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg); z-index: 9999; display: flex; justify-content: center; align-items: center; transition: opacity 0.5s, visibility 0.5s; }
-    #loading-wrapper.loaded { opacity: 0; visibility: hidden; }
-    /* --- RADIOセクション用デザイン --- */
-    /* 重要なリンクのボタングループ */
-    .radio-top-links {
-      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px;
-    }
-    
-    /* アーカイブリストの枠（スクロールエリア） */
-    .radio-archive-box {
-      background: #fff;
-      border: 2px solid var(--accent); /* 枠線 */
-      border-radius: 4px;
-      height: 300px;        /* ★ここで高さを固定 */
-      overflow-y: auto;     /* ★中身が溢れたらスクロール */
-      box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
-      margin-bottom: 24px;
-    }
-    
-    /* リストのデザイン */
-    .radio-list {
-      list-style: none; margin: 0; padding: 0;
-    }
-    .radio-list li {
-      border-bottom: 1px solid #eceff1;
-    }
-    .radio-list li:last-child { border-bottom: none; }
-    
-    .radio-list a {
-      display: block;
-      padding: 12px 16px;
-      text-decoration: none;
-      color: var(--fg);
-      font-size: 14px;
-      transition: background 0.2s;
-    }
-    .radio-list a:hover {
-      background-color: #e0f2f1; /* ホバー時に薄い翡翠色 */
-      color: var(--accent);
-      padding-left: 20px; /* 少し右に動くアニメーション */
-    }
-    
-    /* ゲスト名などを太字にするなどの調整 */
-    .radio-date { font-size: 11px; color: var(--muted); margin-right: 8px; }
-    
-    /* スクロールバーのカスタマイズ（翡翠色に） */
-    .radio-archive-box::-webkit-scrollbar { width: 8px; }
-    .radio-archive-box::-webkit-scrollbar-track { background: #f1f1f1; }
-    .radio-archive-box::-webkit-scrollbar-thumb { background: var(--accent-light); border-radius: 4px; }
-    .radio-archive-box::-webkit-scrollbar-thumb:hover { background: var(--accent); }
   </style>
 </head>
 <body>
-  
-  <div id="loading-wrapper">
-    <div class="flower-spinner">
-      <div class="dots-container">
-        <div class="bigger-dot">
-          <div class="smaller-dot"></div>
-        </div>
-      </div>
-     </div>
-   </div>
-　<div id="video-modal" class="video-modal">
-      <div class="video-modal-content">
-        <button id="modal-close" class="video-modal-close">×</button>
-        <iframe id="modal-iframe" width="100%" height="100%" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+
+<header>
+  <div class="wrap">
+    <a href="../index.html" class="brand"><span>シェンシェン</span></a>
+    <nav class="nav-links">
+      <a href="../archives/index.html">動画を探す</a>
+      <a href="../songs/index.html">曲を探す</a>
+    </nav>
   </div>
-  <header class="site-header">
-    <div class="wrap row">
-      <a class="brand" href="archives/omikuji.html" aria-label="おみくじを引く">
-        <img src="../images/Midori-icon.png" alt="シェンシェン" class="logo-icon">
-        <span>シェンシェン｜緑仙非公式ファンサイト</span>
-      </a>
-      <button class="sb-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="メニューを開閉">☰</button>
+</header>
+
+<main class="omikuji-container">
+  <h1 class="omikuji-title">企画神籤</h1>
+  <p class="lead" style="margin-bottom: 40px; color: var(--muted); font-weight: 500;">
+    緑仙がこれまでに実施した企画や雑談から、<br>
+    今日のあなたにぴったりの配信を提案します。
+  </p>
+
+  <button id="drawBtn" class="draw-btn">
+    神籤を引く
+    <span>Click to Play</span>
+  </button>
+
+  <div id="resultCard" class="result-card">
+    <div class="result-header">TODAY'S ARCHIVE</div>
+    <div class="result-body">
+      <div id="resTitle" class="res-title"></div>
+      <div id="resCategory" class="res-category"></div>
+      
+      <div class="video-frame">
+        <iframe id="ytFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+      
+      <div class="video-meta">
+        <span id="resDate"></span>
+      </div>
+
+      <div class="share-area">
+        <a id="tweetBtn" href="#" target="_blank" class="tweet-btn">𝕏 で結果をポストする</a>
+      </div>
     </div>
-  </header>
-
-  <div class="layout">
-    <aside id="sidebar" class="sidebar" aria-label="サイドバー">
-      <div class="sb-title">LINKS</div>
-      <nav class="sb-nav">
-        <a class="sb-item" href="https://x.com/midori_2434" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M18 2h3l-6.5 7.4L22 22h-7.5l-4.7-6.6L4 22H1l7-8.1L2 2h7.5l4.3 6.1L18 2Z"/></svg>
-          <span>Twitter (X)</span>
-        </a>
-        <a class="sb-item" href="https://www.youtube.com/@Ryushen" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2 31 31 0 0 0 1.8 12a31 31 0 0 0 .6 4.8 3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.1c.4-1.6.6-3.2.6-4.8s-.2-3.2-.6-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
-          <span>YouTube</span>
-        </a>
-        <a class="sb-item" href="https://lit.link/en/ryushen2434" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M21.6 7.2a3 3 0 0 0-2.1-2.1C17.7 4.5 12 4.5 12 4.5s-5.7 0-7.5.6A3 3 0 0 0 2.4 7.2 31 31 0 0 0 1.8 12a31 31 0 0 0 .6 4.8 3 3 0 0 0 2.1 2.1c1.8.6 7.5.6 7.5.6s5.7 0 7.5-.6a3 3 0 0 0 2.1-2.1c.4-1.6.6-3.2.6-4.8s-.2-3.2-.6-4.8ZM10 15.5v-7l6 3.5-6 3.5Z"/></svg>
-          <span>緑仙のいろいろリンク</span>
-        </a>
-        <a class="sb-item" href="https://music.apple.com/jp/artist/%E7%B7%91%E4%BB%99/1453314533" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-1 5h2v4l3 3-1.4 1.4L11 13.4V8Z"/></svg>
-          <span>Apple Music</span>
-        </a>
-        <a class="sb-item primary" href="songs/index.html">
-          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm-1 5h2v4l3 3-1.4 1.4L11 13.4V8Z"/></svg>
-          <span>曲を探す</span>
-        </a>
-        <a class="sb-item primary" href="archives/index.html">
-          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2ZM11 15.5v-7l6 3.5-6 3.5Z"/></svg>
-          <span>動画を探す</span>
-        </a>
-        <a class="sb-item primary" href="article.html">
-          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2ZM11 15.5v-7l6 3.5-6 3.5Z"/></svg>
-          <span>特集</span>
-        </a>
-        <a class="sb-item" href="about.html">
-          <svg viewBox="0 0 24 24" class="sb-ic" aria-hidden="true" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-          </svg>
-          <span>しぇんしぇんについて</span>
-        </a>
-      </nav>
-      <div class="sb-note">
-        非公式ファンサイトです。<br>ANYCOLOR様および各関係会社様とは無関係です。
-      </div>
-    </aside>
-
-    <main class="content">
-      <section class="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title" class="title">曲を検索</h1>
-        <p class="lead">曲名・アーティスト・動画タイトル・タグから素早く探せます。</p>
-
-        <form class="search" action="songs/index.html" method="GET" role="search" aria-label="サイト内検索">
-          <input id="kw" name="q" type="search" placeholder="例：しあわせクッキー /緑仙 / 歌枠 / オリジナル（ソロ）" autocomplete="off" />
-          <button class="btn" type="submit">検索</button>
-          <a class="btn secondary" href="songs/index.html">曲一覧を見る</a>
-        </form>
-      </section>
-      <section id="sec-intro" class="p-section" aria-labelledby="h-intro">
-        <div class="bar"><h2 id="h-intro">ABOUT</h2></div>
-        <div class="body">
-          <p>このサイトは、<strong>にじさんじ所属Vtuber緑仙さん</strong>の<strong>楽曲や出演動画を整理した非公式ファンサイト</strong>です。</p>
-          <p>にじさんじproject及びANY COLOR株式会社様、その他関係各社様とは一切関係ございません。</p>
-          <p>公式様へのお問い合わせはご遠慮ください。</p>
-        </div>
-      </section>
-
-      <section id="sec-profile" class="p-section" aria-labelledby="h-profile">
-        <div class="bar"><h2 id="h-profile">PROFILE</h2></div>
-        <div class="body profile-layout"> <div>
-          <p>本名は仙河緑/せんがみどり。こう見えて日本人。<br>歌うことが好きで活動を通して友達を作ろうと考えている性別不詳。（<a href="https://www.nijisanji.jp/talents/l/ryushen" target="_blank" style="color:var(--accent);font-weight:bold;">にじさんじ公式紹介文</a>より引用）</p>
-          <p>活動経歴やエピソードは <a href="https://wikiwiki.jp/nijisanji/%E7%B7%91%E4%BB%99" target="_blank" style="color:var(--accent);font-weight:bold;">非公式wiki</a> を参照。多種多様なバーチャルライバー(VTuber)が所属するバーチャルライバープロジェクト「にじさんじ」に所属し、配信活動などを行っている。</p>
-          <div class="links" style="justify-content: flex-start;"> <a href="https://ryushen.pages.dev/" target="_blank">公式サイト</a>
-            <a href="https://www.youtube.com/@Ryushen" target="_blank">YouTube</a>
-            <a href="https://x.com/midori_2434" target="_blank">Twitter (X)</a>
-          </div>
-        </div>
-        <div class="embed" style="margin:0;">
-          <iframe
-        src="https://www.youtube-nocookie.com/embed/_76EQqWJABM?si=SeJtmlCBH7w1r445"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-          </iframe>
-        </div>
-       </div>
-      </section>
-          
-      <section id="sec-music" class="p-section" aria-labelledby="h-music">
-        <div class="bar"><h2 id="h-live">MUSIC</h2></div>
-        <div class="body">
-          <p>2026年４月16日初のフルアルバムリリース決定！</p>
-          <p>UNIVERSAL MUSIC所属。今までにアルバムを4本リリース。妬みや嫉みといったネガティブな感情を肯定してくれるような音楽をつくる。</p>
-          <div class="links">
-            <a href="https://www.universal-music.co.jp/ryushen/" target="_blank">UNIVERSAL MUSIC</a>
-            <a href="https://www.youtube.com/@Ryushen" target="_blank">YouTube</a>
-          </div>
-          <div class="grid-gallery">
-            <div class="embed">
-              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=zGe6_6iFhYHsGPmo&list=OLAK5uy_mR46w9gg9UKnxf0CZ-T7y7IBOirZP0CWs" 
-                title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="embed">
-              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=1qFJFJvwHc-191r0&list=OLAK5uy_lWfTV7Z7sI-yUBpuKOr1k80rLn4ziUNmM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="embed">
-              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=8k3rDAMJe_robDkX&list=OLAK5uy_lK3vYQuMzo3A6i4TXjim4gU6Mk-bNml3k" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="embed">
-              <iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=U8hFYuhN1Rj6ZLoe&list=OLAK5uy_ml6-E5uzCiXykldYd4r7_elhN0eH6an78" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-          </div>
-          <div class="reel-group">
-            <h3 class="reel-cat-title">出演LIVE<span class="reel-cat-en">LIVE</span></h3>
-            <div class="reel-scroll">
-              <a href="https://www.youtube-nocookie.com/embed/rp_2Vw5tcTI" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/rp_2Vw5tcTI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">緑仙 2nd LIVE TOUR映像『Blowin' Wind is blowin』2024年ベガルタ仙台応援ソング　#緑仙　#ベガルタ仙台 　#緑一色</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://www.youtube-nocookie.com/embed/LrC82HUXy0s" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/LrC82HUXy0s/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">緑仙 – ジョークス（#緑仙_1stLIVE Special Edit Ver.）</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://www.youtube-nocookie.com/embed/6Grjw9n2biQ" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/6Grjw9n2biQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">緑仙 Special Live YouTube Music Weekend</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://www.youtube-nocookie.com/embed/t-gw-44jAUw" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/t-gw-44jAUw/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【#Vtuberロック革命2021】まだ夏、終わらせたくないです 【にじさんじ | 緑仙】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://www.youtube-nocookie.com/embed/uMN9Xt5NdWg?si=l7FxUwHY0TDXh46a&amp;start=2161" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/uMN9Xt5NdWg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【ライブ本編】にじさんじ WORLD TOUR 2025 Singin’ in the Rainbow！名古屋公演 / 無料パート #SitR名古屋</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://www.youtube-nocookie.com/embed/e_Ht29q2oQw" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/e_Ht29q2oQw/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">かわE (cover) – 緑仙、花畑チャイカ、町田ちま、ジョー・力一 [Live Video] from #リアルタイムARライブ</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://www.youtube-nocookie.com/embed/TEaxy1ybjo8?si=RbBOKk5PRxmeWV4p&amp;start=3430" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/TEaxy1ybjo8/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【ライブ本編】七次元生徒会！ ~前夜祭ステージ、使わせていただきます！~ / 無料パート #にじフェス2025_前夜祭</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://www.youtube-nocookie.com/embed/nexGfQKkdNY?si=Q4I4--zbGxfJb7JR&amp;start=477" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/nexGfQKkdNY/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【#二十四時限生徒会】Cultural Festival～夜の音楽室にご招待～【音楽ライブ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://www.youtube-nocookie.com/embed/7ZWTpLKtHDQ" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/7ZWTpLKtHDQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">Juvenile Diver (Acoustic Live)</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-            </div>
-          </div>
-          </div>
-      </section>
-      <section id="sec-unit" class="p-section" aria-labelledby="h-unit">
-        <div class="bar"><h2 id="h-unit">UNIT</h2></div>
-        <div class="body">
-          <p>ソロ活動だけでなく、様々なユニット活動も精力的に行っておりその中でユニットオリジナル曲を35曲以上リリースしている。</p>
-          <div class="grid-gallery">
-            <div class="unit-item">
-              <h3 class="unit-title">RainDrops</h3>
-              <p class="unit-desc">
-                にじさんじ所属ライバー6名（える・鈴木勝・緑仙・ジョー・力一・童田明治・三枝明那）による音楽ユニット。2020年春UNIVERSAL MUSICよりメジャーデビュー。
-              </p>
-            <div class="links">
-              <a href="https://www.universal-music.co.jp/raindrops/" target="_blank">公式サイト</a>
-              <a href="https://www.youtube.com/@raindrops200123" target="_blank">YouTube</a>
-            </div>
-              <div class="embed">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/63mQUyT3UKIYrnbUP0ybNf?utm_source=generator" 
-                  width="100%" height="352" frameBorder="0" allowfullscreen="" 
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                </iframe>
-              </div>
-            </div>
-            <div class="unit-item">
-              <h3 class="unit-title">cresc.</h3>
-              <p class="unit-desc">
-                同期二人(シスター・クレア、ドーラ)との3人組ユニット。
-              </p>
-              <a href="https://www.youtube-nocookie.com/embed/6Grjw9n2biQ?start=2293" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/6Grjw9n2biQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">緑仙 Special Live YouTube Music Weekend</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <div class="embed">
-                <iframe style="border-radius:12px" 
-                  src="https://open.spotify.com/embed/artist/57PWScX28Tgwn8U3PAFog4?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
-                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                </iframe>
-              </div>
-            </div>
-            <div class="unit-item">
-              <h3 class="unit-title">こじらせハラスメント</h3>
-              <p class="unit-desc">
-                <a href="https://www.youtube-nocookie.com/xAT-fQ0v4sw" target="_blank" style="color:var(--accent);font-weight:bold;">雑談配信</a>における緑仙の何気ない一言から生まれた弦月藤士郎、相羽ういはとのアイドルユニット。通称「こじハラ」。新体制後は緑仙・弦月の2人がゲストを迎えて楽曲を制作するクリエイターユニットとして活動。
-              </p>
-              <div class="links">
-                <a href="https://www.youtube.com/watch?v=QxnI-0kzW2U&list=PLUDVjoVRQVQeIRJnXirhmDm2pVppfb9MC&index=1" target="_blank">プレイリスト</a>
-              </div>
-              <div class="embed">
-                <iframe style="border-radius:12px" 
-                  src="https://open.spotify.com/embed/artist/3TQQYcA99MmDc3XbbE2MVy?utm_source=generator" width="100%" 
-                  height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
-                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                </iframe>
-              </div>
-            </div>
-            <div class="unit-item">
-              <h3 class="unit-title">七次元生徒会</h3>
-              <p class="unit-desc">
-                にじさんじ所属ライバー（叶、樋口楓、三枝明那、レオス・ヴィンセント、周央サンゴ）と共に「七次元高校の生徒会役員」として活動する生徒会ユニット。活動は企画・歌動画投稿やSNSでの写真・漫画投稿など多岐にわたり、現在毎週水曜19時にコンテンツが投稿されている。
-              </p>
-              <div class="links">
-                <a href="twitter.com/seitokai_07" target="_blank">公式X</a>
-                <a href="https://www.youtube.com/@seitokai_07" target="_blank">YouTube</a>
-              </div>
-              <div class="embed">
-                <iframe style="border-radius:12px" 
-                  src="https://open.spotify.com/embed/artist/2qQFYwjQa8IroaDEpmlfzl?utm_source=generator" 
-                  width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; 
-                  clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                  </iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="sec-other" class="p-section" aria-labelledby="h-other">
-        <div class="bar"><h2 id="h-other">PROJECT</h2></div>
-        <div class="body" style="max-width: 100%;">
-          <p>にじさんじの企画屋といえば緑仙といわれるほど、多くの仲間を巻き込んで数多くの企画を立案・実行してきた。<br>初心者でも入りやすい企画も特徴。</p>
-          <div class="reel-group">
-            <h3 class="reel-cat-title">音楽系<span class="reel-cat-en">Music</span></h3>
-            <div class="reel-scroll">
-              <a href="https://youtu.be/EOoNeaIQmnA" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/EOoNeaIQmnA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">邦ロックリレー配信 ver.加賀美ハヤト</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/60CIG_4Lqdg" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/60CIG_4Lqdg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">#こじハラ 弾き語りボカロ歌配信を弦月くんと</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/HAiwvmm9djs" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/HAiwvmm9djs/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【#緑仙ラップ】第１回　緑仙ラップ選手権【にじさんじ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/o0Mt2sGGaeI" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/o0Mt2sGGaeI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">サマータイムレコード / にじさんじカゲプロ Cover</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/_m2QABH50EI" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/_m2QABH50EI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">歌詞図解クイズ【樋口楓/メリッサ・キンレンカ/緑仙/早瀬走/相羽ういは/三枝明那/でびでび・でびる】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/ZJMo8VzWD0U" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/ZJMo8VzWD0U/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【新番組】ドライブデートの最強プレイリスト決定【 #MIXTAPE2434 】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/so_3w-FOxQc" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/so_3w-FOxQc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【＃テニミュカラオケ大会】ミュージカルテニスの王子様縛りカラオケ【にじさんじ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/KDmMY9hCfJ4?si=cTNBnInqFbmvzU4Y&amp;start=1330" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/KDmMY9hCfJ4/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">こんにちは、初めまして…ですかね？</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="reel-group">
-            <h3 class="reel-cat-title">漫画・アニメ<span class="reel-cat-en">Comic&Anime</span></h3>
-            <div class="reel-scroll">
-              <a href="https://youtu.be/bEDY36KN4DE" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/bEDY36KN4DE/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">マニアックなアニメプレゼン大会</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/gKcUbsUFp6I" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/gKcUbsUFp6I/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">みどりさんといっしょ</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/D5WfKcb7jt4" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/D5WfKcb7jt4/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【#10巻以内漫画語り】本棚に揃えやすい傑作達はこれだ！プレゼン大会【にじさんじ/社築】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/NGWGHnIPQn8" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/NGWGHnIPQn8/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【嘘アニメ・漫画コンテスト】視聴者からもらった珠玉の嘘作品を見よ！【にじさんじ/葉加瀬冬雪・緑仙】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/FD8p-aJa0lo" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/FD8p-aJa0lo/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">第一回にじさんじ乙女ゲーム制作委員会く</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/_bYu4n-s44s" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/_bYu4n-s44s/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">にじさんじライバーがテニスの王子様の学校に通うならどこ？</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/MNFnFo0wjVs" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/MNFnFo0wjVs/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">#ジャンプ黄金期ディベート大会</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-            </div>
-          </div>
-          
-          <div class="reel-group">
-            <h3 class="reel-cat-title">料理<span class="reel-cat-en">Cooking</span></h3>
-            <div class="reel-scroll">
-              <a href="https://youtu.be/h_lVNe7tQaA" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/h_lVNe7tQaA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">にじさんじ料理対決～緑仙＆夢追チーム</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/bnSGY2KM-HA" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/bnSGY2KM-HA/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【 #SEEDs24 】はじめてのおつかい ～皆でカレーの材料を集めよう～【鈴木勝/にじさんじ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/VGS4NRWczJk" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/VGS4NRWczJk/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">#SEEDs24h 料理配信〜夜ご飯作る〜</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/wjHdZ1ugzqE" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/wjHdZ1ugzqE/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【#にじ飯調査隊】第1回 お酒に合うおつまみを探せ‼ ゲスト : でびでび・でびる🍚</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/qsP_F0YBxNg" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/qsP_F0YBxNg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【#にじ飯調査隊】第2回 ジューーーーーーーース王！！！ ゲスト : 弦月藤士郎🍚</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/iTKUw6Tw5Hc" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/iTKUw6Tw5Hc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【#にじ飯調査隊】第3回 エルフに刺さるスイーツを探せ!! ゲスト : える🍚</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/PBJ_8-YHPMc" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/PBJ_8-YHPMc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【#にじ飯調査隊】第4回 見たことない変わった食べ物を探せ‼ ゲスト : ましろ🍚</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="reel-group">
-            <h3 class="reel-cat-title">にじさんじ<span class="reel-cat-en">Nijisanji</span></h3>
-            <div class="reel-scroll">
-              <a href="https://youtu.be/vObC6O4ZkxQ" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/vObC6O4ZkxQ/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">第一回にじメンプロデュース</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/YBr2thBzoEY" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/YBr2thBzoEY/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">にじさんじライバーを敵キャラ化してみた</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/3QZpEOSN9u0" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/3QZpEOSN9u0/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">にじさんじライバー妄想トーナメント戦</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/jP09gbIhWjM" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/jP09gbIhWjM/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【ゆるゆるバラエティ】緑仙、黛、健屋の放課後サボタージュ １限目 #放サボ【にじさんじ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/ZG8RaGu2ZMg" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/ZG8RaGu2ZMg/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">#にじさんじ妹ボイス選手権 ｜ 第一回にじさんじ妹ボイスプロデュース企画</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/x9dEBGdD9mY" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/x9dEBGdD9mY/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">存在しないアニメの声優オーディション開催</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <div class="reel-group">
-            <h3 class="reel-cat-title">緑仙の音楽ダイアログ<span class="reel-cat-en">Ryushen's Music Dialog</span></h3>
-            <div class="reel-scroll">
-              <a href="https://youtu.be/i9IoP-Bm8DI" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/i9IoP-Bm8DI/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【音楽対談】甲斐田晴のソロとユニットでの音楽活動の違いは？ / 歌の収録あるある話 / これからのVtuber音楽について本音で話す！【#緑仙の音楽ダイアログ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/FbDvK8I0_No" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/FbDvK8I0_No/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【音楽対談】星川サラは失恋したときに何の曲を聴くの？ / 合唱コンクールでの苦い思い出 / ソロライブを終えて今の気持ち【#緑仙の音楽ダイアログ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/6UXf9yOOSUE" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/6UXf9yOOSUE/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【音楽対談】完璧主義者のましろと音楽対談！ / 独特な世界観はどこからきてるの？ / 同窓会での黒歴史とは【#緑仙の音楽ダイアログ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/UoGbdS5PCuc" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/UoGbdS5PCuc/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【音楽対談】鏑木ろこってロック好きだよね / 僕達オタクのメンドクサイ話 / 好きだからこそ自分の音楽の向き合い方って？【#緑仙の音楽ダイアログ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/mMbUbTlHIlo" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/mMbUbTlHIlo/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【音楽対談】2時だとか結成秘話 / 苦手だったダンス練習 / 渡会雲雀の今後の目標【#緑仙の音楽ダイアログ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-              <a href="https://youtu.be/DAeF4cgwpow" target="_blank" class="reel-item">
-                <div class="reel-thumb-wrap">
-                  <img src="https://img.youtube.com/vi/DAeF4cgwpow/mqdefault.jpg" alt="" class="reel-thumb" loading="lazy">
-                  <span class="reel-play">▶</span>
-                </div>
-                <div class="reel-info">
-                  <div class="reel-v-title">【音楽対談】SYMPHONIAの裏話 / 配信の自分と歌の自分 / 理想のライブ演出【#緑仙の音楽ダイアログ】</div>
-                  <div class="reel-meta"><span>YouTube</span></div>
-                </div>
-              </a>
-            </div>
-          </div>
-          
-        </div>
-      </section>
-      <section id="sec-radio" class="p-section" aria-labelledby="h-radio">
-        <div class="bar"><h2 id="h-radio">RADIO</h2></div>
-        <div class="body radio-layout">
-          <p>今年の４月から毎週水曜27:30~28:00　TOKOYO FMにてパーソナリティを務める新番組がスタート！！</p>
-          <iframe title="P-CREW Deep・緑仙の終わらないラジオ" src="https://radiko.jp/embed/events?sid=FMT&t=20260402033000&type=default" width="40%" height="288px" allow="clipboard-write *; web-share *;"></iframe>
-          <div class="radio-top-links">
-            <a href="https://www.tfm.co.jp/f/ryushen_radio/message" target="_blank" class="btn">【緑仙の終わらないラジオ】メッセージ入力フォーム</a>
-            <a href="https://https://x.com/ryushen_radio" target="_blank" class="btn secondary">公式 Twitter (X)</a>
-          </div>
-        </div>
-        <div class="body radio-layout">
-          <p>深夜2時ー4時に放送のラジオ番組「Audee Connect」の火曜日パーソナリティを務めていた。<br>歌謡曲からロックまで幅広く曲を嗜む緑仙がテーマに合わせて選曲。普段聞かないような音楽を面白トークと共に味わえる音楽ラジオ番組。</p>
-          <p>ゲストや愉快なスタッフさんとのやりとりが深夜だということを忘れさせて笑いに誘う。音楽やゲストコーナーの他にお悩み相談コーナーもあり恋愛から仕事までりゅーしぇんしぇんせいが解決してくれる。<br><a href="https://audee.jp/program/show/100000456" target="_blank" style="color:var(--accent);font-weight:bold;">Audee Connectホームページ</a> からアーカイブを視聴可能。</p>
-          
-          <div class="radio-top-links">
-            <a href="https://audee.jp/news/show/97260" target="_blank" class="btn">【初めての方へ】 緑仙のAuDee CONNECTとは！？</a>
-            <a href="https://x.com/Tues_AC" target="_blank" class="btn secondary">公式 Twitter (X)</a>
-          </div>
-
-          <div class="embed" style="margin: 0 0 24px 0;">
-            <iframe src="https://www.youtube-nocookie.com/embed/ZjcLDpB16iI?si=SeJtmlCBH7w1r445" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-
-          <h3 style="font-size:18px; color:var(--accent); border-left:4px solid var(--gold); padding-left:10px; margin-bottom:12px;">ゲスト登場回アーカイブ</h3>
-          <div class="radio-archive-box">
-            <ul class="radio-list">
-              <li>
-                <a href="https://audee.jp/voice/show/50887" target="_blank">
-                  <span class="radio-date">2022.10.07</span>
-                  ぼっちぼろまるさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/51215" target="_blank">
-                  <span class="radio-date">2022.10.14</span>
-                  天月さん　コメントゲスト：小林愛香さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/51502" target="_blank">
-                  <span class="radio-date">2022.10.21</span>
-                  6人組実況グループ White TailsのNakamuさん・きりやんさん　コメントゲスト：キュウソネコカミのボーカル・ギターのヤマサキセイヤさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/52175" target="_blank">
-                  <span class="radio-date">2022.10.28</span>
-                  ChiCO with HoneyWorks コメントゲスト：THE SILENT DOG
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/52859" target="_blank">
-                  <span class="radio-date">2022.11.18</span>
-                  FLOWのKEIGOさん・TAKEさん コメントゲスト：LiSAさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/53187" target="_blank">
-                  <span class="radio-date">2022.11.25</span>
-                  超学生さん 選曲：シンガーソングライターの大塚紗英さん
-                </a>
-              </li>
-              <li><a href="https://audee.jp/voice/show/53702" target="_blank">
-                <span class="radio-date">2022.12.09</span>
-                ASP の ユメカ・ナウカナ？さん・チッチチチーチーチーさん 選曲：ClariS
-              </a></li>
-              <li>
-                <a href="https://audee.jp/voice/show/54210" target="_blank">
-                  <span class="radio-date">2022.12.16</span>
-                  音楽家 SASUKEさん 選曲：シンガーソングライターのAimerさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/54410" target="_blank">
-                  <span class="radio-date">2022.12.23</span>
-                  ユアネスのボーカル黒川侑司さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/55742" target="_blank">
-                  <span class="radio-date">2023.01.20</span>
-                  halcaさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/56241" target="_blank">
-                  <span class="radio-date">2023.01.27</span>
-                  梅田サイファーのKOPERUさんとteppeiさん/ 選曲：声優の蒼井翔太さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/56568" target="_blank">
-                  <span class="radio-date">2023.02.03</span>
-                  選曲：声優で歌手の鈴木みのりさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/56792" target="_blank">
-                  <span class="radio-date">2023.02.10</span>
-                  シンガーソングライターのカノエラナさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/57602" target="_blank">
-                  <span class="radio-date">2023.02.24</span>
-                  ゴールデンボンバーの鬼龍院翔さん 選曲：TENDOUJIのボーカル モリタナオヒコさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/57833" target="_blank">
-                  <span class="radio-date">2023.03.03</span>
-                  声優でアーティストの斉藤朱夏さん！
-                </a></li>
-              <li>
-                <a href="https://audee.jp/voice/show/58340" target="_blank">
-                  <span class="radio-date">2023.03.10</span>
-                  THE SUPER FRUITの星野晴海さん・阿部隼大さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/59040" target="_blank">
-                  <span class="radio-date">2023.03.24</span>
-                  世が世なら!!!の内藤五胤さん、添田陵輔さん 選曲：SIX LOUNGE
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/59397" target="_blank">
-                  <span class="radio-date">2023.03.31</span>
-                  アートディレクター 中谷日出さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/59832" target="_blank">
-                  <span class="radio-date">2023.04.07</span>
-                  6人組実況グループ White TailsのNakamuさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/60191" target="_blank">
-                  <span class="radio-date">2023.04.14</span>
-                  ぼっちぼろまるさん 　選曲：声優で歌手の内田雄馬さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/60581" target="_blank">
-                  <span class="radio-date">2023.04.21</span>
-                  男性アイドルグループ PROTOSTAR から戸谷菊之介さん・山口諒太郎さん！
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/60982" target="_blank">
-                  <span class="radio-date">2023.04.28</span>
-                  BEYOOOOONDSの里吉うたのさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/61736" target="_blank">
-                  <span class="radio-date">2023.05.12</span>
-                  歌手の高橋洋子さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/62482" target="_blank">
-                  <span class="radio-date">2023.05.26</span>
-                  BRADIOのボーカル真行寺貴秋さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/63597" target="_blank">
-                  <span class="radio-date">2023.06.16</span>
-                  選曲：声優の進藤あまねさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/63966" target="_blank">
-                  <span class="radio-date">2023.06.23</span>
-                  プロ雀士でＭリーガーの松本吉弘さん / 選曲：声優で歌手の水樹奈々さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/64733" target="_blank">
-                  <span class="radio-date">2023.07.07</span>
-                  「UniteUp!」から　戸谷菊之介さん、助川真蔵さん、masaさん 選曲：音楽ユニットのangela
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/65107" target="_blank">
-                  <span class="radio-date">2023.07.14</span>
-                  アイドル BiSのトギーさん・クレナイ・ワールズエンドさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/65511" target="_blank">
-                  <span class="radio-date">2023.07.21</span>
-                  Merm4idから瀬戸リカ役の平嶋夏海さん 選曲：ドレスコーズの志磨遼平さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/65914" target="_blank">
-                  <span class="radio-date">2023.07.28</span>
-                  音楽プロデューサーでシンガーソングライターのsyudouさん 選曲：アーティストの七海ひろきさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/66270" target="_blank">
-                  <span class="radio-date">2023.08.04</span>
-                  Lenny code fictionの ボーカル 片桐航さん、ギターのソラさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/66673" target="_blank">
-                  <span class="radio-date">2023.08.11</span>
-                  ASPのナ前ナ以さんとチッチチチーチーチーさん 選曲：シンガーソングライターの崎山蒼志さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/67005" target="_blank">
-                  <span class="radio-date">2023.08.18</span>
-                  Helsinki Lambda Clubのボーカル・ギター 橋本薫さん 特別企画：「緑仙サマーボイス公開収録」
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/67364" target="_blank">
-                  <span class="radio-date">2023.08.25</span>
-                  MIMiNARIのshamさん 選曲：中国上海出身の歌手・コスプレイヤー Liyuuさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/68585" target="_blank">
-                  <span class="radio-date">2023.09.15</span>
-                  韻シストからベースのShyoudogさん 選曲：クリエイターズユニット Who-ya ExtendedからWho-yaさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/68953" target="_blank">
-                  <span class="radio-date">2023.09.22</span>
-                  新曲「ヒロイン」の作詞をしてくださったGENICの小池竜暉さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/69359" target="_blank">
-                  <span class="radio-date">2023.09.29</span>
-                  1stミニアルバム『パラグラム』に収録されている「ジガトラ」でコラボした「cadode」のKoshiさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/69782" target="_blank">
-                  <span class="radio-date">2023.10.06</span>
-                  ポルカドットスティングレイのボーカル ギター 雫さん / コメント：クリスハートさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/70141" target="_blank">
-                  <span class="radio-date">2023.10.13</span>
-                  バーチャルクリエイターの夏絵ココさん / 選曲：UNISON SQUARE GARDENの田淵智也さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/70555" target="_blank">
-                  <span class="radio-date">2023.10.20</span>
-                  選曲：アイナ・ジ・エンドさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/70946" target="_blank">
-                  <span class="radio-date">2023.10.27</span>
-                  蓮見翔さん / 選曲：岩崎宏美さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/71352" target="_blank">
-                  <span class="radio-date">2023.11.03</span>
-                  選曲：シンガーソングライターのReolさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/71716" target="_blank">
-                  <span class="radio-date">2023.11.10</span>
-                  音楽ユニット SUIREN / 選曲：フォークシンガーの南こうせつさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/72535" target="_blank">
-                  <span class="radio-date">2023.11.17</span>
-                  シンガーソングライターのAnonymouzさん / 選曲：声優で歌手の岡崎美保さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/73325" target="_blank">
-                  <span class="radio-date">2023.12.08</span>
-                  MagiaStone -まぎすと-から らんまくんさん・はやさかさん / 選曲：YONA YONA WEEKENDERSのボーカル・ギターの磯野くんさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/72535" target="_blank">
-                  <span class="radio-date">2023.11.24</span>
-                  シンガーソングライターのカノエラナさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/73728" target="_blank">
-                  <span class="radio-date">2023.12.15</span>
-                  選曲：ClariSのクララさんとカレンさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/74119" target="_blank">
-                  <span class="radio-date">2023.12.22</span>
-                  選曲：ADのかわいちゃん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/75270" target="_blank">
-                  <span class="radio-date">2024.01.12</span>
-                  声優の千葉翔也さん / 選曲： THE 2 のボーカル 古舘佑太郎さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/76105" target="_blank">
-                  <span class="radio-date">2024.01.19</span>
-                  Mリーガー 中田花奈さん / 選曲：日食なつこさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/76527" target="_blank">
-                  <span class="radio-date">2024.02.02</span>
-                  ヒトリエ / 選曲：FOMAREのアマダシンスケさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/76811" target="_blank">
-                  <span class="radio-date">2024.02.09</span>
-                  D4DJ のユニット燐舞曲から青柳椿役の 加藤里保菜さん / 選曲：森崎ウィンさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/77259" target="_blank">
-                  <span class="radio-date">2024.02.16</span>
-                  選曲 / アーティスト・May’nさん
-                </a>
-              </li> 
-              <li>
-                <a href="https://audee.jp/voice/show/77753" target="_blank">
-                  <span class="radio-date">2024.02.23</span>
-                  ポルカドットスティングレイの雫さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/78041" target="_blank">
-                  <span class="radio-date">2024.03.01</span>
-                  お笑い芸人のサツマカワRPGさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/78613" target="_blank">
-                  <span class="radio-date">2024.03.08</span>
-                  フィロソフィーのダンスの奥津マリさん・木葭ののさん / 選曲：ユアネスの黒川さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/78995" target="_blank">
-                  <span class="radio-date">2024.03.15</span>
-                  SUPERNOVAのユナクさん / 選曲：声優の水瀬いのりさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/79336" target="_blank">
-                  <span class="radio-date">2024.03.22</span>
-                  漫画家の石塚真一先生
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/79767" target="_blank">
-                  <span class="radio-date">2024.03.29</span>
-                  お笑い芸人のサツマカワRPGさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/80207" target="_blank">
-                  <span class="radio-date">2024.04.05</span>
-                  豆柴の大群都内某所 a.k.a. MONSTERIDOLのナオ・オブ・ナオさん・モモチ・ンゲールさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/80577" target="_blank">
-                  <span class="radio-date">2024.04.12</span>
-                  お笑い芸人 トンツカタンのお抹茶さん / 選曲：LiSAさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/81022" target="_blank">
-                  <span class="radio-date">2024.04.19</span>
-                  歌い手の超学生さん / 選曲：声優の直田姫奈さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/81477" target="_blank">
-                  <span class="radio-date">2024.04.26</span>
-                  選曲：声優の富田美憂さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/81940" target="_blank">
-                  <span class="radio-date">2024.05.03</span>
-                  カネヨリマサルからちとせみなさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/82268" target="_blank">
-                  <span class="radio-date">2024.05.10</span>
-                  俳優の和田雅成さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/82580" target="_blank">
-                  <span class="radio-date">2024.05.17</span>
-                  選曲：東京スカパラダイスオーケストラの茂木欣一さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/83073" target="_blank">
-                  <span class="radio-date">2024.05.24</span>
-                  シンガーのツルシマアンナさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/83391" target="_blank">
-                  <span class="radio-date">2024.05.31</span>
-                  選曲：長田悠幸先生と町田一八先生
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/83929" target="_blank">
-                  <span class="radio-date">2024.06.07</span>
-                  超ときめき♡宣伝部の辻野かなみさん・杏ジュリアさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/84323" target="_blank">
-                  <span class="radio-date">2024.06.14</span>
-                  選曲：梅田サイファーのKOPERUさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/84781" target="_blank">
-                  <span class="radio-date">2024.06.21</span>
-                  バンドマスター 奈良悠樹さん・ヒトリエでドラムのゆーまおさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/85577" target="_blank">
-                  <span class="radio-date">2024.07.05</span>
-                  水槽さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/86031" target="_blank">
-                  <span class="radio-date">2024.07.12</span>
-                  クジラ夜の街 ギターボーカルの宮崎一晴さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/86396" target="_blank">
-                  <span class="radio-date">2024.07.19</span>
-                  シンガーソングライターの湯木慧さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/86851" target="_blank">
-                  <span class="radio-date">2024.07.26</span>
-                  歌手の山本譲二さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/87262" target="_blank">
-                  <span class="radio-date">2024.08.02</span>
-                  4ピースバンド muqueのギター Kenichiさん、ベース Lenonさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/87648" target="_blank">
-                  <span class="radio-date">2024.08.11</span>
-                  家の裏でマンボウが死んでるP タカハシヨウさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/88071" target="_blank">
-                  <span class="radio-date">2024.08.18</span>
-                  シンガーソングライターのちゃんゆ胃さん
-                  </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/89259" target="_blank">
-                  <span class="radio-date">2024.09.06</span>
-                  シンガーソングライターのsetaさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/89708" target="_blank">
-                  <span class="radio-date">2024.09.13</span>
-                  選曲：声優の小倉唯さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/90072" target="_blank">
-                  <span class="radio-date">2024.09.20</span>
-                  7人組アイドルグループ ukkaの 葵るりさん・結城りなさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/90977" target="_blank">
-                  <span class="radio-date">2024.10.04</span>
-                  日食なつこさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/91407" target="_blank">
-                  <span class="radio-date">2024.10.11</span>
-                  シンガーソングライター女優の安藤裕子さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/91877" target="_blank">
-                  <span class="radio-date">2024.10.18</span>
-                  選曲：LiSAさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/92318" target="_blank">
-                  <span class="radio-date">2024.10.25</span>
-                  選曲：さとうもかさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/92742" target="_blank">
-                  <span class="radio-date">2024.11.01</span>
-                  選曲：声優アーティストMachicoさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/93125" target="_blank">
-                  <span class="radio-date">2024.11.08</span>
-                  ビレッジマンズストアのボーカル 水野ギイさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/93550" target="_blank">
-                  <span class="radio-date">2024.11.15</span>
-                  シンガーソングライターのカノエラナさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/93907" target="_blank">
-                  <span class="radio-date">2024.11.22</span>
-                  選曲：声優・俳優の前島亜美さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/94414" target="_blank">
-                  <span class="radio-date">2024.11.29</span>
-                  選曲：シンガーソングライターでラッパーのクボタカイさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/94782" target="_blank">
-                  <span class="radio-date">2024.12.06</span>
-                  シンガーでトラックメイカーの水槽さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/95297" target="_blank">
-                  <span class="radio-date">2024.12.13</span>
-                  アーティストの岡田奈々さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/95677" target="_blank">
-                  <span class="radio-date">2024.12.20</span>
-                  選曲：声優 林原めぐみさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/97337" target="_blank">
-                  <span class="radio-date">2025.01.17</span>
-                  4人組バンド トンボコープ 雪村りんさん・林龍之介さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/97693" target="_blank">
-                  <span class="radio-date">2025.01.24</span>
-                  シンガーソングライター 関取花さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/98300" target="_blank">
-                  <span class="radio-date">2025.01.31</span>
-                  シンガーソングライターのFuruiRihoさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/98746" target="_blank">
-                  <span class="radio-date">2025.02.07</span>
-                  可憐なアイボリーから寺本理絵さんと一ノ瀬直緒さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/99069" target="_blank">
-                  <span class="radio-date">2025.02.14</span>
-                  「UniteUP!」から山口諒太郎さん、助川真蔵さん 
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/99959" target="_blank">
-                  <span class="radio-date">2025.02.28</span>
-                  Laura day romance
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/100409" target="_blank">
-                  <span class="radio-date">2025.03.07</span>
-                  選曲：Galileo Galilei
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/100851" target="_blank">
-                  <span class="radio-date">2025.03.14</span>
-                  選曲：DA PUMP ISSAさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/101122" target="_blank">
-                  <span class="radio-date">2025.03.21</span>
-                  選曲：FIVE NEW OLDのボーカル HIROSHIさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/101568" target="_blank">
-                  <span class="radio-date">2025.03.28</span>
-                  YOURNESSの黒川侑司さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/102594" target="_blank">
-                  <span class="radio-date">2025.04.11</span>
-                  水槽さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/103372" target="_blank">
-                  <span class="radio-date">2025.04.25</span>
-                  あらたよ から ひとみさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/104221" target="_blank">
-                  <span class="radio-date">2025.05.09</span>
-                  ASP の モグ・ライアンさん・チッチチチーチーチーさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/104715" target="_blank">
-                  <span class="radio-date">2025.05.16</span>
-                  シンガーソングライターのseizaさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/105125" target="_blank">
-                  <span class="radio-date">2025.05.23</span>
-                  halcaさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/105953" target="_blank">
-                  <span class="radio-date">2025.06.06</span>
-                  シンガーソングライターの音羽-otoha-さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/106400" target="_blank">
-                  <span class="radio-date">2025.06.13</span>
-                  セブンス・ベガのシブヤカンナさん・ハイブリッドマイマイさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/106836" target="_blank">
-                  <span class="radio-date">2025.06.20</span>
-                  戸谷菊之介さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/107244" target="_blank">
-                  <span class="radio-date">2025.06.27</span>
-                  Lenny code fictionから片桐航さん・ソラさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/107655" target="_blank">
-                  <span class="radio-date">2025.07.04</span>
-                  声優の杉山里穂さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/109191" target="_blank">
-                  <span class="radio-date">2025.07.11</span>
-                  弌誠さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/108883" target="_blank">
-                  <span class="radio-date">2025.07.25</span>
-                  カラノアから雄大さん
-                </a>
-              </li>
-               <li>
-                <a href="https://audee.jp/voice/show/109191" target="_blank">
-                  <span class="radio-date">2025.07.31</span>
-                  前島亜美さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/109501" target="_blank">
-                  <span class="radio-date">2025.08.06</span>
-                  Peel the Appleから浅原凛さん・山崎玲奈さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/109885" target="_blank">
-                  <span class="radio-date">2025.08.13</span>
-                  TOOBOEさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/110283" target="_blank">
-                  <span class="radio-date">2025.08.20</span>
-                  ダウ90000から道上珠妃さん・上原祐太さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/110945" target="_blank">
-                  <span class="radio-date">2025.08.20</span>
-                  シンガーソングライターのカノエラナさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/111360" target="_blank">
-                  <span class="radio-date">2025.09.10</span>
-                  halcaさん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/111689" target="_blank">
-                  <span class="radio-date">2025.09.17</span>
-                  水槽さん
-                </a>
-              </li>
-              <li>
-                <a href="https://audee.jp/voice/show/112055" target="_blank">
-                  <span class="radio-date">2025.09.24</span>
-                  お笑い芸人のサツマカワRPGさん
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-    </main>
   </div>
+</main>
 
-  <footer>
-    <p>© <span id="y"></span>しぇんしぇん (Unofficial). このWebサイトは、にじさんじ所属バーチャルライバー 緑仙を応援する非公式曲検索ファンサイトです。</p>
-    <p>京阪抹茶が個人で制作・管理しており、ANYCOLOR株式会社様 及び にじさんじプロジェクト、各種関係会社様とは一切関係ございません。</p>
-    <p>サイトに関するご意見・お問い合わせは <a href="https://x.com/RAOW0607" target="_blank"> 京阪抹茶の X（旧Twitter）</a> にてご連絡ください。</p>
-  </footer>
+<script>
+  let allVideos = [];
+  const files = ['external_videos.json', 'archive_videos.json'];
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('./service-worker.js')
-          .then(function(registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            console.log('ServiceWorker registration failed: ', err);
+  // 1. データの読み込みと「企画・雑談」のフィルタリング
+  Promise.all(files.map(file => fetch(file).then(r => r.json())))
+    .then(dataArray => {
+      const seenVideoIds = new Set();
+
+      dataArray.forEach(data => {
+        data.forEach(v => {
+          if (seenVideoIds.has(v.youtubeId)) return;
+
+          // ターゲットカテゴリー（企画・雑談系）
+          const targetCategories = ["雑談", "企画", "公式企画・番組", "対談"];
+          const hasTargetCategory = v.category && Array.isArray(v.category) && 
+                                    v.category.some(cat => targetCategories.includes(cat));
+          const hasTargetTitle = v.title.includes("雑談") || v.title.includes("企画");
+
+          if (!hasTargetCategory && !hasTargetTitle) return;
+
+          seenVideoIds.add(v.youtubeId);
+
+          allVideos.push({
+            title: v.title,
+            videoId: v.youtubeId,
+            date: v.date,
+            categoryText: v.category ? v.category.join(' / ') : '配信'
           });
-      })
-    }
-    // 年号
-    document.getElementById('y').textContent = new Date().getFullYear();
-
-    // モバイル：サイドバー開閉
-    const btn = document.querySelector('.sb-toggle');
-    const sb  = document.getElementById('sidebar');
-    if (btn && sb) {
-      btn.addEventListener('click', () => {
-        const open = sb.classList.toggle('open');
-        btn.setAttribute('aria-expanded', String(open));
+        });
       });
-    }
-    
-    
-    // ページ（画像など含む）の読み込みが完了したら実行
-    window.addEventListener('load', function() {
-      const loader = document.getElementById('loading-wrapper');
-      
-      // 少しだけ余韻を持たせてから消す（0.5秒後）
-      setTimeout(function() {
-        loader.classList.add('loaded');
-      }, 500); 
-    });
-    
-    // 【保険】もし読み込みが長すぎても5秒後には強制的に消す
-    setTimeout(function() {
-      const loader = document.getElementById('loading-wrapper');
-      if (loader && !loader.classList.contains('loaded')) {
-        loader.classList.add('loaded');
-      }
-    }, 5000);
-    const modal = document.getElementById('video-modal');
-  const iframe = document.getElementById('modal-iframe');
-  const closeBtn = document.getElementById('modal-close');
+      console.log(`企画神籤: ${allVideos.length} 本のアーカイブを読み込みました。`);
+    })
+    .catch(e => console.error(e));
 
-  // "reel-item" クラスを持つリンク、かつ YouTubeのリンクを含むものを対象にする
-  const videoLinks = document.querySelectorAll('.reel-item');
+  // 2. おみくじアクション
+  const btn = document.getElementById('drawBtn');
+  const card = document.getElementById('resultCard');
+  const frame = document.getElementById('ytFrame');
+
+  btn.addEventListener('click', () => {
+    if (allVideos.length === 0) return alert("データを読み込み中です...");
+
+    const pick = allVideos[Math.floor(Math.random() * allVideos.length)];
+
+    // 表示内容の更新
+    document.getElementById('resTitle').textContent = pick.title;
+    document.getElementById('resCategory').textContent = pick.categoryText;
+    document.getElementById('resDate').textContent = "配信日：" + pick.date;
+
+    // YouTube埋め込み (自動再生)
+    frame.src = `https://www.youtube.com/embed/${pick.videoId}?autoplay=1&rel=0&modestbranding=1`;
+
+    // ポスト用URL
+    const text = `今日の緑仙のおすすめ配信は「${pick.title}」です！ #シェンシェン神籤`;
+    const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`;
+    document.getElementById('tweetBtn').href = shareUrl;
+
+    // アニメーション表示
+    card.style.display = 'none';
+    setTimeout(() => {
+      card.style.display = 'block';
+      requestAnimationFrame(() => card.classList.add('show'));
+    }, 10);
     
-  videoLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault(); // リンク先への移動をキャンセル
-      
-      const url = this.getAttribute('href');
-      let videoId = "";
-      let params = "";
-
-      // URLから動画IDと開始時間を抽出するロジック
-      if (url.includes('embed/')) {
-        const parts = url.split('embed/');
-        const query = parts[1].split('?');
-        videoId = query[0];
-        params = query[1] ? "?" + query[1] : "";
-      } else if (url.includes('v=')) {
-        videoId = url.split('v=')[1].split('&')[0];
-      } else if (url.includes('youtu.be/')) {
-        videoId = url.split('youtu.be/')[1].split('?')[0];
-      }
-
-      if (videoId) {
-        // 自動再生(autoplay=1)をつけてiframeにセット
-        const connectChar = params ? "&" : "?";
-        iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}${params}${connectChar}autoplay=1`;
-        modal.classList.add('active');
-      }
-    });
+    setTimeout(() => {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
   });
+</script>
 
-  // 閉じる処理
-  function closeModal() {
-    modal.classList.remove('active');
-    setTimeout(() => { iframe.src = ""; }, 300); // 動画を停止
-  }
-
-  closeBtn.addEventListener('click', closeModal);
-  
-  // 背景クリックでも閉じる
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
-  });
-  </script>
 </body>
 </html>

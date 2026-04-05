@@ -195,26 +195,30 @@
 <script>
   let allSongs = [];
 
-  // データ読み込み
-  const files = ['external_videos.json', 'archives_videos.json'];
+  // 1. 読み込むファイルの設定（先に書いた方が優先される）
+  const files = ['external_videos.json', 'archive_videos.json'];
 
+  // 2. 複数ファイルの同時読み込み
   Promise.all(files.map(file => fetch(file).then(r => r.json())))
     .then(dataArray => {
-      // 重複チェック用のSet（動画のIDを記録する）
-      const seenVideoIds = new Set();
+      const seenVideoIds = new Set(); // 重複チェック用
 
       dataArray.forEach(data => {
         data.forEach(v => {
-          // すでに同じyoutubeIdを処理済みなら、この動画（とその中の曲）は無視する
+          // 重複チェック：すでに同じ動画IDを処理済みならスキップ
           if (seenVideoIds.has(v.youtubeId)) return;
           
           if (!v.songs) return;
 
-          // 絞り込み（雑談・企画）
-          const isTarget = v.title.includes("雑談") || v.title.includes("企画");
+          // 絞り込み条件（雑談・企画・公式企画など）
+          const isTarget = v.title.includes("雑談") || 
+                           v.title.includes("企画") || 
+                           v.title.includes("公式企画・イベント") ||
+                           (v.category && (v.category === "雑談" || v.category === "企画"));
+
           if (!isTarget) return;
 
-          // この動画IDを「処理済み」として登録
+          // 条件に合致し、重複もなければIDを登録して曲を追加
           seenVideoIds.add(v.youtubeId);
 
           v.songs.forEach(s => {
@@ -229,38 +233,12 @@
           });
         });
       });
-      console.log(`重複を除去し、計 ${allSongs.length} 曲を読み込みました。`);
+      console.log(`読み込み完了: 重複除外後 ${allSongs.length} 曲`);
     })
-    .catch(e => console.error(e));
-    .then(r => r.json())
-    .then(data => {
-      // データを「曲単位」にフラット化する
-      data.forEach(v => {
-        if(!v.songs) return;
-        // 【追加】雑談か企画に関連するキーワードがあるかチェック
-        // v.category などがあればそれを使いますが、なければタイトルで判別
-        const isTarget = v.title.includes("雑談") || 
-                         v.title.includes("企画") || 
-                         v.title.includes("公式企画・イベント") || // 企画に近いもの
-                         (v.category && (v.category === "雑談" || v.category === "企画"));
-
-        // ターゲット外ならスキップ
-        if(!isTarget) return;
-
-        v.songs.forEach(s => {
-          allSongs.push({
-            song: s.title || s.song,
-            artist: s.artist || s.singer || '不明',
-            start: s.start || s.time || 0,
-            videoTitle: v.title,
-            videoId: v.youtubeId,
-            date: v.date
-          });
-        });
-      });
-      console.log(`絞り込み済み: ${allSongs.length} 件を読み込みました。`);
-    })
-    .catch(e => console.error(e));
+    .catch(e => {
+      console.error("データ読み込みエラー:", e);
+      alert("データの読み込みに失敗しました。");
+    });
 
   // おみくじボタン処理
   const btn = document.getElementById('drawBtn');

@@ -211,10 +211,7 @@
           if (!v.songs) return;
 
           // 絞り込み条件（雑談・企画・公式企画など）
-          const isTarget = v.title.includes("雑談") || 
-                           v.title.includes("企画") || 
-                           v.title.includes("公式企画・イベント") ||
-                           (v.category && (v.category === "雑談" || v.category === "企画"));
+          const isTarget = (v.title.includes("雑談") || v.title.includes("企画")) && !v.title.includes("LIVE");
 
           if (!isTarget) return;
 

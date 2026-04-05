@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>緑仙 動画神籤｜しぇんしぇん</title>
+  <title>緑仙 動画神籤｜シェンシェン</title>
   <link rel="icon" href="../images/favicon.ico" sizes="any">
   <style>
     /* ===== 基本スタイル ===== */
@@ -248,7 +248,7 @@
     frame.src = `https://www.youtube.com/embed/${pick.videoId}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1`;
 
     // ツイートボタン更新
-    const text = `今日の長尾景おすすめ曲は「${pick.song} / ${pick.artist}」です！ #桜華水神籤`;
+    const text = `今日の緑仙のおすすめ曲は「${pick.song} / ${pick.artist}」です！ #シェンシェン神籤`;
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`;
     document.getElementById('tweetBtn').href = url;
 

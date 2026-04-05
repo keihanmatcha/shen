@@ -203,21 +203,35 @@
         data.forEach(v => {
           if (seenVideoIds.has(v.youtubeId)) return;
 
-          // ターゲットカテゴリー（企画・雑談系）
-          const targetCategories = ["企画", "公式企画・番組", "対談"];
-          const hasTargetCategory = v.category && Array.isArray(v.category) && 
-                                    v.category.some(cat => targetCategories.includes(cat));
-          const hasTargetTitle = v.title.includes("対談") || v.title.includes("企画");
+          // 1. カテゴリー配列の取得（なければ空配列）
+          const cats = v.category || [];
+          const keys = v.keywords || [];
 
-          if (!hasTargetCategory && !hasTargetTitle) return;
+          // 2. 【除外条件】歌系カテゴリーが含まれていたらスキップ
+          // これにより「歌配信」などのラベルがついたものは確実に除外されます
+          const ignoreCategories = ["歌配信", "歌動画", "ライブイベント","ゲーム実況"];
+          const isSongContent = cats.some(cat => ignoreCategories.includes(cat));
+          if (isSongContent) return;
 
+          // 3. 【採用条件】企画・雑談・対談のいずれかを含むか
+          const targetCategories = ["雑談", "企画", "公式企画・番組", "対談"];
+          
+          // カテゴリー配列、キーワード配列、タイトルのいずれかにターゲットがあるか
+          const hasTargetCategory = cats.some(cat => targetCategories.includes(cat));
+          const hasTargetKeyword  = keys.includes("企画") || keys.includes("対談");
+          const hasTargetTitle    = v.title.includes("雑談") || v.title.includes("企画") || v.title.includes("対談");
+
+          // 採用条件に一つも合致しなければスキップ
+          if (!hasTargetCategory && !hasTargetKeyword && !hasTargetTitle) return;
+
+          // 4. 重複ガードを通してリストに追加
           seenVideoIds.add(v.youtubeId);
 
           allVideos.push({
             title: v.title,
             videoId: v.youtubeId,
             date: v.date,
-            categoryText: v.category ? v.category.join(' / ') : '配信'
+            categoryText: cats.length > 0 ? cats.join(' / ') : '配信アーカイブ'
           });
         });
       });

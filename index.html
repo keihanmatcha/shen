@@ -204,10 +204,10 @@
           if (seenVideoIds.has(v.youtubeId)) return;
 
           // ターゲットカテゴリー（企画・雑談系）
-          const targetCategories = ["雑談", "企画", "公式企画・番組", "対談"];
+          const targetCategories = ["企画", "公式企画・番組", "対談"];
           const hasTargetCategory = v.category && Array.isArray(v.category) && 
                                     v.category.some(cat => targetCategories.includes(cat));
-          const hasTargetTitle = v.title.includes("雑談") || v.title.includes("企画");
+          const hasTargetTitle = v.title.includes("対談") || v.title.includes("企画");
 
           if (!hasTargetCategory && !hasTargetTitle) return;
 

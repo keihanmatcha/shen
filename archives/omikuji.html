@@ -196,7 +196,42 @@
   let allSongs = [];
 
   // データ読み込み
-  fetch('e')
+  const files = ['external_videos.json', 'archives_videos.json'];
+
+  Promise.all(files.map(file => fetch(file).then(r => r.json())))
+    .then(dataArray => {
+      // 重複チェック用のSet（動画のIDを記録する）
+      const seenVideoIds = new Set();
+
+      dataArray.forEach(data => {
+        data.forEach(v => {
+          // すでに同じyoutubeIdを処理済みなら、この動画（とその中の曲）は無視する
+          if (seenVideoIds.has(v.youtubeId)) return;
+          
+          if (!v.songs) return;
+
+          // 絞り込み（雑談・企画）
+          const isTarget = v.title.includes("雑談") || v.title.includes("企画");
+          if (!isTarget) return;
+
+          // この動画IDを「処理済み」として登録
+          seenVideoIds.add(v.youtubeId);
+
+          v.songs.forEach(s => {
+            allSongs.push({
+              song: s.title || s.song,
+              artist: s.artist || s.singer || '不明',
+              start: s.start || s.time || 0,
+              videoTitle: v.title,
+              videoId: v.youtubeId,
+              date: v.date
+            });
+          });
+        });
+      });
+      console.log(`重複を除去し、計 ${allSongs.length} 曲を読み込みました。`);
+    })
+    .catch(e => console.error(e));
     .then(r => r.json())
     .then(data => {
       // データを「曲単位」にフラット化する

@@ -3,147 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>緑仙 動画神籤｜シェンシェン</title>
+  <title>緑仙 企画神籤｜シェンシェン</title>
   <link rel="icon" href="../images/favicon.ico" sizes="any">
   <style>
-    /* ===== 基本スタイル ===== */
+    /* ===== メインサイト共通変数・基本スタイル ===== */
+    :root {
+      --fg: #37474f;          /* 墨色 */
+      --muted: #78909c;       /* 鈍い青緑 */
+      --accent: #00695c;      /* 翡翠（ヒスイ）色 */
+      --accent-light: #4db6ac;
+      --gold: #d4af37;        /* 金色 */
+      --red: #c62828;         /* 朱色 */
+      --bg: #fdfbf7;          /* 生成り色 */
+      --panel: #ffffff;
+      --border: #cfd8dc;
+      --font-base: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
+    }
+
     *, *::before, *::after { box-sizing: border-box; }
-    :root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
     
     html, body {
-        margin: 0; padding: 0;
-        background: var(--bg); color: var(--fg);
-        font-family: system-ui, -apple-system, sans-serif;
-        width: 100%; overflow-x: hidden;
+      margin: 0; padding: 0;
+      background-color: var(--bg); color: var(--fg);
+      font-family: var(--font-base);
+      width: 100%; overflow-x: hidden;
     }
 
-    /* ヘッダー */
+    /* 背景パターン（メインサイト継承） */
+    body {
+      background-image: 
+        repeating-linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0px, rgba(212, 175, 55, 0.08) 1px, transparent 1px, transparent 10px),
+        repeating-linear-gradient(45deg, rgba(212, 175, 55, 0.05) 0px, rgba(212, 175, 55, 0.05) 1px, transparent 1px, transparent 4px);
+      background-size: 80px 80px, 160px 160px;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    /* 薄いベース色を重ねるオーバーレイ */
+    body::after {
+      content: ""; position: fixed; inset: 0; z-index: -1;
+      background: rgba(253, 251, 247, 0.9); 
+      backdrop-filter: blur(1px);
+    }
+
+    /* ヘッダー（メインサイト継承） */
     header {
-        position: sticky; top: 0;
-        background: linear-gradient(90deg, #C24DAED9, #625DA1D9);
-        backdrop-filter: saturate(1.2) blur(6px);
-        -webkit-backdrop-filter: saturate(1.2) blur(6px); /* Safari用に追加 */
-        border-bottom: 1px solid var(--border);
-        z-index: 100;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(to right, #004d40, #00695c);
+      border-bottom: 2px solid var(--gold);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     header .wrap {
-        max-width: 1200px; margin-inline: auto; padding: 12px 16px;
-        display: flex; justify-content: space-between; align-items: center;
+      max-width: 1000px; margin-inline: auto; padding: 12px 16px;
+      display: flex; justify-content: space-between; align-items: center;
     }
-    .brand { font-weight: 800; color: #fff; text-decoration: none; font-size: 20px; display: flex; align-items: center; gap: 10px; }
+    .brand { font-weight: 700; color: #fff; text-decoration: none; font-size: 20px; display: flex; align-items: center; gap: 10px; }
     .nav-links { display: flex; gap: 10px; }
     .nav-links a { 
-        font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; padding: 6px 14px;
-        position: relative; z-index: 1;
+      font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; padding: 6px 14px;
+      border: 1px solid rgba(255,255,255,0.4); border-radius: 2px;
     }
-    .nav-links a::before {
-        content: ""; position: absolute; inset: 0; z-index: -1;
-        transform: skewX(-20deg); border-radius: 4px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: 0.2s;
-    }
-    .nav-links a.link-video::before { background: #B43246; }
-    .nav-links a.link-song::before { background: #4DD7E3; }
-
-    /* ▼▼▼ 背景画像の設定 ▼▼▼ */
-    body{
-      background-image: url("images/washipattern.PNG");
-      background-image: image-set(
-        url("../images/washipattern.webp") type("image/webp") 1x,
-        url("../images/washipattern@2x.webp") type("image/webp") 2x
-      );
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      position: relative; /* 重なり順の基準にする */
-    }
-
-    /* ▼▼▼ オーバーレイ（ぼかし＋白）の修正版 ▼▼▼ */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      /* 白の濃さ：ぼかしを見えやすくするため0.8→0.7に少し下げて調整（お好みで0.8に戻してください） */
-      background: rgba(255, 255, 255, 0.7); 
-      /* Safari対応の記述を追加 */
-      -webkit-backdrop-filter: blur(5px);
-      backdrop-filter: blur(5px);
-      /* 重要：-1だと画像の裏に行くことがあるので 0 にして画像の上に乗せる */
-      z-index: 0; 
-      pointer-events: none; /* クリックを邪魔しないようにする */
-    }
+    .nav-links a:hover { background: rgba(255,255,255,0.1); border-color: var(--gold); }
 
     /* おみくじメインエリア */
     .omikuji-container {
-        position: relative; /* 重要：オーバーレイより上に表示させる */
-        z-index: 1;         /* 重要：オーバーレイ(0)より上の階層にする */
-        
-        max-width: 600px;
-        margin: 40px auto;
-        padding: 20px;
-        text-align: center;
-        min-height: 80vh;
-        display: flex; flex-direction: column; align-items: center;
+      position: relative; z-index: 1;
+      max-width: 600px; margin: 40px auto; padding: 20px;
+      text-align: center; min-height: 80vh;
+      display: flex; flex-direction: column; align-items: center;
     }
     
     .omikuji-title {
-        font-size: 24px; margin-bottom: 30px; color: var(--accent);
-        font-weight: 800;
+      font-size: 32px; margin: 0 0 12px; color: var(--accent);
+      border-bottom: 1px solid var(--gold); display: inline-block; padding-bottom: 8px;
     }
 
-    /* ガラガラボタン */
+    /* 朱色のガラガラボタン */
     .draw-btn {
-        appearance: none; border: 0; cursor: pointer;
-        background:linear-gradient(90deg, #C24DAED9, #625DA1D9);
-        color: #fff; font-size: 18px; font-weight: 800;
-        padding: 20px 40px; border-radius: 50px;
-        box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
-        transition: transform 0.1s, box-shadow 0.1s;
-        display: flex; flex-direction: column; align-items: center; gap: 5px;
+      appearance: none; border: 0; cursor: pointer;
+      background: var(--red); color: #fff;
+      font-size: 18px; font-weight: 700; font-family: var(--font-base);
+      padding: 20px 50px; border-radius: 4px;
+      box-shadow: 0 4px 15px rgba(198, 40, 40, 0.3);
+      transition: .2s ease;
+      display: flex; flex-direction: column; align-items: center; gap: 5px;
+      border: 1px solid var(--gold);
     }
-    .draw-btn:active { transform: scale(0.95); box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4); }
-    .draw-btn span { font-size: 12px; opacity: 0.9; font-weight: normal; }
+    .draw-btn:hover { background: #b71c1c; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(198, 40, 40, 0.4); }
+    .draw-btn:active { transform: scale(0.95); }
+    .draw-btn span { font-size: 12px; opacity: 0.8; font-weight: normal; }
 
-    /* 結果表示カード */
+    /* 結果表示カード（翡翠色と金の装飾） */
     .result-card {
-        margin-top: 40px; width: 100%;
-        background: #fff; border: 1px solid var(--border);
-        border-radius: 16px; overflow: hidden;
-        box-shadow: 0 10px 40px rgba(98, 93, 161, 0.15);
-        opacity: 0; transform: translateY(20px);
-        transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-        display: none; /* 初期非表示 */
+      margin-top: 40px; width: 100%;
+      background: #fff; border: 1px solid var(--gold);
+      border-radius: 4px; overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 105, 92, 0.15);
+      opacity: 0; transform: translateY(20px);
+      transition: 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      display: none; position: relative;
     }
     .result-card.show { display: block; opacity: 1; transform: translateY(0); }
+    
+    /* カードの四隅に装飾 */
+    .result-card::after {
+      content: ""; position: absolute; inset: 6px;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      pointer-events: none;
+    }
 
     .result-header {
-        background: var(--panel); padding: 15px;
-        border-bottom: 1px solid var(--border);
-        font-size: 12px; color: var(--muted); letter-spacing: 0.1em;
+      background: var(--accent); color: #fff; padding: 12px;
+      font-size: 12px; letter-spacing: 0.2em; font-weight: 700;
     }
-    .result-body { padding: 20px; }
-    .song-name { font-size: 20px; font-weight: 800; color: #333; margin-bottom: 8px; line-height: 1.4; }
-    .artist-name { font-size: 14px; color: var(--muted); margin-bottom: 20px; }
+    .result-body { padding: 24px; position: relative; z-index: 1; }
+    .res-title { font-size: 20px; font-weight: 800; color: var(--fg); margin-bottom: 8px; line-height: 1.5; }
+    .res-category { font-size: 14px; color: var(--accent); margin-bottom: 20px; font-weight: 700; }
     
     .video-frame {
-        width: 100%; aspect-ratio: 16/9; background: #000;
-        border-radius: 8px; overflow: hidden; margin-bottom: 15px;
+      width: 100%; aspect-ratio: 16/9; background: #000;
+      border: 2px solid var(--gold); border-radius: 2px; overflow: hidden; margin-bottom: 20px;
     }
     .video-frame iframe { width: 100%; height: 100%; border: 0; }
 
     .video-meta {
-        font-size: 12px; color: #666; text-align: left;
-        background: #f9fafb; padding: 10px; border-radius: 8px;
+      font-size: 13px; color: var(--muted); text-align: center;
+      padding: 12px; border-top: 1px dotted var(--gold);
     }
 
-    .share-area { margin-top: 20px; }
+    .share-area { margin-top: 24px; }
     .tweet-btn {
-        display: inline-block; text-decoration: none;
-        background: #1DA1F2; color: #fff; padding: 10px 20px;
-        border-radius: 99px; font-weight: 700; font-size: 14px;
+      display: inline-block; text-decoration: none;
+      background: #1DA1F2; color: #fff; padding: 12px 24px;
+      border-radius: 4px; font-weight: 700; font-size: 14px;
+      box-shadow: 0 2px 8px rgba(29, 161, 242, 0.3);
     }
 
+    @media (max-width: 600px) {
+      .omikuji-title { font-size: 26px; }
+      .draw-btn { width: 100%; padding: 16px; }
+    }
   </style>
 </head>
 <body>
@@ -152,17 +151,17 @@
   <div class="wrap">
     <a href="../index.html" class="brand"><span>シェンシェン</span></a>
     <nav class="nav-links">
-      <a href="../archives/index.html" class="link-video">動画を探す</a>
-      <a href="./index.html" class="link-song">曲を探す</a>
+      <a href="../archives/index.html">動画を探す</a>
+      <a href="../songs/index.html">曲を探す</a>
     </nav>
   </div>
 </header>
 
 <main class="omikuji-container">
-  <h1 class="omikuji-title">楽曲神籤</h1>
-  <p style="margin-bottom: 30px; font-size: 14px; line-height: 1.8;">
-    緑仙が配信した動画から、<br>
-    今日のあなたにぴったりの動画を提案します。
+  <h1 class="omikuji-title">企画神籤</h1>
+  <p class="lead" style="margin-bottom: 40px; color: var(--muted); font-weight: 500;">
+    緑仙がこれまでに実施した企画や雑談から、<br>
+    今日のあなたにぴったりの配信を提案します。
   </p>
 
   <button id="drawBtn" class="draw-btn">
@@ -171,18 +170,17 @@
   </button>
 
   <div id="resultCard" class="result-card">
-    <div class="result-header">TODAY'S SONG</div>
+    <div class="result-header">TODAY'S ARCHIVE</div>
     <div class="result-body">
-      <div id="resSong" class="song-name"></div>
-      <div id="resArtist" class="artist-name"></div>
+      <div id="resTitle" class="res-title"></div>
+      <div id="resCategory" class="res-category"></div>
       
       <div class="video-frame">
         <iframe id="ytFrame" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
       
       <div class="video-meta">
-        収録動画：<span id="resVideoTitle"></span><br>
-        日付：<span id="resDate"></span>
+        <span id="resDate"></span>
       </div>
 
       <div class="share-area">
@@ -194,9 +192,9 @@
 
 <script>
   let allVideos = [];
-
   const files = ['external_videos.json', 'archive_videos.json'];
 
+  // 1. データの読み込みと「企画・雑談」のフィルタリング
   Promise.all(files.map(file => fetch(file).then(r => r.json())))
     .then(dataArray => {
       const seenVideoIds = new Set();
@@ -205,29 +203,29 @@
         data.forEach(v => {
           if (seenVideoIds.has(v.youtubeId)) return;
 
-          // カテゴリー判別（雑談・企画・公式企画など）
-          const targetCategories = ["雑談", "企画", "公式企画・番組"];
+          // ターゲットカテゴリー（企画・雑談系）
+          const targetCategories = ["企画", "公式企画・番組", "対談"];
           const hasTargetCategory = v.category && Array.isArray(v.category) && 
                                     v.category.some(cat => targetCategories.includes(cat));
-          const hasTargetTitle = v.title.includes("雑談") || v.title.includes("企画");
+          const hasTargetTitle = v.title.includes("対談") || v.title.includes("企画");
 
           if (!hasTargetCategory && !hasTargetTitle) return;
 
           seenVideoIds.add(v.youtubeId);
 
-          // 【変更】曲ではなく、動画情報をそのまま入れる
           allVideos.push({
             title: v.title,
             videoId: v.youtubeId,
             date: v.date,
-            categories: v.category ? v.category.join(' / ') : 'その他'
+            categoryText: v.category ? v.category.join(' / ') : '配信'
           });
         });
       });
-      console.log(`企画神籤準備完了: ${allVideos.length} 本の動画`);
+      console.log(`企画神籤: ${allVideos.length} 本のアーカイブを読み込みました。`);
     })
     .catch(e => console.error(e));
 
+  // 2. おみくじアクション
   const btn = document.getElementById('drawBtn');
   const card = document.getElementById('resultCard');
   const frame = document.getElementById('ytFrame');
@@ -235,30 +233,30 @@
   btn.addEventListener('click', () => {
     if (allVideos.length === 0) return alert("データを読み込み中です...");
 
-    // 【変更】動画リストからランダムに選ぶ
     const pick = allVideos[Math.floor(Math.random() * allVideos.length)];
 
-    // 表示更新（IDなどはHTML側の要素に合わせて調整してください）
-    document.getElementById('resSong').textContent = pick.title; // 曲名の場所にタイトル
-    document.getElementById('resArtist').textContent = pick.categories; // アーティスト名の場所にカテゴリ
-    document.getElementById('resVideoTitle').textContent = "配信日：" + pick.date;
-    document.getElementById('resDate').textContent = ""; // 不要な場合は空に
+    // 表示内容の更新
+    document.getElementById('resTitle').textContent = pick.title;
+    document.getElementById('resCategory').textContent = pick.categoryText;
+    document.getElementById('resDate').textContent = "配信日：" + pick.date;
 
-    // YouTube埋め込み（動画の最初から再生）
-    frame.src = `https://www.youtube.com/embed/${pick.videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+    // YouTube埋め込み (自動再生)
+    frame.src = `https://www.youtube.com/embed/${pick.videoId}?autoplay=1&rel=0&modestbranding=1`;
 
-    // ツイートボタン
-    const text = `今日の緑仙のおすすめ企画は「${pick.title}」です！ #シェンシェン神籤`;
-    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`;
-    document.getElementById('tweetBtn').href = url;
+    // ポスト用URL
+    const text = `今日の緑仙のおすすめ配信は「${pick.title}」です！ #シェンシェン神籤`;
+    const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`;
+    document.getElementById('tweetBtn').href = shareUrl;
 
+    // アニメーション表示
     card.style.display = 'none';
     setTimeout(() => {
-        card.style.display = 'block';
-        requestAnimationFrame(() => card.classList.add('show'));
+      card.style.display = 'block';
+      requestAnimationFrame(() => card.classList.add('show'));
     }, 10);
+    
     setTimeout(() => {
-        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 100);
   });
 </script>

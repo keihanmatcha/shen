@@ -193,93 +193,70 @@
 </main>
 
 <script>
-  let allSongs = [];
+  let allVideos = [];
 
-  // 1. 読み込むファイルの設定（先に書いた方が優先される）
   const files = ['external_videos.json', 'archive_videos.json'];
 
-  // 2. 複数ファイルの同時読み込み
   Promise.all(files.map(file => fetch(file).then(r => r.json())))
     .then(dataArray => {
-      const seenVideoIds = new Set(); // 重複チェック用
+      const seenVideoIds = new Set();
 
       dataArray.forEach(data => {
         data.forEach(v => {
-          // 重複チェック：すでに同じ動画IDを処理済みならスキップ
           if (seenVideoIds.has(v.youtubeId)) return;
-          
-          if (!v.songs) return;
 
-          // 絞り込み条件（雑談・企画・公式企画など）
-          const isTarget = (v.title.includes("雑談") || v.title.includes("企画")) && !v.title.includes("LIVE");
+          // カテゴリー判別（雑談・企画・公式企画など）
+          const targetCategories = ["雑談", "企画", "公式企画・番組"];
+          const hasTargetCategory = v.category && Array.isArray(v.category) && 
+                                    v.category.some(cat => targetCategories.includes(cat));
+          const hasTargetTitle = v.title.includes("雑談") || v.title.includes("企画");
 
-          if (!isTarget) return;
+          if (!hasTargetCategory && !hasTargetTitle) return;
 
-          // 条件に合致し、重複もなければIDを登録して曲を追加
           seenVideoIds.add(v.youtubeId);
 
-          v.songs.forEach(s => {
-            allSongs.push({
-              song: s.title || s.song,
-              artist: s.artist || s.singer || '不明',
-              start: s.start || s.time || 0,
-              videoTitle: v.title,
-              videoId: v.youtubeId,
-              date: v.date
-            });
+          // 【変更】曲ではなく、動画情報をそのまま入れる
+          allVideos.push({
+            title: v.title,
+            videoId: v.youtubeId,
+            date: v.date,
+            categories: v.category ? v.category.join(' / ') : 'その他'
           });
         });
       });
-      console.log(`読み込み完了: 重複除外後 ${allSongs.length} 曲`);
+      console.log(`企画神籤準備完了: ${allVideos.length} 本の動画`);
     })
-    .catch(e => {
-      console.error("データ読み込みエラー:", e);
-      alert("データの読み込みに失敗しました。");
-    });
+    .catch(e => console.error(e));
 
-  // おみくじボタン処理
   const btn = document.getElementById('drawBtn');
   const card = document.getElementById('resultCard');
   const frame = document.getElementById('ytFrame');
 
   btn.addEventListener('click', () => {
-    if(allSongs.length === 0) return alert("データを読み込み中です...");
+    if (allVideos.length === 0) return alert("データを読み込み中です...");
 
-    // ランダムに1曲選ぶ
-    const pick = allSongs[Math.floor(Math.random() * allSongs.length)];
+    // 【変更】動画リストからランダムに選ぶ
+    const pick = allVideos[Math.floor(Math.random() * allVideos.length)];
 
-    // 秒数変換処理
-    let startSec = 0;
-    if(typeof pick.start === 'number') {
-        startSec = pick.start;
-    } else {
-        const p = String(pick.start).split(':').map(Number);
-        if(p.length===3) startSec = p[0]*3600 + p[1]*60 + p[2];
-        else if(p.length===2) startSec = p[0]*60 + p[1];
-    }
+    // 表示更新（IDなどはHTML側の要素に合わせて調整してください）
+    document.getElementById('resSong').textContent = pick.title; // 曲名の場所にタイトル
+    document.getElementById('resArtist').textContent = pick.categories; // アーティスト名の場所にカテゴリ
+    document.getElementById('resVideoTitle').textContent = "配信日：" + pick.date;
+    document.getElementById('resDate').textContent = ""; // 不要な場合は空に
 
-    // 表示更新
-    document.getElementById('resSong').textContent = pick.song;
-    document.getElementById('resArtist').textContent = pick.artist;
-    document.getElementById('resVideoTitle').textContent = pick.videoTitle;
-    document.getElementById('resDate').textContent = pick.date;
+    // YouTube埋め込み（動画の最初から再生）
+    frame.src = `https://www.youtube.com/embed/${pick.videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
 
-    // YouTube埋め込み更新 (自動再生ON)
-    frame.src = `https://www.youtube.com/embed/${pick.videoId}?start=${startSec}&autoplay=1&rel=0&modestbranding=1&playsinline=1`;
-
-    // ツイートボタン更新
-    const text = `今日の緑仙のおすすめ動画は「${pick.song} / ${pick.artist}」です！ #シェンシェン神籤`;
+    // ツイートボタン
+    const text = `今日の緑仙のおすすめ企画は「${pick.title}」です！ #シェンシェン神籤`;
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(location.href)}`;
     document.getElementById('tweetBtn').href = url;
 
-    // カード表示アニメーション
-    card.style.display = 'none'; // リセット
+    card.style.display = 'none';
     setTimeout(() => {
         card.style.display = 'block';
         requestAnimationFrame(() => card.classList.add('show'));
     }, 10);
-    
-    // スクロール
     setTimeout(() => {
         card.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }, 100);

@@ -1,5 +1,150 @@
-
-[{
+[ {
+    "youtubeId": "lbQZKkBC3hs",
+    "title": "｢藍ヨリ青ク｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-04",
+    "thumbnail": "https://i.ytimg.com/vi/lbQZKkBC3hs/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [
+        "オリジナル曲",
+      　"歌動画"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "藍ヨリ青ク",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "I19AsJwfjV0",
+    "title": "【緑仙】「コンパスは透明」Official Audio（TVアニメ『最強の職業は勇者でも賢者でもなく鑑定士（仮）らしいですよ？』番組オープニング・テーマ）",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-03",
+    "thumbnail": "https://i.ytimg.com/vi/I19AsJwfjV0/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+        "オリジナル曲",
+      　"歌動画"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "コンパスは透明",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "B2d9aSaXu8Y",
+    "title": "｢天誅｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-03",
+    "thumbnail": "https://i.ytimg.com/vi/B2d9aSaXu8Y/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [
+        "オリジナル曲",
+      　"歌動画"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "天誅",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "fyAgbPtioCU",
+    "title": "｢Reject it now!｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-02",
+    "thumbnail": "https://i.ytimg.com/vi/fyAgbPtioCU/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [
+        "オリジナル曲",
+      　"歌動画"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "Reject it now!",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "LQvKGkzAm8k",
+    "title": "｢なんでですか？｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-01",
+    "thumbnail": "https://i.ytimg.com/vi/LQvKGkzAm8k/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [
+      "オリジナル曲",
+      "歌動画"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "なんでですか？",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "cXPNwLQ_-A0",
+    "title": "こじらせハラスメント「インターネットは最悪 2026」Music Video",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-01",
+    "thumbnail": "https://i.ytimg.com/vi/cXPNwLQ_-A0/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "こじらせハラスメント",
+      "オリジナル曲",
+      "弦月藤士郎",
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "インターネットは最悪 2026",
+      "artist": "こじらせハラスメント",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "nXbk5nMXdgg",
+    "title": "こじらせハラスメント「インターネットは最悪2026」こじらせハラスメント",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-03-31",
+    "thumbnail": "https://i.ytimg.com/vi/nXbk5nMXdgg/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [
+      "こじらせハラスメント",
+      "オリジナル曲",
+      "弦月藤士郎",
+      "歌動画"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "インターネットは最悪 2026",
+      "artist": "こじらせハラスメント",
+      "start": 0
+        }]
+  },
+    {
     "youtubeId": "kdt77GIxwnY",
     "title": "【オリジナルMV】「好きだから。／ユイカ」【神楽めあ/緑仙】",
     "channel": "神楽めあ / KaguraMea",
@@ -12,7 +157,7 @@
       "カバー曲","神楽めあ",
       "歌動画"
     ],
-    "tags": ["踊","カバー"],
+    "tags": ["歌","カバー"],
     "songs": [
         {
       "title": "好きだから。",

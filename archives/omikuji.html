@@ -214,12 +214,12 @@
           if (isSongContent) return;
 
           // 3. 【採用条件】企画・雑談・対談のいずれかを含むか
-          const targetCategories = ["雑談", "企画", "公式企画・番組", "対談"];
+          const targetCategories = ["企画", "公式企画・番組", "対談"];
           
           // カテゴリー配列、キーワード配列、タイトルのいずれかにターゲットがあるか
           const hasTargetCategory = cats.some(cat => targetCategories.includes(cat));
           const hasTargetKeyword  = keys.includes("企画") || keys.includes("対談");
-          const hasTargetTitle    = v.title.includes("雑談") || v.title.includes("企画") || v.title.includes("対談");
+          const hasTargetTitle    = v.title.includes("企画") || v.title.includes("対談");
 
           // 採用条件に一つも合致しなければスキップ
           if (!hasTargetCategory && !hasTargetKeyword && !hasTargetTitle) return;

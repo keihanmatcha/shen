@@ -1,4 +1,137 @@
 [{
+    "youtubeId": "JWQ5BA51tNA",
+    "title": "【Lyric Video】コンパスは透明 / 緑仙",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-15",
+    "thumbnail": "https://i.ytimg.com/vi/JWQ5BA51tNA/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "オリジナル曲"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "友達代表宣言",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "m6g4jbpFe5E",
+    "title": "豹変！",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-15",
+    "thumbnail": "https://i.ytimg.com/vi/m6g4jbpFe5E/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "化け猫ダンス",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "YsDQJFXEOKY",
+    "title": "｢Blowin’ Wind is blowin’｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-15",
+    "thumbnail": "https://i.ytimg.com/vi/YsDQJFXEOKY/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "Blowin’ Wind is blowin’",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "uHfgeva6Kyo",
+    "title": "｢WE ARE YOU｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-14",
+    "thumbnail": "https://i.ytimg.com/vi/uHfgeva6Kyo/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [
+         "オリジナル曲","ライブ・イベント","緑仙2nd 緑一色"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "WE ARE YOU",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "Wx1o1JwgCuU",
+    "title": "｢リコネクト｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-13",
+    "thumbnail": "https://i.ytimg.com/vi/Wx1o1JwgCuU/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [
+         "オリジナル曲","ライブ・イベント","緑仙2nd 緑一色"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "リコネクト",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "N1PKM1zXJmw",
+    "title": "｢M｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-12",
+    "thumbnail": "https://i.ytimg.com/vi/N1PKM1zXJmw/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [
+         "オリジナル曲","ライブ・イベント","緑仙2nd 緑一色"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "M",
+      "artist": "緑仙",
+      "start": 0
+        }]
+  },
+  {
+    "youtubeId": "fbf9--MqMj4",
+    "title": "｢魅惑の華｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-11",
+    "thumbnail": "https://i.ytimg.com/vi/fbf9--MqMj4/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [
+         "オリジナル曲","ライブ・イベント","緑仙2nd 緑一色"
+    ],
+    "tags": ["歌","オリジナル"],
+    "songs": [{
+      "title": "魅惑の華",
+      "artist": "RainDrops",
+      "start": 0
+        }]
+  },
+    {
     "youtubeId": "N6xudJ-CztQ",
     "title": "｢友達代表宣言｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
     "channel": "緑仙 / Ryushen",

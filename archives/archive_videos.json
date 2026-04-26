@@ -1,32 +1,5 @@
 [
   {
-    "youtubeId": "1ezNy47bYU8",
-    "title": "ワールドイズマイン CPK! Remix / 緑仙 Cover",
-    "channel": "緑仙 / Ryushen",
-    "date": "2026-04-24",
-    "thumbnail": "https://i.ytimg.com/vi/1ezNy47bYU8/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "カバー曲",
-      "歌動画"
-    ],
-    "songs": []
-  },
-  {
-    "youtubeId": "2cB-7w3U5vI",
-    "title": "バケネコダンス！覚えてください！",
-    "channel": "緑仙 / Ryushen",
-    "date": "2026-04-23",
-    "thumbnail": "https://i.ytimg.com/vi/2cB-7w3U5vI/mqdefault.jpg",
-    "category": [
-      "公式切り抜き"
-    ],
-    "keywords": [],
-    "songs": []
-  },
-  {
     "youtubeId": "oANqWDSqReA",
     "title": "【#にじさんじスマブラ杯 】にじさんじスマブラ杯DAY2【2026】",
     "channel": "緑仙 / Ryushen",
@@ -58,6 +31,33 @@
       "にじさんじスマブラ杯",
       "大乱闘スマッシュブラザーズ"
     ],
+    "songs": []
+  },
+  {
+    "youtubeId": "1ezNy47bYU8",
+    "title": "ワールドイズマイン CPK! Remix / 緑仙 Cover",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-24",
+    "thumbnail": "https://i.ytimg.com/vi/1ezNy47bYU8/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "歌動画"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "2cB-7w3U5vI",
+    "title": "バケネコダンス！覚えてください！",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-23",
+    "thumbnail": "https://i.ytimg.com/vi/2cB-7w3U5vI/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [],
     "songs": []
   },
   {

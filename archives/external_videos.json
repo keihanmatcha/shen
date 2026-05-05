@@ -1,4 +1,85 @@
 [{
+    "youtubeId": "0pP9CJ-KtcQ",
+    "title": "歌枠 ｜RainDropsの歌を歌います🎤",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-04-27",
+    "thumbnail": "https://i.ytimg.com/vi/0pP9CJ-KtcQ/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "Rain Drops",
+      "える",
+      "ジョー・力一",
+      "三枝明那",
+      "歌配信",
+      "童田明治",
+      "鈴木勝"
+    ],
+    "songs": [
+      {
+        "title": "VOLTAGE",
+        "artist": "Rain Drops",
+        "start": 98
+      },
+      {
+        "title": "ブギーマン",
+        "artist": "Rain Drops",
+        "start": 502
+      },
+      {
+        "title": "ミスティックマインワルド",
+        "artist": "Rain Drops",
+        "start": 747
+      },
+      {
+        "title": "ミスティックマインワルド",
+        "artist": "Rain Drops",
+        "start": 765
+      },
+      {
+        "title": "魅惑の華",
+        "artist": "Rain Drops",
+        "start": 993
+      },
+      {
+        "title": "ミュウ",
+        "artist": "Rain Drops",
+        "start": 1177
+      },
+      {
+        "title": "セルフィーDimension",
+        "artist": "Rain Drops",
+        "start": 1368
+      },
+      {
+        "title": "明日は日曜日",
+        "artist": "Rain Drops",
+        "start": 1662
+      },
+      {
+        "title": "formula",
+        "artist": "Rain Drops",
+        "start": 2031
+      },
+      {
+        "title": "蜜ノ味",
+        "artist": "Rain Drops",
+        "start": 2319
+      },
+      {
+        "title": "雨言葉",
+        "artist": "Rain Drops",
+        "start": 2504
+      },
+      {
+        "title": "エンターテイナー",
+        "artist": "Rain Drops",
+        "start": 3162
+      }
+    ]
+  },
+    {
     "youtubeId": "JWQ5BA51tNA",
     "title": "【Lyric Video】コンパスは透明 / 緑仙",
     "channel": "緑仙 / Ryushen",
@@ -12,7 +93,7 @@
     ],
     "tags": ["歌","オリジナル"],
     "songs": [{
-      "title": "友達代表宣言",
+      "title": "コンパスは透明",
       "artist": "緑仙",
       "start": 0
         }]

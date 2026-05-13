@@ -9,6 +9,66 @@
       "記念配信"
     ],
     "keywords": ["歌配信"],
+    "tags": ["歌","オリジナル"],
+    "songs": [
+    {
+      "title": "夜明けまで",
+      "artist": "緑仙",
+      "start": 34236
+    },
+    {
+      "title": "君になりたいから",
+      "artist": "緑仙",
+      "start": 34676
+    },
+    {
+      "title": "エンダー",
+      "artist": "緑仙",
+      "start": 36467
+    },
+    {
+      "title": "ステイルメイト",
+      "artist": "緑仙",
+      "start": 36709
+    },
+    {
+      "title": "独善食",
+      "artist": "緑仙",
+      "start": 36976
+    },
+    {
+      "title": "しあわせクッキー",
+      "artist": "緑仙",
+      "start": 37161
+    },
+    {
+      "title": "リコネクト",
+      "artist": "緑仙",
+      "start": 37389
+    },
+    {
+      "title": "ジョークス",
+      "artist": "緑仙",
+      "start": 37648
+    },
+    {
+      "title": "イツライ",
+      "artist": "緑仙",
+      "start": 37867
+    }
+  ]
+  },
+    {
+    "youtubeId": "XB0HofxZ6hg",
+    "title": "耐久歌配信 ｜80万人登録者突破するまで終われません",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-05-11",
+    "thumbnail": "https://i.ytimg.com/vi/XB0HofxZ6hg/mqdefault.jpg",
+    "category": [
+      "歌配信",
+      "記念配信"
+    ],
+    "keywords": ["歌配信"],
     "tags": ["歌","カバー"],
     "songs": [
     {

@@ -1,4 +1,614 @@
 [{
+    "youtubeId": "XB0HofxZ6hg",
+    "title": "耐久歌配信 ｜80万人登録者突破するまで終われません",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-05-11",
+    "thumbnail": "https://i.ytimg.com/vi/XB0HofxZ6hg/mqdefault.jpg",
+    "category": [
+      "歌配信",
+      "記念配信"
+    ],
+    "keywords": ["歌配信"],
+    "tags": ["歌","カバー"],
+    "songs": [
+    {
+      "title": "若者のすべて",
+      "artist": "フジファブリック",
+      "start": 144
+    },
+    {
+      "title": "愛を伝えたいだとか",
+      "artist": "あいみょん",
+      "start": 456
+    },
+    {
+      "title": "マリーゴールド",
+      "artist": "あいみょん",
+      "start": 706
+    },
+    {
+      "title": "創聖のアクエリオン",
+      "artist": "AKINO from bless4",
+      "start": 1092
+    },
+    {
+      "title": "未来予想図 Ⅱ",
+      "artist": "DREAMS COME TRUE",
+      "start": 1400
+    },
+    {
+      "title": "I LOVE...",
+      "artist": "Official髭男dism",
+      "start": 1849
+    },
+    {
+      "title": "ノーダウト",
+      "artist": "Official髭男dism",
+      "start": 2137
+    },
+    {
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "start": 2415
+    },
+    {
+      "title": "ミックスナッツ",
+      "artist": "Official髭男dism",
+      "start": 2756
+    },
+    {
+      "title": "カブトムシ",
+      "artist": "aiko",
+      "start": 3530
+    },
+    {
+      "title": "ただ君に晴れ",
+      "artist": "ヨルシカ",
+      "start": 3850
+    },
+    {
+      "title": "Prayer X",
+      "artist": "King Gnu",
+      "start": 4089
+    },
+    {
+      "title": "別の人の彼女になったよ",
+      "artist": "wacci",
+      "start": 4345
+    },
+    {
+      "title": "夜に駆ける",
+      "artist": "YOASOBI",
+      "start": 4479
+    },
+    {
+      "title": "エヴァーグリーン",
+      "artist": "緑仙",
+      "start": 4802
+    },
+    {
+      "title": "群青日和",
+      "artist": "東京事変",
+      "start": 5473
+    },
+    {
+      "title": "公然の秘密",
+      "artist": "椎名林檎",
+      "start": 5701
+    },
+    {
+      "title": "長く短い祭",
+      "artist": "椎名林檎",
+      "start": 5913
+    },
+    {
+      "title": "丸の内サディスティック",
+      "artist": "椎名林檎",
+      "start": 6174
+    },
+    {
+      "title": "キラーチューン",
+      "artist": "東京事変",
+      "start": 7011
+    },
+    {
+      "title": "本能",
+      "artist": "椎名林檎",
+      "start": 7244
+    },
+    {
+      "title": "ギブス",
+      "artist": "椎名林檎",
+      "start": 7515
+    },
+    {
+      "title": "幸福論",
+      "artist": "椎名林檎",
+      "start": 7854
+    },
+    {
+      "title": "遭難",
+      "artist": "東京事変",
+      "start": 8078
+    },
+    {
+      "title": "群青",
+      "artist": "YOASOBI",
+      "start": 8663
+    },
+    {
+      "title": "怪物",
+      "artist": "YOASOBI",
+      "start": 8918
+    },
+    {
+      "title": "感電",
+      "artist": "米津玄師",
+      "start": 9129
+    },
+    {
+      "title": "変わらないもの",
+      "artist": "奥華子",
+      "start": 9682
+    },
+    {
+      "title": "晩餐歌",
+      "artist": "tuki.",
+      "start": 10020
+    },
+    {
+      "title": "君と夏フェス",
+      "artist": "SHISHAMO",
+      "start": 10803
+    },
+    {
+      "title": "なんでもないよ、",
+      "artist": "マカロニえんぴつ",
+      "start": 11070
+    },
+    {
+      "title": "若者のすべて",
+      "artist": "フジファブリック",
+      "start": 11306
+    },
+    {
+      "title": "ray",
+      "artist": "BUMP OF CHICKEN",
+      "start": 11603
+    },
+    {
+      "title": "大切なもの",
+      "artist": "ロードオブメジャー",
+      "start": 11918
+    },
+    {
+      "title": "心絵",
+      "artist": "ロードオブメジャー",
+      "start": 12119
+    },
+    {
+      "title": "星座になれたら",
+      "artist": "結束バンド",
+      "start": 12755
+    },
+    {
+      "title": "青春コンプレックス",
+      "artist": "結束バンド",
+      "start": 13017
+    },
+    {
+      "title": "たばこ",
+      "artist": "コレサワ",
+      "start": 13233
+    },
+    {
+      "title": "気まぐれロマンティック",
+      "artist": "いきものがかり",
+      "start": 13603
+    },
+    {
+      "title": "CHE.R.RY",
+      "artist": "YUI",
+      "start": 14167
+    },
+    {
+      "title": "Rolling star",
+      "artist": "YUI",
+      "start": 14385
+    },
+    {
+      "title": "SUMMER SONG",
+      "artist": "YUI",
+      "start": 14579
+    },
+    {
+      "title": "月のワルツ",
+      "artist": "諫山実生",
+      "start": 14797
+    },
+    {
+      "title": "ギラギラ",
+      "artist": "Ado",
+      "start": 15076
+    },
+    {
+      "title": "第六感",
+      "artist": "Reol ①",
+      "start": 15364
+    },
+    {
+      "title": "第六感",
+      "artist": "Reol ②",
+      "start": 15695
+    },
+    {
+      "title": "第六感",
+      "artist": "Reol ③",
+      "start": 15916
+    },
+    {
+      "title": "ないものねだり",
+      "artist": "KANA-BOON",
+      "start": 15973
+    },
+    {
+      "title": "初恋サイダー",
+      "artist": "Buono!",
+      "start": 16241
+    },
+    {
+      "title": "IRIS OUT",
+      "artist": "米津玄師",
+      "start": 16866
+    },
+    {
+      "title": "メランコリーキッチン",
+      "artist": "米津玄師",
+      "start": 17054
+    },
+    {
+      "title": "花になって",
+      "artist": "緑黄色社会",
+      "start": 17320
+    },
+    {
+      "title": "春ひさぎ",
+      "artist": "ヨルシカ",
+      "start": 17525
+    },
+    {
+      "title": "だから僕は音楽を辞めた",
+      "artist": "ヨルシカ",
+      "start": 17746
+    },
+    {
+      "title": "言って。",
+      "artist": "ヨルシカ",
+      "start": 17998
+    },
+    {
+      "title": "青いベンチ",
+      "artist": "サスケ",
+      "start": 18430
+    },
+    {
+      "title": "僕のこと",
+      "artist": "Mrs. GREEN APPLE",
+      "start": 18682
+    },
+    {
+      "title": "青と夏",
+      "artist": "Mrs. GREEN APPLE",
+      "start": 19016
+    },
+    {
+      "title": "愛を伝えたいだとか",
+      "artist": "あいみょん",
+      "start": 19629
+    },
+    {
+      "title": "マリーゴールド",
+      "artist": "あいみょん",
+      "start": 19865
+    },
+    {
+      "title": "未来予想図 Ⅱ",
+      "artist": "DREAMS COME TRUE",
+      "start": 20403
+    },
+    {
+      "title": "創聖のアクエリオン",
+      "artist": "AKINO from bless4",
+      "start": 20862
+    },
+    {
+      "title": "アゲハ蝶",
+      "artist": "ポルノグラフティ",
+      "start": 21149
+    },
+    {
+      "title": "夜に駆ける",
+      "artist": "YOASOBI",
+      "start": 21443
+    },
+    {
+      "title": "群青",
+      "artist": "YOASOBI",
+      "start": 21712
+    },
+    {
+      "title": "怪物",
+      "artist": "YOASOBI",
+      "start": 21962
+    },
+    {
+      "title": "群青日和",
+      "artist": "東京事変",
+      "start": 22206
+    },
+    {
+      "title": "長く短い祭",
+      "artist": "椎名林檎",
+      "start": 22425
+    },
+    {
+      "title": "公然の秘密",
+      "artist": "椎名林檎",
+      "start": 22682
+    },
+    {
+      "title": "丸の内サディスティック",
+      "artist": "椎名林檎",
+      "start": 22865
+    },
+    {
+      "title": "キラーチューン",
+      "artist": "東京事変",
+      "start": 23297
+    },
+    {
+      "title": "幸福論",
+      "artist": "椎名林檎",
+      "start": 23559
+    },
+    {
+      "title": "遭難",
+      "artist": "東京事変",
+      "start": 23783
+    },
+    {
+      "title": "遭難",
+      "artist": "東京事変",
+      "start": 23988
+    },
+    {
+      "title": "本能",
+      "artist": "椎名林檎",
+      "start": 24194
+    },
+    {
+      "title": "ギブス",
+      "artist": "椎名林檎",
+      "start": 24472
+    },
+    {
+      "title": "I LOVE...",
+      "artist": "Official髭男dism",
+      "start": 25582
+    },
+    {
+      "title": "ミックスナッツ",
+      "artist": "Official髭男dism",
+      "start": 25866
+    },
+    {
+      "title": "ノーダウト",
+      "artist": "Official髭男dism",
+      "start": 26080
+    },
+    {
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "start": 26285
+    },
+    {
+      "title": "Prayer X",
+      "artist": "King Gnu",
+      "start": 26617
+    },
+    {
+      "title": "月のワルツ",
+      "artist": "諫山実生",
+      "start": 26826
+    },
+    {
+      "title": "カブトムシ",
+      "artist": "aiko",
+      "start": 27131
+    },
+    {
+      "title": "CHE.R.RY",
+      "artist": "YUI",
+      "start": 28343
+    },
+    {
+      "title": "SUMMER SONG",
+      "artist": "YUI",
+      "start": 28556
+    },
+    {
+      "title": "Rolling star",
+      "artist": "YUI",
+      "start": 28875
+    },
+    {
+      "title": "君と夏フェス",
+      "artist": "SHISHAMO",
+      "start": 29072
+    },
+    {
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "start": 29316
+    },
+    {
+      "title": "天誅",
+      "artist": "緑仙 & ポルカドットスティングレイ",
+      "start": 29738
+    },
+    {
+      "title": "ヒロイン",
+      "artist": "緑仙",
+      "start": 30009
+    },
+    {
+      "title": "第六感",
+      "artist": "Reol",
+      "start": 30265
+    },
+    {
+      "title": "ray",
+      "artist": "BUMP OF CHICKEN",
+      "start": 30469
+    },
+    {
+      "title": "メランコリーキッチン",
+      "artist": "米津玄師",
+      "start": 30770
+    },
+    {
+      "title": "IRIS OUT",
+      "artist": "米津玄師",
+      "start": 30991
+    },
+    {
+      "title": "なんでもないよ、",
+      "artist": "マカロニえんぴつ",
+      "start": 31176
+    },
+    {
+      "title": "変わらないもの",
+      "artist": "奥華子",
+      "start": 31406
+    },
+    {
+      "title": "初恋サイダー",
+      "artist": "Buono!",
+      "start": 31698
+    },
+    {
+      "title": "気まぐれロマンティック",
+      "artist": "いきものがかり",
+      "start": 31908
+    },
+    {
+      "title": "心絵",
+      "artist": "ロードオブメジャー",
+      "start": 32166
+    },
+    {
+      "title": "たばこ",
+      "artist": "コレサワ",
+      "start": 32431
+    },
+    {
+      "title": "星座になれたら",
+      "artist": "結束バンド",
+      "start": 32797
+    },
+    {
+      "title": "創聖のアクエリオン",
+      "artist": "AKINO from bless4",
+      "start": 33055
+    },
+    {
+      "title": "花になって",
+      "artist": "緑黄色社会",
+      "start": 33346
+    },
+    {
+      "title": "ギラギラ",
+      "artist": "Ado",
+      "start": 33544
+    },
+    {
+      "title": "負け犬にアンコールはいらない",
+      "artist": "ヨルシカ",
+      "start": 33840
+    },
+    {
+      "title": "だから僕は音楽を辞めた",
+      "artist": "ヨルシカ",
+      "start": 33921
+    },
+    {
+      "title": "夜明けまで",
+      "artist": "緑仙",
+      "start": 34236
+    },
+    {
+      "title": "君になりたいから",
+      "artist": "緑仙",
+      "start": 34676
+    },
+    {
+      "title": "キラーチューン",
+      "artist": "東京事変",
+      "start": 35104
+    },
+    {
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "start": 35370
+    },
+    {
+      "title": "公然の秘密",
+      "artist": "椎名林檎",
+      "start": 35798
+    },
+    {
+      "title": "創聖のアクエリオン",
+      "artist": "AKINO from bless4",
+      "start": 36148
+    },
+    {
+      "title": "エンダー",
+      "artist": "緑仙",
+      "start": 36467
+    },
+    {
+      "title": "ステイルメイト",
+      "artist": "緑仙",
+      "start": 36709
+    },
+    {
+      "title": "独善食",
+      "artist": "緑仙",
+      "start": 36976
+    },
+    {
+      "title": "しあわせクッキー",
+      "artist": "緑仙",
+      "start": 37161
+    },
+    {
+      "title": "リコネクト",
+      "artist": "緑仙",
+      "start": 37389
+    },
+    {
+      "title": "ジョークス",
+      "artist": "緑仙",
+      "start": 37648
+    },
+    {
+      "title": "イツライ",
+      "artist": "緑仙",
+      "start": 37867
+    }
+  ]
+  },
+    {
     "youtubeId": "vvG_sXGp4TQ",
     "title": "好きすぎて滅！ / 叶×三枝明那×樋口楓×仙河緑",
     "channel": "七次元生徒会",
@@ -9,11 +619,9 @@
     ],
     "keywords": [
       "カバー曲",
-      "レオス・ヴィンセント",
       "七次元生徒会",
       "三枝明那",
       "叶",
-      "周央サンゴ",
       "樋口楓"
     ],
     "tags": ["歌","カバー"],

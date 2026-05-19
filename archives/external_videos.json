@@ -1,4 +1,48 @@
 [{
+    "youtubeId": "p-o215o_nBQ",
+    "title": "オープンステージ Day2公式放送【#にじフェス2026_Day2】青春謳歌！にじさんじカラオケ部",
+    "channel": "にじさんじ",
+    "date": "2026-05-17",
+    "thumbnail": "https://i.ytimg.com/vi/p-o215o_nBQ/mqdefault.jpg",
+    "category": [
+      "ライブイベント",
+      "企画",
+      "公式企画・番組",
+      "歌配信"
+    ],
+    "keywords": [
+      "Maria Marionette",
+      "にじフェス",
+      "ミラン・ケストレル",
+      "ルンルン",
+      "レヴィ・エリファ",
+      "文野環",
+      "綺沙良"
+    ],
+    "songs": [
+    {
+      "title": "Virtual to LIVE",
+      "artist": "にじさんじ",
+      "start": 1113
+    },
+    {
+      "title": "革命道中with綺沙良",
+      "artist": "アイナ・ジ・エンド",
+      "start": 1769
+    },
+    {
+      "title": "モエチャッカファイアwithレヴィ,ミラン",
+      "artist": "弌誠",
+      "start": 2449
+    },
+    {
+      "title": "にぎにぎにじたうん！",
+      "artist": "周央サンゴ×にじさんじ",
+      "start": 3820
+    }
+  ]
+  },
+    {
     "youtubeId": "XB0HofxZ6hg",
     "title": "耐久歌配信 ｜80万人登録者突破するまで終われません",
     "channel": "緑仙 / Ryushen",

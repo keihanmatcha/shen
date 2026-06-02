@@ -1,4 +1,43 @@
 [{
+    "youtubeId": "zxNuoMJMRrg",
+    "title": "月が綺麗ねと言われたい！ #shorts #vtuber #歌ってみた #柿崎ユウタ",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-01",
+    "thumbnail": "https://i.ytimg.com/vi/zxNuoMJMRrg/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "月が綺麗ねと言われたい！E",
+      "artist": "柿崎ユウタ",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "fEBjeV7U9Dw",
+    "title": "え？あぁ、そう / covered by Alri (緑仙×アンジュ・カトリーナ)",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-05-31",
+    "thumbnail": "https://i.ytimg.com/vi/fEBjeV7U9Dw/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "Alri",
+      "アンジュ・カトリーナ",
+      "カバー曲",
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "え？あぁ、そう",
+      "artist": "蝶々P",
+      "start": 0
+    }]
+  },
+    {
     "youtubeId": "p-o215o_nBQ",
     "title": "オープンステージ Day2公式放送【#にじフェス2026_Day2】青春謳歌！にじさんじカラオケ部",
     "channel": "にじさんじ",

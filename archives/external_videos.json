@@ -1,4 +1,71 @@
 [{
+    "youtubeId": "7HOjqxRIy4k",
+    "title": "ダンス・デカダンス / 緑仙 Cover",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-07",
+    "thumbnail": "https://i.ytimg.com/vi/7HOjqxRIy4k/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "ダンス・デカダンス",
+      "artist": "Chevon",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "ZRPYqv9ixXI",
+    "title": "こんばんわん🐶",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-06",
+    "thumbnail": "https://i.ytimg.com/vi/ZRPYqv9ixXI/mqdefault.jpg",
+    "category": [
+      "雑談"
+    ],
+    "keywords": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "IlQdcKNP8k4",
+    "title": "セレナーデ #shorts #vtuber #歌ってみた #なとり",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-06",
+    "thumbnail": "https://i.ytimg.com/vi/IlQdcKNP8k4/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "セレナーデ",
+      "artist": "なとり",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "GLEpIGdzqhw",
+    "title": "トンツカタンタン #shorts #vtuber #歌ってみた #クレイジーウォウウォ!!",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-04",
+    "thumbnail": "https://i.ytimg.com/vi/GLEpIGdzqhw/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "トンツカタンタン",
+      "artist": "クレイジーウォウウォ!!",
+      "start": 0
+    }]
+  },
+    {
     "youtubeId": "zxNuoMJMRrg",
     "title": "月が綺麗ねと言われたい！ #shorts #vtuber #歌ってみた #柿崎ユウタ",
     "channel": "緑仙 / Ryushen",

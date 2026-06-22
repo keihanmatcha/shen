@@ -1,4 +1,57 @@
 [{
+    "youtubeId": "hTik3uYVY48",
+    "title": "キケンナアソビ / 緑仙 Cover",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-21",
+    "thumbnail": "https://i.ytimg.com/vi/hTik3uYVY48/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "キケンナアソビ",
+      "artist": "クリープハイプ",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "XFArtCPfTLE",
+    "title": "#くださいませチャレンジ",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-20",
+    "thumbnail": "https://i.ytimg.com/vi/XFArtCPfTLE/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": [],
+    "songs": [{
+      "title": "愛くださいませ",
+      "artist": "≠ME",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "gA9LovlsECo",
+    "title": "革命道中 #shorts #vtuber #歌ってみた #アイナ・ジ・エンド",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-19",
+    "thumbnail": "https://i.ytimg.com/vi/gA9LovlsECo/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "革命道中",
+      "artist": "アイナ・ジ・エンド",
+      "start": 0
+    }]
+  },
+    {
     "youtubeId": "mMTM64Wv8y4",
     "title": "幽霊みたい / 緑仙×弦月 藤士郎 Cover",
     "channel": "緑仙 / Ryushen",

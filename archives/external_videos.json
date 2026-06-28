@@ -5,11 +5,11 @@
     "date": "2026-06-27",
     "thumbnail": "https://i.ytimg.com/vi/_TyxLz6URLU/mqdefault.jpg",
     "category": [
-      "歌動画"
+      "公式切り抜き",
+      "踊り動画"
     ],
-    "keywords": [
-      "歌動画"
-    ],
+    "keywords": [],
+    "tags": ["踊","カバー"],
     "songs": [{
       "title": "モニタリング",
       "artist": "DECO*27",
@@ -67,9 +67,11 @@
     "date": "2026-06-23",
     "thumbnail": "https://i.ytimg.com/vi/W8FXtJQpZ7M/mqdefault.jpg",
     "category": [
+      "公式切り抜き",
       "踊り動画"
     ],
     "keywords": [],
+    "tags": ["踊","カバー"],
     "songs": [{
       "title": "アイドル宣言！",
       "artist": "mona【HoneyWorks】",
@@ -102,9 +104,11 @@
     "date": "2026-06-20",
     "thumbnail": "https://i.ytimg.com/vi/XFArtCPfTLE/mqdefault.jpg",
     "category": [
+      "公式切り抜き",
       "踊り動画"
     ],
     "keywords": [],
+    "tags": ["踊","カバー"],
     "songs": [{
       "title": "愛くださいませ",
       "artist": "≠ME",
@@ -121,6 +125,7 @@
       "歌動画"
     ],
     "keywords": [
+      "カバー曲",
       "歌動画"
     ],
     "songs": [{

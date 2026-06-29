@@ -1,4 +1,45 @@
 [{
+    "youtubeId": "SuS23yoRKJY",
+    "title": "もう恋なんてしない / 緑仙 Cover",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-28",
+    "thumbnail": "https://i.ytimg.com/vi/SuS23yoRKJY/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "歌動画"
+    ],
+    "songs": [{
+      "title": "もう恋なんてしない",
+      "artist": "槇原敬之",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "GmBkxMRlr6I",
+    "title": "キュートかもしれない！",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-28",
+    "thumbnail": "https://i.ytimg.com/vi/GmBkxMRlr6I/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "カバー曲",
+      "踊り動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "踊り動画"
+    ],
+    "tags": ["踊","カバー"],
+    "songs": [{
+      "title": "キュートなキューたい",
+      "artist": "CUTIE STREET",
+      "start": 0
+    }]
+  },
+    {
     "youtubeId": "_TyxLz6URLU",
     "title": "モニタリング #shorts #vtuber #歌ってみた",
     "channel": "緑仙 / Ryushen",
@@ -6,10 +47,14 @@
     "thumbnail": "https://i.ytimg.com/vi/_TyxLz6URLU/mqdefault.jpg",
     "category": [
       "公式切り抜き",
-      "踊り動画"
+      "カバー曲",
+      "歌動画"
     ],
-    "keywords": [],
-    "tags": ["踊","カバー"],
+    "keywords": [
+      "カバー曲",
+      "歌動画"
+    ],
+    "tags": ["歌","カバー"],
     "songs": [{
       "title": "モニタリング",
       "artist": "DECO*27",
@@ -29,6 +74,7 @@
       "オリジナル曲",
       "歌動画"
     ],
+    "tags": ["踊","オリジナル"],
     "songs": [{
       "title": "機械仕掛けのワルツ",
       "artist": "緑仙",

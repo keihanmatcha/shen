@@ -1,4 +1,85 @@
-[{
+[
+  {
+    "youtubeId": "LAxTwFDwDx0",
+    "title": "modify Youth / 緑仙×渚トラウト Cover",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-05",
+    "thumbnail": "https://i.ytimg.com/vi/LAxTwFDwDx0/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "歌動画",
+      "渚トラウト"
+    ],
+    "songs": [{
+      "title": "modify Youth",
+      "artist": "Kurayamisaka",
+      "start": 0
+    }]
+  },
+  {
+    "youtubeId": "MPgfjYY7ylo",
+    "title": "歌枠 ｜みんなおはよ～！朝から歌うよ🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-02",
+    "thumbnail": "https://i.ytimg.com/vi/MPgfjYY7ylo/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": [
+      {
+        "title": "空も飛べるはず",
+        "artist": "スピッツ",
+        "start": 270
+      },
+      {
+        "title": "愛唄",
+        "artist": "GReeeeN",
+        "start": 616
+      },
+      {
+        "title": "栞",
+        "artist": "クリープハイプ",
+        "start": 853
+      },
+      {
+        "title": "modify Youth",
+        "artist": "kurayamisaka(せだい)",
+        "start": 1264
+      },
+      {
+        "title": "ないものねだり",
+        "artist": "KANA-BOON",
+        "start": 1465
+      },
+      {
+        "title": "若者のすべて",
+        "artist": "フジファブリック",
+        "start": 1778
+      },
+      {
+        "title": "さよならエレジー",
+        "artist": "菅田将暉",
+        "start": 2068
+      },
+      {
+        "title": "ただ君に晴れ",
+        "artist": "ヨルシカ",
+        "start": 2332
+      },
+      {
+        "title": "ray",
+        "artist": "BUMP OF CHICKEN",
+        "start": 2626
+      }
+    ]
+  },
+    {
     "youtubeId": "SuS23yoRKJY",
     "title": "もう恋なんてしない / 緑仙 Cover",
     "channel": "緑仙 / Ryushen",

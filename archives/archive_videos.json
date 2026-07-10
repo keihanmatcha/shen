@@ -1,5 +1,85 @@
 [
   {
+    "youtubeId": "Ce3ERNbIcI0",
+    "title": "歌枠 ｜爽やかな朝にボカロカラオケ配信です🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-08",
+    "thumbnail": "https://i.ytimg.com/vi/Ce3ERNbIcI0/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": [
+      {
+        "title": "二息歩行",
+        "artist": "DECO*27",
+        "start": 191
+      },
+      {
+        "title": "夜もすがら君想ふ",
+        "artist": "TOKOTOKO(西沢さんP)",
+        "start": 429
+      },
+      {
+        "title": "からくりピエロ",
+        "artist": "40mP",
+        "start": 685
+      },
+      {
+        "title": "白い雪のプリンセスは",
+        "artist": "のぼる↑",
+        "start": 964
+      },
+      {
+        "title": "ジャンキーナイトタウンオーケストラ",
+        "artist": "すりぃ",
+        "start": 1222
+      },
+      {
+        "title": "天ノ弱",
+        "artist": "164",
+        "start": 1512
+      },
+      {
+        "title": "冨田悠斗(とみー",
+        "artist": "T-POCKET)",
+        "start": 1719
+      },
+      {
+        "title": "ネトゲ廃人シュプレヒコール",
+        "artist": "さつき が てんこもり",
+        "start": 1963
+      },
+      {
+        "title": "砂の惑星",
+        "artist": "ハチ",
+        "start": 2263
+      },
+      {
+        "title": "テレキャスタービーボーイ",
+        "artist": "すりぃ",
+        "start": 2569
+      },
+      {
+        "title": "メランコリック",
+        "artist": "Junky",
+        "start": 2742
+      },
+      {
+        "title": "トゥインクル",
+        "artist": "Junky",
+        "start": 3005
+      },
+      {
+        "title": "フォニイ",
+        "artist": "ツミキ",
+        "start": 3249
+      }
+    ]
+  },
+  {
     "youtubeId": "hlf745abJe8",
     "title": "歌枠 ｜夏を感じる季節にはロック歌うしかないでしょ！🐼💭",
     "channel": "緑仙 / Ryushen",
@@ -187,6 +267,99 @@
         "title": "ray",
         "artist": "BUMP OF CHICKEN",
         "start": 2626
+      }
+    ]
+  },
+  {
+    "youtubeId": "3ckDdNPmqxo",
+    "title": "歌枠 ｜みんなをメロメロにしちゃうそんな歌配信🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-02",
+    "thumbnail": "https://i.ytimg.com/vi/3ckDdNPmqxo/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "SuIdxFMSpDs",
+    "title": "歌枠 ｜シティでポップな歌謡曲とか懐かしい曲を歌います🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-02",
+    "thumbnail": "https://i.ytimg.com/vi/SuIdxFMSpDs/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "27GP4Uo23LI",
+    "title": "歌枠 ｜平成初期の懐かしアニソンを沢山歌うそんな配信🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-06-29",
+    "thumbnail": "https://i.ytimg.com/vi/27GP4Uo23LI/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": [
+      {
+        "title": "ブルーウォーター",
+        "artist": "森川美穂",
+        "start": 177
+      },
+      {
+        "title": "Get Over",
+        "artist": "dream",
+        "start": 429
+      },
+      {
+        "title": "HEARTの形状",
+        "artist": "B∀G",
+        "start": 756
+      },
+      {
+        "title": "born Legend",
+        "artist": "KASUMI",
+        "start": 1020
+      },
+      {
+        "title": "輪舞-revolution",
+        "artist": "奥井雅美",
+        "start": 1324
+      },
+      {
+        "title": "笑顔に会いたい",
+        "artist": "濱田理恵",
+        "start": 1606
+      },
+      {
+        "title": "ときめきの導火線",
+        "artist": "今野友加里",
+        "start": 1851
+      },
+      {
+        "title": "流れ星へ",
+        "artist": "スリーライツ",
+        "start": 2117
+      },
+      {
+        "title": "とどかぬ想い my friend's love",
+        "artist": "スリーライツ",
+        "start": 2416
+      },
+      {
+        "title": "ルージュになりたい",
+        "artist": "梶谷美由紀",
+        "start": 2663
       }
     ]
   },

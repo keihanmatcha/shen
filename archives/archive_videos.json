@@ -1,5 +1,107 @@
 [
   {
+    "youtubeId": "bNBXQKmAZDg",
+    "title": "水曜日おつかれ",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-15",
+    "thumbnail": "https://i.ytimg.com/vi/bNBXQKmAZDg/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "SuIdxFMSpDs",
+    "title": "歌枠 ｜シティでポップな歌謡曲とか懐かしい曲を歌います🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-13",
+    "thumbnail": "https://i.ytimg.com/vi/SuIdxFMSpDs/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": [
+      {
+        "title": "流星のサドル",
+        "artist": "久保田利伸",
+        "start": 248
+      },
+      {
+        "title": "彼女について知っている二、三の事柄",
+        "artist": "ムーンライダーズ",
+        "start": 507
+      },
+      {
+        "title": "キャンディ",
+        "artist": "原田真二",
+        "start": 718
+      },
+      {
+        "title": "闘牛士",
+        "artist": "Char",
+        "start": 946
+      },
+      {
+        "title": "夢の途中",
+        "artist": "来生たかお",
+        "start": 1179
+      },
+      {
+        "title": "紳士同盟",
+        "artist": "薬師丸ひろ子",
+        "start": 1473
+      },
+      {
+        "title": "私はピアノ",
+        "artist": "高田みづえ",
+        "start": 1720
+      },
+      {
+        "title": "ジャグラー",
+        "artist": "中原めいこ",
+        "start": 1964
+      },
+      {
+        "title": "痛快ウキウキ通り",
+        "artist": "小沢健二",
+        "start": 2246
+      },
+      {
+        "title": "格好悪いふられ方",
+        "artist": "大江千里",
+        "start": 2455
+      },
+      {
+        "title": "アクアマリンのままでいて",
+        "artist": "カルロス・トシキ&オメガトライブ",
+        "start": 2691
+      },
+      {
+        "title": "SCRAMBLE CROSS",
+        "artist": "杉山清貴&オメガトライブ",
+        "start": 2970
+      },
+      {
+        "title": "ふたりの夏物語 NEVER ENDING SUMMER",
+        "artist": "杉山清貴&オメガトライブ",
+        "start": 3253
+      },
+      {
+        "title": "都会",
+        "artist": "大貫妙子",
+        "start": 3514
+      },
+      {
+        "title": "真夜中のドア～Stay With Me",
+        "artist": "松原みき",
+        "start": 3962
+      }
+    ]
+  },
+  {
     "youtubeId": "taZDmEo7yeM",
     "title": "#漢義リーグ ｜ 漢義リーグ第六節 緑仙視点【 #なんもわ夏嵐 】",
     "channel": "緑仙 / Ryushen",
@@ -59425,6 +59527,715 @@
         "title": "にぎにぎにじたうん！",
         "artist": "全員カラオケ部最高✨️！！ちょまかわいすぎる😭💞✨️",
         "start": 3820
+      }
+    ]
+  },
+  {
+    "youtubeId": "G1fbvfswdbg",
+    "title": "【歌枠】自枠は久々？コラボ歌枠【長尾景/にじさんじ】",
+    "channel": "長尾 景 / Nagao Kei【にじさんじ】",
+    "date": "2026-07-14",
+    "thumbnail": "https://i.ytimg.com/vi/G1fbvfswdbg/mqdefault.jpg",
+    "category": [
+      "企画",
+      "歌配信"
+    ],
+    "keywords": [
+      "北見遊征",
+      "歌配信",
+      "葉加瀬冬雪",
+      "長尾景"
+    ],
+    "songs": [
+      {
+        "title": "ナイスだね",
+        "artist": "CUTIE STREET  ⚗🐼",
+        "start": 290
+      },
+      {
+        "title": "スターマイン",
+        "artist": "Da-iCE  ‪📿🍔‬☯️",
+        "start": 626
+      },
+      {
+        "title": "インフェルノ",
+        "artist": "Mrs. GREEN APPLE  ☯️",
+        "start": 982
+      },
+      {
+        "title": "‪√‬−1",
+        "artist": "日食なつこ  🐼",
+        "start": 1273
+      },
+      {
+        "title": "LM.C  ‪📿🍔‬",
+        "artist": "",
+        "start": 1611
+      },
+      {
+        "title": "青春コンプレックス",
+        "artist": "結束バンド  ⚗",
+        "start": 2023
+      },
+      {
+        "title": "MISSION",
+        "artist": "MAZZEL  ‪📿🍔‬🐼",
+        "start": 2400
+      },
+      {
+        "title": "Mela!",
+        "artist": "緑黄色社会  ☯️⚗",
+        "start": 2708
+      },
+      {
+        "title": "魔法の絨毯",
+        "artist": "川崎鷹也  ☯️",
+        "start": 3073
+      },
+      {
+        "title": "アフターダーク",
+        "artist": "ASIAN KUNG-FU GENERATION  ‪📿🍔‬",
+        "start": 3397
+      },
+      {
+        "title": "ビビデバ",
+        "artist": "星街すいせい  🐼",
+        "start": 3741
+      },
+      {
+        "title": "さよならミッドナイト",
+        "artist": "大柴広己  ⚗",
+        "start": 3992
+      },
+      {
+        "title": "ray",
+        "artist": "BUMP OF CHICKEN  ‪📿🍔‬⚗",
+        "start": 4572
+      },
+      {
+        "title": "好きすぎて滅！",
+        "artist": "M!LK  ☯️🐼",
+        "start": 4939
+      },
+      {
+        "title": "God knows...",
+        "artist": "涼宮ハルヒ  ☯️",
+        "start": 5412
+      },
+      {
+        "title": "そばかす",
+        "artist": "JUDY AND MARY  ‪📿🍔‬‬",
+        "start": 5789
+      },
+      {
+        "title": "モニタリング",
+        "artist": "DECO*27  ⚗",
+        "start": 6110
+      },
+      {
+        "title": "盛れ！ミ・アモーレ",
+        "artist": "Juice=Juice  🐼",
+        "start": 6352
+      },
+      {
+        "title": "天ノ弱",
+        "artist": "164  全員‬▼タイムスタンプ",
+        "start": 6761
+      },
+      {
+        "title": "声入り",
+        "artist": "",
+        "start": 119
+      },
+      {
+        "title": "帽子を脱ぐ北見",
+        "artist": "",
+        "start": 136
+      },
+      {
+        "title": "🐼被って〜！",
+        "artist": "",
+        "start": 161
+      },
+      {
+        "title": "みんな真っ黒の服",
+        "artist": "モノクロ組",
+        "start": 181
+      },
+      {
+        "title": "コンセプトがない",
+        "artist": "⚗選曲イキっちゃった",
+        "start": 230
+      },
+      {
+        "title": "デュエット消えそうな緑仙",
+        "artist": "",
+        "start": 266
+      },
+      {
+        "title": "ナイスだね",
+        "artist": "CUTIE STREET  ⚗🐼",
+        "start": 290
+      },
+      {
+        "title": "ニャーだと思ってた",
+        "artist": "はかちぇの私欲",
+        "start": 561
+      },
+      {
+        "title": "おら歌え！",
+        "artist": "",
+        "start": 601
+      },
+      {
+        "title": "‪📿🍔‬まじで吹き飛んだらすんません",
+        "artist": "",
+        "start": 614
+      },
+      {
+        "title": "スターマイン",
+        "artist": "Da-iCE  ‪📿🍔‬☯️",
+        "start": 626
+      },
+      {
+        "title": "☯️乗り越えた",
+        "artist": "",
+        "start": 853
+      },
+      {
+        "title": "全部デュエット歌枠があったっていい",
+        "artist": "",
+        "start": 890
+      },
+      {
+        "title": "ソロターン",
+        "artist": "主催が最初",
+        "start": 926
+      },
+      {
+        "title": "一昨日の55曲耐久に入ってた",
+        "artist": "",
+        "start": 956
+      },
+      {
+        "title": "危なかったらウインク😉",
+        "artist": "",
+        "start": 975
+      },
+      {
+        "title": "インフェルノ",
+        "artist": "Mrs. GREEN APPLE  ☯️",
+        "start": 982
+      },
+      {
+        "title": "ドパガキだから後奏カットしたくなる",
+        "artist": "",
+        "start": 1196
+      },
+      {
+        "title": "指名される緑仙",
+        "artist": "🐼歌配信で歌ったことないんだよな",
+        "start": 1234
+      },
+      {
+        "title": "‪√‬−1",
+        "artist": "日食なつこ  🐼",
+        "start": 1273
+      },
+      {
+        "title": "いい曲",
+        "artist": "",
+        "start": 1454
+      },
+      {
+        "title": "名古屋ツアーの候補曲にあった",
+        "artist": "",
+        "start": 1490
+      },
+      {
+        "title": "しゃちほこ号",
+        "artist": "",
+        "start": 1519
+      },
+      {
+        "title": "水流のロック組",
+        "artist": "",
+        "start": 1551
+      },
+      {
+        "title": "応援に回る可能性がある北見",
+        "artist": "",
+        "start": 1580
+      },
+      {
+        "title": "🐼日食なつこ？",
+        "artist": "",
+        "start": 1593
+      },
+      {
+        "title": "LM.C  ‪📿🍔‬",
+        "artist": "",
+        "start": 1611
+      },
+      {
+        "title": "リボーンの話",
+        "artist": "",
+        "start": 1838
+      },
+      {
+        "title": "⚗キャラソン歌枠したくね？",
+        "artist": "",
+        "start": 1878
+      },
+      {
+        "title": "桜蘭高校ホスト部、黒執事、BLEACH、黒子のバスケ、幽遊白書",
+        "artist": "",
+        "start": 1888
+      },
+      {
+        "title": "FOCUS ONはキャラソン",
+        "artist": "",
+        "start": 1946
+      },
+      {
+        "title": "☯️青峰と火神のデュエットがあんの！？",
+        "artist": "",
+        "start": 1959
+      },
+      {
+        "title": "優しさのチル",
+        "artist": "",
+        "start": 2000
+      },
+      {
+        "title": "青春コンプレックス",
+        "artist": "結束バンド  ⚗",
+        "start": 2023
+      },
+      {
+        "title": "ハモられるの嫌だったはかちぇ",
+        "artist": "",
+        "start": 2223
+      },
+      {
+        "title": "気持ちよく歌えるように作られてる曲",
+        "artist": "",
+        "start": 2294
+      },
+      {
+        "title": "デュエットのターン",
+        "artist": "",
+        "start": 2320
+      },
+      {
+        "title": "☯️北見が生きてるうちに…",
+        "artist": "全部やってくれる北見",
+        "start": 2334
+      },
+      {
+        "title": "荷が重い北見",
+        "artist": "",
+        "start": 2360
+      },
+      {
+        "title": "🐼これ歌える相手ってにじさんじにいるんだよ",
+        "artist": "",
+        "start": 2383
+      },
+      {
+        "title": "MISSION",
+        "artist": "MAZZEL  ‪📿🍔‬🐼",
+        "start": 2400
+      },
+      {
+        "title": "🐼MAZZEL歌えるの嬉しい",
+        "artist": "",
+        "start": 2613
+      },
+      {
+        "title": "布教タイム",
+        "artist": "",
+        "start": 2640
+      },
+      {
+        "title": "🐼お大事に",
+        "artist": "",
+        "start": 2680
+      },
+      {
+        "title": "⚗カラオケやからな‼️",
+        "artist": "",
+        "start": 2698
+      },
+      {
+        "title": "Mela!",
+        "artist": "緑黄色社会  ☯️⚗└",
+        "start": 2708
+      },
+      {
+        "title": "☯️次あやしい…(ｺｿｺｿ)",
+        "artist": "",
+        "start": 2846
+      },
+      {
+        "title": "ららら♪だけ5歳児",
+        "artist": "",
+        "start": 2950
+      },
+      {
+        "title": "デュエットに詰め込んだら練習できる",
+        "artist": "",
+        "start": 2977
+      },
+      {
+        "title": "☯️これは布石です",
+        "artist": "",
+        "start": 3005
+      },
+      {
+        "title": "ソロゾーン",
+        "artist": "",
+        "start": 3032
+      },
+      {
+        "title": "☯️北見4ぬ前に北見でもいいかなと思ったけど└‪📿🍔‬俺が4ぬこと決まってんだw",
+        "artist": "",
+        "start": 3043
+      },
+      {
+        "title": "魔法の絨毯",
+        "artist": "川崎鷹也  ☯️",
+        "start": 3073
+      },
+      {
+        "title": "エモ→☯️結局何もないじゃんって思っちゃう",
+        "artist": "",
+        "start": 3281
+      },
+      {
+        "title": "リアリスト2人w",
+        "artist": "",
+        "start": 3311
+      },
+      {
+        "title": "⚗うるせぇよ！",
+        "artist": "",
+        "start": 3333
+      },
+      {
+        "title": "フォローする北見",
+        "artist": "",
+        "start": 3351
+      },
+      {
+        "title": "家事もやるよ〜",
+        "artist": "",
+        "start": 3384
+      },
+      {
+        "title": "アフターダーク",
+        "artist": "ASIAN KUNG-FU GENERATION  ‪📿🍔‬",
+        "start": 3397
+      },
+      {
+        "title": "🐼1人であの頃縛りしてる？",
+        "artist": "",
+        "start": 3594
+      },
+      {
+        "title": "あの頃のジャンプ縛り歌枠やりたい",
+        "artist": "",
+        "start": 3636
+      },
+      {
+        "title": "黒崎一護のアスタリスク",
+        "artist": "",
+        "start": 3669
+      },
+      {
+        "title": "歌が上手いルフィ",
+        "artist": "",
+        "start": 3691
+      },
+      {
+        "title": "ビビデバ",
+        "artist": "星街すいせい  🐼",
+        "start": 3741
+      },
+      {
+        "title": "ビビデバ好きな緑仙",
+        "artist": "",
+        "start": 3912
+      },
+      {
+        "title": "⚗キーがわからんのよ",
+        "artist": "",
+        "start": 3946
+      },
+      {
+        "title": "緑仙の歌枠から探したはかちぇと長尾",
+        "artist": "",
+        "start": 3970
+      },
+      {
+        "title": "さよならミッドナイト",
+        "artist": "大柴広己  ⚗",
+        "start": 3992
+      },
+      {
+        "title": "男性でも歌いやすい",
+        "artist": "",
+        "start": 4298
+      },
+      {
+        "title": "年",
+        "artist": "🐼ﾔﾒﾃﾔﾒﾃ",
+        "start": 4332
+      },
+      {
+        "title": "非公式サイトが便利な話😂",
+        "artist": "",
+        "start": 4354
+      },
+      {
+        "title": "ライバーあるある",
+        "artist": "思い出せない",
+        "start": 4414
+      },
+      {
+        "title": "歌える曲をリストにしてる緑仙😳",
+        "artist": "",
+        "start": 4445
+      },
+      {
+        "title": "デュエットターン",
+        "artist": "",
+        "start": 4476
+      },
+      {
+        "title": "先バレする長尾",
+        "artist": "",
+        "start": 4488
+      },
+      {
+        "title": "先バray",
+        "artist": "",
+        "start": 4526
+      },
+      {
+        "title": "キー変更してやり直し",
+        "artist": "",
+        "start": 4556
+      },
+      {
+        "title": "ray",
+        "artist": "BUMP OF CHICKEN  ‪📿🍔‬⚗",
+        "start": 4572
+      },
+      {
+        "title": "手筈通り",
+        "artist": "",
+        "start": 4825
+      },
+      {
+        "title": "先バレ",
+        "artist": "",
+        "start": 4855
+      },
+      {
+        "title": "‪📿🍔‬背中でっか…",
+        "artist": "",
+        "start": 4869
+      },
+      {
+        "title": "滅すぎて好き",
+        "artist": "男子のテーブル",
+        "start": 4895
+      },
+      {
+        "title": "好きすぎて滅！",
+        "artist": "M!LK  ☯️🐼",
+        "start": 4939
+      },
+      {
+        "title": "え、好き",
+        "artist": "",
+        "start": 5164
+      },
+      {
+        "title": "お手洗いに行きたい長尾",
+        "artist": "",
+        "start": 5174
+      },
+      {
+        "title": "‪📿🍔‬長尾さん歌枠中ですよ？",
+        "artist": "優しさの連れション",
+        "start": 5185
+      },
+      {
+        "title": "水の並べ方が五目並べw",
+        "artist": "",
+        "start": 5212
+      },
+      {
+        "title": "五目並べ完成",
+        "artist": "",
+        "start": 5245
+      },
+      {
+        "title": "カラオケの陰謀？",
+        "artist": "トイレ行きたくなりがち",
+        "start": 5251
+      },
+      {
+        "title": "ドリンクバーの正解🤔💭",
+        "artist": "",
+        "start": 5289
+      },
+      {
+        "title": "🐼コーンスープだよ",
+        "artist": "",
+        "start": 5325
+      },
+      {
+        "title": "‪📿🍔‬☯️戻り",
+        "artist": "",
+        "start": 5331
+      },
+      {
+        "title": "名古屋組の長老たち",
+        "artist": "",
+        "start": 5348
+      },
+      {
+        "title": "🐼名古屋来ればよかったのにね",
+        "artist": "",
+        "start": 5371
+      },
+      {
+        "title": "God knows...",
+        "artist": "涼宮ハルヒ  ☯️",
+        "start": 5412
+      },
+      {
+        "title": "ハルヒの話もしてた",
+        "artist": "",
+        "start": 5694
+      },
+      {
+        "title": "周年！？",
+        "artist": "☯️なんかオタクが流してたんだよな",
+        "start": 5707
+      },
+      {
+        "title": "ペットボトルのウォールマリアw",
+        "artist": "",
+        "start": 5730
+      },
+      {
+        "title": "‪📿🍔‬ダメだったらみんなで歌いましょ",
+        "artist": "",
+        "start": 5745
+      },
+      {
+        "title": "先バレ",
+        "artist": "",
+        "start": 5784
+      },
+      {
+        "title": "そばかす",
+        "artist": "JUDY AND MARY  ‪📿🍔‬",
+        "start": 5789
+      },
+      {
+        "title": "‪📿🍔‬カエルちゃん！",
+        "artist": "",
+        "start": 6032
+      },
+      {
+        "title": "個目の念慈菴",
+        "artist": "",
+        "start": 6048
+      },
+      {
+        "title": "人であの頃枠やってる北見",
+        "artist": "",
+        "start": 6068
+      },
+      {
+        "title": "ノー勉のはかちぇ",
+        "artist": "",
+        "start": 6085
+      },
+      {
+        "title": "モニタリング",
+        "artist": "DECO*27  ⚗",
+        "start": 6110
+      },
+      {
+        "title": "呼吸するとこない",
+        "artist": "",
+        "start": 6294
+      },
+      {
+        "title": "店員さん",
+        "artist": "",
+        "start": 6330
+      },
+      {
+        "title": "盛れ！ミ・アモーレ",
+        "artist": "Juice=Juice  🐼",
+        "start": 6352
+      },
+      {
+        "title": "⚗長尾さんが横でバタバタしてました",
+        "artist": "",
+        "start": 6588
+      },
+      {
+        "title": "バタついてただけw",
+        "artist": "",
+        "start": 6615
+      },
+      {
+        "title": "次がラスト",
+        "artist": "",
+        "start": 6636
+      },
+      {
+        "title": "いつかあの頃ジャンプ縛りやりたい",
+        "artist": "",
+        "start": 6647
+      },
+      {
+        "title": "⚗全曲ジョジョにしよ",
+        "artist": "",
+        "start": 6669
+      },
+      {
+        "title": "次回はあの頃ジャンプ縛り100曲耐久",
+        "artist": "",
+        "start": 6685
+      },
+      {
+        "title": "人10曲ノルマ10人",
+        "artist": "最後はウィーアー!",
+        "start": 6721
+      },
+      {
+        "title": "真面目な後輩北見",
+        "artist": "",
+        "start": 6740
+      },
+      {
+        "title": "天ノ弱",
+        "artist": "164  全員",
+        "start": 6761
+      },
+      {
+        "title": "みんなで〆\"あの頃\"の曲多くてめっちゃ楽しかったです！！あの頃のジャンプ縛り歌枠いつか聞ける日を楽しみにしてます！！",
+        "artist": "",
+        "start": 6936
       }
     ]
   },

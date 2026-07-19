@@ -1,4 +1,20 @@
 [{
+    "youtubeId": "bNBXQKmAZDg",
+    "title": "水曜日おつかれ",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-15",
+    "thumbnail": "https://i.ytimg.com/vi/bNBXQKmAZDg/mqdefault.jpg",
+    "category": [
+      "踊り動画"
+    ],
+    "keywords": ["カバー曲"],
+    "songs": [{
+        "title": "Otukare",
+        "artist": "楽音",
+        "start": 290
+      }]
+  },
+    {
     "youtubeId": "G1fbvfswdbg",
     "title": "【歌枠】自枠は久々？コラボ歌枠【長尾景/にじさんじ】",
     "channel": "長尾 景 / Nagao Kei【にじさんじ】",
@@ -11,44 +27,45 @@
     "keywords": [
       "北見遊征",
       "カバー曲",
+      "SitR名古屋",
       "歌配信",
       "葉加瀬冬雪",
       "長尾景"
     ],
     "songs": [
       {
-        "title": "ナイスだね",
-        "artist": "CUTIE STREET  ⚗🐼",
+        "title": "ナイスだね with 葉加瀬",
+        "artist": "CUTIE STREET",
         "start": 290
       },
       {
         "title": "‪√‬−1",
-        "artist": "日食なつこ  🐼",
+        "artist": "日食なつこ",
         "start": 1273
       },
       {
-        "title": "MISSION",
-        "artist": "MAZZEL  ‪📿🍔‬🐼",
+        "title": "MISSION with 北見",
+        "artist": "MAZZEL",
         "start": 2400
       },
       {
         "title": "ビビデバ",
-        "artist": "星街すいせい  🐼",
+        "artist": "星街すいせい",
         "start": 3741
       },
       {
-        "title": "好きすぎて滅！",
-        "artist": "M!LK  ☯️🐼",
+        "title": "好きすぎて滅！ with 長尾",
+        "artist": "M!LK",
         "start": 4939
       },
       {
         "title": "盛れ！ミ・アモーレ",
-        "artist": "Juice=Juice  🐼",
+        "artist": "Juice=Juice",
         "start": 6352
       },
       {
-        "title": "天ノ弱",
-        "artist": "164  全員‬",
+        "title": "天ノ弱 with 葉加瀬,長尾,北見",
+        "artist": "164‬",
         "start": 6761
       }
     ]

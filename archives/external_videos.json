@@ -1,4 +1,87 @@
 [{
+    "youtubeId": "qWf1qcm23d4",
+    "title": "駄菓子屋商売 / 緑仙 Cover",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-08",
+    "thumbnail": "https://i.ytimg.com/vi/qWf1qcm23d4/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "歌動画"
+    ],
+    "songs": [{
+        "title": "駄菓子屋商売",
+        "artist": "米津玄師の曲",
+        "start": 0
+      }]
+  },
+  {
+    "youtubeId": "VaOc9IMynX8",
+    "title": "歌カバー300本投稿ありがとう、そして正確な文章を考えようの回",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-02",
+    "thumbnail": "https://i.ytimg.com/vi/VaOc9IMynX8/mqdefault.jpg",
+    "category": [
+      "雑談"
+    ],
+    "keywords": [
+      "雑談"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "a6XIYS-SkVg",
+    "title": "ザムザ / 緑仙 Cover",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-02",
+    "thumbnail": "https://i.ytimg.com/vi/a6XIYS-SkVg/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "歌動画"
+    ],
+    "songs": [{
+        "title": "ザムザ",
+        "artist": "てにをは",
+        "start": 0
+      }]
+  },
+  {
+    "youtubeId": "5uCQxHWPfkY",
+    "title": "8月ってこと",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-02",
+    "thumbnail": "https://i.ytimg.com/vi/5uCQxHWPfkY/mqdefault.jpg",
+    "category": [
+      "雑談"
+    ],
+    "keywords": [],
+    "songs": []
+  },
+  {
+    "youtubeId": "dqx--1Sjovw",
+    "title": "モエチャッカファイア / 緑仙×雫 Cover",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-07-26",
+    "thumbnail": "https://i.ytimg.com/vi/dqx--1Sjovw/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "歌動画"
+    ],
+    "songs": [{
+        "title": "モエチャッカファイア",
+        "artist": "弌誠",
+        "start": 0
+      }]
+  },
+    {
     "youtubeId": "bNBXQKmAZDg",
     "title": "水曜日おつかれ",
     "channel": "緑仙 / Ryushen",
@@ -12,7 +95,7 @@
     "songs": [{
         "title": "Otukare",
         "artist": "楽音",
-        "start": 290
+        "start": 0
       }]
   },
     {

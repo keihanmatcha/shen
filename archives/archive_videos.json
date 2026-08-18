@@ -1,5 +1,33 @@
 [
   {
+    "youtubeId": "-tplhu_nV6w",
+    "title": "歌枠 ｜ ノンストップでボカロを歌いまくります🎤🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-16",
+    "thumbnail": "https://i.ytimg.com/vi/-tplhu_nV6w/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "wmz7SN1sFmY",
+    "title": "歌枠 ｜ロックな曲を歌いたい🌞みんなおはよ～🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-17",
+    "thumbnail": "https://i.ytimg.com/vi/wmz7SN1sFmY/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": []
+  },
+  {
     "youtubeId": "Wl8q6ezHzX4",
     "title": "歌枠 ｜季節を感じる歌をたくさん歌います、おはよ～🌞🐼💭",
     "channel": "緑仙 / Ryushen",
@@ -84,20 +112,6 @@
       "公式切り抜き"
     ],
     "keywords": [],
-    "songs": []
-  },
-  {
-    "youtubeId": "-tplhu_nV6w",
-    "title": "歌枠 ｜ ノンストップでボカロを歌いまくります🎤🐼💭",
-    "channel": "緑仙 / Ryushen",
-    "date": "2026-08-16",
-    "thumbnail": "https://i.ytimg.com/vi/-tplhu_nV6w/mqdefault.jpg",
-    "category": [
-      "歌配信"
-    ],
-    "keywords": [
-      "歌配信"
-    ],
     "songs": []
   },
   {
@@ -344,20 +358,6 @@
         "start": 3408
       }
     ]
-  },
-  {
-    "youtubeId": "VaOc9IMynX8",
-    "title": "歌カバー300本投稿ありがとう、そして正確な文章を考えようの回",
-    "channel": "緑仙 / Ryushen",
-    "date": "2026-08-02",
-    "thumbnail": "https://i.ytimg.com/vi/VaOc9IMynX8/mqdefault.jpg",
-    "category": [
-      "歌動画"
-    ],
-    "keywords": [
-      "歌動画"
-    ],
-    "songs": []
   },
   {
     "youtubeId": "a6XIYS-SkVg",
@@ -39814,6 +39814,44 @@
       "三枝明那",
       "童田明治",
       "鈴木勝"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "O1x8AEFUi5M",
+    "title": "ぶつかり注意！氣編👤#護身術",
+    "channel": "七次元生徒会",
+    "date": "2026-08-17",
+    "thumbnail": "https://i.ytimg.com/vi/O1x8AEFUi5M/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "レオス・ヴィンセント",
+      "七次元生徒会",
+      "三枝明那",
+      "叶",
+      "周央サンゴ",
+      "樋口楓"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "zDOLsAuQCEg",
+    "title": "【重大発表】夏休み明けのお知らせ配信【七次元生徒会】",
+    "channel": "七次元生徒会",
+    "date": "2026-08-17",
+    "thumbnail": "https://i.ytimg.com/vi/zDOLsAuQCEg/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "レオス・ヴィンセント",
+      "七次元生徒会",
+      "三枝明那",
+      "叶",
+      "周央サンゴ",
+      "樋口楓"
     ],
     "songs": []
   },

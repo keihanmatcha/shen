@@ -1,5 +1,65 @@
 [
   {
+    "youtubeId": "s0DmKVJaXVY",
+    "title": "歌枠 ｜ おはよう歌配信の時間です、爽やかに歌うよ～🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-24",
+    "thumbnail": "https://i.ytimg.com/vi/s0DmKVJaXVY/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": [
+      {
+        "title": "いのちの名前",
+        "artist": "木村弓",
+        "start": 185
+      },
+      {
+        "title": "言って。",
+        "artist": "ヨルシカ",
+        "start": 417
+      },
+      {
+        "title": "だから僕は音楽を辞めた",
+        "artist": "ヨルシカ",
+        "start": 690
+      },
+      {
+        "title": "変わらないもの",
+        "artist": "奥華子",
+        "start": 995
+      },
+      {
+        "title": "たばこ",
+        "artist": "コレサワ",
+        "start": 1326
+      },
+      {
+        "title": "Rolling Star",
+        "artist": "YUI",
+        "start": 1720
+      },
+      {
+        "title": "SUMMER SONG",
+        "artist": "YUI",
+        "start": 1908
+      },
+      {
+        "title": "SAKURA",
+        "artist": "いきものがかり",
+        "start": 2379
+      },
+      {
+        "title": "群青",
+        "artist": "YOASOBI",
+        "start": 3231
+      }
+    ]
+  },
+  {
     "youtubeId": "V1jBiCaK5tg",
     "title": "歌枠 ｜ 女性ボーカルを歌いあげます、朝なのに🐼💭",
     "channel": "緑仙 / Ryushen",
@@ -40000,6 +40060,25 @@
       "三枝明那",
       "童田明治",
       "鈴木勝"
+    ],
+    "songs": []
+  },
+  {
+    "youtubeId": "xre0dcTsQIQ",
+    "title": "「おなかいたい」って言ったよね？",
+    "channel": "七次元生徒会",
+    "date": "2026-08-24",
+    "thumbnail": "https://i.ytimg.com/vi/xre0dcTsQIQ/mqdefault.jpg",
+    "category": [
+      "未分類"
+    ],
+    "keywords": [
+      "レオス・ヴィンセント",
+      "七次元生徒会",
+      "三枝明那",
+      "叶",
+      "周央サンゴ",
+      "樋口楓"
     ],
     "songs": []
   },

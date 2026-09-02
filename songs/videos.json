@@ -1,9 +1,104 @@
 [
     {
+        "youtubeId": "pYsh-rBw7Fc",
+        "title": "歌枠 ｜ 9月の朝も僕と一緒に起きよう‼寝起き歌配信です🐼💭",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-09-01",
+        "thumbnail": "https://i.ytimg.com/vi/pYsh-rBw7Fc/mqdefault.jpg",
+        "category": [
+            "歌配信"
+        ],
+        "keywords": [
+            "歌配信"
+        ],
+        "songs": [
+            {
+                "title": "ノーダウト",
+                "artist": "Official髭男dism\r\r00:",
+                "start": 299,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "Bunny Girl",
+                "artist": "AKASAKI",
+                "start": 493,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "青と夏",
+                "artist": "Mrs. GREEN APPLE",
+                "start": 1512,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "月のワルツ",
+                "artist": "諫山実生",
+                "start": 1783,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ギラギラ",
+                "artist": "Ado",
+                "start": 2057,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "第六感",
+                "artist": "Reol",
+                "start": 2331,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "モエチャッカファイア",
+                "artist": "弌誠",
+                "start": 2532,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "未来予想図 Ⅱ",
+                "artist": "DREAMS COME TRUE",
+                "start": 3462,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "初恋サイダー",
+                "artist": "Buono!",
+                "start": 3924,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "残響散歌",
+                "artist": "Aimer",
+                "start": 4153,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "Jl-H6EGsYLw",
         "title": "歌枠 ｜ 涼宮ハルヒシリーズのキャラクターソングを歌います🐼💭",
         "channel": "緑仙 / Ryushen",
-        "date": "2026-08-27",
+        "date": "2026-08-31",
         "thumbnail": "https://i.ytimg.com/vi/Jl-H6EGsYLw/mqdefault.jpg",
         "category": [
             "歌配信"
@@ -11,7 +106,192 @@
         "keywords": [
             "歌配信"
         ],
-        "songs": []
+        "songs": [
+            {
+                "title": "冒険でしょでしょ?",
+                "artist": "涼宮ハルヒ",
+                "start": 231,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "最強パレパレード",
+                "artist": "涼宮ハルヒ, 長門有希, 朝比奈みくる",
+                "start": 500,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "Super Driver",
+                "artist": "平野綾",
+                "start": 769,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "God knows…",
+                "artist": "涼宮ハルヒ",
+                "start": 1037,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "Lost my music",
+                "artist": "涼宮ハルヒ",
+                "start": 1327,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "SOSならだいじょーぶ",
+                "artist": "涼宮ハルヒ",
+                "start": 1594,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "雪、無音、窓辺にて。",
+                "artist": "長門有希",
+                "start": 1829,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "恋のミクル伝説",
+                "artist": "朝比奈みくる",
+                "start": 2111,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "まっがーれ↓スペクタクル",
+                "artist": "古泉一樹",
+                "start": 2335,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "「つまらない話ですよ」と僕は言う",
+                "artist": "古泉一樹",
+                "start": 2564,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "倦怠ライフ・リターンズ!",
+                "artist": "キョン",
+                "start": 2865,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ホモ・サピエンス・ラプソディ",
+                "artist": "キョン",
+                "start": 3107,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "妹わすれちゃおしおきよ",
+                "artist": "キョンの妹",
+                "start": 3406,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "青春いいじゃないかっ",
+                "artist": "鶴屋さん",
+                "start": 3633,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "祭って祭って! いらっしゃ～い",
+                "artist": "鶴屋さん",
+                "start": 3891,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "COOL EDITION",
+                "artist": "朝倉涼子",
+                "start": 4104,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "友達としてはソレが",
+                "artist": "谷口",
+                "start": 4385,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "人生の主役コール!",
+                "artist": "谷口",
+                "start": 4632,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "Wonder trip",
+                "artist": "涼宮ハルヒ, 長門有希, 朝比奈みくる",
+                "start": 4851,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "いままでのあらすじ",
+                "artist": "えすおーえす団",
+                "start": 5088,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "あとがきのようなもの",
+                "artist": "えすおーえす団",
+                "start": 5354,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "止マレ!",
+                "artist": "涼宮ハルヒ, 長門有希, 朝比奈みくる",
+                "start": 5601,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ハレ晴レユカイ",
+                "artist": "涼宮ハルヒ, 長門有希, 朝比奈みくる",
+                "start": 6033,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
     },
     {
         "youtubeId": "yyGARkjtCww",
@@ -260,6 +540,149 @@
         "songs": []
     },
     {
+        "youtubeId": "wmz7SN1sFmY",
+        "title": "歌枠 ｜二日酔いでもロックな曲を歌いたい🌞みんなおはよ～🐼💭",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-08-21",
+        "thumbnail": "https://i.ytimg.com/vi/wmz7SN1sFmY/mqdefault.jpg",
+        "category": [
+            "歌配信"
+        ],
+        "keywords": [
+            "歌配信"
+        ],
+        "songs": [
+            {
+                "title": "車輪の唄",
+                "artist": "BUMP OF CHICKEN",
+                "start": 753,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "真っ赤な空を見ただろうか",
+                "artist": "BUMP OF CHICKEN",
+                "start": 1021,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ray",
+                "artist": "BUMP OF CHICKEN",
+                "start": 1310,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "なんでもないよ、",
+                "artist": "マカロニえんぴつ",
+                "start": 1614,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "雫",
+                "artist": "スキマスイッチ",
+                "start": 1846,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "さよならエレジー",
+                "artist": "菅田将暉",
+                "start": 2049,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "アゲハ蝶",
+                "artist": "ポルノグラフティ",
+                "start": 2302,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "猫",
+                "artist": "DISH//",
+                "start": 2580,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "白日",
+                "artist": "King Gnu",
+                "start": 2852,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "栞",
+                "artist": "クリープハイプ",
+                "start": 4843,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ラブソング",
+                "artist": "マルシィ",
+                "start": 5141,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "もう恋なんてしない",
+                "artist": "槇原敬之",
+                "start": 5423,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "愛してみてよ減るもんじゃないし",
+                "artist": "ねぐせ。",
+                "start": 5698,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "花になって",
+                "artist": "緑黄色社会",
+                "start": 5912,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "IRIS OUT",
+                "artist": "米津玄師",
+                "start": 6111,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "イージュー★ライダー",
+                "artist": "奥田民生",
+                "start": 6267,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "flKDCMCXDvI",
         "title": "【全力】即興でミュージカルオーディションしてみた【会長に届け】",
         "channel": "七次元生徒会",
@@ -419,20 +842,6 @@
                 ]
             }
         ]
-    },
-    {
-        "youtubeId": "wmz7SN1sFmY",
-        "title": "歌枠 ｜ロックな曲を歌いたい🌞みんなおはよ～🐼💭",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-08-17",
-        "thumbnail": "https://i.ytimg.com/vi/wmz7SN1sFmY/mqdefault.jpg",
-        "category": [
-            "歌配信"
-        ],
-        "keywords": [
-            "歌配信"
-        ],
-        "songs": []
     },
     {
         "youtubeId": "-tplhu_nV6w",
@@ -12300,8 +12709,8 @@
                 "artist": "cresc.",
                 "start": 2551,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -12309,8 +12718,8 @@
                 "artist": "解散GIG",
                 "start": 2889,
                 "tags": [
-                    "オリジナル",
-                    "解散GIG"
+                    "解散GIG",
+                    "オリジナル"
                 ]
             },
             {
@@ -14297,8 +14706,8 @@
                 "artist": "cresc.",
                 "start": 1717,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -20401,8 +20810,8 @@
                 "artist": "cresc.",
                 "start": 3014,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -21088,8 +21497,8 @@
                 "artist": "cresc.",
                 "start": 1204,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -26819,8 +27228,8 @@
                 "artist": "cresc.",
                 "start": 18953,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -26828,8 +27237,8 @@
                 "artist": "cresc.",
                 "start": 19280,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -26837,8 +27246,8 @@
                 "artist": "cresc.",
                 "start": 19548,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -27046,8 +27455,8 @@
                 "artist": "cresc.",
                 "start": 30857,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -27438,8 +27847,8 @@
                 "artist": "cresc.",
                 "start": 32,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -27613,8 +28022,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -27672,8 +28081,8 @@
                 "artist": "解散GIG",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "解散GIG"
+                    "解散GIG",
+                    "オリジナル"
                 ]
             }
         ]
@@ -28839,8 +29248,8 @@
                 "artist": "cresc.",
                 "start": 28247,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -29143,8 +29552,8 @@
                 "artist": "解散GIG",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "解散GIG"
+                    "解散GIG",
+                    "オリジナル"
                 ]
             }
         ]
@@ -29176,8 +29585,8 @@
                 "artist": "解散GIG",
                 "start": 16761,
                 "tags": [
-                    "オリジナル",
-                    "解散GIG"
+                    "解散GIG",
+                    "オリジナル"
                 ]
             },
             {
@@ -31041,8 +31450,8 @@
                 "artist": "cresc.",
                 "start": 840,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -34917,8 +35326,8 @@
                 "artist": "cresc.",
                 "start": 567,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -35862,8 +36271,8 @@
                 "artist": "ERRors (夕陽リリ, 緑仙, える)",
                 "start": 840,
                 "tags": [
-                    "ERRors",
-                    "オリジナル"
+                    "オリジナル",
+                    "ERRors"
                 ]
             },
             {
@@ -37210,8 +37619,8 @@
                 "artist": "cresc.",
                 "start": 23085,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -37219,8 +37628,8 @@
                 "artist": "cresc.",
                 "start": 23363,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -37228,8 +37637,8 @@
                 "artist": "cresc.",
                 "start": 23644,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -37915,8 +38324,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -38079,8 +38488,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -38842,8 +39251,8 @@
                 "artist": "ERRors",
                 "start": 7976,
                 "tags": [
-                    "ERRors",
-                    "オリジナル"
+                    "オリジナル",
+                    "ERRors"
                 ]
             },
             {
@@ -41236,8 +41645,8 @@
                 "artist": "cresc.",
                 "start": 29722,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -41616,8 +42025,8 @@
                 "artist": "cresc.",
                 "start": 1416,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -41792,8 +42201,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -44104,8 +44513,8 @@
                 "artist": "ERRors (夕陽リリ, 緑仙, える)",
                 "start": 3059,
                 "tags": [
-                    "ERRors",
-                    "オリジナル"
+                    "オリジナル",
+                    "ERRors"
                 ]
             },
             {
@@ -44185,8 +44594,8 @@
                 "artist": "cresc.",
                 "start": 5864,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -44597,8 +45006,8 @@
                 "artist": "cresc.",
                 "start": 2669,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -45802,8 +46211,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -45823,8 +46232,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -45844,8 +46253,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -48621,8 +49030,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49312,8 +49721,8 @@
                 "artist": "cresc.",
                 "start": 2293,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49382,8 +49791,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -51179,8 +51588,8 @@
                 "artist": "cresc.",
                 "start": 2514,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -68125,8 +68534,8 @@
                 "artist": "ERRors(える, 夕陽リリ, 緑仙)",
                 "start": 0,
                 "tags": [
-                    "ERRors",
-                    "オリジナル"
+                    "オリジナル",
+                    "ERRors"
                 ]
             }
         ]

@@ -1,4 +1,135 @@
 [{
+    "youtubeId": "pYsh-rBw7Fc",
+    "title": "歌枠 ｜ 9月の朝も僕と一緒に起きよう‼寝起き歌配信です🐼💭",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-09-01",
+    "thumbnail": "https://i.ytimg.com/vi/pYsh-rBw7Fc/mqdefault.jpg",
+    "category": [
+      "歌配信"
+    ],
+    "keywords": [
+      "歌配信"
+    ],
+    "songs": [
+      {
+        "title": "ノーダウト",
+        "artist": "Official髭男dism",
+        "start": 299
+      },
+      {
+        "title": "Bunny Girl",
+        "artist": "AKASAKI",
+        "start": 493
+      },
+      {
+        "title": "青と夏",
+        "artist": "Mrs. GREEN APPLE",
+        "start": 1512
+      },
+      {
+        "title": "月のワルツ",
+        "artist": "諫山実生",
+        "start": 1783
+      },
+      {
+        "title": "ギラギラ",
+        "artist": "Ado",
+        "start": 2057
+      },
+      {
+        "title": "第六感",
+        "artist": "Reol",
+        "start": 2331
+      },
+      {
+        "title": "モエチャッカファイア",
+        "artist": "弌誠",
+        "start": 2532
+      },
+      {
+        "title": "未来予想図 Ⅱ",
+        "artist": "DREAMS COME TRUE",
+        "start": 3462
+      },
+      {
+        "title": "初恋サイダー",
+        "artist": "Buono!",
+        "start": 3924
+      },
+      {
+        "title": "残響散歌",
+        "artist": "Aimer",
+        "start": 4153
+      }
+    ]
+  },
+    {
+    "youtubeId": "U2uVhaLjlTk",
+    "title": "うー",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-15",
+    "thumbnail": "https://i.ytimg.com/vi/U2uVhaLjlTk/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "踊り動画"
+    ],
+    "keywords": [],
+    "songs": [
+        "title": "熱帯夜",
+        "artist": "RIP SLYME",
+        "start": 0
+    ]
+  },
+    {
+    "youtubeId": "sjDMjE_XfVI",
+    "title": "結婚しましょう",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-23",
+    "thumbnail": "https://i.ytimg.com/vi/sjDMjE_XfVI/mqdefault.jpg",
+    "category": [
+      "公式切り抜き",
+      "歌動画"
+    ],
+    "keywords": [],
+    "songs": [
+        "title": "未完成婚姻論",
+        "artist": "Dannie May",
+        "start": 0
+    ]
+  },
+  {
+    "youtubeId": "1sQzJQ3X9y8",
+    "title": "変身〜💫",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-21",
+    "thumbnail": "https://i.ytimg.com/vi/1sQzJQ3X9y8/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [],
+    "songs": [
+        "title": "Chero",
+        "artist": "Astrocantmiss",
+        "start": 0
+    ]
+  },
+    {
+    "youtubeId": "yIuTWrJj1mg",
+    "title": "アタシたち運命かも！",
+    "channel": "緑仙 / Ryushen",
+    "date": "2026-08-30",
+    "thumbnail": "https://i.ytimg.com/vi/yIuTWrJj1mg/mqdefault.jpg",
+    "category": [
+      "公式切り抜き"
+    ],
+    "keywords": [],
+    "songs": [
+        "title": "Will you marry me ?",
+        "artist": "Kiyoshi Ryujin 25",
+        "start": 0
+    ]
+  },
+    {
     "youtubeId": "kyvL7wC9hnQ",
     "title": "楓ちゃんが家に来るので話したりリズム天国ミラクルスターズしたり",
     "channel": "月ノ美兎",
@@ -66,7 +197,7 @@
     "category": [
       "ゲーム実況"
     ],
-    "keywords": [],
+    "keywords": ["三枝明那","七次元生徒会"],
     "songs": [{
         "title": "リマインドリマインドリマインド",
         "artist": "イケボ",

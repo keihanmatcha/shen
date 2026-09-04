@@ -1,4 +1,25 @@
 [{
+    "youtubeId": "QlaGDL69HjY",
+    "title": "おもかげ covered by 音ノ乃のの＆戌亥とこ＆緑仙",
+    "channel": "音ノ乃のの / NononoNono ",
+    "date": "2026-09-02",
+    "thumbnail": "https://i.ytimg.com/vi/QlaGDL69HjY/mqdefault.jpg",
+    "category": [
+      "歌動画"
+    ],
+    "keywords": [
+      "カバー曲",
+      "戌亥とこ",
+      "歌動画",
+      "音ノ乃のの"
+    ],
+    "songs": [{
+        "title": "おもかげ",
+        "artist": "Vaundy【milet×Aimer×幾田りら】",
+        "start": 0
+    }]
+  },
+    {
     "youtubeId": "pYsh-rBw7Fc",
     "title": "歌枠 ｜ 9月の朝も僕と一緒に起きよう‼寝起き歌配信です🐼💭",
     "channel": "緑仙 / Ryushen",
@@ -74,11 +95,11 @@
       "踊り動画"
     ],
     "keywords": [],
-    "songs": [
+    "songs": [{
         "title": "熱帯夜",
         "artist": "RIP SLYME",
         "start": 0
-    ]
+    }]
   },
     {
     "youtubeId": "sjDMjE_XfVI",
@@ -91,11 +112,11 @@
       "歌動画"
     ],
     "keywords": [],
-    "songs": [
+    "songs": [{
         "title": "未完成婚姻論",
         "artist": "Dannie May",
         "start": 0
-    ]
+    }]
   },
   {
     "youtubeId": "1sQzJQ3X9y8",
@@ -107,11 +128,11 @@
       "公式切り抜き"
     ],
     "keywords": [],
-    "songs": [
+    "songs": [{
         "title": "Chero",
         "artist": "Astrocantmiss",
         "start": 0
-    ]
+    }]
   },
     {
     "youtubeId": "yIuTWrJj1mg",
@@ -123,11 +144,11 @@
       "公式切り抜き"
     ],
     "keywords": [],
-    "songs": [
+    "songs": [{
         "title": "Will you marry me ?",
         "artist": "Kiyoshi Ryujin 25",
         "start": 0
-    ]
+    }]
   },
     {
     "youtubeId": "kyvL7wC9hnQ",

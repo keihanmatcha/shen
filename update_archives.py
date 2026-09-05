@@ -1287,6 +1287,53 @@ def parse_cover_or_shorts(title, desc, is_short=False):
                 return [{"title": clean_title, "artist": val, "start": 0}]
 
     return []
+def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
+    """
+    YouTube Data APIでは取得できない「この動画の音楽 / 使用音源」を
+    動画ページHTMLのメタデータ・構造化JSONから直接抽出する
+    """
+    try:
+        url = f"https://www.youtube.com/watch?v={video_id}"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
+        }
+        res = requests.get(url, headers=headers, timeout=5)
+        if res.status_code != 200:
+            return None
+
+        html_text = res.text
+
+        # 1. Shortsの音源メタデータ（sound/audioTrackのJSON）を探索
+        m_title = re.search(r'"audioTrack":\{"header":\{"title":\{"runs":\[\{"text":"([^"]+)"', html_text)
+        m_artist = re.search(r'"audioTrack":\{.*?"subtitle":\{"runs":\[\{"text":"([^"]+)"', html_text)
+        if m_title:
+            return {
+                "title": m_title.group(1).strip(),
+                "artist": m_artist.group(1).strip() if m_artist else "",
+                "start": 0
+            }
+
+        # 2. PC版「この動画の音楽」パネルから探索
+        song_match = re.search(r'"simpleText":"楽曲"\}.*?"runs":\[\{"text":"([^"]+)"', html_text)
+        artist_match = re.search(r'"simpleText":"アーティスト"\}.*?"runs":\[\{"text":"([^"]+)"', html_text)
+
+        if song_match:
+            title = song_match.group(1).strip()
+            artist = artist_match.group(1).strip() if artist_match else ""
+            return {"title": title, "artist": artist, "start": 0}
+
+        # 3. メタタグからのフォールバック
+        m_meta = re.search(r'itemprop="musicBy" content="([^"]+)"', html_text)
+        if m_meta:
+            return {"title": "", "artist": m_meta.group(1).strip(), "start": 0}
+
+    except Exception:
+        pass
+
+    return None
+
+
 
 def fetch_setlist_from_comments(youtube, video_id, fallback_members=None):
     """概要欄にセトリがない場合、コメント欄から取得"""

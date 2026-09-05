@@ -17,6 +17,8 @@ JSON_FILE_PATH = "archives/archive_videos.json"
 MAX_PAGES_TO_FETCH = 100
 FINAL_JSON_PATH = "archives/external_videos.json"
 
+OWNER_NAME="緑仙"
+
 CHANNELS = [
     {
         "id": "UCt5-0i4AVHXaWJrL8Wql3mw",

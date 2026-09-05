@@ -1540,8 +1540,20 @@ def main():
 
     # 2. 特殊プレイリスト (自動タグ付与あり)
     for pl in EXTRA_PLAYLISTS:
-        fetched_videos.extend(fetch_videos_from_playlist(youtube, pl['id'], pl['name'], pl.get('fixed_tags', []), auto_tags=pl.get('auto_tags')))
+        try:
+            # ★ pl.get('name', OWNER_NAME) にすることで、'name' キーが未定義でもエラーを回避
+            pl_name = pl.get('name', OWNER_NAME)
+            fetched_videos.extend(fetch_videos_from_playlist(
+                youtube,
+                pl['id'],
+                pl_name,
+                pl.get('fixed_tags', []),
+                auto_tags=pl.get('auto_tags')
+            ))
+        except Exception as e:
+            print(f"⚠️ プレイリストスキップ (ID: {pl.get('id')}): {e}")
 
+    
     if fetched_videos:
         update_github_json(fetched_videos)
 

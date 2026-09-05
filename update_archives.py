@@ -1467,7 +1467,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
                         
                 elif is_short:
                     # Shorts 音源の抽出
-                    auto_songs = parse_cover_or_shorts(snip['title'], desc, is_short=True)
+                    auto_songs = parse_cover_or_shorts(snip['title'], desc, is_short=True, video_id=v_id)
 
                 # ★ 5. データの登録 ("channel" に uploader_name をセット)
                 videos.append({

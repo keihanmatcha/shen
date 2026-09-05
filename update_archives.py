@@ -14,7 +14,7 @@ GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 GITHUB_REPO_OWNER = "keihanmatcha"
 GITHUB_REPO_NAME = "shen"
 JSON_FILE_PATH = "archives/archive_videos.json"
-MAX_PAGES_TO_FETCH = 100
+MAX_PAGES_TO_FETCH = 5
 FINAL_JSON_PATH = "archives/external_videos.json"
 
 OWNER_NAME="緑仙"

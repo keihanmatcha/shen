@@ -1255,7 +1255,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
     return unique_songs
 
 
-def parse_cover_or_shorts(title, desc, is_short=False):
+def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
     """Shorts音源および歌ってみたの単曲メタデータ抽出"""
     if is_short:
         m = re.search(r'(?:楽曲|Music|音源)[:：\s]+(.*?)(?:\s*[-－/／]\s*)([^\n]+)', desc)
@@ -1286,7 +1286,17 @@ def parse_cover_or_shorts(title, desc, is_short=False):
             else:
                 return [{"title": clean_title, "artist": val, "start": 0}]
 
+    # ★ 概要欄やタイトルで見つからなかった場合のフォールバック
+    if video_id:
+        credit = fetch_youtube_music_credit(video_id)
+        if credit and credit.get("title"):
+            if not credit.get("artist") and credit["title"] in GLOBAL_ARTIST_DB:
+                credit["artist"] = GLOBAL_ARTIST_DB[credit["title"]]
+            return [credit]
+
     return []
+
+
 def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
     """
     YouTube Data APIでは取得できない「この動画の音楽 / 使用音源」を

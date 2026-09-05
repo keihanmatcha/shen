@@ -1287,7 +1287,8 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
                 return [{"title": clean_title, "artist": val, "start": 0}]
 
     # ★ 概要欄やタイトルで見つからなかった場合のフォールバック
-    if video_id:
+    # is_short の時だけWebスクレイピングを実行（通常動画はスキップ）
+    if is_short and video_id:
         credit = fetch_youtube_music_credit(video_id)
         if credit and credit.get("title"):
             if not credit.get("artist") and credit["title"] in GLOBAL_ARTIST_DB:

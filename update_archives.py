@@ -1184,7 +1184,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
 
         singers = list(dict.fromkeys(singers))
 
-        # 長尾景不参加の曲をスキップ（長尾の記号が全体で1度でも見つかった場合のみ適用）
+        # 緑仙不参加の曲をスキップ（緑仙の記号が全体で1度でも見つかった場合のみ適用）
         if has_any_symbol and has_owner_symbol:
             if not is_all and (channel_owner not in singers):
                 continue
@@ -1228,7 +1228,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
                 a = clean_text[slash_pos + 1:].strip()
 
         # トーク特有のスラッシュ誤判定を防止
-        if any(c in t or c in a for c in ["？", "?", "！", "!", "w", "W", "草", "「", "」", "…", "俺","上手","思う","思って","思わ","よね","だろう","いいわ","だの","いいな","かな","布教"]):
+        if any(c in t or c in a for c in ["？", "?", "！", "!", "w", "W", "草", "「", "」", "…", "俺","上手","思う","思って","思わ","よね","だろう","いいわ","だの","いいな","かな","布教","僕"]):
             if not any(mark in raw_text for mark in ["♪", "♫"]):
                 continue
 
@@ -1544,6 +1544,65 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
             
     return videos
 
+import unicodedata
+
+def normalize_title(title: str) -> str:
+    """曲名の表記ゆれを吸収するための正規化キーを作成"""
+    t = unicodedata.normalize('NFKC', str(title))
+    t = t.lower()
+    t = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', t)
+    t = re.sub(r'[\s\-_・/／:：~～!?！？♪·]', '', t)
+    return t.strip()
+
+def load_artist_db():
+    """リポジトリ内の全動画JSONから曲名とアーティストのDBを構築"""
+    global GLOBAL_ARTIST_DB
+    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+    
+    # 手動確定用ファイル（custom_known_songs.json）を最優先で読み込む
+    source_files = [
+        "archives/custom_known_songs.json",
+        "songs/videos.json",
+        "archives/archive_videos.json",
+        "archives/external_videos.json"
+    ]
+
+    db = {}
+    for rel_path in source_files:
+        url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{rel_path}"
+        try:
+            r = requests.get(url, headers=headers, timeout=5)
+            if r.status_code == 200:
+                raw_bytes = base64.b64decode(r.json()['content'])
+                text = raw_bytes.decode('utf-8-sig').strip()
+                if not text:
+                    continue
+                data = json.loads(text)
+                
+                # ★ 全てのファイルが動画オブジェクトのリスト形式
+                for item in data:
+                    for s in item.get("songs", []):
+                        raw_title = s.get("title", "").strip()
+                        raw_artist = s.get("artist", "").strip()
+                        
+                        # 空文字やUnknown、誤検知ノイズ（1.0など）は除外
+                        if not raw_title or not raw_artist or raw_artist in ["Unknown Artist", ""]:
+                            continue
+                        if raw_title in ["1.0", "1.0x"]:
+                            continue
+
+                        # "シャルル with 〇〇" などのコラボ表記を外した純粋な曲名
+                        pure_title = re.sub(r'\s+with\s+.*$', '', raw_title).strip()
+                        norm_key = normalize_title(pure_title)
+                        
+                        # 先に読み込んだもの（確定ファイル）を優先して登録
+                        if norm_key and norm_key not in db:
+                            db[norm_key] = raw_artist
+        except Exception as e:
+            continue
+
+    GLOBAL_ARTIST_DB = db
+    print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
 
 
 def load_artist_db():

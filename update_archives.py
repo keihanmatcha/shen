@@ -1679,6 +1679,85 @@ def update_github_json(new_videos):
         print(f"❌ Failed to update GitHub: {put_res.status_code}")
         print(put_res.text)
 
+import requests
+import urllib.parse
+#iTunes Search API（完全無料・登録不要・邦楽/アニソンに強い）
+def fetch_artist_from_itunes(title: str) -> str:
+    """iTunes APIから曲名を検索して最も有力なアーティスト名を取得"""
+    clean_title = re.sub(r'[\(（\[【].*?[\)）\]】]', '', title).strip()
+    if not clean_title:
+        return ""
+        
+    url = f"https://itunes.apple.com/search?term={urllib.parse.quote(clean_title)}&entity=song&country=JP&limit=5"
+    try:
+        res = requests.get(url, timeout=3)
+        if res.status_code == 200:
+            data = res.json()
+            results = data.get("results", [])
+            for item in results:
+                track_name = item.get("trackName", "")
+                # 曲名が完全一致または高い類似度の場合に採用
+                if normalize_title(track_name) == normalize_title(clean_title):
+                    return item.get("artistName", "")
+            # 完全一致がなくても、先頭の結果のアーティストをフォールバックとして採用する場合
+            if results:
+                return results[0].get("artistName", "")
+    except Exception:
+        pass
+    return ""
+import requests
+import urllib.parse
+import re
+
+def fetch_artist_from_vocadb(title: str) -> str:
+    """
+    VocaDB API を使って曲名からボカロP・アーティスト名を検索して取得する
+    """
+    # カッコや注釈（例: "シャルル (Cover)"）を除去
+    clean_title = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', title).strip()
+    if not clean_title:
+        return ""
+
+    params = {
+        "query": clean_title,
+        "preferAccurateMatches": "true",  # 完全一致に近いものを優先
+        "songTypes": "Original,Remix,Cover",
+        "maxResults": 3,
+        "lang": "Japanese"               # 日本語表記を優先
+    }
+    
+    headers = {
+        "User-Agent": "VTuberArchiveBot/1.0 (contact: your_github_or_email)"
+    }
+
+    url = "https://vocadb.net/api/songs"
+    
+    try:
+        res = requests.get(url, params=params, headers=headers, timeout=4)
+        if res.status_code == 200:
+            items = res.json().get("items", [])
+            for item in items:
+                song_name = item.get("name", "")
+                artist_string = item.get("artistString", "")
+                
+                # タイトルの正規化比較（完全一致または高い一致率）
+                if normalize_title(song_name) == normalize_title(clean_title):
+                    # "DECO*27 feat. 初音ミク" から "DECO*27" だけを取りたい場合は整形
+                    # 例: " feat. " や " (" の前を抽出
+                    p_name = re.split(r'\s+(?:feat\.|ft\.|/)\s*', artist_string, 1)[0].strip()
+                    return p_name if p_name else artist_string
+                    
+            # 完全一致がない場合でも、1件目の候補を採用する場合
+            if items:
+                first_artist = items[0].get("artistString", "")
+                return re.split(r'\s+(?:feat\.|ft\.|/)\s*', first_artist, 1)[0].strip()
+
+    except Exception as e:
+        # 通信エラー時は静かにスキップ
+        pass
+
+    return ""
+
 
 
 # ==============================================================================

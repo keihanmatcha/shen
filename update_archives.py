@@ -1112,13 +1112,75 @@ def extract_music_metadata(desc):
         s_artist = re.split(r'\(on behalf of', s_artist)[0].strip()
         auto_songs.append({"title": s_title, "artist": s_artist, "start": 0})
     return auto_songs
+
+
+def normalize_title(title: str) -> str:
+    """曲名の表記ゆれを吸収するための正規化キーを作成"""
+    t = unicodedata.normalize('NFKC', str(title))
+    t = t.lower()
+    t = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', t)
+    t = re.sub(r'[\s\-_・/／:：~～!?！？♪·]', '', t)
+    return t.strip()
+
+def load_artist_db():
+    """リポジトリ内の全動画JSONから曲名とアーティストのDBを構築"""
+    global GLOBAL_ARTIST_DB
+    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+    
+    # 手動確定用ファイル（custom_known_songs.json）を最優先で読み込む
+    source_files = [
+        "archives/custom_known_songs.json",
+        "songs/videos.json",
+        "archives/archive_videos.json",
+        "archives/external_videos.json"
+    ]
+
+    db = {}
+    for rel_path in source_files:
+        url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{rel_path}"
+        try:
+            r = requests.get(url, headers=headers, timeout=5)
+            if r.status_code == 200:
+                raw_bytes = base64.b64decode(r.json()['content'])
+                text = raw_bytes.decode('utf-8-sig').strip()
+                if not text:
+                    continue
+                data = json.loads(text)
+                
+                # ★ 全てのファイルが動画オブジェクトのリスト形式
+                for item in data:
+                    for s in item.get("songs", []):
+                        raw_title = s.get("title", "").strip()
+                        raw_artist = s.get("artist", "").strip()
+                        
+                        # 空文字やUnknown、誤検知ノイズ（1.0など）は除外
+                        if not raw_title or not raw_artist or raw_artist in ["Unknown Artist", ""]:
+                            continue
+                        if raw_title in ["1.0", "1.0x"]:
+                            continue
+
+                        # "シャルル with 〇〇" などのコラボ表記を外した純粋な曲名
+                        pure_title = re.sub(r'\s+with\s+.*$', '', raw_title).strip()
+                        norm_key = normalize_title(pure_title)
+                        
+                        # 先に読み込んだもの（確定ファイル）を優先して登録
+                        if norm_key and norm_key not in db:
+                            db[norm_key] = raw_artist
+        except Exception as e:
+            continue
+
+    GLOBAL_ARTIST_DB = db
+    print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
+
+
     
 def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=None):
     if not text:
         return []
     text = html.unescape(text)
 
-    r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{1,2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
+    # ★ 変数代入の修正
+    ts_regex = r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{1,2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
     matches = list(re.finditer(ts_regex, text))
     if len(matches) < 3:
         return []
@@ -1189,7 +1251,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             if not is_all and (channel_owner not in singers):
                 continue
 
-        # クレンジング
+        # クレンジング（数字\dを削らない安全仕様）
         clean_text = re.sub(r'^[:\s♪・\-\.\]】）)／/|｜￤~～]+', '', clean_text).strip()
         clean_text = re.sub(r'[\(（][\s,、️‍]*[\)）]', '', clean_text).strip()
         clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
@@ -1198,7 +1260,6 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             continue
 
         # 曲名とアーティストの分離
-        # まず「空白付きのスラッシュやハイフン」を優先
         priority_seps = [' / ', '／', ' - ', ' － ', '：', ' : ', '￤']
         matched_sep = None
         for sep in priority_seps:
@@ -1210,8 +1271,6 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             parts = clean_text.split(matched_sep, 1)
             t, a = parts[0].strip(), parts[1].strip()
         else:
-            # 空白なしの単独 '/' の場合、カッコの外側にある '/' だけで分割する
-            # 例: 1925/冨田悠斗(とみー/T-POCKET) -> '1925' と '冨田悠斗(とみー/T-POCKET)'
             slash_pos = -1
             paren_depth = 0
             for idx, ch in enumerate(clean_text):
@@ -1241,11 +1300,12 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             if collab_partners:
                 t = f"{t} with {','.join(sorted(collab_partners))}"
 
-        # 過去DBから自動補完
+        # ★ 過去DBから自動補完（正規化キーで照合）
         if not a and GLOBAL_ARTIST_DB:
             pure_t = re.sub(r'\s+with\s+.*$', '', t).strip()
-            if pure_t in GLOBAL_ARTIST_DB:
-                a = GLOBAL_ARTIST_DB[pure_t]
+            norm_key = normalize_title(pure_t)
+            if norm_key in GLOBAL_ARTIST_DB:
+                a = GLOBAL_ARTIST_DB[norm_key]
 
         # 秒変換
         parts = list(map(int, ts_str.split(':')))
@@ -1262,7 +1322,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             "start": sec
         })
 
-    # ★ ここから下は for ループの外（重複排除とソート）
+    # 重複排除とソート
     songs.sort(key=lambda x: x["start"])
     unique_songs = []
     seen_keys = set()
@@ -1546,100 +1606,6 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
 
 import unicodedata
 
-def normalize_title(title: str) -> str:
-    """曲名の表記ゆれを吸収するための正規化キーを作成"""
-    t = unicodedata.normalize('NFKC', str(title))
-    t = t.lower()
-    t = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', t)
-    t = re.sub(r'[\s\-_・/／:：~～!?！？♪·]', '', t)
-    return t.strip()
-
-def load_artist_db():
-    """リポジトリ内の全動画JSONから曲名とアーティストのDBを構築"""
-    global GLOBAL_ARTIST_DB
-    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
-    
-    # 手動確定用ファイル（custom_known_songs.json）を最優先で読み込む
-    source_files = [
-        "archives/custom_known_songs.json",
-        "songs/videos.json",
-        "archives/archive_videos.json",
-        "archives/external_videos.json"
-    ]
-
-    db = {}
-    for rel_path in source_files:
-        url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{rel_path}"
-        try:
-            r = requests.get(url, headers=headers, timeout=5)
-            if r.status_code == 200:
-                raw_bytes = base64.b64decode(r.json()['content'])
-                text = raw_bytes.decode('utf-8-sig').strip()
-                if not text:
-                    continue
-                data = json.loads(text)
-                
-                # ★ 全てのファイルが動画オブジェクトのリスト形式
-                for item in data:
-                    for s in item.get("songs", []):
-                        raw_title = s.get("title", "").strip()
-                        raw_artist = s.get("artist", "").strip()
-                        
-                        # 空文字やUnknown、誤検知ノイズ（1.0など）は除外
-                        if not raw_title or not raw_artist or raw_artist in ["Unknown Artist", ""]:
-                            continue
-                        if raw_title in ["1.0", "1.0x"]:
-                            continue
-
-                        # "シャルル with 〇〇" などのコラボ表記を外した純粋な曲名
-                        pure_title = re.sub(r'\s+with\s+.*$', '', raw_title).strip()
-                        norm_key = normalize_title(pure_title)
-                        
-                        # 先に読み込んだもの（確定ファイル）を優先して登録
-                        if norm_key and norm_key not in db:
-                            db[norm_key] = raw_artist
-        except Exception as e:
-            continue
-
-    GLOBAL_ARTIST_DB = db
-    print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
-
-
-def load_artist_db():
-    """リポジトリ内の全曲情報（songs/videos.json, archives/*.json）からアーティストDBを構築"""
-    global GLOBAL_ARTIST_DB
-    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
-    source_files = [
-        "songs/videos.json",
-        "archives/archive_videos.json",
-        "archives/external_videos.json"
-    ]
-
-    all_data = []
-    for rel_path in source_files:
-        url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{rel_path}"
-        try:
-            r = requests.get(url, headers=headers)
-            if r.status_code == 200:
-                raw_bytes = base64.b64decode(r.json()['content'])
-                text = raw_bytes.decode('utf-8-sig').strip()
-                if text:
-                    all_data.extend(json.loads(text))
-        except Exception:
-            continue
-
-    db = {}
-    for item in all_data:
-        for s in item.get("songs", []):
-            title = s.get("title", "").strip()
-            pure_title = re.sub(r'\s+with\s+.*$', '', title).strip()
-            artist = s.get("artist", "").strip()
-            if pure_title and artist and artist != "Unknown Artist" and pure_title not in db:
-                db[pure_title] = artist
-
-    GLOBAL_ARTIST_DB = db
-    print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
-    
 def update_github_json(new_videos):
     headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
     url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{JSON_FILE_PATH}"

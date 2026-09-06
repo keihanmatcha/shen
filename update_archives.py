@@ -1784,19 +1784,26 @@ def fetch_artist_from_vocadb(title: str) -> str:
 # 5. エントリーポイント
 # ==============================================================================
 def main():
-    if not YOUTUBE_API_KEY or not GITHUB_TOKEN: return
+    if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
+        print("❌ APIキーまたはGITHUB_TOKENが設定されていません。")
+        return
+
+    # ★ 最優先: 起動時にローカルDB・過去辞書をメモリにロード
+    print("📚 アーティスト辞書を構築中...")
+    load_artist_db()
+
     youtube = build('youtube', 'v3', developerKey=YOUTUBE_API_KEY)
     fetched_videos = []
     
     # 1. チャンネルの通常アップロード
     for ch in CHANNELS:
         pid = get_uploads_playlist_id(youtube, ch['id'])
-        if pid: fetched_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', [])))
+        if pid:
+            fetched_videos.extend(fetch_videos_from_playlist(youtube, pid, ch['name'], ch.get('fixed_tags', [])))
 
     # 2. 特殊プレイリスト (自動タグ付与あり)
     for pl in EXTRA_PLAYLISTS:
         try:
-            # ★ pl.get('name', OWNER_NAME) にすることで、'name' キーが未定義でもエラーを回避
             pl_name = pl.get('name', OWNER_NAME)
             fetched_videos.extend(fetch_videos_from_playlist(
                 youtube,
@@ -1808,11 +1815,6 @@ def main():
         except Exception as e:
             print(f"⚠️ プレイリストスキップ (ID: {pl.get('id')}): {e}")
 
-    
     if fetched_videos:
         update_github_json(fetched_videos)
-
-if __name__ == "__main__":
-    main()
-
 

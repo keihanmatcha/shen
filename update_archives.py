@@ -1257,8 +1257,34 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
 
 def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
     """Shorts音源および歌ってみたの単曲メタデータ抽出"""
+    if not desc:
+        desc = ""
+
+    # ========================================================
+    # 1. 概要欄からカッコ形式の楽曲クレジットを抽出（最優先・高速）
+    # ========================================================
+    # パターン1: Dannie May「未完成婚姻論」
+    m_bracket = re.search(r'([^\n「『\r]+?)\s*[「『]([^」』]+)[」』]', desc)
+    if m_bracket:
+        a_cand = re.sub(r'^(?:本家様?|Original|Music|Song|Vo|Cover|歌)[:：\s]*', '', m_bracket.group(1), flags=re.I).strip()
+        t_cand = m_bracket.group(2).strip()
+        # チャンネル紹介文やURL行を弾く
+        if a_cand and t_cand and not any(x in a_cand for x in ["http", "@", "Twitter", "にじさんじ"]):
+            return [{"title": t_cand, "artist": a_cand, "start": 0}]
+
+    # パターン2: 「未完成婚姻論」/ Dannie May
+    m_bracket_rev = re.search(r'[「『]([^」』]+)[」』]\s*[-－/／]\s*([^\n\r]+)', desc)
+    if m_bracket_rev:
+        t_cand = m_bracket_rev.group(1).strip()
+        a_cand = re.sub(r'^(?:本家様?|Original|Music)[:：\s]*', '', m_bracket_rev.group(2), flags=re.I).strip()
+        if t_cand and a_cand and not any(x in a_cand for x in ["http", "@", "Twitter", "にじさんじ"]):
+            return [{"title": t_cand, "artist": a_cand, "start": 0}]
+
+    # ========================================================
+    # 2. 概要欄のキーワード（楽曲 / Music / 本家）から抽出
+    # ========================================================
     if is_short:
-        m = re.search(r'(?:楽曲|Music|音源)[:：\s]+(.*?)(?:\s*[-－/／]\s*)([^\n]+)', desc)
+        m = re.search(r'(?:楽曲|Music|音源)[:：\s]+(.*?)(?:\s*[-－/／]\s*)([^\n\r]+)', desc)
         if m:
             return [{"title": m.group(1).strip(), "artist": m.group(2).strip(), "start": 0}]
 
@@ -1266,6 +1292,21 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
     if meta_songs and meta_songs[0]["artist"] and meta_songs[0]["artist"] != "Unknown Artist":
         return meta_songs
 
+    # 本家行の探索
+    for line in desc.split("\n"):
+        if re.search(r'^(?:本家様?|Original|Music)[:：\s]+(.*)', line, re.I):
+            val = re.sub(r'^(?:本家様?|Original|Music)[:：\s]+', '', line).strip()
+            if any(x in val for x in ["http", "@", "Twitter", "にじさんじ"]):
+                continue
+            if " / " in val or "／" in val:
+                parts = re.split(r'[/／]', val, 1)
+                return [{"title": parts[0].strip(), "artist": parts[1].strip(), "start": 0}]
+            elif val:
+                return [{"title": re.sub(r'【.*?】|\[.*?\]', '', title).strip(), "artist": val, "start": 0}]
+
+    # ========================================================
+    # 3. タイトル形式 (曲名 / アーティスト)
+    # ========================================================
     clean_title = re.sub(r'【(?:歌ってみた|COVER|Cover|歌|MV|オリジナルMV)】|\[(?:Cover|MV)\]', '', title, flags=re.I).strip()
     clean_title = re.sub(r'\/.*(?:にじさんじ|Ch).*$', '', clean_title).strip()
 
@@ -1277,26 +1318,17 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
             a = GLOBAL_ARTIST_DB[t]
         return [{"title": t, "artist": a, "start": 0}]
 
-    for line in desc.split("\n"):
-        if re.search(r'^(?:本家様?|Original|Music)[:：\s]+(.*)', line, re.I):
-            val = re.sub(r'^(?:本家様?|Original|Music)[:：\s]+', '', line).strip()
-            if " / " in val or "／" in val:
-                parts = re.split(r'[/／]', val, 1)
-                return [{"title": parts[0].strip(), "artist": parts[1].strip(), "start": 0}]
-            else:
-                return [{"title": clean_title, "artist": val, "start": 0}]
-
-    # ★ 概要欄やタイトルで見つからなかった場合のフォールバック
-    # is_short の時だけWebスクレイピングを実行（通常動画はスキップ）
+    # ========================================================
+    # 4. 概要欄に一切情報がない場合のみWebからShorts音源を取得
+    # ========================================================
     if is_short and video_id:
         credit = fetch_youtube_music_credit(video_id)
-        if credit and credit.get("title"):
+        if credit and credit.get("title") and credit["title"] not in ["1.0", "1.0x", "登録", "再生"]:
             if not credit.get("artist") and credit["title"] in GLOBAL_ARTIST_DB:
                 credit["artist"] = GLOBAL_ARTIST_DB[credit["title"]]
             return [credit]
 
     return []
-
 
 def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
     """

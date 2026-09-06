@@ -1640,7 +1640,29 @@ def update_github_json(new_videos):
         else:
             managed_map[vid] = nv
 
-    final = sorted(preserved + list(managed_map.values()), key=lambda x: x.get('date', ''), reverse=True)
+    all_videos = preserved + list(managed_map.values())
+
+    # ========================================================
+    # 全動画の songs を走査してアーティスト名を DB から一括再補完
+    # ========================================================
+    updated_artist_count = 0
+    if GLOBAL_ARTIST_DB:
+        for video in all_videos:
+            for s in video.get("songs", []):
+                current_artist = s.get("artist", "").strip()
+                if not current_artist or current_artist in ["Unknown Artist", ""]:
+                    raw_title = s.get("title", "").strip()
+                    pure_title = re.sub(r'\s+with\s+.*$', '', raw_title).strip()
+                    norm_key = normalize_title(pure_title)
+                    
+                    if norm_key in GLOBAL_ARTIST_DB:
+                        s["artist"] = GLOBAL_ARTIST_DB[norm_key]
+                        updated_artist_count += 1
+
+    if updated_artist_count > 0:
+        print(f"✨ 既存データを含む {updated_artist_count} 箇所のアーティスト名を DB から最新補完しました。")
+
+    final = sorted(all_videos, key=lambda x: x.get('date', ''), reverse=True)
     
     # 書き出し
     json_text = json.dumps(final, indent=2, ensure_ascii=False)
@@ -1656,6 +1678,8 @@ def update_github_json(new_videos):
     else:
         print(f"❌ Failed to update GitHub: {put_res.status_code}")
         print(put_res.text)
+
+
 
 # ==============================================================================
 # 5. エントリーポイント

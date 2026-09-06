@@ -1118,7 +1118,7 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
         return []
     text = html.unescape(text)
 
-    ts_regex = r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
+    r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{1,2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
     matches = list(re.finditer(ts_regex, text))
     if len(matches) < 3:
         return []

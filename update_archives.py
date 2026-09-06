@@ -1300,11 +1300,10 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
 
 def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
     """
-    YouTube Data APIでは取得できない「この動画の音楽 / 使用音源」を
-    動画ページHTMLの構造化JSON (ytInitialPlayerResponse / ytInitialData) から直接抽出する
+    YouTube ShortsのHTML内から音源クレジット（曲名 · アーティスト名）を抽出する
     """
     try:
-        url = f"https://www.youtube.com/watch?v={video_id}"
+        url = f"https://www.youtube.com/shorts/{video_id}"
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
             "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
@@ -1315,68 +1314,32 @@ def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
 
         html_text = res.text
 
-        # ==========================================================
-        # アプローチ 1: ytInitialData / ytInitialPlayerResponse のJSONを走査
-        # ==========================================================
-        # 1-A. engagementPanels (videoDescriptionMusicSectionRenderer) の探索
-        for pattern in [r"var ytInitialData\s*=\s*(\{.+?\});</script>", r"var ytInitialPlayerResponse\s*=\s*(\{.+?\});(?:var|</script>)"]:
-            m_json = re.search(pattern, html_text, re.DOTALL)
-            if not m_json:
-                continue
-            try:
-                data = json.loads(m_json.group(1))
-                # engagementPanels 階層を走査
-                panels = data.get("engagementPanels", [])
-                for panel in panels:
-                    items = panel.get("engagementPanelSectionListRenderer", {}).get("content", {}).get("structuredDescriptionContentRenderer", {}).get("items", [])
-                    for item in items:
-                        if "videoDescriptionMusicSectionRenderer" in item:
-                            music_section = item["videoDescriptionMusicSectionRenderer"]
-                            rows = music_section.get("carouselItemRenderer", {}).get("detailedMetadata", {}).get("rows", [])
-                            
-                            found_title = ""
-                            found_artist = ""
-                            for row in rows:
-                                label = row.get("label", {}).get("simpleText", "")
-                                val = row.get("value", {})
-                                text_val = val.get("simpleText") or "".join([r.get("text", "") for r in val.get("runs", [])])
-                                
-                                if label in ["楽曲", "Song", "Track"]:
-                                    found_title = text_val.strip()
-                                elif label in ["アーティスト", "Artist"]:
-                                    found_artist = text_val.strip()
-
-                            if found_title:
-                                return {"title": found_title, "artist": found_artist, "start": 0}
-            except Exception:
-                pass
-
-        # ==========================================================
-        # アプローチ 2: Shorts専用音源メタデータ (audioTrack)
-        # ==========================================================
-        m_title = re.search(r'"audioTrack":\{"header":\{"title":\{"runs":\[\{"text":"([^"]+)"', html_text)
-        m_artist = re.search(r'"audioTrack":\{.*?"subtitle":\{"runs":\[\{"text":"([^"]+)"', html_text)
-        if m_title:
+        # 1. 「曲名 · アーティスト名」の中黒区切りパターン（最優先）
+        # 例: {"content": "Will you marry me ? · Kiyoshi Ryujin Twenty Five"}
+        m_credit = re.search(r'"content"\s*:\s*"([^"]+?)\s*[·・]\s*([^"]+?)"', html_text)
+        if m_credit:
+            title = m_credit.group(1).strip()
+            artist = m_credit.group(2).strip()
             return {
-                "title": m_title.group(1).strip(),
-                "artist": m_artist.group(1).strip() if m_artist else "",
+                "title": title,
+                "artist": artist,
                 "start": 0
             }
 
-        # ==========================================================
-        # アプローチ 3: テキストパターンの直接フォールバック
-        # ==========================================================
-        song_match = re.search(r'"simpleText":"楽曲"\}.*?"runs":\[\{"text":"([^"]+)"', html_text)
-        artist_match = re.search(r'"simpleText":"アーティスト"\}.*?"runs":\[\{"text":"([^"]+)"', html_text)
-        if song_match:
-            title = song_match.group(1).strip()
-            artist = artist_match.group(1).strip() if artist_match else ""
-            return {"title": title, "artist": artist, "start": 0}
+        # 2. 中黒区切りがない場合のフォールバック（曲名のみ）
+        m_label = re.search(r'"label"\s*:\s*"([^"]+?)"', html_text)
+        if m_label:
+            return {
+                "title": m_label.group(1).strip(),
+                "artist": "",
+                "start": 0
+            }
 
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"⚠️ [{video_id}] 音源抽出エラー: {e}")
 
     return None
+
 
 
 

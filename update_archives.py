@@ -1100,17 +1100,31 @@ def timestamp_to_seconds(ts_str):
 # 3. 楽曲抽出 & セトリパース処理
 # ==============================================================================
 def extract_music_metadata(desc):
+    if not desc:
+        return []
+
+    # 1. URLやチャンネル紹介行をあらかじめ除外
+    clean_lines = [
+        line.strip() for line in desc.split("\n")
+        if not any(bad in line.lower() for bad in ["http", "channel", "/@", "music.apple", "spotify"])
+    ]
+    clean_desc = "\n".join(clean_lines)
+
     auto_songs = []
     # 日本語・英語両方のパターンに対応
-    song_m = re.search(r"(?:Song|曲|楽曲)\s*[:：\-]?\s*(.+)", desc, re.IGNORECASE)
-    artist_m = re.search(r"(?:Artist|アーティスト)\s*[:：\-]?\s*(.+)", desc, re.IGNORECASE)
-    
+    song_m = re.search(r"(?:Song|曲|楽曲)\s*[:：\-]?\s*(.+)", clean_desc, re.IGNORECASE)
+    artist_m = re.search(r"(?:Artist|アーティスト)\s*[:：\-]?\s*(.+)", clean_desc, re.IGNORECASE)
+
     if song_m:
         s_title = song_m.group(1).strip()
         s_artist = artist_m.group(1).strip() if artist_m else "Unknown Artist"
         # 配信元情報のノイズ除去
         s_artist = re.split(r'\(on behalf of', s_artist)[0].strip()
-        auto_songs.append({"title": s_title, "artist": s_artist, "start": 0})
+
+        # 2. 念のための安全バリデーション（URLやノイズ単語の混入をチェック）
+        if not any(bad in s_title.lower() or bad in s_artist.lower() for bad in ["http", "channel", "@", "apple", "spotify"]):
+            auto_songs.append({"title": s_title, "artist": s_artist, "start": 0})
+
     return auto_songs
 
 
@@ -1341,53 +1355,55 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
         desc = ""
 
     # ========================================================
-    # 1. 概要欄からカッコ形式の楽曲クレジットを抽出（最優先・高速）
+    # 0. 概要欄の各行から「SNS・配信リンク・チャンネル紹介」を前処理で除外
     # ========================================================
-    # パターン1: Dannie May「未完成婚姻論」
-    m_bracket = re.search(r'([^\n「『\r]+?)\s*[「『]([^」』]+)[」』]', desc)
+    clean_lines = []
+    for line in desc.split("\n"):
+        l_str = line.strip()
+        # URL, チャンネル, アカウント, 配信ストアリンクを含む行は楽曲行ではないため除外
+        if any(bad in l_str.lower() for bad in [
+            "http://", "https://", "www.", "channel", "/@",
+            "music.apple", "spotify", "line music", "twitter.com", "x.com"
+        ]):
+            continue
+        clean_lines.append(l_str)
+
+    clean_desc = "\n".join(clean_lines)
+
+    # ========================================================
+    # 1. カッコ形式の楽曲クレジットを抽出
+    # ========================================================
+    # 例: Dannie May「未完成婚姻論」
+    m_bracket = re.search(r'([^\n「『\r]+?)\s*[「『]([^」』]+)[」』]', clean_desc)
     if m_bracket:
         a_cand = re.sub(r'^(?:本家様?|Original|Music|Song|Vo|Cover|歌)[:：\s]*', '', m_bracket.group(1), flags=re.I).strip()
         t_cand = m_bracket.group(2).strip()
-        # チャンネル紹介文やURL行を弾く
-        if a_cand and t_cand and not any(x in a_cand for x in ["http", "@", "Twitter", "にじさんじ"]):
+        if a_cand and t_cand and not any(x in a_cand for x in ["にじさんじ", "Ch", "Official"]):
             return [{"title": t_cand, "artist": a_cand, "start": 0}]
 
-    # パターン2: 「未完成婚姻論」/ Dannie May
-    m_bracket_rev = re.search(r'[「『]([^」』]+)[」』]\s*[-－/／]\s*([^\n\r]+)', desc)
+    # 例: 「未完成婚姻論」/ Dannie May
+    m_bracket_rev = re.search(r'[「『]([^」』]+)[」』]\s*[-－/／]\s*([^\n\r]+)', clean_desc)
     if m_bracket_rev:
         t_cand = m_bracket_rev.group(1).strip()
-        a_cand = re.sub(r'^(?:本家様?|Original|Music)[:：\s]*', '', m_bracket_rev.group(2), flags=re.I).strip()
-        if t_cand and a_cand and not any(x in a_cand for x in ["http", "@", "Twitter", "にじさんじ"]):
+        a_cand = re.sub(r'^(?:本家様?|Original|Music|Song|Vo|Cover|歌)[:：\s]*', '', m_bracket_rev.group(2), flags=re.I).strip()
+        if t_cand and a_cand and not any(x in a_cand for x in ["にじさんじ", "Ch", "Official"]):
             return [{"title": t_cand, "artist": a_cand, "start": 0}]
 
     # ========================================================
-    # 2. 概要欄のキーワード（楽曲 / Music / 本家）から抽出
+    # 2. 概要欄キーワード（本家 / Original / Music / 音源）
     # ========================================================
-    if is_short:
-        m = re.search(r'(?:楽曲|Music|音源)[:：\s]+(.*?)(?:\s*[-－/／]\s*)([^\n\r]+)', desc)
-        if m:
-            return [{"title": m.group(1).strip(), "artist": m.group(2).strip(), "start": 0}]
-
-    meta_songs = extract_music_metadata(desc)
-    if meta_songs and meta_songs[0]["artist"] and meta_songs[0]["artist"] != "Unknown Artist":
-        return meta_songs
-
-   本家・音源行の探索
-    for line in desc.split("\n"):
-        clean_line = line.strip()
-        # ★ URLやチャンネルリンク、Apple/Spotifyリンクが含まれる行は絶対に除外
-        if any(bad in clean_line.lower() for bad in ["http", "www.", "channel", "youtube.com", "music.apple", "spotify"]):
-            continue
-
-        if re.search(r'^(?:本家様?|Original|Music|音源)[:：\s]+(.*)', clean_line, re.I):
-            val = re.sub(r'^(?:本家様?|Original|Music|音源)[:：\s]+', '', clean_line).strip()
-            if any(x in val for x in ["http", "@", "Twitter", "にじさんじ"]):
-                continue
+    for line in clean_lines:
+        # "Song channel" などの誤爆を避けるため、正規表現を厳格化
+        if re.search(r'^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+(.*)', line, re.I):
+            val = re.sub(r'^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+', '', line).strip()
+            
             if " / " in val or "／" in val:
                 parts = re.split(r'[/／]', val, 1)
                 return [{"title": parts[0].strip(), "artist": parts[1].strip(), "start": 0}]
             elif val:
-                return [{"title": re.sub(r'【.*?】|\[.*?\]', '', title).strip(), "artist": val, "start": 0}]
+                clean_t = re.sub(r'【.*?】|\[.*?\]', '', title).strip()
+                return [{"title": clean_t, "artist": val, "start": 0}]
+
     # ========================================================
     # 3. タイトル形式 (曲名 / アーティスト)
     # ========================================================
@@ -1403,7 +1419,7 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
         return [{"title": t, "artist": a, "start": 0}]
 
     # ========================================================
-    # 4. 概要欄に一切情報がない場合のみWebからShorts音源を取得
+    # 4. Shorts かつ概要欄に情報がない場合のみWebから音源取得
     # ========================================================
     if is_short and video_id:
         credit = fetch_youtube_music_credit(video_id)

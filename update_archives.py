@@ -1301,7 +1301,7 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
 def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
     """
     YouTube Data APIでは取得できない「この動画の音楽 / 使用音源」を
-    動画ページHTMLのメタデータ・構造化JSONから直接抽出する
+    動画ページHTMLの構造化JSON (ytInitialPlayerResponse / ytInitialData) から直接抽出する
     """
     try:
         url = f"https://www.youtube.com/watch?v={video_id}"
@@ -1315,7 +1315,45 @@ def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
 
         html_text = res.text
 
-        # 1. Shortsの音源メタデータ（sound/audioTrackのJSON）を探索
+        # ==========================================================
+        # アプローチ 1: ytInitialData / ytInitialPlayerResponse のJSONを走査
+        # ==========================================================
+        # 1-A. engagementPanels (videoDescriptionMusicSectionRenderer) の探索
+        for pattern in [r"var ytInitialData\s*=\s*(\{.+?\});</script>", r"var ytInitialPlayerResponse\s*=\s*(\{.+?\});(?:var|</script>)"]:
+            m_json = re.search(pattern, html_text, re.DOTALL)
+            if not m_json:
+                continue
+            try:
+                data = json.loads(m_json.group(1))
+                # engagementPanels 階層を走査
+                panels = data.get("engagementPanels", [])
+                for panel in panels:
+                    items = panel.get("engagementPanelSectionListRenderer", {}).get("content", {}).get("structuredDescriptionContentRenderer", {}).get("items", [])
+                    for item in items:
+                        if "videoDescriptionMusicSectionRenderer" in item:
+                            music_section = item["videoDescriptionMusicSectionRenderer"]
+                            rows = music_section.get("carouselItemRenderer", {}).get("detailedMetadata", {}).get("rows", [])
+                            
+                            found_title = ""
+                            found_artist = ""
+                            for row in rows:
+                                label = row.get("label", {}).get("simpleText", "")
+                                val = row.get("value", {})
+                                text_val = val.get("simpleText") or "".join([r.get("text", "") for r in val.get("runs", [])])
+                                
+                                if label in ["楽曲", "Song", "Track"]:
+                                    found_title = text_val.strip()
+                                elif label in ["アーティスト", "Artist"]:
+                                    found_artist = text_val.strip()
+
+                            if found_title:
+                                return {"title": found_title, "artist": found_artist, "start": 0}
+            except Exception:
+                pass
+
+        # ==========================================================
+        # アプローチ 2: Shorts専用音源メタデータ (audioTrack)
+        # ==========================================================
         m_title = re.search(r'"audioTrack":\{"header":\{"title":\{"runs":\[\{"text":"([^"]+)"', html_text)
         m_artist = re.search(r'"audioTrack":\{.*?"subtitle":\{"runs":\[\{"text":"([^"]+)"', html_text)
         if m_title:
@@ -1325,19 +1363,15 @@ def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
                 "start": 0
             }
 
-        # 2. PC版「この動画の音楽」パネルから探索
+        # ==========================================================
+        # アプローチ 3: テキストパターンの直接フォールバック
+        # ==========================================================
         song_match = re.search(r'"simpleText":"楽曲"\}.*?"runs":\[\{"text":"([^"]+)"', html_text)
         artist_match = re.search(r'"simpleText":"アーティスト"\}.*?"runs":\[\{"text":"([^"]+)"', html_text)
-
         if song_match:
             title = song_match.group(1).strip()
             artist = artist_match.group(1).strip() if artist_match else ""
             return {"title": title, "artist": artist, "start": 0}
-
-        # 3. メタタグからのフォールバック
-        m_meta = re.search(r'itemprop="musicBy" content="([^"]+)"', html_text)
-        if m_meta:
-            return {"title": "", "artist": m_meta.group(1).strip(), "start": 0}
 
     except Exception:
         pass

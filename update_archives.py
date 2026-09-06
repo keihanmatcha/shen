@@ -1372,10 +1372,15 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
     if meta_songs and meta_songs[0]["artist"] and meta_songs[0]["artist"] != "Unknown Artist":
         return meta_songs
 
-    # 本家行の探索
+   本家・音源行の探索
     for line in desc.split("\n"):
-        if re.search(r'^(?:本家様?|Original|Music)[:：\s]+(.*)', line, re.I):
-            val = re.sub(r'^(?:本家様?|Original|Music)[:：\s]+', '', line).strip()
+        clean_line = line.strip()
+        # ★ URLやチャンネルリンク、Apple/Spotifyリンクが含まれる行は絶対に除外
+        if any(bad in clean_line.lower() for bad in ["http", "www.", "channel", "youtube.com", "music.apple", "spotify"]):
+            continue
+
+        if re.search(r'^(?:本家様?|Original|Music|音源)[:：\s]+(.*)', clean_line, re.I):
+            val = re.sub(r'^(?:本家様?|Original|Music|音源)[:：\s]+', '', clean_line).strip()
             if any(x in val for x in ["http", "@", "Twitter", "にじさんじ"]):
                 continue
             if " / " in val or "／" in val:
@@ -1383,7 +1388,6 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
                 return [{"title": parts[0].strip(), "artist": parts[1].strip(), "start": 0}]
             elif val:
                 return [{"title": re.sub(r'【.*?】|\[.*?\]', '', title).strip(), "artist": val, "start": 0}]
-
     # ========================================================
     # 3. タイトル形式 (曲名 / アーティスト)
     # ========================================================

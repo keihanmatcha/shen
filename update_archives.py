@@ -1190,22 +1190,42 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
                 continue
 
         # クレンジング
-        clean_text = re.sub(r'^[:\s♪・\-\d\.\]】）)／/|｜￤~～]+', '', clean_text).strip()
+        clean_text = re.sub(r'^[:\s♪・\-\.\]】）)／/|｜￤~～]+', '', clean_text).strip()
         clean_text = re.sub(r'[\(（][\s,、️‍]*[\)）]', '', clean_text).strip()
         clean_text = re.sub(r'\s*[~～]+$', '', clean_text).strip()
         clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip()
-
         if not clean_text:
             continue
 
         # 曲名とアーティストの分離
-        t, a = clean_text, ""
-        separators = [' / ', '／', ' - ', ' － ', '：', ' : ', '/', '￤']
-        for sep in separators:
+        # まず「空白付きのスラッシュやハイフン」を優先
+        priority_seps = [' / ', '／', ' - ', ' － ', '：', ' : ', '￤']
+        matched_sep = None
+        for sep in priority_seps:
             if sep in clean_text:
-                parts = clean_text.split(sep, 1)
-                t, a = parts[0].strip(), parts[1].strip()
+                matched_sep = sep
                 break
+
+        if matched_sep:
+            parts = clean_text.split(matched_sep, 1)
+            t, a = parts[0].strip(), parts[1].strip()
+        else:
+            # 空白なしの単独 '/' の場合、カッコの外側にある '/' だけで分割する
+            # 例: 1925/冨田悠斗(とみー/T-POCKET) -> '1925' と '冨田悠斗(とみー/T-POCKET)'
+            slash_pos = -1
+            paren_depth = 0
+            for idx, ch in enumerate(clean_text):
+                if ch in "([（【「":
+                    paren_depth += 1
+                elif ch in ")]）】」":
+                    paren_depth = max(0, paren_depth - 1)
+                elif ch == '/' and paren_depth == 0:
+                    slash_pos = idx
+                    break
+            
+            if slash_pos != -1:
+                t = clean_text[:slash_pos].strip()
+                a = clean_text[slash_pos + 1:].strip()
 
         # トーク特有のスラッシュ誤判定を防止
         if any(c in t or c in a for c in ["？", "?", "！", "!", "w", "W", "草", "「", "」", "…", "俺","上手","思う","思って","思わ","よね","だろう","いいわ","だの","いいな","かな","布教"]):

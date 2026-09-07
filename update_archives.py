@@ -1699,8 +1699,6 @@ def update_github_json(new_videos):
         print(f"❌ Failed to update GitHub: {put_res.status_code}")
         print(put_res.text)
 
-import requests
-import urllib.parse
 #iTunes Search API（完全無料・登録不要・邦楽/アニソンに強い）
 def fetch_artist_from_itunes(title: str) -> str:
     """iTunes APIから曲名を検索して最も有力なアーティスト名を取得"""
@@ -1725,8 +1723,7 @@ def fetch_artist_from_itunes(title: str) -> str:
     except Exception:
         pass
     return ""
-import requests
-import urllib.parse
+
 import re
 
 def fetch_artist_from_vocadb(title: str) -> str:

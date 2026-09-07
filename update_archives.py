@@ -1273,6 +1273,9 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
         if not clean_text:
             continue
 
+        t = clean_text
+        a = ""
+
         # 曲名とアーティストの分離
         priority_seps = [' / ', '／', ' - ', ' － ', '：', ' : ', '￤']
         matched_sep = None
@@ -1645,22 +1648,46 @@ def update_github_json(new_videos):
             print("⚠️ 既存のJSONが壊れているか空のため、新規作成として処理します。")
             existing_videos = []
 
-    managed_map = {v['youtubeId']: v for v in existing_videos if v.get('channel') in MANAGED_CHANNEL_NAMES}
-    preserved = [v for v in existing_videos if v.get('channel') not in MANAGED_CHANNEL_NAMES]
+    # 1. 既存データを youtubeId 単位で辞書化（重複防止とゴミデータ除去）
+    video_map = {}
+    for v in existing_videos:
+        vid = v.get("youtubeId")
+        if not vid:
+            continue
+        # 過去の URL 混入ゴミ曲や 1.0 誤検知を除去
+        cleaned_songs = []
+        for s in v.get("songs", []):
+            t = s.get("title", "")
+            a = s.get("artist", "")
+            if not any(bad in t.lower() or bad in a.lower() for bad in ["http", "channel", "@", "%e7%b7%91%e4%bb%99"]):
+                if t not in ["1.0", "1.0x"]:
+                    cleaned_songs.append(s)
+        v["songs"] = cleaned_songs
+        video_map[vid] = v
 
+    # 2. 新規取得動画をマージ（同じIDは更新）
     for nv in new_videos:
-        vid = nv['youtubeId']
-        if vid in managed_map:
-            # 既存の songs/tags を保護
-            if 'songs' in managed_map[vid] and managed_map[vid]['songs'] and not nv.get('songs'):
-                nv['songs'] = managed_map[vid]['songs']
-            if 'tags' in managed_map[vid] and managed_map[vid]['tags'] and not nv.get('tags'):
-                nv['tags'] = managed_map[vid]['tags']
-            managed_map[vid].update(nv)
+        vid = nv.get("youtubeId")
+        if not vid:
+            continue
+        if vid in video_map:
+            # 既存の songs/tags を保護（新規側が空の場合）
+            if video_map[vid].get("songs") and not nv.get("songs"):
+                nv["songs"] = video_map[vid]["songs"]
+            if video_map[vid].get("tags") and not nv.get("tags"):
+                nv["tags"] = video_map[vid]["tags"]
+            video_map[vid].update(nv)
         else:
-            managed_map[vid] = nv
+            video_map[vid] = nv
 
-    all_videos = preserved + list(managed_map.values())
+    all_videos = list(video_map.values())
+
+    # ========================================================
+    # ★ 空動画時のガード（ファイルの白紙化を防止）
+    # ========================================================
+    if not all_videos:
+        print("⚠️ 保存対象の動画が 0 件のため、GitHub の更新をスキップします（ファイルの白紙化を防止）。")
+        return
 
     # ========================================================
     # 全動画の songs を走査してアーティスト名を DB から一括再補完
@@ -1682,12 +1709,13 @@ def update_github_json(new_videos):
     if updated_artist_count > 0:
         print(f"✨ 既存データを含む {updated_artist_count} 箇所のアーティスト名を DB から最新補完しました。")
 
+    # 日付降順ソート
     final = sorted(all_videos, key=lambda x: x.get('date', ''), reverse=True)
     
     # 書き出し
     json_text = json.dumps(final, indent=2, ensure_ascii=False)
     payload = {
-        "message": "BOT: Update archive",
+        "message": "BOT: Update archive (deduplicated & cleaned)",
         "content": base64.b64encode(json_text.encode('utf-8')).decode('utf-8'),
         "sha": existing_sha
     }
@@ -1698,6 +1726,8 @@ def update_github_json(new_videos):
     else:
         print(f"❌ Failed to update GitHub: {put_res.status_code}")
         print(put_res.text)
+
+
 
 #iTunes Search API（完全無料・登録不要・邦楽/アニソンに強い）
 def fetch_artist_from_itunes(title: str) -> str:

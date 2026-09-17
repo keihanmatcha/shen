@@ -1,12 +1,16 @@
-import html
-import os
-import json
 import base64
-import re
 from datetime import datetime
+import html
+import json
+import os
+import re
+import sys
+from typing import Dict, Optional
+import unicodedata
+import urllib.parse
+
 from googleapiclient.discovery import build
 import requests
-import sys
 
 # --- 1. 設定値 ---
 YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY")
@@ -1844,4 +1848,8 @@ def main():
 
     if fetched_videos:
         update_github_json(fetched_videos)
+
+if __name__ == "__main__":
+    main()
+
 

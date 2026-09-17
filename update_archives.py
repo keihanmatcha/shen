@@ -1336,11 +1336,9 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
                 t = f"{t} with {','.join(sorted(collab_partners))}"
 
         # ★ 過去DBから自動補完（正規化キーで照合）
-        if not a and GLOBAL_ARTIST_DB:
-            pure_t = re.sub(r'\s+with\s+.*$', '', t).strip()
-            norm_key = normalize_title(pure_t)
-            if norm_key in GLOBAL_ARTIST_DB:
-                a = GLOBAL_ARTIST_DB[norm_key]
+        # ★ DBおよび外部API（VocaDB / iTunes）から自動補完
+        if not a:
+            a = resolve_artist_name(t)
 
         # 秒変換
         parts = list(map(int, ts_str.split(':')))
@@ -1747,7 +1745,7 @@ def update_github_json(new_videos):
 
 
 
-#iTunes Search API（完全無料・登録不要・邦楽/アニソンに強い）
+# iTunes Search API（完全無料・登録不要・邦楽/アニソンに強い）
 def fetch_artist_from_itunes(title: str) -> str:
     """iTunes APIから曲名を検索して最も有力なアーティスト名を取得"""
     clean_title = re.sub(r'[\(（\[【].*?[\)）\]】]', '', title).strip()
@@ -1758,43 +1756,34 @@ def fetch_artist_from_itunes(title: str) -> str:
     try:
         res = requests.get(url, timeout=3)
         if res.status_code == 200:
-            data = res.json()
-            results = data.get("results", [])
+            results = res.json().get("results", [])
             for item in results:
                 track_name = item.get("trackName", "")
-                # 曲名が完全一致または高い類似度の場合に採用
                 if normalize_title(track_name) == normalize_title(clean_title):
-                    return item.get("artistName", "")
-            # 完全一致がなくても、先頭の結果のアーティストをフォールバックとして採用する場合
+                    return item.get("artistName", "").strip()
             if results:
-                return results[0].get("artistName", "")
+                return results[0].get("artistName", "").strip()
     except Exception:
         pass
     return ""
 
-import re
 
 def fetch_artist_from_vocadb(title: str) -> str:
-    """
-    VocaDB API を使って曲名からボカロP・アーティスト名を検索して取得する
-    """
-    # カッコや注釈（例: "シャルル (Cover)"）を除去
+    """VocaDB API を使って曲名からボカロP・アーティスト名を検索して取得する"""
     clean_title = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', title).strip()
     if not clean_title:
         return ""
 
     params = {
         "query": clean_title,
-        "preferAccurateMatches": "true",  # 完全一致に近いものを優先
+        "preferAccurateMatches": "true",
         "songTypes": "Original,Remix,Cover",
         "maxResults": 3,
-        "lang": "Japanese"               # 日本語表記を優先
+        "lang": "Japanese"
     }
-    
     headers = {
-        "User-Agent": "VTuberArchiveBot/1.0 (contact: your_github_or_email)"
+        "User-Agent": "VTuberArchiveBot/1.0"
     }
-
     url = "https://vocadb.net/api/songs"
     
     try:
@@ -1804,26 +1793,41 @@ def fetch_artist_from_vocadb(title: str) -> str:
             for item in items:
                 song_name = item.get("name", "")
                 artist_string = item.get("artistString", "")
-                
-                # タイトルの正規化比較（完全一致または高い一致率）
                 if normalize_title(song_name) == normalize_title(clean_title):
-                    # "DECO*27 feat. 初音ミク" から "DECO*27" だけを取りたい場合は整形
-                    # 例: " feat. " や " (" の前を抽出
                     p_name = re.split(r'\s+(?:feat\.|ft\.|/)\s*', artist_string, 1)[0].strip()
                     return p_name if p_name else artist_string
                     
-            # 完全一致がない場合でも、1件目の候補を採用する場合
             if items:
                 first_artist = items[0].get("artistString", "")
                 return re.split(r'\s+(?:feat\.|ft\.|/)\s*', first_artist, 1)[0].strip()
-
-    except Exception as e:
-        # 通信エラー時は静かにスキップ
+    except Exception:
         pass
-
     return ""
 
 
+def resolve_artist_name(raw_title: str) -> str:
+    """キャッシュ照合 → VocaDB → iTunes の順にフォールバックしてアーティストを特定"""
+    if not raw_title:
+        return ""
+    pure_t = re.sub(r'\s+with\s+.*$', '', raw_title).strip()
+    norm_key = normalize_title(pure_t)
+
+    # 1. 内部DB（過去データ・手動確定）
+    if norm_key in GLOBAL_ARTIST_DB:
+        return GLOBAL_ARTIST_DB[norm_key]
+
+    # 2. VocaDB
+    artist = fetch_artist_from_vocadb(pure_t)
+
+    # 3. iTunes Search API
+    if not artist:
+        artist = fetch_artist_from_itunes(pure_t)
+
+    # 4. 見つかったらメモリキャッシュに保存して以降のAPI消費を防止
+    if artist:
+        GLOBAL_ARTIST_DB[norm_key] = artist
+
+    return artist
 
 # ==============================================================================
 # 5. エントリーポイント

@@ -1383,11 +1383,21 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
     clean_lines = []
     for line in desc.split("\n"):
         l_str = line.strip()
-        # URL, チャンネル, アカウント, 配信ストアリンクを含む行は楽曲行ではないため除外
-        if any(bad in l_str.lower() for bad in [
-            "http://", "https://", "www.", "channel", "/@",
-            "music.apple", "spotify", "line music", "twitter.com", "x.com"
-        ]):
+        if any(
+            bad in l_str.lower()
+            for bad in [
+                "http://",
+                "https://",
+                "www.",
+                "channel",
+                "/@",
+                "music.apple",
+                "spotify",
+                "line music",
+                "twitter.com",
+                "x.com",
+            ]
+        ):
             continue
         clean_lines.append(l_str)
 
@@ -1396,62 +1406,121 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
     # ========================================================
     # 1. カッコ形式の楽曲クレジットを抽出
     # ========================================================
-    # 例: Dannie May「未完成婚姻論」
-    m_bracket = re.search(r'([^\n「『\r]+?)\s*[「『]([^」』]+)[」』]', clean_desc)
+    m_bracket = re.search(r"([^\n「『\r]+?)\s*[「『]([^」』]+)[」』]", clean_desc)
     if m_bracket:
-        a_cand = re.sub(r'^(?:本家様?|Original|Music|Song|Vo|Cover|歌)[:：\s]*', '', m_bracket.group(1), flags=re.I).strip()
+        a_cand = re.sub(
+            r"^(?:本家様?|Original|Music|Song|Vo|Cover|歌)[:：\s]*",
+            "",
+            m_bracket.group(1),
+            flags=re.I,
+        ).strip()
         t_cand = m_bracket.group(2).strip()
-        if a_cand and t_cand and not any(x in a_cand for x in ["にじさんじ", "Ch", "Official"]):
+        if (
+            a_cand
+            and t_cand
+            and not any(x in a_cand for x in ["にじさんじ", "Ch", "Official"])
+        ):
             return [{"title": t_cand, "artist": a_cand, "start": 0}]
 
-    # 例: 「未完成婚姻論」/ Dannie May
-    m_bracket_rev = re.search(r'[「『]([^」』]+)[」』]\s*[-－/／]\s*([^\n\r]+)', clean_desc)
+    m_bracket_rev = re.search(
+        r"[「『]([^」』]+)[」』]\s*[-－/／]\s*([^\n\r]+)", clean_desc
+    )
     if m_bracket_rev:
         t_cand = m_bracket_rev.group(1).strip()
-        a_cand = re.sub(r'^(?:本家様?|Original|Music|Song|Vo|Cover|歌)[:：\s]*', '', m_bracket_rev.group(2), flags=re.I).strip()
-        if t_cand and a_cand and not any(x in a_cand for x in ["にじさんじ", "Ch", "Official"]):
+        a_cand = re.sub(
+            r"^(?:本家様?|Original|Music|Song|Vo|Cover|歌)[:：\s]*",
+            "",
+            m_bracket_rev.group(2),
+            flags=re.I,
+        ).strip()
+        if (
+            t_cand
+            and a_cand
+            and not any(x in a_cand for x in ["にじさんじ", "Ch", "Official"])
+        ):
             return [{"title": t_cand, "artist": a_cand, "start": 0}]
 
     # ========================================================
     # 2. 概要欄キーワード（本家 / Original / Music / 音源）
     # ========================================================
     for line in clean_lines:
-        # "Song channel" などの誤爆を避けるため、正規表現を厳格化
-        if re.search(r'^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+(.*)', line, re.I):
-            val = re.sub(r'^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+', '', line).strip()
-            
+        if re.search(r"^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+(.*)", line, re.I):
+            val = re.sub(
+                r"^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+", "", line
+            ).strip()
+
             if " / " in val or "／" in val:
-                parts = re.split(r'[/／]', val, 1)
-                return [{"title": parts[0].strip(), "artist": parts[1].strip(), "start": 0}]
+                parts = re.split(r"[/／]", val, 1)
+                return [
+                    {
+                        "title": parts[0].strip(),
+                        "artist": parts[1].strip(),
+                        "start": 0,
+                    }
+                ]
             elif val:
-                clean_t = re.sub(r'【.*?】|\[.*?\]', '', title).strip()
+                # 概要欄にアーティスト名だけある場合、タイトルから曲名を抽出
+                clean_t = re.sub(
+                    r"[\(（\[【][^\)）\]】]*(?:covered|cover|歌ってみた|歌|mv|オリジナル)[^\)）\]】]*[\)）\]】]",
+                    "",
+                    title,
+                    flags=re.I,
+                )
+                clean_t = re.sub(r"歌ってみた|COVER", "", clean_t, flags=re.I).strip(
+                    "  /／-－"
+                )
                 return [{"title": clean_t, "artist": val, "start": 0}]
 
     # ========================================================
-    # 3. タイトル形式 (曲名 / アーティスト)
+    # 3. タイトル形式の解析（ここを修正）
     # ========================================================
-    clean_title = re.sub(r'【(?:歌ってみた|COVER|Cover|歌|MV|オリジナルMV)】|\[(?:Cover|MV)\]', '', title, flags=re.I).strip()
-    clean_title = re.sub(r'\/.*(?:にじさんじ|Ch).*$', '', clean_title).strip()
+    # 【covered by 〇〇】、(Cover) などの括弧ごと除去
+    clean_title = re.sub(
+        r"[\(（\[【][^\)）\]】]*(?:covered|cover|歌ってみた|歌|mv|オリジナル|official)[^\)）\]】]*[\)）\]】]",
+        "",
+        title,
+        flags=re.I,
+    )
+    # 単独の「歌ってみた」やチャンネル名リンクなどを除去
+    clean_title = re.sub(
+        r"(?:歌ってみた|COVER|Cover|MV)", "", clean_title, flags=re.I
+    )
+    clean_title = re.sub(
+        r"\/.*(?:にじさんじ|Ch|Official).*$", "", clean_title, flags=re.I
+    )
+    clean_title = clean_title.strip("  /／-－_・")
 
-    pattern = r'^(.*?)(?:\s*[/／\-－]\s*)(.*?)(?:\s*[\(（].*covered.*[\)）]|\s*$)'
+    # パターンA: スラッシュやハイフンで「曲名 / 本家アーティスト」と書かれている場合
+    pattern = r"^(.*?)(?:\s*[/／\-－]\s*)(.*?)$"
     m = re.search(pattern, clean_title, flags=re.I)
     if m:
         t, a = m.group(1).strip(), m.group(2).strip()
-        if not a and t in GLOBAL_ARTIST_DB:
-            a = GLOBAL_ARTIST_DB[t]
+        if not a:
+            a = resolve_artist_name(t)
         return [{"title": t, "artist": a, "start": 0}]
+
+    # パターンB: 区切り文字がなく、曲名のみの場合（例:「セレナーデ」）
+    if clean_title and not is_short:
+        # VocaDB・iTunes・内部DBからアーティスト名を自動特定
+        found_artist = resolve_artist_name(clean_title)
+        return [{"title": clean_title, "artist": found_artist, "start": 0}]
 
     # ========================================================
     # 4. Shorts かつ概要欄に情報がない場合のみWebから音源取得
     # ========================================================
     if is_short and video_id:
         credit = fetch_youtube_music_credit(video_id)
-        if credit and credit.get("title") and credit["title"] not in ["1.0", "1.0x", "登録", "再生"]:
-            if not credit.get("artist") and credit["title"] in GLOBAL_ARTIST_DB:
-                credit["artist"] = GLOBAL_ARTIST_DB[credit["title"]]
+        if (
+            credit
+            and credit.get("title")
+            and credit["title"] not in ["1.0", "1.0x", "登録", "再生"]
+        ):
+            if not credit.get("artist"):
+                credit["artist"] = resolve_artist_name(credit["title"])
             return [credit]
 
     return []
+
 
 def fetch_youtube_music_credit(video_id: str) -> Optional[dict]:
     """

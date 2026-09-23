@@ -1534,7 +1534,7 @@ def update_github_json(new_videos, target_file_path=JSON_FILE_PATH, commit_msg="
 # ==============================================================================
 # 5. エントリーポイント
 # ==============================================================================
-ef main():
+def main():
     if not YOUTUBE_API_KEY or not GITHUB_TOKEN:
         print("❌ APIキーまたはGITHUB_TOKENが設定されていません。")
         return

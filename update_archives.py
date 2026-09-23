@@ -31,7 +31,7 @@ MANUAL_SONG_ARTIST_MAP = {
     "セレナーデ": "なとり",
     # 他にも誤検知しやすい曲があればここに追加
 }
-
+TARGET_X_USER = "midori_2434"
 CHANNELS = [
     {
         "id": "UCt5-0i4AVHXaWJrL8Wql3mw",
@@ -40,7 +40,7 @@ CHANNELS = [
     {
         "id": "UCTi_rzf5QIkXjhJjkbcAdTg",
         "name": "緑仙",
-        "fixed_tags": "ゲーム実況"
+        "fixed_tags": ["ゲーム実況"]
     },
     {
         "id": "UChqQiUSyI-Q1j3k57_mAJHA",
@@ -1023,7 +1023,7 @@ GLOBAL_ARTIST_DB: Dict[str, str] = {}
 HANDLE_MAP_LOWER = {k.lower(): v for k, v in HANDLE_TO_NAME_MAP.items()}
 
 # ==============================================================================
-# 2. タグ & 楽曲解析
+# 2. タグ & 楽曲解析ロジック
 # ==============================================================================
 
 def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short=False):
@@ -1094,16 +1094,15 @@ def extract_music_metadata(desc):
     artist_m = re.search(r"(?:Artist|アーティスト)\s*[:：\-]?\s*(.+)", clean_desc, re.IGNORECASE)
 
     if song_m:
-        s_title = song_m.group(1).strip()
-        s_artist = artist_m.group(1).strip() if artist_m else "Unknown Artist"
-        s_artist = re.split(r'\(on behalf of', s_artist)[0].strip()
+        s_title = song_m.group(1).strip("  ")
+        s_artist = artist_m.group(1).strip("  ") if artist_m else "Unknown Artist"
+        s_artist = re.split(r'\(on behalf of', s_artist)[0].strip("  ")
         if not any(bad in s_title.lower() or bad in s_artist.lower() for bad in ["http", "channel", "@"]):
             auto_songs.append({"title": s_title, "artist": s_artist, "start": 0})
 
     return auto_songs
 
 def normalize_title(title: str) -> str:
-    """全角半角正規化・カッコ除去・記号除去"""
     t = unicodedata.normalize('NFKC', str(title)).lower()
     t = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', t)
     t = re.sub(r'[\s\-_・/／:：~～!?！？♪· ]', '', t)
@@ -1134,7 +1133,7 @@ def load_artist_db():
                         raw_artist = s.get("artist", "").strip()
                         if not raw_title or not raw_artist or raw_artist in ["Unknown Artist", ""]:
                             continue
-                        pure_title = re.sub(r'\s+with\s+.*$', '', raw_title).strip()
+                        pure_title = re.sub(r'\s+with\s+.*$', '', raw_title).strip("  ")
                         norm_key = normalize_title(pure_title)
                         if norm_key and norm_key not in db:
                             db[norm_key] = raw_artist
@@ -1144,7 +1143,7 @@ def load_artist_db():
     print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
 
 def fetch_artist_from_itunes(title: str) -> str:
-    clean_title = re.sub(r'[\(（\[【].*?[\)）\]】]', '', title).strip()
+    clean_title = re.sub(r'[\(（\[【].*?[\)）\]】]', '', title).strip("  ")
     if not clean_title: return ""
     url = f"https://itunes.apple.com/search?term={urllib.parse.quote(clean_title)}&entity=song&country=JP&limit=5"
     try:
@@ -1158,7 +1157,7 @@ def fetch_artist_from_itunes(title: str) -> str:
     return ""
 
 def fetch_artist_from_vocadb(title: str) -> str:
-    clean_title = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', title).strip()
+    clean_title = re.sub(r'[\(（\[【][^\)）\]】]*[\)）\]】]', '', title).strip("  ")
     if not clean_title: return ""
     url = "https://vocadb.net/api/songs"
     params = {"query": clean_title, "preferAccurateMatches": "true", "maxResults": 3, "lang": "Japanese"}
@@ -1173,7 +1172,6 @@ def fetch_artist_from_vocadb(title: str) -> str:
     return ""
 
 def resolve_artist_name(raw_title: str) -> str:
-    """手動辞書 → 内部DB → iTunes → VocaDB の順でアーティストを特定"""
     if not raw_title:
         return ""
     pure_t = re.sub(r'\s+with\s+.*$', '', raw_title).strip("  ")
@@ -1190,7 +1188,7 @@ def resolve_artist_name(raw_title: str) -> str:
     if norm_key in GLOBAL_ARTIST_DB:
         return GLOBAL_ARTIST_DB[norm_key]
 
-    # 3. iTunes Search API（邦楽・メジャー曲を優先）
+    # 3. iTunes API（J-POP・メジャー曲を優先判定）
     artist = fetch_artist_from_itunes(pure_t)
 
     # 4. VocaDB（ボカロ曲フォールバック）
@@ -1254,10 +1252,86 @@ def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=Non
             unique_songs.append(s)
     return unique_songs
 
+# ★ コメント欄からセトリを取得する関数
+def fetch_setlist_from_comments(youtube, video_id, fallback_members=None):
+    """概要欄にセトリがない場合、コメント欄から取得"""
+    best_songs = []
+    try:
+        # 1. 関連度順（上位30件）
+        res = youtube.commentThreads().list(
+            part="snippet", videoId=video_id, order="relevance",
+            maxResults=30, textFormat="plainText"
+        ).execute()
+
+        for item in res.get("items", []):
+            text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
+            if re.search(r'\d{1,2}:\d{2}', text):
+                songs = parse_setlist_from_text(text, fallback_members=fallback_members)
+                if len(songs) > len(best_songs):
+                    best_songs = songs
+
+        if len(best_songs) >= 3:
+            return best_songs
+
+        # 2. キーワード検索（セトリ、セットリスト、タイムスタンプ）
+        for term in ["セットリスト", "セトリ", "タイムスタンプ"]:
+            try:
+                search_res = youtube.commentThreads().list(
+                    part="snippet", videoId=video_id, searchTerms=term,
+                    maxResults=5, textFormat="plainText"
+                ).execute()
+                for item in search_res.get("items", []):
+                    text = item["snippet"]["topLevelComment"]["snippet"]["textDisplay"]
+                    if re.search(r'\d{1,2}:\d{2}', text):
+                        songs = parse_setlist_from_text(text, fallback_members=fallback_members)
+                        if len(songs) > len(best_songs):
+                            best_songs = songs
+                if len(best_songs) >= 3:
+                    break
+            except Exception:
+                continue
+
+        return best_songs
+    except Exception as e:
+        print(f"⚠️ [{video_id}] コメント取得エラー: {e}")
+        return best_songs
+
+# ★ YouTube Shorts のHTMLから公式音源クレジットを抽出する関数
+def コメント(video_id: str) -> Optional[dict]:
+    try:
+        url = f"https://www.youtube.com/shorts/{video_id}"
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
+        }
+        res = requests.get(url, headers=headers, timeout=5)
+        if res.status_code != 200:
+            return None
+
+        html_text = res.text
+        # 「曲名 · アーティスト名」の中黒区切りパターン
+        m_credit = re.search(r'"content"\s*:\s*"([^"]+?)\s*[·・]\s*([^"]+?)"', html_text)
+        if m_credit:
+            title = m_credit.group(1).strip("  ")
+            artist = m_credit.group(2).strip("  ")
+            return {"title": title, "artist": artist, "start": 0}
+
+        # 中黒区切りがない場合のフォールバック（曲名のみ）
+        m_label = re.search(r'"label"\s*:\s*"([^"]+?)"', html_text)
+        if m_label:
+            return {"title": m_label.group(1).strip("  "), "artist": "", "start": 0}
+
+    except Exception as e:
+        print(f"⚠️ [{video_id}] 音源抽出エラー: {e}")
+
+    return None
+
 def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
+    """Shorts音源および歌ってみたの単曲メタデータ抽出"""
     if not desc: desc = ""
     clean_lines = [l.strip() for l in desc.split("\n") if not any(b in l.lower() for b in ["http", "channel", "@", "spotify"])]
 
+    # 1. 概要欄キーワード（本家 / Original / Music / 音源）
     for line in clean_lines:
         if re.search(r"^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+(.*)", line, re.I):
             val = re.sub(r"^(?:本家様?|Original|Music|音源|楽曲)[:：\s]+", "", line).strip("  ")
@@ -1265,6 +1339,7 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
                 parts = re.split(r"[/／]", val, 1)
                 return [{"title": parts[0].strip("  "), "artist": parts[1].strip("  "), "start": 0}]
 
+    # 2. タイトル形式 (曲名 / アーティスト)
     clean_title = re.sub(r"[\(（\[【][^\)）\]】]*(?:covered|cover|歌ってみた|歌|mv|オリジナル)[^\)）\]】]*[\)）\]】]", "", title, flags=re.I)
     clean_title = re.sub(r"(?:歌ってみた|COVER|Cover|MV)", "", clean_title, flags=re.I).strip("   /／-－_・")
 
@@ -1275,9 +1350,18 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
         if not a: a = resolve_artist_name(t)
         return [{"title": t, "artist": a, "start": 0}]
 
+    # 3. 単曲歌動画でタイトルから取得
     if clean_title and not is_short:
         clean_title = clean_title.strip("  ")
         return [{"title": clean_title, "artist": resolve_artist_name(clean_title), "start": 0}]
+
+    # 4. ★ Shorts かつ概要欄に情報がない場合にWebから公式音源取得
+    if is_short and video_id:
+        credit = コメント(video_id)
+        if credit and credit.get("title") and credit["title"] not in ["1.0", "1.0x", "登録", "再生"]:
+            if not credit.get("artist"):
+                credit["artist"] = resolve_artist_name(credit["title"])
+            return [credit]
 
     return []
 
@@ -1286,8 +1370,7 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
 # ==============================================================================
 
 def extract_youtube_ids_from_text(text: str) -> List[str]:
-    if not text:
-        return []
+    if not text: return []
     patterns = [
         r'(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})',
         r'(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})',
@@ -1307,8 +1390,7 @@ def expand_url(short_url: str) -> str:
 
 def fetch_quoted_tweet_text(tweet_url: str) -> str:
     m = re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/(\d+)', tweet_url)
-    if not m:
-        return ""
+    if not m: return ""
     status_id = m.group(1)
     oembed_url = f"https://publish.twitter.com/oembed?url=https://twitter.com/i/status/{status_id}&omit_script=true"
     try:
@@ -1331,27 +1413,22 @@ def fetch_youtube_ids_from_midori_x() -> List[str]:
     for url in endpoints:
         try:
             res = requests.get(url, headers=headers, timeout=8)
-            if res.status_code != 200:
-                continue
+            if res.status_code != 200: continue
 
             root = ET.fromstring(res.content)
             items = root.findall('./channel/item')
-            if not items:
-                continue
+            if not items: continue
 
             for item in items:
                 desc = item.find('description')
                 text = desc.text if desc is not None else ""
 
-                # 1. 本文から直接YouTubeリンクを抽出
                 found_video_ids.update(extract_youtube_ids_from_text(text))
 
-                # 2. t.co 短縮URLを展開して検証
                 for tco in re.findall(r'https?:\/\/t\.co\/[a-zA-Z0-9]+', text):
                     expanded = expand_url(tco)
                     found_video_ids.update(extract_youtube_ids_from_text(expanded))
 
-                    # 3. 展開先が引用ツイートだった場合は引用元本文も走査
                     if re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/\d+', expanded):
                         quoted_text = fetch_quoted_tweet_text(expanded)
                         if quoted_text:
@@ -1359,8 +1436,7 @@ def fetch_youtube_ids_from_midori_x() -> List[str]:
                             for q_tco in re.findall(r'https?:\/\/t\.co\/[a-zA-Z0-9]+', quoted_text):
                                 found_video_ids.update(extract_youtube_ids_from_text(expand_url(q_tco)))
 
-            if found_video_ids:
-                break
+            if found_video_ids: break
         except Exception:
             continue
 
@@ -1368,8 +1444,7 @@ def fetch_youtube_ids_from_midori_x() -> List[str]:
     return list(found_video_ids)
 
 def fetch_videos_by_ids(youtube, video_ids: List[str], fixed_tags=None, source_label="X告知"):
-    if not video_ids:
-        return []
+    if not video_ids: return []
     videos = []
     unique_ids = list(dict.fromkeys(video_ids))
 
@@ -1392,7 +1467,6 @@ def fetch_videos_by_ids(youtube, video_ids: List[str], fixed_tags=None, source_l
 
             cat, kw = analyze_video_tags(title, desc, fixed_tags or [], channel_name=uploader_name, is_short=is_short)
 
-            # 関連性フィルタリング
             combined = (title + desc + uploader_name).lower()
             if OWNER_NAME.lower() not in combined and not any(m.lower() in combined for m in kw):
                 continue
@@ -1401,9 +1475,13 @@ def fetch_videos_by_ids(youtube, video_ids: List[str], fixed_tags=None, source_l
             cat_set = set(cat)
             if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
                 auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
+                # ★ コメント欄探索
+                if not auto_songs and sec > 300:
+                    auto_songs = fetch_setlist_from_comments(youtube, v_id, fallback_members=kw)
                 if not auto_songs and not is_short:
-                    auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(title, desc, is_short=False)
+                    auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(title, desc, is_short=False, video_id=v_id)
             elif is_short:
+                # ★ Shorts音源探索
                 auto_songs = parse_cover_or_shorts(title, desc, is_short=True, video_id=v_id)
 
             videos.append({
@@ -1435,6 +1513,7 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
     videos = []
     next_page_token = None
     page_count = 0
+    print(f"🔍 {channel_name} のプレイリストを取得中... (ID: {playlist_id})")
 
     while page_count < MAX_PAGES_TO_FETCH:
         try:
@@ -1460,13 +1539,20 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
 
                 cat, kw = analyze_video_tags(snip['title'], desc, fixed_tags, channel_name=uploader_name, is_short=is_short)
 
+                # ★ 楽曲解析 & セトリ探索 & Shorts音源探索を確実に配線
                 auto_songs = []
                 cat_set = set(cat)
                 if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
                     auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
+                    # 概要欄になく、5分以上の長尺ならコメント欄を探索
+                    if not auto_songs and sec > 300:
+                        print(f"💬 [{v_id}] 概要欄にセトリなし。コメント欄を探索中...")
+                        auto_songs = fetch_setlist_from_comments(youtube, v_id, fallback_members=kw)
+                    # 単曲歌動画の解析
                     if not auto_songs and not is_short:
-                        auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(snip['title'], desc, is_short=False)
+                        auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(snip['title'], desc, is_short=False, video_id=v_id)
                 elif is_short:
+                    # Shorts 音源の抽出 (video_id を確実に渡す)
                     auto_songs = parse_cover_or_shorts(snip['title'], desc, is_short=True, video_id=v_id)
 
                 videos.append({
@@ -1484,8 +1570,10 @@ def fetch_videos_from_playlist(youtube, playlist_id, channel_name, fixed_tags, a
             next_page_token = res.get('nextPageToken')
             if not next_page_token: break
             page_count += 1
-        except Exception:
+        except Exception as e:
+            print(f"⚠️ {channel_name} (ID: {playlist_id}) 取得エラー: {e}")
             break
+
     return videos
 
 def update_github_json(new_videos, target_file_path=JSON_FILE_PATH, commit_msg="BOT: Update archive"):
@@ -1504,7 +1592,20 @@ def update_github_json(new_videos, target_file_path=JSON_FILE_PATH, commit_msg="
         except Exception:
             existing_videos = []
 
-    video_map = {v["youtubeId"]: v for v in existing_videos if v.get("youtubeId")}
+    video_map = {}
+    for v in existing_videos:
+        vid = v.get("youtubeId")
+        if not vid: continue
+        cleaned_songs = []
+        for s in v.get("songs", []):
+            t = s.get("title", "")
+            a = s.get("artist", "")
+            if not any(bad in t.lower() or bad in a.lower() for bad in ["http", "channel", "@", "%e7%b7%91%e4%bb%99"]):
+                if t not in ["1.0", "1.0x"]:
+                    cleaned_songs.append(s)
+        v["songs"] = cleaned_songs
+        video_map[vid] = v
+
     for nv in new_videos:
         vid = nv.get("youtubeId")
         if not vid: continue
@@ -1534,7 +1635,11 @@ def update_github_json(new_videos, target_file_path=JSON_FILE_PATH, commit_msg="
         "content": base64.b64encode(json.dumps(final, indent=2, ensure_ascii=False).encode('utf-8')).decode('utf-8'),
         "sha": existing_sha
     }
-    requests.put(url, headers=headers, json=payload)
+    put_res = requests.put(url, headers=headers, json=payload)
+    if put_res.status_code in [200, 201]:
+        print(f"🚀 {target_file_path} の更新が完了しました。")
+    else:
+        print(f"❌ {target_file_path} 更新失敗: {put_res.status_code}")
 
 # ==============================================================================
 # 5. エントリーポイント

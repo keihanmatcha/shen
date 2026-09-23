@@ -10,6 +10,8 @@ import unicodedata
 import urllib.parse
 import xml.etree.ElementTree as ET
 import requests
+OWNER_NAME = "緑仙"
+TARGET_X_USER = "midori_2434"  # ★ 監視対象Xアカウント
 
 from googleapiclient.discovery import build
 import requests
@@ -1225,13 +1227,100 @@ def extract_youtube_ids_from_text(text: str) -> list[str]:
         yt_ids.extend(matches)
     return list(dict.fromkeys(yt_ids))
 
-def expand_tco_url(short_url: str) -> str:
-    """t.co 短縮URLのリダイレクト先を解決"""
+def expand_url(short_url: str) -> str:
+    """t.co 等のリダイレクト先URLを展開"""
     try:
         res = requests.head(short_url, allow_redirects=True, timeout=5)
         return res.url
     except Exception:
         return short_url
+def fetch_youtube_ids_from_midori_x() -> list[str]:
+    """
+    @midori_2434 の直近ポストおよび【引用ポスト先】からYouTube動画IDを網羅抽出
+    """
+    endpoints = [
+        f"https://rsshub.app/twitter/user/{TARGET_X_USER}",
+        f"https://nitter.net/{TARGET_X_USER}/rss",
+        f"https://nitter.cz/{TARGET_X_USER}/rss"
+    ]
+    
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
+    }
+    
+    found_video_ids = set()
+
+    for url in endpoints:
+        try:
+            res = requests.get(url, headers=headers, timeout=8)
+            if res.status_code != 200:
+                continue
+
+            root = ET.fromstring(res.content)
+            items = root.findall('./channel/item')
+            if not items:
+                continue
+
+            for item in items:
+                desc = item.find('description')
+                text = desc.text if desc is not None else ""
+                
+                # 1. 本文から直接YouTubeリンクを抽出
+                found_video_ids.update(extract_youtube_ids_from_text(text))
+
+                # 2. t.co 短縮URLを展開
+                tco_links = re.findall(r'https?:\/\/t\.co\/[a-zA-Z0-9]+', text)
+                for tco in tco_links:
+                    expanded = expand_url(tco)
+                    
+                    # 2-A. 展開先がYouTubeの場合
+                    found_video_ids.update(extract_youtube_ids_from_text(expanded))
+                    
+                    # 2-B. ★ 展開先が引用ツイート（x.com/.../status/...）だった場合
+                    if re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/\d+', expanded):
+                        quoted_text = fetch_quoted_tweet_text(expanded)
+                        if quoted_text:
+                            # 引用先ツイート内のYouTubeリンクを抽出
+                            quoted_yt_ids = extract_youtube_ids_from_text(quoted_text)
+                            
+                            # 引用先にも t.co が含まれていればさらに展開
+                            for q_tco in re.findall(r'https?:\/\/t\.co\/[a-zA-Z0-9]+', quoted_text):
+                                q_expanded = expand_url(q_tco)
+                                quoted_yt_ids.extend(extract_youtube_ids_from_text(q_expanded))
+                                
+                            found_video_ids.update(quoted_yt_ids)
+
+            if found_video_ids:
+                break
+        except Exception:
+            continue
+
+    print(f"🐦 @{TARGET_X_USER} のポスト（引用ポスト含む）から {len(found_video_ids)} 件のYouTube動画を検知しました。")
+    return list(found_video_ids)
+
+
+def fetch_quoted_tweet_text(tweet_url: str) -> str:
+    """
+    ★ 引用先ポスト（x.com/username/status/12345...）の本文を取得
+    """
+    # URLから status_id を抽出
+    m = re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/(\d+)', tweet_url)
+    if not m:
+        return ""
+    status_id = m.group(1)
+
+    # 引用先ツイートをRSSHub経由またはoEmbedで簡易取得
+    # oEmbed APIは認証不要・完全無料で利用可能
+    oembed_url = f"https://publish.twitter.com/oembed?url=https://twitter.com/i/status/{status_id}&omit_script=true"
+    try:
+        res = requests.get(oembed_url, timeout=5)
+        if res.status_code == 200:
+            html_content = res.json().get("html", "")
+            return html.unescape(html_content)
+    except Exception:
+        pass
+    return ""
+
 
 def fetch_youtube_ids_from_x_rss(twitter_handle: str) -> list[str]:
     """

@@ -29,6 +29,10 @@ CHANNELS = [
         "name": "緑仙"
     },
     {
+        "id": "UCTi_rzf5QIkXjhJjkbcAdTg",
+        "name": "緑仙","ゲーム実況"
+    },
+    {
         "id": "UChqQiUSyI-Q1j3k57_mAJHA",
         "name": "Rain Drops",
         "fixed_tags": ["える", "ジョー・力一","鈴木勝","三枝明那","童田明治","Rain Drops"]

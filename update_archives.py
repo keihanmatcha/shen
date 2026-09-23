@@ -26,6 +26,11 @@ MAX_PAGES_TO_FETCH = 5
 FINAL_JSON_PATH = "archives/external_videos.json"
 
 OWNER_NAME="緑仙"
+# 手動確定・上書き用辞書（外部APIより絶対優先）
+MANUAL_SONG_ARTIST_MAP = {
+    "セレナーデ": "なとり",
+    # 他にも誤検知しやすい曲があればここに追加
+}
 
 CHANNELS = [
     {

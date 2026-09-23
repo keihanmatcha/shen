@@ -30,6 +30,7 @@ CHANNELS = [
     },
     {
         "id": "UCTi_rzf5QIkXjhJjkbcAdTg",
+        "name": "緑仙",
         "fixed_tags": "ゲーム実況"
     },
     {

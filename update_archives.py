@@ -8,6 +8,8 @@ import sys
 from typing import Dict, Optional
 import unicodedata
 import urllib.parse
+import xml.etree.ElementTree as ET
+import requests
 
 from googleapiclient.discovery import build
 import requests
@@ -1209,7 +1211,111 @@ def load_artist_db():
     GLOBAL_ARTIST_DB = db
     print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
 
+def extract_youtube_ids_from_text(text: str) -> list[str]:
+    """テキスト中に含まれるYouTubeの動画IDを抽出"""
+    yt_ids = []
+    # 通常URL, 短縮URL, Shorts, 埋め込みURLに対応
+    patterns = [
+        r'(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})',
+        r'(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})',
+        r'(?:https?:\/\/)?(?:www\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})'
+    ]
+    for p in patterns:
+        matches = re.findall(p, text)
+        yt_ids.extend(matches)
+    return list(dict.fromkeys(yt_ids))
 
+def expand_tco_url(short_url: str) -> str:
+    """t.co 短縮URLのリダイレクト先を解決"""
+    try:
+        res = requests.head(short_url, allow_redirects=True, timeout=5)
+        return res.url
+    except Exception:
+        return short_url
+
+def fetch_youtube_ids_from_x_rss(twitter_handle: str) -> list[str]:
+    """
+    RSSHub等を経由して特定ユーザーの直近ポストからYouTubeの動画IDを取得
+    (例: https://rsshub.app/twitter/user/XXXX または自前インスタンス)
+    """
+    rss_url = f"https://rsshub.app/twitter/user/{twitter_handle.lstrip('@')}"
+    found_video_ids = set()
+    
+    try:
+        res = requests.get(rss_url, headers={"User-Agent": "VTuberArchiveBot/1.0"}, timeout=10)
+        if res.status_code != 200:
+            return []
+        
+        root = ET.fromstring(res.content)
+        # RSS内の各ポスト（item）のdescriptionを走査
+        for item in root.findall('./channel/item'):
+            desc = item.find('description')
+            desc_text = desc.text if desc is not None else ""
+            
+            # 1. 直接テキスト内のyoutubeリンクを抽出
+            direct_ids = extract_youtube_ids_from_text(desc_text)
+            found_video_ids.update(direct_ids)
+            
+            # 2. t.co リンクが含まれている場合は展開して確認
+            tco_links = re.findall(r'https?:\/\/t\.co\/[a-zA-Z0-9]+', desc_text)
+            for tco in tco_links:
+                expanded = expand_tco_url(tco)
+                found_video_ids.update(extract_youtube_ids_from_text(expanded))
+                
+    except Exception as e:
+        print(f"⚠️ Twitter/X からの取得エラー (@{twitter_handle}): {e}")
+        
+    return list(found_video_ids)
+
+def fetch_videos_by_ids(youtube, video_ids, fixed_tags=None, source_label="X連携"):
+    """動画IDリストを受け取り、既存のフォーマットに成形して返す"""
+    if not video_ids:
+        return []
+    
+    videos = []
+    # 50件ずつバッチ処理
+    for i in range(0, len(video_ids), 50):
+        chunk = video_ids[i:i + 50]
+        res = youtube.videos().list(part='snippet,contentDetails', id=','.join(chunk)).execute()
+        
+        for v_data in res.get('items', []):
+            v_id = v_data['id']
+            snip = v_data['snippet']
+            desc = snip.get('description', '')
+            sec = get_duration_seconds(v_data['contentDetails']['duration'])
+            uploader_name = snip.get('channelTitle', '')
+            is_short = (0 < sec <= 60)
+            
+            # 既存の自動タグ解析・楽曲解析をそのまま適用
+            cat, kw = analyze_video_tags(
+                snip['title'], desc, fixed_tags or [],
+                channel_name=uploader_name, is_short=is_short
+            )
+            
+            auto_songs = []
+            cat_set = set(cat)
+            if "歌配信" in cat_set or cat_set.intersection({"歌動画", "踊り動画"}):
+                auto_songs = parse_setlist_from_text(desc, fallback_members=kw)
+                if not auto_songs and sec > 300:
+                    auto_songs = fetch_setlist_from_comments(youtube, v_id, fallback_members=kw)
+                if not auto_songs and not is_short:
+                    auto_songs = extract_music_metadata(desc) or parse_cover_or_shorts(snip['title'], desc, is_short=False)
+            elif is_short:
+                auto_songs = parse_cover_or_shorts(snip['title'], desc, is_short=True, video_id=v_id)
+                
+            videos.append({
+                "youtubeId": v_id,
+                "title": snip['title'],
+                "channel": uploader_name,
+                "date": snip['publishedAt'][:10],
+                "thumbnail": f"https://i.ytimg.com/vi/{v_id}/mqdefault.jpg",
+                "category": cat,
+                "keywords": kw,
+                "tags": [source_label],
+                "songs": auto_songs
+            })
+            
+    return videos
     
 def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=None):
     if not text:

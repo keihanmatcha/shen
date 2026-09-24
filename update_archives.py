@@ -1050,6 +1050,12 @@ def analyze_video_tags(title, description, fixed_tags, channel_name="", is_short
         if slang.lower() in title_lower:
             detected_keywords.add(formal_tag)
 
+    if re.search(r'【[^】]*える[^】]*】', title):
+        detected_keywords.add("える")
+    if re.search(r'【[^】]*叶[^】]*】', title):
+        detected_keywords.add("叶")
+
+
     found_handles = re.findall(r'(@[\w\.\-]+)', description_lower)
     for handle in found_handles:
         h_lower = handle.lower()

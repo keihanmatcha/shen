@@ -29,6 +29,7 @@ OWNER_NAME="緑仙"
 # 手動確定・上書き用辞書（外部APIより絶対優先）
 MANUAL_SONG_ARTIST_MAP = {
     "セレナーデ": "なとり",
+    "分かっちゃいないね": "monet"
     # 他にも誤検知しやすい曲があればここに追加
 }
 TARGET_X_USER = "midori_2434"

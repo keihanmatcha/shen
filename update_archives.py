@@ -1116,36 +1116,45 @@ def normalize_title(title: str) -> str:
     return t.strip()
 
 def load_artist_db():
+    """リポジトリ内の全曲情報からアーティストDBを構築"""
     global GLOBAL_ARTIST_DB
     headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
     source_files = [
-        "archives/custom_known_songs.json",
-        "songs/videos.json",
-        "archives/archive_videos.json",
-        "archives/external_videos.json"
+        "archives/external_videos.json",
+        "archives/custom_known_songs.json"  # ★ 追加
     ]
-    db = {}
+
+    all_data = []
     for rel_path in source_files:
         url = f"https://api.github.com/repos/{GITHUB_REPO_OWNER}/{GITHUB_REPO_NAME}/contents/{rel_path}"
         try:
-            r = requests.get(url, headers=headers, timeout=5)
+            r = requests.get(url, headers=headers)
             if r.status_code == 200:
                 raw_bytes = base64.b64decode(r.json()['content'])
                 text = raw_bytes.decode('utf-8-sig').strip()
-                if not text: continue
-                data = json.loads(text)
-                for item in data:
-                    for s in item.get("songs", []):
-                        raw_title = s.get("title", "").strip()
-                        raw_artist = s.get("artist", "").strip()
-                        if not raw_title or not raw_artist or raw_artist in ["Unknown Artist", ""]:
-                            continue
-                        pure_title = re.sub(r'\s+with\s+.*$', '', raw_title).strip("  ")
-                        norm_key = normalize_title(pure_title)
-                        if norm_key and norm_key not in db:
-                            db[norm_key] = raw_artist
+                if text:
+                    data = json.loads(text)
+                    if isinstance(data, list):
+                        all_data.extend(data)
         except Exception:
             continue
+
+    db = {}
+    for item in all_data:
+        # パターンA: {"songs": [{"title": ..., "artist": ...}]} の形式
+        song_list = item.get("songs", [])
+        
+        # パターンB: custom_known_songs.json が [{"title": ..., "artist": ...}] の直接リスト形式の場合
+        if not song_list and "title" in item and "artist" in item:
+            song_list = [item]
+
+        for s in song_list:
+            title = s.get("title", "").strip()
+            pure_title = re.sub(r'\s+with\s+.*$', '', title).strip()
+            artist = s.get("artist", "").strip()
+            if pure_title and artist and artist != "Unknown Artist" and pure_title not in db:
+                db[pure_title] = artist
+
     GLOBAL_ARTIST_DB = db
     print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
 

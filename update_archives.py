@@ -5,7 +5,7 @@ import json
 import os
 import re
 import sys
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 import unicodedata
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -670,13 +670,13 @@ HANDLE_TO_NAME_MAP = {
     "@Twisty Amanozako": "Twisty Amanozako", "@VoxAkuma": "Vox Akuma", "@VerVermillion": "Ver Vermillion", "@LucaKaneshiro": "Luca Kaneshiro",
     "@ZealGinjoka": "Zeal Ginjoka", "@RenZotto": "Ren Zotto", "@RyomaBarrenwort": "Ryoma Barrenwort", "@Hoshimi-virtualreal1845": "星弥",
     "@noornijisanjiin7271": "Noor", "@PIROPARU": "字ぴろぱる", "@shibuyaHAL": "渋谷ハル", "@UTAIMEIKA": "歌衣メイカ",
-    "@KanaeVCriminologist": "かなえ先生", "@Peanutskun": "ピーナッツくん", "@pokopea": "ぽんぽこ", "@_Ubiba": "ばあちゃる","@伊東ライフ‬":"伊東ライフ",
+    "@KanaeVCriminologist": "かなえ先生", "@Peanutskun": "ピーナッツくん", "@pokopea": "ぽんぽこ", "@_Ubiba": "ばあちゃる","@伊東ライフ": "伊東ライフ",
     "@lisahanabusa": "英リサ", "@TOMARI_MARI": "兎麹まり", "@uruhaichinose": "一ノ瀬うるは", "@KaminariQpi": "神威きゅぴ","@monsterzmate":"MonsterZ MATE",
     "@hinanotachiba7": "橘ひなの", "@八雲ぺに": "八雲ぺに", "@takachan0317": "多井隆晴", "@zunmaruch": "村上淳","@satouholmes": "佐藤ホームズ",
     "@SuzukiTaro_CH": "鈴木たろう", "@sibukawa": "渋川難波", "@Matsumotogumi": "松本吉弘", "@RyuseiRotan": "龍惺ろたん",
     "@tenkaitsukasa": "天開司", "@sakinomoco": "咲乃もこ", "@Izumi_Yunohara": "柚原いづみ", "@OmaruPolka": "尾丸ポルカ",
     "@TakaneLui": "鷹嶺ルイ", "@MoriCalliope": "森カリオペ", "@Inaba_Haneru": "因幡はねる",
-    "@結城さくな‬":"結城さくな","‪@ui_shig":"しぐれうい","‪@YukokuRoberu‬":"夕刻ロベル","@犬山たまき佃煮のりお":"犬山たまき",
+    "@結城さくな‬":"結城さくな","@ui_shig": "しぐれうい","@YukokuRoberu": "夕刻ロベル","@犬山たまき佃煮のりお":"犬山たまき",
     "@YanoKuromu":"夜乃くろむ","@shiranamiramune":"白波らむね","@KaguraMea":"神楽めあ"
 }
 UNIT_GROUP_MAP = {
@@ -1152,9 +1152,12 @@ def load_artist_db():
             title = s.get("title", "").strip()
             pure_title = re.sub(r'\s+with\s+.*$', '', title).strip()
             artist = s.get("artist", "").strip()
-            if pure_title and artist and artist != "Unknown Artist" and pure_title not in db:
-                db[pure_title] = artist
-
+            if pure_title and artist and artist != "Unknown Artist":
+                norm_t = normalize_title(pure_title)
+                if norm_t not in db:
+                    db[norm_t] = artist
+                if pure_title not in db:
+                    db[pure_title] = artist
     GLOBAL_ARTIST_DB = db
     print(f"📚 アーティストDB初期化完了: {len(GLOBAL_ARTIST_DB)} 曲をキャッシュ")
 
@@ -1313,7 +1316,7 @@ def fetch_setlist_from_comments(youtube, video_id, fallback_members=None):
         return best_songs
 
 # ★ YouTube Shorts のHTMLから公式音源クレジットを抽出する関数
-def コメント(video_id: str) -> Optional[dict]:
+def fetch_shorts_audio_credit(video_id: str) -> Optional[dict]:
     try:
         url = f"https://www.youtube.com/shorts/{video_id}"
         headers = {
@@ -1373,7 +1376,7 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
 
     # 4. ★ Shorts かつ概要欄に情報がない場合にWebから公式音源取得
     if is_short and video_id:
-        credit = コメント(video_id)
+        credit = fetch_shorts_audio_credit(video_id)
         if credit and credit.get("title") and credit["title"] not in ["1.0", "1.0x", "登録", "再生"]:
             if not credit.get("artist"):
                 credit["artist"] = resolve_artist_name(credit["title"])

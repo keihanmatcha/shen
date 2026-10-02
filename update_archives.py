@@ -1429,46 +1429,54 @@ def fetch_quoted_tweet_text(tweet_url: str) -> str:
     return ""
 
 def fetch_youtube_ids_from_midori_x() -> List[str]:
-    endpoints = [
-        f"https://rsshub.app/twitter/user/{TARGET_X_USER}",
-        f"https://nitter.net/{TARGET_X_USER}/rss",
-        f"https://nitter.cz/{TARGET_X_USER}/rss"
-    ]
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-    found_video_ids = set()
+  """RSSプロキシに依存せず、X公式の埋め込みタイムラインAPIから最新ポストを取得・抽出"""
+  found_video_ids = set()
 
-    for url in endpoints:
-        try:
-            res = requests.get(url, headers=headers, timeout=8)
-            if res.status_code != 200: continue
+  # X公式の埋め込みタイムライン取得エンドポイント
+  url = f"https://syndication.twitter.com/srv/timeline-profile/screen-name/{TARGET_X_USER}"
+  headers = {
+      "User-Agent": (
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,"
+          " like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      ),
+      "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+  }
 
-            root = ET.fromstring(res.content)
-            items = root.findall('./channel/item')
-            if not items: continue
+  try:
+    res = requests.get(url, headers=headers, timeout=10)
+    if res.status_code == 200:
+      html_text = res.text
 
-            for item in items:
-                desc = item.find('description')
-                text = desc.text if desc is not None else ""
+      # 1. 本文から直のYouTubeリンクを探索
+      found_video_ids.update(extract_youtube_ids_from_text(html_text))
 
-                found_video_ids.update(extract_youtube_ids_from_text(text))
+      # 2. t.co 短縮URLを抽出して展開
+      tco_links = set(re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", html_text))
+      for tco in tco_links:
+        expanded = expand_url(tco)
+        found_video_ids.update(extract_youtube_ids_from_text(expanded))
 
-                for tco in re.findall(r'https?:\/\/t\.co\/[a-zA-Z0-9]+', text):
-                    expanded = expand_url(tco)
-                    found_video_ids.update(extract_youtube_ids_from_text(expanded))
+        # 3. 引用ポスト（twitter.com / x.com /status/ID）がある場合、その引用先もoEmbed経由で取得
+        if re.search(r"(?:twitter\.com|x\.com)\/[^/]+\/status\/\d+", expanded):
+          quoted_html = fetch_quoted_tweet_text(expanded)
+          if quoted_html:
+            found_video_ids.update(extract_youtube_ids_from_text(quoted_html))
+            for q_tco in set(
+                re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", quoted_html)
+            ):
+              found_video_ids.update(
+                  extract_youtube_ids_from_text(expand_url(q_tco))
+              )
 
-                    if re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/\d+', expanded):
-                        quoted_text = fetch_quoted_tweet_text(expanded)
-                        if quoted_text:
-                            found_video_ids.update(extract_youtube_ids_from_text(quoted_text))
-                            for q_tco in re.findall(r'https?:\/\/t\.co\/[a-zA-Z0-9]+', quoted_text):
-                                found_video_ids.update(extract_youtube_ids_from_text(expand_url(q_tco)))
+  except Exception as e:
+    print(f"⚠️ Xタイムライン取得エラー: {e}")
 
-            if found_video_ids: break
-        except Exception:
-            continue
+  print(
+      f"🐦 @{TARGET_X_USER} のポスト（引用含む）から"
+      f" {len(found_video_ids)} 件のYouTube動画IDを検知"
+  )
+  return list(found_video_ids)
 
-    print(f"🐦 @{TARGET_X_USER} のポスト（引用含む）から {len(found_video_ids)} 件のYouTube動画IDを検知")
-    return list(found_video_ids)
 
 def fetch_videos_by_ids(youtube, video_ids: List[str], fixed_tags=None, source_label="X告知"):
     if not video_ids: return []

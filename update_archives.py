@@ -1389,23 +1389,31 @@ def parse_cover_or_shorts(title, desc, is_short=False, video_id=None):
 # ==============================================================================
 
 def extract_youtube_ids_from_text(text: str) -> List[str]:
-    if not text: return []
-    patterns = [
-        r'(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([a-zA-Z0-9_-]{11})',
-        r'(?:https?:\/\/)?(?:www\.)?youtu\.be\/([a-zA-Z0-9_-]{11})',
-        r'(?:https?:\/\/)?(?:www\.)?youtube\.com\/shorts\/([a-zA-Z0-9_-]{11})'
-    ]
-    yt_ids = []
-    for p in patterns:
-        yt_ids.extend(re.findall(p, text))
-    return list(dict.fromkeys(yt_ids))
+  if not text:
+    return []
+
+  # watch?v=, shorts/, live/, youtu.be/ すべてを網羅
+  pattern = r'(?:https?:\/\/)?(?:(?:www|m)\.)?(?:youtube\.com\/(?:watch\?v=|shorts\/|live\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})'
+
+  yt_ids = re.findall(pattern, text)
+  return list(dict.fromkeys(yt_ids))
+
+
 
 def expand_url(short_url: str) -> str:
-    try:
-        res = requests.head(short_url, allow_redirects=True, timeout=5)
-        return res.url
-    except Exception:
-        return short_url
+  try:
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        )
+    }
+    # HEADではなくGET + stream=True にすることでt.coのリダイレクト先Locationを確実に追跡
+    res = requests.get(
+        short_url, headers=headers, allow_redirects=True, stream=True, timeout=5
+    )
+    return res.url
+  except Exception:
+    return short_url
 
 def fetch_quoted_tweet_text(tweet_url: str) -> str:
     m = re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/(\d+)', tweet_url)

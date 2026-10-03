@@ -1416,66 +1416,121 @@ def expand_url(short_url: str) -> str:
     return short_url
 
 def fetch_quoted_tweet_text(tweet_url: str) -> str:
-    m = re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/(\d+)', tweet_url)
-    if not m: return ""
-    status_id = m.group(1)
-    oembed_url = f"https://publish.twitter.com/oembed?url=https://twitter.com/i/status/{status_id}&omit_script=true"
-    try:
-        res = requests.get(oembed_url, timeout=5)
-        if res.status_code == 200:
-            return html.unescape(res.json().get("html", ""))
-    except Exception:
-        pass
-    return ""
+  # FxTwitter API経由で取得するため、この関数は不要またはフォールバック用になります
+  return ""
+
 
 def fetch_youtube_ids_from_midori_x() -> List[str]:
-  """RSSプロキシに依存せず、X公式の埋め込みタイムラインAPIから最新ポストを取得・抽出"""
+  """FxTwitter (FixTweet) API を利用して最新ポストおよび引用ポストから動画URLを抽出"""
   found_video_ids = set()
 
-  # X公式の埋め込みタイムライン取得エンドポイント
-  url = f"https://syndication.twitter.com/srv/timeline-profile/screen-name/{TARGET_X_USER}"
-  headers = {
-      "User-Agent": (
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,"
-          " like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      ),
-      "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
-  }
+  # FixTweetのユーザー最新ツイート取得エンドポイント
+  # (公式プロキシやNitterと違い、JSON形式で安定して取得可能)
+  url = f"https://api.fxtwitter.com/{TARGET_X_USER}"
+  headers = {"User-Agent": "VTuberArchiveBot/1.0"}
 
   try:
     res = requests.get(url, headers=headers, timeout=10)
     if res.status_code == 200:
-      html_text = res.text
+      data = res.json()
+      # tweets配列 または 単一tweetの取得
+      tweets = data.get("tweets", [])
+      if not tweets and "tweet" in data:
+        tweets = [data["tweet"]]
 
-      # 1. 本文から直のYouTubeリンクを探索
-      found_video_ids.update(extract_youtube_ids_from_text(html_text))
+      for tw in tweets:
+        # 1. 自身のポスト本文を探索
+        self_text = tw.get("text", "")
+        found_video_ids.update(extract_youtube_ids_from_text(self_text))
+        for tco in set(re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", self_text)):
+          found_video_ids.update(
+              extract_youtube_ids_from_text(expand_url(tco))
+          )
 
-      # 2. t.co 短縮URLを抽出して展開
-      tco_links = set(re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", html_text))
-      for tco in tco_links:
-        expanded = expand_url(tco)
-        found_video_ids.update(extract_youtube_ids_from_text(expanded))
-
-        # 3. 引用ポスト（twitter.com / x.com /status/ID）がある場合、その引用先もoEmbed経由で取得
-        if re.search(r"(?:twitter\.com|x\.com)\/[^/]+\/status\/\d+", expanded):
-          quoted_html = fetch_quoted_tweet_text(expanded)
-          if quoted_html:
-            found_video_ids.update(extract_youtube_ids_from_text(quoted_html))
-            for q_tco in set(
-                re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", quoted_html)
-            ):
-              found_video_ids.update(
-                  extract_youtube_ids_from_text(expand_url(q_tco))
-              )
+        # 2. ★ 引用ポスト（quote）が存在する場合、引用元の本文も探索
+        quote = tw.get("quote")
+        if quote:
+          quote_text = quote.get("text", "")
+          found_video_ids.update(extract_youtube_ids_from_text(quote_text))
+          for q_tco in set(
+              re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", quote_text)
+          ):
+            found_video_ids.update(
+                extract_youtube_ids_from_text(expand_url(q_tco))
+            )
 
   except Exception as e:
-    print(f"⚠️ Xタイムライン取得エラー: {e}")
+    print(f"⚠️ FixTweet API取得エラー: {e}")
 
   print(
       f"🐦 @{TARGET_X_USER} のポスト（引用含む）から"
       f" {len(found_video_ids)} 件のYouTube動画IDを検知"
   )
   return list(found_video_ids)
+
+
+
+# def fetch_quoted_tweet_text(tweet_url: str) -> str:
+#     m = re.search(r'(?:twitter\.com|x\.com)\/[^/]+\/status\/(\d+)', tweet_url)
+#     if not m: return ""
+#     status_id = m.group(1)
+#     oembed_url = f"https://publish.twitter.com/oembed?url=https://twitter.com/i/status/{status_id}&omit_script=true"
+#     try:
+#         res = requests.get(oembed_url, timeout=5)
+#         if res.status_code == 200:
+#             return html.unescape(res.json().get("html", ""))
+#     except Exception:
+#         pass
+#     return ""
+
+# def fetch_youtube_ids_from_midori_x() -> List[str]:
+#   """RSSプロキシに依存せず、X公式の埋め込みタイムラインAPIから最新ポストを取得・抽出"""
+#   found_video_ids = set()
+
+#   # X公式の埋め込みタイムライン取得エンドポイント
+#   url = f"https://syndication.twitter.com/srv/timeline-profile/screen-name/{TARGET_X_USER}"
+#   headers = {
+#       "User-Agent": (
+#           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,"
+#           " like Gecko) Chrome/120.0.0.0 Safari/537.36"
+#       ),
+#       "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+#   }
+
+#   try:
+#     res = requests.get(url, headers=headers, timeout=10)
+#     if res.status_code == 200:
+#       html_text = res.text
+
+#       # 1. 本文から直のYouTubeリンクを探索
+#       found_video_ids.update(extract_youtube_ids_from_text(html_text))
+
+#       # 2. t.co 短縮URLを抽出して展開
+#       tco_links = set(re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", html_text))
+#       for tco in tco_links:
+#         expanded = expand_url(tco)
+#         found_video_ids.update(extract_youtube_ids_from_text(expanded))
+
+#         # 3. 引用ポスト（twitter.com / x.com /status/ID）がある場合、その引用先もoEmbed経由で取得
+#         if re.search(r"(?:twitter\.com|x\.com)\/[^/]+\/status\/\d+", expanded):
+#           quoted_html = fetch_quoted_tweet_text(expanded)
+#           if quoted_html:
+#             found_video_ids.update(extract_youtube_ids_from_text(quoted_html))
+#             for q_tco in set(
+#                 re.findall(r"https?:\/\/t\.co\/[a-zA-Z0-9]+", quoted_html)
+#             ):
+#               found_video_ids.update(
+#                   extract_youtube_ids_from_text(expand_url(q_tco))
+#               )
+
+#   except Exception as e:
+#     print(f"⚠️ Xタイムライン取得エラー: {e}")
+
+#   print(
+#       f"🐦 @{TARGET_X_USER} のポスト（引用含む）から"
+#       f" {len(found_video_ids)} 件のYouTube動画IDを検知"
+#   )
+#   return list(found_video_ids)
 
 
 def fetch_videos_by_ids(youtube, video_ids: List[str], fixed_tags=None, source_label="X告知"):

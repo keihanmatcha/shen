@@ -1,5 +1,30 @@
 [
     {
+        "youtubeId": "scZd7VJvGNs",
+        "title": "1925 / 緑仙 Cover",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-10-18",
+        "thumbnail": "https://i.ytimg.com/vi/scZd7VJvGNs/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "冨田悠斗 / サクラレイ",
+                "artist": "",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "wQk5h-tCT7U",
         "title": "歌枠 ｜ メロい曲を歌っていくカラオケ配信🐼💭",
         "channel": "緑仙 / Ryushen",
@@ -280,6 +305,7 @@
             "歌動画"
         ],
         "keywords": [
+            "カバー曲",
             "歌動画",
             "歌衣メイカ"
         ],
@@ -294,6 +320,51 @@
                 ]
             }
         ]
+    },
+    {
+        "youtubeId": "0Xt9PluqFaI",
+        "title": "ザムザをVtuberが歌ってみた",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-09-17",
+        "thumbnail": "https://i.ytimg.com/vi/0Xt9PluqFaI/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
+    },
+    {
+        "youtubeId": "Mc0Khvq1xvg",
+        "title": "もう恋なんてしないをVtuberが歌ってみた",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-09-16",
+        "thumbnail": "https://i.ytimg.com/vi/Mc0Khvq1xvg/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
+    },
+    {
+        "youtubeId": "C6un-V2f3so",
+        "title": "ダンス・デカダンスをVtuberが歌ってみた",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-09-15",
+        "thumbnail": "https://i.ytimg.com/vi/C6un-V2f3so/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
     },
     {
         "youtubeId": "_HngCyBJtT0",
@@ -564,22 +635,6 @@
         ]
     },
     {
-        "youtubeId": "-hqbTT_4qOY",
-        "title": "【踊ってみた】緑仙先輩と 罪と罰と雨とキス 踊ってみた🐼❤️‍🔥｜緑仙/レイン・パターソン",
-        "channel": "レイン・パターソン／Lain Paterson【にじさんじ】",
-        "date": "2026-09-08",
-        "thumbnail": "https://i.ytimg.com/vi/-hqbTT_4qOY/mqdefault.jpg",
-        "category": [
-            "踊り動画"
-        ],
-        "keywords": [
-            "レイン・パターソン",
-            "踊り動画"
-        ],
-        "tags": [],
-        "songs": []
-    },
-    {
         "youtubeId": "aHrZ6WNiV88",
         "title": "歌枠 ｜ 懐かしのロボットアニメソングを歌いまくります🐼💭",
         "channel": "緑仙 / Ryushen",
@@ -794,6 +849,22 @@
                 ]
             }
         ]
+    },
+    {
+        "youtubeId": "-hqbTT_4qOY",
+        "title": "【踊ってみた】緑仙先輩と 罪と罰と雨とキス 踊ってみた🐼❤️‍🔥｜緑仙/レイン・パターソン",
+        "channel": "レイン・パターソン／Lain Paterson【にじさんじ】",
+        "date": "2026-09-08",
+        "thumbnail": "https://i.ytimg.com/vi/-hqbTT_4qOY/mqdefault.jpg",
+        "category": [
+            "踊り動画"
+        ],
+        "keywords": [
+            "レイン・パターソン",
+            "踊り動画"
+        ],
+        "tags": [],
+        "songs": []
     },
     {
         "youtubeId": "QlaGDL69HjY",
@@ -1230,21 +1301,6 @@
         ]
     },
     {
-        "youtubeId": "sjDMjE_XfVI",
-        "title": "結婚しましょう",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-08-23",
-        "thumbnail": "https://i.ytimg.com/vi/sjDMjE_XfVI/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "歌動画"
-        ],
-        "tags": [],
-        "songs": []
-    },
-    {
         "youtubeId": "V1jBiCaK5tg",
         "title": "歌枠 ｜ 女性ボーカルを歌いあげます、朝なのに🐼💭",
         "channel": "緑仙 / Ryushen",
@@ -1371,6 +1427,21 @@
                 ]
             }
         ]
+    },
+    {
+        "youtubeId": "sjDMjE_XfVI",
+        "title": "結婚しましょう",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-08-23",
+        "thumbnail": "https://i.ytimg.com/vi/sjDMjE_XfVI/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
     },
     {
         "youtubeId": "wmz7SN1sFmY",
@@ -1577,6 +1648,142 @@
         ]
     },
     {
+        "youtubeId": "-tplhu_nV6w",
+        "title": "歌枠 ｜ ノンストップでボカロを歌いまくります🎤🐼💭",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-08-17",
+        "thumbnail": "https://i.ytimg.com/vi/-tplhu_nV6w/mqdefault.jpg",
+        "category": [
+            "歌配信"
+        ],
+        "keywords": [
+            "歌配信"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "cIock Iock works'",
+                "artist": "",
+                "start": 477,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "マトリョシカ",
+                "artist": "ハチ",
+                "start": 756,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "トリコシティ",
+                "artist": "",
+                "start": 756,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "パンダヒーロー",
+                "artist": "ハチ",
+                "start": 1009,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ジェンガ",
+                "artist": "ACE COLLECTION",
+                "start": 1220,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "からくりピエロ",
+                "artist": "40mP",
+                "start": 1741,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "シリョクケンサ",
+                "artist": "40mP",
+                "start": 1961,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ドレミファロンド",
+                "artist": "40mP",
+                "start": 2227,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "サリシノハラ",
+                "artist": "りぶ",
+                "start": 2498,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "バレリーコ",
+                "artist": "みきとP",
+                "start": 2707,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "少女レイ",
+                "artist": "みきとP",
+                "start": 2997,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ロキ",
+                "artist": "みきとP",
+                "start": 3325,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ワールドイズマイン",
+                "artist": "ryo (supercell), かぐや(cv.夏吉ゆうこ) & 月見ヤチヨ(cv.早見沙織)",
+                "start": 3619,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "初めての恋が終わる時",
+                "artist": "supercell & 初音ミク",
+                "start": 3848,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ブラック ロックシューター",
+                "artist": "mulmeyun",
+                "start": 4112,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "Wl8q6ezHzX4",
         "title": "歌枠 ｜季節を感じる歌をたくさん歌います、おはよ～🌞🐼💭",
         "channel": "緑仙 / Ryushen",
@@ -1689,142 +1896,6 @@
         ]
     },
     {
-        "youtubeId": "-tplhu_nV6w",
-        "title": "歌枠 ｜ ノンストップでボカロを歌いまくります🎤🐼💭",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-08-17",
-        "thumbnail": "https://i.ytimg.com/vi/-tplhu_nV6w/mqdefault.jpg",
-        "category": [
-            "歌配信"
-        ],
-        "keywords": [
-            "歌配信"
-        ],
-        "tags": [],
-        "songs": [
-            {
-                "title": "cIock Iock works'",
-                "artist": "",
-                "start": 477,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "マトリョシカ",
-                "artist": "ハチ",
-                "start": 756,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "トリコシティ",
-                "artist": "",
-                "start": 756,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "パンダヒーロー",
-                "artist": "ハチ",
-                "start": 1009,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ジェンガ",
-                "artist": "40㍍P",
-                "start": 1220,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "からくりピエロ",
-                "artist": "",
-                "start": 1741,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "シリョクケンサ",
-                "artist": "40㍍P",
-                "start": 1961,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ドレミファロンド",
-                "artist": "40㍍P",
-                "start": 2227,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "サリシノハラ",
-                "artist": "みきとP",
-                "start": 2498,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "バレリーコ",
-                "artist": "みきとP",
-                "start": 2707,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "少女レイ",
-                "artist": "みきとP",
-                "start": 2997,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ロキ",
-                "artist": "みきとP",
-                "start": 3325,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ワールドイズマイン",
-                "artist": "",
-                "start": 3619,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "初めての恋が終わる時",
-                "artist": "supercell & 初音ミク",
-                "start": 3848,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ブラック ロックシューター",
-                "artist": "",
-                "start": 4112,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
         "youtubeId": "U2uVhaLjlTk",
         "title": "うー",
         "channel": "緑仙 / Ryushen",
@@ -1837,7 +1908,16 @@
             "踊り動画"
         ],
         "tags": [],
-        "songs": []
+        "songs": [
+            {
+                "title": "熱帯夜",
+                "artist": "RIP SLYME",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
     },
     {
         "youtubeId": "siHt_6FEAT4",
@@ -2063,34 +2143,6 @@
         ]
     },
     {
-        "youtubeId": "DOGAwEmMSXU",
-        "title": "私なんて、イイんじゃない？ #girlfriend  #avrillavigne",
-        "channel": "七次元生徒会",
-        "date": "2026-08-08",
-        "thumbnail": "https://i.ytimg.com/vi/DOGAwEmMSXU/mqdefault.jpg",
-        "category": [
-            "踊り動画"
-        ],
-        "keywords": [
-            "レオス・ヴィンセント",
-            "七次元生徒会",
-            "三枝明那",
-            "叶",
-            "周央サンゴ",
-            "樋口楓"
-        ],
-        "songs": [
-            {
-                "title": "Girlfriend",
-                "artist": "Avril Lavigne",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
         "youtubeId": "qWf1qcm23d4",
         "title": "駄菓子屋商売 / 緑仙 Cover",
         "channel": "緑仙 / Ryushen",
@@ -2115,11 +2167,11 @@
         ]
     },
     {
-        "youtubeId": "VG3JoVorfDY",
-        "title": "道を譲りすぎて新宝島になってる人を発見",
+        "youtubeId": "DOGAwEmMSXU",
+        "title": "私なんて、イイんじゃない？ #girlfriend  #avrillavigne",
         "channel": "七次元生徒会",
-        "date": "2026-08-03",
-        "thumbnail": "https://i.ytimg.com/vi/VG3JoVorfDY/mqdefault.jpg",
+        "date": "2026-08-08",
+        "thumbnail": "https://i.ytimg.com/vi/DOGAwEmMSXU/mqdefault.jpg",
         "category": [
             "踊り動画"
         ],
@@ -2133,8 +2185,8 @@
         ],
         "songs": [
             {
-                "title": "新宝島",
-                "artist": "サカナクション",
+                "title": "Girlfriend",
+                "artist": "Avril Lavigne",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -2232,6 +2284,34 @@
                 "title": "変わらないもの",
                 "artist": "奥華子",
                 "start": 3408,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "VG3JoVorfDY",
+        "title": "道を譲りすぎて新宝島になってる人を発見",
+        "channel": "七次元生徒会",
+        "date": "2026-08-03",
+        "thumbnail": "https://i.ytimg.com/vi/VG3JoVorfDY/mqdefault.jpg",
+        "category": [
+            "踊り動画"
+        ],
+        "keywords": [
+            "レオス・ヴィンセント",
+            "七次元生徒会",
+            "三枝明那",
+            "叶",
+            "周央サンゴ",
+            "樋口楓"
+        ],
+        "songs": [
+            {
+                "title": "新宝島",
+                "artist": "サカナクション",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -3052,8 +3132,8 @@
         "tags": [],
         "songs": [
             {
-                "title": "blue water",
-                "artist": "morikawa miho",
+                "title": "ブルーウォーター",
+                "artist": "森川美穂",
                 "start": 177,
                 "tags": [
                     "カバー"
@@ -3068,7 +3148,7 @@
                 ]
             },
             {
-                "title": "HEART no keijou",
+                "title": "HEARTの形状",
                 "artist": "B∀G",
                 "start": 756,
                 "tags": [
@@ -3084,169 +3164,73 @@
                 ]
             },
             {
-                "title": "rondo - revolution",
-                "artist": "okui masami",
+                "title": "輪舞-revolution",
+                "artist": "奥井雅美",
                 "start": 1324,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "egao ni aitai",
-                "artist": "hamada rie",
+                "title": "笑顔に会いたい",
+                "artist": "濱田理恵",
                 "start": 1606,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "tokimeki no doukasen",
-                "artist": "konno yukari",
+                "title": "ときめきの導火線",
+                "artist": "今野友加里",
                 "start": 1851,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "nagareboshi e",
-                "artist": "three lights",
+                "title": "流れ星へ",
+                "artist": "スリーライツ",
                 "start": 2117,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "todokanu omoi my friend's love",
-                "artist": "three lights",
+                "title": "とどかぬ想い -my friend's love-",
+                "artist": "スリーライツ",
                 "start": 2416,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ruuju ni naritai",
-                "artist": "kajiya yoshi",
+                "title": "ルージュになりたい",
+                "artist": "梶谷美由紀",
                 "start": 2663,
                 "tags": [
                     "カバー"
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "youtubeId": "SuS23yoRKJY",
+        "title": "もう恋なんてしない / 緑仙 Cover",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-06-28",
+        "thumbnail": "https://i.ytimg.com/vi/SuS23yoRKJY/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "songs": [
             {
-                "title": "chikamichi shitai",
-                "artist": "suka kyouko",
-                "start": 2917,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "kagayaki wa kimi no naka ni",
-                "artist": "suzuki yume",
-                "start": 3204,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Forever",
-                "artist": "1999 shoujotai",
-                "start": 3483,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "datte, daisuki!",
-                "artist": "COMA",
-                "start": 3724,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "WILL",
-                "artist": "yonekura chihiro",
-                "start": 4280,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Wild Flowers",
-                "artist": "RAMAR",
-                "start": 4552,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "dare mo shiranai chizu de",
-                "artist": "matsuzawa yumi",
-                "start": 4834,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "dis -",
-                "artist": "arisaka mika",
-                "start": 5134,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "shinryaku - the Chariots VII -",
-                "artist": "OZWORLD",
-                "start": 5263,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Silent Wind",
-                "artist": "sugai eri",
-                "start": 5568,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "DOUBLE WIND",
-                "artist": "komukai minako",
-                "start": 5801,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "que sera sera",
-                "artist": "koshimizu ami",
-                "start": 6039,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "yakusoku no basho e",
-                "artist": "yonekura chihiro",
-                "start": 6252,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "STILL TIME",
-                "artist": "tokuyama hidenori",
-                "start": 6589,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "FOR REAL",
-                "artist": "tokuyama hidenori",
-                "start": 6795,
+                "title": "もう恋なんてしない",
+                "artist": "槇原敬之",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -3276,30 +3260,6 @@
             {
                 "title": "キュートなキューたい",
                 "artist": "CUTIE STREET",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "SuS23yoRKJY",
-        "title": "もう恋なんてしない / 緑仙 Cover",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-06-28",
-        "thumbnail": "https://i.ytimg.com/vi/SuS23yoRKJY/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "カバー曲",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "もう恋なんてしない",
-                "artist": "槇原敬之",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -3369,21 +3329,6 @@
         ]
     },
     {
-        "youtubeId": "8kFx1TyN3t0",
-        "title": "女の子？",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-06-26",
-        "thumbnail": "https://i.ytimg.com/vi/8kFx1TyN3t0/mqdefault.jpg",
-        "category": [
-            "踊り動画"
-        ],
-        "keywords": [
-            "踊り動画"
-        ],
-        "tags": [],
-        "songs": []
-    },
-    {
         "youtubeId": "xl2Aq-E4kN8",
         "title": "【Music Video】機械仕掛けのワルツ / 緑仙",
         "channel": "緑仙 / Ryushen",
@@ -3407,6 +3352,30 @@
                 "start": 0,
                 "tags": [
                     "オリジナル"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "8kFx1TyN3t0",
+        "title": "女の子？",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-06-26",
+        "thumbnail": "https://i.ytimg.com/vi/8kFx1TyN3t0/mqdefault.jpg",
+        "category": [
+            "踊り動画"
+        ],
+        "keywords": [
+            "踊り動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "さよならいちごちゃん",
+                "artist": "Serani Poji",
+                "start": 0,
+                "tags": [
+                    "カバー"
                 ]
             }
         ]
@@ -3759,6 +3728,21 @@
         ]
     },
     {
+        "youtubeId": "JX8t2g3EBbM",
+        "title": "緑仙が「爆裂愛してる」を歌うと…？ #shorts #vtuber #歌ってみた #M!LK",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-06-09",
+        "thumbnail": "https://i.ytimg.com/vi/JX8t2g3EBbM/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
+    },
+    {
         "youtubeId": "1Du7Oc7StD0",
         "title": "歌枠 ｜8周年‼大好きなボカロを歌っていきますよ🐼💭",
         "channel": "緑仙 / Ryushen",
@@ -4055,7 +4039,7 @@
         "songs": [
             {
                 "title": "竹下物語",
-                "artist": "竹下☆ぱらだいす",
+                "artist": "",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -4090,8 +4074,8 @@
                 "artist": "にじさんじ",
                 "start": 1113,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -4115,8 +4099,8 @@
                 "artist": "周央サンゴ×にじさんじ",
                 "start": 3820,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -5347,7 +5331,16 @@
             "踊り動画"
         ],
         "tags": [],
-        "songs": []
+        "songs": [
+            {
+                "title": "ほんまやで☆なんでやねん☆しらんけど",
+                "artist": "モナキ",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
     },
     {
         "youtubeId": "qrPKacLcqhM",
@@ -5359,6 +5352,7 @@
             "歌動画"
         ],
         "keywords": [
+            "カバー曲",
             "歌動画"
         ],
         "tags": [],
@@ -5372,21 +5366,6 @@
                 ]
             }
         ]
-    },
-    {
-        "youtubeId": "LIpM5EpQxQ8",
-        "title": "がんばれ〜👍",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-04-16",
-        "thumbnail": "https://i.ytimg.com/vi/LIpM5EpQxQ8/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "歌動画"
-        ],
-        "tags": [],
-        "songs": []
     },
     {
         "youtubeId": "_alEzJhQsSg",
@@ -5411,191 +5390,199 @@
         "tags": [],
         "songs": [
             {
-                "title": "覚悟を決めろ！/サバシスター",
-                "artist": "",
-                "start": 144,
+                "title": "覚悟を決めろ！",
+                "artist": "サバシスター （🍕🎢）",
+                "start": 142,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "平成ペイン/go!go!vanillas",
-                "artist": "",
-                "start": 411,
+                "title": "平成ペイン",
+                "artist": "Go!go!vanillas",
+                "start": 410,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "キルミー/SUNNY CAR WASH",
-                "artist": "",
-                "start": 663,
+                "title": "キルミー",
+                "artist": "SUNNY CAR WASH",
+                "start": 662,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "きっとね！/中村佳穂",
-                "artist": "",
+                "title": "きっとね！",
+                "artist": "中村佳穂",
                 "start": 832,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "鏡に恋して/礼賛",
-                "artist": "",
+                "title": "鏡に恋して",
+                "artist": "礼賛",
                 "start": 1096,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "栞/クリープハイプ",
-                "artist": "",
-                "start": 1330,
+                "title": "栞",
+                "artist": "クリープハイプ",
+                "start": 1329,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "サラダボウル/Aooo",
-                "artist": "",
+                "title": "サラダボウル",
+                "artist": "Aooo",
                 "start": 1608,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Crazy Dancer/夜の本気ダンス",
-                "artist": "",
-                "start": 1834,
+                "title": "Crazy Dancer",
+                "artist": "夜の本気ダンス",
+                "start": 1833,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "太陽が欲しいだけ/9mm Parabellum Bullet",
-                "artist": "",
+                "title": "太陽が欲しいだけ",
+                "artist": "9mm Parabellum Bullet",
                 "start": 2036,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ジターバグ/ELLEGARDEN",
-                "artist": "",
-                "start": 2302,
+                "title": "ジターバグ",
+                "artist": "ELLEGARDEN",
+                "start": 2360,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "fiction escape/KEYTALK",
-                "artist": "",
+                "title": "fiction escape",
+                "artist": "KEYTALK",
                 "start": 2620,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "えらばれし子供たちの密話/吉澤嘉代子",
-                "artist": "",
-                "start": 2785,
+                "title": "えらばれし子供たちの密話",
+                "artist": "吉澤嘉代子",
+                "start": 2779,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ロマンチックに恋して/SHISHAMO",
-                "artist": "",
-                "start": 2984,
+                "title": "ロマンチックに恋して",
+                "artist": "SHISHAMO",
+                "start": 2983,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "DAY DREAM BEAT/ハンブレッダーズ",
-                "artist": "",
-                "start": 3199,
+                "title": "DAY DREAM BEAT",
+                "artist": "ハンブレッダーズ",
+                "start": 3198,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "青春日記/リュックと添い寝ごはん",
-                "artist": "",
+                "title": "青春日記",
+                "artist": "リュックと添い寝ごはん",
                 "start": 3453,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "シャングリラ/チャットモンチー",
-                "artist": "",
-                "start": 3675,
+                "title": "シャングリラ",
+                "artist": "チャットモンチー",
+                "start": 3674,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "STARSHIP/SIX LOUNGE",
-                "artist": "",
-                "start": 3882,
+                "title": "STARSHIP",
+                "artist": "SIX LOUNGE",
+                "start": 3880,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "LOVE GOOD TIME/SpecialThanks",
-                "artist": "",
-                "start": 4124,
+                "title": "LOVE GOOD TIME",
+                "artist": "SpecialThanks",
+                "start": 4123,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "内緒/UNFAIR RULE",
-                "artist": "",
-                "start": 4297,
+                "title": "内緒",
+                "artist": "UNFAIR RULE",
+                "start": 4296,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Banquet/Chevon",
-                "artist": "",
-                "start": 4535,
+                "title": "Banquet",
+                "artist": "Chevon",
+                "start": 4534,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ダンス・デカダンス/Chevon",
-                "artist": "",
+                "title": "ダンス・デカダンス",
+                "artist": "Chevon",
                 "start": 4783,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "手紙/フジファブリック",
-                "artist": "",
+                "title": "手紙",
+                "artist": "フジファブリック",
                 "start": 4997,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "銀河/フジファブリック",
-                "artist": "",
+                "title": "銀河",
+                "artist": "フジファブリック",
                 "start": 5372,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "悲しくなる前に/indigo la End",
+                "title": "悲しくなる前に",
+                "artist": "indigo la End",
+                "start": 5689,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "🫖🌿",
                 "artist": "",
                 "start": 5689,
                 "tags": [
@@ -5603,31 +5590,63 @@
                 ]
             },
             {
-                "title": "サービスエリア/吉澤嘉代子",
-                "artist": "",
-                "start": 5923,
+                "title": "サービスエリア",
+                "artist": "吉澤嘉代子",
+                "start": 5922,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "エイミー/THE ORAL CIGARETTES",
+                "title": "🎴",
                 "artist": "",
-                "start": 6167,
+                "start": 5922,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "卒業/My Hair is Bad",
-                "artist": "",
-                "start": 6477,
+                "title": "エイミー",
+                "artist": "THE ORAL CIGARETTES",
+                "start": 6166,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "俺よ届け/忘れらんねえよ",
+                "title": "💡",
+                "artist": "",
+                "start": 6166,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "卒業",
+                "artist": "My Hair is Bad",
+                "start": 6476,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "🥨🍚",
+                "artist": "",
+                "start": 6476,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "俺よ届け",
+                "artist": "忘れらんねえよ",
+                "start": 6814,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "緑さんお誕生日おめでとう～！素敵な歌枠感謝！🎶",
                 "artist": "",
                 "start": 6814,
                 "tags": [
@@ -5635,17 +5654,49 @@
                 ]
             },
             {
-                "title": "拝啓、少年よ/Hump Back",
-                "artist": "",
-                "start": 7039,
+                "title": "拝啓、少年よ",
+                "artist": "Hump Back",
+                "start": 7036,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "世界はそれを愛と呼ぶんだぜ/サンボマスター",
+                "title": "⚗",
                 "artist": "",
+                "start": 7036,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "世界はそれを愛と呼ぶんだぜ",
+                "artist": "サンボマスター",
                 "start": 7243,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "LIpM5EpQxQ8",
+        "title": "がんばれ〜👍",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-04-16",
+        "thumbnail": "https://i.ytimg.com/vi/LIpM5EpQxQ8/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "頑張りたいソング【轟はじめ/ReGLOSS】",
+                "artist": "@odamayonaise",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -5808,7 +5859,16 @@
             "踊り動画"
         ],
         "tags": [],
-        "songs": []
+        "songs": [
+            {
+                "title": "最初はキュン！",
+                "artist": "Kento Nakajima",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
     },
     {
         "youtubeId": "-MP8nGnrbOU",
@@ -5871,36 +5931,6 @@
         ]
     },
     {
-        "youtubeId": "-hitPisu8u8",
-        "title": "｢しあわせクッキー｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-04-08",
-        "thumbnail": "https://i.ytimg.com/vi/-hitPisu8u8/mqdefault.jpg",
-        "category": [
-            "公式切り抜き",
-            "歌動画"
-        ],
-        "keywords": [
-            "オリジナル曲",
-            "ライブ・イベント",
-            "緑仙2nd 緑一色"
-        ],
-        "tags": [
-            "歌",
-            "オリジナル"
-        ],
-        "songs": [
-            {
-                "title": "しあわせクッキー",
-                "artist": "緑仙",
-                "start": 0,
-                "tags": [
-                    "オリジナル"
-                ]
-            }
-        ]
-    },
-    {
         "youtubeId": "T-5MWU2afgs",
         "title": "#コンパスは透明 ノンクレジットオープニング公開中！",
         "channel": "緑仙 / Ryushen",
@@ -5922,6 +5952,36 @@
         "songs": [
             {
                 "title": "コンパスは透明",
+                "artist": "緑仙",
+                "start": 0,
+                "tags": [
+                    "オリジナル"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "-hitPisu8u8",
+        "title": "｢しあわせクッキー｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-04-08",
+        "thumbnail": "https://i.ytimg.com/vi/-hitPisu8u8/mqdefault.jpg",
+        "category": [
+            "公式切り抜き",
+            "歌動画"
+        ],
+        "keywords": [
+            "オリジナル曲",
+            "ライブ・イベント",
+            "緑仙2nd 緑一色"
+        ],
+        "tags": [
+            "歌",
+            "オリジナル"
+        ],
+        "songs": [
+            {
+                "title": "しあわせクッキー",
                 "artist": "緑仙",
                 "start": 0,
                 "tags": [
@@ -6052,7 +6112,7 @@
             },
             {
                 "title": "〜",
-                "artist": "ptf boi",
+                "artist": "",
                 "start": 1380,
                 "tags": [
                     "カバー"
@@ -6060,7 +6120,7 @@
             },
             {
                 "title": "〜",
-                "artist": "ptf boi",
+                "artist": "",
                 "start": 1520,
                 "tags": [
                     "カバー"
@@ -6068,7 +6128,7 @@
             },
             {
                 "title": "〜",
-                "artist": "ptf boi",
+                "artist": "",
                 "start": 1525,
                 "tags": [
                     "カバー"
@@ -6076,7 +6136,7 @@
             },
             {
                 "title": "〜",
-                "artist": "ptf boi",
+                "artist": "",
                 "start": 1540,
                 "tags": [
                     "カバー"
@@ -6092,7 +6152,7 @@
             },
             {
                 "title": "〜",
-                "artist": "ptf boi",
+                "artist": "",
                 "start": 1555,
                 "tags": [
                     "カバー"
@@ -6100,10 +6160,39 @@
             },
             {
                 "title": "〜",
-                "artist": "ptf boi",
+                "artist": "",
                 "start": 1560,
                 "tags": [
                     "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "I19AsJwfjV0",
+        "title": "【緑仙】「コンパスは透明」Official Audio（TVアニメ『最強の職業は勇者でも賢者でもなく鑑定士（仮）らしいですよ？』番組オープニング・テーマ）",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-04-03",
+        "thumbnail": "https://i.ytimg.com/vi/I19AsJwfjV0/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "オリジナル曲",
+            "ライブ・イベント",
+            "緑仙2nd 緑一色"
+        ],
+        "tags": [
+            "歌",
+            "オリジナル"
+        ],
+        "songs": [
+            {
+                "title": "コンパスは透明",
+                "artist": "緑仙",
+                "start": 0,
+                "tags": [
+                    "オリジナル"
                 ]
             }
         ]
@@ -6130,35 +6219,6 @@
         "songs": [
             {
                 "title": "天誅",
-                "artist": "緑仙",
-                "start": 0,
-                "tags": [
-                    "オリジナル"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "I19AsJwfjV0",
-        "title": "【緑仙】「コンパスは透明」Official Audio（TVアニメ『最強の職業は勇者でも賢者でもなく鑑定士（仮）らしいですよ？』番組オープニング・テーマ）",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-04-03",
-        "thumbnail": "https://i.ytimg.com/vi/I19AsJwfjV0/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "オリジナル曲",
-            "ライブ・イベント",
-            "緑仙2nd 緑一色"
-        ],
-        "tags": [
-            "歌",
-            "オリジナル"
-        ],
-        "songs": [
-            {
-                "title": "コンパスは透明",
                 "artist": "緑仙",
                 "start": 0,
                 "tags": [
@@ -6464,21 +6524,6 @@
         ]
     },
     {
-        "youtubeId": "2jhxM5o2T6s",
-        "title": "｢おしゃかしゃま｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-03-31",
-        "thumbnail": "https://i.ytimg.com/vi/2jhxM5o2T6s/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "歌動画"
-        ],
-        "tags": [],
-        "songs": []
-    },
-    {
         "youtubeId": "nXbk5nMXdgg",
         "title": "こじらせハラスメント「インターネットは最悪2026」こじらせハラスメント",
         "channel": "緑仙 / Ryushen",
@@ -6506,47 +6551,6 @@
                 "tags": [
                     "こじらせハラスメント",
                     "オリジナル"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "HA8SoUC4opE",
-        "title": "#こじハラアイドルプロデュース『1←st→age』クロスフェード",
-        "channel": "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
-        "date": "2026-03-31",
-        "thumbnail": "https://i.ytimg.com/vi/HA8SoUC4opE/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "こじらせハラスメント",
-            "ウィシェン",
-            "レヴィ・エリファ",
-            "七瀬すず菜",
-            "健屋花那",
-            "夕陽リリ",
-            "天宮こころ",
-            "小清水透",
-            "弦月藤士郎",
-            "戌亥とこ",
-            "早乙女ベリー",
-            "森中花咲",
-            "歌動画",
-            "珠乃井ナナ",
-            "相羽ういは",
-            "石神のぞみ",
-            "綺沙良",
-            "葉加瀬冬雪"
-        ],
-        "tags": [],
-        "songs": [
-            {
-                "title": "#こじハラアイドルプロデュース『1←st→age』クロスフェード",
-                "artist": "",
-                "start": 0,
-                "tags": [
-                    "カバー"
                 ]
             }
         ]
@@ -6652,6 +6656,62 @@
         ]
     },
     {
+        "youtubeId": "2jhxM5o2T6s",
+        "title": "｢おしゃかしゃま｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-03-31",
+        "thumbnail": "https://i.ytimg.com/vi/2jhxM5o2T6s/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
+    },
+    {
+        "youtubeId": "HA8SoUC4opE",
+        "title": "#こじハラアイドルプロデュース『1←st→age』クロスフェード",
+        "channel": "弦月 藤士郎 / Genzuki Tojiro【にじさんじ】",
+        "date": "2026-03-31",
+        "thumbnail": "https://i.ytimg.com/vi/HA8SoUC4opE/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "こじらせハラスメント",
+            "ウィシェン",
+            "レヴィ・エリファ",
+            "七瀬すず菜",
+            "健屋花那",
+            "夕陽リリ",
+            "天宮こころ",
+            "小清水透",
+            "弦月藤士郎",
+            "戌亥とこ",
+            "早乙女ベリー",
+            "森中花咲",
+            "歌動画",
+            "珠乃井ナナ",
+            "相羽ういは",
+            "石神のぞみ",
+            "綺沙良",
+            "葉加瀬冬雪"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "#こじハラアイドルプロデュース『1←st→age』クロスフェード",
+                "artist": "",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "fdDZ5jbBGgU",
         "title": "｢独善食｣ 2nd LIVE TOUR「緑一色」 #緑仙 #live #Vtuber",
         "channel": "緑仙 / Ryushen",
@@ -6665,35 +6725,6 @@
         ],
         "tags": [],
         "songs": []
-    },
-    {
-        "youtubeId": "B1mE-liok6w",
-        "title": "【FULL】アノニマスファンフアレ/ツミキ 【Covered by 緑仙 × 七海うらら】",
-        "channel": "七海うらら*歌channel",
-        "date": "2026-03-27",
-        "thumbnail": "https://i.ytimg.com/vi/B1mE-liok6w/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "カバー曲",
-            "七海うらら",
-            "歌動画"
-        ],
-        "tags": [
-            "歌",
-            "カバー"
-        ],
-        "songs": [
-            {
-                "title": "アノニマスファンフアレ",
-                "artist": "ツミキ",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
     },
     {
         "youtubeId": "lz9eqnFQP-I",
@@ -6726,17 +6757,17 @@
         ]
     },
     {
-        "youtubeId": "kdt77GIxwnY",
-        "title": "【オリジナルMV】「好きだから。／ユイカ」【神楽めあ/緑仙】",
-        "channel": "神楽めあ / KaguraMea",
-        "date": "2026-03-26",
-        "thumbnail": "https://i.ytimg.com/vi/kdt77GIxwnY/mqdefault.jpg",
+        "youtubeId": "B1mE-liok6w",
+        "title": "【FULL】アノニマスファンフアレ/ツミキ 【Covered by 緑仙 × 七海うらら】",
+        "channel": "七海うらら*歌channel",
+        "date": "2026-03-27",
+        "thumbnail": "https://i.ytimg.com/vi/B1mE-liok6w/mqdefault.jpg",
         "category": [
             "歌動画"
         ],
         "keywords": [
             "カバー曲",
-            "神楽めあ",
+            "七海うらら",
             "歌動画"
         ],
         "tags": [
@@ -6745,8 +6776,8 @@
         ],
         "songs": [
             {
-                "title": "好きだから。",
-                "artist": "ユイカ",
+                "title": "アノニマスファンフアレ",
+                "artist": "ツミキ",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -6780,6 +6811,35 @@
                 "start": 0,
                 "tags": [
                     "オリジナル"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "kdt77GIxwnY",
+        "title": "【オリジナルMV】「好きだから。／ユイカ」【神楽めあ/緑仙】",
+        "channel": "神楽めあ / KaguraMea",
+        "date": "2026-03-26",
+        "thumbnail": "https://i.ytimg.com/vi/kdt77GIxwnY/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "神楽めあ",
+            "歌動画"
+        ],
+        "tags": [
+            "歌",
+            "カバー"
+        ],
+        "songs": [
+            {
+                "title": "好きだから。",
+                "artist": "ユイカ",
+                "start": 0,
+                "tags": [
+                    "カバー"
                 ]
             }
         ]
@@ -7092,6 +7152,30 @@
         ]
     },
     {
+        "youtubeId": "o0CVVvG_t5g",
+        "title": "プロポーズ / 緑仙 Cover",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-03-01",
+        "thumbnail": "https://i.ytimg.com/vi/o0CVVvG_t5g/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "songs": [
+            {
+                "title": "プロポーズ",
+                "artist": "なとり",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "w20kHGfdHPI",
         "title": "足は上がる",
         "channel": "緑仙 / Ryushen",
@@ -7112,30 +7196,6 @@
             {
                 "title": "盛れミ・アモーレ",
                 "artist": "Juice=Juice",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "o0CVVvG_t5g",
-        "title": "プロポーズ / 緑仙 Cover",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-03-01",
-        "thumbnail": "https://i.ytimg.com/vi/o0CVVvG_t5g/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "カバー曲",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "プロポーズ",
-                "artist": "なとり",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -7294,7 +7354,16 @@
             "踊り動画"
         ],
         "tags": [],
-        "songs": []
+        "songs": [
+            {
+                "title": "効果",
+                "artist": "3982万 本のショート動画",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
     },
     {
         "youtubeId": "Vv_JyUD9qqM",
@@ -7317,6 +7386,34 @@
             {
                 "title": "チャイナアドバイス",
                 "artist": "相対性理論",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "33aqxAFaBwg",
+        "title": "最近可愛いって言われるのが増えた🤔",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-02-22",
+        "thumbnail": "https://i.ytimg.com/vi/33aqxAFaBwg/mqdefault.jpg",
+        "category": [
+            "公式切り抜き",
+            "踊り動画"
+        ],
+        "tags": [
+            "踊",
+            "カバー"
+        ],
+        "keywords": [
+            "踊り動画"
+        ],
+        "songs": [
+            {
+                "title": "バチモリーナ",
+                "artist": "iON!",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -7352,34 +7449,6 @@
                 "tags": [
                     "こじらせハラスメント",
                     "オリジナル"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "33aqxAFaBwg",
-        "title": "最近可愛いって言われるのが増えた🤔",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-02-22",
-        "thumbnail": "https://i.ytimg.com/vi/33aqxAFaBwg/mqdefault.jpg",
-        "category": [
-            "公式切り抜き",
-            "踊り動画"
-        ],
-        "tags": [
-            "踊",
-            "カバー"
-        ],
-        "keywords": [
-            "踊り動画"
-        ],
-        "songs": [
-            {
-                "title": "バチモリーナ",
-                "artist": "iON!",
-                "start": 0,
-                "tags": [
-                    "カバー"
                 ]
             }
         ]
@@ -7805,6 +7874,34 @@
         ]
     },
     {
+        "youtubeId": "fAlY5Phuqe8",
+        "title": "前髪を信じますか？",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-02-09",
+        "thumbnail": "https://i.ytimg.com/vi/fAlY5Phuqe8/mqdefault.jpg",
+        "category": [
+            "公式切り抜き",
+            "踊り動画"
+        ],
+        "keywords": [
+            "踊り動画"
+        ],
+        "tags": [
+            "踊",
+            "カバー"
+        ],
+        "songs": [
+            {
+                "title": "ぷりきゅきゅ",
+                "artist": "CUTIE STREET",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "GQRyeyZ-dv0",
         "title": "ぷりきゅきゅとは",
         "channel": "緑仙 / Ryushen",
@@ -7833,26 +7930,22 @@
         ]
     },
     {
-        "youtubeId": "fAlY5Phuqe8",
-        "title": "前髪を信じますか？",
+        "youtubeId": "jkWTsI1XSIE",
+        "title": "ラブソング / 緑仙 Cover",
         "channel": "緑仙 / Ryushen",
-        "date": "2026-02-09",
-        "thumbnail": "https://i.ytimg.com/vi/fAlY5Phuqe8/mqdefault.jpg",
+        "date": "2026-02-08",
+        "thumbnail": "https://i.ytimg.com/vi/jkWTsI1XSIE/mqdefault.jpg",
         "category": [
-            "公式切り抜き",
-            "踊り動画"
+            "歌動画"
         ],
         "keywords": [
-            "踊り動画"
-        ],
-        "tags": [
-            "踊",
-            "カバー"
+            "カバー曲",
+            "歌動画"
         ],
         "songs": [
             {
-                "title": "ぷりきゅきゅ",
-                "artist": "CUTIE STREET",
+                "title": "ラブソング",
+                "artist": "マルシィ",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -7889,30 +7982,6 @@
         ]
     },
     {
-        "youtubeId": "jkWTsI1XSIE",
-        "title": "ラブソング / 緑仙 Cover",
-        "channel": "緑仙 / Ryushen",
-        "date": "2026-02-08",
-        "thumbnail": "https://i.ytimg.com/vi/jkWTsI1XSIE/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "カバー曲",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "ラブソング",
-                "artist": "マルシィ",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
         "youtubeId": "0zXZmhBR8ik",
         "title": "【Live映像】Budding! / にじさんじ #SitR名古屋【Blu-ray 5/6発売！】",
         "channel": "にじさんじ",
@@ -7936,8 +8005,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -7969,8 +8038,8 @@
                 "artist": "にじさんじ",
                 "start": 386,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -7978,8 +8047,8 @@
                 "artist": "にじさんじ",
                 "start": 119,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -8051,8 +8120,8 @@
                 "artist": "にじさんじ",
                 "start": 6617,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -8073,7 +8142,7 @@
         "songs": [
             {
                 "title": "Tuning",
-                "artist": "Midnight Grand Orchestra",
+                "artist": "리아:p",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -8100,6 +8169,57 @@
                 "start": 8620,
                 "tags": [
                     "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "FQkK0ZT0PhI",
+        "title": "踊れオーケストラ / 緑仙×健屋花那 Cover",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-01-31",
+        "thumbnail": "https://i.ytimg.com/vi/FQkK0ZT0PhI/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "踊れオーケストラ",
+                "artist": "緑仙×健屋花那",
+                "start": 0,
+                "tags": [
+                    "オリジナル"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "kWZNlWEstkw",
+        "title": "盛れ！ミ・アモーレ / 緑仙 Cover",
+        "channel": "緑仙 / Ryushen",
+        "date": "2026-01-29",
+        "thumbnail": "https://i.ytimg.com/vi/kWZNlWEstkw/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画",
+            "社築"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "盛れ！ミ・アモーレ",
+                "artist": "緑仙",
+                "start": 0,
+                "tags": [
+                    "オリジナル"
                 ]
             }
         ]
@@ -8273,36 +8393,6 @@
         ]
     },
     {
-        "youtubeId": "DRAgjffK6Ig",
-        "title": "おやすみTaxi / 叶×三枝明那",
-        "channel": "七次元生徒会",
-        "date": "2026-01-21",
-        "thumbnail": "https://i.ytimg.com/vi/DRAgjffK6Ig/mqdefault.jpg",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "レオス・ヴィンセント",
-            "七次元生徒会",
-            "三枝明那",
-            "叶",
-            "周央サンゴ",
-            "樋口楓",
-            "歌動画"
-        ],
-        "tags": [],
-        "songs": [
-            {
-                "title": "おやすみTaxi",
-                "artist": "叶×三枝明那",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
         "youtubeId": "Z_mDNeaL_n0",
         "title": "歌枠 ｜新しいアニソンを歌うよ、みんなの好きな曲を教えて～🎤",
         "channel": "緑仙",
@@ -8440,6 +8530,36 @@
                 "start": 3865,
                 "tags": [
                     "オリジナル"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "DRAgjffK6Ig",
+        "title": "おやすみTaxi / 叶×三枝明那",
+        "channel": "七次元生徒会",
+        "date": "2026-01-21",
+        "thumbnail": "https://i.ytimg.com/vi/DRAgjffK6Ig/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "レオス・ヴィンセント",
+            "七次元生徒会",
+            "三枝明那",
+            "叶",
+            "周央サンゴ",
+            "樋口楓",
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "おやすみTaxi",
+                "artist": "叶×三枝明那",
+                "start": 0,
+                "tags": [
+                    "カバー"
                 ]
             }
         ]
@@ -9267,6 +9387,21 @@
         ]
     },
     {
+        "youtubeId": "L4agXl1rdnE",
+        "title": "#緑仙 × #ヒトリエ コラボ楽曲「sleep sheep syndrome (feat. ヒトリエ)」リリックビデオ公開中③",
+        "channel": "緑仙 / Ryushen",
+        "date": "2025-12-17",
+        "thumbnail": "https://i.ytimg.com/vi/L4agXl1rdnE/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
+    },
+    {
         "youtubeId": "wJ4tKXo0hvE",
         "title": "なんでもないよ、 / 緑仙 Cover",
         "channel": "緑仙",
@@ -9498,6 +9633,21 @@
                 ]
             }
         ]
+    },
+    {
+        "youtubeId": "wh109WtkAmM",
+        "title": "#緑仙 × #ヒトリエ コラボ楽曲「sleep sheep syndrome (feat. ヒトリエ)」リリックビデオ公開中②",
+        "channel": "緑仙 / Ryushen",
+        "date": "2025-12-10",
+        "thumbnail": "https://i.ytimg.com/vi/wh109WtkAmM/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
     },
     {
         "youtubeId": "OmxGWb-uU3E",
@@ -9758,6 +9908,21 @@
         ]
     },
     {
+        "youtubeId": "g2kMJWJEbUQ",
+        "title": "#緑仙 × #ヒトリエ コラボ楽曲「sleep sheep syndrome (feat. ヒトリエ)」リリックビデオ公開中①",
+        "channel": "緑仙 / Ryushen",
+        "date": "2025-12-03",
+        "thumbnail": "https://i.ytimg.com/vi/g2kMJWJEbUQ/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
+    },
+    {
         "youtubeId": "DLtixgc426U",
         "title": "【MV】sleep sheep syndrome (feat.ヒトリエ) / 緑仙",
         "channel": "緑仙",
@@ -9978,6 +10143,21 @@
                 ]
             }
         ]
+    },
+    {
+        "youtubeId": "LNamZw5s9GA",
+        "title": "新曲「sleep sheep syndrome (feat. ヒトリエ)」#緑仙 × #ヒトリエ のコラボレーション楽曲公開が決定！",
+        "channel": "緑仙 / Ryushen",
+        "date": "2025-12-01",
+        "thumbnail": "https://i.ytimg.com/vi/LNamZw5s9GA/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
     },
     {
         "youtubeId": "jnW7EEJGT_g",
@@ -10299,6 +10479,29 @@
         ]
     },
     {
+        "youtubeId": "XG3Er7xAukY",
+        "title": "愛してみてよ減るもんじゃないし / 緑仙 Cover",
+        "channel": "緑仙",
+        "date": "2025-11-17",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "songs": [
+            {
+                "title": "愛してみてよ減るもんじゃないし",
+                "artist": "ねぐせ。",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "NAnNRnrq3zo",
         "title": "Silhouette",
         "channel": "Rain Drops - Topic",
@@ -10324,29 +10527,6 @@
             {
                 "title": "Silhouette",
                 "artist": "イカ娘ハンター",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "XG3Er7xAukY",
-        "title": "愛してみてよ減るもんじゃないし / 緑仙 Cover",
-        "channel": "緑仙",
-        "date": "2025-11-17",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "カバー曲",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "愛してみてよ減るもんじゃないし",
-                "artist": "ねぐせ。",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -10841,38 +11021,6 @@
         ]
     },
     {
-        "youtubeId": "hGja0xUr3Dw",
-        "title": "七次元生徒会、活動開始！ 【#にじフェス2025_前夜祭 Special Edit Ver.】",
-        "channel": "七次元生徒会",
-        "date": "2025-10-22",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "にじフェス",
-            "レオス・ヴィンセント",
-            "七次元生徒会",
-            "三枝明那",
-            "叶",
-            "周央サンゴ",
-            "樋口楓",
-            "ライブイベント",
-            "企画",
-            "公式企画・番組"
-        ],
-        "songs": [
-            {
-                "title": "七次元生徒会、活動開始！",
-                "artist": "七次元生徒会",
-                "start": 0,
-                "tags": [
-                    "七次元生徒会",
-                    "オリジナル"
-                ]
-            }
-        ]
-    },
-    {
         "youtubeId": "jtm-tWvNhM8",
         "title": "歌枠 ｜ ノスタル爺たちのために懐かしいアニソンを歌います🐼💭",
         "channel": "緑仙",
@@ -11111,6 +11259,38 @@
         ]
     },
     {
+        "youtubeId": "hGja0xUr3Dw",
+        "title": "七次元生徒会、活動開始！ 【#にじフェス2025_前夜祭 Special Edit Ver.】",
+        "channel": "七次元生徒会",
+        "date": "2025-10-22",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "にじフェス",
+            "レオス・ヴィンセント",
+            "七次元生徒会",
+            "三枝明那",
+            "叶",
+            "周央サンゴ",
+            "樋口楓",
+            "ライブイベント",
+            "企画",
+            "公式企画・番組"
+        ],
+        "songs": [
+            {
+                "title": "七次元生徒会、活動開始！",
+                "artist": "七次元生徒会",
+                "start": 0,
+                "tags": [
+                    "七次元生徒会",
+                    "オリジナル"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "Ho0OZIvPkGE",
         "title": "あだち充『H2』×緑仙「青春の向こうへ」コラボレーションMV  #青春の向こうへ #緑仙 #H2 #あだち充 #jpop #rereretune #リリリチューン",
         "channel": "Re:Re:Re:TUNE",
@@ -11248,40 +11428,6 @@
         ]
     },
     {
-        "youtubeId": "_tHQQEs7814",
-        "title": "あだち充『H2』×緑仙「青春の向こうへ」コラボレーションMV  #青春の向こうへ #緑仙 #H2 #あだち充 #jpop #rereretune #リリリチューン",
-        "channel": "Re:Re:Re:TUNE",
-        "date": "2025-10-17",
-        "thumbnail": "https://i.ytimg.com/vi/_tHQQEs7814/mqdefault.jpg",
-        "category": [
-            "プロモーション",
-            "歌動画"
-        ],
-        "keywords": [
-            "プロモーション",
-            "歌動画"
-        ],
-        "tags": [],
-        "songs": []
-    },
-    {
-        "youtubeId": "MaEuwTKAz3o",
-        "title": "あだち充『H2』×緑仙「青春の向こうへ」コラボレーションMV  #青春の向こうへ #緑仙 #H2 #あだち充 #jpop #rereretune #リリリチューン",
-        "channel": "Re:Re:Re:TUNE",
-        "date": "2025-10-17",
-        "thumbnail": "https://i.ytimg.com/vi/MaEuwTKAz3o/mqdefault.jpg",
-        "category": [
-            "プロモーション",
-            "歌動画"
-        ],
-        "keywords": [
-            "プロモーション",
-            "歌動画"
-        ],
-        "tags": [],
-        "songs": []
-    },
-    {
         "youtubeId": "17nt7-ZkwZU",
         "title": "#懐カラ王決定戦 ｜ 平成の記憶を掘り起こせ！懐かしい歌を歌ったやつが勝ち！",
         "channel": "緑仙",
@@ -11324,28 +11470,38 @@
         ]
     },
     {
-        "youtubeId": "QPAWJ2FyRRw",
-        "title": "OVERDRIVE",
-        "channel": "TWS - Topic",
-        "date": "2025-10-13",
-        "thumbnail": "https://i.ytimg.com/vi/QPAWJ2FyRRw/mqdefault.jpg",
+        "youtubeId": "_tHQQEs7814",
+        "title": "あだち充『H2』×緑仙「青春の向こうへ」コラボレーションMV  #青春の向こうへ #緑仙 #H2 #あだち充 #jpop #rereretune #リリリチューン",
+        "channel": "Re:Re:Re:TUNE",
+        "date": "2025-10-17",
+        "thumbnail": "https://i.ytimg.com/vi/_tHQQEs7814/mqdefault.jpg",
         "category": [
-            "踊り動画"
+            "プロモーション",
+            "歌動画"
         ],
         "keywords": [
-            "踊り動画"
+            "プロモーション",
+            "歌動画"
         ],
         "tags": [],
-        "songs": [
-            {
-                "title": "OVERDRIVE",
-                "artist": "Coch",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
+        "songs": []
+    },
+    {
+        "youtubeId": "MaEuwTKAz3o",
+        "title": "あだち充『H2』×緑仙「青春の向こうへ」コラボレーションMV  #青春の向こうへ #緑仙 #H2 #あだち充 #jpop #rereretune #リリリチューン",
+        "channel": "Re:Re:Re:TUNE",
+        "date": "2025-10-17",
+        "thumbnail": "https://i.ytimg.com/vi/MaEuwTKAz3o/mqdefault.jpg",
+        "category": [
+            "プロモーション",
+            "歌動画"
+        ],
+        "keywords": [
+            "プロモーション",
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": []
     },
     {
         "youtubeId": "e7eKsq-V6c0",
@@ -11475,6 +11631,30 @@
                 "title": "フォニイ",
                 "artist": "ツミキ",
                 "start": 4294,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "QPAWJ2FyRRw",
+        "title": "OVERDRIVE",
+        "channel": "TWS - Topic",
+        "date": "2025-10-13",
+        "thumbnail": "https://i.ytimg.com/vi/QPAWJ2FyRRw/mqdefault.jpg",
+        "category": [
+            "踊り動画"
+        ],
+        "keywords": [
+            "踊り動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "OVERDRIVE",
+                "artist": "Coch",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -13758,6 +13938,44 @@
         ]
     },
     {
+        "youtubeId": "hWKtgRnWmn4",
+        "title": "笹木監督へ🐼",
+        "channel": "緑仙 / Ryushen",
+        "date": "2025-07-25",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "Millie Parfait",
+            "カバー曲",
+            "ルイス・キャミー",
+            "一橋綾人",
+            "五十嵐梨花",
+            "先斗寧",
+            "夢追翔",
+            "弦月藤士郎",
+            "栞葉るり",
+            "渚トラウト",
+            "石神のぞみ",
+            "笹木咲",
+            "綺沙良",
+            "舞元啓介",
+            "가온（ガオン）",
+            "소나기（ソ・ナギ）",
+            "歌動画"
+        ],
+        "songs": [
+            {
+                "title": "RELAY",
+                "artist": "藤原美慶",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "2PHuxxGkT20",
         "title": "俺たちがどじゃ青年だ。 #にじ甲2025",
         "channel": "緑仙 / Ryushen",
@@ -13793,44 +14011,6 @@
                 "tags": [
                     "ぱんだ立どじゃ高校",
                     "オリジナル"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "hWKtgRnWmn4",
-        "title": "笹木監督へ🐼",
-        "channel": "緑仙 / Ryushen",
-        "date": "2025-07-25",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "Millie Parfait",
-            "カバー曲",
-            "ルイス・キャミー",
-            "一橋綾人",
-            "五十嵐梨花",
-            "先斗寧",
-            "夢追翔",
-            "弦月藤士郎",
-            "栞葉るり",
-            "渚トラウト",
-            "石神のぞみ",
-            "笹木咲",
-            "綺沙良",
-            "舞元啓介",
-            "가온（ガオン）",
-            "소나기（ソ・ナギ）",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "RELAY",
-                "artist": "藤原美慶",
-                "start": 0,
-                "tags": [
-                    "カバー"
                 ]
             }
         ]
@@ -13926,8 +14106,8 @@
                 "artist": "cresc.",
                 "start": 2551,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -15131,8 +15311,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -15563,8 +15743,8 @@
                 "artist": "にじさんじ",
                 "start": 1889,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -15840,8 +16020,8 @@
                 "artist": "にじさんじ",
                 "start": 306,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -15891,8 +16071,8 @@
                 "artist": "cresc.",
                 "start": 1717,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -18286,8 +18466,8 @@
                 "artist": "チームヘラクレス2024",
                 "start": 0,
                 "tags": [
-                    "チームヘラクレス",
-                    "オリジナル"
+                    "オリジナル",
+                    "チームヘラクレス"
                 ]
             }
         ]
@@ -20928,8 +21108,8 @@
                 "artist": "にじさんじ",
                 "start": 1,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -20937,8 +21117,8 @@
                 "artist": "にじさんじ",
                 "start": 72,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -20946,8 +21126,8 @@
                 "artist": "にじさんじ",
                 "start": 105,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -20955,8 +21135,8 @@
                 "artist": "にじさんじ",
                 "start": 155,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -21069,8 +21249,8 @@
                 "artist": "にじさんじ",
                 "start": 12943,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -21078,8 +21258,8 @@
                 "artist": "にじさんじ",
                 "start": 13014,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -21087,8 +21267,8 @@
                 "artist": "にじさんじ",
                 "start": 13047,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -21096,8 +21276,8 @@
                 "artist": "にじさんじ",
                 "start": 13097,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -21322,6 +21502,30 @@
         ]
     },
     {
+        "youtubeId": "ebzZ7Avmjzs",
+        "title": "絶対零度 / 鷹嶺ルイ×緑仙 (cover)",
+        "channel": "緑仙 / Ryushen",
+        "date": "2024-11-27",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画",
+            "鷹嶺ルイ"
+        ],
+        "songs": [
+            {
+                "title": "絶対零度",
+                "artist": "なとり",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "h6xlQw40qQk",
         "title": "【歌枠】おはよう‼朝の歌配信です🐼💭【にじさんじ | 緑仙】",
         "channel": "緑仙",
@@ -21498,30 +21702,6 @@
         ]
     },
     {
-        "youtubeId": "ebzZ7Avmjzs",
-        "title": "絶対零度 / 鷹嶺ルイ×緑仙 (cover)",
-        "channel": "緑仙 / Ryushen",
-        "date": "2024-11-27",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "カバー曲",
-            "歌動画",
-            "鷹嶺ルイ"
-        ],
-        "songs": [
-            {
-                "title": "絶対零度",
-                "artist": "なとり",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
         "youtubeId": "K_glwaZe9dA",
         "title": "【ライブ本編 / 仙台公演】緑仙 2nd LIVE TOUR「緑一色」 / 無料パート #緑仙_2ndライブツアー #緑仙の緑一色",
         "channel": "緑仙 / Ryushen",
@@ -21594,7 +21774,7 @@
         "songs": [
             {
                 "title": "LADY CRAZY",
-                "artist": "HIMEHINA",
+                "artist": "Various artists",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -22014,8 +22194,8 @@
                 "artist": "cresc.",
                 "start": 3014,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -22687,8 +22867,8 @@
                 "artist": "cresc.",
                 "start": 1204,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -28441,8 +28621,8 @@
                 "artist": "cresc.",
                 "start": 18953,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -28450,8 +28630,8 @@
                 "artist": "cresc.",
                 "start": 19280,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -28459,8 +28639,8 @@
                 "artist": "cresc.",
                 "start": 19548,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -28668,8 +28848,8 @@
                 "artist": "cresc.",
                 "start": 30857,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -28904,6 +29084,34 @@
         ]
     },
     {
+        "youtubeId": "-OUkoDsEUv8",
+        "title": "イーシャンテン・オーバードーズ feat. ヘラクレス2023 松本吉弘/緑仙/空星きらめ #ヘラクレスオオマツモト【因幡はねる / ななしいんく】",
+        "channel": "因幡はねる / Haneru Channel【ななしいんく】",
+        "date": "2024-03-30",
+        "thumbnail": "https://i.ytimg.com/vi/-OUkoDsEUv8/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "みどねる",
+            "カバー曲",
+            "因幡はねる",
+            "松本吉弘",
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "イーシャンテン・オーバードーズ feat. ヘラクレス2023 松本吉弘",
+                "artist": "緑仙/空星きらめ #ヘラクレスオオマツモト【因幡はねる / ななしいんく】",
+                "start": 0,
+                "tags": [
+                    "オリジナル"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "MgnWTeqJ2bk",
         "title": "も〜っと愛されたいな！ #vtuber #にじさんじ #緑仙 #踊ってみた",
         "channel": "緑仙",
@@ -29069,8 +29277,8 @@
                 "artist": "cresc.",
                 "start": 32,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -29219,8 +29427,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -30446,8 +30654,8 @@
                 "artist": "cresc.",
                 "start": 28247,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -31966,8 +32174,8 @@
                 "artist": "にじさんじ",
                 "start": 5254,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -32701,8 +32909,8 @@
                 "artist": "cresc.",
                 "start": 840,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -33463,6 +33671,31 @@
                 "start": 5918,
                 "tags": [
                     "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "Tr78bt0gFNY",
+        "title": "天誅 / 緑仙×雫 Cover",
+        "channel": "緑仙 / Ryushen",
+        "date": "2023-10-17",
+        "thumbnail": "https://i.ytimg.com/vi/Tr78bt0gFNY/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "天誅",
+                "artist": "緑仙×雫",
+                "start": 0,
+                "tags": [
+                    "オリジナル"
                 ]
             }
         ]
@@ -35777,8 +36010,8 @@
                 "artist": "弦月藤士郎/相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -36422,8 +36655,8 @@
                 "artist": "cresc.",
                 "start": 567,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -37160,8 +37393,8 @@
                 "artist": "ヘラクレスメンバー(松本吉弘, 因幡はねる, 緑仙, 空星きらめ)",
                 "start": 0,
                 "tags": [
-                    "ヘラクレスメンバー",
-                    "オリジナル"
+                    "オリジナル",
+                    "ヘラクレスメンバー"
                 ]
             }
         ]
@@ -38487,8 +38720,8 @@
                 "artist": "cresc.",
                 "start": 23085,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -38496,8 +38729,8 @@
                 "artist": "cresc.",
                 "start": 23363,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -38505,8 +38738,8 @@
                 "artist": "cresc.",
                 "start": 23644,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -39228,8 +39461,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -39392,8 +39625,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -40015,7 +40248,7 @@
             },
             {
                 "title": "Day2",
-                "artist": "LEAP",
+                "artist": "",
                 "start": 7690,
                 "tags": [
                     "カバー"
@@ -40063,7 +40296,7 @@
             },
             {
                 "title": "Day3",
-                "artist": "taku",
+                "artist": "",
                 "start": 8925,
                 "tags": [
                     "カバー"
@@ -40111,7 +40344,7 @@
             },
             {
                 "title": "OBSYDIA",
-                "artist": "Jo Blankenburg",
+                "artist": "",
                 "start": 9721,
                 "tags": [
                     "カバー"
@@ -40119,7 +40352,7 @@
             },
             {
                 "title": "Ethyria",
-                "artist": "Enna Alouette",
+                "artist": "Meutiny",
                 "start": 9752,
                 "tags": [
                     "カバー"
@@ -40135,7 +40368,7 @@
             },
             {
                 "title": "Noctyx",
-                "artist": "PHYNXR",
+                "artist": "",
                 "start": 9851,
                 "tags": [
                     "カバー"
@@ -42555,8 +42788,8 @@
                 "artist": "cresc.",
                 "start": 29722,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -42935,8 +43168,8 @@
                 "artist": "cresc.",
                 "start": 1416,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -43211,8 +43444,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -43862,8 +44095,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -43962,8 +44195,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -44986,8 +45219,8 @@
                 "artist": "にじさんじ",
                 "start": 2790,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -45504,8 +45737,8 @@
                 "artist": "cresc.",
                 "start": 5864,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -45560,8 +45793,8 @@
                 "artist": "にじさんじ",
                 "start": 3439,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -45732,8 +45965,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -45898,8 +46131,8 @@
                 "artist": "cresc.",
                 "start": 2669,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             },
             {
@@ -46983,8 +47216,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -47004,8 +47237,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -47025,8 +47258,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -48182,7 +48415,7 @@
         "songs": [
             {
                 "title": "さよならいちごちゃん",
-                "artist": "Serani Poji",
+                "artist": "",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -48469,8 +48702,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -48577,6 +48810,37 @@
                 "tags": [
                     "オリジナル",
                     "Rain Drops"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "2JAxMU04AAE",
+        "title": "トンデモワンダーズ / sasakure.‌UK (covered by Rain Drops)",
+        "channel": "Rain Drops",
+        "date": "2022-01-30",
+        "thumbnail": "https://i.ytimg.com/vi/2JAxMU04AAE/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "Rain Drops",
+            "える",
+            "カバー曲",
+            "ジョー・力一",
+            "三枝明那",
+            "歌動画",
+            "童田明治",
+            "鈴木勝"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "トンデモワンダーズ",
+                "artist": "sasakure.‌UK",
+                "start": 0,
+                "tags": [
+                    "カバー"
                 ]
             }
         ]
@@ -48697,6 +48961,31 @@
                 "start": 4856,
                 "tags": [
                     "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "-cNay-ok_N0",
+        "title": "ラブヘイト / 緑仙 Cover",
+        "channel": "緑仙 / Ryushen",
+        "date": "2022-01-24",
+        "thumbnail": "https://i.ytimg.com/vi/-cNay-ok_N0/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "ラブヘイト",
+                "artist": "緑仙",
+                "start": 0,
+                "tags": [
+                    "オリジナル"
                 ]
             }
         ]
@@ -49567,8 +49856,8 @@
                 "artist": "にじさんじ",
                 "start": 11532,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49780,8 +50069,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -50473,8 +50762,8 @@
                 "artist": "cresc.",
                 "start": 2293,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -50596,7 +50885,7 @@
             },
             {
                 "title": "弦月",
-                "artist": "CLOCK END",
+                "artist": "Magnetite",
                 "start": 630,
                 "tags": [
                     "カバー"
@@ -50738,8 +51027,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -52537,8 +52826,8 @@
                 "artist": "cresc.",
                 "start": 2514,
                 "tags": [
-                    "cresc.",
-                    "オリジナル"
+                    "オリジナル",
+                    "cresc."
                 ]
             }
         ]
@@ -53837,7 +54126,7 @@
         "songs": [
             {
                 "title": "9月4日（土）",
-                "artist": "バンドハラスメント",
+                "artist": "",
                 "start": 1200,
                 "tags": [
                     "カバー"
@@ -54337,29 +54626,6 @@
         ]
     },
     {
-        "youtubeId": "3IjuH4y2ErY",
-        "title": "サリシノハラ feat. 弦月藤士郎",
-        "channel": "緑仙",
-        "date": "2021-07-30",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "弦月藤士郎",
-            "未分類"
-        ],
-        "songs": [
-            {
-                "title": "サリシノハラ",
-                "artist": "みきとP",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
         "youtubeId": "8089nQI8Uv0",
         "title": "【しゅきぴ】ねもぺろ from でんぱ組.inc「しゅきしゅきしゅきぴ♡がとまらないっ…！」歌ってみた【緑仙/相羽ういは/にじさんじ】",
         "channel": "緑仙 / Ryushen",
@@ -54377,6 +54643,29 @@
             {
                 "title": "しゅきしゅきしゅきぴ♡がとまらないっ…！",
                 "artist": "ねもぺろ from でんぱ組.inc",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
+        "youtubeId": "3IjuH4y2ErY",
+        "title": "サリシノハラ feat. 弦月藤士郎",
+        "channel": "緑仙",
+        "date": "2021-07-30",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "弦月藤士郎",
+            "未分類"
+        ],
+        "songs": [
+            {
+                "title": "サリシノハラ",
+                "artist": "みきとP",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -54470,7 +54759,7 @@
             },
             {
                 "title": "Prayer  X",
-                "artist": "うにまろ",
+                "artist": "King Gnu",
                 "start": 1440,
                 "tags": [
                     "カバー"
@@ -54638,10 +54927,10 @@
             },
             {
                 "title": "エヴァーグリーン",
-                "artist": "平田義久, imie",
+                "artist": "緑仙",
                 "start": 6315,
                 "tags": [
-                    "カバー"
+                    "オリジナル"
                 ]
             }
         ]
@@ -56376,7 +56665,7 @@
             },
             {
                 "title": "ラットが死んだ 【2019.04.30】",
-                "artist": "島爺",
+                "artist": "P.I.N.A.",
                 "start": 880,
                 "tags": [
                     "カバー"
@@ -56496,15 +56785,16 @@
             },
             {
                 "title": "蜜ノ味 【2020.05.26】",
-                "artist": "",
+                "artist": "Rain Drops",
                 "start": 4062,
                 "tags": [
-                    "カバー"
+                    "オリジナル",
+                    "Rain Drops"
                 ]
             },
             {
                 "title": "I LOVE… 【2020.03.09】",
-                "artist": "ツギネ",
+                "artist": "Official髭男dism",
                 "start": 4245,
                 "tags": [
                     "カバー"
@@ -56512,7 +56802,7 @@
             },
             {
                 "title": "純・アモーレ・愛 【2020.09.07】",
-                "artist": "紫京院ひびき(cv.斎賀みつき)",
+                "artist": "きば",
                 "start": 4525,
                 "tags": [
                     "カバー"
@@ -56544,7 +56834,7 @@
             },
             {
                 "title": "ギブス 【2020.01.27】",
-                "artist": "虹原ぺぺろん",
+                "artist": "椎名林檎",
                 "start": 5416,
                 "tags": [
                     "カバー"
@@ -56592,7 +56882,7 @@
             },
             {
                 "title": "ドラマツルギー 【2021.04.07】【2018.09.11】",
-                "artist": "Eve",
+                "artist": "Eve, 沼能友樹",
                 "start": 6779,
                 "tags": [
                     "カバー"
@@ -58391,8 +58681,8 @@
                 "artist": "にじさんじ",
                 "start": 244,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -59530,14 +59820,17 @@
         ]
     },
     {
-        "youtubeId": "sRVqXkThnlk",
-        "title": "【メンバー限定動画】三文小説の収録一発目の声",
-        "channel": "緑仙 / Ryushen",
+        "youtubeId": "fYkljl7xlF0",
+        "title": "三文小説 / King Gnu (covered by 緑仙)",
+        "channel": "緑仙",
         "date": "2021-03-04",
         "category": [
-            "歌配信"
+            "歌動画"
         ],
-        "keywords": [],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
         "songs": [
             {
                 "title": "三文小説",
@@ -59550,17 +59843,14 @@
         ]
     },
     {
-        "youtubeId": "fYkljl7xlF0",
-        "title": "三文小説 / King Gnu (covered by 緑仙)",
-        "channel": "緑仙",
+        "youtubeId": "sRVqXkThnlk",
+        "title": "【メンバー限定動画】三文小説の収録一発目の声",
+        "channel": "緑仙 / Ryushen",
         "date": "2021-03-04",
         "category": [
-            "歌動画"
+            "歌配信"
         ],
-        "keywords": [
-            "カバー曲",
-            "歌動画"
-        ],
+        "keywords": [],
         "songs": [
             {
                 "title": "三文小説",
@@ -59684,8 +59974,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -59706,11 +59996,10 @@
         "songs": [
             {
                 "title": "虹色のPuddle",
-                "artist": "にじさんじ",
+                "artist": "",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "カバー"
                 ]
             }
         ]
@@ -59787,8 +60076,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61919,8 +62208,8 @@
                 "artist": "にじさんじ",
                 "start": 3615,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -63667,6 +63956,31 @@
         ]
     },
     {
+        "youtubeId": "0UuAmgo2CJ4",
+        "title": "フタリボシ (covered by いのるぱんだ)",
+        "channel": "緑仙 / Ryushen",
+        "date": "2020-07-07",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "いのるぱんだ",
+            "カバー曲",
+            "シスター・クレア",
+            "歌動画"
+        ],
+        "songs": [
+            {
+                "title": "フタリボシ",
+                "artist": "40mP",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "0uRcs3cRDF4",
         "title": "歌配信、深夜、ボカロ。何も起きないはずがなく…",
         "channel": "緑仙",
@@ -63820,31 +64134,6 @@
                 "title": "starlet",
                 "artist": "hayashi",
                 "start": 5915,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "0UuAmgo2CJ4",
-        "title": "フタリボシ (covered by いのるぱんだ)",
-        "channel": "緑仙 / Ryushen",
-        "date": "2020-07-07",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "いのるぱんだ",
-            "カバー曲",
-            "シスター・クレア",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "フタリボシ",
-                "artist": "40mP",
-                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -64812,8 +65101,8 @@
                 "artist": "にじさんじ【#健屋花那誕生祭2020】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -67473,6 +67762,32 @@
         ]
     },
     {
+        "youtubeId": "V654oSE_yhE",
+        "title": "ロメオ / 夢追翔＆加賀美ハヤト with 緑仙 (Cover)",
+        "channel": "緑仙 / Ryushen",
+        "date": "2020-02-14",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "le jouet",
+            "カバー曲",
+            "加賀美ハヤト",
+            "夢追翔",
+            "歌動画"
+        ],
+        "songs": [
+            {
+                "title": "ロメオ",
+                "artist": "HoneyWorks",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "Bh2D_D9fz1k",
         "title": "緑仙と因幡はねる「かわE」byヤバイTシャツ屋さん #みどねる",
         "channel": "緑仙 / Ryushen",
@@ -67514,32 +67829,6 @@
             {
                 "title": "バレンタイン・キッス",
                 "artist": "国生さゆり",
-                "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "V654oSE_yhE",
-        "title": "ロメオ / 夢追翔＆加賀美ハヤト with 緑仙 (Cover)",
-        "channel": "緑仙 / Ryushen",
-        "date": "2020-02-14",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "le jouet",
-            "カバー曲",
-            "加賀美ハヤト",
-            "夢追翔",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "ロメオ",
-                "artist": "HoneyWorks",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -67838,8 +68127,8 @@
                 "artist": "にじさんじ",
                 "start": 3503,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -69436,8 +69725,8 @@
                 "artist": "にじさんじ",
                 "start": 1784,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -72113,6 +72402,29 @@
         ]
     },
     {
+        "youtubeId": "7pObaK-isfU",
+        "title": "The Beast. / スペクタクルP (covered by 緑仙)",
+        "channel": "緑仙",
+        "date": "2019-09-16",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "songs": [
+            {
+                "title": "The Beast.",
+                "artist": "スペクタクルP",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "LOIxo-vy0-g",
         "title": "【LIVE】ボカロうたうぜぜ【#緑仙】",
         "channel": "緑仙",
@@ -72234,29 +72546,6 @@
                 "title": "チェックエンチェイス",
                 "artist": "カラスヤサボウ, やうり",
                 "start": 3829,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "7pObaK-isfU",
-        "title": "The Beast. / スペクタクルP (covered by 緑仙)",
-        "channel": "緑仙",
-        "date": "2019-09-16",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "カバー曲",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "The Beast.",
-                "artist": "スペクタクルP",
-                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -73023,6 +73312,34 @@
         ]
     },
     {
+        "youtubeId": "xAICL3fiIYY",
+        "title": "【デレマス】Trancing Pulse 【にじさんじ/cresc.で歌ってみた】",
+        "channel": "シスター・クレア -SisterClaire-",
+        "date": "2019-08-23",
+        "thumbnail": "https://i.ytimg.com/vi/xAICL3fiIYY/mqdefault.jpg",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "cresc.",
+            "カバー曲",
+            "シスター・クレア",
+            "ドーラ",
+            "歌動画"
+        ],
+        "tags": [],
+        "songs": [
+            {
+                "title": "シスター・クレア",
+                "artist": "",
+                "start": 262,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "zPMWAj54Seg",
         "title": "にじさんじ - Virtual to LIVE [Official Music Video]",
         "channel": "緑仙",
@@ -73039,8 +73356,8 @@
                 "artist": "にじさんじ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -75539,6 +75856,29 @@
         ]
     },
     {
+        "youtubeId": "X3lmvEunSi4",
+        "title": "戯言スピーカー / ササノマリイ (covered by 緑仙)",
+        "channel": "緑仙",
+        "date": "2019-07-05",
+        "category": [
+            "歌動画"
+        ],
+        "keywords": [
+            "カバー曲",
+            "歌動画"
+        ],
+        "songs": [
+            {
+                "title": "戯言スピーカー",
+                "artist": "ササノマリイ",
+                "start": 0,
+                "tags": [
+                    "カバー"
+                ]
+            }
+        ]
+    },
+    {
         "youtubeId": "zcrhRB7rtPo",
         "title": "【LIVE】歌謡曲を歌う夜。",
         "channel": "緑仙",
@@ -75660,29 +76000,6 @@
                 "title": "君は1000％",
                 "artist": "1986オメガトライブ",
                 "start": 3580,
-                "tags": [
-                    "カバー"
-                ]
-            }
-        ]
-    },
-    {
-        "youtubeId": "X3lmvEunSi4",
-        "title": "戯言スピーカー / ササノマリイ (covered by 緑仙)",
-        "channel": "緑仙",
-        "date": "2019-07-05",
-        "category": [
-            "歌動画"
-        ],
-        "keywords": [
-            "カバー曲",
-            "歌動画"
-        ],
-        "songs": [
-            {
-                "title": "戯言スピーカー",
-                "artist": "ササノマリイ",
-                "start": 0,
                 "tags": [
                     "カバー"
                 ]

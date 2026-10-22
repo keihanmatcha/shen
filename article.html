@@ -15,11 +15,11 @@
 
 <style>
 /* ===== 共通スタイル ===== */
-:root{ --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
-html,body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,sans-serif;line-height:1.7;}
+:root { --fg:#222; --muted:#4b5563; --accent:#625DA1; --bg:#fff; --border:#e5e7eb; --panel:#f8f8ff; }
+html,body { margin:0; background:var(--bg); color:var(--fg); font-family:system-ui,-apple-system,sans-serif; line-height:1.7; }
 
-header{position:sticky;top:0;background:linear-gradient(90deg, #009297, #5DCCAB);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--border); z-index: 10;}
-.wrap{max-width:800px;margin-inline:auto;padding:20px 16px;}
+header { position:sticky; top:0; background:linear-gradient(90deg, #009297, #5DCCAB); backdrop-filter:saturate(1.2) blur(6px); border-bottom:1px solid var(--border); z-index: 10; }
+.wrap { max-width:800px; margin-inline:auto; padding:20px 16px; }
 
 /* ナビゲーション */
 .nav-header { display: flex; justify-content: space-between; align-items: center; height: 50px; }
@@ -28,8 +28,8 @@ header{position:sticky;top:0;background:linear-gradient(90deg, #009297, #5DCCAB)
 .nav-links a { position: relative; font-size: 13px; font-weight: 700; color: #fff; text-decoration: none; padding: 6px 16px; z-index: 1; transition: transform 0.2s; }
 
 .nav-links a::before {
-content: ""; position: absolute; inset: 0; z-index: -1; transform: skewX(-20deg); border-radius: 4px;
-box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: opacity 0.2s, transform 0.2s;
+  content: ""; position: absolute; inset: 0; z-index: -1; transform: skewX(-20deg); border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); transition: opacity 0.2s, transform 0.2s;
 }
 .nav-links a[href*="archives"]::before { background: #B43246; }
 .nav-links a[href*="songs"]::before { background: #4DD7E3; }
@@ -41,12 +41,12 @@ p { margin-bottom: 16px; font-size: 15px; }
 
 /* ボックススタイル */
 .recommend-box {
-background: #fff;
-border: 2px solid #e5dfff;
-border-radius: 12px;
-padding: 24px;
-margin-bottom: 30px;
-box-shadow: 0 4px 12px rgba(98, 93, 161, 0.05);
+  background: #fff;
+  border: 2px solid #e5dfff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(98, 93, 161, 0.05);
 }
 .recommend-title { font-weight: 700; color: var(--accent); margin-bottom: 16px; display: block; font-size: 18px; border-bottom: 1px solid #e5dfff; padding-bottom: 8px; }
 
@@ -61,23 +61,23 @@ box-shadow: 0 4px 12px rgba(98, 93, 161, 0.05);
    ========================================= */
 .genre-section { margin-bottom: 40px; }
 .genre-header { 
-    display: flex; align-items: center; gap: 10px; margin-bottom: 12px; 
+  display: flex; align-items: center; gap: 10px; margin-bottom: 12px; 
 }
 .genre-title-text {
-    font-size: 18px; font-weight: 700; color: var(--accent);
+  font-size: 18px; font-weight: 700; color: var(--accent);
 }
 .genre-badge {
-    font-size: 11px; background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 20px; font-weight: bold;
+  font-size: 11px; background: var(--accent); color: #fff; padding: 2px 8px; border-radius: 20px; font-weight: bold;
 }
 
 /* 横スクロールエリア */
 .reel-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 16px;
-    padding: 4px 4px 24px 4px; /* 下のpaddingはスクロールバーとの余白 */
-    scroll-snap-type: x mandatory; /* スクロールがピタッと止まる */
-    -webkit-overflow-scrolling: touch;
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 4px 4px 24px 4px; /* 下のpaddingはスクロールバーとの余白 */
+  scroll-snap-type: x mandatory; /* スクロールがピタッと止まる */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* スクロールバーの装飾 */
@@ -88,42 +88,42 @@ box-shadow: 0 4px 12px rgba(98, 93, 161, 0.05);
 
 /* 各カード（動画・ツイートの枠） */
 .reel-item {
-    flex: 0 0 85%; /* スマホでは画面の85%幅（次が見切れるように） */
-    max-width: 340px; /* PCでの最大幅 */
-    scroll-snap-align: center; /* 画面中央で止める場合はcenter, 左端ならstart */
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    display: flex;
-    flex-direction: column;
+  flex: 0 0 85%; /* スマホでは画面の85%幅（次が見切れるように） */
+  max-width: 340px; /* PCでの最大幅 */
+  scroll-snap-align: center; /* 画面中央で止める場合はcenter, 左端ならstart */
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 600px) {
-    .reel-item { 
-        flex: 0 0 45%; /* タブレット以上は2つ並ぶくらいの幅 */
-        scroll-snap-align: start; 
-    }
+  .reel-item { 
+    flex: 0 0 45%; /* タブレット以上は2つ並ぶくらいの幅 */
+    scroll-snap-align: start; 
+  }
 }
 
 /* iframeのレスポンシブ対応 */
 .reel-item iframe {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 16 / 9;
-    border: none;
-    display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
 }
 
 /* ツイート埋め込みの調整 */
 .tweet-wrapper {
-    width: 100%;
-    overflow-y: auto; /* 長いツイートは縦スクロール */
-    max-height: 350px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  overflow-y: auto; /* 長いツイートは縦スクロール */
+  max-height: 350px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
 }
 .tweet-wrapper blockquote { margin: 0; }
 
@@ -208,10 +208,10 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 <iframe src="https://www.youtube-nocookie.com/embed/6nUf8mssrRA?si=Ybbgv4lXD9WOs7Tl&amp;start=3206" title="YouTube video player" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe src="https://www.youtube-nocookie.com/embed/G0DRPWWADzM?si=6Fu9I66ZcIBdiARr&amp;start=1712" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/G0DRPWWADzM?si=6Fu9I66ZcIBdiARr&amp;start=1712" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe src="https://www.youtube-nocookie.com/embed/S5NNtoz03ug?si=qQWfq-pbD7TFuG3A&amp;start=2769" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/S5NNtoz03ug?si=qQWfq-pbD7TFuG3A&amp;start=2769" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <iframe src="https://www.youtube-nocookie.com/embed/SolYgXMQ4zw?si=uFuuqC72qbJ5hHGy&amp;start=5352" title="YouTube video player" allowfullscreen></iframe>
@@ -220,7 +220,7 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 <iframe src="https://www.youtube-nocookie.com/embed/i66gFmWND54?si=RBsQgGkWFRgjiB41&amp;start=2570" title="YouTube video player" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe src="https://www.youtube-nocookie.com/embed/Q_507j2xZjI?si=IHNaultyDSmf3kH2&amp;start=1445"  title="YouTube video player" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/Q_507j2xZjI?si=IHNaultyDSmf3kH2&amp;start=1445" title="YouTube video player" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <iframe src="https://www.youtube-nocookie.com/embed/OJ6pU2Gd758?si=F-0qeF9WC4MR9Sst&amp;start=178" title="YouTube video player" allowfullscreen></iframe>
@@ -241,16 +241,16 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 <iframe src="https://www.youtube-nocookie.com/embed/nrFKOk4TObg" title="YouTube video player" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=GrKjEALYY6xDP5a7&amp;start=3571&amp;list=PLMWEOZ_rcWn_niNrPEOFBB6wC32cLnJ2U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/videoseries?si=GrKjEALYY6xDP5a7&amp;start=3571&amp;list=PLMWEOZ_rcWn_niNrPEOFBB6wC32cLnJ2U" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g-cw2xU5F8k?si=OMy8l4TUlQdLUOqH&amp;start=3561" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g-cw2xU5F8k?si=OMy8l4TUlQdLUOqH&amp;start=3561" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IimDsXnCu1k?si=3G-R7mzuDmiipFLm&amp;start=304" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/IimDsXnCu1k?si=3G-R7mzuDmiipFLm&amp;start=304" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GHAiSvfi2s8?si=c0i1VzE7f0_wdLKF&amp;start=2457" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GHAiSvfi2s8?si=c0i1VzE7f0_wdLKF&amp;start=2457" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <iframe src="https://www.youtube-nocookie.com/embed/XIOSvfI1Qyg?si=sMQigMGgQsVLLBHx&amp;start=2885" title="YouTube video player" allowfullscreen></iframe>
@@ -277,16 +277,16 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 </div>
 <div class="reel-scroll">
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TrlOGcyePVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TrlOGcyePVc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0zXZmhBR8ik?si=Hr3ovNPqzGjc3Kud&amp;start=1815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0zXZmhBR8ik?si=Hr3ovNPqzGjc3Kud&amp;start=1815" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uMN9Xt5NdWg?si=Hr3ovNPqzGjc3Kud&amp;start=1815" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/uMN9Xt5NdWg?si=Hr3ovNPqzGjc3Kud&amp;start=1815" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I5BmqG_KBd8?si=Pca1COKZzrHruVN6&amp;start=519" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I5BmqG_KBd8?si=Pca1COKZzrHruVN6&amp;start=519" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <iframe src="https://www.youtube-nocookie.com/embed/r3Cv4C421OM?si=Y-fSJ9fg-Fj9H96B&amp;start=3413" title="YouTube video player" allowfullscreen></iframe>
@@ -311,8 +311,8 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 </div>
 <div class="reel-item">
 <div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">配信ありがとうございましたー！<br>アーカイブあるのでごゆるりどうぞ！<br>名古屋メンバー最高！ 
-<a href="https://t.co/lIBo0KUyis">https://t.co/lIBo0KUyis</a></p>&mdash; ゲッツ (@MASA2Get2) 
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">配信ありがとうございましたー！<br>アーカイブあるのでごゆるりどうぞ！<br>名古屋メンバー最高！ 
+<a href="https://t.co/lIBo0KUyis">https://t.co/lIBo0KUyis</a></p>&mdash; ゲッツ (@MASA2Get2) 
 <a href="https://twitter.com/MASA2Get2/status/1937847067319349351?ref_src=twsrc%5Etfw">June 25, 2025</a></blockquote>
 </div>
 </div>
@@ -320,7 +320,6 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 <div class="tweet-wrapper">
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">皆さん歌声良すぎるのと<br>緑仙さんがサビの最後で<br>心臓へ手を添えてる姿が<br>自分と重なって個人的に<br>良いなぁと思いました🫀</p>&mdash; 遼遼 (@L0_1N) 
    <a href="https://twitter.com/L0_1N/status/2022286583219855867?ref_src=twsrc%5Etfw">February 13, 2026</a></blockquote> 
-   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
 </div>
@@ -333,21 +332,20 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 </div>
 <div class="reel-scroll">
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sH5MVf7o_NQ" title="最初の一枚" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sH5MVf7o_NQ" title="最初の一枚" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ax3IkGzai_c" title="代表作" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ax3IkGzai_c" title="代表作" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dcR5BgTgWe4" title="マイベスト" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dcR5BgTgWe4" title="マイベスト" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RnTrDDGdcrQ" title="隠れた名作" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RnTrDDGdcrQ" title="隠れた名作" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EJVd4QKqSTI" title="いま聞くなら" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EJVd4QKqSTI" title="いま聞くなら" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-
 </div>
 </section>
 
@@ -358,63 +356,62 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 </div>
 <div class="reel-scroll">
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IIuW-iKscU4?si=6X03BQIsf7DdlfT3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IIuW-iKscU4?si=6X03BQIsf7DdlfT3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙さん(<a href="https://twitter.com/midori_2434?ref_src=twsrc%5Etfw">@midori_2434</a> )のRAINBOW GIRL、インスト音源つくったぞ！！！<br>名曲だし歌詞的な意味で激エモだし歌はもちろん最高だし3Dイケイケだな？？？？？<br><br>RAINBOW GIRL / 緑仙 (Cover) <a href="https://t.co/6egf0IyZxJ">https://t.co/6egf0IyZxJ</a> <a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>さんから</p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1198197979468795905?ref_src=twsrc%5Etfw">November 23, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙さん(<a href="https://twitter.com/midori_2434?ref_src=twsrc%5Etfw">@midori_2434</a> )のRAINBOW GIRL、インスト音源つくったぞ！！！<br>名曲だし歌詞的な意味で激エモだし歌はもちろん最高だし3Dイケイケだな？？？？？<br><br>RAINBOW GIRL / 緑仙 (Cover) <a href="https://t.co/6egf0IyZxJ">https://t.co/6egf0IyZxJ</a> <a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>さんから</p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1198197979468795905?ref_src=twsrc%5Etfw">November 23, 2019</a></blockquote>
 </div>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sH5MVf7o_NQ?si=Ntv6sUInxDOPMslx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-<div class="reel-item">
-<div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">名曲かいたぞ（2週間ぶり2回目）<br><br>イツライ / 緑仙 (オリジナル曲) <a href="https://t.co/mUx4a21vZt">https://t.co/mUx4a21vZt</a> <a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>さんから</p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1242459160123445248?ref_src=twsrc%5Etfw">March 24, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-</div>
-<div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OJugl_1qQlE?si=PkINXg29vK-WIwI5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sH5MVf7o_NQ?si=Ntv6sUInxDOPMslx" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙さんの新しいオリジナル曲「タイト」歌詞おたすけマンしました！！！<br>言い回しとか単語をメロディにはまりやすいようにしたくらいなもんなので全部緑仙さんの言葉だから心して聴け<br><br>タイト / 緑仙 (オリジナル曲) <a href="https://t.co/InHC8Dz5Bi">https://t.co/InHC8Dz5Bi</a> <a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>さんから</p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1251108318749224962?ref_src=twsrc%5Etfw">April 17, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">名曲かいたぞ（2週間ぶり2回目）<br><br>イツライ / 緑仙 (オリジナル曲) <a href="https://t.co/mUx4a21vZt">https://t.co/mUx4a21vZt</a> <a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>さんから</p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1242459160123445248?ref_src=twsrc%5Etfw">March 24, 2020</a></blockquote>
 </div>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EJVd4QKqSTI?si=0oXYuqtGPUJS4mHd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-<div class="reel-item">
-<div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙(<a href="https://twitter.com/midori_2434?ref_src=twsrc%5Etfw">@midori_2434</a>)さんのラジオにお邪魔する事になりました！楽しみ〜<a href="https://twitter.com/hashtag/%E7%B7%91%E4%BB%99%E3%81%AF%E3%82%84%E3%81%8F%E5%AF%9D%E3%82%8D?src=hash&amp;ref_src=twsrc%5Etfw">#緑仙はやく寝ろ</a> <a href="https://t.co/rp26c4dOeO">https://t.co/rp26c4dOeO</a></p>&mdash; syudou🦩 (@tikandame) <a href="https://twitter.com/tikandame/status/1681563203787165701?ref_src=twsrc%5Etfw">July 19, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OJugl_1qQlE?si=PkINXg29vK-WIwI5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">syudouさんへ<br><br>緑仙さんの「君になりたいから」<br>書いたの、僕なんですよ<br><br>ぼろまるより</p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1476394853391282180?ref_src=twsrc%5Etfw">December 30, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙さんの新しいオリジナル曲「タイト」歌詞おたすけマンしました！！！<br>言い回しとか単語をメロディにはまりやすいようにしたくらいなもんなので全部緑仙さんの言葉だから心して聴け<br><br>タイト / 緑仙 (オリジナル曲) <a href="https://t.co/InHC8Dz5Bi">https://t.co/InHC8Dz5Bi</a> <a href="https://twitter.com/YouTube?ref_src=twsrc%5Etfw">@YouTube</a>さんから</p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1251108318749224962?ref_src=twsrc%5Etfw">April 17, 2020</a></blockquote>
+</div>
+</div>
+<div class="reel-item">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EJVd4QKqSTI?si=0oXYuqtGPUJS4mHd" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙(<a href="https://twitter.com/midori_2434?ref_src=twsrc%5Etfw">@midori_2434</a>)さんのラジオにお邪魔する事になりました！楽しみ〜<a href="https://twitter.com/hashtag/%E7%B7%91%E4%BB%99%E3%81%AF%E3%82%84%E3%81%8F%E5%AF%9D%E3%82%8D?src=hash&amp;ref_src=twsrc%5Etfw">#緑仙はやく寝ろ</a> <a href="https://t.co/rp26c4dOeO">https://t.co/rp26c4dOeO</a></p>&mdash; syudou🦩 (@tikandame) <a href="https://twitter.com/tikandame/status/1681563203787165701?ref_src=twsrc%5Etfw">July 19, 2023</a></blockquote>
 </div>
 </div>
 <div class="reel-item">
 <div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙さんMCのラジオ番組 <a href="https://twitter.com/hashtag/AuDeeCONNECT?src=hash&amp;ref_src=twsrc%5Etfw">#AuDeeCONNECT</a> <br>本日深夜の初回放送でゲストに参上させていただきます！！！！！！！<br>番組スタートおめでたい！！！！！<br><br>緑仙さんと公共の場で話すのはじめてな気がする<br>楽しみだ！！！！！✊ <a href="https://t.co/QjfbrviiiW">https://t.co/QjfbrviiiW</a></p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1577186306232242176?ref_src=twsrc%5Etfw">October 4, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">syudouさんへ<br><br>緑仙さんの「君になりたいから」<br>書いたの、僕なんですよ<br><br>ぼろまるより</p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1476394853391282180?ref_src=twsrc%5Etfw">December 30, 2021</a></blockquote>
 </div>
-</div>
-<div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3usHqdYswSk?si=IUf1PlH_yPLbfncr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙さんの新ミニアルバム！！！<br><br>M3 友達代表宣言<br>M4 しあわせクッキー<br><br>緑仙さんと二人で作詞しました！！！！！！！！！！<br>２曲ともハッピーで良い曲です！！！！！ <a href="https://t.co/NPvHdj7yrz">https://t.co/NPvHdj7yrz</a></p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1791091351725154739?ref_src=twsrc%5Etfw">May 16, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙さんMCのラジオ番組 <a href="https://twitter.com/hashtag/AuDeeCONNECT?src=hash&amp;ref_src=twsrc%5Etfw">#AuDeeCONNECT</a> <br>本日深夜の初回放送でゲストに参上させていただきます！！！！！！！<br>番組スタートおめでたい！！！！！<br><br>緑仙さんと公共の場で話すのはじめてな気がする<br>楽しみだ！！！！！✊ <a href="https://t.co/QjfbrviiiW">https://t.co/QjfbrviiiW</a></p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1577186306232242176?ref_src=twsrc%5Etfw">October 4, 2022</a></blockquote>
 </div>
 </div>
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-rgTpxJyMng?si=eY9cmkNDieL-asjH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3usHqdYswSk?si=IUf1PlH_yPLbfncr" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="reel-item">
+<div class="tweet-wrapper">
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">緑仙さんの新ミニアルバム！！！<br><br>M3 友達代表宣言<br>M4 しあわせクッキー<br><br>緑仙さんと二人で作詞しました！！！！！！！！！！<br>２曲ともハッピーで良い曲です！！！！！ <a href="https://t.co/NPvHdj7yrz">https://t.co/NPvHdj7yrz</a></p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/1791091351725154739?ref_src=twsrc%5Etfw">May 16, 2024</a></blockquote>
+</div>
+</div>
+<div class="reel-item">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-rgTpxJyMng?si=eY9cmkNDieL-asjH" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <div class="tweet-wrapper">
 <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">ひさびさに緑仙さんと曲つくるにあたってどうしようか色々考えたけど、まっすぐ踊れるロックを作りました！！！<br><br>最初にイツライつくってからもう5年もたったみたいですが<br>まだまだ切れ味鋭い曲を一緒につくれて嬉しいですね⚔️ 
    <a href="https://t.co/jrlaQrMMrG">https://t.co/jrlaQrMMrG</a></p>&mdash; ぼっちぼろまる (@borotchi) <a href="https://twitter.com/borotchi/status/2019760649136443536?ref_src=twsrc%5Etfw">February 6, 2026</a></blockquote> 
-   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
 </div>
@@ -427,40 +424,37 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 </div>
 <div class="reel-scroll">
 <div class="reel-item">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tLu8a9RwYqU?si=568886tqt-j2IM0i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tLu8a9RwYqU?si=568886tqt-j2IM0i" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="reel-item">
 <div class="tweet-wrapper">
-<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「<a href="https://x.com/hashtag/%E4%B8%83%E6%AC%A1%E5%85%83%E7%94%9F%E5%BE%92%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#七次元生徒会</a>」の皆さまが訪れたスポットをまとめたマップを作成しました🗺️<br>ぜひ長浜にお越しください！<a href="https://t.co/izs1qE8FM3">https://t.co/izs1qE8FM3</a><br><br>長浜市へのアクセス▼<a href="https://t.co/hb5pJIE9vz">https://t.co/hb5pJIE9vz</a><a href="https://x.com/hashtag/%E6%BB%8B%E8%B3%80%E7%9C%8C?src=hash&amp;ref_src=twsrc%5Etfw">#滋賀県</a> <a href="https://x.com/hashtag/%E9%95%B7%E6%B5%9C%E5%B8%82?src=hash&amp;ref_src=twsrc%5Etfw">#長浜市</a> <a href="https://x.com/hashtag/%E8%A6%B3%E5%85%89?src=hash&amp;ref_src=twsrc%5Etfw">#観光</a> <a href="https://t.co/DodqhfxVgZ">pic.twitter.com/DodqhfxVgZ</a></p>&mdash; 【公式】長浜米原観光協会（Nagahama Maibara Tourism Association） (@NagahamaTourism) <a href="https://x.com/NagahamaTourism/status/2046901235077497098?ref_src=twsrc%5Etfw">April 22, 2026</a></blockquote> <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">「<a href="https://x.com/hashtag/%E4%B8%83%E6%AC%A1%E5%85%83%E7%94%9F%E5%BE%92%E4%BC%9A?src=hash&amp;ref_src=twsrc%5Etfw">#七次元生徒会</a>」の皆さまが訪れたスポットをまとめたマップを作成しました🗺️<br>ぜひ長浜にお越しください！<a href="https://t.co/izs1qE8FM3">https://t.co/izs1qE8FM3</a><br><br>長浜市へのアクセス▼<a href="https://t.co/hb5pJIE9vz">https://t.co/hb5pJIE9vz</a><a href="https://x.com/hashtag/%E6%BB%8B%E8%B3%80%E7%9C%8C?src=hash&amp;ref_src=twsrc%5Etfw">#滋賀県</a> <a href="https://x.com/hashtag/%E9%95%B7%E6%B5%9C%E5%B8%82?src=hash&amp;ref_src=twsrc%5Etfw">#長浜市</a> <a href="https://x.com/hashtag/%E8%A6%B3%E5%85%89?src=hash&amp;ref_src=twsrc%5Etfw">#観光</a> <a href="https://t.co/DodqhfxVgZ">pic.twitter.com/DodqhfxVgZ</a></p>&mdash; 【公式】長浜米原観光協会（Nagahama Maibara Tourism Association） (@NagahamaTourism) <a href="https://x.com/NagahamaTourism/status/2046901235077497098?ref_src=twsrc%5Etfw">April 22, 2026</a></blockquote>
+</div>
 </div>
 </div>
 </section>
-
-
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <section>
 <div class="recommend-box">
 <span class="recommend-title">緑仙関連記事</span>
 <ul class="link-list">
 <li><a href="https://realsound.jp/tech/2021/08/post-846640.html" target="_blank">性別不詳のVTuber・緑仙が切り開いた、成功の“スペシャルパターン”</a></li>
-<li><a href="https://realsound.jp/2023/06/post-1355306.html" target="_blank">三枝明那、樋口楓、夢追翔……VTuberとロックの関係性　ルーツと特徴を楽曲や歌声から探る</a></li>
-<li><a href="https://realsound.jp/2023/06/post-1355306.html" target="_blank">緑仙、アーティストとしての飛躍を予感させるパフォーマンス　メジャーデビュー発表した初ソロライブを観て</a></li>
-<li><a href="https://realsound.jp/2023/07/post-1389427.html" target="_blank">星街すいせいに続くバーチャルアーティストは？　Albemuth、七海うらら、緑仙、HACHIら音楽活動で頭角を表す新鋭Vシンガー</a></li>
-<li><a href="https://realsound.jp/2023/08/post-1416564.html" target="_blank">緑仙、ミニアルバム『パラグラム』収録曲「ヒロイン」がドラマ『灰色の乙女』EDに　アルバム店舗別特典の絵柄も公開</a></li>
-<li><a href="https://realsound.jp/2024/05/post-1663534.html" target="_blank">緑仙、2ndミニアルバム『イタダキマスノススメ』リリース　収録全7曲＆アートワーク公開</a></li>
-<li><a href="https://realsound.jp/2024/11/post-1846003.html" target="_blank">緑仙、ホームタウン仙台の地で届けたエモーショナルな歌声　新スタイルで未来も示唆した2ndツアー最終公演</a></li>
+<li><a href="https://realsound.jp/2023/06/post-1355306.html" target="_blank">三枝明那、樋口楓、夢追翔……VTuberとロックの関係性 ルーツと特徴を楽曲や歌声から探る</a></li>
+<li><a href="https://realsound.jp/2023/07/post-1389427.html" target="_blank">星街すいせいに続くバーチャルアーティストは？ Albemuth、七海うらら、緑仙、HACHIら音楽活動で頭角を表す新鋭Vシンガー</a></li>
+<li><a href="https://realsound.jp/2023/08/post-1416564.html" target="_blank">緑仙、ミニアルバム『パラグラム』収録曲「ヒロイン」がドラマ『灰色の乙女』EDに アルバム店舗別特典の絵柄も公開</a></li>
+<li><a href="https://realsound.jp/2024/05/post-1663534.html" target="_blank">緑仙、2ndミニアルバム『イタダキマスノススメ』リリース 収録全7曲＆アートワーク公開</a></li>
+<li><a href="https://realsound.jp/2024/11/post-1846003.html" target="_blank">緑仙、ホームタウン仙台の地で届けたエモーショナルな歌声 新スタイルで未来も示唆した2ndツアー最終公演</a></li>
 <li><a href="https://www.billboard-japan.com/special/detail/4421" target="_blank">＜インタビュー＞緑仙流“幸せのレシピ”を伝授、『イタダキマスノススメ』がロック色強めになった経緯は？</a></li>
-<li><a href="https://magazine.anycolor.co.jp/articles/1080015170" target="_blank">緑仙×Virgin Music対談　“誰かの心を揺さぶりたい、誰かの当たり前になりたい”</a></li>
+<li><a href="https://magazine.anycolor.co.jp/articles/1080015170" target="_blank">緑仙×Virgin Music対談 “誰かの心を揺さぶりたい、誰かの当たり前になりたい”</a></li>
 <li><a href="https://magazine.anycolor.co.jp/articles/1088636137" target="_blank">緑仙ライブツアー「緑一色」レポート in 福岡 「このライブは役満です」</a></li>
-<li><a href="https://magazine.anycolor.co.jp/articles/1145890872" target="_blank">アーティスト樋口楓×緑仙が語る　ライバー活動とその先の表現</a></li>
-<li><a href="https://magazine.anycolor.co.jp/articles/582797623" target="_blank">緑仙ライブツアー「緑一色」レポート in 東京　神田明神に集った“大切な貴方”への21曲</a></li>
-<li><a href="https://magazine.anycolor.co.jp/articles/855968677" target="_blank">緑仙ライブツアー「緑一色」レポート in 仙台　客席に“明るい呪い”かけたツアーファイナル</a></li>
-<li><a href="https://magazine.anycolor.co.jp/articles/998567061" target="_blank">にじさんじ WORLD TOUR 名古屋公演レポート　感動のバトンをつなぐ！ 6人の個性が輝いた一夜</a></li>
-<li><a href="https://xtrend.nikkei.com/atcl/contents/18/00620/00039/?n_cid=nbpnxr_twbn" target="_blank">緑仙（仙河緑）　にじさんじの注目ユニット「七次元生徒会！」の書記兼名参謀</a></li>
+<li><a href="https://magazine.anycolor.co.jp/articles/1145890872" target="_blank">アーティスト樋口楓×緑仙が語る ライバー活動とその先の表現</a></li>
+<li><a href="https://magazine.anycolor.co.jp/articles/582797623" target="_blank">緑仙ライブツアー「緑一色」レポート in 東京 神田明神に集った“大切な貴方”への21曲</a></li>
+<li><a href="https://magazine.anycolor.co.jp/articles/855968677" target="_blank">緑仙ライブツアー「緑一色」レポート in 仙台 客席に“明るい呪い”かけたツアーファイナル</a></li>
+<li><a href="https://magazine.anycolor.co.jp/articles/998567061" target="_blank">にじさんじ WORLD TOUR 名古屋公演レポート 感動のバトンをつなぐ！ 6人の個性が輝いた一夜</a></li>
+<li><a href="https://xtrend.nikkei.com/atcl/contents/18/00620/00039/?n_cid=nbpnxr_twbn" target="_blank">緑仙（仙河緑） にじさんじの注目ユニット「七次元生徒会！」の書記兼名参謀</a></li>
 <li><a href="https://e.usen.com/news/news-release/7tvmusic-video.html" target="_blank">緑仙 7月から放送されるオリジナルTVアニメ「ネクロノミ子のコズミックホラーショウ」オープニング主題歌「確証論」デジタルリリース＆Music Video公開！</a></li>
 <li><a href="https://e.usen.com/news/news-release/-916am0tv12.html" target="_blank">緑仙 × ツァール＆ロイガー・インターステラ による、オープニング主題歌「確証論」のコラボ楽曲</a></li>
-<li><a href="https://e.usen.com/news/news-release/h2-mv20youtube.html" target="_blank">あだち充『H2』×緑仙「青春の向こうへ」 コラボレーション決定！　書き下ろしの新曲「青春の向こうへ」</a></li>
+<li><a href="https://e.usen.com/news/news-release/h2-mv20youtube.html" target="_blank">あだち充『H2』×緑仙「青春の向こうへ」 コラボレーション決定！ 書き下ろしの新曲「青春の向こうへ」</a></li>
 <li><a href="https://e.usen.com/news/news-event/-vtuber2countdown-japan-2526.html" target="_blank">緑仙 VTuberとしては初となる2年連続「COUNTDOWN JAPAN 25/26」出演決定！</a></li>
 <li><a href="https://rockinon.com/interview/detail/210847" target="_blank">【インタビュー】VTuberという枠を超え、緑仙は今音楽で「人生」を表現する。最新作『ゴチソウサマノススメ』で得たアーティストとしての自信と進化をひもとく</a></li>
 <li><a href="https://rockinon.com/interview/detail/213431" target="_blank">【インタビュー】VTuberか生身のシンガーか。その線引きさえ無意味にする、緑仙のリアルな音楽観。最新曲“青春の向こうへ”、そしてフェス出演への想いに迫る</a></li>
@@ -470,12 +464,11 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 </div>
 </section>
    
-   
 <section>
 <div class="recommend-box">
 <span class="recommend-title">RainDrops関連記事</span>
 <ul class="link-list">
-<li><a href="https://realsound.jp/2021/09/post-866237.html" target="_blank">Rain Drops、1年半の活動が築いた切磋琢磨できる関係性　音楽とストイックに向き合うグループの現在地</a></li>
+<li><a href="https://realsound.jp/2021/09/post-866237.html" target="_blank">Rain Drops、1年半の活動が築いた切磋琢磨できる関係性 音楽とストイックに向き合うグループの現在地</a></li>
 <li><a href="https://www.billboard-japan.com/special/detail/2922" target="_blank">Rain Drops『シナスタジア』メジャーデビュー記念インタビュー</a></li>
 <li><a href="https://www.animatetimes.com/news/details.php?id=1604560663" target="_blank">人気VTuber6人組のユニット、Rain Drops 2nd MINI ALBUM『オントロジー』発売記念インタビュー｜6人が語る本作で示したRain Drops、そして VTuberの存在証明とは？</a></li>
 <li><a href="https://www.billboard-japan.com/special/detail/3042" target="_blank">Rain Drops『オントロジー』全メンバー（緑仙、三枝明那、童田明治、鈴木勝、える、ジョー・力一）集合インタビュー</a></li>
@@ -483,38 +476,15 @@ footer { text-align: center; padding: 40px 0; border-top: 1px solid var(--border
 </ul>
 </div>
 </section>
+
 <section>
 <div class="recommend-box">
 <span class="recommend-title">その他ユニット関連記事</span>
 <ul class="link-list">
-<li><a href="https://realsound.jp/tech/2021/11/post-896709.html" target="_blank">「にじロック」から『NIJIROCK NEXT BEAT』へ　7人が見せた“邦楽ロックへの愛とリスペクト”</a></li>
+<li><a href="https://realsound.jp/tech/2021/11/post-896709.html" target="_blank">「にじロック」から『NIJIROCK NEXT BEAT』へ 7人が見せた“邦楽ロックへの愛とリスペクト”</a></li>
 </ul>
 </div>
 </section>
-<script>
-   window.addEventListener('load', function() {
-  const loaderWrapper = document.getElementById('loading-wrapper');
-  const characterImg = document.getElementById('loading-character');
-  
-  // 1. 読み込み完了！ -> 画像を「納刀アクション」に切り替える
-  // ※GIFアニメの再生をここからスタートさせるテクニックです
-  characterImg.src = "images/finish-action.gif"; 
-
-  // 2. 納刀アクションの長さ分だけ待ってから、画面を開く
-  // 例：納刀GIFが「1.5秒」の場合、ここを 1500 にする
-  setTimeout(function() {
-    loaderWrapper.classList.add('loaded');
-  }, 2500); 
-});
-
-// 【保険】もし読み込みが遅すぎても5秒で強制的に開く
-setTimeout(function() {
-    const loader = document.getElementById('loading-wrapper');
-    if (loader && !loader.classList.contains('loaded')) {
-       loader.classList.add('loaded');
-    }
-}, 5000);
-</script>
 
 </main>
 
@@ -523,6 +493,34 @@ setTimeout(function() {
 <p>&copy; 2025 shenshen - Unofficial Fan Site for Ryushen.</p>
 </div>
 </footer>
+
+<!-- Twitter/X Widgets Script (1回だけ読み込み) -->
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<script>
+window.addEventListener('load', function() {
+  const loaderWrapper = document.getElementById('loading-wrapper');
+  const characterImg = document.getElementById('loading-character');
+  
+  // 1. 読み込み完了時 -> 画像をアクションアニメーションに変更
+  if (characterImg) {
+    characterImg.src = "images/finish-action.gif"; 
+  }
+
+  // 2. アクション指定秒数後にフェードアウト
+  setTimeout(function() {
+    if (loaderWrapper) loaderWrapper.classList.add('loaded');
+  }, 2500); 
+});
+
+// 安全対策（最大5秒で読み込み画面を解除）
+setTimeout(function() {
+  const loader = document.getElementById('loading-wrapper');
+  if (loader && !loader.classList.contains('loaded')) {
+    loader.classList.add('loaded');
+  }
+}, 5000);
+</script>
 
 </body>
 </html>

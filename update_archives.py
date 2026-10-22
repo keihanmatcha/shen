@@ -1219,57 +1219,150 @@ def resolve_artist_name(raw_title: str) -> str:
 
     return artist
 
-def parse_setlist_from_text(text, channel_owner=OWNER_NAME, fallback_members=None):
-    if not text:
-        return []
-    text = html.unescape(text)
-    ts_regex = r'(?:(?<=\s)|^|\b)(\d{1,2}:\d{1,2}:\d{2}|\d{1,2}:\d{2})(?!\d)'
-    matches = list(re.finditer(ts_regex, text))
-    if len(matches) < 3:
-        return []
+def parse_setlist_from_text(
+    text, channel_owner=OWNER_NAME, fallback_members=None
+):
+  if not text:
+    return []
+  text = html.unescape(text)
 
-    raw_entries = []
-    for i in range(len(matches)):
-        ts_str = matches[i].group(1)
-        start_idx = matches[i].end()
-        end_idx = matches[i + 1].start() if i + 1 < len(matches) else len(text)
-        content = text[start_idx:end_idx].strip()
-        raw_entries.append((ts_str, content))
+  # タイムスタンプの正規表現
+  ts_regex = r"(?:(?<=\s)|^|\b)(\d{1,2}:\d{1,2}:\d{2}|\d{1,2}:\d{2})(?!\d)"
+  matches = list(re.finditer(ts_regex, text))
+  if len(matches) < 3:
+    return []
 
-    songs = []
-    for ts_str, raw_text in raw_entries:
-        clean_text = raw_text.split('\n')[0].strip()
-        if not clean_text or any(x in clean_text.upper() for x in EXCLUDE_SETLIST_KEYWORDS):
-            continue
+  raw_entries = []
+  for i in range(len(matches)):
+    ts_str = matches[i].group(1)
+    start_idx = matches[i].end()
+    end_idx = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+    content = text[start_idx:end_idx].strip()
+    raw_entries.append((ts_str, content))
 
-        clean_text = re.sub(r'^[:\s♪・\-\.\]】）)／/|｜￤~～]+', '', clean_text).strip("  ")
-        clean_text = re.sub(r'\s*[\(（]?http.*$', '', clean_text).strip("  ")
-        if not clean_text: continue
+  # この動画に関係するライバー一覧を作成（fallback_members や KEYWORD_GROUPS から）
+  all_known_livers = set(KEYWORD_GROUPS.get("MEMBERS", []))
+  if fallback_members:
+    all_known_livers.update(fallback_members)
 
-        t = clean_text
-        a = ""
-        for sep in [' / ', '／', ' - ', ' － ', '：', ' : ', '￤']:
-            if sep in clean_text:
-                parts = clean_text.split(sep, 1)
-                t, a = parts[0].strip("  "), parts[1].strip("  ")
-                break
+  # セトリ全体のなかに「緑仙」の名前または絵文字が歌唱者表記として存在するか確認
+  has_owner_mention = any(
+      channel_owner in raw_text or "🐼" in raw_text
+      for _, raw_text in raw_entries
+  )
 
-        if not a:
-            a = resolve_artist_name(t)
+  songs = []
+  for ts_str, raw_text in raw_entries:
+    clean_text = raw_text.split("\n")[0].strip()
+    clean_upper = clean_text.upper()
 
-        parts = list(map(int, ts_str.split(':')))
-        sec = parts[0] * 3600 + parts[1] * 60 + parts[2] if len(parts) == 3 else parts[0] * 60 + parts[1] if len(parts) == 2 else 0
+    # 除外ワード（挨拶・お礼・トーク等）
+    if not clean_text or any(
+        x in clean_upper
+        for x in EXCLUDE_SETLIST_KEYWORDS + ["ありがとう", "見に来て"]
+    ):
+      continue
 
-        songs.append({"title": t, "artist": a, "start": sec})
+    # 装飾記号を除去
+    clean_text = re.sub(
+        r"^[:\s♪・\-\.\]】）)／/|｜￤~～]+", "", clean_text
+    ).strip("  ")
+    clean_text = re.sub(r"\s*[\(（]?http.*$", "", clean_text).strip("  ")
+    if not clean_text:
+      continue
 
-    songs.sort(key=lambda x: x["start"])
-    unique_songs = []
-    seen = set()
-    for s in songs:
-        if (s["start"], s["title"]) not in seen:
-            seen.add((s["start"], s["title"]))
-            unique_songs.append(s)
-    return unique_songs
+    t = clean_text
+    right_part = ""
+
+    # スラッシュやハイフン、コロンで左右に分割（スペースなしの半角スラッシュにも対応）
+    # 優先順位: スペースあり -> 全角 -> スペースなし半角
+    matched = False
+    for sep in [" / ", "／", " - ", " － ", "：", " : ", "￤", "/"]:
+      if sep in clean_text:
+        parts = clean_text.split(sep, 1)
+        t, right_part = parts[0].strip("  "), parts[1].strip("  ")
+        matched = True
+        break
+
+    # 歌唱者（ライバー）の特定
+    singers = []
+    is_all = False
+
+    # 右側に「全員」またはライバー名が書かれているかチェック（例: '緑仙、レヴィ・エリファ'）
+    if "全員" in right_part:
+      is_all = True
+    for liver in all_known_livers:
+      if liver in right_part:
+        singers.append(liver)
+
+    # 絵文字による歌唱者判定も併用
+    for mark, liver_name in LIVER_EMOJI_MAP.items():
+      if mark in clean_text or mark in right_part:
+        if liver_name == "全員":
+          is_all = True
+        elif liver_name != "全員":
+          singers.append(liver_name)
+
+    singers = list(dict.fromkeys(singers))
+
+    # ★ 緑仙アーカイブとしてのフィルタリング:
+    # セトリ内に歌唱者表記があり、かつ緑仙が含まれていない曲は除外
+    if has_owner_mention:
+      if not is_all and (channel_owner not in singers):
+        # 右側にライバー名が検出されていて、そこに緑仙がいない場合は他ライバーのソロ/コラボ曲なのでスキップ
+        if singers:
+          continue
+
+    # アーティスト名と曲名（with 表記）の決定
+    a = ""
+    # 右側がライバー名だった場合:
+    if is_all or singers:
+      # with 〇〇 を付与
+      if is_all:
+        collab_partners = [
+            m
+            for m in fallback_members or []
+            if m != channel_owner and m in all_known_livers
+        ]
+        if collab_partners:
+          t = f"{t} with {','.join(sorted(collab_partners))}"
+      else:
+        collab_partners = [s for s in singers if s != channel_owner]
+        if collab_partners:
+          t = f"{t} with {','.join(sorted(collab_partners))}"
+
+      # 右側は歌唱者名だったので、本家アーティスト名は外部API/辞書から取得
+      a = resolve_artist_name(t)
+    else:
+      # 右側がライバー名ではない場合（通常の「曲名 / 本家アーティスト」形式）
+      a = right_part
+      if not a:
+        a = resolve_artist_name(t)
+
+    # タイムスタンプの秒換算
+    parts = list(map(int, ts_str.split(":")))
+    sec = (
+        parts[0] * 3600 + parts[1] * 60 + parts[2]
+        if len(parts) == 3
+        else parts[0] * 60 + parts[1]
+        if len(parts) == 2
+        else 0
+    )
+
+    songs.append({"title": t, "artist": a, "start": sec})
+
+  # 重複排除とソート
+  songs.sort(key=lambda x: x["start"])
+  unique_songs = []
+  seen = set()
+  for s in songs:
+    key = (s["start"], s["title"])
+    if key not in seen:
+      seen.add(key)
+      unique_songs.append(s)
+
+  return unique_songs
+    
 
 # ★ コメント欄からセトリを取得する関数
 def fetch_setlist_from_comments(youtube, video_id, fallback_members=None):

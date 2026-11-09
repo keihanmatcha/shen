@@ -39,9 +39,105 @@
         "tags": [],
         "songs": [
             {
+                "title": "身体は正直だって言ってんの",
+                "artist": "式浦躁吾",
+                "start": 150,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "main dishが足りてない",
+                "artist": "宮守文学",
+                "start": 312,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "モニタリング",
+                "artist": "DECO*27",
+                "start": 514,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "㋰責任集合体",
+                "artist": "マサラダ",
+                "start": 708,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "人マニア",
+                "artist": "原口沙輔",
+                "start": 940,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "虚無さん",
+                "artist": "¿?shimon",
+                "start": 1760,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "Who?",
+                "artist": "Azari",
+                "start": 2023,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "分かっちゃいないね",
+                "artist": "monet",
+                "start": 2243,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "お呪い",
+                "artist": "なきそ",
+                "start": 2561,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "Dec.",
+                "artist": "Kanaria",
+                "start": 2716,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
                 "title": "プロポーズ",
-                "artist": "なとり",
+                "artist": "内緒のピアス",
                 "start": 2874,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ジレンマ",
+                "artist": "DECO*27",
+                "start": 3279,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "妄想アスパルテーム feat.picco,初音ミク",
+                "artist": "ESHIKARA",
+                "start": 3692,
                 "tags": [
                     "カバー"
                 ]
@@ -55,9 +151,49 @@
                 ]
             },
             {
+                "title": "ヴィータ",
+                "artist": "柊キライ",
+                "start": 4420,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ダーリン",
+                "artist": "須田景凪",
+                "start": 4731,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "プロポーズ",
+                "artist": "なとり",
+                "start": 4909,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ループザルーム",
+                "artist": "ルシノ",
+                "start": 5160,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
                 "title": "テレパシ",
                 "artist": "DECO*27",
                 "start": 5353,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "D/N/A",
+                "artist": "Azari",
+                "start": 5563,
                 "tags": [
                     "カバー"
                 ]
@@ -71,9 +207,89 @@
                 ]
             },
             {
+                "title": "バグ",
+                "artist": "かいりきベア",
+                "start": 6348,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "Ready Steady",
+                "artist": "Giga",
+                "start": 6595,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
                 "title": "ザムザ",
                 "artist": "てにをは",
                 "start": 6977,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ラヴィ",
+                "artist": "すりぃ",
+                "start": 7200,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "神っぽいな",
+                "artist": "ピノキオピー",
+                "start": 7403,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "酔いどれ知らず",
+                "artist": "Kanaria",
+                "start": 7622,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ノンブレス・オブリージュ",
+                "artist": "ピノキオピー",
+                "start": 7770,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "チェリーポップ",
+                "artist": "DECO*27",
+                "start": 7999,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "サラマンダー",
+                "artist": "DECO*27",
+                "start": 8159,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "flos",
+                "artist": "R Sound Design",
+                "start": 8932,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "愛言葉Ⅲ",
+                "artist": "DECO*27",
+                "start": 9215,
                 "tags": [
                     "カバー"
                 ]
@@ -87,17 +303,129 @@
                 ]
             },
             {
-                "title": "テレビキャスタービーボーイ",
-                "artist": "",
-                "start": 14091,
+                "title": "乙女解剖",
+                "artist": "DECO*27",
+                "start": 9700,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "砂の惑星",
-                "artist": "米津玄師 & 初音ミク",
-                "start": 15977,
+                "title": "ジャックポットサッドガール",
+                "artist": "syudou",
+                "start": 9941,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "メーベル",
+                "artist": "バルーン",
+                "start": 10141,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ビターチョコデコレーション",
+                "artist": "syudou",
+                "start": 10349,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "邪魔",
+                "artist": "syudou",
+                "start": 10559,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "恋愛裁判",
+                "artist": "40㍍P",
+                "start": 11044,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "シネマ",
+                "artist": "Ayase",
+                "start": 11277,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "SNOBBISM",
+                "artist": "Neru&z'5",
+                "start": 11513,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "アイディスマイル",
+                "artist": "とあ",
+                "start": 11738,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "このふざけた素晴らしき世界は、僕の為にある",
+                "artist": "n.k",
+                "start": 11932,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "携帯恋話",
+                "artist": "まふまふ",
+                "start": 12215,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ヴァンパイア",
+                "artist": "DECO*27",
+                "start": 12492,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "失敗作少女",
+                "artist": "かいりきベア",
+                "start": 12713,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "あわよくばきみの眷属になりたいな",
+                "artist": "Peg",
+                "start": 13267,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ベノム",
+                "artist": "かいりきベア",
+                "start": 13473,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "テレキャスタービーボーイ",
+                "artist": "すりぃ",
+                "start": 14091,
                 "tags": [
                     "カバー"
                 ]
@@ -3043,161 +3371,9 @@
         "tags": [],
         "songs": [
             {
-                "title": "SSME",
-                "artist": "PK shampoo",
-                "start": 171,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "エマ",
-                "artist": "go!go!vanillas",
-                "start": 300,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "あー",
-                "artist": "ank",
-                "start": 522,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "色水",
-                "artist": "おいしくるメロンパン",
-                "start": 781,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "革命前夜",
-                "artist": "Tempalay",
-                "start": 1012,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "夜にダンス",
-                "artist": "フレンズ",
-                "start": 1299,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ルビを振れ",
-                "artist": "名誉伝説",
-                "start": 1568,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "さよならプリズナー",
-                "artist": "yonige",
-                "start": 1820,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "リッケンバッカー",
-                "artist": "リーガルリリー",
-                "start": 2106,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "絶対的な関係",
-                "artist": "赤い公園",
-                "start": 2378,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "アブノーマルが足りない",
-                "artist": "アルカラ",
-                "start": 2494,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Invitation",
-                "artist": "9mm Parabellum Bullet",
-                "start": 2684,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "漂流劇団",
-                "artist": "ズーカラデル",
-                "start": 2855,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "都会の泉",
-                "artist": "Brian the Sun",
-                "start": 3085,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "手つかずの世界",
-                "artist": "椿屋四重奏",
-                "start": 3379,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ねぇ",
-                "artist": "YOAKE",
-                "start": 3606,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "％",
-                "artist": "mol-74",
-                "start": 3824,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "冥冥",
-                "artist": "Chevon",
-                "start": 3989,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "銀河高速",
-                "artist": "ハンブレッダーズ",
-                "start": 4211,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "modify Youth",
-                "artist": "kurayamisaka",
-                "start": 4569,
+                "title": "歌枠 ｜夏を感じる季節にはロック歌うしかないでしょ！🐼💭",
+                "artist": "",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -3355,8 +3531,8 @@
         "tags": [],
         "songs": [
             {
-                "title": "blue water",
-                "artist": "morikawa miho",
+                "title": "ブルーウォーター",
+                "artist": "森川美穂",
                 "start": 177,
                 "tags": [
                     "カバー"
@@ -3371,7 +3547,7 @@
                 ]
             },
             {
-                "title": "HEART no keijou",
+                "title": "HEARTの形状",
                 "artist": "B∀G",
                 "start": 756,
                 "tags": [
@@ -3387,169 +3563,49 @@
                 ]
             },
             {
-                "title": "rondo - revolution",
-                "artist": "okui masami",
+                "title": "輪舞-revolution",
+                "artist": "奥井雅美",
                 "start": 1324,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "egao ni aitai",
-                "artist": "hamada rie",
+                "title": "笑顔に会いたい",
+                "artist": "濱田理恵",
                 "start": 1606,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "tokimeki no doukasen",
-                "artist": "konno yukari",
+                "title": "ときめきの導火線",
+                "artist": "今野友加里",
                 "start": 1851,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "nagareboshi e",
-                "artist": "three lights",
+                "title": "流れ星へ",
+                "artist": "スリーライツ",
                 "start": 2117,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "todokanu omoi my friend's love",
-                "artist": "three lights",
+                "title": "とどかぬ想い -my friend's love-",
+                "artist": "スリーライツ",
                 "start": 2416,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ruuju ni naritai",
-                "artist": "kajiya yoshi",
+                "title": "ルージュになりたい",
+                "artist": "梶谷美由紀",
                 "start": 2663,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "chikamichi shitai",
-                "artist": "suka kyouko",
-                "start": 2917,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "kagayaki wa kimi no naka ni",
-                "artist": "suzuki yume",
-                "start": 3204,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Forever",
-                "artist": "1999 shoujotai",
-                "start": 3483,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "datte, daisuki!",
-                "artist": "COMA",
-                "start": 3724,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "WILL",
-                "artist": "yonekura chihiro",
-                "start": 4280,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Wild Flowers",
-                "artist": "RAMAR",
-                "start": 4552,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "dare mo shiranai chizu de",
-                "artist": "matsuzawa yumi",
-                "start": 4834,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "dis -",
-                "artist": "arisaka mika",
-                "start": 5134,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "shinryaku - the Chariots VII -",
-                "artist": "OZWORLD",
-                "start": 5263,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Silent Wind",
-                "artist": "sugai eri",
-                "start": 5568,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "DOUBLE WIND",
-                "artist": "komukai minako",
-                "start": 5801,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "que sera sera",
-                "artist": "koshimizu ami",
-                "start": 6039,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "yakusoku no basho e",
-                "artist": "yonekura chihiro",
-                "start": 6252,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "STILL TIME",
-                "artist": "tokuyama hidenori",
-                "start": 6589,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "FOR REAL",
-                "artist": "tokuyama hidenori",
-                "start": 6795,
                 "tags": [
                     "カバー"
                 ]
@@ -3714,8 +3770,8 @@
         "tags": [],
         "songs": [
             {
-                "title": "急上昇",
-                "artist": "さよならいちごちゃん · Serani Poji",
+                "title": "さよならいちごちゃん",
+                "artist": "Serani Poji",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -5528,8 +5584,8 @@
                 "artist": "Rain Drops",
                 "start": 98,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5537,8 +5593,8 @@
                 "artist": "Rain Drops",
                 "start": 502,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5546,8 +5602,8 @@
                 "artist": "Rain Drops",
                 "start": 747,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5555,8 +5611,8 @@
                 "artist": "Rain Drops",
                 "start": 765,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5564,8 +5620,8 @@
                 "artist": "Rain Drops",
                 "start": 993,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5573,8 +5629,8 @@
                 "artist": "Rain Drops",
                 "start": 1177,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5582,8 +5638,8 @@
                 "artist": "Rain Drops",
                 "start": 1368,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5591,8 +5647,8 @@
                 "artist": "Rain Drops",
                 "start": 1662,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5600,8 +5656,8 @@
                 "artist": "Rain Drops",
                 "start": 2031,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5609,8 +5665,8 @@
                 "artist": "Rain Drops",
                 "start": 2319,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5618,8 +5674,8 @@
                 "artist": "Rain Drops",
                 "start": 2504,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -5627,8 +5683,8 @@
                 "artist": "Rain Drops",
                 "start": 3162,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -6407,7 +6463,7 @@
             },
             {
                 "title": "〜",
-                "artist": "",
+                "artist": "ptf boi",
                 "start": 1380,
                 "tags": [
                     "カバー"
@@ -6415,7 +6471,7 @@
             },
             {
                 "title": "〜",
-                "artist": "",
+                "artist": "ptf boi",
                 "start": 1520,
                 "tags": [
                     "カバー"
@@ -6423,7 +6479,7 @@
             },
             {
                 "title": "〜",
-                "artist": "",
+                "artist": "ptf boi",
                 "start": 1525,
                 "tags": [
                     "カバー"
@@ -6431,7 +6487,7 @@
             },
             {
                 "title": "〜",
-                "artist": "",
+                "artist": "ptf boi",
                 "start": 1540,
                 "tags": [
                     "カバー"
@@ -6447,7 +6503,7 @@
             },
             {
                 "title": "〜",
-                "artist": "",
+                "artist": "ptf boi",
                 "start": 1555,
                 "tags": [
                     "カバー"
@@ -6455,7 +6511,7 @@
             },
             {
                 "title": "〜",
-                "artist": "",
+                "artist": "ptf boi",
                 "start": 1560,
                 "tags": [
                     "カバー"
@@ -6941,153 +6997,9 @@
         "tags": [],
         "songs": [
             {
-                "title": "そのままの君でいて",
-                "artist": "仁藤優子",
-                "start": 267,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "銀河旋風ブライガー",
-                "artist": "たいらいさお",
-                "start": 490,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "DIVER# 2100",
-                "artist": "R.A.M.",
-                "start": 637,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Reckless fire",
-                "artist": "井出泰彰",
-                "start": 900,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Drastic my soul",
-                "artist": "酒井ミキオ",
-                "start": 1181,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "旅立ちの鐘が鳴る",
-                "artist": "酒井ミキオ",
-                "start": 1443,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "嘆きのロザリオ",
-                "artist": "JAM Project",
-                "start": 1739,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "リライト",
-                "artist": "ASIAN KUNG-FU GENERATION",
-                "start": 1967,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "メリッサ",
-                "artist": "ポルノグラフィティ",
-                "start": 2206,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "さらば碧き面影",
-                "artist": "ロードオブメジャー",
-                "start": 2493,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "慟哭ノ雨",
-                "artist": "GRANRODEO",
-                "start": 2730,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "溝ノ口太陽族",
-                "artist": "manzo",
-                "start": 2972,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "修羅",
-                "artist": "DOES",
-                "start": 3240,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "空色デイズ",
-                "artist": "中川翔子",
-                "start": 3450,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "狂乱 Hey Kids!!",
-                "artist": "THE ORAL CIGARETTES",
-                "start": 3713,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "夜は眠れるかい?",
-                "artist": "flumpool",
-                "start": 3978,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "アイデンティティ",
-                "artist": "酒井ミキオ",
-                "start": 4217,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "革命道中",
-                "artist": "アイナ・ジ・エンド",
-                "start": 4770,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "IRIS OUT",
-                "artist": "米津玄師",
-                "start": 4989,
+                "title": "歌枠 ｜新曲から懐メロまで一気に駆け抜けるアニソンカラオケ🎤",
+                "artist": "",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -8670,55 +8582,55 @@
         "tags": [],
         "songs": [
             {
-                "title": "すきっ!",
-                "artist": "ときめき♡宣伝部",
+                "title": "suki!",
+                "artist": "tokimeki ♡ sendenbu",
                 "start": 238,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "最上級にかわいいの！",
-                "artist": "超ときめき♡宣伝部",
+                "title": "saijōkyū ni kawaī no!",
+                "artist": "chō tokimeki ♡ sendenbu",
                 "start": 566,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "断捨離彼氏",
-                "artist": "ZOC",
+                "title": "Danshari Kareshi - ZOC",
+                "artist": "ZOCX",
                 "start": 771,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "SHINEMAGIC",
-                "artist": "ZOC",
+                "title": "SHINEMAGIC - ZOC",
+                "artist": "ZOCX",
                 "start": 1018,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ヒアルロンリーガール",
-                "artist": "ZOC",
+                "title": "Hyaluronly Girl - ZOC",
+                "artist": "ZOCX",
                 "start": 1274,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "まろまろ浄土",
-                "artist": "ZOC",
+                "title": "maro maro jōdo - ZOC",
+                "artist": "ZOCX",
                 "start": 1502,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Kiss&Bite Me!",
+                "title": "Kiss & Bite Me!",
                 "artist": "AVAM",
                 "start": 1736,
                 "tags": [
@@ -8726,96 +8638,96 @@
                 ]
             },
             {
-                "title": "祝祭",
-                "artist": "＝LOVE",
+                "title": "shukusai - =LOVE",
+                "artist": "Equel Love",
                 "start": 1950,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "呪って呪って",
-                "artist": "＝LOVE",
+                "title": "norotte norotte - =LOVE",
+                "artist": "Equel Love",
                 "start": 2254,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "夢幻クライマックス",
-                "artist": "℃-ute",
+                "title": "mugen kuraimakkusu - Cute",
+                "artist": "C-ute",
                 "start": 2471,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "泡沫サタデーナイト",
-                "artist": "モーニング娘。",
+                "title": "Utakata Saturday Night",
+                "artist": "Morning musume",
                 "start": 2727,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Moonlight night ～月夜の晩だよ～",
-                "artist": "モーニング娘。",
+                "title": "Moonlight night ~ tsukiyo no bandayo ~",
+                "artist": "Morning musume",
                 "start": 2974,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "愛して 愛して 後一分",
-                "artist": "モーニング娘。",
+                "title": "Aishite Aishite Ato Ippun",
+                "artist": "Morning musume",
                 "start": 3207,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "好きって言ってよ",
-                "artist": "Juice=Juice",
+                "title": "suki tte itteyo - Juice = Juice",
+                "artist": "Juice Juice",
                 "start": 3451,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "イジワルしないで 抱きしめてよ",
-                "artist": "Juice=Juice",
+                "title": "ijiwaru shinaide dakishimeteyo - Juice = Juice",
+                "artist": "Juice Juice",
                 "start": 3720,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "「ひとりで生きられそう」って それってねぇ、褒めているの?",
-                "artist": "Juice=Juice",
+                "title": "\"hitori de ikirare sō\" tte sore ttenē, hometeiru no? - Juice = Juice",
+                "artist": "Juice Juice",
                 "start": 3984,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "盛れ！ミ・アモーレ",
-                "artist": "Juice=Juice",
+                "title": "more! mi amore",
+                "artist": "Juice = Juice",
                 "start": 4214,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "イイじゃん",
-                "artist": "M!LK",
+                "title": "iijan - M!LK",
+                "artist": "MILK",
                 "start": 4464,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "好きすぎて滅！",
-                "artist": "M!LK",
+                "title": "sukisugite metsu! - M!LK",
+                "artist": "MILK",
                 "start": 4784,
                 "tags": [
                     "カバー"
@@ -11950,7 +11862,7 @@
         "songs": [
             {
                 "title": "OVERDRIVE",
-                "artist": "TWS",
+                "artist": "Coch",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -14440,8 +14352,8 @@
                 "artist": "ぱんだ立どじゃ高校",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "ぱんだ立どじゃ高校"
+                    "ぱんだ立どじゃ高校",
+                    "オリジナル"
                 ]
             }
         ]
@@ -14537,8 +14449,8 @@
                 "artist": "cresc.",
                 "start": 2551,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -16502,8 +16414,8 @@
                 "artist": "cresc.",
                 "start": 1717,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -18385,8 +18297,8 @@
                 "artist": "Rain Drops",
                 "start": 281,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -18394,8 +18306,8 @@
                 "artist": "Rain Drops",
                 "start": 795,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -18403,8 +18315,8 @@
                 "artist": "Rain Drops",
                 "start": 1217,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -18412,8 +18324,8 @@
                 "artist": "Rain Drops",
                 "start": 1729,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -18421,8 +18333,8 @@
                 "artist": "Rain Drops",
                 "start": 2266,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -18430,8 +18342,8 @@
                 "artist": "Rain Drops",
                 "start": 2628,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -18439,8 +18351,8 @@
                 "artist": "Rain Drops",
                 "start": 3089,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -18448,8 +18360,8 @@
                 "artist": "Rain Drops",
                 "start": 3684,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -18457,8 +18369,8 @@
                 "artist": "Rain Drops",
                 "start": 4430,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -18481,8 +18393,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -18897,8 +18809,8 @@
                 "artist": "チームヘラクレス2024",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "チームヘラクレス"
+                    "チームヘラクレス",
+                    "オリジナル"
                 ]
             }
         ]
@@ -22205,7 +22117,7 @@
         "songs": [
             {
                 "title": "LADY CRAZY",
-                "artist": "Various artists",
+                "artist": "HIMEHINA",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -22625,8 +22537,8 @@
                 "artist": "cresc.",
                 "start": 3014,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -23298,8 +23210,8 @@
                 "artist": "cresc.",
                 "start": 1204,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -25980,8 +25892,8 @@
                 "artist": "Rain Drops",
                 "start": 4729,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -25989,8 +25901,8 @@
                 "artist": "Rain Drops",
                 "start": 4924,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -25998,8 +25910,8 @@
                 "artist": "Rain Drops",
                 "start": 5172,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -26007,8 +25919,8 @@
                 "artist": "Rain Drops",
                 "start": 5386,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -28792,8 +28704,8 @@
                 "artist": "Rain Drops",
                 "start": 1366,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -28801,8 +28713,8 @@
                 "artist": "Rain Drops",
                 "start": 1612,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -28810,8 +28722,8 @@
                 "artist": "Rain Drops",
                 "start": 1861,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -28819,8 +28731,8 @@
                 "artist": "Rain Drops",
                 "start": 2082,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -29052,8 +28964,8 @@
                 "artist": "cresc.",
                 "start": 18953,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -29061,8 +28973,8 @@
                 "artist": "cresc.",
                 "start": 19280,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -29070,8 +28982,8 @@
                 "artist": "cresc.",
                 "start": 19548,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -29279,8 +29191,8 @@
                 "artist": "cresc.",
                 "start": 30857,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -29344,8 +29256,8 @@
                 "artist": "Rain Drops",
                 "start": 33371,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -29708,8 +29620,8 @@
                 "artist": "cresc.",
                 "start": 32,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -29733,8 +29645,8 @@
                 "artist": "Rain Drops",
                 "start": 82,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -29858,8 +29770,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -30333,8 +30245,8 @@
                 "artist": "Rain Drops",
                 "start": 302,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -30342,8 +30254,8 @@
                 "artist": "Rain Drops",
                 "start": 543,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -30351,8 +30263,8 @@
                 "artist": "Rain Drops",
                 "start": 730,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -30360,8 +30272,8 @@
                 "artist": "Rain Drops",
                 "start": 930,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -30369,8 +30281,8 @@
                 "artist": "Rain Drops",
                 "start": 1135,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -30378,8 +30290,8 @@
                 "artist": "Rain Drops",
                 "start": 1407,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -30387,8 +30299,8 @@
                 "artist": "Rain Drops",
                 "start": 1709,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -30396,8 +30308,8 @@
                 "artist": "Rain Drops",
                 "start": 2042,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -31085,8 +30997,8 @@
                 "artist": "cresc.",
                 "start": 28247,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -33340,8 +33252,8 @@
                 "artist": "cresc.",
                 "start": 840,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -37086,8 +36998,8 @@
                 "artist": "cresc.",
                 "start": 567,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37878,8 +37790,8 @@
                 "artist": "ERRors (夕陽リリ, 緑仙, える)",
                 "start": 840,
                 "tags": [
-                    "オリジナル",
-                    "ERRors"
+                    "ERRors",
+                    "オリジナル"
                 ]
             },
             {
@@ -38362,8 +38274,8 @@
                 "artist": "Rain Drops",
                 "start": 162,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38371,8 +38283,8 @@
                 "artist": "Rain Drops",
                 "start": 412,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38380,8 +38292,8 @@
                 "artist": "Rain Drops",
                 "start": 609,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38389,8 +38301,8 @@
                 "artist": "Rain Drops",
                 "start": 924,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38398,8 +38310,8 @@
                 "artist": "Rain Drops",
                 "start": 1240,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38407,8 +38319,8 @@
                 "artist": "Rain Drops",
                 "start": 1457,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38416,8 +38328,8 @@
                 "artist": "Rain Drops",
                 "start": 1699,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38425,8 +38337,8 @@
                 "artist": "Rain Drops",
                 "start": 1906,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38434,8 +38346,8 @@
                 "artist": "Rain Drops",
                 "start": 2172,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38443,8 +38355,8 @@
                 "artist": "Rain Drops",
                 "start": 2429,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38452,8 +38364,8 @@
                 "artist": "Rain Drops",
                 "start": 2721,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38461,8 +38373,8 @@
                 "artist": "Rain Drops",
                 "start": 2967,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38470,8 +38382,8 @@
                 "artist": "Rain Drops",
                 "start": 3170,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38479,8 +38391,8 @@
                 "artist": "Rain Drops",
                 "start": 3391,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38488,8 +38400,8 @@
                 "artist": "Rain Drops",
                 "start": 3588,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38497,8 +38409,8 @@
                 "artist": "Rain Drops",
                 "start": 3819,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38506,8 +38418,8 @@
                 "artist": "Rain Drops",
                 "start": 4065,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38515,8 +38427,8 @@
                 "artist": "Rain Drops",
                 "start": 4395,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38524,8 +38436,8 @@
                 "artist": "Rain Drops",
                 "start": 4590,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38533,8 +38445,8 @@
                 "artist": "三枝明那(Rain Drops)",
                 "start": 4860,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38542,8 +38454,8 @@
                 "artist": "Rain Drops",
                 "start": 5080,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38551,8 +38463,8 @@
                 "artist": "Rain Drops",
                 "start": 5438,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38560,8 +38472,8 @@
                 "artist": "童田明治(Rain Drops)",
                 "start": 5873,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38569,8 +38481,8 @@
                 "artist": "Rain Drops",
                 "start": 6094,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38578,8 +38490,8 @@
                 "artist": "Rain Drops",
                 "start": 6456,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -38802,8 +38714,8 @@
                 "artist": "Rain Drops",
                 "start": 638,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38811,8 +38723,8 @@
                 "artist": "Rain Drops",
                 "start": 843,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38820,8 +38732,8 @@
                 "artist": "Rain Drops",
                 "start": 1093,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38829,8 +38741,8 @@
                 "artist": "Rain Drops",
                 "start": 1407,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -38838,8 +38750,8 @@
                 "artist": "Rain Drops",
                 "start": 1625,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -39151,8 +39063,8 @@
                 "artist": "cresc.",
                 "start": 23085,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -39160,8 +39072,8 @@
                 "artist": "cresc.",
                 "start": 23363,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -39169,8 +39081,8 @@
                 "artist": "cresc.",
                 "start": 23644,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -39242,8 +39154,8 @@
                 "artist": "Rain Drops",
                 "start": 26503,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -39251,8 +39163,8 @@
                 "artist": "Rain Drops",
                 "start": 26732,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -39260,8 +39172,8 @@
                 "artist": "Rain Drops",
                 "start": 26929,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -39269,8 +39181,8 @@
                 "artist": "Rain Drops",
                 "start": 27187,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -39278,8 +39190,8 @@
                 "artist": "Rain Drops",
                 "start": 27540,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -39892,8 +39804,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -40056,8 +39968,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -40701,8 +40613,8 @@
                 "artist": "ERRors",
                 "start": 7976,
                 "tags": [
-                    "オリジナル",
-                    "ERRors"
+                    "ERRors",
+                    "オリジナル"
                 ]
             },
             {
@@ -40970,8 +40882,8 @@
                 "artist": "Rain Drops",
                 "start": 675,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -40979,8 +40891,8 @@
                 "artist": "Rain Drops",
                 "start": 1006,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -40988,8 +40900,8 @@
                 "artist": "Rain Drops",
                 "start": 1205,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -43223,8 +43135,8 @@
                 "artist": "cresc.",
                 "start": 29722,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -43603,8 +43515,8 @@
                 "artist": "cresc.",
                 "start": 1416,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -43628,8 +43540,8 @@
                 "artist": "Rain Drops",
                 "start": 2166,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -43684,8 +43596,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -43714,8 +43626,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -43744,8 +43656,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -43817,8 +43729,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -43879,8 +43791,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -45582,8 +45494,8 @@
                 "artist": "Rain Drops",
                 "start": 425,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -45591,8 +45503,8 @@
                 "artist": "Rain Drops",
                 "start": 658,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -45600,8 +45512,8 @@
                 "artist": "Rain Drops",
                 "start": 1036,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -45609,8 +45521,8 @@
                 "artist": "Rain Drops",
                 "start": 1306,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -45627,8 +45539,8 @@
                 "artist": "Rain Drops",
                 "start": 1950,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -45645,8 +45557,8 @@
                 "artist": "Rain Drops",
                 "start": 2529,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -45663,8 +45575,8 @@
                 "artist": "Rain Drops",
                 "start": 3092,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -45672,8 +45584,8 @@
                 "artist": "Rain Drops",
                 "start": 3481,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -46091,8 +46003,8 @@
                 "artist": "ERRors (夕陽リリ, 緑仙, える)",
                 "start": 3059,
                 "tags": [
-                    "オリジナル",
-                    "ERRors"
+                    "ERRors",
+                    "オリジナル"
                 ]
             },
             {
@@ -46172,8 +46084,8 @@
                 "artist": "cresc.",
                 "start": 5864,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -46492,8 +46404,8 @@
                 "artist": "Rain Drops",
                 "start": 2545,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -46501,8 +46413,8 @@
                 "artist": "Rain Drops",
                 "start": 3114,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -46566,8 +46478,8 @@
                 "artist": "cresc.",
                 "start": 2669,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -47630,8 +47542,8 @@
                 "artist": "Rain Drops",
                 "start": 6399,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -47651,8 +47563,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -47672,8 +47584,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -47693,8 +47605,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -47767,8 +47679,8 @@
                 "artist": "Rain Drops",
                 "start": 165,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -47776,8 +47688,8 @@
                 "artist": "Rain Drops",
                 "start": 524,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -47785,8 +47697,8 @@
                 "artist": "Rain Drops",
                 "start": 1281,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -47794,8 +47706,8 @@
                 "artist": "Rain Drops",
                 "start": 2262,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -47803,8 +47715,8 @@
                 "artist": "Rain Drops",
                 "start": 2628,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -47838,8 +47750,8 @@
                 "artist": "Rain Drops",
                 "start": 89,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -48052,8 +47964,8 @@
                 "artist": "Rain Drops",
                 "start": 113,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -48231,8 +48143,8 @@
                 "artist": "Rain Drops",
                 "start": 94,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -48317,8 +48229,8 @@
                 "artist": "Rain Drops",
                 "start": 95,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -48640,8 +48552,8 @@
                 "artist": "Rain Drops",
                 "start": 92,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -48811,8 +48723,8 @@
                 "artist": "Rain Drops",
                 "start": 2682,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -48820,8 +48732,8 @@
                 "artist": "Rain Drops",
                 "start": 2930,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -48850,7 +48762,7 @@
         "songs": [
             {
                 "title": "さよならいちごちゃん",
-                "artist": "",
+                "artist": "Serani Poji",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -49162,8 +49074,8 @@
                 "artist": "Rain Drops",
                 "start": 166,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49171,8 +49083,8 @@
                 "artist": "Rain Drops",
                 "start": 434,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49180,8 +49092,8 @@
                 "artist": "Rain Drops",
                 "start": 639,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49189,8 +49101,8 @@
                 "artist": "Rain Drops",
                 "start": 883,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49198,8 +49110,8 @@
                 "artist": "Rain Drops",
                 "start": 1109,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49207,8 +49119,8 @@
                 "artist": "Rain Drops",
                 "start": 1315,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49216,8 +49128,8 @@
                 "artist": "Rain Drops",
                 "start": 1613,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49225,8 +49137,8 @@
                 "artist": "Rain Drops",
                 "start": 2215,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49234,8 +49146,8 @@
                 "artist": "Rain Drops",
                 "start": 2615,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49243,8 +49155,8 @@
                 "artist": "Rain Drops",
                 "start": 2948,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49607,8 +49519,8 @@
                 "artist": "Rain Drops",
                 "start": 1,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49616,8 +49528,8 @@
                 "artist": "Rain Drops",
                 "start": 86,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49625,8 +49537,8 @@
                 "artist": "Rain Drops",
                 "start": 122,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49634,8 +49546,8 @@
                 "artist": "Rain Drops",
                 "start": 151,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49651,8 +49563,8 @@
                 "artist": "Rain Drops",
                 "start": 216,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49660,8 +49572,8 @@
                 "artist": "Rain Drops",
                 "start": 267,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49669,8 +49581,8 @@
                 "artist": "Rain Drops",
                 "start": 293,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -49678,8 +49590,8 @@
                 "artist": "Rain Drops",
                 "start": 327,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49728,8 +49640,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49750,8 +49662,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49772,8 +49684,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49794,8 +49706,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -49816,8 +49728,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -50348,8 +50260,8 @@
                 "artist": "Rain Drops",
                 "start": 1,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -50357,8 +50269,8 @@
                 "artist": "Rain Drops",
                 "start": 40,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -50366,8 +50278,8 @@
                 "artist": "Rain Drops",
                 "start": 122,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -50375,8 +50287,8 @@
                 "artist": "Rain Drops",
                 "start": 152,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -50384,8 +50296,8 @@
                 "artist": "Rain Drops",
                 "start": 257,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -50393,8 +50305,8 @@
                 "artist": "Rain Drops",
                 "start": 292,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -50504,8 +50416,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -51122,8 +51034,8 @@
                 "artist": "Rain Drops",
                 "start": 65,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -51131,8 +51043,8 @@
                 "artist": "Rain Drops",
                 "start": 297,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -51197,8 +51109,8 @@
                 "artist": "cresc.",
                 "start": 2293,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -51462,8 +51374,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53261,8 +53173,8 @@
                 "artist": "cresc.",
                 "start": 2514,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53457,8 +53369,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53489,8 +53401,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53521,8 +53433,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53553,8 +53465,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53585,8 +53497,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53617,8 +53529,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53669,8 +53581,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53701,8 +53613,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53733,8 +53645,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53754,8 +53666,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -53916,8 +53828,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -54170,8 +54082,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -54179,8 +54091,8 @@
                 "artist": "Rain Drops",
                 "start": 25,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -54188,8 +54100,8 @@
                 "artist": "Rain Drops",
                 "start": 58,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -54197,8 +54109,8 @@
                 "artist": "Rain Drops",
                 "start": 106,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -54206,8 +54118,8 @@
                 "artist": "Rain Drops",
                 "start": 171,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -54215,8 +54127,8 @@
                 "artist": "Rain Drops",
                 "start": 235,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -54224,8 +54136,8 @@
                 "artist": "Rain Drops",
                 "start": 265,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -54233,8 +54145,8 @@
                 "artist": "Rain Drops",
                 "start": 346,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -54242,8 +54154,8 @@
                 "artist": "Rain Drops",
                 "start": 368,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -54274,8 +54186,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -54561,7 +54473,7 @@
         "songs": [
             {
                 "title": "9月4日（土）",
-                "artist": "バンドハラスメント",
+                "artist": "",
                 "start": 1200,
                 "tags": [
                     "カバー"
@@ -54650,8 +54562,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -54675,8 +54587,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -54986,8 +54898,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -55298,7 +55210,7 @@
             },
             {
                 "title": "東京テディベア",
-                "artist": "+α/あるふぁきゅん。",
+                "artist": "Neru, おればななP",
                 "start": 4475,
                 "tags": [
                     "カバー"
@@ -55385,8 +55297,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -56842,8 +56754,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -56909,8 +56821,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -57009,8 +56921,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -57043,8 +56955,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -57196,7 +57108,7 @@
             },
             {
                 "title": "コールボーイ【2019.12.07】",
-                "artist": "syudou",
+                "artist": "しゅどう",
                 "start": 3368,
                 "tags": [
                     "カバー"
@@ -57220,11 +57132,10 @@
             },
             {
                 "title": "蜜ノ味 【2020.05.26】",
-                "artist": "Rain Drops",
+                "artist": "",
                 "start": 4062,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "カバー"
                 ]
             },
             {
@@ -57269,7 +57180,7 @@
             },
             {
                 "title": "ギブス 【2020.01.27】",
-                "artist": "椎名林檎",
+                "artist": "虹原ぺぺろん",
                 "start": 5416,
                 "tags": [
                     "カバー"
@@ -58882,8 +58793,8 @@
                 "artist": "Rain Drops",
                 "start": 1686,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -58954,8 +58865,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -58986,8 +58897,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -59183,8 +59094,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61180,8 +61091,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61463,8 +61374,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61827,8 +61738,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61859,8 +61770,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61891,8 +61802,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61923,8 +61834,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61955,8 +61866,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61976,8 +61887,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -61997,8 +61908,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -62434,8 +62345,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -63503,8 +63414,8 @@
                 "artist": "Rain Drops",
                 "start": 1651,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             },
             {
@@ -63512,8 +63423,8 @@
                 "artist": "Rain Drops",
                 "start": 2086,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -64023,8 +63934,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65462,8 +65373,8 @@
                 "artist": "Rain Drops - 三枝明那",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65486,8 +65397,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65518,8 +65429,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65576,8 +65487,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65608,8 +65519,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65640,8 +65551,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65661,8 +65572,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65682,8 +65593,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -65703,8 +65614,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -66861,8 +66772,8 @@
                 "artist": "Rain Drops",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "Rain Drops",
+                    "オリジナル"
                 ]
             }
         ]
@@ -67535,97 +67446,9 @@
         "tags": [],
         "songs": [
             {
-                "title": "3倍! Sun Shine! カーニバル!｜アンジュ・カトリーナ×戌亥とこ×リゼ・ヘルエスタ",
+                "title": "M1：3 倍！Sun Shine！カーニバル！",
                 "artist": "",
                 "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Not For You｜叶×葛葉",
-                "artist": "",
-                "start": 25,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "1+1でQ.E.D.!!｜御伽原江良×童田明治",
-                "artist": "",
-                "start": 53,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "青春モード！もう一回！｜本間ひまわり",
-                "artist": "",
-                "start": 85,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "サンデーサンデー・フルーツフール｜える×シスター・クレア",
-                "artist": "",
-                "start": 109,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Playtime Magic｜加賀美ハヤト×夢追翔×緑仙",
-                "artist": "",
-                "start": 136,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "圧　倒　的　存　在　感｜鈴原るる×でびでび・でびる",
-                "artist": "",
-                "start": 185,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "煽動海獣ダイパンダ｜笹木咲",
-                "artist": "",
-                "start": 210,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Only｜樋口楓",
-                "artist": "",
-                "start": 236,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Aimless Story｜静凛",
-                "artist": "",
-                "start": 261,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "アンチグラビティ・ガール｜月ノ美兎",
-                "artist": "",
-                "start": 285,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "商品紹介",
-                "artist": "",
-                "start": 319,
                 "tags": [
                     "カバー"
                 ]
@@ -70736,8 +70559,8 @@
                 "artist": "ERRors(える, 夕陽リリ, 緑仙)",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "ERRors"
+                    "ERRors",
+                    "オリジナル"
                 ]
             }
         ]

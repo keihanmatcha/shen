@@ -241,8 +241,8 @@
                 "artist": "にじさんじ \\u0026 シェリン・バーガンディ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -671,129 +671,9 @@
         "tags": [],
         "songs": [
             {
-                "title": "ダーリン",
-                "artist": "須田景凪",
-                "start": 210,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "プロポーズ",
-                "artist": "内緒のピアス",
-                "start": 390,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "未完成婚姻論",
-                "artist": "Dannie May",
-                "start": 649,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "キャットラビング",
-                "artist": "香椎モイミ",
-                "start": 854,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "指切り",
-                "artist": "すこっぷ",
-                "start": 985,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "夕立のりぼん",
-                "artist": "みきとP",
-                "start": 1160,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "愛してみてよ減るもんじゃないし",
-                "artist": "ねぐせ。",
-                "start": 1441,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "look at the sea",
-                "artist": "おいしくるメロンパン",
-                "start": 1660,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ノックブーツ",
-                "artist": "Chevon",
-                "start": 1879,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "花屋の娘",
-                "artist": "フジファブリック",
-                "start": 2086,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "部屋",
-                "artist": "シャイトープ",
-                "start": 2346,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "リカ",
-                "artist": "SIX LOUNGE",
-                "start": 2665,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "好き好き大好き",
-                "artist": "戸川純",
-                "start": 2998,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "遭難",
-                "artist": "東京事変",
-                "start": 3230,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "分かっちゃいないね",
-                "artist": "monet",
-                "start": 3528,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ずうっといっしょ！",
-                "artist": "キタニタツヤ",
-                "start": 3854,
+                "title": "歌枠 ｜ メロい曲を歌っていくカラオケ配信🐼💭",
+                "artist": "",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -3480,15 +3360,15 @@
         "tags": [],
         "songs": [
             {
-                "title": "声入り",
+                "title": "🐼なんかチャラい〜",
                 "artist": "",
-                "start": 119,
+                "start": 128,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "帽子を脱ぐ北見",
+                "title": "📿じゃあ脱ぎますよ",
                 "artist": "",
                 "start": 136,
                 "tags": [
@@ -3496,17 +3376,9 @@
                 ]
             },
             {
-                "title": "🐼被って〜！",
+                "title": "🐼被って",
                 "artist": "",
-                "start": 161,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "みんな真っ黒の服",
-                "artist": "モノクロ組",
-                "start": 181,
+                "start": 157,
                 "tags": [
                     "カバー"
                 ]
@@ -3520,7 +3392,7 @@
                 ]
             },
             {
-                "title": "ナイスだね with 葉加瀬冬雪",
+                "title": "ナイスだね🐼⚗️ with 葉加瀬冬雪",
                 "artist": "",
                 "start": 290,
                 "tags": [
@@ -3528,47 +3400,39 @@
                 ]
             },
             {
-                "title": "ニャーだと思ってた",
-                "artist": "はかちぇの私欲",
-                "start": 561,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "おら歌え！",
+                "title": "危ない",
                 "artist": "",
-                "start": 601,
+                "start": 390,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "全部デュエット歌枠があったっていい",
+                "title": "限界",
+                "artist": "Mayo",
+                "start": 461,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "📿お水おかわりお願いします",
                 "artist": "",
-                "start": 890,
+                "start": 788,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ソロターン",
-                "artist": "主催が最初",
-                "start": 926,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "一昨日の55曲耐久に入ってた",
+                "title": "後半に歌おうものなら",
                 "artist": "",
-                "start": 956,
+                "start": 854,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "危なかったらウインク😉",
+                "title": "📿喉やばかったら俺念慈菴ぶちこむんで",
                 "artist": "",
                 "start": 975,
                 "tags": [
@@ -3576,135 +3440,95 @@
                 ]
             },
             {
-                "title": "ドパガキだから後奏カットしたくなる",
-                "artist": "",
+                "title": "ドパガキ",
+                "artist": "Иagi",
                 "start": 1196,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "指名される緑仙 with 歌配信",
+                "title": "指名制",
                 "artist": "",
-                "start": 1234,
+                "start": 1235,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "‪√‬−1",
+                "title": "🐼歌配信で歌ったことない",
                 "artist": "",
-                "start": 1273,
+                "start": 1257,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "いい曲",
+                "title": "√-1🐼",
                 "artist": "",
-                "start": 1454,
+                "start": 1274,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "名古屋ツアーの候補曲にあった",
+                "title": "泣ける",
                 "artist": "",
-                "start": 1490,
+                "start": 1340,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "しゃちほこ号",
-                "artist": "",
-                "start": 1519,
+                "title": "涙",
+                "artist": "アカサキサギリ",
+                "start": 1449,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "水流のロック組",
+                "title": "🐼これ歌ってほしい。声高え男とかに。",
                 "artist": "",
-                "start": 1551,
+                "start": 1535,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "応援に回る可能性がある北見",
+                "title": "88📿",
                 "artist": "",
-                "start": 1580,
+                "start": 1605,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "🐼日食なつこ？",
+                "title": "配信外の話なのに（",
                 "artist": "",
-                "start": 1593,
+                "start": 1827,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "リボーンの話",
+                "title": "🐼ハモっていい？（",
                 "artist": "",
-                "start": 1838,
+                "start": 2224,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "桜蘭高校ホスト部、黒執事、BLEACH、黒子のバスケ、幽遊白書",
+                "title": "北見が生きてるうちに",
                 "artist": "",
-                "start": 1888,
+                "start": 2333,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "FOCUS ONはキャラソン",
-                "artist": "",
-                "start": 1946,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "優しさのチル",
-                "artist": "",
-                "start": 2000,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ハモられるの嫌だったはかちぇ",
-                "artist": "",
-                "start": 2223,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "気持ちよく歌えるように作られてる曲",
-                "artist": "",
-                "start": 2294,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "デュエットのターン",
-                "artist": "",
-                "start": 2320,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "荷が重い北見",
+                "title": "🐼これは楽しみに来たから…（",
                 "artist": "",
                 "start": 2360,
                 "tags": [
@@ -3712,33 +3536,17 @@
                 ]
             },
             {
-                "title": "🐼これ歌える相手ってにじさんじにいるんだよ",
+                "title": "MISSION🐼📿",
                 "artist": "",
-                "start": 2383,
+                "start": 2401,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "MISSION with 北見遊征",
-                "artist": "idoyklik",
-                "start": 2400,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "🐼MAZZEL歌えるの嬉しい",
+                "title": "お互い人伝てに",
                 "artist": "",
-                "start": 2613,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "布教タイム",
-                "artist": "",
-                "start": 2640,
+                "start": 2612,
                 "tags": [
                     "カバー"
                 ]
@@ -3746,13 +3554,13 @@
             {
                 "title": "🐼お大事に",
                 "artist": "",
-                "start": 2680,
+                "start": 2679,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ららら♪だけ5歳児",
+                "title": "la la laだけ5歳児（",
                 "artist": "",
                 "start": 2950,
                 "tags": [
@@ -3760,111 +3568,95 @@
                 ]
             },
             {
-                "title": "デュエットに詰め込んだら練習できる",
+                "title": "しが確定している北見（",
                 "artist": "",
-                "start": 2977,
+                "start": 3039,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ソロゾーン",
+                "title": "エモ崩壊（",
                 "artist": "",
-                "start": 3032,
+                "start": 3346,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "リアリスト2人w",
+                "title": "アフターダーク📿",
                 "artist": "",
-                "start": 3311,
+                "start": 3397,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "フォローする北見",
+                "title": "、",
+                "artist": "深藍",
+                "start": 3397,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "🐼1人で“あの頃”縛りしてる？",
                 "artist": "",
-                "start": 3351,
+                "start": 3595,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "家事もやるよ〜",
+                "title": "やっぱり配信外（",
                 "artist": "",
-                "start": 3384,
+                "start": 3599,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "🐼1人であの頃縛りしてる？",
+                "title": "📿いけるかわかんないですけど“あの頃”すぎるやつが…",
                 "artist": "",
-                "start": 3594,
+                "start": 3614,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "あの頃のジャンプ縛り歌枠やりたい",
+                "title": "あの頃を歌われると（",
                 "artist": "",
-                "start": 3636,
+                "start": 3710,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "黒崎一護のアスタリスク",
+                "title": "ビビデバ🐼",
                 "artist": "",
-                "start": 3669,
+                "start": 3744,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "歌が上手いルフィ",
+                "title": "歌える気がしないテクさ",
                 "artist": "",
-                "start": 3691,
+                "start": 3926,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ビビデバ with 星街すいせい",
-                "artist": "タカオカミズキ",
-                "start": 3741,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ビビデバ好きな緑仙",
+                "title": "人の歌枠から持ってくる人×2（",
                 "artist": "",
-                "start": 3912,
+                "start": 3971,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "緑仙の歌枠から探したはかちぇと長尾",
-                "artist": "",
-                "start": 3970,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "男性でも歌いやすい",
-                "artist": "",
-                "start": 4298,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "2012年",
+                "title": "ﾔﾒﾃﾔﾒﾃﾔﾒﾃ",
                 "artist": "",
                 "start": 4332,
                 "tags": [
@@ -3872,7 +3664,7 @@
                 ]
             },
             {
-                "title": "非公式サイトが便利な話😂",
+                "title": "この世の全てを歌ってる緑仙",
                 "artist": "",
                 "start": 4354,
                 "tags": [
@@ -3880,55 +3672,23 @@
                 ]
             },
             {
-                "title": "ライバーあるある",
-                "artist": "思い出せない",
-                "start": 4414,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "歌える曲をリストにしてる緑仙😳",
+                "title": "先バレ",
                 "artist": "",
-                "start": 4445,
+                "start": 4497,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "デュエットターン",
+                "title": "📿じゃあ葉加瀬さん後は、手筈通りに",
                 "artist": "",
-                "start": 4476,
+                "start": 4513,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "先バレする長尾",
-                "artist": "",
-                "start": 4488,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "先バray",
-                "artist": "",
-                "start": 4526,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "キー変更してやり直し",
-                "artist": "",
-                "start": 4556,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "手筈通り",
+                "title": "手筈（",
                 "artist": "",
                 "start": 4825,
                 "tags": [
@@ -3936,103 +3696,79 @@
                 ]
             },
             {
-                "title": "先バレ",
+                "title": "先バレ返し（",
                 "artist": "",
-                "start": 4855,
+                "start": 4853,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "滅すぎて好き",
-                "artist": "男子のテーブル",
-                "start": 4895,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "好きすぎて滅！ with 長尾景",
-                "artist": "サキュ",
-                "start": 4939,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "え、好き",
+                "title": "葉加瀬さんのでかい背中",
                 "artist": "",
-                "start": 5164,
+                "start": 4867,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "お手洗いに行きたい長尾",
+                "title": "水が7本",
                 "artist": "",
-                "start": 5174,
+                "start": 4901,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "水の並べ方が五目並べw",
+                "title": "好きすぎて滅！🐼☯️ with 長尾景",
                 "artist": "",
-                "start": 5212,
+                "start": 4937,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "五目並べ完成",
+                "title": "📿長尾さん歌枠中ですよ",
                 "artist": "",
-                "start": 5245,
+                "start": 5185,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "カラオケの陰謀？",
-                "artist": "トイレ行きたくなりがち",
-                "start": 5251,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "🐼コーンスープだよ",
+                "title": "🐼どっちが優しかったんだろうね",
                 "artist": "",
-                "start": 5325,
+                "start": 5195,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "名古屋組の長老たち",
+                "title": "🐼カラオケめちゃトイレ行きたくなる",
                 "artist": "",
-                "start": 5348,
+                "start": 5250,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "🐼名古屋来ればよかったのにね",
+                "title": "🐼名古屋来れば良かったのにね",
                 "artist": "",
-                "start": 5371,
+                "start": 5362,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ハルヒの話もしてた",
+                "title": "多分これも配信外（",
                 "artist": "",
-                "start": 5694,
+                "start": 5696,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ペットボトルのウォールマリアw",
+                "title": "ペットボトルのウォールマリア",
                 "artist": "",
                 "start": 5730,
                 "tags": [
@@ -4040,121 +3776,121 @@
                 ]
             },
             {
+                "title": "だめだったら大合唱",
+                "artist": "",
+                "start": 5745,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
                 "title": "先バレ",
                 "artist": "",
-                "start": 5784,
+                "start": 5770,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "3個目の念慈菴",
+                "title": "そばかす📿",
                 "artist": "",
-                "start": 6048,
+                "start": 5790,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "1人であの頃枠やってる北見",
+                "title": "カエルちゃんだけでも（",
                 "artist": "",
-                "start": 6068,
+                "start": 6031,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ノー勉のはかちぇ",
+                "title": "1人で“あの頃”枠してる北見",
                 "artist": "",
-                "start": 6085,
+                "start": 6070,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "呼吸するとこない",
+                "title": "ノー勉やばい",
                 "artist": "",
-                "start": 6294,
+                "start": 6088,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "店員さん",
+                "title": "📿肺活量すごいっすね",
                 "artist": "",
-                "start": 6330,
+                "start": 6288,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "盛れ！ミ・アモーレ",
-                "artist": "Juice=Juice",
-                "start": 6352,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "バタついてただけw",
+                "title": "盛れ！ミ・アモーレ🐼",
                 "artist": "",
-                "start": 6615,
+                "start": 6354,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "次がラスト",
+                "title": "バタバタしてた長尾",
                 "artist": "",
-                "start": 6636,
+                "start": 6589,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "いつかあの頃ジャンプ縛りやりたい",
+                "title": "最後かも",
                 "artist": "",
-                "start": 6647,
+                "start": 6635,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "次回はあの頃ジャンプ縛り100曲耐久",
+                "title": "🐼ジャンプ縛りやるって約束だったじゃん",
                 "artist": "",
-                "start": 6685,
+                "start": 6640,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "1人10曲ノルマ10人",
-                "artist": "最後はウィーアー!",
-                "start": 6721,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "真面目な後輩北見",
+                "title": "歌枠のための自粛期間",
                 "artist": "",
-                "start": 6740,
+                "start": 6663,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "天ノ弱 with 企画,北見遊征,歌配信,葉加瀬冬雪,長尾景",
-                "artist": "164",
+                "title": "次回は“あの頃ジャンプ”縛り",
+                "artist": "",
+                "start": 6684,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "真面目な後輩",
+                "artist": "",
+                "start": 6741,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "天ノ弱🐼⚗️☯️📿 with 葉加瀬冬雪,長尾景",
+                "artist": "",
                 "start": 6761,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "みんなで〆",
-                "artist": "",
-                "start": 6936,
                 "tags": [
                     "カバー"
                 ]
@@ -5231,8 +4967,8 @@
         "tags": [],
         "songs": [
             {
-                "title": "急上昇",
-                "artist": "愛くださいませ · ≠ME",
+                "title": "愛くださいませ",
+                "artist": "≠ME",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -5402,64 +5138,48 @@
         "tags": [],
         "songs": [
             {
-                "title": "木綿のハンカチーフ",
-                "artist": "太田裕美",
+                "title": "momen no handkerchief",
+                "artist": "Ōta Hiromi",
                 "start": 246,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "二人静 -「天河伝説殺人事件」より",
-                "artist": "中森明菜",
-                "start": 514,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "スマイル・フォー・ミー",
-                "artist": "河合奈保子",
+                "title": "smile for me",
+                "artist": "Kawai Nahoko",
                 "start": 864,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "僕笑っちゃいます",
-                "artist": "風見慎吾(現：風見しんご)",
+                "title": "boku waracchaimasu",
+                "artist": "Kazami Shingo",
                 "start": 1086,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "どうにもとまらない",
-                "artist": "山本リンダ",
+                "title": "dōnimo tomaranai",
+                "artist": "Yamamoto Linda",
                 "start": 1444,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "キャンディ",
-                "artist": "原田真二",
+                "title": "Candy",
+                "artist": "harada shinji",
                 "start": 1640,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "うしろゆびさされ組",
-                "artist": "うしろゆびさされ組",
-                "start": 1869,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "青いスタスィオン",
-                "artist": "河合その子",
+                "title": "aoi station",
+                "artist": "kawai sonoko",
                 "start": 2142,
                 "tags": [
                     "カバー"
@@ -5467,135 +5187,135 @@
             },
             {
                 "title": "SUMMER EYES",
-                "artist": "菊池桃子",
+                "artist": "kikuchi momoko",
                 "start": 2412,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "わたしの首領",
-                "artist": "石野真子",
+                "title": "watashi no don",
+                "artist": "ishino mako",
                 "start": 2639,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "思秋期",
-                "artist": "岩崎宏美",
+                "title": "shishūki",
+                "artist": "iwasaki hiromi",
                 "start": 2837,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "人形の家",
-                "artist": "弘田三枝子",
+                "title": "ningyō no ie",
+                "artist": "hirota mieko",
                 "start": 3100,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "銀河系まで飛んで行け！",
-                "artist": "キャンディーズ",
+                "title": "Gingakei Made Tondeike!",
+                "artist": "Candies",
                 "start": 3392,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "雲のように風のように",
-                "artist": "佐野量子",
+                "title": "kumo no yō ni kaze no yō ni",
+                "artist": "sano ryōko",
                 "start": 3690,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "レモネードの夏",
-                "artist": "松田聖子",
+                "title": "lemonade no natsu",
+                "artist": "matsuda seiko",
                 "start": 3944,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "まちぶせ",
-                "artist": "三木聖子",
+                "title": "machibuse",
+                "artist": "miki seiko",
                 "start": 4181,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "真夜中のドア～Stay With Me",
-                "artist": "松原みき",
+                "title": "mayonaka no door~ Stay With Me",
+                "artist": "matsubara miki",
                 "start": 4422,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ハイスクールララバイ",
-                "artist": "イモ欽トリオ",
+                "title": "High School Lullaby",
+                "artist": "imokin trio",
                 "start": 4776,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "雨のプラネタリウム",
-                "artist": "原田知世",
+                "title": "ame no planetarium",
+                "artist": "harada tomoyo",
                 "start": 5051,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "天使のボディーガード",
-                "artist": "ゆうゆ with おニャン子クラブ",
+                "title": "tenshi no bodyguard",
+                "artist": "Iwai Yukiko",
                 "start": 5422,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "GOOD-BYE SEASON",
-                "artist": "森高千里",
+                "title": "GOOD - BYE SEASON",
+                "artist": "moritaka senri",
                 "start": 5658,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "十戒 (1984)",
-                "artist": "中森明菜",
+                "title": "jikkai (1984)",
+                "artist": "nakamori akina",
                 "start": 5929,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "フライディ・チャイナタウン",
-                "artist": "泰葉",
+                "title": "fly day chinatown",
+                "artist": "yasuha",
                 "start": 6182,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ギザギザハートの子守唄",
-                "artist": "チェッカーズ",
+                "title": "giza giza hāto no komoriuta",
+                "artist": "Checkers",
                 "start": 6436,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "E気持",
-                "artist": "沖田浩之",
+                "title": "E kimochi",
+                "artist": "okita hiroyuki",
                 "start": 6620,
                 "tags": [
                     "カバー"
@@ -6801,8 +6521,8 @@
                 "artist": "緑仙 & ポルカドットスティングレイ",
                 "start": 29738,
                 "tags": [
-                    "オリジナル",
-                    "緑仙 & ポルカドットスティングレイ"
+                    "緑仙 & ポルカドットスティングレイ",
+                    "オリジナル"
                 ]
             },
             {
@@ -7117,8 +6837,8 @@
         "tags": [],
         "songs": [
             {
-                "title": "効果",
-                "artist": "2.4億 本のショート動画",
+                "title": "キミに100パーセント(アニメヴァージョン)",
+                "artist": "Kyary Pamyu Pamyu",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -7148,7 +6868,7 @@
         "songs": [
             {
                 "title": "VOLTAGE",
-                "artist": "スペシャルウィーク (CV. 和氣あず未), ブエナビスタ (CV. 和泉風花), ブラストワンピース (CV. 紫月杏朱彩), アーモンドアイ (CV. 石原夏織), ラッキーライラック (CV. 中島由貴), ラヴズオンリーユー (CV. 久保田未夢), キセキ (CV. 星希成奏), フォーエバーヤング (CV. 海弓シュリ), マルシュロレーヌ (CV. 近貞月乃), エピファネイア (CV. 千賀光莉), ロゴタイプ (CV. 髙橋美空), ヴィクトワールピサ (CV. 嶋野 花), ローズキングダム (CV. 菊池ゆりな) & ルーラーシップ (CV. 海野水玉)",
+                "artist": "Stanislav Zabielin, Cremife",
                 "start": 98,
                 "tags": [
                     "カバー"
@@ -7181,19 +6901,19 @@
             },
             {
                 "title": "魅惑の華",
-                "artist": "Rain Drops",
+                "artist": "Dark Bitter Melody",
                 "start": 993,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "カバー"
                 ]
             },
             {
                 "title": "ミュウ",
-                "artist": "kiie",
+                "artist": "Rain Drops",
                 "start": 1177,
                 "tags": [
-                    "カバー"
+                    "オリジナル",
+                    "Rain Drops"
                 ]
             },
             {
@@ -7216,7 +6936,7 @@
             },
             {
                 "title": "formula",
-                "artist": "ALPHA DRIVE ONE",
+                "artist": "Azarashi",
                 "start": 2031,
                 "tags": [
                     "カバー"
@@ -7224,25 +6944,23 @@
             },
             {
                 "title": "蜜ノ味",
-                "artist": "Rain Drops",
+                "artist": "",
                 "start": 2319,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "カバー"
                 ]
             },
             {
                 "title": "雨言葉",
-                "artist": "Rain Drops",
+                "artist": "あいす, 小摘貶寝, もちっとあいす",
                 "start": 2504,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "カバー"
                 ]
             },
             {
                 "title": "エンターテイナー",
-                "artist": "イリーナ・メジューエワ",
+                "artist": "とくになし",
                 "start": 3162,
                 "tags": [
                     "カバー"
@@ -9536,8 +9254,8 @@
         "tags": [],
         "songs": [
             {
-                "title": "急上昇",
-                "artist": "目撃！テト31世 · はろける (ft. 重音テト \\u0026 雨衣)",
+                "title": "目撃！テト31世",
+                "artist": "はろける (ft. 重音テト \\u0026 雨衣)",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -12513,8 +12231,8 @@
                 "artist": "緑仙 & ポルカドットスティングレイ",
                 "start": 1089,
                 "tags": [
-                    "オリジナル",
-                    "緑仙 & ポルカドットスティングレイ"
+                    "緑仙 & ポルカドットスティングレイ",
+                    "オリジナル"
                 ]
             },
             {
@@ -12546,8 +12264,8 @@
                 "artist": "七次元生徒会",
                 "start": 2391,
                 "tags": [
-                    "オリジナル",
-                    "七次元生徒会"
+                    "七次元生徒会",
+                    "オリジナル"
                 ]
             },
             {
@@ -12919,7 +12637,7 @@
             },
             {
                 "title": "ロミオとシンデレラ",
-                "artist": "doriko feat. 初音ミク",
+                "artist": "青木葉",
                 "start": 2447,
                 "tags": [
                     "カバー"
@@ -13640,33 +13358,9 @@
         "tags": [],
         "songs": [
             {
-                "title": "🐼陽は、また昇る",
+                "title": "歌唱します。",
                 "artist": "",
-                "start": 341,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "🐼そばにいるね",
-                "artist": "",
-                "start": 1892,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "🐼海雪",
-                "artist": "",
-                "start": 3314,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "【結果発表】",
-                "artist": "danierukunP",
-                "start": 4838,
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -13879,7 +13573,7 @@
         "songs": [
             {
                 "title": "OVERDRIVE",
-                "artist": "Coch",
+                "artist": "JUDY AND MARY",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -14117,7 +13811,7 @@
         "tags": [],
         "songs": [
             {
-                "title": "パズル",
+                "title": "Puzzle",
                 "artist": "ROUND TABLE featuring Nino",
                 "start": 344,
                 "tags": [
@@ -14125,95 +13819,95 @@
                 ]
             },
             {
-                "title": "19才",
-                "artist": "スガシカオ",
+                "title": "19 sai",
+                "artist": "Sugashi Kao",
                 "start": 602,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ポルターガイスト",
-                "artist": "小島麻由美",
+                "title": "Poltrageist",
+                "artist": "Mayumi Kojima",
                 "start": 861,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "悲しみよこんにちは",
-                "artist": "斉藤由貴",
+                "title": "Kanashimi yo Konnichiwa",
+                "artist": "Yuki Satou",
                 "start": 1074,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "秘密く・だ・さ・い",
-                "artist": "宮里久美",
+                "title": "Himitsu Kudasai",
+                "artist": "Kumi Miyazato",
                 "start": 1316,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "瞳の中のファーラウェイ",
-                "artist": "長山洋子",
+                "title": "Hitomi no naka no Far Away",
+                "artist": "Yoko Nagayama",
                 "start": 1616,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "テレポーテーション-恋の未確認-",
-                "artist": "橋本潮",
+                "title": "Teleportation - koi no mikakunin -",
+                "artist": "Ushio Hashimoto",
                 "start": 1913,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "不思議Angel",
-                "artist": "橋本潮",
+                "title": "Fushigi Angel",
+                "artist": "Ushio Hashimoto",
                 "start": 2123,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "勇気のテーマ",
-                "artist": "堀江美都子",
+                "title": "Yuuki no Theme",
+                "artist": "Mitsuko Horie",
                 "start": 2379,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "約束はいらない",
-                "artist": "坂本真綾",
+                "title": "Yakusoku wa Iranai",
+                "artist": "Maaya Sakamoto",
                 "start": 2591,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "今夜はハリケーン",
-                "artist": "大森絹子",
+                "title": "Konya wa Hurricane",
+                "artist": "Kinuko Oomori",
                 "start": 2816,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ロ・ロ・ロ・ロシアン・ルーレット",
-                "artist": "中原めいこ",
+                "title": "Ro Ro Ro Russian Roulette",
+                "artist": "Meiko Nakahara",
                 "start": 3109,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ミッドナイト･サブマリン",
+                "title": "Midnight Submarine",
                 "artist": "HARRY",
                 "start": 3342,
                 "tags": [
@@ -14221,7 +13915,7 @@
                 ]
             },
             {
-                "title": "みえるだろうバイストン・ウェル",
+                "title": "Mieru Darou Baisuton Weru",
                 "artist": "MIO",
                 "start": 3570,
                 "tags": [
@@ -14229,40 +13923,40 @@
                 ]
             },
             {
-                "title": "3×3EYES",
-                "artist": "林原めぐみ, たかはしごう",
+                "title": "3x3 EYES",
+                "artist": "Go Takahashi and Megumi Hayashibara",
                 "start": 3808,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "君の中の永遠",
-                "artist": "井上武英",
+                "title": "Kimi no Naka no Eien",
+                "artist": "Inoue Takehide",
                 "start": 4215,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "コスモスに君と",
-                "artist": "戸田恵子",
+                "title": "Cosmos ni kimi to",
+                "artist": "Keika Toda",
                 "start": 4541,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ETERNAL WIND～ほほえみは光る風の中～",
-                "artist": "森口博子",
+                "title": "ETERNAL WIND ~ Hohoemi wa Hikaru Kaze no Naka ~",
+                "artist": "Hiroko Moriguchi",
                 "start": 4765,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "微笑みの爆弾",
-                "artist": "馬渡松子",
+                "title": "Hohoemi no Bakudan",
+                "artist": "Matsuko Mawatari",
                 "start": 5093,
                 "tags": [
                     "カバー"
@@ -14366,177 +14060,121 @@
         "tags": [],
         "songs": [
             {
-                "title": "開店 🥂",
-                "artist": "",
-                "start": 115,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "みずいろの雨",
+                "title": "みずいろの雨(森中花咲)",
                 "artist": "フランスパンP",
-                "start": 1010,
+                "start": 551,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ロマンス",
-                "artist": "ザキヤマ",
+                "title": "シンデレラ・ハネムーン(緑仙)",
+                "artist": "ゆずごしょう",
                 "start": 1385,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "シンデレラ・ハネムーン",
-                "artist": "ゆずごしょう",
-                "start": 1695,
+                "title": "てんとう虫のサンバ(文野環)",
+                "artist": "よんぺい",
+                "start": 1693,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "てんとう虫のダンス",
+                "title": "後ろから前から(緑仙)",
                 "artist": "",
-                "start": 2000,
+                "start": 2015,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "後ろから前から",
-                "artist": "",
+                "title": "狼なんか怖くない(森中花咲)",
+                "artist": "EMIX",
                 "start": 2325,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "狼なんか怖くない",
-                "artist": "EMIX",
-                "start": 2633,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "木綿のハンカチーフ",
-                "artist": "フランスパンP",
-                "start": 2958,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Get Wild",
+                "title": "Get Wild(文野環)",
                 "artist": "みくれれP",
-                "start": 3260,
+                "start": 2957,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "セーラー服と機関銃",
-                "artist": "このり",
+                "title": "時をかける少女(緑仙)",
+                "artist": "非常階段, スピキン",
                 "start": 3645,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "時をかける少女",
-                "artist": "非常階段, スピキン",
-                "start": 4022,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "にんげんっていいな",
+                "title": "にんげんっていいな(文野環)",
                 "artist": "sippotan",
-                "start": 4285,
+                "start": 4023,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "およげ！たいやきくん",
-                "artist": "ちーば",
-                "start": 4478,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "恋のバカンス",
-                "artist": "根気P",
-                "start": 4795,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "大きな恋の物語",
+                "title": "大きな恋の物語(緑仙)",
                 "artist": "",
-                "start": 5010,
+                "start": 4796,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "戦争を知らない子どもたち",
+                "title": "戦争を知らない子供たち(文野環)",
                 "artist": "",
-                "start": 5388,
+                "start": 5012,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "異邦人",
+                "title": "異邦人(森中花咲)",
                 "artist": "合唱団P",
+                "start": 5389,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "冬のオペラグラス(緑仙)",
+                "artist": "",
                 "start": 5664,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "冬のオペラグラス",
-                "artist": "",
-                "start": 5958,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "カサブランカ・ダンディ",
-                "artist": "",
-                "start": 6260,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "うしろゆびさされ組",
+                "title": "うしろゆびさされ組(文野環)",
                 "artist": "6062",
-                "start": 6620,
+                "start": 6261,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ワインレッドの心",
+                "title": "ワインレッドの心(舞元啓介)",
                 "artist": "気配りP",
-                "start": 6966,
+                "start": 6623,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "閉店",
+                "title": "昭和歌謡カラオケ楽しかったですね。",
                 "artist": "",
-                "start": 7281,
+                "start": 6966,
                 "tags": [
                     "カバー"
                 ]
@@ -15315,8 +14953,8 @@
                 "artist": "にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -15361,201 +14999,9 @@
         "tags": [],
         "songs": [
             {
-                "title": "Crazy Dancer",
-                "artist": "夜の本気ダンス",
-                "start": 245,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "talking",
-                "artist": "KANA-BOON",
-                "start": 448,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "そなちね",
-                "artist": "Tempalay",
-                "start": 716,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "エゴサーチ＆デストロイ",
-                "artist": "ドレスコーズ",
-                "start": 1058,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "エスパー",
-                "artist": "ミツメ",
-                "start": 1369,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "世界を終わらせて",
-                "artist": "ハルカミライ",
-                "start": 1910,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "部屋",
-                "artist": "シャイトープ",
-                "start": 2157,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "口癖",
-                "artist": "Mr.ふぉるて",
-                "start": 2450,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "リッケンバッカー",
-                "artist": "リーガルリリー",
-                "start": 2672,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "さよならプリズナー",
-                "artist": "yonige",
-                "start": 2943,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "さよならアイデンティティー",
-                "artist": "yonige",
-                "start": 3228,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "拝啓、少年よ",
-                "artist": "Hump Back",
-                "start": 3538,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Musica",
-                "artist": "ブランデー戦記",
-                "start": 3747,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "月曜日戦争",
-                "artist": "吉澤嘉代子",
-                "start": 3946,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "チェリボム",
-                "artist": "SILENT SIREN",
-                "start": 4141,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "光芒",
-                "artist": "Hakubi",
-                "start": 4401,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ダカラドオシタ",
-                "artist": "アルカラ",
-                "start": 4698,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "キャッチーを科学する",
-                "artist": "アルカラ",
-                "start": 4911,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "スターフィッシュ",
-                "artist": "ELLEGARDEN",
-                "start": 5196,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "弱者の為の騒音を",
-                "artist": "ハンブレッダーズ",
-                "start": 5491,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "冥冥",
-                "artist": "Chevon",
-                "start": 5740,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ダンス・デカダンス",
-                "artist": "Chevon",
-                "start": 5959,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "夢で逢えたら",
-                "artist": "銀杏BOYZ",
-                "start": 6170,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ソラニン",
-                "artist": "ASIAN KUNG-FU GENERATION",
-                "start": 6482,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "鏡に恋して",
-                "artist": "礼賛",
-                "start": 6845,
+                "title": "歌枠 ｜ 邦ロックカラオケ🎤みんなの夏を教えてください🐼💭",
+                "artist": "",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -15628,7 +15074,7 @@
         "tags": [],
         "songs": [
             {
-                "title": "fushigina kusuri",
+                "title": "🐼 ふしぎなくすり",
                 "artist": "",
                 "start": 330,
                 "tags": [
@@ -15636,23 +15082,7 @@
                 ]
             },
             {
-                "title": "Gacha Gacha Cute~ Figu@Mate",
-                "artist": "",
-                "start": 600,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Love Cheat!",
-                "artist": "bell",
-                "start": 900,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "fushigi na kusuri (repeat)",
+                "title": "🦩 ふしぎなくすり",
                 "artist": "",
                 "start": 1215,
                 "tags": [
@@ -15660,31 +15090,15 @@
                 ]
             },
             {
-                "title": "Cantarella",
-                "artist": "Ame Stella, Filo97",
-                "start": 1706,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "communication breakdance",
+                "title": "🦩 バラライカ",
                 "artist": "",
-                "start": 1958,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Balalaika",
-                "artist": "TSUINAFAN3000",
                 "start": 2242,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "konbini",
+                "title": "🐼 コンビニ",
                 "artist": "",
                 "start": 2552,
                 "tags": [
@@ -15692,23 +15106,7 @@
                 ]
             },
             {
-                "title": "ari ari mirai",
-                "artist": "",
-                "start": 2859,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "yoru no tobari yo sayonara",
-                "artist": "",
-                "start": 3132,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Shine! Valentine Day (Go Die! Valentine's Day)",
+                "title": "🦩 死ね！バレンタイン・デー",
                 "artist": "",
                 "start": 3440,
                 "tags": [
@@ -15828,9 +15226,121 @@
         "tags": [],
         "songs": [
             {
-                "title": "歌枠 ｜ 好きなキャラソンを歌わせてください🐼💭",
-                "artist": "",
-                "start": 0,
+                "title": "MEBACHIKO",
+                "artist": "忍足侑士",
+                "start": 265,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "雨の日はノー・サンキュー",
+                "artist": "ロイ・マスタング, リザ・ホークアイ",
+                "start": 572,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "圭一・大石の噂の事件簿ABC",
+                "artist": "前原圭一, 大石蔵人",
+                "start": 897,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "みおのカプってカプって萌えちぎれ",
+                "artist": "長野原みお",
+                "start": 1375,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "笹原のコジロウポルカ",
+                "artist": "笹原幸治郎",
+                "start": 1635,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "まっがーれ↓スペクタクル",
+                "artist": "古泉一樹",
+                "start": 1955,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "ホモ・サピエンス・ラプソディ",
+                "artist": "キョン",
+                "start": 2209,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "倦怠ライフ・リターンズ!",
+                "artist": "キョン",
+                "start": 2519,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "WILD WIND ～野性の風のように～",
+                "artist": "蔵馬, 飛影",
+                "start": 2823,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "世界は既に欺きの上に",
+                "artist": "市丸ギン",
+                "start": 3099,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "クフフのフ～僕と契約～",
+                "artist": "六道骸",
+                "start": 3618,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "No Control",
+                "artist": "入江正一",
+                "start": 3882,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "Burning prayer",
+                "artist": "ラル・ミルチ",
+                "start": 4151,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "奇天烈ポエマー",
+                "artist": "有栖川誉",
+                "start": 4680,
+                "tags": [
+                    "カバー"
+                ]
+            },
+            {
+                "title": "背徳ワンダーランド",
+                "artist": "ドルイット子爵",
+                "start": 5048,
                 "tags": [
                     "カバー"
                 ]
@@ -16218,8 +15728,8 @@
                 "artist": "cresc.",
                 "start": 2550,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -16236,8 +15746,8 @@
                 "artist": "七次元生徒会",
                 "start": 3306,
                 "tags": [
-                    "オリジナル",
-                    "七次元生徒会"
+                    "七次元生徒会",
+                    "オリジナル"
                 ]
             },
             {
@@ -16245,8 +15755,8 @@
                 "artist": "七次元生徒会",
                 "start": 3505,
                 "tags": [
-                    "オリジナル",
-                    "七次元生徒会"
+                    "七次元生徒会",
+                    "オリジナル"
                 ]
             },
             {
@@ -16270,8 +15780,8 @@
                 "artist": "緑仙 & ポルカドットスティングレイ",
                 "start": 4413,
                 "tags": [
-                    "オリジナル",
-                    "緑仙 & ポルカドットスティングレイ"
+                    "緑仙 & ポルカドットスティングレイ",
+                    "オリジナル"
                 ]
             },
             {
@@ -17049,47 +16559,47 @@
         "tags": [],
         "songs": [
             {
-                "title": "inferno",
-                "artist": "Negaro",
+                "title": "インフェルノ",
+                "artist": "桜華P",
                 "start": 317,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "bluebird",
-                "artist": "とくP",
+                "title": "ブルーバード",
+                "artist": "ひろ★ろんP",
                 "start": 543,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "seishun rain",
-                "artist": "",
+                "title": "青春ライン",
+                "artist": "池尻",
                 "start": 780,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "netsujou no spectrum",
-                "artist": "",
+                "title": "熱情のスペクトラム",
+                "artist": "気配りP",
                 "start": 1037,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "kokoroe",
-                "artist": "",
+                "title": "心絵",
+                "artist": "カフェチーノ・オーレ",
                 "start": 1838,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "sousei no aquarion",
+                "title": "創聖のアクリエオン",
                 "artist": "",
                 "start": 2107,
                 "tags": [
@@ -17098,23 +16608,23 @@
             },
             {
                 "title": "2",
-                "artist": "1 (Nibun no Ichi)",
+                "artist": "1",
                 "start": 2404,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Ashita Moshi Kimi ga Kowaretemo",
-                "artist": "",
+                "title": "明日もし君が壊れても",
+                "artist": "あくえす",
                 "start": 2719,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "tome mare!",
-                "artist": "",
+                "title": "止マレ！",
+                "artist": "おーく",
                 "start": 2986,
                 "tags": [
                     "カバー"
@@ -17129,15 +16639,15 @@
                 ]
             },
             {
-                "title": "hare hare yukai",
-                "artist": "Cilix Izumi",
+                "title": "ハレ晴れユカイ",
+                "artist": "",
                 "start": 3500,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "God Knows …",
+                "title": "God Knows…",
                 "artist": "ポンコツロマン, あすたりすく",
                 "start": 3725,
                 "tags": [
@@ -17145,15 +16655,15 @@
                 ]
             },
             {
-                "title": "Saa",
-                "artist": "fukin-otou",
+                "title": "さぁ",
+                "artist": "松田トキ",
                 "start": 5308,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Over Soul",
+                "title": "Over  Soul",
                 "artist": "クロ",
                 "start": 5516,
                 "tags": [
@@ -17177,39 +16687,39 @@
                 ]
             },
             {
-                "title": "hikari no senritsu",
-                "artist": "",
+                "title": "光の旋律",
+                "artist": "whimsoft",
                 "start": 6259,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "tabi no tochuu",
-                "artist": "KashaDatWolf",
-                "start": 6642,
+                "title": "旅の途中",
+                "artist": "JorroTreul",
+                "start": 6643,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "hikaru nara",
-                "artist": "",
+                "title": "光るなら",
+                "artist": "タック二階堂",
                 "start": 6948,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Falco",
-                "artist": "えぎはる",
+                "title": "Falco-ファルコ-",
+                "artist": "",
                 "start": 7209,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Venus Say …",
+                "title": "Venus Say…",
                 "artist": "Take0m",
                 "start": 7436,
                 "tags": [
@@ -17225,24 +16735,24 @@
                 ]
             },
             {
-                "title": "Monochrome no Kiss",
-                "artist": "Sutorumie",
-                "start": 7907,
+                "title": "モノクロのキス",
+                "artist": "シド",
+                "start": 7908,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "rewrite",
-                "artist": "脱出型椎間板ヘルニアP",
+                "title": "リライト",
+                "artist": "芸竜作, さゆき",
                 "start": 8157,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Melissa",
-                "artist": "J4",
+                "title": "メリッサ",
+                "artist": "まさき",
                 "start": 8395,
                 "tags": [
                     "カバー"
@@ -17257,56 +16767,56 @@
                 ]
             },
             {
-                "title": "shunkan sentimental",
-                "artist": "",
+                "title": "瞬間センチメンタル",
+                "artist": "ほそまつちよ",
                 "start": 8947,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "golden time lover",
-                "artist": "Liquid_Roze",
+                "title": "ゴールデンタイムラバー",
+                "artist": "今夜",
                 "start": 9053,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "shizuku",
-                "artist": "fortississimo, ヒトミシリヒト",
+                "title": "雫",
+                "artist": "Seiko",
                 "start": 9410,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "balalaika",
-                "artist": "TSUINAFAN3000",
+                "title": "バラライカ",
+                "artist": "darkninjavn2011",
                 "start": 9620,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "D",
-                "artist": "tecno Life",
+                "title": "D-tecno Life",
+                "artist": "",
                 "start": 9853,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "donten",
-                "artist": "",
+                "title": "曇天",
+                "artist": "しゃー",
                 "start": 10103,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "namae no nai kaibutsu",
-                "artist": "",
+                "title": "名前のない怪物",
+                "artist": "タカオカミズキ",
                 "start": 10477,
                 "tags": [
                     "カバー"
@@ -17777,8 +17287,8 @@
                 "artist": "にじさんじ",
                 "start": 307,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -17786,8 +17296,8 @@
                 "artist": "七次元生徒会！",
                 "start": 583,
                 "tags": [
-                    "オリジナル",
-                    "七次元生徒会"
+                    "七次元生徒会",
+                    "オリジナル"
                 ]
             },
             {
@@ -17795,8 +17305,8 @@
                 "artist": "緑仙 & ポルカドットスティングレイ",
                 "start": 785,
                 "tags": [
-                    "オリジナル",
-                    "緑仙 & ポルカドットスティングレイ"
+                    "緑仙 & ポルカドットスティングレイ",
+                    "オリジナル"
                 ]
             },
             {
@@ -17828,8 +17338,8 @@
                 "artist": "cresc.",
                 "start": 1716,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -18859,7 +18369,7 @@
         "tags": [],
         "songs": [
             {
-                "title": "ひつじがいっぴき",
+                "title": "hitsuji ga ippiki",
                 "artist": "Peg",
                 "start": 81,
                 "tags": [
@@ -18867,15 +18377,15 @@
                 ]
             },
             {
-                "title": "臨界ダイバー",
-                "artist": "こじろー",
+                "title": "rinkai diver",
+                "artist": "kojiro",
                 "start": 278,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "オルターエゴ",
+                "title": "alter ego",
                 "artist": "Misumi",
                 "start": 492,
                 "tags": [
@@ -18883,47 +18393,47 @@
                 ]
             },
             {
-                "title": "限りなく灰色へ",
-                "artist": "すりぃ",
+                "title": "kagiri naku haiiro e",
+                "artist": "surii",
                 "start": 731,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ジャンキーナイトタウンオーケストラ",
-                "artist": "すりぃ",
+                "title": "junky night town orchestra",
+                "artist": "surii",
                 "start": 1023,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "テレキャスタービーボーイ",
-                "artist": "すりぃ",
+                "title": "telecaster b boy",
+                "artist": "surii",
                 "start": 1253,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "エゴロック",
-                "artist": "すりぃ",
+                "title": "ego rokku",
+                "artist": "surii",
                 "start": 1435,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ラヴィ",
-                "artist": "すりぃ",
+                "title": "lavie",
+                "artist": "surii",
                 "start": 1624,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "春嵐",
+                "title": "shuuran",
                 "artist": "john",
                 "start": 1825,
                 "tags": [
@@ -18931,47 +18441,47 @@
                 ]
             },
             {
-                "title": "神っぽいな",
-                "artist": "ピノキオピー",
+                "title": "kamippoi na",
+                "artist": "Pinocchio",
                 "start": 1994,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ノンブレス・オブリージュ",
-                "artist": "ピノキオピー",
+                "title": "nonbreath oblige",
+                "artist": "Pinocchio",
                 "start": 2212,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "失楽ペトリ",
-                "artist": "ナナホシ管弦楽団",
+                "title": "shitsuraku petri",
+                "artist": "nanahoshi kangengakudan",
                 "start": 2432,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "抜錨",
-                "artist": "ナナホシ管弦楽団",
+                "title": "batsubyou",
+                "artist": "nanahoshi kangengakudan",
                 "start": 2638,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "デリヘル呼んだら君が来た",
-                "artist": "ナナホシ管弦楽団",
+                "title": "deriheru yondara kimi ga kita",
+                "artist": "nanahoshi kangengakudan",
                 "start": 2856,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "アブストラクト・ナンセンス",
+                "title": "abstract nonsense",
                 "artist": "Neru",
                 "start": 3117,
                 "tags": [
@@ -18979,7 +18489,7 @@
                 ]
             },
             {
-                "title": "potatoになっていく",
+                "title": "potato ni natteiku",
                 "artist": "Neru",
                 "start": 3369,
                 "tags": [
@@ -18987,79 +18497,79 @@
                 ]
             },
             {
-                "title": "おねがいダーリン",
-                "artist": "ナナホシ管弦楽団",
+                "title": "onegai darling",
+                "artist": "nanahoshi kangengakudan",
                 "start": 3571,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "モ ミ ア ゲ ヲ シ ャ カ ア ゲ ヲ",
-                "artist": "ぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬぬ",
+                "title": "momiage o shakaage o",
+                "artist": "nunununununununu",
                 "start": 3788,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "人マニア",
-                "artist": "原口沙輔",
+                "title": "hito mania",
+                "artist": "haraguchi sasuke",
                 "start": 4012,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "独りんぼエンヴィー",
-                "artist": "電ポルP",
+                "title": "hitorinbo envy",
+                "artist": "koyori (Denpol-P)",
                 "start": 4151,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "スキスキ絶頂症",
-                "artist": "電ポルP",
+                "title": "suki suki zecchoushou",
+                "artist": "koyori (Denpol-P)",
                 "start": 4366,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ミルククラウン・オン・ソーネチカ",
-                "artist": "ユジー",
+                "title": "milk crown on sonechka",
+                "artist": "yujii",
                 "start": 4596,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "天才ロック",
-                "artist": "カラスヤサボウ",
+                "title": "tensai rock",
+                "artist": "karasuyasabou",
                 "start": 4858,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ショウタイム・ルーラー",
-                "artist": "カラスヤサボウ",
+                "title": "showtime ruler",
+                "artist": "karasuyasabou",
                 "start": 5080,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "バッド・ダンス・ホール",
-                "artist": "カラスヤサボウ",
+                "title": "bad dance hall",
+                "artist": "karasuyasabou",
                 "start": 5307,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "アンノウン・マザーグース",
+                "title": "unknown mother goose",
                 "artist": "wowaka",
                 "start": 5612,
                 "tags": [
@@ -19067,15 +18577,15 @@
                 ]
             },
             {
-                "title": "ネクロの花嫁",
-                "artist": "びす×奏音69",
+                "title": "nekuro no hanayome",
+                "artist": "Kanon69",
                 "start": 5907,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "乙女解剖",
+                "title": "otome kaibou",
                 "artist": "DECO*27",
                 "start": 6159,
                 "tags": [
@@ -19083,7 +18593,7 @@
                 ]
             },
             {
-                "title": "モニタリング",
+                "title": "Monitoring",
                 "artist": "DECO*27",
                 "start": 6402,
                 "tags": [
@@ -19091,15 +18601,15 @@
                 ]
             },
             {
-                "title": "罪と罰",
+                "title": "tsumi to batsu",
                 "artist": "DECO*27",
-                "start": 6594,
+                "start": 6592,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "妄想感傷代償連盟",
+                "title": "mousou kanshou daishou renmei",
                 "artist": "DECO*27",
                 "start": 6790,
                 "tags": [
@@ -19107,7 +18617,7 @@
                 ]
             },
             {
-                "title": "ヴァンパイア",
+                "title": "Vampire",
                 "artist": "DECO*27",
                 "start": 7079,
                 "tags": [
@@ -19115,7 +18625,7 @@
                 ]
             },
             {
-                "title": "ヒバナ",
+                "title": "Hibana",
                 "artist": "DECO*27",
                 "start": 7275,
                 "tags": [
@@ -19123,7 +18633,7 @@
                 ]
             },
             {
-                "title": "弱虫モンブラン",
+                "title": "yowamushi montblanc",
                 "artist": "DECO*27",
                 "start": 7494,
                 "tags": [
@@ -19131,7 +18641,7 @@
                 ]
             },
             {
-                "title": "帝国少女",
+                "title": "teikoku shoujo",
                 "artist": "R Sound Design",
                 "start": 7752,
                 "tags": [
@@ -19139,48 +18649,48 @@
                 ]
             },
             {
-                "title": "コールボーイ",
-                "artist": "syudou",
+                "title": "call boy",
+                "artist": "Syudou",
                 "start": 8017,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ビターチョコデコレーション",
-                "artist": "syudou",
+                "title": "bitter choco decoration",
+                "artist": "Syudou",
                 "start": 8240,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "フラジール",
-                "artist": "ぬゆり",
+                "title": "Fragile",
+                "artist": "nulut",
                 "start": 8453,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "フィクサー",
-                "artist": "ぬゆり",
+                "title": "Fixer",
+                "artist": "nulut",
                 "start": 8735,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "月光",
-                "artist": "キタニタツヤ, はるまきごはん",
+                "title": "gekkou",
+                "artist": "Tatsuya Kitani and Harumaki Gohan",
                 "start": 8999,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "仮死化",
-                "artist": "遼遼",
+                "title": "kashika",
+                "artist": "loin",
                 "start": 9516,
                 "tags": [
                     "カバー"
@@ -19212,7 +18722,7 @@
             },
             {
                 "title": "ロミオとシンデレラ",
-                "artist": "doriko feat. 初音ミク",
+                "artist": "青木葉",
                 "start": 422,
                 "tags": [
                     "カバー"
@@ -19660,8 +19170,8 @@
                 "artist": "七次元生徒会",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "七次元生徒会"
+                    "七次元生徒会",
+                    "オリジナル"
                 ]
             }
         ]
@@ -19692,8 +19202,8 @@
                 "artist": "七次元生徒会",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "七次元生徒会"
+                    "七次元生徒会",
+                    "オリジナル"
                 ]
             }
         ]
@@ -19996,8 +19506,8 @@
                 "artist": "チームヘラクレス2024",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "チームヘラクレス"
+                    "チームヘラクレス",
+                    "オリジナル"
                 ]
             }
         ]
@@ -21331,7 +20841,7 @@
             },
             {
                 "title": "怪獣の花唄 with 企画,伊波ライ,尾丸ポルカ,律可,森カリオペ,長尾景,鷹嶺ルイ",
-                "artist": "えんがわおすし",
+                "artist": "Vaundy",
                 "start": 10597,
                 "tags": [
                     "カバー"
@@ -21435,7 +20945,7 @@
             },
             {
                 "title": "青いベンチ",
-                "artist": "合唱団P",
+                "artist": "サスケ",
                 "start": 3130,
                 "tags": [
                     "カバー"
@@ -22997,8 +22507,8 @@
                 "artist": "七次元生徒会",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "七次元生徒会"
+                    "七次元生徒会",
+                    "オリジナル"
                 ]
             }
         ]
@@ -23028,7 +22538,7 @@
             },
             {
                 "title": "Baby Sweet Berry Love(ロリコロール)",
-                "artist": "",
+                "artist": "小倉 唯",
                 "start": 2232,
                 "tags": [
                     "カバー"
@@ -23036,7 +22546,7 @@
             },
             {
                 "title": "怪獣の花唄(ウォーターポテト)",
-                "artist": "えんがわおすし",
+                "artist": "Vaundy",
                 "start": 2476,
                 "tags": [
                     "カバー"
@@ -23044,7 +22554,7 @@
             },
             {
                 "title": "永遠に君へ(フミ)",
-                "artist": "",
+                "artist": "フミ",
                 "start": 2699,
                 "tags": [
                     "カバー"
@@ -23052,7 +22562,7 @@
             },
             {
                 "title": "愛包ダンスホール(ぽんぴりか)",
-                "artist": "ゴゴ, 涼木シンジ, 幽世55番街",
+                "artist": "HIMEHINA",
                 "start": 2933,
                 "tags": [
                     "カバー"
@@ -23212,7 +22722,7 @@
             },
             {
                 "title": "LOVEマシーン(名前のない組)",
-                "artist": "モーニング娘。",
+                "artist": "小松一也, 石風呂, 塚田恵佑",
                 "start": 7477,
                 "tags": [
                     "カバー"
@@ -23252,7 +22762,7 @@
             },
             {
                 "title": "ふ・れ・ん・ど・し・た・い(世怜音女学院演劇同好会)",
-                "artist": "学園生活部",
+                "artist": "Wais",
                 "start": 8977,
                 "tags": [
                     "カバー"
@@ -25095,8 +24605,8 @@
                 "artist": "cresc.",
                 "start": 1202,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -25104,8 +24614,8 @@
                 "artist": "緑仙 & ポルカドットスティングレイ",
                 "start": 1470,
                 "tags": [
-                    "オリジナル",
-                    "緑仙 & ポルカドットスティングレイ"
+                    "緑仙 & ポルカドットスティングレイ",
+                    "オリジナル"
                 ]
             },
             {
@@ -25249,7 +24759,7 @@
             },
             {
                 "title": "怪獣の花唄",
-                "artist": "えんがわおすし",
+                "artist": "Vaundy",
                 "start": 889,
                 "tags": [
                     "カバー"
@@ -25297,7 +24807,7 @@
             },
             {
                 "title": "長く短い祭",
-                "artist": "yuukiss",
+                "artist": "椎名林檎 & 浮雲",
                 "start": 2541,
                 "tags": [
                     "カバー"
@@ -26561,225 +26071,25 @@
         "tags": [],
         "songs": [
             {
-                "title": "褒めろよ",
-                "artist": "GLIM SPANKY",
-                "start": 208,
+                "title": "✧︎ 僕に彼女ができたんだ",
+                "artist": "",
+                "start": 383,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "僕に彼女ができたんだ",
-                "artist": "SHISHAMO",
-                "start": 380,
+                "title": "✧︎ ゴミ人間、俺",
+                "artist": "",
+                "start": 3134,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ハートに火をつけて",
-                "artist": "9mm Parabellum Bullet",
-                "start": 584,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ガラスの街のアリス",
-                "artist": "9mm Parabellum Bullet",
-                "start": 835,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "センスレス・ワンダー",
-                "artist": "ヒトリエ",
-                "start": 1050,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "意気地アリ",
-                "artist": "チャットモンチー",
-                "start": 1323,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "近距離恋愛",
-                "artist": "GO!GO!7188",
-                "start": 1474,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "こいのうた",
-                "artist": "GO!GO!7188",
-                "start": 1704,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "拝啓、少年よ",
-                "artist": "Hump Back",
-                "start": 2078,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "花屋の娘",
-                "artist": "フジファブリック",
-                "start": 2179,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "赤黄色の金木犀",
-                "artist": "フジファブリック",
-                "start": 2427,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "楽園",
-                "artist": "フジファブリック",
-                "start": 2677,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "本当はね、",
-                "artist": "ヤングスキニー",
-                "start": 2914,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ゴミ人間、俺",
-                "artist": "ヤングスキニー",
-                "start": 3131,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "シュレディンガーの猫",
-                "artist": "Brian the Sun",
-                "start": 3376,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ツバサ",
-                "artist": "アンダーグラフ",
-                "start": 3605,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "天使のスーツケース",
-                "artist": "SIX LOUNGE",
-                "start": 3890,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "TALI",
-                "artist": "YOSHII LOVINSON",
-                "start": 4086,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "今宵の月のように",
-                "artist": "エレファントカシマシ",
-                "start": 4391,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "エンジェルベイビー",
-                "artist": "銀杏BOYZ",
-                "start": 4650,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "タイムセール逃してくれ",
-                "artist": "サバシスター",
-                "start": 4958,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "夜明けのオレンジ",
-                "artist": "ポルカドットスティングレイ",
-                "start": 5208,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "リドー",
-                "artist": "ポルカドットスティングレイ",
-                "start": 5425,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "スケベなだけで金がない",
-                "artist": "礼賛",
-                "start": 5665,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ずうっといっしょ！",
-                "artist": "キタニタツヤ",
-                "start": 5837,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ライブハウスで会おうぜ",
-                "artist": "ハンブレッダーズ",
-                "start": 6043,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ミッドナイト・クラクション・ベイビー",
-                "artist": "THEE MICHELLE GUN ELEPHANT",
-                "start": 6290,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "世界の終わり",
-                "artist": "THEE MICHELLE GUN ELEPHANT",
-                "start": 6519,
+                "title": "✧︎ ずうっといっしょ！",
+                "artist": "",
+                "start": 5838,
                 "tags": [
                     "カバー"
                 ]
@@ -27247,7 +26557,7 @@
             },
             {
                 "title": "可愛いハート",
-                "artist": "",
+                "artist": "みずかげりんぶ",
                 "start": 1530,
                 "tags": [
                     "カバー"
@@ -27319,7 +26629,7 @@
             },
             {
                 "title": "背中合わせ",
-                "artist": "kobasolo",
+                "artist": "Mizuike",
                 "start": 3189,
                 "tags": [
                     "カバー"
@@ -27335,7 +26645,7 @@
             },
             {
                 "title": "かわいい",
-                "artist": "SHISHAMO",
+                "artist": "Esp feЯ",
                 "start": 3427,
                 "tags": [
                     "カバー"
@@ -27909,124 +27219,11 @@
         "tags": [],
         "songs": [
             {
-                "title": "リコネクト",
-                "artist": "緑仙",
-                "start": 382,
-                "tags": [
-                    "オリジナル"
-                ]
-            },
-            {
-                "title": "ジガトラ",
-                "artist": "緑仙 & cadode",
-                "start": 615,
-                "tags": [
-                    "オリジナル"
-                ]
-            },
-            {
-                "title": "天誅",
-                "artist": "緑仙 & ポルカドットスティングレイ",
-                "start": 830,
-                "tags": [
-                    "オリジナル",
-                    "緑仙 & ポルカドットスティングレイ"
-                ]
-            },
-            {
-                "title": "暮らし",
-                "artist": "Hwyl",
-                "start": 1327,
+                "title": "デビュー周年記念‼僕の大好きな曲をたくさん歌います～🐼【にじさんじ | 緑仙】",
+                "artist": "",
+                "start": 0,
                 "tags": [
                     "カバー"
-                ]
-            },
-            {
-                "title": "ゆらゆら帝国で考え中",
-                "artist": "ゆらゆら帝国",
-                "start": 1488,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "あの子のジンタ",
-                "artist": "チャラン・ポ・ランタン",
-                "start": 1930,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "エピゴウネ",
-                "artist": "日食なつこ",
-                "start": 2159,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "唇よ、熱く君を語れ",
-                "artist": "渡辺真知子",
-                "start": 2610,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "生暖かい雨とざらついた情熱",
-                "artist": "the GazettE",
-                "start": 3001,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "貴女ノ為ノ此ノ命。",
-                "artist": "the GazettE",
-                "start": 3201,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "妄想日記",
-                "artist": "シド",
-                "start": 3547,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "極上フィクション",
-                "artist": "KiLLER KiNG",
-                "start": 3902,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "大胆不敵に恋したい",
-                "artist": "Just 4U",
-                "start": 4139,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ジョークス",
-                "artist": "緑仙",
-                "start": 5675,
-                "tags": [
-                    "オリジナル"
-                ]
-            },
-            {
-                "title": "藍ヨリ青ク",
-                "artist": "緑仙",
-                "start": 5907,
-                "tags": [
-                    "オリジナル"
                 ]
             }
         ]
@@ -29043,8 +28240,8 @@
                 "artist": "緑仙/赤羽葉子/椎名唯華/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -30430,8 +29627,8 @@
                 "artist": "緑仙 & ポルカドットスティングレイ",
                 "start": 211,
                 "tags": [
-                    "オリジナル",
-                    "緑仙 & ポルカドットスティングレイ"
+                    "緑仙 & ポルカドットスティングレイ",
+                    "オリジナル"
                 ]
             },
             {
@@ -31698,8 +30895,8 @@
                 "artist": "七次元生徒会",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "七次元生徒会"
+                    "七次元生徒会",
+                    "オリジナル"
                 ]
             }
         ]
@@ -31826,10 +31023,11 @@
         "songs": [
             {
                 "title": "全力ブーメラン",
-                "artist": "キリカ",
+                "artist": "こじらせハラスメント",
                 "start": 0,
                 "tags": [
-                    "カバー"
+                    "オリジナル",
+                    "こじらせハラスメント"
                 ]
             }
         ]
@@ -31856,10 +31054,11 @@
         "songs": [
             {
                 "title": "秘密のショコラ",
-                "artist": "",
+                "artist": "こじらせハラスメント",
                 "start": 0,
                 "tags": [
-                    "カバー"
+                    "オリジナル",
+                    "こじらせハラスメント"
                 ]
             }
         ]
@@ -32163,8 +31362,8 @@
                 "artist": "にじさんじ合唱",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -32928,7 +32127,7 @@
         "songs": [
             {
                 "title": "愛包ダンスホール",
-                "artist": "ゴゴ, 涼木シンジ, 幽世55番街",
+                "artist": "HIMEHINA",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -33385,8 +32584,8 @@
                 "artist": "にじさんじ",
                 "start": 5255,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -34312,225 +33511,65 @@
         "tags": [],
         "songs": [
             {
-                "title": "アカイト",
-                "artist": "星導",
-                "start": 23618,
+                "title": "アイデンティティ",
+                "artist": "芳川ヨシノ",
+                "start": 6828,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "記念日",
-                "artist": "ラーティア",
-                "start": 24034,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "呼び方",
+                "title": "アースチャイルド",
                 "artist": "",
-                "start": 24122,
+                "start": 12575,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "差し入れ",
-                "artist": "",
-                "start": 24303,
+                "title": "MONSTER DANCE",
+                "artist": "日向大輔",
+                "start": 13181,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ドリームレス・ドリームス",
-                "artist": "伊波",
-                "start": 24387,
+                "title": "ドライフラワー",
+                "artist": "しじま",
+                "start": 20599,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "気合い入れすぎ",
-                "artist": "",
-                "start": 24612,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "邦ロックも歌う2人",
-                "artist": "",
-                "start": 24650,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "Ur-Style",
-                "artist": "緑仙",
-                "start": 24740,
-                "tags": [
-                    "オリジナル"
-                ]
-            },
-            {
-                "title": "Good Morning, Polar Night",
-                "artist": "星導",
-                "start": 24983,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "会話が変",
-                "artist": "",
-                "start": 25287,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "アノニマスファンフアレ",
-                "artist": "伊波",
-                "start": 25305,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "さっきの会話が気になる",
-                "artist": "",
-                "start": 25499,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ダーリンダンス",
-                "artist": "緑仙",
-                "start": 25568,
-                "tags": [
-                    "オリジナル"
-                ]
-            },
-            {
-                "title": "声出せるのいい",
-                "artist": "",
-                "start": 25771,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "阿吽のビーツ",
-                "artist": "星導",
-                "start": 25789,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "モニターの話",
-                "artist": "",
-                "start": 25993,
+                "title": "ｴﾝｳﾞｨｰｷｬｯﾄｳｫｰｸ",
+                "artist": "VocalEnby",
+                "start": 20962,
                 "tags": [
                     "カバー"
                 ]
             },
             {
                 "title": "喰らいながら",
-                "artist": "伊波",
-                "start": 26010,
+                "artist": "獅子志司",
+                "start": 21538,
                 "tags": [
                     "カバー"
                 ]
             },
             {
                 "title": "絶え間なく藍色",
-                "artist": "緑仙",
-                "start": 26236,
+                "artist": "獅子志司",
+                "start": 26020,
                 "tags": [
-                    "オリジナル"
+                    "カバー"
                 ]
             },
             {
-                "title": "緑仙のリベンジ",
+                "title": "ｼﾞｬﾝｷｰﾅｲﾄﾀｳﾝｵｰｹｽﾄﾗ7:",
                 "artist": "",
-                "start": 26492,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "マダラカルト",
-                "artist": "星導",
-                "start": 26521,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "成仏できたね",
-                "artist": "",
-                "start": 26716,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "選ばれない“る”",
-                "artist": "",
-                "start": 26770,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "帰っちゃうの？",
-                "artist": "",
-                "start": 26811,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ナイス🐼",
-                "artist": "",
-                "start": 26882,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "邦ロック",
-                "artist": "かずみっくす",
-                "start": 26921,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ジャンキーナイトタウンオーケストラ with Kotoka Torahime,セラフ・ダズルガーデン,伊波ライ,四季凪アキラ,弦月藤士郎,星導ショウ,森中花咲,歌配信,長尾景",
-                "artist": "すりぃ",
-                "start": 27031,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "滑舌ポイントを任される",
-                "artist": "",
-                "start": 27243,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "お土産置いてった伊波",
-                "artist": "",
-                "start": 31259,
+                "start": 26237,
                 "tags": [
                     "カバー"
                 ]
@@ -35638,8 +34677,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -36481,8 +35520,8 @@
                 "artist": "にじさんじカゲプロ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37038,8 +36077,8 @@
                 "artist": "にじさんじカゲプロ",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37612,8 +36651,8 @@
                 "artist": "弦月藤士郎/相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37646,8 +36685,8 @@
                 "artist": "弦月藤士郎/相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37680,8 +36719,8 @@
                 "artist": "弦月藤士郎/相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37714,8 +36753,8 @@
                 "artist": "弦月藤士郎/相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37749,8 +36788,8 @@
                 "artist": "弦月藤士郎/相羽ういは/ジョー･力一/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37783,8 +36822,8 @@
                 "artist": "弦月藤士郎/相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -37817,8 +36856,8 @@
                 "artist": "弦月藤士郎/相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -39288,11 +38327,10 @@
             },
             {
                 "title": "蜜ノ味",
-                "artist": "Rain Drops",
+                "artist": "",
                 "start": 411,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "カバー"
                 ]
             },
             {
@@ -39330,10 +38368,11 @@
             },
             {
                 "title": "ミュウ",
-                "artist": "kiie",
+                "artist": "Rain Drops",
                 "start": 1698,
                 "tags": [
-                    "カバー"
+                    "オリジナル",
+                    "Rain Drops"
                 ]
             },
             {
@@ -39347,7 +38386,7 @@
             },
             {
                 "title": "ソワレ",
-                "artist": "星街すいせい",
+                "artist": "なまず",
                 "start": 2173,
                 "tags": [
                     "カバー"
@@ -39363,7 +38402,7 @@
             },
             {
                 "title": "エンターテイナー",
-                "artist": "イリーナ・メジューエワ",
+                "artist": "とくになし",
                 "start": 2721,
                 "tags": [
                     "カバー"
@@ -39371,7 +38410,7 @@
             },
             {
                 "title": "formula",
-                "artist": "ALPHA DRIVE ONE",
+                "artist": "Azarashi",
                 "start": 2966,
                 "tags": [
                     "カバー"
@@ -39388,11 +38427,10 @@
             },
             {
                 "title": "魅惑の華",
-                "artist": "Rain Drops",
+                "artist": "Dark Bitter Melody",
                 "start": 3390,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "カバー"
                 ]
             },
             {
@@ -39455,11 +38493,10 @@
             },
             {
                 "title": "雨言葉",
-                "artist": "Rain Drops",
+                "artist": "あいす, 小摘貶寝, もちっとあいす",
                 "start": 5437,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "カバー"
                 ]
             },
             {
@@ -39480,7 +38517,7 @@
             },
             {
                 "title": "VOLTAGE",
-                "artist": "スペシャルウィーク (CV. 和氣あず未), ブエナビスタ (CV. 和泉風花), ブラストワンピース (CV. 紫月杏朱彩), アーモンドアイ (CV. 石原夏織), ラッキーライラック (CV. 中島由貴), ラヴズオンリーユー (CV. 久保田未夢), キセキ (CV. 星希成奏), フォーエバーヤング (CV. 海弓シュリ), マルシュロレーヌ (CV. 近貞月乃), エピファネイア (CV. 千賀光莉), ロゴタイプ (CV. 髙橋美空), ヴィクトワールピサ (CV. 嶋野 花), ローズキングダム (CV. 菊池ゆりな) & ルーラーシップ (CV. 海野水玉)",
+                "artist": "Stanislav Zabielin, Cremife",
                 "start": 6456,
                 "tags": [
                     "カバー"
@@ -40893,15 +39930,15 @@
         "songs": [
             {
                 "title": "Tick-Tack",
-                "artist": "THRIVE",
+                "artist": "THRIVE (B-Project)",
                 "start": 147,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "MOON NIGHTのせいにして",
-                "artist": "DRAMATIC STARS",
+                "title": "MOON NIGHT no Sei ni Shite",
+                "artist": "DRAMATIC STARS (Idolmaster SIde M)",
                 "start": 385,
                 "tags": [
                     "カバー"
@@ -40909,7 +39946,7 @@
             },
             {
                 "title": "DOKI DOKI",
-                "artist": "Just 4U",
+                "artist": "Just 4U (Readyyy! Project)",
                 "start": 757,
                 "tags": [
                     "カバー"
@@ -40917,15 +39954,15 @@
             },
             {
                 "title": "Back On Track",
-                "artist": "SolidS",
+                "artist": "SolidS (TsukiPro)",
                 "start": 1077,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "極上フィクション",
-                "artist": "KiLLER KiNG",
+                "title": "Gokujou Fiction",
+                "artist": "KiLLER KiNG (B-Project)",
                 "start": 1452,
                 "tags": [
                     "カバー"
@@ -40933,23 +39970,23 @@
             },
             {
                 "title": "Strange Party Night",
-                "artist": "Cure2tron",
+                "artist": "CureCureTron (Band Yarouze)",
                 "start": 1723,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "∞ Possibilities",
-                "artist": "S.E.M",
+                "title": "Infinite Possibilities",
+                "artist": "S.E.M (Idolmaster SIde M)",
                 "start": 1999,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ゆめの世界へようこそ",
-                "artist": "DREAM!ing",
+                "title": "Yume no sekai e Yokoso",
+                "artist": "DREAM!ing Project",
                 "start": 2352,
                 "tags": [
                     "カバー"
@@ -40957,55 +39994,55 @@
             },
             {
                 "title": "GO NOW!",
-                "artist": "RayGlanZ",
+                "artist": "RayGlanZ (Readyyy! Project)",
                 "start": 2700,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "大胆不敵に恋したい",
-                "artist": "Just 4U",
+                "title": "Daitan futeki ni koi shitai",
+                "artist": "Just 4U (Readyyy! Project)",
                 "start": 2960,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "MANKAI☆開花宣言",
-                "artist": "A3ders!",
+                "title": "MANKAI Kaika Sengen",
+                "artist": "A3ders! (A3/Act Addict Actors)",
                 "start": 3542,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "奇天烈ポエマー",
-                "artist": "有栖川誉",
+                "title": "Kiteretsu Poemer",
+                "artist": "Homare Arisugawa (A3/Act Addict Actors)",
                 "start": 3816,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ステイリアル",
-                "artist": "ARCAREAFACT",
+                "title": "Stay Real",
+                "artist": "ARCAREAFACT (Show by Rock)",
                 "start": 4075,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ワンダーランド・ア・ゴーゴー!!",
-                "artist": "碓氷真澄, 茅ヶ崎至",
+                "title": "Wonderland A Go GO!",
+                "artist": "Masumi Usui, Itaru Chigasaki (A3/Act Addict Actors)",
                 "start": 4358,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "恋のかけら",
-                "artist": "MEZZO”",
+                "title": "Koi no Kakera",
+                "artist": "MEZZO (IDOLiSH7)",
                 "start": 4640,
                 "tags": [
                     "カバー"
@@ -41020,23 +40057,23 @@
                 ]
             },
             {
-                "title": "マクガフィン",
-                "artist": "SOARA",
+                "title": "Maguffin",
+                "artist": "SOARA (TsukiPro)",
                 "start": 5410,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "楽園オアシス",
-                "artist": "皇天馬, 瑠璃川幸",
+                "title": "Rakuen Oasis",
+                "artist": "Tenma Sumeragi, Yuki Rurukawa (A3/Act Addict Actors)",
                 "start": 5910,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ドラマチックLOVE",
+                "title": "Dramatic LOVE",
                 "artist": "KING OF PRISM by PrettyRhythm",
                 "start": 6262,
                 "tags": [
@@ -41124,10 +40161,11 @@
         "songs": [
             {
                 "title": "全力ブーメラン",
-                "artist": "キリカ",
+                "artist": "こじらせハラスメント",
                 "start": 66,
                 "tags": [
-                    "カバー"
+                    "オリジナル",
+                    "こじらせハラスメント"
                 ]
             },
             {
@@ -41220,7 +40258,7 @@
             },
             {
                 "title": "ガチ恋距離！",
-                "artist": "燈 -Akari-",
+                "artist": "",
                 "start": 991,
                 "tags": [
                     "カバー"
@@ -41430,10 +40468,11 @@
             },
             {
                 "title": "秘密のショコラ",
-                "artist": "",
+                "artist": "こじらせハラスメント",
                 "start": 3499,
                 "tags": [
-                    "カバー"
+                    "オリジナル",
+                    "こじらせハラスメント"
                 ]
             },
             {
@@ -41446,7 +40485,7 @@
             },
             {
                 "title": "わーお！",
-                "artist": "",
+                "artist": "波とオルゴールのα WAVE",
                 "start": 3560,
                 "tags": [
                     "カバー"
@@ -41834,16 +40873,8 @@
         "tags": [],
         "songs": [
             {
-                "title": "Mr.Music",
-                "artist": "れるりり",
-                "start": 208,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
                 "title": "夜咄ディセイブ",
-                "artist": "じん",
+                "artist": "雲雀",
                 "start": 623,
                 "tags": [
                     "カバー"
@@ -41851,7 +40882,7 @@
             },
             {
                 "title": "ミルククラウン・オン・ソーネチカ",
-                "artist": "ユジー",
+                "artist": "弦月",
                 "start": 938,
                 "tags": [
                     "カバー"
@@ -41859,15 +40890,15 @@
             },
             {
                 "title": "嗚呼、素晴らしきニャン生",
-                "artist": "緑西",
+                "artist": "緑仙 チグサ",
                 "start": 1289,
                 "tags": [
-                    "カバー"
+                    "オリジナル"
                 ]
             },
             {
                 "title": "脳漿炸裂ガール",
-                "artist": "弦渡",
+                "artist": "弦月 雲雀",
                 "start": 1642,
                 "tags": [
                     "カバー"
@@ -41875,15 +40906,15 @@
             },
             {
                 "title": "聖槍爆裂ボーイ",
-                "artist": "れるりり, もじゃ",
+                "artist": "緑仙",
                 "start": 1932,
                 "tags": [
-                    "カバー"
+                    "オリジナル"
                 ]
             },
             {
                 "title": "ホシアイ",
-                "artist": "レフティーモンスターP, たるとP",
+                "artist": "雲雀",
                 "start": 2259,
                 "tags": [
                     "カバー"
@@ -41891,7 +40922,7 @@
             },
             {
                 "title": "1925",
-                "artist": "T-POCKET, 藤堂夜宵",
+                "artist": "チグサ",
                 "start": 2689,
                 "tags": [
                     "カバー"
@@ -41899,14 +40930,14 @@
             },
             {
                 "title": "ノンブレス・オブリージュ",
-                "artist": "ピノキオピー",
+                "artist": "弦月",
                 "start": 3159,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "リモコン",
+                "title": "リモコン with 企画,弦月藤士郎,渡会雲雀,西園チグサ,西弦緑渡",
                 "artist": "じーざすP, ワンダフル★オポチュニティ！",
                 "start": 3563,
                 "tags": [
@@ -41915,23 +40946,15 @@
             },
             {
                 "title": "しわ",
-                "artist": "buzzG",
+                "artist": "雲雀",
                 "start": 4502,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "なりすましゲンガー",
-                "artist": "西弦",
-                "start": 5271,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
                 "title": "チュルリラ・チュルリラ・ダッダッダ！",
-                "artist": "和田たけあき",
+                "artist": "チグサ",
                 "start": 5602,
                 "tags": [
                     "カバー"
@@ -41939,14 +40962,14 @@
             },
             {
                 "title": "Good Morning, Polar Night",
-                "artist": "ゆっけどるちぇ",
+                "artist": "弦月",
                 "start": 5992,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Blessing",
+                "title": "Blessing with 企画,弦月藤士郎,渡会雲雀,西園チグサ,西弦緑渡",
                 "artist": "halyosy",
                 "start": 6463,
                 "tags": [
@@ -42231,8 +41254,8 @@
                 "artist": "にじさんじ学園ダンス部",
                 "start": 4325,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -42240,8 +41263,8 @@
                 "artist": "にじさんじ学園ダンス部",
                 "start": 4532,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -42249,8 +41272,8 @@
                 "artist": "にじさんじ学園ダンス部",
                 "start": 4700,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             },
             {
@@ -42354,8 +41377,8 @@
                 "artist": "ERRors",
                 "start": 7976,
                 "tags": [
-                    "オリジナル",
-                    "ERRors"
+                    "ERRors",
+                    "オリジナル"
                 ]
             },
             {
@@ -44699,27 +43722,12 @@
         "tags": [],
         "songs": [
             {
-                "title": "今日もすし詰め　通学電車",
-                "artist": "",
-                "start": 96,
+                "title": "眼鏡の男の子",
+                "artist": "にじさんじ",
+                "start": 0,
                 "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "同じ車両の同じ時間に",
-                "artist": "",
-                "start": 121,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ちょっと！急ブレーキ　急に停車？",
-                "artist": "",
-                "start": 185,
-                "tags": [
-                    "カバー"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -45745,8 +44753,8 @@
                 "artist": "にじさんじ国際歌リレー企画",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -46986,8 +45994,8 @@
                 "artist": "にじさんじ",
                 "start": 2788,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -47308,8 +46316,8 @@
                 "artist": "ERRors",
                 "start": 3059,
                 "tags": [
-                    "オリジナル",
-                    "ERRors"
+                    "ERRors",
+                    "オリジナル"
                 ]
             },
             {
@@ -47341,8 +46349,8 @@
                 "artist": "cresc.",
                 "start": 5864,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             },
             {
@@ -50315,145 +49323,9 @@
         "tags": [],
         "songs": [
             {
-                "title": "[緑仙]",
-                "artist": "danierukunP",
+                "title": "やグッズはこちらからチェック！",
+                "artist": "",
                 "start": 0,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "クールな僕は　まるでヤング・アメリカン",
-                "artist": "",
-                "start": 21,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "僕とベイビー・ブラザー　めかし込んできたパーティ・タイム",
-                "artist": "",
-                "start": 64,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "誰だってロケットがlockする　特別な唇",
-                "artist": "",
-                "start": 84,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "[コーサカ]",
-                "artist": "danierukunP",
-                "start": 103,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "華やかな光に乗り星に旅に出る",
-                "artist": "",
-                "start": 116,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "てな具合で行きたい日々",
-                "artist": "",
-                "start": 126,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "今の俺等と言えば縛りしがらみ",
-                "artist": "",
-                "start": 136,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "[緑仙]",
-                "artist": "danierukunP",
-                "start": 145,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "[yaca]",
-                "artist": "danierukunP",
-                "start": 167,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "いや泣けたっス「えーっ」匙投げ出さず　繰り返す時代に感謝したっス",
-                "artist": "",
-                "start": 177,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "油断してっと　これが広がり続けるFunKeyWorld",
-                "artist": "",
-                "start": 194,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "[緑仙]",
-                "artist": "danierukunP",
-                "start": 207,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "クールな僕は　まるでヤング・アメリカン",
-                "artist": "",
-                "start": 228,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "[yaca]",
-                "artist": "danierukunP",
-                "start": 250,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "[緑仙]",
-                "artist": "danierukunP",
-                "start": 269,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "パーティ続き　燃え上がる2人",
-                "artist": "",
-                "start": 289,
-                "tags": [
-                    "カバー"
-                ]
-            },
-            {
-                "title": "ワイルドな君　うるわしのプッシー・キャット",
-                "artist": "",
-                "start": 310,
                 "tags": [
                     "カバー"
                 ]
@@ -52298,8 +51170,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -54012,7 +52884,7 @@
             },
             {
                 "title": "怪物",
-                "artist": "わたしのココ",
+                "artist": "YOASOBI",
                 "start": 1019,
                 "tags": [
                     "カバー"
@@ -54036,7 +52908,7 @@
             },
             {
                 "title": "断捨離彼氏",
-                "artist": "ZOC",
+                "artist": "",
                 "start": 2043,
                 "tags": [
                     "カバー"
@@ -54060,7 +52932,7 @@
             },
             {
                 "title": "公然の秘密",
-                "artist": "719",
+                "artist": "椎名林檎",
                 "start": 3170,
                 "tags": [
                     "カバー"
@@ -55568,7 +54440,7 @@
         "songs": [
             {
                 "title": "Formula",
-                "artist": "ALPHA DRIVE ONE",
+                "artist": "Azarashi",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -56295,113 +55167,113 @@
         "tags": [],
         "songs": [
             {
-                "title": "ブルーウォーター",
-                "artist": "ふしぎの海のナディア",
-                "start": 0,
+                "title": "1　ブルーウォーター",
+                "artist": "",
+                "start": 1,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "冒険者たち",
-                "artist": "モンタナ・ジョーンズ",
-                "start": 84,
+                "title": "2　冒険者たち",
+                "artist": "",
+                "start": 85,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ハートを磨くっきゃない",
-                "artist": "飛べ！イサミ",
-                "start": 124,
+                "title": "3　ハートを磨くっきゃない",
+                "artist": "",
+                "start": 126,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "HEAVEN",
-                "artist": "YAT安心！宇宙旅行",
-                "start": 156,
+                "title": "4　HEAVEN",
+                "artist": "",
+                "start": 158,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "プラチナ",
-                "artist": "カードキャプターさくら",
-                "start": 190,
+                "title": "5　プラチナ",
+                "artist": "",
+                "start": 192,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "ハートのつばさ",
-                "artist": "だぁ！だぁ！だぁ！",
-                "start": 227,
+                "title": "6　ハートのつばさ",
+                "artist": "",
+                "start": 232,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "僕らのメッセージ",
-                "artist": "無人惑星サヴァイヴ",
-                "start": 250,
+                "title": "7　僕らのメッセージ",
+                "artist": "",
+                "start": 258,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "さらば碧き面影",
-                "artist": "メジャー",
-                "start": 307,
+                "title": "8　さらば碧き面影",
+                "artist": "",
+                "start": 309,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "鯨",
-                "artist": "ふたつのスピカ",
+                "title": "9　鯨",
+                "artist": "",
                 "start": 340,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Aikoi",
-                "artist": "ツバサ・クロニクル",
-                "start": 372,
+                "title": "10　Aikoi",
+                "artist": "",
+                "start": 373,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "味楽る！ミミカ ナンバーワン",
-                "artist": "味楽る！ミミカ",
+                "title": "11　味 楽る！ミミカ ナンバーワン",
+                "artist": "",
                 "start": 433,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "プリズム",
-                "artist": "電脳コイル",
-                "start": 446,
+                "title": "12　プリズム",
+                "artist": "",
+                "start": 447,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "キッチンはマイステージ",
-                "artist": "クッキンアイドル アイ！マイ！まいん！",
-                "start": 483,
+                "title": "13　キッチンはマイステージ",
+                "artist": "",
+                "start": 487,
                 "tags": [
                     "カバー"
                 ]
             },
             {
-                "title": "Zzz",
-                "artist": "日常",
-                "start": 506,
+                "title": "14　Zzz",
+                "artist": "",
+                "start": 512,
                 "tags": [
                     "カバー"
                 ]
@@ -57195,8 +56067,8 @@
                 "artist": "相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -59074,8 +57946,8 @@
                 "artist": "まふまふ」 feat.緑仙/弦月藤士郎 #こじハラ 【相羽ういは/にじさんじ】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -59482,11 +58354,10 @@
             },
             {
                 "title": "蜜ノ味 【2020.05.26】",
-                "artist": "Rain Drops",
+                "artist": "",
                 "start": 4062,
                 "tags": [
-                    "オリジナル",
-                    "Rain Drops"
+                    "カバー"
                 ]
             },
             {
@@ -60988,7 +59859,7 @@
             },
             {
                 "title": "(",
-                "artist": "Serocs",
+                "artist": "全てを騙る時雨に。",
                 "start": 1278,
                 "tags": [
                     "カバー"
@@ -61495,7 +60366,7 @@
         "songs": [
             {
                 "title": "Mew",
-                "artist": "",
+                "artist": "CHOLERIC-P",
                 "start": 0,
                 "tags": [
                     "カバー"
@@ -64518,9 +63389,9 @@
         "tags": [],
         "songs": [
             {
-                "title": "まじで感情の込め方好きだなぁ....そういうとこだぞ明那",
-                "artist": "",
-                "start": 254,
+                "title": "Rain Drops『雨言葉』Music Video(11",
+                "artist": "25発売『オントロジー』収録曲)",
+                "start": 0,
                 "tags": [
                     "カバー"
                 ]
@@ -68293,8 +67164,8 @@
                 "artist": "にじさんじ【#健屋花那誕生祭2020】",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "にじさんじ"
+                    "にじさんじ",
+                    "オリジナル"
                 ]
             }
         ]
@@ -68909,7 +67780,7 @@
             },
             {
                 "title": "(",
-                "artist": "Serocs",
+                "artist": "全てを騙る時雨に。",
                 "start": 13,
                 "tags": [
                     "カバー"
@@ -68925,7 +67796,7 @@
             },
             {
                 "title": "(",
-                "artist": "Serocs",
+                "artist": "全てを騙る時雨に。",
                 "start": 48,
                 "tags": [
                     "カバー"
@@ -68957,7 +67828,7 @@
             },
             {
                 "title": "(",
-                "artist": "Serocs",
+                "artist": "全てを騙る時雨に。",
                 "start": 137,
                 "tags": [
                     "カバー"
@@ -68973,7 +67844,7 @@
             },
             {
                 "title": "(",
-                "artist": "Serocs",
+                "artist": "全てを騙る時雨に。",
                 "start": 162,
                 "tags": [
                     "カバー"
@@ -68989,7 +67860,7 @@
             },
             {
                 "title": "(",
-                "artist": "Serocs",
+                "artist": "全てを騙る時雨に。",
                 "start": 190,
                 "tags": [
                     "カバー"
@@ -69005,7 +67876,7 @@
             },
             {
                 "title": "(",
-                "artist": "Serocs",
+                "artist": "全てを騙る時雨に。",
                 "start": 217,
                 "tags": [
                     "カバー"
@@ -69733,8 +68604,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -70309,8 +69180,8 @@
                 "artist": "le jouet",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "le jouet"
+                    "le jouet",
+                    "オリジナル"
                 ]
             }
         ]
@@ -72532,8 +71403,8 @@
                 "artist": "cresc.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "cresc."
+                    "cresc.",
+                    "オリジナル"
                 ]
             }
         ]
@@ -73773,8 +72644,8 @@
                 "artist": "le jouet",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "le jouet"
+                    "le jouet",
+                    "オリジナル"
                 ]
             }
         ]
@@ -74653,8 +73524,8 @@
                 "artist": "le jouet.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "le jouet"
+                    "le jouet",
+                    "オリジナル"
                 ]
             }
         ]
@@ -76354,8 +75225,8 @@
                 "artist": "le jouet.",
                 "start": 0,
                 "tags": [
-                    "オリジナル",
-                    "le jouet"
+                    "le jouet",
+                    "オリジナル"
                 ]
             }
         ]
@@ -93861,7 +92732,7 @@
             },
             {
                 "title": "ロミオとシンデレラ",
-                "artist": "doriko feat. 初音ミク",
+                "artist": "青木葉",
                 "start": 14910,
                 "tags": [
                     "カバー"
